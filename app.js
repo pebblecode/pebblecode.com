@@ -31,7 +31,25 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'pebble {code}'
+    title: 'Home | pebble {code}'
+  });
+});
+
+app.get('/about', function(req, res){
+  res.render('about', {
+    title: 'About | pebble {code}'
+  });
+});
+
+app.get('/work', function(req, res){
+  res.render('work', {
+    title: 'Work | pebble {code}'
+  });
+});
+
+app.get('/blog', function(req, res){
+  res.render('blog', {
+    title: 'Blog | pebble {code}'
   });
 });
 

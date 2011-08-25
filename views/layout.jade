@@ -3,4 +3,22 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+  body
+    section.wrapper
+      header
+        h1
+          a(href="/") pebble {code}
+        nav
+          ul
+            li
+              a.work(href="/work") Work
+            li
+              a.about(href="/about") About
+            li
+              a.blog(href="/blog") Blog
+      section.content!= body
+      footer 
+        p 
+          | Pebble Code Limited registered in England and Wales <br />
+          | Company Number 07240178 <br />
+          | VAT Registration Number GB 991816382

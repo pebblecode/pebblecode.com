@@ -1,7 +1,228 @@
+/* Reset
+Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
+Removed elements not supported in HTML5
+-----------------------------------------------------------------------------*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* 
+Trigger the new HTML5 block level elements in to the correct content flow
+-----------------------------------------------------------------------------*/
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* Set up document
+-----------------------------------------------------------------------------*/
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 62.5%/1.5 "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  text-align: center;
+}
+.wrapper {
+  width: 920px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+}
+.content {
+  clear: both;
+}
+/* Typography
+-----------------------------------------------------------------------------*/
+h1 {
+  float: left;
+  width: 622px;
+  height: 140px;
+  text-indent: -9999px;
+  font-size: 1em;
+}
+h1 a {
+  float: left;
+  width: 622px;
+  height: 140px;
+  background: url("/images/logo.png") top left no-repeat;
+  text-decoration: none;
+}
+h2 {
+  font-size: 1.8em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+h3 {
+  font-size: 1.6em;
+  line-height: 1.13em;
+  margin-bottom: 1.13em;
+}
+h4 {
+  font-size: 1.4em;
+  line-height: 1.29em;
+  margin-bottom: 1.29em;
+}
+h5 {
+  font-size: 1.3em;
+  line-height: 1.38em;
+  margin-bottom: 1.38em;
+}
+h6 {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+p,
+q,
+cite,
+address,
+ul,
+ol,
+dl {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+li,
+dd,
+dt {
+  font-size: 1em;
 }
 a {
-  color: #00b7ff;
+  text-decoration: underline;
+  color: #33c;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+code,
+samp,
+dfn,
+kbd,
+var,
+acronym,
+ins,
+del,
+abbr {
+  speak: spell-out;
+}
+acronym {
+  speak: normal;
+}
+/* Header
+-----------------------------------------------------------------------------*/
+header {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+header nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+header nav ul {
+  list-style: none;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+header nav ul li {
+  display: inline;
+}
+header nav ul li a {
+  display: inline-block;
+  padding: 15px 20px;
+  font-size: 1.4em;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+header nav ul li a.work {
+  background: #f2b03d;
+}
+header nav ul li a.about {
+  background: #9f539d;
+}
+header nav ul li a.blog {
+  background: #53b9bd;
+}
+header nav ul li a:hover {
+  background-color: #e0427b;
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+footer {
+  clear: both;
+  color: #666;
+  border-top: 1px solid #ccc;
+  padding-top: 1.5em;
+}
+footer ul {
+  list-style: none;
 }
