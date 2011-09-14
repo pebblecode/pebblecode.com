@@ -27,14 +27,18 @@ nav, section
   display block 
       
 
+@font-face {
+  font-family: Meta;
+  src: url("../fonts/MetaBol");
+}
 /* Set up document
 -----------------------------------------------------------------------------*/
 body
-  font 62.5%/1.5  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif
+  font 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif
   text-align center
 
 .wrapper
-  width 920px
+  width 100%
   text-align left 
   margin-left auto 
   margin-right auto
@@ -42,21 +46,18 @@ body
 
 .content
   clear both
+  margin-top 50px
 
 /* Typography
 -----------------------------------------------------------------------------*/
 h1
-  float: left
-  width: 622px 
-  height: 140px 
-  text-indent:-9999px
-  font-size: 1em
-h1 a
-  float: left;
-  width: 622px 
-  height: 140px 
-  background: url(/images/logo.png) top left no-repeat;
-  text-decoration:none;
+  float left
+  font-size 4.5em
+  padding 5px 0 5px 20px
+
+  a
+    color #fff
+    text-decoration none
 
 h2 
   font-size: 1.8em
@@ -112,35 +113,29 @@ acronym
 -----------------------------------------------------------------------------*/
 header
   float left
+  position fixed
+  top 0
   width 100%
-  position relative
-  margin-bottom 1.5em
+  background none
+  border-bottom 10px solid rgba(0,0,0,.1);
   nav 
-    position absolute
-    right 0
-    bottom 0
+    float right
+    width 100%
     ul 
       list-style none
+      float right
+      font-size 3em
       margin-bottom 0
-      font-weight bold
+      padding-bottom 0
       li 
         display inline
+        margin-bottom 0
+        padding-bottom 0
         a 
           display inline-block
-          padding 15px 20px
-          font-size 1.4em
+          padding 15px 20px 0 20px
           color #fff
           text-decoration none
-          position relative
-          cursor pointer
-          &.work
-            background #F2B03D
-          &.about
-            background #9F539D
-          &.blog
-            background #53B9BD
-          &:hover
-            background-color #E0427B
 
 /* Footer
 -----------------------------------------------------------------------------*/

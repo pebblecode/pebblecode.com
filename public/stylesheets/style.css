@@ -78,14 +78,18 @@ nav,
 section {
   display: block;
 }
+font-face {
+  font-family: Meta;
+  src: url("../fonts/MetaBol");
+}
 /* Set up document
 -----------------------------------------------------------------------------*/
 body {
-  font: 62.5%/1.5 "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  font: 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
   text-align: center;
 }
 .wrapper {
-  width: 920px;
+  width: 100%;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -93,21 +97,17 @@ body {
 }
 .content {
   clear: both;
+  margin-top: 50px;
 }
 /* Typography
 -----------------------------------------------------------------------------*/
 h1 {
   float: left;
-  width: 622px;
-  height: 140px;
-  text-indent: -9999px;
-  font-size: 1em;
+  font-size: 4.5em;
+  padding: 5px 0 5px 20px;
 }
 h1 a {
-  float: left;
-  width: 622px;
-  height: 140px;
-  background: url("/images/logo.png") top left no-repeat;
+  color: #fff;
   text-decoration: none;
 }
 h2 {
@@ -177,43 +177,33 @@ acronym {
 -----------------------------------------------------------------------------*/
 header {
   float: left;
+  position: fixed;
+  top: 0;
   width: 100%;
-  position: relative;
-  margin-bottom: 1.5em;
+  background: none;
+  border-bottom: 10px solid rgba(0,0,0,0.10);
 }
 header nav {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  float: right;
+  width: 100%;
 }
 header nav ul {
   list-style: none;
+  float: right;
+  font-size: 3em;
   margin-bottom: 0;
-  font-weight: bold;
+  padding-bottom: 0;
 }
 header nav ul li {
   display: inline;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 header nav ul li a {
   display: inline-block;
-  padding: 15px 20px;
-  font-size: 1.4em;
+  padding: 15px 20px 0 20px;
   color: #fff;
   text-decoration: none;
-  position: relative;
-  cursor: pointer;
-}
-header nav ul li a.work {
-  background: #f2b03d;
-}
-header nav ul li a.about {
-  background: #9f539d;
-}
-header nav ul li a.blog {
-  background: #53b9bd;
-}
-header nav ul li a:hover {
-  background-color: #e0427b;
 }
 /* Footer
 -----------------------------------------------------------------------------*/
