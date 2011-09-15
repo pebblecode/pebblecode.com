@@ -270,6 +270,9 @@ ul.home-work li h3 {
   padding-bottom: 0;
   margin-bottom: 0;
 }
+ul.home-work li h3 span {
+  font-weight: bold;
+}
 ul.home-work li:nth-child(1) {
   border-left: 5px solid #419fda;
 }
