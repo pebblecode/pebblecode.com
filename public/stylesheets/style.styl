@@ -45,12 +45,16 @@ body
 
 .content
   clear both
+  width 94%
+  padding 0 3%
   margin-top 50px
 
 /* Typography
 -----------------------------------------------------------------------------*/
 h1
   font-size 4.5em
+  margin-left 3%
+  float left
   a
     color #fff
     text-decoration none
@@ -81,7 +85,7 @@ h6
   margin-bottom 1.5em 
 
 p, q, cite, address, ul, ol, dl
-  font-size 1.2em
+  font-size 1.4em
   line-height 1.5em
   margin-bottom 1.5em 
 
@@ -108,23 +112,30 @@ acronym
 /* Header
 -----------------------------------------------------------------------------*/
 header
-  float left
   position fixed
   top 0
   width 100%
   background none
+
   // border-bottom 10px solid rgba(0,0,0,.1)
   nav 
     float right
+    height 60px
     width 100%
+    padding 10px 0 20px 0
     ul 
       list-style none
+      width 40%
       float right
       font-size 3em
       margin-bottom 0
       padding-bottom 0
+      margin-right 3%
+      text-align right
+      padding-top 1%
       li 
         display inline
+        margin-left 10%
         margin-bottom 0
         padding-bottom 0
         a 
@@ -136,8 +147,9 @@ header
 -----------------------------------------------------------------------------*/
 footer
   clear both
-  color #000
-  background #ece9e9
+  width 90%
+  padding 3%
+  color #666
   text-shadow white 0 1px 1px
   padding-top 1.5em
   ul 
@@ -154,19 +166,32 @@ footer
       position relative
       box-shadow(1px 1px 1px #ccc)
       nav
+        h1
+          float none
         text-align center
+        height auto
         ul
           width 100%
           li
             padding 0 5%
     .content
+      width 90%
+      padding 5%
+      ul.home-work
+        list-style none
+        li
+          width 94%
+          float none
+          padding 3% 3% 3% 3%
+          margin-bottom 5%
       h2.home
-        width 90%
-        padding 7% 5% 0 5%
-        color #666
         font-size 5em
+        padding 7% 0 0 5
+        color #666
         text-align center
         text-shadow white 0 1px 1px
+      h2
+        font-size 3em
       p.home
         padding 0
         margin 0
@@ -178,10 +203,9 @@ footer
         text-shadow white 0 1px 1px
         
 
+// Mobile
 ul.home-work
   list-style none
-  width 90%
-  padding 0 5%
   li
     padding 3% 3% 3% 3%
     margin-bottom 5%
@@ -194,7 +218,12 @@ ul.home-work
       margin-bottom 0
       span 
         font-weight bold
+      a
+        text-decoration none
+        color #666
 
+    p.summary
+      font-size 2em
     &:nth-child(1)
       border-left 5px solid #419fda
       h3
@@ -226,3 +255,56 @@ ul.home-work
       h3
         span
           color #e74679
+    &:nth-child(1)
+      border-left 5px solid #419fda
+      h3, p
+        span
+          color #419fda
+          
+    &:nth-child(2)
+      border-left 5px solid #adca3a
+      h3, p
+        span
+          color #adca3a
+    &:nth-child(3)
+      border-left 5px solid #f7ae35
+      h3, p
+        span
+          color #f7ae35
+    &:nth-child(4)
+      border-left 5px solid #42b8be
+      h3, p
+        span
+          color #42b8be
+    &:nth-child(5)
+      border-left 5px solid #a1579c
+      h3, p
+        span
+          color #a1579c
+    &:nth-child(6)
+      border-left 5px solid #e74679
+      h3, p
+        span
+          color #e74679
+.content
+  margin-top 135px
+ul.home-work
+  li 
+    width 42%
+    margin-bottom 2%
+    padding 2%
+    &:nth-child(even)
+      float left
+      clear left
+    &:nth-child(odd)
+      float right
+      clear right
+h2.home
+  font-size 5em
+  padding 7% 0 0 5
+  color #666
+  text-align center
+  text-shadow white 0 1px 1px
+#woohoo, #ldntaxi, #aljazeera, #takefive, #space, #stink
+  padding-top 150px 
+  margin-top -150px
