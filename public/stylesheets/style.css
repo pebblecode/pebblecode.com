@@ -237,14 +237,19 @@ footer ul {
   body header nav {
     text-align: center;
     height: auto;
+    padding: 1%;
   }
   body header nav h1 {
     float: none;
   }
   body header nav ul {
+    float: left;
     width: 100%;
+    font-size: 2em;
   }
   body header nav ul li {
+    display: inline;
+    float: left;
     padding: 0 5%;
   }
   body .content {
