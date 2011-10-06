@@ -7,7 +7,6 @@ var express = require('express')
 	, force_domain = require('connect-force-domain');
 
 var app; 
-console.log(process.env);
 if (process.env.NODE_ENV == 'production') { 
 	app = module.exports = express.createServer(force_domain('pebblecode.com'));
 } else { 
@@ -35,9 +34,15 @@ app.configure('production', function(){
 });
 
 // Routes
-
+//
 app.get('/', function(req, res){
   res.render('index', {
+    title: 'pebble {code} ..coming soon'
+  });
+});
+
+app.get('/', function(req, res){
+  res.render('index2', {
     title: 'Home | pebble {code}'
   });
 });
