@@ -258,7 +258,7 @@ header .navshadow {
   padding: 0 2%;
   margin-top: 135px;
 }
-/* Homepage
+/* Home page
 ---------------------------------------*/
 h1.home {
   font-size: 6em;
@@ -266,129 +266,7 @@ h1.home {
   color: #7a7a7a;
   text-align: center;
 }
-ul.home-work {
-  list-style: none;
-}
-ul.home-work li {
-  height: 320px;
-  width: 47%;
-  margin-bottom: 2%;
-  padding: 0 1% 1% 0.7%;
-}
-ul.home-work li h3 {
-  font-size: 4em;
-  font-weight: normal;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  font-weight: bold;
-}
-ul.home-work li h3 a {
-  text-decoration: none;
-  color: #7a7a7a;
-}
-ul.home-work li p.summary {
-  font-size: 2em;
-}
-ul.home-work li.odd {
-  float: left;
-  clear: left;
-}
-ul.home-work li.even {
-  float: right;
-  clear: right;
-}
-ul.home-work li.ldntaxi {
-  border-left: 5px solid #419fda;
-}
-ul.home-work li.ldntaxi h3 span,
-ul.home-work li.ldntaxi p span {
-  color: #419fda;
-}
-ul.home-work li.ldntaxi a {
-  color: #419fda;
-}
-ul.home-work li.woohoo {
-  border-left: 5px solid #adca3a;
-}
-ul.home-work li.woohoo h3 span,
-ul.home-work li.woohoo p span {
-  color: #adca3a;
-}
-ul.home-work li.woohoo a {
-  color: #adca3a;
-}
-ul.home-work li.aljazeera {
-  border-left: 5px solid #f7ae35;
-}
-ul.home-work li.aljazeera h3 span,
-ul.home-work li.aljazeera p span {
-  color: #f7ae35;
-}
-ul.home-work li.aljazeera a {
-  color: #f7ae35;
-}
-ul.home-work li.takefive {
-  border-left: 5px solid #42b8be;
-}
-ul.home-work li.takefive h3 span,
-ul.home-work li.takefive p span {
-  color: #42b8be;
-}
-ul.home-work li.takefive a {
-  color: #42b8be;
-}
-ul.home-work li.ideapi {
-  border-left: 5px solid #a1579c;
-}
-ul.home-work li.ideapi h3 span,
-ul.home-work li.ideapi p span {
-  color: #a1579c;
-}
-ul.home-work li.ideapi a {
-  color: #a1579c;
-}
-ul.home-work li.downunder {
-  border-left: 5px solid #e74679;
-}
-ul.home-work li.downunder h3 span,
-ul.home-work li.downunder p span {
-  color: #e74679;
-}
-ul.home-work li.downunder a {
-  color: #e74679;
-}
-ul.home-work li.space {
-  border-left: 5px solid #419fda;
-}
-ul.home-work li.space h3 span,
-ul.home-work li.space p span {
-  color: #419fda;
-}
-ul.home-work li.space a {
-  color: #419fda;
-}
-ul.home-work li.stink {
-  border-left: 5px solid #adca3a;
-}
-ul.home-work li.stink h3 span,
-ul.home-work li.stink p span {
-  color: #adca3a;
-}
-ul.home-work li.stink a {
-  color: #adca3a;
-}
-/* Work
----------------------------------------*/
-#woohoo,
-#ldntaxi,
-#aljazeera,
-#takefive,
-#space,
-#stink {
-  padding-top: 150px;
-  margin-top: -150px;
-}
-/* About
+/* About page
 ---------------------------------------*/
 ul.columns-about {
   list-style: none;
@@ -406,6 +284,128 @@ ul.columns-about li:nth-child(odd) {
 ul.columns-about li:nth-child(even) {
   float: right;
   clear: right;
+}
+/* Page fragments
+---------------------------------------*/
+#woohoo,
+#ldntaxi,
+#aljazeera,
+#takefive,
+#space,
+#stink {
+  padding-top: 150px;
+  margin-top: -150px;
+}
+ul.work-listing {
+  list-style: none;
+}
+ul.work-listing li {
+  height: 320px;
+  width: 47%;
+  margin-bottom: 2%;
+  padding: 0 1% 1% 0.7%;
+}
+ul.work-listing li h3 {
+  font-size: 4em;
+  font-weight: normal;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+ul.work-listing li h3 a {
+  text-decoration: none;
+  color: #7a7a7a;
+}
+ul.work-listing li p.summary {
+  font-size: 2em;
+}
+ul.work-listing li.odd {
+  float: left;
+  clear: left;
+}
+ul.work-listing li.even {
+  float: right;
+  clear: right;
+}
+ul.work-listing li.ldntaxi {
+  border-left: 5px solid #419fda;
+}
+ul.work-listing li.ldntaxi h3 span,
+ul.work-listing li.ldntaxi p span {
+  color: #419fda;
+}
+ul.work-listing li.ldntaxi a {
+  color: #419fda;
+}
+ul.work-listing li.woohoo {
+  border-left: 5px solid #adca3a;
+}
+ul.work-listing li.woohoo h3 span,
+ul.work-listing li.woohoo p span {
+  color: #adca3a;
+}
+ul.work-listing li.woohoo a {
+  color: #adca3a;
+}
+ul.work-listing li.aljazeera {
+  border-left: 5px solid #f7ae35;
+}
+ul.work-listing li.aljazeera h3 span,
+ul.work-listing li.aljazeera p span {
+  color: #f7ae35;
+}
+ul.work-listing li.aljazeera a {
+  color: #f7ae35;
+}
+ul.work-listing li.takefive {
+  border-left: 5px solid #42b8be;
+}
+ul.work-listing li.takefive h3 span,
+ul.work-listing li.takefive p span {
+  color: #42b8be;
+}
+ul.work-listing li.takefive a {
+  color: #42b8be;
+}
+ul.work-listing li.ideapi {
+  border-left: 5px solid #a1579c;
+}
+ul.work-listing li.ideapi h3 span,
+ul.work-listing li.ideapi p span {
+  color: #a1579c;
+}
+ul.work-listing li.ideapi a {
+  color: #a1579c;
+}
+ul.work-listing li.downunder {
+  border-left: 5px solid #e74679;
+}
+ul.work-listing li.downunder h3 span,
+ul.work-listing li.downunder p span {
+  color: #e74679;
+}
+ul.work-listing li.downunder a {
+  color: #e74679;
+}
+ul.work-listing li.space {
+  border-left: 5px solid #419fda;
+}
+ul.work-listing li.space h3 span,
+ul.work-listing li.space p span {
+  color: #419fda;
+}
+ul.work-listing li.space a {
+  color: #419fda;
+}
+ul.work-listing li.stink {
+  border-left: 5px solid #adca3a;
+}
+ul.work-listing li.stink h3 span,
+ul.work-listing li.stink p span {
+  color: #adca3a;
+}
+ul.work-listing li.stink a {
+  color: #adca3a;
 }
 /* Footer
 -----------------------------------------------------------------------------*/
