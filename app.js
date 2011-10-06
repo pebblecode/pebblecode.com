@@ -38,31 +38,35 @@ app.configure('production', function(){
 app.get('/', function(req, res){
   res.render('index', {
     title: 'pebble {code} ..coming soon',
-	layout: 'holding.jade'
+    layout: 'holding.jade'
   });
 });
 
 app.get('/home', function(req, res){
   res.render('home', {
-    title: 'Home | pebble {code}'
+    title: 'Home | pebble {code}',
+    body_class: 'home-page'
   });
 });
 
 app.get('/about', function(req, res){
   res.render('about', {
-    title: 'About | pebble {code}'
+    title: 'About | pebble {code}',
+    body_class: 'about-page'
   });
 });
 
 app.get('/work', function(req, res){
   res.render('work', {
-    title: 'Work | pebble {code}'
+    title: 'Work | pebble {code}',
+    body_class: 'work-page'
   });
 });
 
 app.get('/blog', function(req, res){
   res.render('blog', {
-    title: 'Blog | pebble {code}'
+    title: 'Blog | pebble {code}',
+    body_class: 'blog-page'
   });
 });
 
