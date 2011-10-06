@@ -251,8 +251,11 @@ header nav ul li a.work:hover {
 .navshadow {
   width: 100%;
   height: 5px;
-  background-color: rgba(0,0,0,0.10);
   clear: both;
+  background-color: rgba(0,0,0,0.10);
+}
+.no-rgba .navshadow {
+  background-color: #eee;
 }
 /* Footer
 -----------------------------------------------------------------------------*/
