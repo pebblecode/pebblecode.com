@@ -296,12 +296,16 @@ footer ul {
   }
   body header nav ul li {
     display: inline;
-    float: left;
     padding: 0 5%;
+  }
+  body header nav ul li a {
+    float: right;
+    margin-left: 0;
   }
   body .content {
     width: 90%;
     padding: 5%;
+    margin-top: 0;
   }
   body .content ul.home-work {
     list-style: none;
