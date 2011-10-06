@@ -307,6 +307,7 @@ footer ul {
   body .content {
     width: 90%;
     padding: 5%;
+    margin-top: 0;
   }
   body .content ul.home-work {
     list-style: none;
