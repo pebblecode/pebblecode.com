@@ -129,8 +129,8 @@ h4 {
   font: 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
   font-weight: bold;
   font-size: 5em;
-  line-height: 0.7em;
-  margin-bottom: 0.7em;
+  line-height: 0.3em;
+  margin-bottom: 0.9em;
 }
 h5 {
   font-size: 1.3em;
@@ -149,7 +149,7 @@ address,
 ul,
 ol,
 dl {
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
 }
@@ -456,13 +456,33 @@ ul.home-work li {
   margin-bottom: 2%;
   padding: 0 1% 1% 0.7%;
 }
-ul.home-work li:nth-child(even) {
+ul.home-work li:nth-child(odd) {
   float: left;
   clear: left;
 }
-ul.home-work li:nth-child(odd) {
+ul.home-work li:nth-child(even) {
   float: right;
   clear: right;
+}
+ul.columns-about {
+  list-style: none;
+}
+ul.columns-about li {
+  width: 47%;
+  margin-bottom: 2%;
+}
+ul.columns-about li:nth-child(odd) {
+  float: left;
+  clear: left;
+  padding-right: 3%;
+  border-right: 5px solid #419fda;
+}
+ul.columns-about li:nth-child(even) {
+  float: right;
+  clear: right;
+}
+hr {
+  clear: both;
 }
 h2.home {
   font-size: 5em;
