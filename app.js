@@ -3,9 +3,15 @@
  * Module dependencies.
  */
 
-var express = require('express');
+var express = require('express')
+	, force_domain = require('connect-force-domain');
 
-var app = module.exports = express.createServer();
+var app; 
+if (process.env.NODE_ENV == 'production') { 
+	app = module.exports = express.createServer(force_domain('pebblecode.com'));
+} else { 
+	app = module.exports = express.createServer();
+} 
 
 // Configuration
 
@@ -28,9 +34,16 @@ app.configure('production', function(){
 });
 
 // Routes
-
+//
 app.get('/', function(req, res){
   res.render('index', {
+    title: 'pebble {code} ..coming soon',
+	layout: 'holding.jade'
+  });
+});
+
+app.get('/home', function(req, res){
+  res.render('home', {
     title: 'Home | pebble {code}'
   });
 });

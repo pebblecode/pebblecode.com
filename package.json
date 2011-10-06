@@ -4,7 +4,8 @@
   "dependencies": {
     "express": "2.4.6",
     "stylus": "0.15.1",
-    "jade": "0.14.2"
+    "jade": "0.14.2",
+    "connect-force-domain": "0.0.2"
   }
 , "devDependencies": {
     "expresso": "latest"
