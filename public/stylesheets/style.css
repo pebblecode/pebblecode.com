@@ -266,154 +266,115 @@ h1.home {
   color: #7a7a7a;
   text-align: center;
 }
-ul.home-work,
-li {
+ul.home-work {
   list-style: none;
 }
-ul.home-work li,
-li li {
+ul.home-work li {
   height: 320px;
   width: 47%;
   margin-bottom: 2%;
   padding: 0 1% 1% 0.7%;
 }
-ul.home-work li h3,
-li li h3 {
+ul.home-work li h3 {
   font-size: 4em;
   font-weight: normal;
   padding-bottom: 0;
   margin-bottom: 0;
   font-weight: bold;
 }
-ul.home-work li h3 a,
-li li h3 a {
+ul.home-work li h3 a {
   text-decoration: none;
   color: #7a7a7a;
 }
-ul.home-work li p.summary,
-li li p.summary {
+ul.home-work li p.summary {
   font-size: 2em;
 }
-ul.home-work li:nth-child(odd),
-li li:nth-child(odd) {
+ul.home-work li.odd {
   float: left;
   clear: left;
 }
-ul.home-work li:nth-child(even),
-li li:nth-child(even) {
+ul.home-work li.even {
   float: right;
   clear: right;
 }
-ul.home-work li:nth-child(1),
-li li:nth-child(1) {
+ul.home-work li.ldntaxi {
   border-left: 5px solid #419fda;
 }
-ul.home-work li:nth-child(1) h3 span,
-li li:nth-child(1) h3 span,
-ul.home-work li:nth-child(1) p span,
-li li:nth-child(1) p span {
+ul.home-work li.ldntaxi h3 span,
+ul.home-work li.ldntaxi p span {
   color: #419fda;
 }
-ul.home-work li:nth-child(1) a,
-li li:nth-child(1) a {
+ul.home-work li.ldntaxi a {
   color: #419fda;
 }
-ul.home-work li:nth-child(2),
-li li:nth-child(2) {
+ul.home-work li.woohoo {
   border-left: 5px solid #adca3a;
 }
-ul.home-work li:nth-child(2) h3 span,
-li li:nth-child(2) h3 span,
-ul.home-work li:nth-child(2) p span,
-li li:nth-child(2) p span {
+ul.home-work li.woohoo h3 span,
+ul.home-work li.woohoo p span {
   color: #adca3a;
 }
-ul.home-work li:nth-child(2) a,
-li li:nth-child(2) a {
+ul.home-work li.woohoo a {
   color: #adca3a;
 }
-ul.home-work li:nth-child(3),
-li li:nth-child(3) {
+ul.home-work li.aljazeera {
   border-left: 5px solid #f7ae35;
 }
-ul.home-work li:nth-child(3) h3 span,
-li li:nth-child(3) h3 span,
-ul.home-work li:nth-child(3) p span,
-li li:nth-child(3) p span {
+ul.home-work li.aljazeera h3 span,
+ul.home-work li.aljazeera p span {
   color: #f7ae35;
 }
-ul.home-work li:nth-child(3) a,
-li li:nth-child(3) a {
+ul.home-work li.aljazeera a {
   color: #f7ae35;
 }
-ul.home-work li:nth-child(4),
-li li:nth-child(4) {
+ul.home-work li.takefive {
   border-left: 5px solid #42b8be;
 }
-ul.home-work li:nth-child(4) h3 span,
-li li:nth-child(4) h3 span,
-ul.home-work li:nth-child(4) p span,
-li li:nth-child(4) p span {
+ul.home-work li.takefive h3 span,
+ul.home-work li.takefive p span {
   color: #42b8be;
 }
-ul.home-work li:nth-child(4) a,
-li li:nth-child(4) a {
+ul.home-work li.takefive a {
   color: #42b8be;
 }
-ul.home-work li:nth-child(5),
-li li:nth-child(5) {
+ul.home-work li.ideapi {
   border-left: 5px solid #a1579c;
 }
-ul.home-work li:nth-child(5) h3 span,
-li li:nth-child(5) h3 span,
-ul.home-work li:nth-child(5) p span,
-li li:nth-child(5) p span {
+ul.home-work li.ideapi h3 span,
+ul.home-work li.ideapi p span {
   color: #a1579c;
 }
-ul.home-work li:nth-child(5) a,
-li li:nth-child(5) a {
+ul.home-work li.ideapi a {
   color: #a1579c;
 }
-ul.home-work li:nth-child(6),
-li li:nth-child(6) {
+ul.home-work li.downunder {
   border-left: 5px solid #e74679;
 }
-ul.home-work li:nth-child(6) h3 span,
-li li:nth-child(6) h3 span,
-ul.home-work li:nth-child(6) p span,
-li li:nth-child(6) p span {
+ul.home-work li.downunder h3 span,
+ul.home-work li.downunder p span {
   color: #e74679;
 }
-ul.home-work li:nth-child(6) a,
-li li:nth-child(6) a {
+ul.home-work li.downunder a {
   color: #e74679;
 }
-ul.home-work li:nth-child(7),
-li li:nth-child(7) {
+ul.home-work li.space {
   border-left: 5px solid #419fda;
 }
-ul.home-work li:nth-child(7) h3 span,
-li li:nth-child(7) h3 span,
-ul.home-work li:nth-child(7) p span,
-li li:nth-child(7) p span {
+ul.home-work li.space h3 span,
+ul.home-work li.space p span {
   color: #419fda;
 }
-ul.home-work li:nth-child(7) a,
-li li:nth-child(7) a {
+ul.home-work li.space a {
   color: #419fda;
 }
-ul.home-work li:nth-child(8),
-li li:nth-child(8) {
+ul.home-work li.stink {
   border-left: 5px solid #adca3a;
 }
-ul.home-work li:nth-child(8) h3 span,
-li li:nth-child(8) h3 span,
-ul.home-work li:nth-child(8) p span,
-li li:nth-child(8) p span {
+ul.home-work li.stink h3 span,
+ul.home-work li.stink p span {
   color: #adca3a;
 }
-ul.home-work li:nth-child(8) a,
-li li:nth-child(8) a {
+ul.home-work li.stink a {
   color: #adca3a;
 }
 /* Work
