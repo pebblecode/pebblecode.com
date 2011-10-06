@@ -147,27 +147,12 @@ h2 {
 h3 {
   font: 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 1.6em;
-  line-height: 1.13em;
-  margin-bottom: 1.13em;
+  font-size: 2em;
 }
 h4 {
   font: 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 5em;
-  line-height: 0.3em;
-  margin-bottom: 0.9em;
-  clear: left;
-}
-h5 {
-  font-size: 1.3em;
-  line-height: 1.38em;
-  margin-bottom: 1.38em;
-}
-h6 {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
+  font-size: 1em;
 }
 /* Header
 -----------------------------------------------------------------------------*/
