@@ -3,9 +3,15 @@
  * Module dependencies.
  */
 
-var express = require('express');
+var express = require('express')
+	, force_domain = require('connect-force-domain');
 
-var app = module.exports = express.createServer();
+var app; 
+if (process.env.NODE_ENV == 'production') { 
+	app = module.exports = express.createServer(force_domain('pebblecode.com'));
+} else { 
+	app = module.exports = express.createServer();
+} 
 
 // Configuration
 
