@@ -287,15 +287,6 @@ ul.columns-about li:nth-child(even) {
 }
 /* Page fragments
 ---------------------------------------*/
-#woohoo,
-#ldntaxi,
-#aljazeera,
-#takefive,
-#space,
-#stink {
-  padding-top: 150px;
-  margin-top: -150px;
-}
 ul.work-listing {
   list-style: none;
 }
