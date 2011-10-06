@@ -260,28 +260,33 @@ header .navshadow {
 }
 /* Home page
 ---------------------------------------*/
-h1.home {
+.home-page h1.title {
   font-size: 6em;
   padding: 7% 0 0 5;
   color: #7a7a7a;
   text-align: center;
 }
+.home-page ul.work-listing li {
+  height: auto;
+}
+/* Work page
+---------------------------------------*/
 /* About page
 ---------------------------------------*/
-ul.columns-about {
+.about-page ul.columns {
   list-style: none;
 }
-ul.columns-about li {
+.about-page ul.columns li {
   width: 47%;
   margin-bottom: 3%;
 }
-ul.columns-about li:nth-child(odd) {
+.about-page ul.columns li:nth-child(odd) {
   float: left;
   clear: left;
   padding-right: 3%;
   border-right: 5px solid #419fda;
 }
-ul.columns-about li:nth-child(even) {
+.about-page ul.columns li:nth-child(even) {
   float: right;
   clear: right;
 }

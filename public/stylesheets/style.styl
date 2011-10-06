@@ -212,29 +212,40 @@ header
 /* Home page
 ---------------------------------------*/
 
-h1.home
-  font-size 6em
-  padding 7% 0 0 5
-  color #7A7A7A
-  text-align center
+.home-page
+  h1.title
+    font-size 6em
+    padding 7% 0 0 5
+    color #7A7A7A
+    text-align center
+
+  ul.work-listing
+    li
+      height auto
+      
+      
+/* Work page
+---------------------------------------*/
+
 
 
 /* About page
 ---------------------------------------*/
 
-ul.columns-about
-  list-style none
-  li
-    width 47%
-    margin-bottom 3%
-    &:nth-child(odd)
-      float left
-      clear left
-      padding-right 3%
-      border-right 5px solid #419fda
-    &:nth-child(even)
-      float right
-      clear right
+.about-page
+  ul.columns
+    list-style none
+    li
+      width 47%
+      margin-bottom 3%
+      &:nth-child(odd)
+        float left
+        clear left
+        padding-right 3%
+        border-right 5px solid #419fda
+      &:nth-child(even)
+        float right
+        clear right
 
 /* Page fragments
 ---------------------------------------*/
