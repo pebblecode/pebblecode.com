@@ -6,4 +6,7 @@
     "stylus": "0.15.1",
     "jade": "0.14.2"
   }
+, "devDependencies": {
+    "expresso": "latest"
+  }
 }
