@@ -4,6 +4,7 @@
 Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
 Removed elements not supported in HTML5
 -----------------------------------------------------------------------------*/
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, address, cite, code,
@@ -19,22 +20,24 @@ table, caption, tbody, tfoot, thead, tr, th, td
   outline 0
   font-size 100%
   vertical-align baseline
-  
+
+
 /* 
 Trigger the new HTML5 block level elements in to the correct content flow
 -----------------------------------------------------------------------------*/
+
 article, aside, dialog, figure, 
 footer, header, hgroup, menu, 
 nav, section  
-  display block 
-      
+  display block
 
-/* Set up document
+
+/* General styles
 -----------------------------------------------------------------------------*/
+
 body
   font 62.5%/1.5 Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif
   color #7A7A7A
-  
 
 .wrapper
   width 100%
@@ -42,15 +45,39 @@ body
   margin-left auto 
   margin-right auto
   background #fff
- 
-.content
-  clear both
-  width 96%
-  padding 0 2%
-  margin-top 50px
 
+p, q, cite, address, ul, ol, dl
+  font-size 1.2em
+  line-height 1.5em
+  margin-bottom 1.5em
+  
+
+li, dd, dt
+  font-size 1em 
+
+a
+  text-decoration underline
+  color #3333cc
+  outline none
+
+a:hover
+  text-decoration none
+
+code, samp, dfn, kbd, var, acronym, ins, del
+
+abbr 
+  speak spell-out
+
+acronym 
+  speak normal
+
+hr
+  clear both
+  
+  
 /* Typography
 -----------------------------------------------------------------------------*/
+
 h1
   font 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif
   font-weight bold
@@ -87,36 +114,12 @@ h5
 h6 
   font-size 1.2em
   line-height 1.5em
-  margin-bottom 1.5em 
-
-p, q, cite, address, ul, ol, dl
-  font-size 1.2em
-  line-height 1.5em
   margin-bottom 1.5em
-  
-
-li, dd, dt
-  font-size 1em 
-
-a
-  text-decoration underline
-  color #3333cc
-  outline none
-
-a:hover
-  text-decoration none
-
-code, samp, dfn, kbd, var, acronym, ins, del
-
-abbr 
-  speak spell-out
-
-acronym 
-  speak normal
 
 
 /* Header
 -----------------------------------------------------------------------------*/
+
 header
   position fixed
   top 0
@@ -185,113 +188,68 @@ header
             
             &:hover
               background-position: 0 -38px;
-          
 
-/* Nav Shadow
+  .navshadow
+    width 100%
+    height 5px  
+    clear: both;
+
+    background-color rgba(0, 0, 0, 0.1)
+    .no-rgba &
+      background-color #eeeeee
+
+
+/* Content
 -----------------------------------------------------------------------------*/
 
-.navshadow
-  width 100%
-  height 5px  
-  clear: both;
-  
-  background-color rgba(0, 0, 0, 0.1)
-  .no-rgba &
-    background-color #eeeeee
-
-
-
-/* Footer
------------------------------------------------------------------------------*/
-footer
-  float left
+.content
   clear both
   width 96%
-  height 60px
-  padding 2%
-  color #C2C2C2
-  margin-top 150px
-  background-color #F2F2F2
-  text-shadow white 0 1px 1px
-  ul 
-    list-style none
+  padding 0 2%
+  margin-top 135px
 
 
+/* Homepage
+---------------------------------------*/
 
-@media only screen and (max-width: 600px) 
-  body
-    font-size: .5em
-    .wrapper
-      width: 100%
-    header
-      position relative
-      nav
-        text-align center
-        height auto
-        padding 1%
-        h1
-          float none
-        ul
-          float left
-          width 100%
-          font-size 2em
-          li
-            display inline
-            padding 0 5%
-            a
-              float right
-              margin-left: 0
-    .content
-      width 90%
-      padding 5%
-      margin-top 0
-      
-      ul.home-work
-        list-style none
-        li
-          width 96%
-          float none
-          padding 2% 2% 2% 2%
-          margin-bottom 5%
-      h2.home
-        font-size 5em
-        padding 7% 0 0 5
-        color #7A7A7A
-        text-align center
-        text-shadow white 0 1px 1px
-      h2
-        font-size 3em
-      p.home
-        padding 0
-        margin 0
-        padding 0
-        color #7A7A7A
-        font-size 3em
-        margin-bottom 2%
-        text-align center
-        text-shadow white 0 1px 1px
-        
+h1.home
+  font-size 6em
+  padding 7% 0 0 5
+  color #7A7A7A
+  text-align center
 
-// Mobile
 ul.home-work
+
+li
   list-style none
+  
   li
-    padding 2% 2% 2% 2%
-    margin-bottom 5%
-    
+    height 320px 
+    width 47%
+    margin-bottom 2%
+    padding 0 1% 1% 0.7%    
+
     h3
       font-size 4em
       font-weight normal
       padding-bottom 0
       margin-bottom 0
       font-weight bold
-      
+
       a
         text-decoration none
         color #7A7A7A
 
     p.summary
       font-size 2em
+      
+    &:nth-child(odd)
+      float left
+      clear left
+    &:nth-child(even)
+      float right
+      clear right
+      
     &:nth-child(1)
       border-left 5px solid #419fda
       h3, p
@@ -299,6 +257,7 @@ ul.home-work
           color #419fda
       a
         color #419fda
+        
     &:nth-child(2)
       border-left 5px solid #adca3a
       h3, p
@@ -306,6 +265,7 @@ ul.home-work
           color #adca3a
       a
         color #adca3a
+        
     &:nth-child(3)
       border-left 5px solid #f7ae35
       h3, p
@@ -313,7 +273,7 @@ ul.home-work
           color #f7ae35
       a
         color #f7ae35
-      
+
     &:nth-child(4)
       border-left 5px solid #42b8be
       h3, p
@@ -342,7 +302,7 @@ ul.home-work
           color #419fda
       a
         color #419fda
-          
+
     &:nth-child(8)
       border-left 5px solid #adca3a
       h3, p
@@ -350,21 +310,19 @@ ul.home-work
           color #adca3a
       a
         color #adca3a
-.content
-  margin-top 135px
-ul.home-work
-  li
-    height 320px 
-    width 47%
-    margin-bottom 2%
-    padding 0 1% 1% 0.7%
-    &:nth-child(odd)
-      float left
-      clear left
-    &:nth-child(even)
-      float right
-      clear right
-      
+
+
+/* Work
+---------------------------------------*/
+
+#woohoo, #ldntaxi, #aljazeera, #takefive, #space, #stink
+  padding-top 150px 
+  margin-top -150px
+
+
+/* About
+---------------------------------------*/
+
 ul.columns-about	
   list-style none
   li
@@ -378,17 +336,21 @@ ul.columns-about
     &:nth-child(even)
       float right
       clear right
-      
-      
-hr
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+
+footer
+  float left
   clear both
-  
-     
-h1.home
-  font-size 6em
-  padding 7% 0 0 5
-  color #7A7A7A
-  text-align center
-#woohoo, #ldntaxi, #aljazeera, #takefive, #space, #stink
-  padding-top 150px 
-  margin-top -150px
+  width 96%
+  height 60px
+  padding 2%
+  color #C2C2C2
+  margin-top 150px
+  background-color #F2F2F2
+  text-shadow white 0 1px 1px
+  ul 
+    list-style none
+
