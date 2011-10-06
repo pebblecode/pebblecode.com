@@ -52,8 +52,15 @@ To run tests run
 
     expresso
 
+More info on expresso is [here][6]
+
+## Hosting
+
+The site is hosted on Heroku.
+
 [1]: http://expressjs.com/
 [2]: http://nodejs.org/
 [3]: http://npmjs.org/
 [4]: http://jade-lang.com/
 [5]: http://learnboost.github.com/stylus/
+[6]: https://github.com/visionmedia/expresso
