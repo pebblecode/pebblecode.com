@@ -46,6 +46,12 @@ The files you'll be most concerned with are the view files (under /views) and th
 
 The view files are written in [jade][4] and the stylesheets are written in [stylus][5]. There is good documentation on both of the sites.
 
+## Tests
+
+To run tests run 
+
+    expresso
+
 [1]: http://expressjs.com/
 [2]: http://nodejs.org/
 [3]: http://npmjs.org/
