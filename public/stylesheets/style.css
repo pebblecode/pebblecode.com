@@ -94,8 +94,8 @@ body {
 }
 .content {
   clear: both;
-  width: 94%;
-  padding: 0 3%;
+  width: 96%;
+  padding: 0 2%;
   margin-top: 50px;
 }
 /* Typography
@@ -104,7 +104,7 @@ h1 {
   font: 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
   font-weight: bold;
   font-size: 4.5em;
-  margin-left: 30px;
+  margin-left: 2%;
   float: left;
 }
 h1 a {
@@ -209,7 +209,7 @@ header nav ul {
   float: right;
   margin-bottom: 0;
   padding-bottom: 0;
-  margin: 15px 30px 0 0;
+  margin: 15px 2% 0 0;
   text-align: right;
 }
 header nav ul li {
@@ -262,9 +262,9 @@ header nav ul li a.work:hover {
 footer {
   float: left;
   clear: both;
-  width: 100%;
+  width: 96%;
   height: 60px;
-  padding: 30px;
+  padding: 2%;
   color: #c2c2c2;
   margin-top: 150px;
   background-color: #f2f2f2;
@@ -309,9 +309,9 @@ footer ul {
     list-style: none;
   }
   body .content ul.home-work li {
-    width: 94%;
+    width: 96%;
     float: none;
-    padding: 3% 3% 3% 3%;
+    padding: 2% 2% 2% 2%;
     margin-bottom: 5%;
   }
   body .content h2.home {
@@ -339,7 +339,7 @@ ul.home-work {
   list-style: none;
 }
 ul.home-work li {
-  padding: 3% 3% 3% 3%;
+  padding: 2% 2% 2% 2%;
   margin-bottom: 5%;
 }
 ul.home-work li h3 {
@@ -434,11 +434,25 @@ ul.home-work li:nth-child(6) h3 span,
 ul.home-work li:nth-child(6) p span {
   color: #e74679;
 }
+ul.home-work li:nth-child(7) {
+  border-left: 5px solid #419fda;
+}
+ul.home-work li:nth-child(7) h3 span,
+ul.home-work li:nth-child(7) p span {
+  color: #419fda;
+}
+ul.home-work li:nth-child(8) {
+  border-left: 5px solid #adca3a;
+}
+ul.home-work li:nth-child(8) h3 span,
+ul.home-work li:nth-child(8) p span {
+  color: #adca3a;
+}
 .content {
   margin-top: 135px;
 }
 ul.home-work li {
-  width: 42%;
+  width: 47%;
   margin-bottom: 2%;
   padding: 0 1% 1% 0.7%;
 }
