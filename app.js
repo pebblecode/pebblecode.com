@@ -7,7 +7,7 @@ var express = require('express')
 	, force_domain = require('connect-force-domain');
 
 var app; 
-console.log(process.env.NODE_ENV);
+console.log(process.env);
 if (process.env.NODE_ENV == 'production') { 
 	app = module.exports = express.createServer(force_domain('pebblecode.com'));
 } else { 
