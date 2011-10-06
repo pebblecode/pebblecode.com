@@ -146,45 +146,36 @@ header
         margin-bottom 0
         padding-bottom 0
         
-        a.blog
+        a
           display block
           float right
-          background transparent url('/images/blog.png') no-repeat 0 0
-          width 80px
-          height 28px
-          text-indent 9999px
-          outline none
           margin-left 5%
-         
-        a:hover
-          background-position: 0 -38px;  
+
+          // Using image replacement technique #6 from http://css-tricks.com/630-css-image-replacement/
+          overflow hidden
+          height 0
+          padding-top 28px
         
-        a.about
-          display block
-          float right
-          background transparent url('/images/about.png') no-repeat 0 0
-          width 95px
-          height 28px
-          text-indent 9999px
-          outline none
-          margin-left 5%
+          &.blog
+            background transparent url('/images/blog.png') no-repeat 0 0
+            width 80px
+            
+            &:hover
+              background-position: 0 -38px;  
+      
+          &.about
+            background transparent url('/images/about.png') no-repeat 0 0
+            width 95px
           
-        a:hover
-          background-position: 0 -38px;
+            &:hover
+              background-position: 0 -38px;
         
-        a.work
-          display block
-          background transparent url('/images/work.png') no-repeat 0 0
-          float right
-          width 87px
-          height 28px
-          text-indent 9999px
-          outline none
-          margin-left 5%
-          
-        a:hover
-          background-position: 0 -38px;
-          
+          &.work
+            background transparent url('/images/work.png') no-repeat 0 0
+            width 87px
+            
+            &:hover
+              background-position: 0 -38px;
           
 
 /* Nav Shadow
