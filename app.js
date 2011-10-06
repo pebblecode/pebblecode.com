@@ -37,12 +37,13 @@ app.configure('production', function(){
 //
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'pebble {code} ..coming soon'
+    title: 'pebble {code} ..coming soon',
+	layout: 'holding.jade'
   });
 });
 
-app.get('/', function(req, res){
-  res.render('index2', {
+app.get('/home', function(req, res){
+  res.render('home', {
     title: 'Home | pebble {code}'
   });
 });
