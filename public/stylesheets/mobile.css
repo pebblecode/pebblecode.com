@@ -101,3 +101,14 @@ header nav ul li a {
 .work-page ul.work-listing li h3 {
   font-size: 2.5em;
 }
+/* About page
+---------------------------------------*/
+.about-page ul.columns li {
+  width: 100%;
+}
+.about-page ul.columns li.odd,
+.about-page ul.columns li.even {
+  float: none;
+  clear: both;
+  border: none;
+}
