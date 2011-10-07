@@ -81,6 +81,15 @@ header nav ul li a {
 .work-page h1 {
   margin-bottom: 10px;
 }
+.work-page ul.about-intro li {
+  float: none;
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.work-page ul.about-intro li.vspace {
+  display: none;
+}
 .work-page ul.work-listing li {
   float: left;
   clear: both;
