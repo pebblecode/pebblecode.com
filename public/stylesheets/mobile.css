@@ -64,3 +64,15 @@ header nav ul li a {
   font-size: 3em;
   padding-bottom: 7%;
 }
+/* Work page
+---------------------------------------*/
+.work-page ul.work-listing li {
+  float: left;
+  clear: both;
+  height: auto;
+  width: 96%;
+  margin-bottom: 7%;
+}
+.work-page ul.work-listing li h3 {
+  font-size: 2.5em;
+}
