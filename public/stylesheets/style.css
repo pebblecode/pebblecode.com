@@ -100,7 +100,7 @@ ol,
 dl {
   font-size: 1.2em;
   line-height: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 li,
 dd,
@@ -239,21 +239,32 @@ header .navshadow {
   clear: both;
   width: 96%;
   padding: 0 2%;
-  margin-top: 135px;
+  margin-top: 110px;
 }
 /* Home page
 ---------------------------------------*/
 .home-page h1.title {
   font-size: 6em;
   padding: 7% 0 0 5;
+  margin: -10px 0 30px 0;
   color: #7a7a7a;
   text-align: center;
 }
 .home-page ul.work-listing li {
   height: auto;
 }
+.home-page a {
+  text-decoration: none;
+  color: #7a7a7a;
+}
 /* Work page
 ---------------------------------------*/
+.work-page a:hover {
+  text-decoration: underline;
+}
+.work-page h1 {
+  margin-bottom: 30px;
+}
 /* About page
 ---------------------------------------*/
 .about-page ul.columns {
@@ -279,24 +290,17 @@ ul.work-listing {
   list-style: none;
 }
 ul.work-listing li {
-  height: 320px;
+  height: 260px;
   width: 47%;
   margin-bottom: 2%;
   padding: 0 1% 1% 0.7%;
 }
-ul.work-listing li h3 {
-  font-size: 4em;
-  font-weight: normal;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  font-weight: bold;
-}
-ul.work-listing li h3 a {
+ul.work-listing li a {
   text-decoration: none;
-  color: #7a7a7a;
 }
 ul.work-listing li p.summary {
   font-size: 2em;
+  margin: -0.1em 0 0.4em 0;
 }
 ul.work-listing li.odd {
   float: left;
@@ -310,8 +314,7 @@ ul.work-listing li.ldntaxi {
   border-left: 5px solid #419fda;
   background: url("/images/tile_blue.gif");
 }
-ul.work-listing li.ldntaxi h3 span,
-ul.work-listing li.ldntaxi p span {
+ul.work-listing li.ldntaxi span {
   color: #419fda;
 }
 ul.work-listing li.ldntaxi a {
@@ -321,8 +324,7 @@ ul.work-listing li.woohoo {
   border-left: 5px solid #adca3a;
   background: url("/images/tile_green.gif");
 }
-ul.work-listing li.woohoo h3 span,
-ul.work-listing li.woohoo p span {
+ul.work-listing li.woohoo span {
   color: #adca3a;
 }
 ul.work-listing li.woohoo a {
@@ -332,8 +334,7 @@ ul.work-listing li.aljazeera {
   border-left: 5px solid #f7ae35;
   background: url("/images/tile_orange.gif");
 }
-ul.work-listing li.aljazeera h3 span,
-ul.work-listing li.aljazeera p span {
+ul.work-listing li.aljazeera span {
   color: #f7ae35;
 }
 ul.work-listing li.aljazeera a {
@@ -343,8 +344,7 @@ ul.work-listing li.takefive {
   border-left: 5px solid #42b8be;
   background: url("/images/tile_aqua.gif");
 }
-ul.work-listing li.takefive h3 span,
-ul.work-listing li.takefive p span {
+ul.work-listing li.takefive span {
   color: #42b8be;
 }
 ul.work-listing li.takefive a {
@@ -354,8 +354,7 @@ ul.work-listing li.ideapi {
   border-left: 5px solid #a1579c;
   background: url("/images/tile_purple.gif");
 }
-ul.work-listing li.ideapi h3 span,
-ul.work-listing li.ideapi p span {
+ul.work-listing li.ideapi span {
   color: #a1579c;
 }
 ul.work-listing li.ideapi a {
@@ -365,8 +364,7 @@ ul.work-listing li.downunder {
   border-left: 5px solid #e74679;
   background: url("/images/tile_pink.gif");
 }
-ul.work-listing li.downunder h3 span,
-ul.work-listing li.downunder p span {
+ul.work-listing li.downunder span {
   color: #e74679;
 }
 ul.work-listing li.downunder a {
@@ -376,8 +374,7 @@ ul.work-listing li.space {
   border-left: 5px solid #419fda;
   background: url("/images/tile_blue.gif");
 }
-ul.work-listing li.space h3 span,
-ul.work-listing li.space p span {
+ul.work-listing li.space span {
   color: #419fda;
 }
 ul.work-listing li.space a {
@@ -387,8 +384,7 @@ ul.work-listing li.stink {
   border-left: 5px solid #adca3a;
   background: url("/images/tile_green.gif");
 }
-ul.work-listing li.stink h3 span,
-ul.work-listing li.stink p span {
+ul.work-listing li.stink span {
   color: #adca3a;
 }
 ul.work-listing li.stink a {
