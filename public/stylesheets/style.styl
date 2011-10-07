@@ -238,20 +238,29 @@ header
   
   ul.about-intro
     margin-bottom 40px
+    height 130px
     
     a
       color #419fda
     
     li
-      width 49%
-      &.odd
-        float left
-        clear left
-      &.even
-        float right 
-        clear right
+      width 30%
+      float left
       
-
+      &.about-first
+        margin-right 2.4%
+        
+      &.about-second
+        margin 0 2.4%
+        
+      &.about-third
+        margin-left 2.4%
+        
+      &.v-space
+        width 2px
+        height 100%
+        background-color #419fda
+    
 /* About page
 ---------------------------------------*/
 
@@ -264,7 +273,7 @@ header
         float left
         clear left
         padding-right 3%
-        border-right 5px solid #419fda
+        border-right 2px solid #419fda
       &:nth-child(even)
         float right
         clear right
