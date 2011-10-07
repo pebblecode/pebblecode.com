@@ -278,20 +278,28 @@ header .navshadow {
 ---------------------------------------*/
 .work-page ul.about-intro {
   margin-bottom: 40px;
+  min-height: 130px;
 }
 .work-page ul.about-intro a {
   color: #419fda;
 }
 .work-page ul.about-intro li {
-  width: 49%;
-}
-.work-page ul.about-intro li.odd {
+  width: 30%;
   float: left;
-  clear: left;
 }
-.work-page ul.about-intro li.even {
-  float: right;
-  clear: right;
+.work-page ul.about-intro li.about-first {
+  margin-right: 2.4%;
+}
+.work-page ul.about-intro li.about-second {
+  margin: 0 2.4%;
+}
+.work-page ul.about-intro li.about-third {
+  margin-left: 2.4%;
+}
+.work-page ul.about-intro li.v-space {
+  width: 2px;
+  height: 100%;
+  background-color: #419fda;
 }
 /* About page
 ---------------------------------------*/
@@ -303,7 +311,7 @@ header .navshadow {
   float: left;
   clear: left;
   padding-right: 3%;
-  border-right: 5px solid #419fda;
+  border-right: 2px solid #419fda;
 }
 .about-page ul.columns li:nth-child(even) {
   float: right;
@@ -312,7 +320,7 @@ header .navshadow {
 /* Page fragments
 ---------------------------------------*/
 ul.work-listing li {
-  min-height: 260px;
+  height: 260px;
   width: 47%;
   margin-bottom: 2%;
   padding: 0 1% 1% 0.7%;
