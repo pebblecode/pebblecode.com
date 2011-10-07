@@ -42,6 +42,7 @@ header nav ul {
   float: left;
   width: 100%;
   font-size: 2em;
+  margin-top: 5px;
 }
 header nav ul li {
   display: inline;
@@ -62,10 +63,13 @@ header nav ul li a {
 ---------------------------------------*/
 .home-page h1.title {
   font-size: 3em;
-  padding-bottom: 7%;
+  margin-bottom: 10px;
 }
 /* Work page
 ---------------------------------------*/
+.work-page h1 {
+  margin-bottom: 10px;
+}
 .work-page ul.work-listing li {
   float: left;
   clear: both;
