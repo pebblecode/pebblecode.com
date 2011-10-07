@@ -57,12 +57,12 @@ li, dd, dt
   font-size 1em 
 
 a
-  text-decoration underline
+  text-decoration none
   color #3333cc
   outline none
 
 a:hover
-  text-decoration none
+  text-decoration underline
 
 code, samp, dfn, kbd, var, acronym, ins, del
 
@@ -209,19 +209,22 @@ header
       height auto
       
   a
-    text-decoration none
     color #7A7A7A
+    
+  a:hover
+    text-decoration none
       
       
 /* Work page
 ---------------------------------------*/
 
 .work-page
-  a:hover
-    text-decoration underline
-    
+  
   ul.about-intro
     margin-bottom 40px
+    
+    a
+      color #419fda
     
     li
       width 49%
@@ -260,9 +263,6 @@ ul.work-listing
     width 47%
     margin-bottom 2%
     padding 0 1% 1% 0.7%    
-      
-    a
-      text-decoration none
 
     p.summary
       font-size 2em
