@@ -1,5 +1,12 @@
 @import 'mixins/css3'
 
+/*
+Variables
+-----------------------------------------------------------------------------*/
+
+footer_height = 60px
+
+
 /* Reset
 Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
 Removed elements not supported in HTML5
@@ -203,10 +210,10 @@ header
   min-height 100%
   height auto !important
   height 100%
-  margin 100px auto -60px
+  margin 100px auto -footer_height
   
   .push-footer
-    height 60px
+    height footer_height
 
 /* Home page
 ---------------------------------------*/
@@ -375,7 +382,7 @@ footer
   float left
   clear both
   width 96%
-  height 60px
+  height footer_height
   padding 2%
   color #C2C2C2
   margin-top 150px
