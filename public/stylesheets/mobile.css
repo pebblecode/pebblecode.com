@@ -65,6 +65,9 @@ header nav ul li a {
   font-size: 3em;
   margin-bottom: 10px;
 }
+.home-page ul.work-listing li {
+  min-height: 6em;
+}
 /* Work page
 ---------------------------------------*/
 .work-page h1 {
