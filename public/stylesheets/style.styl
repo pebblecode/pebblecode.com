@@ -50,6 +50,7 @@ p, q, cite, address, ul, ol, dl
   font-size 1.2em
   line-height 1.5em
   margin-bottom 1em
+  list-style none
   
 
 li, dd, dt
@@ -73,6 +74,8 @@ acronym
 
 hr
   clear both
+  border none
+  
   
   
 /* Typography
@@ -127,7 +130,6 @@ header
     width 100%
     padding 10px 0 10px 0
     ul 
-      list-style none
       width 50%
       float right
       margin-bottom 0
@@ -187,7 +189,7 @@ header
   clear both
   width 96%
   padding 0 2%
-  margin-top 110px
+  margin-top 100px
 
 
 /* Home page
@@ -197,7 +199,7 @@ header
   h1.title
     font-size 6em
     padding 7% 0 0 5
-    margin -10px 0 30px 0
+    margin-bottom 30px
     color #7A7A7A
     text-align center
     
@@ -217,17 +219,25 @@ header
 .work-page
   a:hover
     text-decoration underline
-  
-  h1
-    margin-bottom 30px
-
+    
+  ul.about-intro
+    margin-bottom 40px
+    
+    li
+      width 49%
+      &.odd
+        float left
+        clear left
+      &.even
+        float right 
+        clear right
+      
 
 /* About page
 ---------------------------------------*/
 
 .about-page
   ul.columns
-    list-style none
     li
       width 47%
       margin-bottom 3%
@@ -244,7 +254,6 @@ header
 ---------------------------------------*/
 
 ul.work-listing
-  list-style none
 
   li
     height 260px 
@@ -347,5 +356,3 @@ footer
   margin-top 150px
   background-color #F2F2F2
   text-shadow white 0 1px 1px
-  ul 
-    list-style none
