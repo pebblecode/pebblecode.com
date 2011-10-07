@@ -112,3 +112,17 @@ header nav ul li a {
   clear: both;
   border: none;
 }
+.about-page ul.who li {
+  width: 96%;
+  margin: 0 !important;
+}
+.about-page ul.who li h2 {
+  font-size: 2em;
+}
+.about-page .map {
+  float: none;
+  width: 96%;
+}
+.about-page .address {
+  width: 96%;
+}
