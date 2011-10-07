@@ -109,6 +109,7 @@ dl {
   font-size: 1.2em;
   line-height: 1.5em;
   margin-bottom: 1em;
+  list-style: none;
 }
 li,
 dd,
@@ -116,12 +117,12 @@ dt {
   font-size: 1em;
 }
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #33c;
   outline: none;
 }
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 code,
 samp,
@@ -139,6 +140,7 @@ acronym {
 }
 hr {
   clear: both;
+  border: none;
 }
 /* Typography
 -----------------------------------------------------------------------------*/
@@ -190,7 +192,6 @@ header nav {
   padding: 10px 0 10px 0;
 }
 header nav ul {
-  list-style: none;
   width: 50%;
   float: right;
   margin-bottom: 0;
@@ -250,7 +251,7 @@ header .navshadow {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 110px auto -60px;
+  margin: 100px auto -60px;
 }
 .content .push-footer {
   height: 60px;
@@ -260,7 +261,7 @@ header .navshadow {
 .home-page h1.title {
   font-size: 6em;
   padding: 7% 0 0 5;
-  margin: -10px 0 30px 0;
+  margin-bottom: 30px;
   color: #7a7a7a;
   text-align: center;
 }
@@ -268,22 +269,32 @@ header .navshadow {
   height: auto;
 }
 .home-page a {
-  text-decoration: none;
   color: #7a7a7a;
+}
+.home-page a:hover {
+  text-decoration: none;
 }
 /* Work page
 ---------------------------------------*/
-.work-page a:hover {
-  text-decoration: underline;
+.work-page ul.about-intro {
+  margin-bottom: 40px;
 }
-.work-page h1 {
-  margin-bottom: 30px;
+.work-page ul.about-intro a {
+  color: #419fda;
+}
+.work-page ul.about-intro li {
+  width: 49%;
+}
+.work-page ul.about-intro li.odd {
+  float: left;
+  clear: left;
+}
+.work-page ul.about-intro li.even {
+  float: right;
+  clear: right;
 }
 /* About page
 ---------------------------------------*/
-.about-page ul.columns {
-  list-style: none;
-}
 .about-page ul.columns li {
   width: 47%;
   margin-bottom: 3%;
@@ -300,17 +311,11 @@ header .navshadow {
 }
 /* Page fragments
 ---------------------------------------*/
-ul.work-listing {
-  list-style: none;
-}
 ul.work-listing li {
   height: 260px;
   width: 47%;
   margin-bottom: 2%;
   padding: 0 1% 1% 0.7%;
-}
-ul.work-listing li a {
-  text-decoration: none;
 }
 ul.work-listing li p.summary {
   font-size: 2em;
@@ -416,7 +421,4 @@ footer {
   margin-top: 150px;
   background-color: #f2f2f2;
   text-shadow: #fff 0 1px 1px;
-}
-footer ul {
-  list-style: none;
 }
