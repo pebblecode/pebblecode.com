@@ -308,6 +308,7 @@ ul.work-listing li.even {
 }
 ul.work-listing li.ldntaxi {
   border-left: 5px solid #419fda;
+  background: url("/images/tile_blue.gif");
 }
 ul.work-listing li.ldntaxi h3 span,
 ul.work-listing li.ldntaxi p span {
@@ -318,6 +319,7 @@ ul.work-listing li.ldntaxi a {
 }
 ul.work-listing li.woohoo {
   border-left: 5px solid #adca3a;
+  background: url("/images/tile_green.gif");
 }
 ul.work-listing li.woohoo h3 span,
 ul.work-listing li.woohoo p span {
@@ -328,6 +330,7 @@ ul.work-listing li.woohoo a {
 }
 ul.work-listing li.aljazeera {
   border-left: 5px solid #f7ae35;
+  background: url("/images/tile_orange.gif");
 }
 ul.work-listing li.aljazeera h3 span,
 ul.work-listing li.aljazeera p span {
@@ -338,6 +341,7 @@ ul.work-listing li.aljazeera a {
 }
 ul.work-listing li.takefive {
   border-left: 5px solid #42b8be;
+  background: url("/images/tile_aqua.gif");
 }
 ul.work-listing li.takefive h3 span,
 ul.work-listing li.takefive p span {
@@ -348,6 +352,7 @@ ul.work-listing li.takefive a {
 }
 ul.work-listing li.ideapi {
   border-left: 5px solid #a1579c;
+  background: url("/images/tile_purple.gif");
 }
 ul.work-listing li.ideapi h3 span,
 ul.work-listing li.ideapi p span {
@@ -358,6 +363,7 @@ ul.work-listing li.ideapi a {
 }
 ul.work-listing li.downunder {
   border-left: 5px solid #e74679;
+  background: url("/images/tile_pink.gif");
 }
 ul.work-listing li.downunder h3 span,
 ul.work-listing li.downunder p span {
@@ -368,6 +374,7 @@ ul.work-listing li.downunder a {
 }
 ul.work-listing li.space {
   border-left: 5px solid #419fda;
+  background: url("/images/tile_blue.gif");
 }
 ul.work-listing li.space h3 span,
 ul.work-listing li.space p span {
@@ -378,6 +385,7 @@ ul.work-listing li.space a {
 }
 ul.work-listing li.stink {
   border-left: 5px solid #adca3a;
+  background: url("/images/tile_green.gif");
 }
 ul.work-listing li.stink h3 span,
 ul.work-listing li.stink p span {
