@@ -398,6 +398,25 @@ header .navshadow {
   float: right;
   clear: right;
 }
+.map {
+  width: 60%;
+  margin: 20px 0;
+  float: left;
+}
+.address {
+  width: 30%;
+  padding: 10px 10px 10px 2%;
+  float: left;
+}
+.address p {
+  font: 62.5%/1.5 ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0;
+}
+.address p a {
+  color: #e74679;
+}
 /* Page fragments
 ---------------------------------------*/
 ul.work-listing li {
