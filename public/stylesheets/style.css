@@ -304,6 +304,10 @@ header .navshadow {
   height: 100%;
   background-color: #419fda;
 }
+.work-page ul.work-listing li {
+  height: auto;
+  min-height: 260px;
+}
 /* About page
 ---------------------------------------*/
 .about-page ul.who h2 {
