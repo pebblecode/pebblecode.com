@@ -278,34 +278,116 @@ header .navshadow {
 ---------------------------------------*/
 .work-page ul.about-intro {
   margin-bottom: 40px;
+  min-height: 130px;
 }
 .work-page ul.about-intro a {
   color: #419fda;
 }
 .work-page ul.about-intro li {
-  width: 49%;
-}
-.work-page ul.about-intro li.odd {
+  width: 30%;
   float: left;
-  clear: left;
 }
-.work-page ul.about-intro li.even {
-  float: right;
-  clear: right;
+.work-page ul.about-intro li.about-first {
+  margin-right: 2.4%;
+}
+.work-page ul.about-intro li.about-second {
+  margin: 0 2.4%;
+}
+.work-page ul.about-intro li.about-third {
+  margin-left: 2.4%;
+}
+.work-page ul.about-intro li.v-space {
+  width: 2px;
+  height: 100%;
+  background-color: #419fda;
 }
 /* About page
 ---------------------------------------*/
+.about-page ul.who h2 {
+  font-size: 3em;
+}
+.about-page ul.who h3 {
+  margin-top: -10px;
+}
+.about-page ul.who li {
+  margin-bottom: 40px;
+  width: 32%;
+  float: left;
+}
+.about-page ul.who li.toby {
+  background: url("/images/tile_blue.gif");
+}
+.about-page ul.who li.toby span {
+  color: #419fda;
+}
+.about-page ul.who li.george {
+  margin: 0 2%;
+  background: url("/images/tile_green.gif");
+}
+.about-page ul.who li.george span {
+  color: #adca3a;
+}
+.about-page ul.who li.alex {
+  background: url("/images/tile_orange.gif");
+}
+.about-page ul.who li.alex span {
+  color: #f7ae35;
+}
+.about-page ul.who li.mark {
+  background: url("/images/tile_aqua.gif");
+}
+.about-page ul.who li.mark span {
+  color: #42b8be;
+}
+.about-page ul.who li.greg {
+  margin: 0 2%;
+  background: url("/images/tile_purple.gif");
+}
+.about-page ul.who li.greg span {
+  color: #a1579c;
+}
+.about-page ul.who li.vince {
+  background: url("/images/tile_pink.gif");
+}
+.about-page ul.who li.vince span {
+  color: #e74679;
+}
+.about-page ul.who li.tak {
+  background: url("/images/tile_blue.gif");
+}
+.about-page ul.who li.tak span {
+  color: #419fda;
+}
+.about-page ul.who li.joseph {
+  margin: 0 2%;
+  background: url("/images/tile_green.gif");
+}
+.about-page ul.who li.joseph span {
+  color: #adca3a;
+}
+.about-page ul.who li.gayle {
+  background: url("/images/tile_orange.gif");
+}
+.about-page ul.who li.gayle span {
+  color: #f7ae35;
+}
+.about-page ul.who img {
+  float: left;
+  width: 150;
+  height: 200px;
+  margin-right: 10px;
+}
 .about-page ul.columns li {
   width: 47%;
   margin-bottom: 3%;
 }
-.about-page ul.columns li:nth-child(odd) {
+.about-page ul.columns li.odd {
   float: left;
   clear: left;
   padding-right: 3%;
-  border-right: 5px solid #419fda;
+  border-right: 2px solid #419fda;
 }
-.about-page ul.columns li:nth-child(even) {
+.about-page ul.columns li.even {
   float: right;
   clear: right;
 }
