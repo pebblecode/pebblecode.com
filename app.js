@@ -35,14 +35,8 @@ app.configure('production', function(){
 
 // Routes
 //
-app.get('/', function(req, res){
-  res.render('index', {
-    title: 'pebble {code} ..coming soon',
-    layout: 'holding.jade'
-  });
-});
 
-app.get('/home', function(req, res){
+app.get('/', function(req, res){
   res.render('home', {
     title: 'Home | pebble {code}',
     body_class: 'home-page'
