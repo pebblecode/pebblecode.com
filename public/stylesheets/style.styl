@@ -49,7 +49,7 @@ body
 p, q, cite, address, ul, ol, dl
   font-size 1.2em
   line-height 1.5em
-  margin-bottom 1.5em
+  margin-bottom 1em
   
 
 li, dd, dt
@@ -187,7 +187,7 @@ header
   clear both
   width 96%
   padding 0 2%
-  margin-top 135px
+  margin-top 110px
 
 
 /* Home page
@@ -197,6 +197,7 @@ header
   h1.title
     font-size 6em
     padding 7% 0 0 5
+    margin -10px 0 30px 0
     color #7A7A7A
     text-align center
     
@@ -205,10 +206,20 @@ header
     li
       height auto
       
+  a
+    text-decoration none
+    color #7A7A7A
+      
       
 /* Work page
 ---------------------------------------*/
 
+.work-page
+  a:hover
+    text-decoration underline
+  
+  h1
+    margin-bottom 30px
 
 
 /* About page
@@ -236,24 +247,17 @@ ul.work-listing
   list-style none
 
   li
-    height 320px 
+    height 260px 
     width 47%
     margin-bottom 2%
     padding 0 1% 1% 0.7%    
-
-    h3
-      font-size 4em
-      font-weight normal
-      padding-bottom 0
-      margin-bottom 0
-      font-weight bold
-
-      a
-        text-decoration none
-        color #7A7A7A
+      
+    a
+      text-decoration none
 
     p.summary
       font-size 2em
+      margin -0.1em 0 0.4em 0
 
     &.odd
       float left
@@ -266,17 +270,17 @@ ul.work-listing
     &.ldntaxi
       border-left 5px solid #419fda
       background url('/images/tile_blue.gif')
-      h3, p
-        span
-          color #419fda
+      span
+        color #419fda
       a
         color #419fda
+        
+      
 
     &.woohoo
       border-left 5px solid #adca3a
       background url('/images/tile_green.gif')
-      h3, p
-        span
+      span
           color #adca3a
       a
         color #adca3a
@@ -284,8 +288,7 @@ ul.work-listing
     &.aljazeera
       border-left 5px solid #f7ae35
       background url('/images/tile_orange.gif')
-      h3, p
-        span
+      span
           color #f7ae35
       a
         color #f7ae35
@@ -293,8 +296,7 @@ ul.work-listing
     &.takefive
       border-left 5px solid #42b8be
       background url('/images/tile_aqua.gif')
-      h3, p
-        span
+      span
           color #42b8be
       a
         color #42b8be
@@ -302,8 +304,7 @@ ul.work-listing
     &.ideapi
       border-left 5px solid #a1579c
       background url('/images/tile_purple.gif')
-      h3, p
-        span
+      span
           color #a1579c
       a
         color #a1579c
@@ -311,8 +312,7 @@ ul.work-listing
     &.downunder
       border-left 5px solid #e74679
       background url('/images/tile_pink.gif')
-      h3, p
-        span
+      span
           color #e74679
       a
         color #e74679
@@ -320,8 +320,7 @@ ul.work-listing
     &.space
       border-left 5px solid #419fda
       background url('/images/tile_blue.gif')
-      h3, p
-        span
+      span
           color #419fda
       a
         color #419fda
@@ -329,8 +328,7 @@ ul.work-listing
     &.stink
       border-left 5px solid #adca3a
       background url('/images/tile_green.gif')
-      h3, p
-        span
+      span
           color #adca3a
       a
         color #adca3a
@@ -351,4 +349,3 @@ footer
   text-shadow white 0 1px 1px
   ul 
     list-style none
-
