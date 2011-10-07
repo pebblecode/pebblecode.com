@@ -4,3 +4,5 @@ npm-debug.log
 logs
 .monitor
 nodemon-ignore
+
+public/stylesheets/style.styl

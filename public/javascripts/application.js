@@ -3,27 +3,13 @@ $(document).ready(function(){
   var rand = Math.floor(Math.random()*colors.length);           
   $('nav').css("background-color", colors[rand]);
   
-  // Fix offset for anchor text, to accomodate for fixed header
-  $('a[href*="work/#"]').click(function() {
-
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-      && location.hostname == this.hostname) {
-
-      var $target = $(this.hash);
-
-      $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-      if ($target.length) {
-
-        var targetOffset = $target.offset().top - 300;
-
-        $('html,body').animate({scrollTop: targetOffset}, 10);
-
-        return false;
-
-      }
-
+  // Move offset for anchor text, to accomodate for fixed header
+  if (location) {
+    var window_hash = window.location.hash;
+    if (window_hash.length > 0) {
+      var heading_padding = 40;
+      var targetOffset = $(".work-page .content " + window_hash).offset().top - $("header nav").height() - heading_padding;
+      $('html,body').animate({scrollTop: targetOffset}, 1000);
     }
-
-  });
+  }
 });
