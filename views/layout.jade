@@ -25,8 +25,11 @@ html
               a.work(href="/work") Work 
         section.navshadow
      
-      section.content!= body
-      footer 
+      section.content
+        != body
+        .push-footer
+
+      footer
         p 
           | Pebble Code Limited registered in England and Wales <br />
           | Company Number 07240178 <br />

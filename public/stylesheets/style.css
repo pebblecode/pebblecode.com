@@ -63,6 +63,13 @@ td {
   font-size: 100%;
   vertical-align: baseline;
 }
+/*
+Sticky footer (http://ryanfait.com/resources/footer-stick-to-bottom-of-page/)
+-----------------------------------------------------------------------------*/
+html,
+body {
+  height: 100%;
+}
 /* 
 Trigger the new HTML5 block level elements in to the correct content flow
 -----------------------------------------------------------------------------*/
@@ -90,6 +97,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background: #fff;
+  height: 100%;
 }
 p,
 q,
@@ -239,7 +247,13 @@ header .navshadow {
   clear: both;
   width: 96%;
   padding: 0 2%;
-  margin-top: 110px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 110px auto -60px;
+}
+.content .push-footer {
+  height: 60px;
 }
 /* Home page
 ---------------------------------------*/
