@@ -174,6 +174,7 @@ header {
   top: 0;
   width: 100%;
   background: none;
+  z-index: 1000;
 }
 header h1 {
   margin-left: 2%;
@@ -436,20 +437,82 @@ header .navshadow {
 .blog .content {
   width: 960px;
 }
-.blog .content .title {
+.blog .content #intro {
+  width: 810px;
+  margin-left: 150px;
+}
+.blog .content #intro .title {
   font-size: 60px;
   padding: 30px 0 15px;
   color: #7a7a7a;
   text-align: center;
   line-height: 1em;
 }
-.blog .content .subtitle {
+.blog .content #intro .subtitle {
   font-size: 20px;
   padding: 0;
   margin-bottom: 30px;
   color: #7a7a7a;
   text-align: center;
   line-height: 1em;
+}
+.blog .content #posts .post {
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 0;
+}
+.blog .content #posts .post .title a,
+.blog .content #posts .post .body a,
+.blog .content #posts .post .meta .author a,
+.blog .content #posts .post .meta .tags a {
+  color: #419fda;
+}
+.blog .content #posts .post .body {
+  border-left: 5px solid #419fda;
+  background: transparent url("/images/tile_blue.gif") repeat 0 0;
+}
+.blog .content #posts .post .body .title a,
+.blog .content #posts .post .meta .author a {
+  font-family: ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+}
+.blog .content #posts .post .body {
+  margin-left: 150px;
+  padding: 10px;
+}
+.blog .content #posts .post .body .title a {
+  font-size: 24px;
+  padding: 10px 0 20px;
+  line-height: 1em;
+}
+.blog .content #posts .post .meta {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+}
+.blog .content #posts .post .meta .author {
+  margin-bottom: 5px;
+}
+.blog .content #posts .post .meta .author a {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 18px;
+  display: block;
+}
+.blog .content #posts .post .meta .published-date {
+  line-height: 17px;
+}
+.blog .content #posts .post .meta .published-date .date-month {
+  font-weight: bold;
+  display: block;
+}
+.blog .content #posts .post .meta .published-date .year {
+  display: block;
+}
+.blog .content #posts .post .meta .tags {
+  line-height: 17px;
+  margin-top: 10px;
 }
 /* Page fragments
 ---------------------------------------*/

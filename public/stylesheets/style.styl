@@ -14,6 +14,7 @@ pebble_aqua = #42b8be
 pebble_green = #adca3a
 pebble_orange = #f7ae35
 
+pebble_gray = #7A7A7A
 
 /* Reset
 Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
@@ -60,7 +61,7 @@ nav, section
 
 body
   font 62.5%/1.5 Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif
-  color #7A7A7A
+  color pebble_gray
 
 .wrapper
   width 100%
@@ -134,6 +135,7 @@ header
   top 0
   width 100%
   background none
+  z-index 1000
   
   h1
     margin-left 2%
@@ -231,7 +233,7 @@ header
     font-size 6em
     padding 7% 0 0 5
     margin-bottom 40px
-    color #7A7A7A
+    color pebble_gray
     text-align center
     line-height 1em
     
@@ -241,7 +243,7 @@ header
       height auto
       
   a
-    color #7A7A7A
+    color pebble_gray
     
   a:hover
     text-decoration none
@@ -396,20 +398,87 @@ header
   .content
     width 960px
     
-    .title
-      font-size 60px
-      padding 30px 0 15px
-      color #7A7A7A
-      text-align center
-      line-height 1em
+    #intro
+      width 810px
+      margin-left 150px
+      .title
+        font-size 60px
+        padding 30px 0 15px
+        color pebble_gray
+        text-align center
+        line-height 1em
 
-    .subtitle
-      font-size 20px
-      padding 0
-      margin-bottom 30px
-      color #7A7A7A
-      text-align center
-      line-height 1em
+      .subtitle
+        font-size 20px
+        padding 0
+        margin-bottom 30px
+        color pebble_gray
+        text-align center
+        line-height 1em
+    
+    #posts
+      .post
+        position relative
+        margin-bottom 20px
+        z-index 0
+        
+        // Coloured elements
+        .title a,
+        .body a,
+        .meta .author a,
+        .meta .tags a
+          color pebble_blue
+        .body 
+          border-left 5px solid pebble_blue
+          background transparent url(/images/tile_blue.gif) repeat 0 0
+        // End Coloured elements
+        
+        // Meta font
+        .body .title a,
+        .meta .author a
+          font-family ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif
+        // End Meta font
+        
+        .body
+          margin-left 150px
+          padding 10px
+          
+          .title
+            a
+              font-size 24px
+              padding 10px 0 20px
+              line-height 1em
+          
+        .meta
+          text-align right
+          position absolute
+          top 0
+          left 0
+          width 140px
+          
+          .author
+            margin-bottom 5px
+            
+            a
+              font-size 20px
+              font-weight bold
+              margin-top 18px
+              display block
+            
+          .published-date
+            line-height 17px
+            .date-month
+              font-weight bold
+              display block
+              
+            .year
+              display block
+              
+          .tags
+            line-height 17px
+            margin-top 10px
+            
+
 
 /* Page fragments
 ---------------------------------------*/
