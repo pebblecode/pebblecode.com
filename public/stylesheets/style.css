@@ -436,6 +436,21 @@ header .navshadow {
 .blog .content {
   width: 960px;
 }
+.blog .content .title {
+  font-size: 60px;
+  padding: 30px 0 10px;
+  color: #7a7a7a;
+  text-align: center;
+  line-height: 1em;
+}
+.blog .content .subtitle {
+  font-size: 20px;
+  padding: 0;
+  margin-bottom: 30px;
+  color: #7a7a7a;
+  text-align: center;
+  line-height: 1em;
+}
 /* Page fragments
 ---------------------------------------*/
 ul.work-listing li {
