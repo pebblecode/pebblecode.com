@@ -478,6 +478,8 @@ header .navshadow {
 .blog .content #posts .post .body {
   margin-left: 150px;
   padding: 10px;
+  font-size: 16px;
+  line-height: 18px;
 }
 .blog .content #posts .post .body .title a {
   font-size: 24px;
