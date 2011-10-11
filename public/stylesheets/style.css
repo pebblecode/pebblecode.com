@@ -277,8 +277,11 @@ header .navshadow {
 .home-page a:hover {
   text-decoration: none;
 }
+.home-page footer {
+  margin-top: 0;
+}
 /* Work page
----------------------------------------*/
+-----------------------------------------*/
 .work-page ul.about-intro {
   margin-bottom: 40px;
   min-height: 130px;
