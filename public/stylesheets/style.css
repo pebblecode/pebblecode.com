@@ -317,6 +317,16 @@ header .navshadow {
   margin-right: 20px;
   font-size: 1.2em;
 }
+.work-page .thumb {
+  width: 100px;
+  height: 60px;
+  float: left;
+  margin-right: 20px;
+  text-indent: -9999px;
+}
+.work-page a:hover.thumb {
+  height: 45px;
+}
 /* About page
 ---------------------------------------*/
 .about-page ul.who h2 {
