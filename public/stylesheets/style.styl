@@ -4,7 +4,7 @@
 Variables
 -----------------------------------------------------------------------------*/
 
-footer_height = 60px
+footer_height = 95px
 
 // Colours
 pebble_pink = #e74679
@@ -230,9 +230,10 @@ header
   h1.title
     font-size 6em
     padding 7% 0 0 5
-    margin-bottom 30px
+    margin-bottom 40px
     color #7A7A7A
     text-align center
+    line-height 1em
     
 
   ul.work-listing
@@ -244,6 +245,9 @@ header
     
   a:hover
     text-decoration none
+  
+  .content
+    margin-top 120px
       
 /* Work page
 -----------------------------------------*/
@@ -280,6 +284,18 @@ header
       height auto
       min-height 260px
       
+  .thumb
+    width 100px
+    height 60px
+    float left
+    margin-right 20px 
+    text-indent -9999px
+    
+  a:hover.thumb
+    height 45px
+        
+
+
       
 /* About page
 ---------------------------------------*/
@@ -404,6 +420,17 @@ ul.work-listing
         color pebble_blue
       a
         color pebble_blue
+        
+      .thumb
+        border 1px solid #419fda
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #419fda
   
     &.woohoo
       border-left 5px solid pebble_green
@@ -412,6 +439,17 @@ ul.work-listing
           color pebble_green
       a
         color pebble_green
+        
+      .thumb
+        border 1px solid #adca3a
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #adca3a
 
     &.aljazeera
       border-left 5px solid pebble_orange
@@ -420,6 +458,17 @@ ul.work-listing
           color pebble_orange
       a
         color pebble_orange
+        
+      .thumb
+        border 1px solid #f7ae35
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #f7ae35
 
     &.takefive
       border-left 5px solid pebble_aqua
@@ -428,6 +477,18 @@ ul.work-listing
           color pebble_aqua
       a
         color pebble_aqua
+        
+      .thumb
+        border 1px solid #42b8be
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #42b8be
+
 
     &.ideapi
       border-left 5px solid pebble_purple
@@ -436,6 +497,17 @@ ul.work-listing
           color pebble_purple
       a
         color pebble_purple
+        
+      .thumb
+        border 1px solid #a1579c
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #a1579c
 
     &.downunder
       border-left 5px solid pebble_pink
@@ -444,6 +516,17 @@ ul.work-listing
           color pebble_pink
       a
         color pebble_pink
+        
+      .thumb
+        border 1px solid #e74679
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #e74679
 
     &.space
       border-left 5px solid pebble_blue
@@ -452,6 +535,18 @@ ul.work-listing
           color pebble_blue
       a
         color pebble_blue
+        
+      .thumb
+        border 1px solid #419fda
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #419fda
+        
 
     &.stink
       border-left 5px solid pebble_green
@@ -460,7 +555,18 @@ ul.work-listing
           color pebble_green
       a
         color pebble_green
-
+        
+      .thumb
+        border 1px solid #adca3a
+        
+        &.image_1
+          background url('/images/istink/thumbs/stink_1.png')
+        &.image_2
+          background url('/images/istink/thumbs/stink_2.png')
+        
+      a:hover.thumb
+        border-bottom 15px solid #adca3a
+        
 
 /* Footer
 -----------------------------------------------------------------------------*/
@@ -470,8 +576,14 @@ footer
   clear both
   width 96%
   height footer_height
-  padding 2%
+  padding 30px 2%
   color #C2C2C2
   margin-top 150px
   background-color #F2F2F2
   text-shadow white 0 1px 1px
+  a
+    color #848484
+  span
+    color #848484
+
+    
