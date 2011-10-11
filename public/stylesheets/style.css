@@ -431,6 +431,11 @@ header .navshadow {
 .address p a {
   color: #e74679;
 }
+/* Blog pages
+---------------------------------------*/
+.blog .content {
+  width: 960px;
+}
 /* Page fragments
 ---------------------------------------*/
 ul.work-listing li {
