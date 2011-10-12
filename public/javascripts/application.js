@@ -1,7 +1,19 @@
 $(document).ready(function(){
-  var colors = ["#e0427b","#419fda","#adca3a", "#f7ae35", "#42b8be", "#a1579c"];                
-  var rand = Math.floor(Math.random()*colors.length);           
+  var colors = ["#e0427b","#419fda","#adca3a", "#f7ae35", "#42b8be", "#a1579c"];
+  var color_names = ["pebble_pink","pebble_blue","pebble_green", "pebble_orange", "pebble_aqua", "pebble_purple"];
+  
+  var rand = Math.floor(Math.random()*colors.length);
   $('nav').css("background-color", colors[rand]);
+  
+  if ($(".blog #posts").length > 0) {
+    $(this).find(".post").each(function() {
+      var post_id_str = $(this).attr("id").replace("post_", "");
+      var post_id = parseInt(post_id_str);
+      
+      var color_class = color_names[post_id % color_names.length];
+      $(this).addClass(color_class);
+    });
+  }
   
   // Move offset for anchor text, to accomodate for fixed header
   if (location) {

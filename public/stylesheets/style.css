@@ -476,6 +476,66 @@ header .navshadow {
   border-left: 5px solid #419fda;
   background: transparent url("/images/tile_blue.gif") repeat 0 0;
 }
+.blog .content #posts .post.pebble_aqua .title a,
+.blog .content #posts .post.pebble_aqua .body a,
+.blog .content #posts .post.pebble_aqua .meta .author a,
+.blog .content #posts .post.pebble_aqua .meta .tags a {
+  color: #42b8be;
+}
+.blog .content #posts .post.pebble_aqua .body {
+  border-left: 5px solid #42b8be;
+  background: transparent url("/images/tile_aqua.gif") repeat 0 0;
+}
+.blog .content #posts .post.pebble_pink .title a,
+.blog .content #posts .post.pebble_pink .body a,
+.blog .content #posts .post.pebble_pink .meta .author a,
+.blog .content #posts .post.pebble_pink .meta .tags a {
+  color: #e74679;
+}
+.blog .content #posts .post.pebble_pink .body {
+  border-left: 5px solid #e74679;
+  background: transparent url("/images/tile_pink.gif") repeat 0 0;
+}
+.blog .content #posts .post.pebble_blue .title a,
+.blog .content #posts .post.pebble_blue .body a,
+.blog .content #posts .post.pebble_blue .meta .author a,
+.blog .content #posts .post.pebble_blue .meta .tags a {
+  color: #419fda;
+}
+.blog .content #posts .post.pebble_blue .body {
+  border-left: 5px solid #419fda;
+  background: transparent url("/images/tile_blue.gif") repeat 0 0;
+}
+.blog .content #posts .post.pebble_green .title a,
+.blog .content #posts .post.pebble_green .body a,
+.blog .content #posts .post.pebble_green .meta .author a,
+.blog .content #posts .post.pebble_green .meta .tags a {
+  color: #adca3a;
+}
+.blog .content #posts .post.pebble_green .body {
+  border-left: 5px solid #adca3a;
+  background: transparent url("/images/tile_green.gif") repeat 0 0;
+}
+.blog .content #posts .post.pebble_orange .title a,
+.blog .content #posts .post.pebble_orange .body a,
+.blog .content #posts .post.pebble_orange .meta .author a,
+.blog .content #posts .post.pebble_orange .meta .tags a {
+  color: #f7ae35;
+}
+.blog .content #posts .post.pebble_orange .body {
+  border-left: 5px solid #f7ae35;
+  background: transparent url("/images/tile_orange.gif") repeat 0 0;
+}
+.blog .content #posts .post.pebble_purple .title a,
+.blog .content #posts .post.pebble_purple .body a,
+.blog .content #posts .post.pebble_purple .meta .author a,
+.blog .content #posts .post.pebble_purple .meta .tags a {
+  color: #a1579c;
+}
+.blog .content #posts .post.pebble_purple .body {
+  border-left: 5px solid #a1579c;
+  background: transparent url("/images/tile_purple.gif") repeat 0 0;
+}
 .blog .content #posts .post .body .title a,
 .blog .content #posts .post .meta .author a {
   font-family: ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
