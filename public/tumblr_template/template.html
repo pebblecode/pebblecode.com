@@ -80,9 +80,11 @@
                   {/block:Date}
                   {block:HasTags}
                     <li class="tags">tags<br/>
-                      {block:Tags} 
-                        <a href="{TagURL}">{Tag}</a>
-                      {/block:Tags}
+                      <ul>
+                        {block:Tags} 
+                          <li><a href="{TagURL}">{Tag}</a></li>
+                        {/block:Tags}
+                      </ul>
                     </li>
                   {/block:HasTags}
                 </ul>
