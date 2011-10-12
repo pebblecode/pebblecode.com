@@ -464,6 +464,7 @@ header .navshadow {
 .blog .content #posts .post code {
   font-size: 14px;
   line-height: 18px;
+  overflow: auto;
 }
 .blog .content #posts .post .title a,
 .blog .content #posts .post .body a,
