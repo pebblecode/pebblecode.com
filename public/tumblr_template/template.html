@@ -108,12 +108,14 @@
             
           {/block:Posts}
         </ol>
-
-        <ul id="blog-navigation">
-          <li class="prev"><a href="{PreviousPage}">&#171; Previous</a></li>
-          <li class="next"><a href="{NextPage}">Next &#187;</a></li>
-        </ul>
-    
+        
+        {block:Pagination}
+          <ul id="blog-navigation">
+            <li class="prev"><a href="{PreviousPage}">&#171; Previous</a></li>
+            <li class="next"><a href="{NextPage}">Next &#187;</a></li>
+          </ul>
+        {/block:Pagination}
+        
         <div class="push-footer"></div>
       </section> <!-- .content -->
 
