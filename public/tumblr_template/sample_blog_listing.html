@@ -21,6 +21,7 @@
     
     <!-- TODO: fix paths -->
     <link rel='stylesheet' type='text/css' href='../stylesheets/style.css'>
+    <link rel="stylesheet" title="Default" href="../highlight/styles/default.css">
     <!--[if lt IE 7]>
       <link rel='stylesheet' type='text/css' href='../stylesheets/ie7.css'>
     <![endif]-->
@@ -29,6 +30,10 @@
 
     <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
     <script src="../javascripts/modernizr.custom.58445.js"></script>
+    <script src="../highlight/highlight.pack.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad();
+    </script>
     <script src='http://use.typekit.com/asa8yjy.js'></script>
     <script>
       try{Typekit.load();}catch(e){}
@@ -108,26 +113,26 @@
               <p>One issue we&rsquo;ve discussed as a team is the fact that in developing mobile apps there are multiple SDKs and frameworks to master. Just as soon as you&rsquo;ve got to grips with Objective-C and the iPhone SDK there&rsquo;s Android and Blackberry. To date our philosophy has been let&rsquo;s get really good at iOS. We are still following that but Titanium allows us to support other platforms, at least on a superficial level.</p>
               <p>Here&rsquo;s some code from the default scaffolding app. If you are familiar with JavaScript it should read easily to you.</p>
               <pre><code>
-              //
-              // create base UI tab and root window
-              //
-              var win1 = Titanium.UI.createWindow({  
-                  title:'Window 1',
-                  backgroundColor:'#fff'
-              });
-              var tab1 = Titanium.UI.createTab({  
-                  icon:'KS_nav_views.png',
-                  title:'Foo!',
-                  window:win1
-              });
+//
+// create base UI tab and root window
+//
+var win1 = Titanium.UI.createWindow({  
+    title:'Window 1',
+    backgroundColor:'#fff'
+});
+var tab1 = Titanium.UI.createTab({  
+    icon:'KS_nav_views.png',
+    title:'Foo!',
+    window:win1
+});
 
-              var label1 = Titanium.UI.createLabel({
-                  color:'#999',
-                  text:'I am window 1',
-                  font:{fontSize:20,fontFamily:'Helvetica Neue'},
-                  textAlign:'center',
-                  width:'auto'
-              }); 
+var label1 = Titanium.UI.createLabel({
+    color:'#999',
+    text:'I am window 1',
+    font:{fontSize:20,fontFamily:'Helvetica Neue'},
+    textAlign:'center',
+    width:'auto'
+}); 
               </code></pre>
               <p>This is the code behind creating a tabbed window with a label for both iOS and Android:</p>
               <p><img src="http://media.tumblr.com/tumblr_lfq8rvv7DE1qz7kgs.jpg" /></p>
