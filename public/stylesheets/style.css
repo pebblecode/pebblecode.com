@@ -127,14 +127,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-code,
-samp,
-dfn,
-kbd,
-var,
-acronym,
-ins,
-del,
 abbr {
   speak: spell-out;
 }
@@ -465,6 +457,13 @@ header .navshadow {
   position: relative;
   margin-bottom: 20px;
   z-index: 0;
+}
+.blog .content #posts .post pre {
+  margin-bottom: 20px;
+}
+.blog .content #posts .post code {
+  font-size: 14px;
+  line-height: 18px;
 }
 .blog .content #posts .post .title a,
 .blog .content #posts .post .body a,
