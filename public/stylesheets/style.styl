@@ -438,7 +438,7 @@ header
         .meta .author a,
         .meta .tags a
           color pebble_blue
-        .body 
+        .body-wrapper
           border-left 5px solid pebble_blue
           background transparent url(/images/tile_blue.gif) repeat 0 0
           
@@ -448,7 +448,7 @@ header
           .meta .author a,
           .meta .tags a
             color pebble_aqua
-          .body 
+          .body-wrapper
             border-left 5px solid pebble_aqua
             background transparent url(/images/tile_aqua.gif) repeat 0 0
           
@@ -458,7 +458,7 @@ header
           .meta .author a,
           .meta .tags a
             color pebble_pink
-          .body 
+          .body-wrapper
             border-left 5px solid pebble_pink
             background transparent url(/images/tile_pink.gif) repeat 0 0
             
@@ -468,7 +468,7 @@ header
           .meta .author a,
           .meta .tags a
             color pebble_blue
-          .body 
+          .body-wrapper
             border-left 5px solid pebble_blue
             background transparent url(/images/tile_blue.gif) repeat 0 0
             
@@ -478,7 +478,7 @@ header
           .meta .author a,
           .meta .tags a
             color pebble_green
-          .body 
+          .body-wrapper
             border-left 5px solid pebble_green
             background transparent url(/images/tile_green.gif) repeat 0 0
             
@@ -488,7 +488,7 @@ header
           .meta .author a,
           .meta .tags a
             color pebble_orange
-          .body 
+          .body-wrapper
             border-left 5px solid pebble_orange
             background transparent url(/images/tile_orange.gif) repeat 0 0
         
@@ -498,7 +498,7 @@ header
           .meta .author a,
           .meta .tags a
             color pebble_purple
-          .body 
+          .body-wrapper
             border-left 5px solid pebble_purple
             background transparent url(/images/tile_purple.gif) repeat 0 0
         // End Coloured elements
@@ -509,19 +509,21 @@ header
           font-family ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif
         // End Meta font
         
-        .body
+        .body-wrapper
           margin-left 150px
           padding 10px
           
-          p
-            font-size 16px
-            line-height 22px
+          .body
           
-          .title
-            a
-              font-size 24px
-              padding 10px 0 20px
-              line-height 1em
+            p
+              font-size 16px
+              line-height 22px
+          
+            .title
+              a
+                font-size 24px
+                padding 10px 0 20px
+                line-height 1em
           
         .meta
           text-align right
@@ -529,45 +531,45 @@ header
           top 0
           left 0
           width 140px
-          
+        
           .author
             margin-bottom 5px
-            
+          
             a
               font-size 20px
               font-weight bold
               margin-top 18px
               display block
-            
+          
           .published-date
             line-height 17px
             .date-month
               font-weight bold
               display block
-              
+            
             .year
               display block
-              
+            
           .tags
             line-height 17px
             margin-top 10px
-            
+          
             ul
               margin 0
               padding 0
               line-height 1em
-              
+            
               li
                 display inline
                 margin 0
                 padding 0
-                
+              
                 &:after
                   content ","
-                  
+                
                 &:last-child:after
                   content ""
-                  
+                
                 a
                   font-size 14px
                   line-height 18px

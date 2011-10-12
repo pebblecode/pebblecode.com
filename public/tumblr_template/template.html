@@ -72,12 +72,24 @@
           {block:Posts}
             {block:Text}
               <li id="post_{PostID}" class="post text">
-                <section class="body">
-                  {block:Title}
-                    <h3><a href="{Permalink}">{Title}</a></h3>
-                  {/block:Title}
+                <section class="body-wrapper">
+                  <section class="body">
+                    {block:Title}
+                      <h3><a href="{Permalink}">{Title}</a></h3>
+                    {/block:Title}
 
-                  {Body}
+                    {Body}
+                  </section>
+                  
+                  {block:IfDisqusShortname}
+                    {block:Permalink}
+                      <section class="comments-wrapper">
+                        <section id="disqus_thread"></section>
+                        <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                        <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                      </section>
+                    {/block:Permalink}
+                  {/block:IfDisqusShortname}
                 </section>
             
                 <ul class="meta">
@@ -95,18 +107,9 @@
                     </li>
                   {/block:HasTags}
                 </ul>
+                
               </li>
             {/block:Text}
-            
-            {block:IfDisqusShortname}
-              {block:Permalink}
-                <div class="notecontainer">
-                  <div id="disqus_thread"></div>
-                  <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                  <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
-                </div>
-              {/block:Permalink}
-            {/block:IfDisqusShortname}
             
           {/block:Posts}
         </ol>
