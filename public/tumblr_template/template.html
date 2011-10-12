@@ -12,123 +12,142 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <head>
     <title>{Title}</title>
-    <link rel="shortcut icon" href="{Favicon}">
+    
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     {block:Description}
-        <meta name="description" content="{MetaDescription}" />
+      <meta name="description" content="{MetaDescription}" />
     {/block:Description}
+    <meta name="if:Show notes" content="1">
+    <meta name="text:Disqus Shortname" content="" />
+    
+    <link rel="icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
+    
+    <link rel='stylesheet' type='text/css' href='http://pebblecode.com/stylesheets/style.css'>
+    <!--[if lt IE 7]>
+      <link rel='stylesheet' type='text/css' href='http://pebblecode.com/stylesheets/ie7.css'>
+    <![endif]-->
+    
+    <link rel='stylesheet' type='text/css' href='http://pebblecode.com/stylesheets/mobile.css' media='only screen and (max-width: 600px)'>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
+    <script src="http://pebblecode.com/javascripts/modernizr.custom.58445.js"></script>
+    <script src='http://use.typekit.com/asa8yjy.js'></script>
+    <script>
+      try{Typekit.load();}catch(e){}
+    </script>
+    
   </head>
-  <body>
-    <h1>{Title}</h1>
+  <body class="blog blog-listing">
+    
+    <section class="wrapper">
+      <header>
+        <nav>
+          <h1><a href="http://pebblecode.com">pebble {code}</a></h1>
+          <ul>
+            <li><a class="blog" href="http://blog.pebblecode.com">Blog</a></li>
+            <li><a class="about" href="http://pebblecode.com/about">About</a></li>
+            <li><a class="work" href="http://pebblecode.com/work">Work</a></li>
+          </ul>
+        </nav> <!-- nav -->
+        <section class="navshadow"></section>
+      </header> <!-- header -->
+      
+      <section class="content">
+        
+        {block:Description}
+          <section id="intro">
+            <h1 class="title">{Description}</h2>
+          </section>
+        {/block:Description}
 
-    {block:Description}
-      <p id="description">{Description}</p>
-    {/block:Description}
+        <ol id="posts">
+          {block:Posts}
+            {block:Text}
+              <li class="post text">
+                <section class="body">
+                  {block:Title}
+                    <h3><a href="{Permalink}">{Title}</a></h3>
+                  {/block:Title}
 
-    <ol id="posts">
-      {block:Posts}
-        {block:Text}
-          <li class="post text">
-            {block:Title}
-              <h3><a href="{Permalink}">{Title}</a></h3>
-            {/block:Title}
+                  {Body}
+                </section>
+            
+                <ul class="meta">
+                  <li class="author"><a href="{PostAuthorURL}">{PostAuthorName}</a></li>
+                  {block:Date} 
+                    <li class="published-date"><span class="date-month">{DayOfMonth}{DayOfMonthSuffix} {Month}</span><span class="year">{Year}</span></li>
+                  {/block:Date}
+                  {block:HasTags}
+                    <li class="tags">tags<br/>
+                      {block:Tags} 
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </li>
+                  {/block:HasTags}
+                </ul>
+              </li>
+            {/block:Text}
+            
+            {block:IfDisqusShortname}
+              {block:Permalink}
+                <div class="notecontainer">
+                  <div id="disqus_thread"></div>
+                  <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                  <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                </div>
+              {/block:Permalink}
+            {/block:IfDisqusShortname}
+            
+          {/block:Posts}
+        </ol>
 
-            {Body}
-          </li>
-        {/block:Text}
+        <ul id="blog-navigation">
+          <li class="prev"><a href="{PreviousPage}">&#171; Previous</a></li>
+          <li class="next"><a href="{NextPage}">Next &#187;</a></li>
+        </ul>
+    
+        <div class="push-footer"></div>
+      </section> <!-- .content -->
 
-        {block:Photo}
-          <li class="post photo">
-            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+      <footer>
+        <p>T: <span>020 3327 1081</span><br />  
+           E: <a href="mailto:info@pebbleit.com">info@pebbleit.com</a></p>
+        <p>Pebble Code Limited registered in England and Wales <br />
+           Company Number 07240178 <br />
+           VAT Registration Number GB 991816382</p>
+      </footer> <!-- footer -->
 
-            {block:Caption}
-              <div class="caption">{Caption}</div>
-            {/block:Caption}
-          </li>
-        {/block:Photo}
+    </section> <!-- .wrapper -->
 
-        {block:Photoset}
-          <li class="post photoset">
-            {Photoset-500}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="/javascripts/application.js"></script>
+    {block:IfDisqusShortname}
+        <script type="text/javascript">
+            //<![CDATA[
+            (function() {
+                var links = document.getElementsByTagName('a');
+                var query = '?';
+                for(var i = 0; i < links.length; i++) {
+                    if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                    }
+                }
+                document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+            })();
+            //]]>
+        </script>
+    {/block:IfDisqusShortname}
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26218261-1']);
+      _gaq.push(['_trackPageview']);
 
-            {block:Caption}
-              <div class="caption">{Caption}</div>
-            {/block:Caption}
-          </li>
-        {/block:Photoset}
-
-        {block:Quote}
-          <li class="post quote">
-            "{Quote}"
-
-            {block:Source}
-              <div class="source">{Source}</div>
-            {/block:Source}
-          </li>
-        {/block:Quote}
-
-        {block:Link}
-          <li class="post link">
-            <a href="{URL}" class="link" {Target}>{Name}</a>
-
-            {block:Description}
-              <div class="description">{Description}</div>
-            {/block:Description}
-          </li>
-        {/block:Link}
-
-        {block:Chat}
-          <li class="post chat">
-            {block:Title}
-              <h3><a href="{Permalink}">{Title}</a></h3>
-            {/block:Title}
-
-            <ul class="chat">
-              {block:Lines}
-                <li class="{Alt} user_{UserNumber}">
-                  {block:Label}
-                      <span class="label">{Label}</span>
-                  {/block:Label}
-
-                  {Line}
-                </li>
-              {/block:Lines}
-            </ul>
-          </li>
-        {/block:Chat}
-
-        {block:Video}
-          <li class="post video">
-            {Video-500}
-
-            {block:Caption}
-              <div class="caption">{Caption}</div>
-            {/block:Caption}
-          </li>
-        {/block:Video}
-
-        {block:Audio}
-          <li class="post audio">
-            {AudioPlayerBlack}
-
-            {block:Caption}
-              <div class="caption">{Caption}</div>
-            {/block:Caption}
-          </li>
-        {/block:Audio}
-      {/block:Posts}
-    </ol>
-
-    <p id="footer">
-      {block:PreviousPage}
-        <a href="{PreviousPage}">&#171; Previous</a>
-      {/block:PreviousPage}
-
-      {block:NextPage}
-        <a href="{NextPage}">Next &#187;</a>
-      {/block:NextPage}
-
-      <a href="/archive">Archive</a>
-    </p>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>
