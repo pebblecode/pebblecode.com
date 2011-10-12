@@ -111,8 +111,16 @@
         
         {block:Pagination}
           <ul id="blog-navigation">
-            <li class="prev"><a href="{PreviousPage}">&#171; Previous</a></li>
-            <li class="next"><a href="{NextPage}">Next &#187;</a></li>
+              <li class="prev">&nbsp;
+                {block:PreviousPage}
+                  <a href="{PreviousPage}">&#171; Previous</a>
+                {/block:PreviousPage}
+              </li>
+              <li class="next">&nbsp;
+                {block:NextPage}
+                  <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}
+              </li>
           </ul>
         {/block:Pagination}
         
