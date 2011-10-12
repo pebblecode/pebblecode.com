@@ -487,6 +487,27 @@ header
             line-height 17px
             margin-top 10px
             
+            ul
+              margin 0
+              padding 0
+              line-height 1em
+              
+              li
+                display inline
+                margin 0
+                padding 0
+                
+                &:after
+                  content ","
+                  
+                &:last-child:after
+                  content ""
+                  
+                a
+                  font-size 14px
+                  line-height 18px
+                    
+            
     #blog-navigation
       font-size 16px
       line-height 16px

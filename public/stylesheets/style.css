@@ -523,6 +523,26 @@ header .navshadow {
   line-height: 17px;
   margin-top: 10px;
 }
+.blog .content #posts .post .meta .tags ul {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+.blog .content #posts .post .meta .tags ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.blog .content #posts .post .meta .tags ul li:after {
+  content: ",";
+}
+.blog .content #posts .post .meta .tags ul li:last-child:after {
+  content: "";
+}
+.blog .content #posts .post .meta .tags ul li a {
+  font-size: 14px;
+  line-height: 18px;
+}
 .blog .content #blog-navigation {
   font-size: 16px;
   line-height: 16px;
