@@ -24,6 +24,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
     
     <link rel='stylesheet' type='text/css' href='http://pebblecode.com/stylesheets/style.css'>
+    <link rel="stylesheet" title="Default" href="http://pebblecode.com/highlight/styles/default.css">
     <!--[if lt IE 7]>
       <link rel='stylesheet' type='text/css' href='http://pebblecode.com/stylesheets/ie7.css'>
     <![endif]-->
@@ -32,6 +33,10 @@
 
     <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport' />
     <script src="http://pebblecode.com/javascripts/modernizr.custom.58445.js"></script>
+    <script src="http://pebblecode.com/highlight/highlight.pack.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad();
+    </script>
     <script src='http://use.typekit.com/asa8yjy.js'></script>
     <script>
       try{Typekit.load();}catch(e){}
@@ -81,7 +86,7 @@
                   {block:HasTags}
                     <li class="tags">tags<br/>
                       <ul>
-                        {block:Tags} 
+                        {block:Tags}
                           <li><a href="{TagURL}">{Tag}</a></li>
                         {/block:Tags}
                       </ul>
