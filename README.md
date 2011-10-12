@@ -2,6 +2,7 @@
 
 This is a simple brochure site written with [express][1], a web framework for [node.js][2]
 
+
 ## Hacking on the site
 
 To hack on the site you need to install node.js. On OSX you can use homebrew
