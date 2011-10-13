@@ -102,6 +102,9 @@ body {
   background: #fff;
   height: 100%;
 }
+.ie7 .wrapper {
+  padding-top: 100px;
+}
 p,
 q,
 cite,
