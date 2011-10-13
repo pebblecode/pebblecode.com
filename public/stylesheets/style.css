@@ -453,6 +453,10 @@ header .navshadow {
   text-align: center;
   line-height: 1em;
 }
+.blog .content #tag-page-title {
+  font-size: 30px;
+  line-height: 35px;
+}
 .blog .content #posts .post {
   position: relative;
   margin-bottom: 20px;

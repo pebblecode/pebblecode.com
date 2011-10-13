@@ -70,6 +70,10 @@
           </section>
         {/block:Description}
 
+        {block:TagPage} 
+          <h2 id="tag-page-title">Posts tagged: {Tag}</h2>
+        {/block:TagPage}
+        
         <ol id="posts">
           {block:Posts}
             {block:Text}
@@ -83,12 +87,12 @@
                     {Body}
                   </section>
                   
-                  <section class="share-this-wrapper">
-                    <span  class='st_twitter' ></span><span  class='st_facebook' ></span><span  class='st_gbuzz' ></span><span  class='st_email' ></span><span  class='st_sharethis' ></span>
-                  </section><!-- .share-this-wrapper -->
-                  
                   {block:IfDisqusShortname}
                     {block:Permalink}
+                      <section class="share-this-wrapper">
+                        <span  class='st_twitter' ></span><span  class='st_facebook' ></span><span  class='st_gbuzz' ></span><span  class='st_email' ></span><span  class='st_sharethis' ></span>
+                      </section><!-- .share-this-wrapper -->
+                    
                       <section class="comments-wrapper">
                         <section id="disqus_thread"></section>
                         <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
