@@ -617,7 +617,9 @@ header .navshadow {
   border: 1px solid #a1579c;
 }
 .blog .content #posts .post .body .title a,
-.blog .content #posts .post .meta .author a {
+.blog .content #posts .post .meta .author a,
+.blog .content #posts .post .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3,
+.blog .content #posts .post .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name {
   font-family: ff-meta-web-pro, Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
 }
 .blog .content #posts .post .body-wrapper {
