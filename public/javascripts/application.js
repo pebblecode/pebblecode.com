@@ -15,13 +15,16 @@ $(document).ready(function(){
     });
   }
   
-  // Move offset for anchor text, to accomodate for fixed header
-  if (location) {
-    var window_hash = window.location.hash;
-    if (window_hash.length > 0) {
-      var heading_padding = 40;
-      var targetOffset = $(".work-page .content " + window_hash).offset().top - $("header nav").height() - heading_padding;
-      $('html,body').animate({scrollTop: targetOffset}, 1000);
+  // Move offset for anchor text on work page, to accomodate for fixed header
+  if ($("body.work-page").length > 0) {
+    if (location) {
+      var window_hash = window.location.hash;
+      if (window_hash.length > 0) {
+        var heading_padding = 40;
+        var targetOffset = $(".work-page .content " + window_hash).offset().top - $("header nav").height() - heading_padding;
+        $('html,body').animate({scrollTop: targetOffset}, 1000);
+      }
     }
   }
+  
 });
