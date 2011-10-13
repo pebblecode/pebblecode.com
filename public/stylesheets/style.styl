@@ -436,12 +436,20 @@ header
         .title a,
         .body a,
         .meta .author a,
-        .meta .tags a
+        .meta .tags a,
+        .dsq-comment-footer .dsq-comment-meta a,
+        .dsq-comment-header .dsq-commenter-name,
+        .dsq-comment-actions a
           color pebble_blue
         .body-wrapper
           border-left 5px solid pebble_blue
           background transparent url(/images/tile_blue.gif) repeat 0 0
-          
+        .comments-wrapper,
+        .dsq-comment
+          border-top 1px dotted pebble_blue
+        #dsq-content .dsq-textarea .dsq-textarea-wrapper
+          border 1px solid pebble_blue
+        
         &.pebble_aqua
           .title a,
           .body a,
@@ -524,7 +532,26 @@ header
                 font-size 24px
                 padding 10px 0 20px
                 line-height 1em
+                
+          .comments-wrapper
+            padding-top 10px
           
+            .dsq-comment-body
+              padding-left 0
+            
+            .dsq-commenter-name
+              font-size 24px
+              line-height: 30px
+              
+            .dsq-comment-comment
+              padding-top 10px
+            
+            .dsq-avatar
+              display none
+            
+            
+              
+        
         .meta
           text-align right
           position absolute

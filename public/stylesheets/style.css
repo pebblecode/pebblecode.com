@@ -469,12 +469,22 @@ header .navshadow {
 .blog .content #posts .post .title a,
 .blog .content #posts .post .body a,
 .blog .content #posts .post .meta .author a,
-.blog .content #posts .post .meta .tags a {
+.blog .content #posts .post .meta .tags a,
+.blog .content #posts .post .dsq-comment-footer .dsq-comment-meta a,
+.blog .content #posts .post .dsq-comment-header .dsq-commenter-name,
+.blog .content #posts .post .dsq-comment-actions a {
   color: #419fda;
 }
 .blog .content #posts .post .body-wrapper {
   border-left: 5px solid #419fda;
   background: transparent url("/images/tile_blue.gif") repeat 0 0;
+}
+.blog .content #posts .post .comments-wrapper,
+.blog .content #posts .post .dsq-comment {
+  border-top: 1px dotted #419fda;
+}
+.blog .content #posts .post #dsq-content .dsq-textarea .dsq-textarea-wrapper {
+  border: 1px solid #419fda;
 }
 .blog .content #posts .post.pebble_aqua .title a,
 .blog .content #posts .post.pebble_aqua .body a,
@@ -552,6 +562,22 @@ header .navshadow {
   font-size: 24px;
   padding: 10px 0 20px;
   line-height: 1em;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper {
+  padding-top: 10px;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper .dsq-comment-body {
+  padding-left: 0;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name {
+  font-size: 24px;
+  line-height: 30px;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper .dsq-comment-comment {
+  padding-top: 10px;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper .dsq-avatar {
+  display: none;
 }
 .blog .content #posts .post .meta {
   text-align: right;
