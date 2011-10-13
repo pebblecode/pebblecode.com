@@ -472,7 +472,10 @@ header .navshadow {
 .blog .content #posts .post .meta .tags a,
 .blog .content #posts .post .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post .dsq-comment-header .dsq-commenter-name,
-.blog .content #posts .post .dsq-comment-actions a {
+.blog .content #posts .post .dsq-comment-actions a,
+.blog .content #posts .post .dsq-collapsed-count,
+.blog .content #posts .post #dsq-subscribe a,
+.blog .content #posts .post #dsq-account-dropdown a {
   color: #419fda;
 }
 .blog .content #posts .post .body-wrapper {
@@ -480,10 +483,12 @@ header .navshadow {
   background: transparent url("/images/tile_blue.gif") repeat 0 0;
 }
 .blog .content #posts .post .comments-wrapper,
-.blog .content #posts .post .dsq-comment {
+.blog .content #posts .post .dsq-comment,
+.blog .content #posts .post .dsq-post-tools {
   border-top: 1px dotted #419fda;
 }
-.blog .content #posts .post #dsq-content .dsq-textarea .dsq-textarea-background {
+.blog .content #posts .post #dsq-content .dsq-textarea .dsq-textarea-background,
+.blog .content #posts .post .dsq-post-tools .dsq-post-as .dsq-button {
   border: 1px solid #419fda;
 }
 .blog .content #posts .post.pebble_aqua .title a,
@@ -583,6 +588,21 @@ header .navshadow {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.blog .content #posts .post .body-wrapper .comments-wrapper .dsq-post-tools .dsq-post-as .dsq-button {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content .dsq-comment-text {
+  color: #525252;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper .dsq-comment-header {
+  background: none;
+  border: none;
+  padding-left: 0;
+}
 .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name {
   font-size: 24px;
   line-height: 30px;
@@ -592,6 +612,9 @@ header .navshadow {
 }
 .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-avatar {
   display: none;
+}
+.blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content .dsq-attach-media .dsq-attach-media-container span {
+  top: 0;
 }
 .blog .content #posts .post .meta {
   text-align: right;
