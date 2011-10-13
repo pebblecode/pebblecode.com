@@ -433,87 +433,41 @@ header
           overflow auto
         
         // Coloured elements
-        .title a,
-        .body a,
-        .meta .author a,
-        .meta .tags a,
-        .dsq-comment-footer .dsq-comment-meta a,
-        .dsq-comment-header .dsq-commenter-name,
-        .dsq-comment-actions a,
-        .dsq-collapsed-count,
-        #dsq-subscribe a,
-        #dsq-account-dropdown a
-          color pebble_blue
-        .body-wrapper
-          border-left 5px solid pebble_blue
-          background transparent url(/images/tile_blue.gif) repeat 0 0
-        .comments-wrapper,
-        .dsq-comment,
-        .dsq-post-tools
-          border-top 1px dotted pebble_blue
-        #dsq-content .dsq-textarea .dsq-textarea-background,
-        .dsq-post-tools .dsq-post-as .dsq-button 
-          border 1px solid pebble_blue
+        colored_elements(color_name, color_value)
+          .title a,
+          .body a,
+          .meta .author a,
+          .meta .tags a,
+          .dsq-comment-footer .dsq-comment-meta a,
+          .dsq-comment-header .dsq-commenter-name,
+          .dsq-comment-actions a,
+          .dsq-collapsed-count,
+          #dsq-subscribe a,
+          #dsq-account-dropdown a
+            color color_value
+          .body-wrapper
+            border-left 5px solid color_value
+            background transparent url('/images/tile_' + color_name + '.gif') repeat 0 0
+          .comments-wrapper,
+          .dsq-comment,
+          .dsq-post-tools
+            border-top 1px dotted color_value
+          #dsq-content .dsq-textarea .dsq-textarea-background,
+          .dsq-post-tools .dsq-post-as .dsq-button 
+            border 1px solid color_value
         
         &.pebble_aqua
-          .title a,
-          .body a,
-          .meta .author a,
-          .meta .tags a
-            color pebble_aqua
-          .body-wrapper
-            border-left 5px solid pebble_aqua
-            background transparent url(/images/tile_aqua.gif) repeat 0 0
-          
+          colored_elements('aqua', pebble_aqua)
         &.pebble_pink
-          .title a,
-          .body a,
-          .meta .author a,
-          .meta .tags a
-            color pebble_pink
-          .body-wrapper
-            border-left 5px solid pebble_pink
-            background transparent url(/images/tile_pink.gif) repeat 0 0
-            
+          colored_elements('pink', pebble_pink)
         &.pebble_blue
-          .title a,
-          .body a,
-          .meta .author a,
-          .meta .tags a
-            color pebble_blue
-          .body-wrapper
-            border-left 5px solid pebble_blue
-            background transparent url(/images/tile_blue.gif) repeat 0 0
-            
+          colored_elements('blue', pebble_blue)
         &.pebble_green
-          .title a,
-          .body a,
-          .meta .author a,
-          .meta .tags a
-            color pebble_green
-          .body-wrapper
-            border-left 5px solid pebble_green
-            background transparent url(/images/tile_green.gif) repeat 0 0
-            
+          colored_elements('green', pebble_green)
         &.pebble_orange
-          .title a,
-          .body a,
-          .meta .author a,
-          .meta .tags a
-            color pebble_orange
-          .body-wrapper
-            border-left 5px solid pebble_orange
-            background transparent url(/images/tile_orange.gif) repeat 0 0
-        
+          colored_elements('orange', pebble_orange)
         &.pebble_purple
-          .title a,
-          .body a,
-          .meta .author a,
-          .meta .tags a
-            color pebble_purple
-          .body-wrapper
-            border-left 5px solid pebble_purple
-            background transparent url(/images/tile_purple.gif) repeat 0 0
+          colored_elements('purple', pebble_purple)
         // End Coloured elements
         
         // Meta font
