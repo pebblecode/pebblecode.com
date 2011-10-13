@@ -14,9 +14,45 @@ html
 
     meta(content='width=device-width, initial-scale=1, maximum-scale=1', name='viewport')
     script(src="/javascripts/modernizr.custom.58445.js")
+    script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js")
     script(src='http://use.typekit.com/asa8yjy.js')
     script
-      try{Typekit.load();}catch(e){}
+      // Code from http://blog.typekit.com/2010/11/11/font-events-using-javascript-callbacks/
+      (function() {
+      
+        var font_element_selector = 'h1, h2, h3, h4, .address p, .body .title a, .meta .author a, .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3, .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name';
+      
+        $(document).ready(function() {
+        
+          // Add class to elements that are hidden already
+          $(font_element_selector).each(function() {
+            if ($(this).is(":hidden")) {
+              $(this).addClass("ignore_font");
+            }
+          });
+
+          $(font_element_selector).not('.ignore_font').css('visibility', 'hidden');
+        });
+        try {
+          Typekit.load({
+            active: function() {
+              // As soon as the fonts are active, fade in the example
+              // Don't fade in browsers that don't do proper opacity, like IE
+              if (jQuery.support.opacity) {
+                $(font_element_selector).not('.ignore_font').css('visibility', 'visible').hide().fadeIn();
+              } else {
+                $(font_element_selector).not('.ignore_font').css('visibility', 'visible');
+              }
+            },
+            inactive: function() {
+              // If the fonts are inactive, just show the example
+              // You can apply fallback styles using the wf-inactive class in your CSS
+              $(font_element_selector).not('.ignore_font').css('visibility', 'visible');
+            }
+          })
+        } catch(e) {}
+      })();
+      
   body(class=body_class)
     section.wrapper
       header
