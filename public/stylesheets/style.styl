@@ -439,15 +439,19 @@ header
         .meta .tags a,
         .dsq-comment-footer .dsq-comment-meta a,
         .dsq-comment-header .dsq-commenter-name,
-        .dsq-comment-actions a
+        .dsq-comment-actions a,
+        .dsq-collapsed-count,
+        .dsq-subscribe a
           color pebble_blue
         .body-wrapper
           border-left 5px solid pebble_blue
           background transparent url(/images/tile_blue.gif) repeat 0 0
         .comments-wrapper,
-        .dsq-comment
+        .dsq-comment,
+        .dsq-post-tools
           border-top 1px dotted pebble_blue
-        #dsq-content .dsq-textarea .dsq-textarea-wrapper
+        #dsq-content .dsq-textarea .dsq-textarea-background,
+        .dsq-post-tools .dsq-post-as .dsq-button 
           border 1px solid pebble_blue
         
         &.pebble_aqua
@@ -535,8 +539,34 @@ header
                 
           .comments-wrapper
             padding-top 10px
+            
+            #dsq-content h3
+              margin-bottom 0.5em
           
             .dsq-comment-body
+              padding-left 0
+            
+            .dsq-textarea-reply
+              margin-left 0
+            
+            .dsq-textarea .dsq-textarea-background
+              background white
+              
+              -moz-box-shadow none
+              -webkit-box-shadow none
+              box-shadow none
+              
+            .dsq-post-tools .dsq-post-as .dsq-button 
+              -moz-box-shadow none
+              -webkit-box-shadow none
+              box-shadow none
+            
+            #dsq-content .dsq-comment-text
+              color #525252
+              
+            .dsq-comment-header
+              background none
+              border none
               padding-left 0
             
             .dsq-commenter-name
@@ -548,6 +578,9 @@ header
             
             .dsq-avatar
               display none
+              
+            
+            
             
             
               
