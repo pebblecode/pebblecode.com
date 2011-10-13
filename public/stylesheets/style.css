@@ -636,7 +636,7 @@ header .navshadow {
   line-height: 1em;
 }
 .blog .content #posts .post .body-wrapper .share-this-wrapper {
-  margin: 40px 0;
+  margin: 40px 0 20px;
 }
 .blog .content #posts .post .body-wrapper .comments-wrapper {
   padding-top: 10px;
