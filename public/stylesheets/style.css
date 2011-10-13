@@ -164,6 +164,7 @@ h4 {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: none;
   z-index: 1000;
