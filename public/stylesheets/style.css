@@ -492,6 +492,7 @@ header .navshadow {
 }
 .blog .content #posts .post.pebble_aqua .title a,
 .blog .content #posts .post.pebble_aqua .body a,
+.blog .content #posts .post.pebble_aqua .body h3,
 .blog .content #posts .post.pebble_aqua .meta .author a,
 .blog .content #posts .post.pebble_aqua .meta .tags a,
 .blog .content #posts .post.pebble_aqua .dsq-comment-footer .dsq-comment-meta a,
@@ -517,6 +518,7 @@ header .navshadow {
 }
 .blog .content #posts .post.pebble_pink .title a,
 .blog .content #posts .post.pebble_pink .body a,
+.blog .content #posts .post.pebble_pink .body h3,
 .blog .content #posts .post.pebble_pink .meta .author a,
 .blog .content #posts .post.pebble_pink .meta .tags a,
 .blog .content #posts .post.pebble_pink .dsq-comment-footer .dsq-comment-meta a,
@@ -542,6 +544,7 @@ header .navshadow {
 }
 .blog .content #posts .post.pebble_blue .title a,
 .blog .content #posts .post.pebble_blue .body a,
+.blog .content #posts .post.pebble_blue .body h3,
 .blog .content #posts .post.pebble_blue .meta .author a,
 .blog .content #posts .post.pebble_blue .meta .tags a,
 .blog .content #posts .post.pebble_blue .dsq-comment-footer .dsq-comment-meta a,
@@ -567,6 +570,7 @@ header .navshadow {
 }
 .blog .content #posts .post.pebble_green .title a,
 .blog .content #posts .post.pebble_green .body a,
+.blog .content #posts .post.pebble_green .body h3,
 .blog .content #posts .post.pebble_green .meta .author a,
 .blog .content #posts .post.pebble_green .meta .tags a,
 .blog .content #posts .post.pebble_green .dsq-comment-footer .dsq-comment-meta a,
@@ -592,6 +596,7 @@ header .navshadow {
 }
 .blog .content #posts .post.pebble_orange .title a,
 .blog .content #posts .post.pebble_orange .body a,
+.blog .content #posts .post.pebble_orange .body h3,
 .blog .content #posts .post.pebble_orange .meta .author a,
 .blog .content #posts .post.pebble_orange .meta .tags a,
 .blog .content #posts .post.pebble_orange .dsq-comment-footer .dsq-comment-meta a,
@@ -617,6 +622,7 @@ header .navshadow {
 }
 .blog .content #posts .post.pebble_purple .title a,
 .blog .content #posts .post.pebble_purple .body a,
+.blog .content #posts .post.pebble_purple .body h3,
 .blog .content #posts .post.pebble_purple .meta .author a,
 .blog .content #posts .post.pebble_purple .meta .tags a,
 .blog .content #posts .post.pebble_purple .dsq-comment-footer .dsq-comment-meta a,
@@ -643,6 +649,9 @@ header .navshadow {
 .blog .content #posts .post .body-wrapper {
   margin-left: 150px;
   padding: 10px;
+}
+.blog .content #posts .post .body-wrapper .body h3 {
+  font-size: 20px;
 }
 .blog .content #posts .post .body-wrapper .body p {
   font-size: 16px;
