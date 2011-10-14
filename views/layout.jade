@@ -77,8 +77,9 @@ html
           $(font_element_selector).not('.ignore_font').css('visibility', 'hidden');
           
           // Fancybox elements
-          $(".work-page ul.work-listing li ul.images a[rel=ldntaxi]").fancybox({
-            'overlayShow' : false,
+          $(".work-page ul.work-listing li ul.images a").fancybox({
+            'overlayShow' : true,
+            'hideOnOverlayClick' : true,
             'transitionIn'  : 'elastic',
             'transitionOut' : 'elastic'
           });
