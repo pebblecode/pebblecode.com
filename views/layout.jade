@@ -13,54 +13,11 @@ html
     link(rel='stylesheet', type='text/css', href='/stylesheets/mobile.css', media='only screen and (max-width: 600px)')
 
     meta(content='width=device-width, initial-scale=1, maximum-scale=1', name='viewport')
-    script(src="/javascripts/modernizr.custom.58445.js")
-    script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js")
-    script(type="text/javascript", src="/fancybox/jquery.fancybox-1.3.4.pack.js")
-    script
-      $("a.work").fancybox({
-        'overlayShow' : false,
-        'transitionIn'  : 'elastic',
-        'transitionOut' : 'elastic'
-      });
-    
-    script(src='http://use.typekit.com/asa8yjy.js')
-    script
-      // Code from http://blog.typekit.com/2010/11/11/font-events-using-javascript-callbacks/
-      (function() {
-      
-        var font_element_selector = 'h1, h2, h3, h4, .address p, .body .title a, .meta .author a, .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3, .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name';
-      
-        $(document).ready(function() {
-        
-          // Add class to elements that are hidden already
-          $(font_element_selector).each(function() {
-            if ($(this).is(":hidden")) {
-              $(this).addClass("ignore_font");
-            }
-          });
 
-          $(font_element_selector).not('.ignore_font').css('visibility', 'hidden');
-        });
-        try {
-          Typekit.load({
-            active: function() {
-              // As soon as the fonts are active, fade in the example
-              // Don't fade in browsers that don't do proper opacity, like IE
-              if (jQuery.support.opacity) {
-                $(font_element_selector).not('.ignore_font').css('visibility', 'visible').hide().fadeIn();
-              } else {
-                $(font_element_selector).not('.ignore_font').css('visibility', 'visible');
-              }
-            },
-            inactive: function() {
-              // If the fonts are inactive, just show the example
-              // You can apply fallback styles using the wf-inactive class in your CSS
-              $(font_element_selector).not('.ignore_font').css('visibility', 'visible');
-            }
-          })
-        } catch(e) {}
-      })();
-      
+    script(src="/javascripts/modernizr.custom.58445.js")
+    script(src='http://use.typekit.com/asa8yjy.js')
+    //- Note: jquery, google analytics and application.js imported at the bottom of the page
+    
   body(class=body_class)
     section.wrapper
       header
@@ -96,9 +53,54 @@ html
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-26218261-1']);
       _gaq.push(['_trackPageview']);
-
+    
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    script(type="text/javascript", src="/fancybox/jquery.fancybox-1.3.4.pack.js")
+    script
+      
+      (function() {
+        // Elements requiring font substitution
+        var font_element_selector = 'h1, h2, h3, h4, .address p, .body .title a, .meta .author a, .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3, .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name';
+
+        $(document).ready(function() {
+
+          // Add class to elements that are hidden already
+          $(font_element_selector).each(function() {
+            if ($(this).is(":hidden")) {
+              $(this).addClass("ignore_font");
+            }
+          });
+          $(font_element_selector).not('.ignore_font').css('visibility', 'hidden');
+          
+          // Fancybox elements
+          $(".work-page ul.work-listing li ul.images a[rel=ldntaxi]").fancybox({
+            'overlayShow' : false,
+            'transitionIn'  : 'elastic',
+            'transitionOut' : 'elastic'
+          });
+
+        });
+        // Code adapted from http://blog.typekit.com/2010/11/11/font-events-using-javascript-callbacks/
+        try {
+          Typekit.load({
+            active: function() {
+              // As soon as the fonts are active, fade in the example
+              // Don't fade in browsers that don't do proper opacity, like IE
+              if (jQuery.support.opacity) {
+                $(font_element_selector).not('.ignore_font').css('visibility', 'visible').hide().fadeIn();
+              } else {
+                $(font_element_selector).not('.ignore_font').css('visibility', 'visible');
+              }
+            },
+            inactive: function() {
+              // If the fonts are inactive, just show the example
+              // You can apply fallback styles using the wf-inactive class in your CSS
+              $(font_element_selector).not('.ignore_font').css('visibility', 'visible');
+            }
+          })
+        } catch(e) {}
+      })();      

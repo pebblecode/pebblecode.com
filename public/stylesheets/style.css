@@ -322,6 +322,11 @@ header .navshadow {
   height: auto;
   min-height: 280px;
 }
+.work-page ul.work-listing li .images li {
+  min-height: 0;
+  width: auto;
+  float: left;
+}
 .work-page .screenshot {
   margin-right: 20px;
   font-size: 1.2em;
