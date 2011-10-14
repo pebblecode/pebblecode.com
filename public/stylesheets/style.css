@@ -648,7 +648,7 @@ header .navshadow {
 }
 .blog .content #posts .post .body-wrapper {
   margin-left: 150px;
-  padding: 10px;
+  padding: 5px 10px 10px;
 }
 .blog .content #posts .post .body-wrapper .body h3 {
   font-size: 20px;
@@ -716,7 +716,7 @@ header .navshadow {
 .blog .content #posts .post .meta {
   text-align: right;
   position: absolute;
-  top: 0;
+  top: -9px;
   left: 0;
   width: 140px;
 }
