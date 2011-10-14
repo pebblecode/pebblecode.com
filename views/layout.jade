@@ -15,6 +15,14 @@ html
     meta(content='width=device-width, initial-scale=1, maximum-scale=1', name='viewport')
     script(src="/javascripts/modernizr.custom.58445.js")
     script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js")
+    script(type="text/javascript", src="/fancybox/jquery.fancybox-1.3.4.pack.js")
+    script
+      $("a.work").fancybox({
+        'overlayShow' : false,
+        'transitionIn'  : 'elastic',
+        'transitionOut' : 'elastic'
+      });
+    
     script(src='http://use.typekit.com/asa8yjy.js')
     script
       // Code from http://blog.typekit.com/2010/11/11/font-events-using-javascript-callbacks/
