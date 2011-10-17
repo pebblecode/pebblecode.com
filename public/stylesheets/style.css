@@ -944,6 +944,12 @@ ul.work-listing li.stink span {
 ul.work-listing li.stink a {
   color: #adca3a;
 }
+#fancybox-title {
+  padding-left: 5px;
+}
+.fancybox-title-inside {
+  text-align: left;
+}
 /* Footer
 -----------------------------------------------------------------------------*/
 footer {
