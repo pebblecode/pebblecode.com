@@ -57,11 +57,16 @@ More info on expresso is [here][6]
 
 ## Hosting
 
-The site is hosted on Heroku.
+The site is hosted on [Heroku][7].
+
+To deploy to production
+
+    git push heroku production:master
 
 [1]: http://expressjs.com/
 [2]: http://nodejs.org/
 [3]: http://npmjs.org/
 [4]: http://jade-lang.com/
 [5]: http://learnboost.github.com/stylus/
-[6]: https://github.com/visionmedia/expresso
+[6]: http://github.com/visionmedia/expresso
+[7]: http://www.heroku.com/
