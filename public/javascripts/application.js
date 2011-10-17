@@ -43,17 +43,18 @@ $(document).ready(function(){
   /////////////////////////////////////////////////////////////////////////////
   // Fancybox elements
   /////////////////////////////////////////////////////////////////////////////
-  $(".work-page ul.work-listing li ul.images a").fancybox({
-    'overlayShow' : true,
-    'hideOnOverlayClick' : true,
-    'transitionIn'  : 'fade',
-    'transitionOut' : 'fade',
-    'titlePosition' : 'inside',
-    'titleFormat'   : function(title, currentArray, currentIndex, currentOpts) {
-      return '<span id="fancybox-title-inside">' + (title.length ? title + ' image ': 'Image ') + (currentIndex + 1) + ' of ' + currentArray.length + '</span>';
-     }
-  });
-  
+  if ($.fancybox) {
+    $(".work-page ul.work-listing li ul.images a").fancybox({
+      'overlayShow' : true,
+      'hideOnOverlayClick' : true,
+      'transitionIn'  : 'fade',
+      'transitionOut' : 'fade',
+      'titlePosition' : 'inside',
+      'titleFormat'   : function(title, currentArray, currentIndex, currentOpts) {
+        return '<span id="fancybox-title-inside">' + (title.length ? title + ' image ': 'Image ') + (currentIndex + 1) + ' of ' + currentArray.length + '</span>';
+       }
+    });
+  }
   
   /////////////////////////////////////////////////////////////////////////////
   // Hide typekit fonts initially
