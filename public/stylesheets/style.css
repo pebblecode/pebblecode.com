@@ -293,39 +293,48 @@ header .navshadow {
 }
 /* Work page
 -----------------------------------------*/
-.work-page ul.about-intro {
-  margin-bottom: 40px;
-  min-height: 130px;
+.work-page h3 {
+  margin-bottom: 5px;
+  line-height: 1em;
 }
-.work-page ul.about-intro a {
+.work-page ul.work-intro {
+  margin-bottom: 40px;
+  min-height: 140px;
+  width: 100%;
+}
+.work-page ul.work-intro a {
   color: #419fda;
 }
-.work-page ul.about-intro li {
+.work-page ul.work-intro li {
   width: 30%;
   float: left;
 }
-.work-page ul.about-intro li.about-first {
+.work-page ul.work-intro li.work-first {
   margin-right: 2.4%;
 }
-.work-page ul.about-intro li.about-second {
+.work-page ul.work-intro li.work-second {
   margin: 0 2.4%;
 }
-.work-page ul.about-intro li.about-third {
+.work-page ul.work-intro li.work-third {
   margin-left: 2.4%;
 }
-.work-page ul.about-intro li.v-space {
+.work-page ul.work-intro li.v-space {
   width: 2px;
   height: 100%;
-  background-color: #419fda;
+  min-height: 140px;
+  background-color: #e74679;
 }
 .work-page ul.work-listing li {
   height: auto;
-  min-height: 280px;
+  min-height: 290px;
 }
 .work-page ul.work-listing li .images li {
   min-height: 0;
   width: auto;
   float: left;
+  margin-top: 20px;
+  padding: 0;
+  font-size: 1.2em;
 }
 .work-page .screenshot {
   margin-right: 20px;
@@ -343,6 +352,9 @@ header .navshadow {
 }
 /* About page
 ---------------------------------------*/
+.about-page h3 {
+  margin-bottom: 5px;
+}
 .about-page ul.who h2 {
   font-size: 3em;
 }
@@ -419,7 +431,6 @@ header .navshadow {
 }
 .about-page ul.columns li {
   width: 47%;
-  margin-bottom: 3%;
 }
 .about-page ul.columns li.odd {
   float: left;
