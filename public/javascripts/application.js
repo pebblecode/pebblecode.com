@@ -67,15 +67,7 @@ $(document).ready(function(){
   });
   $(font_element_selector).not('.ignore_font').css('visibility', 'hidden');
   
-});
-
-
-/////////////////////////////////////////////////////////////////////////////
-// Load Typekit
-/////////////////////////////////////////////////////////////////////////////
-
-// Code adapted from http://blog.typekit.com/2010/11/11/font-events-using-javascript-callbacks/
-(function() {
+  // Load typekit
   try {
     Typekit.load({
       active: function() {
@@ -93,5 +85,6 @@ $(document).ready(function(){
         $(font_element_selector).not('.ignore_font').css('visibility', 'visible');
       }
     })
-  } catch(e) {}
-})();
+  } catch(e) {}  
+});
+
