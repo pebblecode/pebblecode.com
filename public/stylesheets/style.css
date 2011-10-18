@@ -511,7 +511,7 @@ header .navshadow {
 .blog .content #posts .post .body h1,
 .blog .content #posts .post .body h2,
 .blog .content #posts .post .body h3,
-.blog .content #posts .post .meta .author a,
+.blog .content #posts .post .meta .author,
 .blog .content #posts .post .meta .tags a,
 .blog .content #posts .post .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post .dsq-comment-header .dsq-commenter-name,
@@ -542,7 +542,7 @@ header .navshadow {
 .blog .content #posts .post.pebble_aqua .body h1,
 .blog .content #posts .post.pebble_aqua .body h2,
 .blog .content #posts .post.pebble_aqua .body h3,
-.blog .content #posts .post.pebble_aqua .meta .author a,
+.blog .content #posts .post.pebble_aqua .meta .author,
 .blog .content #posts .post.pebble_aqua .meta .tags a,
 .blog .content #posts .post.pebble_aqua .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post.pebble_aqua .dsq-comment-header .dsq-commenter-name,
@@ -573,7 +573,7 @@ header .navshadow {
 .blog .content #posts .post.pebble_pink .body h1,
 .blog .content #posts .post.pebble_pink .body h2,
 .blog .content #posts .post.pebble_pink .body h3,
-.blog .content #posts .post.pebble_pink .meta .author a,
+.blog .content #posts .post.pebble_pink .meta .author,
 .blog .content #posts .post.pebble_pink .meta .tags a,
 .blog .content #posts .post.pebble_pink .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post.pebble_pink .dsq-comment-header .dsq-commenter-name,
@@ -604,7 +604,7 @@ header .navshadow {
 .blog .content #posts .post.pebble_blue .body h1,
 .blog .content #posts .post.pebble_blue .body h2,
 .blog .content #posts .post.pebble_blue .body h3,
-.blog .content #posts .post.pebble_blue .meta .author a,
+.blog .content #posts .post.pebble_blue .meta .author,
 .blog .content #posts .post.pebble_blue .meta .tags a,
 .blog .content #posts .post.pebble_blue .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post.pebble_blue .dsq-comment-header .dsq-commenter-name,
@@ -635,7 +635,7 @@ header .navshadow {
 .blog .content #posts .post.pebble_green .body h1,
 .blog .content #posts .post.pebble_green .body h2,
 .blog .content #posts .post.pebble_green .body h3,
-.blog .content #posts .post.pebble_green .meta .author a,
+.blog .content #posts .post.pebble_green .meta .author,
 .blog .content #posts .post.pebble_green .meta .tags a,
 .blog .content #posts .post.pebble_green .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post.pebble_green .dsq-comment-header .dsq-commenter-name,
@@ -666,7 +666,7 @@ header .navshadow {
 .blog .content #posts .post.pebble_orange .body h1,
 .blog .content #posts .post.pebble_orange .body h2,
 .blog .content #posts .post.pebble_orange .body h3,
-.blog .content #posts .post.pebble_orange .meta .author a,
+.blog .content #posts .post.pebble_orange .meta .author,
 .blog .content #posts .post.pebble_orange .meta .tags a,
 .blog .content #posts .post.pebble_orange .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post.pebble_orange .dsq-comment-header .dsq-commenter-name,
@@ -697,7 +697,7 @@ header .navshadow {
 .blog .content #posts .post.pebble_purple .body h1,
 .blog .content #posts .post.pebble_purple .body h2,
 .blog .content #posts .post.pebble_purple .body h3,
-.blog .content #posts .post.pebble_purple .meta .author a,
+.blog .content #posts .post.pebble_purple .meta .author,
 .blog .content #posts .post.pebble_purple .meta .tags a,
 .blog .content #posts .post.pebble_purple .dsq-comment-footer .dsq-comment-meta a,
 .blog .content #posts .post.pebble_purple .dsq-comment-header .dsq-commenter-name,
@@ -828,14 +828,11 @@ header .navshadow {
   width: 140px;
 }
 .blog .content #posts .post .meta .author {
-  margin-bottom: 5px;
-}
-.blog .content #posts .post .meta .author a {
   font-size: 20px;
   font-weight: bold;
   margin-top: 18px;
+  margin-bottom: 5px;
   display: block;
-  word-wrap: break-word;
 }
 .blog .content #posts .post .meta .published-date {
   line-height: 17px;

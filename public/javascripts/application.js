@@ -1,9 +1,30 @@
 /////////////////////////////////////////////////////////////////////////////
 // Typekit font element selectors
 /////////////////////////////////////////////////////////////////////////////
-var font_element_selector = 'h1, h2, h3, h4, .address p, .body .title a, .body h1, .body h2, .body h3, .meta .author a, .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3, .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name';
+var font_element_selector = 'h1, h2, h3, h4, .address p, .body .title a, .body h1, .body h2, .body h3, .meta .author, .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3, .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name';
 
 $(document).ready(function(){
+  
+
+  /////////////////////////////////////////////////////////////////////////////
+  // Author name replacement - needed because tumblr doesn't have full names
+  /////////////////////////////////////////////////////////////////////////////
+  var tumblr_authors = {
+    thatsinthebook: "Toby Hunt",
+    shapeshed: "George Ornbo",
+    elpabl0: "Paul Evans",
+    sebbo: "Sebastian Nash",
+    abutcher: "Alex Butcher",
+    tutaktran: "Tak Tran",
+    josephjeganathan: "Joseph Jeganathan",
+    eyko: "Vincent Martinez",
+    markdurrant: "Mark Durrant"
+  };
+
+  jQuery(".blog .meta .author").each(function(i) {
+    author = this.innerHTML;
+    this.innerHTML = this.innerHTML.replace(author, tumblr_authors[author]||author);
+  });
   
   /////////////////////////////////////////////////////////////////////////////
   // Pebble colour selection
