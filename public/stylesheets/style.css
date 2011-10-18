@@ -478,6 +478,9 @@ header .navshadow {
 .blog .content #intro .title a {
   color: #7a7a7a;
 }
+.blog .content #intro .title a:hover {
+  text-decoration: none;
+}
 .blog .content #intro .subtitle {
   font-size: 20px;
   padding: 0;
