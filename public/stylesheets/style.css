@@ -319,7 +319,7 @@ header .navshadow {
   margin-left: 2.4%;
 }
 .work-page ul.work-intro li.v-space {
-  width: 2px;
+  width: 0.15%;
   height: 100%;
   min-height: 140px;
   background-color: #e74679;
