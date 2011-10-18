@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // Typekit font element selectors
 /////////////////////////////////////////////////////////////////////////////
-var font_element_selector = 'h1, h2, h3, h4, .address p, .body .title a, .meta .author a, .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3, .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name';
+var font_element_selector = 'h1, h2, h3, h4, .address p, .body .title a, .body h1, .body h2, .body h3, .meta .author a, .blog .content #posts .post .body-wrapper .comments-wrapper #dsq-content h3, .blog .content #posts .post .body-wrapper .comments-wrapper .dsq-commenter-name';
 
 $(document).ready(function(){
   
