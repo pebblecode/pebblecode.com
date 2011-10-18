@@ -819,6 +819,7 @@ header .navshadow {
   font-weight: bold;
   margin-top: 18px;
   display: block;
+  word-wrap: break-word;
 }
 .blog .content #posts .post .meta .published-date {
   line-height: 17px;
