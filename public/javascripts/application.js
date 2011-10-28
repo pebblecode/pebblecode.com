@@ -4,6 +4,8 @@ $(document).ready(function(){
   
   var rand = Math.floor(Math.random()*colors.length);
   $('nav').css("background-color", colors[rand]);
+  $('.v-space').css("background-color", colors[rand]);
+  $('.odd').css("border-right","solid red 2px").css("borderColor", colors[rand]);
   
   if ($(".blog #posts").length > 0) {
     $(this).find(".post").each(function() {
