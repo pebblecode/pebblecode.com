@@ -77,7 +77,7 @@ body
     padding-top 100px
   }
 
-p, q, cite, address, ul, ol, dl
+p, q, cite, address, ul, ol, dl, .pebbleit
   font-size 1.2em
   line-height 1.5em
   margin-bottom 1em
@@ -307,9 +307,11 @@ header
           width auto
           float left
           margin-top 20px
-          padding 0
+          padding 0 
           font-size 1.2em
-      
+          
+          
+
   .screenshot
     margin-right 20px
     font-size 1.2em
@@ -394,12 +396,11 @@ header
   ul.columns
     li
       width 47%
-      &.odd
+      &.about-odd
         float left
         clear left
         padding-right 3%
-        border-right 2px solid pebble_blue
-      &.even
+      &.about-even
         float right
         clear right
         
@@ -418,6 +419,14 @@ header
     margin 0
     a
       color pebble_pink
+      
+.pebbleit
+  width 60%
+  a
+    color pebble_blue
+  h1  
+    a:hover
+      text-decoration none
 
 
 /* Blog pages
@@ -696,17 +705,43 @@ ul.work-listing
       float right
       clear right
 
+    .images 
+      li
+        margin 0
+      .active a
+        display block
+        line-height 40px
+        background transparent url('/images/view_blue.png') no-repeat 0 0
+        height 40px
+        padding-left 45px
+        
+        &:hover
+          background-position 0 -40px !important
+      a
+        display none
+
     &.ldntaxi
       border-left 5px solid pebble_blue
       background url('/images/tile_blue.gif')
+      .images 
+        .active a
+          background transparent url('/images/view_blue.png') no-repeat 0 0
+          
       span
         color pebble_blue
       a
         color pebble_blue
+        
+      
   
     &.woohoo
       border-left 5px solid pebble_green
       background url('/images/tile_green.gif')
+      
+      .images 
+        .active a
+          background transparent url('/images/view_green.png') no-repeat 0 0      
+      
       span
           color pebble_green
       a
@@ -715,6 +750,11 @@ ul.work-listing
     &.aljazeera
       border-left 5px solid pebble_orange
       background url('/images/tile_orange.gif')
+      
+      .images 
+        .active a
+          background transparent url('/images/view_orange.png') no-repeat
+          
       span
           color pebble_orange
       a
@@ -724,6 +764,11 @@ ul.work-listing
     &.takefive
       border-left 5px solid pebble_aqua
       background url('/images/tile_aqua.gif')
+      
+      .images 
+        .active a
+          background transparent url('/images/view_aqua.png') no-repeat
+          
       span
           color pebble_aqua
       a
@@ -733,6 +778,11 @@ ul.work-listing
     &.ideapi
       border-left 5px solid pebble_purple
       background url('/images/tile_purple.gif')
+      
+      .images 
+        .active a
+          background transparent url('/images/view_purple.png') no-repeat
+          
       span
           color pebble_purple
       a
@@ -742,6 +792,11 @@ ul.work-listing
     &.downunder
       border-left 5px solid pebble_pink
       background url('/images/tile_pink.gif')
+      
+      .images 
+        .active a
+          background transparent url('/images/view_pink.png') no-repeat
+          
       span
           color pebble_pink
       a
@@ -751,6 +806,11 @@ ul.work-listing
     &.space
       border-left 5px solid pebble_blue
       background url('/images/tile_blue.gif')
+      
+      .images 
+        .active a
+          background transparent url('/images/view_blue.png') no-repeat
+          
       span
           color pebble_blue
       a
@@ -760,6 +820,11 @@ ul.work-listing
     &.stink
       border-left 5px solid pebble_green
       background url('/images/tile_green.gif')
+      
+      .images 
+        .active a
+          background transparent url('/images/view_green.png') no-repeat
+          
       span
           color pebble_green
       a

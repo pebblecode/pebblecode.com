@@ -35,6 +35,8 @@ $(document).ready(function(){
   // Random navigation colour
   var rand = Math.floor(Math.random()*colors.length);
   $('nav').css("background-color", colors[rand]);
+  $('.v-space').css("background-color", colors[rand]);
+  $('.about-odd').css("border-right","solid red 2px").css("borderColor", colors[rand]);
   
   // Blog post colour - picked based on post id mod with colours array
   if ($(".blog #posts").length > 0) {
