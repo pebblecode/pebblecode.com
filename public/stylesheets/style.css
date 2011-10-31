@@ -112,7 +112,8 @@ cite,
 address,
 ul,
 ol,
-dl {
+dl,
+.pebbleit {
   font-size: 1.2em;
   line-height: 1.5em;
   margin-bottom: 1em;
@@ -432,13 +433,12 @@ header .navshadow {
 .about-page ul.columns li {
   width: 47%;
 }
-.about-page ul.columns li.odd {
+.about-page ul.columns li.about-odd {
   float: left;
   clear: left;
   padding-right: 3%;
-  border-right: 2px solid #419fda;
 }
-.about-page ul.columns li.even {
+.about-page ul.columns li.about-even {
   float: right;
   clear: right;
 }
@@ -459,6 +459,15 @@ header .navshadow {
 }
 .address p a {
   color: #e74679;
+}
+.pebbleit {
+  width: 60%;
+}
+.pebbleit a {
+  color: #419fda;
+}
+.pebbleit h1 a:hover {
+  text-decoration: none;
 }
 /* Blog pages
 ---------------------------------------*/
