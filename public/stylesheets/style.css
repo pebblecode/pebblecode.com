@@ -1063,3 +1063,12 @@ footer a {
 footer span {
   color: #848484;
 }
+/* tricklr ad
+-----------------------------------------------------------------------------*/
+#tricklr-ad {
+  background-image: url("/images/tricklr-ad.png");
+  height: 161px;
+  width: 105px;
+  position: absolute;
+  top: 75px;
+}
