@@ -18,7 +18,9 @@ $(document).ready(function(){
     tutaktran: "Tak Tran",
     josephjeganathan: "Joseph Jeganathan",
     eyko: "Vincent Martinez",
-    markdurrant: "Mark Durrant"
+    markdurrant: "Mark Durrant",
+    danielrbradley: "Daniel Bradley",
+    mattward: "Matt Ward"
   };
 
   jQuery(".blog .meta .author").each(function(i) {
