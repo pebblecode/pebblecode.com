@@ -33,11 +33,7 @@ By default files are not reloaded when you change them. There is a tool availabl
 
     npm install -g nodemon
 
-Then instead of starting the server with 
-
-    node app.js
-
-Do 
+Then instead of starting the server with `node app.js`, run 
 
     nodemon app.js
 
@@ -58,6 +54,10 @@ More info on expresso is [here][6]
 ## Hosting
 
 The site is hosted on [Heroku][7].
+
+To add heroku to your local git
+
+    git remote add heroku git@heroku.com:pebblecode.git
 
 To deploy to production
 
