@@ -373,81 +373,69 @@ header .navshadow {
 .about-page ul.who li.toby span {
   color: #419fda;
 }
-.about-page ul.who li.seb {
+.about-page ul.who li.george {
   margin: 0 2%;
   background: url("/images/tile_green.gif");
-}
-.about-page ul.who li.seb span {
-  color: #adca3a;
-}
-.about-page ul.who li.paul {
-  background: url("/images/tile_orange.gif");
-}
-.about-page ul.who li.paul span {
-  color: #f7ae35;
-}
-.about-page ul.who li.george {
-  background: url("/images/tile_aqua.gif");
 }
 .about-page ul.who li.george span {
-  color: #42b8be;
+  color: #adca3a;
 }
 .about-page ul.who li.alex {
+  background: url("/images/tile_orange.gif");
+}
+.about-page ul.who li.alex span {
+  color: #f7ae35;
+}
+.about-page ul.who li.mark {
+  background: url("/images/tile_aqua.gif");
+}
+.about-page ul.who li.mark span {
+  color: #42b8be;
+}
+.about-page ul.who li.greg {
   margin: 0 2%;
   background: url("/images/tile_purple.gif");
 }
-.about-page ul.who li.alex span {
+.about-page ul.who li.greg span {
   color: #a1579c;
 }
-.about-page ul.who li.mark {
+.about-page ul.who li.vince {
   background: url("/images/tile_pink.gif");
 }
-.about-page ul.who li.mark span {
+.about-page ul.who li.vince span {
   color: #e74679;
 }
-.about-page ul.who li.greg {
+.about-page ul.who li.tak {
   background: url("/images/tile_blue.gif");
 }
-.about-page ul.who li.greg span {
+.about-page ul.who li.tak span {
   color: #419fda;
 }
-.about-page ul.who li.vince {
+.about-page ul.who li.joseph {
   margin: 0 2%;
   background: url("/images/tile_green.gif");
 }
-.about-page ul.who li.vince span {
+.about-page ul.who li.joseph span {
   color: #adca3a;
 }
-.about-page ul.who li.tak {
+.about-page ul.who li.matt {
   background: url("/images/tile_orange.gif");
 }
-.about-page ul.who li.tak span {
+.about-page ul.who li.matt span {
   color: #f7ae35;
 }
-.about-page ul.who li.joseph {
+.about-page ul.who li.daniel {
   background: url("/images/tile_aqua.gif");
 }
-.about-page ul.who li.joseph span {
+.about-page ul.who li.daniel span {
   color: #42b8be;
 }
-.about-page ul.who li.matt {
+.about-page ul.who li.gayle {
   margin: 0 2%;
   background: url("/images/tile_purple.gif");
 }
-.about-page ul.who li.matt span {
-  color: #a1579c;
-}
-.about-page ul.who li.daniel {
-  background: url("/images/tile_pink.gif");
-}
-.about-page ul.who li.daniel span {
-  color: #e74679;
-}
-.about-page ul.who li.gayle {
-  background: url("/images/tile_blue.gif");
-}
 .about-page ul.who li.gayle span {
-  color: #419fda;
+  color: #a1579c;
 }
 .about-page ul.who img {
   float: left;
