@@ -291,7 +291,7 @@ header
         margin-left 2.4%
         
       &.v-space
-        width 2px
+        width 0.15%
         height 100%
         min-height 140px
         background-color pebble_pink
@@ -379,11 +379,20 @@ header
         margin 0 2%
         background url('/images/tile_green.gif')
         span
-          color pebble_green    
-      &.gayle
+          color pebble_green
+      &.matt
         background url('/images/tile_orange.gif')
         span
-          color pebble_orange                       
+          color pebble_orange 
+      &.daniel
+        background url('/images/tile_aqua.gif')
+        span
+          color pebble_aqua    
+      &.gayle
+        margin 0 2%
+        background url('/images/tile_purple.gif')
+        span
+          color pebble_purple                       
           
     img
       float left
@@ -446,6 +455,8 @@ header
         line-height 1em
         a
           color pebble_gray
+          &:hover
+            text-decoration none
 
       .subtitle
         font-size 20px
@@ -476,8 +487,10 @@ header
         colored_elements(color_name, color_value)
           .title a,
           .body a,
+          .body h1,
+          .body h2,
           .body h3,
-          .meta .author a,
+          .meta .author,
           .meta .tags a,
           .dsq-comment-footer .dsq-comment-meta a,
           .dsq-comment-header .dsq-commenter-name,
@@ -521,13 +534,34 @@ header
           padding 5px 10px 10px
           
           .body
-            h3
+            h1, h2, h3
               font-size 20px
+            
+            h4
+              font-size 20px
+            h5
+              font-size 18px
+            h6
+              font-size 16px
+              font-weight bold
               
             p
               font-size 16px
               line-height 22px
           
+            ul, ol
+              li
+                font-size 16px
+                line-height 22px
+          
+            ul
+              list-style disc
+              margin-left 15px
+            
+            ol
+              list-style decimal
+              margin-left 20px
+              
             .title
               a
                 font-size 26px
@@ -596,13 +630,11 @@ header
           width 140px
         
           .author
+            font-size 20px
+            font-weight bold
+            margin-top 18px
             margin-bottom 5px
-          
-            a
-              font-size 20px
-              font-weight bold
-              margin-top 18px
-              display block
+            display block
           
           .published-date
             line-height 17px
@@ -831,4 +863,28 @@ footer
   span
     color #848484
 
-    
+/* tricklr ad
+-----------------------------------------------------------------------------*/
+
+#tricklr-ad
+  background-image: url('/images/tricklr-ad.png');
+  height: 161px;
+  width: 105px;
+  position: absolute;
+  top: 75px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
