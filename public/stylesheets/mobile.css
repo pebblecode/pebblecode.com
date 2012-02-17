@@ -46,7 +46,7 @@ header nav ul {
 }
 header nav ul li {
   display: inline;
-  padding: 0 5%;
+  padding: 0;
 }
 header nav ul li a {
   float: right;
