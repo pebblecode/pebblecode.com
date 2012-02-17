@@ -41,10 +41,10 @@ header
     h1
       float none
     ul
-      float left
-      width 100%
+      float none
+      width 270px
       font-size 2em
-      margin-top 5px
+      margin 5px auto 0 
       li
         display inline
         padding 0 5%
@@ -52,6 +52,13 @@ header
           float right
           margin-left: 0
 
+/* Footer
+-----------------------------------------------------------------------------*/
+
+footer
+  margin-top 0
+  width 90%
+  padding 15px 5% 0
 
 /* Content
 -----------------------------------------------------------------------------*/
@@ -60,15 +67,16 @@ header
   width 90%
   padding 5%
   margin-top 0
-  
-  
+      
 /* Home page
 ---------------------------------------*/
 
 .home-page
+  .content
+    margin 0
   h1.title
     font-size 3em
-    margin-bottom 10px
+    margin-bottom 20px
   
   ul.work-listing
     li
@@ -90,14 +98,14 @@ header
   h1
     margin-bottom 10px
     
-  ul.about-intro 
+  ul.work-intro 
     li
       float none
       width 100%
       margin-left 0 !important
       margin-right 0 !important
       
-      &.vspace
+      &.v-space
         display none
       
   ul.work-listing
@@ -125,18 +133,29 @@ header
         float none
         clear both
         border none
-        
+  
+  .about-odd
+    border none !important
+    
+  .pebbleit
+    width 100%
+         
   ul.who
     li      
-      width 96%
-      margin 0 !important
+      width 100%
+      margin 5px 0 !important
+      &:last-child 
+        margin 5px 0 15px !important
+      img
+        height 50px
       
       h2
         font-size 2em
         
   .map
     float none
-    width 96%
+    width 100%
+    margin 10px 0 15px
     
   .address
-    width 96%
+    width 100%

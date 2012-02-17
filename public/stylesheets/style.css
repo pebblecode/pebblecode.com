@@ -192,8 +192,8 @@ header h1 {
 header h1 a {
   display: block;
   background: transparent url("/images/logo.png") no-repeat 0 0;
-  margin: 12px 0 0 0;
-  width: 300px;
+  margin: 12px auto 0;
+  width: 250px;
   height: 42px;
   text-indent: -9999px;
   outline: none;
