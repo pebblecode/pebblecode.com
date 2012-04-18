@@ -1,59 +1,41 @@
 # pebble {code} site
 
-This is a simple brochure site written with [express][1], a web framework for [node.js][2]
+This is a simple brochure site written with [sinatra][1].
 
 
-## Hacking on the site
+## Installation
 
-To hack on the site you need to install node.js. On OSX you can use homebrew
+To hack on the site you need to install bundler
 
-    brew install node
+    gem install bundler
 
-You also need [npm][3] (the package manager for node.js). You can get it using the following one line install:
+Then install all the required gems
 
-    curl http://npmjs.org/install.sh | sh
+    bundle install
 
-## Installing the site
+Start the server
 
-Once you've cloned the repo change into the directory and run
+		rake server
 
-    npm install
-
-This will install the dependencies
-
-You can then run 
-    
-    node app.js
-
-To start the server and go to `http://0.0.0.0:3000` to see it
+Go to `http://localhost:7100`
 
 ## Automatic reloading
 
-By default files are not reloaded when you change them. There is a tool available for doing this. Install it with
-
-    npm install -g nodemon
-
-Then instead of starting the server with `node app.js`, run 
-
-    nodemon app.js
+To autoload the site, this app uses [shotgun][2], but this is wrapped around the rake task, so nothing needs to be done for it to work.
 
 ## Views and styling
 
-The files you'll be most concerned with are the view files (under /views) and the stylesheet files (under /public/stylesheets).
+The files you'll be most concerned with are the view files (under /views) and the stylesheet files (under /views/stylesheets).
 
-The view files are written in [jade][4] and the stylesheets are written in [stylus][5]. There is good documentation on both of the sites.
+The view files are written in [haml][3] and the stylesheets are written in [scss][4]. 
 
 ## Tests
 
-To run tests run 
-
-    expresso
-
-More info on expresso is [here][6]
+Todo
 
 ## Hosting
 
-The site is hosted on [Heroku][7].
+The site is hosted on [Heroku][5].
 
 To add heroku to your local git
 
@@ -63,10 +45,8 @@ To deploy to production
 
     git push heroku production:master
 
-[1]: http://expressjs.com/
-[2]: http://nodejs.org/
-[3]: http://npmjs.org/
-[4]: http://jade-lang.com/
-[5]: http://learnboost.github.com/stylus/
-[6]: http://github.com/visionmedia/expresso
-[7]: http://www.heroku.com/
+[1]: http://www.sinatrarb.com/
+[2]: http://github.com/rtomayko/shotgun/
+[3]: http://haml-lang.com/
+[4]: http://sass-lang.com/
+[5]: http://www.heroku.com/

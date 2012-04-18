@@ -1,1 +1,1 @@
-web: node app.js
+web: bundle exec shotgun --server=thin config.ru -p 7100
