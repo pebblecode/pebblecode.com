@@ -6,3 +6,4 @@ logs
 nodemon-ignore
 
 public/stylesheets/style.styl
+.sass-cache
