@@ -7,29 +7,29 @@
       %script{:src => "/javascripts/script.js", :type => "text/javascript"}
       %script{:src => "/javascripts/lib/slides.min.jquery.js", :type => "text/javascript"}
       %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
-      %link{:href => "fonts/meta.css", :rel => "stylesheet", :type => "text/css"}/
+      %link{:href => "/fonts/meta.css", :rel => "stylesheet", :type => "text/css"}/
       %meta{:content => "width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
-  %body.homepage
+  %body{:class => @page_name}
     %header.background-random
       %nav
-        %a{:href => "homepage.html"}
-          %img{:alt => "pebble{code} logo", :src => "images/logo.png"}/
+        %a{:href => "/"}
+          %img{:alt => "pebble{code} logo", :src => "/images/logo.png"}/
         %ul
           %li
             %span {
-            %a{:href => "work.html"} our work
+            %a{:href => "/work"} our work
             %span }
           %li
             %span {
-            %a{:href => "products.html"} our products
+            %a{:href => "/products"} our products
             %span }
           %li
             %span {
-            %a{:href => "people.html"} our people
+            %a{:href => "/people"} our people
             %span }
           %li
             %span {
-            %a{:href => "thoughts.html"} our thoughts
+            %a{:href => "/thoughts"} our thoughts
             %span }
     #wrap
       = yield

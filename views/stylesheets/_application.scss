@@ -9,7 +9,7 @@ $column-width : 14.1666667%;
 $column-gutter : 3%;
 $grid-width : 90%;
 $grid-max-width : 1024px;
-$baseline : 22px; 
+$baseline : 22px;
 
 html, body{
   height: 100%;
@@ -64,7 +64,7 @@ a{
   color: hsl(0, 0%, 45%);
   font-weight: bold;
   text-decoration: none;
-  
+
   &:hover{
     color: hsl(0, 0%, 30%);
     text-decoration: underline;
@@ -207,19 +207,19 @@ header{
   width: 100%;
   @include box-shadow(hsla(0, 0%, 0%, 0.1) 0 5px 0);
   z-index: 10;
-  
+
   nav{
     height: 40px;
     width: 100%;
     max-width: $grid-max-width;
     margin: 0 auto;
-    
+
     img{
       float: left;
       margin-top: 10px;
       margin-left: 12px;
     }
-    
+
     ul{
       float: right;
       font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -227,15 +227,15 @@ header{
       line-height: 38px;
       letter-spacing: 1px;
       margin-right: 5px;
-      
+
       li{
         float: left;
         margin-left: 10px;
-        
+
         span{
           color: transparent;
         }
-        
+
         a{
           color: white;
           &:hover{
@@ -243,14 +243,14 @@ header{
             text-decoration: none;
           }
         }
-        
+
         &:hover{
           span{
             color: white;
           }
         }
       }
-      
+
       .nav-active{
         span{
           color: white;
@@ -271,55 +271,54 @@ footer{
   clear: both;
   position: relative;
   height: $baseline*3;
-  
+
   div{
     width: 100%;
     max-width: $grid-max-width;
     margin: 0 auto;
-        
+
     #contact{
       margin-top: 16px;
       margin-left: 12px;
       float: left;
-      
+
       li.size0{
         color: hsl(0, 0%, 70%);
         margin-bottom: -6px;
-        
+
         a{
           color: hsl(0, 0%, 50%);
-          
+
           &:hover{
             color: hsl(0, 0%, 40%);
           }
         }
       }
     }
-    
+
     #social{
       float: right;
       margin-right: 12px;
-      
+
       li{
         float: left;
-        
-        a{  
+
+        a{
           display: block;
           height: 20px;
           width: 20px;
           text-indent: 99999px;
           margin: 26px 0 0 5px;
-          background-image: url('../images/social.png');
+          background-image: url('/images/social.png');
           background-color: hsl(0, 0%, 85%);
-          
+
           &:hover{
             background-color: hsl(0, 0%, 75%);
           }
         }
-        
+
         #twitter{
           background-position-x: 20px;
-          
         }
       }
     }
@@ -330,20 +329,22 @@ footer{
 /* @group homepage */
 
 .homepage{
-  
   .strapline{
     margin-top: $baseline*3;
     text-align: center;
   }
-  
+
   .row:nth-child(2){
     margin-bottom: $baseline*2;
   }
-  
+
   .slideshow{
     @include box-sizing(border-box);
-    height: $baseline*18;
-    
+
+    .slides_container {
+      height: $baseline*18;
+    }
+
     h1{
       color: white;
       margin: $baseline*6 9.5%;
@@ -380,15 +381,15 @@ footer{
         height: 12px;
         margin-left:10px;
         border: 6px solid $pink;
-        
+
         @include box-sizing(border-box);
         @include border-radius(10px);
       }
-      
+
       .current a{
         border-width: 3px;
       }
-      
+
       li:nth-child(2) a{
         border-color: $green;
       }
@@ -406,18 +407,17 @@ footer{
       }
     }
   }
-  
+
   .columns2{
-    
     h2{
       margin-bottom: $baseline;
     }
-    
+
     a{
       margin-top: -$baseline;
       display: block;
     }
-    
+
     .blog-snipet{
       margin-bottom: $baseline*2;
     }
@@ -428,7 +428,7 @@ footer{
 /* @group work */
 
 .work{
-  
+
   .row:first-child{
     margin-bottom: $baseline*2;
     .columns3{
@@ -438,9 +438,9 @@ footer{
       padding-top: $baseline*3;
     }
   }
-  
+
   .case-study{
-    
+
     hr{
       margin-bottom: $baseline*2;
     }
@@ -453,7 +453,7 @@ footer{
     }
     h3{
       margin-bottom: $baseline;
-    } 
+    }
   }
 }
 /* @end */
@@ -461,17 +461,17 @@ footer{
 /* @group products */
 
 .products{
-  
+
   .row:first-child{
     .columns6{
       margin-top: $baseline*3;
     }
   }
-  
+
   .row:nth-child(2){
     margin-bottom: $baseline*2;
   }
-  
+
   .tricklr, .vistazo{
     .img{
       width: 100%;
@@ -479,22 +479,22 @@ footer{
       background-color: $pink;
     }
   }
-  
+
   .vistazo{
     .img{
       background-color: $blue;
     }
   }
-  
+
   h2{
     margin-top: $baseline*2;
     margin-bottom: $baseline;
   }
-  
+
   hr{
     margin-bottom: $baseline*2;
   }
-  
+
   .open-source{
     p{
       margin-top: $baseline*2;
@@ -533,8 +533,8 @@ footer{
     .img{
       width: 100%;
       height: $baseline*12;
-      background-image: url('../images/person.png');
-      background-position: 50% 50%;    
+      background-image: url('/images/person.png');
+      background-position: 50% 50%;
       background-repeat: no-repeat;
     }
     h3{
@@ -544,7 +544,7 @@ footer{
       margin-bottom: 0;
     }
   }
-  
+
   .employees{
     .row:first-child{
       margin-bottom: $baseline;
@@ -557,11 +557,11 @@ footer{
     }
     .person{
       margin-bottom: $baseline;
-      
+
       .img{
         width: 100%;
         height: $baseline*5;
-        background-image: url('../images/person.png');
+        background-image: url('/images/person.png');
         background-position-x: 50%;
         background-position-y: 50%;
         margin-bottom: 7px;
@@ -615,7 +615,7 @@ footer{
       .comments{
         color: hsl(40, 70%, 98.5%);
         margin-top: 10px;
-        background-image: url(../images/comment.png);
+        background-image: url('/images/comment.png');
         width: 20px;
         height: 26px;
         padding: 4px 12px 6px;

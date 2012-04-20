@@ -1,13 +1,15 @@
 $(document).ready(function() {
-  /* 
-  * Slideshow using http://slidesjs.com/ 
+  /*
+  * Slideshow using http://slidesjs.com/
   * play = time for each slide
   */
-  $(".slideshow").slides({
-    play: 5500,
-  });
-  
-  /* 
+  if ($(".slideshow").length > 0) {
+    $(".slideshow").slides({
+      play: 5500,
+    });
+  }
+
+  /*
   * random colours
   */
   function randOrd() {
