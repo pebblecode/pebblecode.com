@@ -826,7 +826,15 @@ footer div #social li #twitter {
   font-weight: 400;
   display: block;
 }
-/* line 615, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+/* line 614, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+.thoughts .blog-post .blog-sidebar .tags a:after {
+  content: ",";
+}
+/* line 617, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+.thoughts .blog-post .blog-sidebar .tags a:last-child:after {
+  content: "";
+}
+/* line 621, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
 .thoughts .blog-post .blog-sidebar .comments {
   color: #fefcf8;
   margin-top: 10px;
