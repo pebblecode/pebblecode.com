@@ -84,20 +84,6 @@
 
           <aside class="columns2 blog-sidebar">
             <h3 class="size2">{PostAuthorName}</h3>
-
-            {block:Date}
-              <li class="published-date"><span class="date-month">{DayOfMonth}{DayOfMonthSuffix} {Month}</span><span class="year">{Year}</span></li>
-            {/block:Date}
-            {block:HasTags}
-              <li class="tags">tags<br/>
-                <ul>
-                  {block:Tags}
-                    <li><a href="{TagURL}">{Tag}</a></li>
-                  {/block:Tags}
-                </ul>
-              </li>
-            {/block:HasTags}
-
             {block:Date}
               <p class="size0">{DayOfMonth}{DayOfMonthSuffix} {Month}</p>
               <p class="size0">{Year}</p>
