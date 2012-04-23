@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+  Theme: Pebble Code v2.0
+  Author: pebblecode [http://pebblecode.com/]
+  For: Tumblr [http://tumblr.com/]
+  Terms: Non-free
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>THOUGHTS -- pebblecode.com</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <meta name="description" content="{MetaDescription}" />
+  <meta name="if:Show notes" content="1">
+  <meta name="text:Disqus Shortname" content="" />
+
+  <link rel="icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="http://pebblecode.com/v2/javascripts/script.js" type="text/javascript"></script>
+  <script src="http://pebblecode.com/v2/javascripts/slides.min.jquery.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="http://pebblecode.com/v2/stylesheets/screen.css" type="text/css" />
+  <link rel="stylesheet" href="http://pebblecode.com/v2/fonts/meta.css" type="text/css" />
+  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  </head>
+<body class="thoughts">
+
+  <header class="background-random">
+    <nav>
+      <a href="http://pebblecode.com/"><img src="http://pebblecode.com/images/logo.png" alt="pebble{code} logo"/></a>
+
+      <ul>
+        <li><span>{</span><a href="http://pebblecode.com/work">our work</a><span>}</span></li>
+        <li><span>{</span><a href="http://pebblecode.com/products">our products</a><span>}</span></li>
+        <li><span>{</span><a href="http://pebblecode.com/people">our people</a><span>}</span></li>
+        <li class="nav-active"><span>{</span><a href="http://pebblecode.com/thoughts">our thoughts</a><span>}</span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="wrap">
+    <!-- <section id="staging-message" style="position:absolute;top:0; width: 100%; background-color: yellow; color: black; height: 25px; z-index: 2000; left: 0; text-align: center; font-size: 15px; line-height: 25px">This is pebble { code } staging (For the real site go to <a href="http://pebblecode.com/">pebblecode.com)</a></section> -->
+
+    <div class="row">
+      <div class="columns6"  id="thoughts-heading">
+        <h1 class="size3">our thoughts</h1>
+        <h2 class="size2">design, code, buisness, &amp; everything in-between</h2>
+      </div>
+    </div>
+
+    <hr class="background-random"/>
+
+    {block:TagPage}
+      <h2 class="size2">Posts tagged: {Tag}</h2>
+    {/block:TagPage}
+
+    {block:Posts}
+      {block:Text}
+        <section class="row blog-post">
+          <article class="columns4 blog-content">
+            {block:Title}
+              <h2 class="heading columns6 size2"><a href="{Permalink}">{Title}</a></h2>
+            {/block:Title}
+
+            {Body}
+          </article>
+
+          {block:IfDisqusShortname}
+            {block:Permalink}
+              <section class="share-this-wrapper">
+                <span  class='st_twitter' ></span><span  class='st_facebook' ></span><span  class='st_gbuzz' ></span><span  class='st_email' ></span><span  class='st_sharethis' ></span>
+              </section><!-- .share-this-wrapper -->
+
+              <section class="comments-wrapper">
+                <section id="disqus_thread"></section>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+              </section>
+            {/block:Permalink}
+          {/block:IfDisqusShortname}
+
+          <aside class="columns2 blog-sidebar">
+            <h3 class="size2">{PostAuthorName}</h3>
+
+            {block:Date}
+              <li class="published-date"><span class="date-month">{DayOfMonth}{DayOfMonthSuffix} {Month}</span><span class="year">{Year}</span></li>
+            {/block:Date}
+            {block:HasTags}
+              <li class="tags">tags<br/>
+                <ul>
+                  {block:Tags}
+                    <li><a href="{TagURL}">{Tag}</a></li>
+                  {/block:Tags}
+                </ul>
+              </li>
+            {/block:HasTags}
+
+            {block:Date}
+              <p class="size0">{DayOfMonth}{DayOfMonthSuffix} {Month}</p>
+              <p class="size0">{Year}</p>
+            {/block:Date}
+            {block:HasTags}
+              <div class="tags">
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+            {/block:HasTags}
+            <span class="comments">23</span>
+          </aside>
+        </section>
+      {/block:Text}
+    {/block:Posts}
+
+    {block:Pagination}
+      <ul id="blog-navigation">
+          <li class="prev">&nbsp;
+            {block:PreviousPage}
+              <a href="{PreviousPage}">&#171; Newer</a>
+            {/block:PreviousPage}
+          </li>
+          <li class="next">&nbsp;
+            {block:NextPage}
+              <a href="{NextPage}">Older &#187;</a>
+            {/block:NextPage}
+          </li>
+      </ul>
+    {/block:Pagination}
+
+    <div id="wrap-footer"></div>
+  </div>
+
+  <footer>
+    <div>
+      <ul id="contact">
+        <li class="size0">T: <a href="tel:020 3327 1081">020 3327 1081</a></li>
+        <li class="size0">E: <a href="mailto:info@pebblecode.com">info@pebblecode.com</a></li>
+      </ul>
+      <ul id="social">
+        <li><a href="http://www.facebook.com/pebblecode" id="facebook">facebook</a></li>
+        <li><a href="http://twitter.com/#!/pebblecode" id="twitter">twitter</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  {block:IfDisqusShortname}
+    <script type="text/javascript">
+      //<![CDATA[
+      (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+          if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+          }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+      })();
+      //]]>
+    </script>
+  {/block:IfDisqusShortname}
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26218261-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+</html>
