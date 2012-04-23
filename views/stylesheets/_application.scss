@@ -611,6 +611,12 @@ footer{
           font-weight: 400;
           display: block;
         }
+        a:after {
+          content: ",";
+        }
+        a:last-child:after {
+          content: "";
+        }
       }
       .comments{
         color: hsl(40, 70%, 98.5%);
