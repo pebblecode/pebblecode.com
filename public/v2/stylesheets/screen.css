@@ -510,7 +510,7 @@ footer div #social li a {
   width: 20px;
   text-indent: 99999px;
   margin: 26px 0 0 5px;
-  background-image: url("/images/social.png");
+  background-image: url("http://pebblecode.com/v2/images/social.png");
   background-color: #d9d9d9;
 }
 /* line 315, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
@@ -738,7 +738,7 @@ footer div #social li #twitter {
 .people .spotlight .img {
   width: 100%;
   height: 264px;
-  background-image: url("/images/person.png");
+  background-image: url("http://pebblecode.com/v2/images/person.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -770,7 +770,7 @@ footer div #social li #twitter {
 .people .employees .person .img {
   width: 100%;
   height: 110px;
-  background-image: url("/images/person.png");
+  background-image: url("http://pebblecode.com/v2/images/person.png");
   background-position-x: 50%;
   background-position-y: 50%;
   margin-bottom: 7px;
@@ -830,7 +830,7 @@ footer div #social li #twitter {
 .thoughts .blog-post .blog-sidebar .comments {
   color: #fefcf8;
   margin-top: 10px;
-  background-image: url("/images/comment.png");
+  background-image: url("http://pebblecode.com/v2/images/comment.png");
   width: 20px;
   height: 26px;
   padding: 4px 12px 6px;
