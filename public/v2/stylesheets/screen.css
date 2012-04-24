@@ -743,7 +743,7 @@ footer div #social li #google-plus {
 .people .spotlight .img {
   width: 100%;
   height: 264px;
-  background-image: url("/images/person.png");
+  background-image: url("http://pebblecode.com/v2/images/person.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -871,67 +871,66 @@ footer div #social li #google-plus {
 }
 /* line 680, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
 .thoughts #blog-navigation li {
-  float: left;
+  width: 50%;
 }
 /* line 684, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
 .thoughts #blog-navigation .prev {
-  width: 50%;
+  float: left;
 }
 /* line 688, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
 .thoughts #blog-navigation .next {
-  margin-left: 50%;
-  width: 50%;
+  float: right;
   text-align: right;
 }
 
 /* @end */
 /* @group media queries Group */
 @media only screen and (max-width: 650px) {
-  /* line 701, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 700, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   [class*=columns] {
     width: 100%;
     margin-left: 0;
   }
 
-  /* line 705, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 704, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   #wrap #wrap-footer {
     height: 80px;
   }
 
-  /* line 708, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 707, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .row {
     margin-bottom: 22px;
   }
 
-  /* line 711, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 710, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .size3 {
     font-size: 38px;
     line-height: 44px;
   }
 
-  /* line 715, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 714, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .size4 {
     font-size: 38px;
     line-height: 44px;
   }
 
-  /* line 721, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 720, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   header {
     position: relative;
     height: 118px;
   }
-  /* line 725, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 724, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   header nav img {
     float: left;
     padding-top: 37px;
   }
-  /* line 729, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 728, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   header nav ul {
     font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
     line-height: 18px;
     width: 50%;
   }
-  /* line 733, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 732, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   header nav ul li {
     float: left;
     width: 100%;
@@ -939,159 +938,159 @@ footer div #social li #google-plus {
     margin: 5px 0;
   }
 
-  /* line 745, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 744, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .homepage .strapline {
     margin-top: -15px;
   }
-  /* line 748, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 747, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .homepage .slideshow {
     height: 176px;
   }
-  /* line 750, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 749, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .homepage .slideshow h1 {
     display: none;
   }
-  /* line 755, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 754, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .homepage .columns2 a {
     margin-bottom: 44px;
   }
-  /* line 758, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 757, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .homepage .columns2 .blog-snipet {
     margin-bottom: -22px;
   }
 
-  /* line 767, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 766, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .work .row:first-child .columns3 {
     margin-top: -25px;
   }
-  /* line 770, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 769, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .work .row:first-child p {
     padding-top: 47px;
   }
-  /* line 774, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 773, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .work .case-study {
     padding-top: 22px;
     margin-bottom: 0;
   }
-  /* line 778, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 777, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .work .frame {
     margin-bottom: 22px;
   }
-  /* line 781, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 780, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .work h3 {
     font-size: 16px;
     line-height: 22px;
   }
 
-  /* line 790, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 789, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .products .row:first-child .columns6 {
     margin-top: -25px;
   }
-  /* line 795, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 794, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .products .row:nth-child(2) {
     margin-bottom: 0;
   }
-  /* line 799, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 798, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .products .frame {
     margin-bottom: 22px;
   }
-  /* line 802, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 801, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .products h2 {
     margin-top: 22px;
     margin-bottom: 22px;
   }
-  /* line 806, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 805, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .products hr {
     margin-bottom: 22px;
   }
-  /* line 810, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 809, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .products .open-source p {
     margin-top: 22px;
   }
 
-  /* line 819, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 818, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .people-img .columns6 {
     margin-top: -15px;
   }
-  /* line 821, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 820, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .people-img .columns6 .img {
     height: 176px;
   }
-  /* line 826, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 825, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .people-copy {
     margin-bottom: 0;
   }
-  /* line 830, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 829, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .spotlight .row:first-child {
     margin-bottom: 22px;
   }
-  /* line 833, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 832, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .spotlight hr {
     margin-bottom: 22px;
   }
-  /* line 836, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 835, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .spotlight .img {
     width: 100%;
     height: 264px;
     background: #a4ce4e url("http://pebblecode.com/v2/images/person.png") no-repeat 50% 50%;
   }
-  /* line 841, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 840, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .spotlight h2 {
     margin-top: 22px;
     margin-bottom: 22px;
   }
-  /* line 845, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 844, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .spotlight h3 {
     margin-bottom: 22px;
     font-size: 16px;
     line-height: 22px;
   }
-  /* line 850, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 849, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .spotlight .link {
     margin-bottom: 0;
   }
-  /* line 852, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 851, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .spotlight .link a {
     color: #a4ce4e;
   }
-  /* line 859, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 858, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .employees .row:nth-child(3) {
     margin-bottom: 0;
   }
-  /* line 862, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 861, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .employees .person {
     width: 47.5%;
     margin-left: 5%;
     float: left;
     margin-bottom: 22px;
   }
-  /* line 867, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 866, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .employees .person:nth-child(odd) {
     margin-left: 0;
   }
-  /* line 870, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 869, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .people .employees .person p {
     margin-bottom: -5px;
   }
 
-  /* line 879, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 878, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .thoughts #thoughts-heading {
     margin-top: -15px;
   }
-  /* line 882, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 881, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .thoughts hr {
     margin-bottom: 22px;
   }
-  /* line 885, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 884, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .thoughts .blog-post {
     margin-bottom: 66px;
   }
-  /* line 887, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 886, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .thoughts .blog-post .img {
     background: #faad40;
     height: 176px;
   }
-  /* line 892, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+  /* line 891, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .thoughts .blog-sidebar {
     display: none;
   }
