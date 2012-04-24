@@ -592,6 +592,11 @@ footer{
   hr{
     margin-bottom: $baseline*2;
   }
+  ol, ul {
+    margin-bottom: 1.5em;
+    list-style: disc;
+    margin-left: 1.5em;
+  }
   .blog-post{
     .img{
       width: 100%;
