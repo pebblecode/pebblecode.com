@@ -44,17 +44,6 @@ pre {
   }
 }
 
-/* @group media queries Group */
-
-@media only screen and (max-device-width: 480px) {
-  [class*=columns]{
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-/* @end */
-
 /* @group typography */
 
 h1,h2,h3,h4,h5,h6,h7,h8{
@@ -327,6 +316,10 @@ footer{
 
         #twitter{
           background-position-x: 20px;
+        }
+        
+        #google-plus{
+          background-position-x: 40px;
         }
       }
     }
