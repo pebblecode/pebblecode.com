@@ -62,6 +62,14 @@
         <p>Let’s frame where we are coming from - pebble {code} is a software company with (much) less than £50M turnover and less than £300K profit…</p>
         <p>What does this mean for us?</p>
         <p>Well, for now, Corporation Tax will remain at 20% - fine. However, if you are a business with greater than £300K profit, you are down to 24%, from 26% - good.</p>
+<pre><code>task "campfire:stats" => :environment do
+  campfire = "Something"
+  room = campfire.find_room_by_id([YOUR_ROOM_ID])
+  # Get the data you want with ActiveRecord
+  users = User.count
+  room.speak "OHAI! Stats from YOUR APP"
+end
+</code></pre>
         <p>There is good news for us software developers if we have patents - Patent Box says that profits made from patents will only be charged at 10% Corporation Tax - good.</p>
 <pre><code>task "campfire:stats" => :environment do
   campfire = Tinder::Campfire.new '[YOUR_ACCOUNT_NAME]', :token => '[YOUR_TOKEN]'
