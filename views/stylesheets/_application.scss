@@ -678,16 +678,15 @@ footer{
     margin: 60px 0 0 0;
 
     li {
-      float: left;
+      width: 50%;
     }
 
     .prev {
-      width: 50%;
+      float: left;
     }
 
     .next {
-      margin-left: 50%;
-      width: 50%;
+      float: right;
       text-align: right;
     }
   }
@@ -836,7 +835,7 @@ header{
     .img{
       width: 100%;
       height: $baseline*12;
-      background: $green url('../images/person.png') no-repeat 50% 50%;    
+      background: $green url('/images/person.png') no-repeat 50% 50%;    
     }
     h2{
       margin-top: $baseline;
