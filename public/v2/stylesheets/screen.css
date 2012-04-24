@@ -834,13 +834,14 @@ footer div #social li #twitter {
 .thoughts .blog-post .blog-sidebar .tags a:last-child:after {
   content: "";
 }
-/* line 621, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
-.thoughts .blog-post .blog-sidebar .comments {
+/* line 622, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
+.thoughts .blog-post .blog-sidebar .comments a {
   color: #fefcf8;
-  margin-top: 10px;
-  background-image: url("http://pebblecode.com/v2/images/comment.png");
+  display: block;
+  background-image: url("http://pebblecode.com/v2/mages/comment.png");
   width: 20px;
   height: 26px;
+  margin-top: 10px;
   padding: 4px 12px 6px;
   display: inline-block;
   font-weight: bold;
