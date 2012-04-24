@@ -619,7 +619,7 @@ footer{
 
 /* @group media queries Group */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 650px) {
 
 [class*=columns]{
   width: 100%;
@@ -714,8 +714,13 @@ header{
       margin-top: -25px;
     }
   }
+  
   .row:nth-child(2){
     margin-bottom: 0;
+  }
+  
+  .frame{
+    margin-bottom: $baseline;
   }
   h2{
     margin-top: $baseline;
@@ -801,10 +806,14 @@ header{
     margin-bottom: $baseline;
   }
   .blog-post{
+    margin-bottom: $baseline*3;
     .img{
       background: $orange;
       height: $baseline*8;
     }
+  }
+  .blog-sidebar{
+    display: none;
   }
 }
 
