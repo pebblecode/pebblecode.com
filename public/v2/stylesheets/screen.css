@@ -846,6 +846,7 @@ footer div #social li #twitter {
   display: inline-block;
   font-weight: bold;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 /* @end */
