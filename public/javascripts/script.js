@@ -46,7 +46,7 @@ var width = $(window).width();
   colors.sort( randOrd );
   $('.blog-post').each(function(i, val) {
     $("h2, h3, a",this).addClass(colors[i]);
-    $(".img, .comments",this).addClass(colors[i]+"-background");
+    $(".img, .comments a",this).addClass(colors[i]+"-background");
     $(".blog-content",this).addClass(colors[i]+"-border");
   });
   

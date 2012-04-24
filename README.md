@@ -27,23 +27,29 @@ To autoload the site, this app uses [shotgun][2], but this is wrapped around the
 
 The files you'll be most concerned with are the view files (under /views) and the stylesheet files (under /views/stylesheets).
 
-The view files are written in [haml][3] and the stylesheets are written in [scss][4]. 
+The view files are written in [haml][3] and the stylesheets are written in [scss][4].
 
 ## Tests
 
 Todo
 
-## Hosting
+## Deployment
 
-The site is hosted on [Heroku][5].
+The site is hosted on [Heroku][5], and deployment is wrapped around a rake task.
 
-To add heroku to your local git
+### Prerequisites
 
-    git remote add heroku git@heroku.com:pebblecode.git
+Set up production deployment with
+
+    git remote add production git@heroku.com:pebblecode.git
+
+### Ship it!
 
 To deploy to production
 
-    git push heroku production:master
+    git shipit:production
+
+This merges the master branch to the production branch, pushes to origin, deploys to production, and checkouts out the master branch.
 
 [1]: http://www.sinatrarb.com/
 [2]: http://github.com/rtomayko/shotgun/

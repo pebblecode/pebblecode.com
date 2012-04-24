@@ -18,14 +18,19 @@
 
   <link rel="icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
 
+  <link rel="stylesheet" href="http://pebblecode.com/v2/stylesheets/screen.css" type="text/css" />
+  <link rel="stylesheet" title="Default" href="http://pebblecode.com/highlight/styles/default.css">
+  <link rel="stylesheet" href="http://pebblecode.com/v2/fonts/meta.css" type="text/css" />
+  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="http://pebblecode.com/v2/javascripts/script.js" type="text/javascript"></script>
   <script src="http://pebblecode.com/v2/javascripts/slides.min.jquery.js" type="text/javascript"></script>
-
-  <link rel="stylesheet" href="http://pebblecode.com/v2/stylesheets/screen.css" type="text/css" />
-  <link rel="stylesheet" href="http://pebblecode.com/v2/fonts/meta.css" type="text/css" />
-  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-  </head>
+  <script src="http://pebblecode.com/v2/highlight/highlight.pack.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
 <body class="thoughts">
 
   <header class="background-random">
@@ -42,7 +47,7 @@
   </header>
 
   <div id="wrap">
-    <!-- <section id="staging-message" style="position:absolute;top:0; width: 100%; background-color: yellow; color: black; height: 25px; z-index: 2000; left: 0; text-align: center; font-size: 15px; line-height: 25px">This is pebble { code } staging (For the real site go to <a href="http://pebblecode.com/">pebblecode.com)</a></section> -->
+    <section id="staging-message" style="position:absolute;top:0; width: 100%; background-color: yellow; color: black; height: 25px; z-index: 2000; left: 0; text-align: center; font-size: 15px; line-height: 25px">This is pebble { code } staging (For the real site go to <a href="http://pebblecode.com/">pebblecode.com)</a></section>
 
     <div class="row">
       <div class="columns6"  id="thoughts-heading">
@@ -68,6 +73,22 @@
             {Body}
           </article>
 
+          <aside class="columns2 blog-sidebar">
+            <h3 class="size2">{PostAuthorName}</h3>
+            {block:Date}
+              <p class="size0">{DayOfMonth}{DayOfMonthSuffix} {Month}</p>
+              <p class="size0">{Year}</p>
+            {/block:Date}
+            {block:HasTags}
+              <div class="tags">
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+              </div>
+            {/block:HasTags}
+            <div class="comments"><a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></div>
+          </aside>
+
           {block:IfDisqusShortname}
             {block:Permalink}
               <section class="share-this-wrapper">
@@ -81,36 +102,6 @@
               </section>
             {/block:Permalink}
           {/block:IfDisqusShortname}
-
-          <aside class="columns2 blog-sidebar">
-            <h3 class="size2">{PostAuthorName}</h3>
-
-            {block:Date}
-              <li class="published-date"><span class="date-month">{DayOfMonth}{DayOfMonthSuffix} {Month}</span><span class="year">{Year}</span></li>
-            {/block:Date}
-            {block:HasTags}
-              <li class="tags">tags<br/>
-                <ul>
-                  {block:Tags}
-                    <li><a href="{TagURL}">{Tag}</a></li>
-                  {/block:Tags}
-                </ul>
-              </li>
-            {/block:HasTags}
-
-            {block:Date}
-              <p class="size0">{DayOfMonth}{DayOfMonthSuffix} {Month}</p>
-              <p class="size0">{Year}</p>
-            {/block:Date}
-            {block:HasTags}
-              <div class="tags">
-                {block:Tags}
-                  <a href="{TagURL}">{Tag}</a>
-                {/block:Tags}
-              </div>
-            {/block:HasTags}
-            <span class="comments">23</span>
-          </aside>
         </section>
       {/block:Text}
     {/block:Posts}

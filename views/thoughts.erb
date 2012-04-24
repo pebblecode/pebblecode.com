@@ -13,17 +13,24 @@
   <link rel="shortcut icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <meta name="description" content="{MetaDescription}" />
+  <meta name="if:Show notes" content="1">
+  <meta name="text:Disqus Shortname" content="" />
 
   <link rel="icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
 
+  <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" />
+  <link rel="stylesheet" title="Default" href="http://pebblecode.com/highlight/styles/default.css">
+  <link rel="stylesheet" href="http://pebblecode.com/v2/fonts/meta.css" type="text/css" />
+  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="/javascripts/script.js" type="text/javascript"></script>
-  <script src="/javascripts/slides.min.jquery.js" type="text/javascript"></script>
-
-  <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" />
-  <link rel="stylesheet" href="/fonts/meta.css" type="text/css" />
-  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-  </head>
+  <script src="http://pebblecode.com/v2/javascripts/slides.min.jquery.js" type="text/javascript"></script>
+  <script src="http://pebblecode.com/v2/highlight/highlight.pack.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
 <body class="thoughts">
 
   <header class="background-random">
@@ -56,6 +63,16 @@
         <p>What does this mean for us?</p>
         <p>Well, for now, Corporation Tax will remain at 20% - fine. However, if you are a business with greater than £300K profit, you are down to 24%, from 26% - good.</p>
         <p>There is good news for us software developers if we have patents - Patent Box says that profits made from patents will only be charged at 10% Corporation Tax - good.</p>
+<pre><code>task "campfire:stats" => :environment do
+  campfire = Tinder::Campfire.new '[YOUR_ACCOUNT_NAME]', :token => '[YOUR_TOKEN]'
+  room = campfire.find_room_by_id([YOUR_ROOM_ID])
+  # Get the data you want with ActiveRecord
+  users = User.count
+  room.speak "OHAI! Stats from YOUR APP"
+  room.paste "Users: #{users}"
+  room.paste "Users: #{users}"room.paste "Users: #{users}"room.paste "Users: #{users}"room.paste "Users: #{users}"
+end
+</code></pre>
         <p>No reduction in business rates - bad. Instead they will go ahead with a rise to 5.6% - grr. There is also no reduction on fuel tax - not a biggy for us, but still - bad.</p>
         <a href="http://">Continue reading...</a>
       </article>
@@ -64,9 +81,9 @@
         <p class="size0">24rd March</p>
         <p class="size0">2012</p>
         <div class="tags">
-          <a href="http://">small buisness,</a><a href="http://">budget,</a><a href="http://">startup</a>
+          <a href="http://">small buisness</a><a href="http://">budget</a><a href="http://">startup</a>
         </div>
-        <span class="comments">23</span>
+        <div class="comments"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">23</a></div>
       </aside>
     </section>
 
@@ -87,9 +104,9 @@
         <p class="size0">12th april</p>
         <p class="size0">2012</p>
         <div class="tags">
-          <a href="http://">design,</a><a href="http://">illustrator,</a><a href="http://">blending</a>
+          <a href="http://">design</a><a href="http://">illustrator</a><a href="http://">blending</a>
         </div>
-        <span class="comments">23</span>
+        <span class="comments"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">23</a></span>
       </aside>
     </section>
 
