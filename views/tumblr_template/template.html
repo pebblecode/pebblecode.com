@@ -80,11 +80,11 @@
               <p class="size0">{Year}</p>
             {/block:Date}
             {block:HasTags}
-              <div class="tags">
+              <ul class="tags">
                 {block:Tags}
-                  <a href="{TagURL}">{Tag}</a>
+                  <li><a href="{TagURL}">{Tag}</a></li>
                 {/block:Tags}
-              </div>
+              </ul>
             {/block:HasTags}
             <div class="comments"><a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></div>
           </aside>

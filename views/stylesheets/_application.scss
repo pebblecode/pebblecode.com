@@ -592,12 +592,12 @@ footer{
   hr{
     margin-bottom: $baseline*2;
   }
-  ol, ul {
-    margin-bottom: 1.5em;
-    list-style: disc;
-    margin-left: 1.5em;
-  }
   .blog-post{
+    ol, ul {
+      margin-bottom: 1.5em;
+      list-style: disc;
+      margin-left: 1.5em;
+    }
     .img{
       width: 100%;
       height: $baseline*11;
@@ -620,14 +620,16 @@ footer{
       }
       .tags{
         margin-top: $baseline;
+        list-style: none;
+        margin-left: 0;
         a{
           font-weight: 400;
           display: block;
         }
-        a:after {
+        li a:after {
           content: ",";
         }
-        a:last-child:after {
+        li:last-child a:after {
           content: "";
         }
       }
