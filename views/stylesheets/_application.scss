@@ -522,7 +522,7 @@ footer{
   .people-copy{
     margin-bottom: $baseline*2;
   }
-  .spotlight{
+  #spotlight{
     .row:first-child{
       margin-bottom: $baseline;
     }
@@ -541,9 +541,7 @@ footer{
     .img{
       width: 100%;
       height: $baseline*12;
-      background-image: url('/images/person.png');
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
+      text-align: center;
     }
     h3{
       margin-bottom: $baseline;
@@ -814,7 +812,7 @@ header{
   .people-copy{
     margin-bottom: 0;
   }
-  .spotlight{
+  #spotlight{
     .row:first-child{
       margin-bottom: $baseline;
     }
@@ -824,7 +822,6 @@ header{
     .img{
       width: 100%;
       height: $baseline*12;
-      background: $green url('/images/person.png') no-repeat 50% 50%;    
     }
     h2{
       margin-top: $baseline;

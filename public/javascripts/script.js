@@ -51,7 +51,7 @@ var width = $(window).width();
   });
   
   colors.sort( randOrd );
-  $('.spotlight').each(function(i, val) {
+  $('#spotlight').each(function(i, val) {
     $("h2, h3, a",this).addClass(colors[i]);
     $(".img",this).addClass(colors[i]+"-background");
   });
