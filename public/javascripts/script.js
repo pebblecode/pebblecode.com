@@ -68,5 +68,15 @@ var width = $(window).width();
     $(".img",this).addClass(colors[12]+"-background");
   });
 
+  $('.person').click(function(event) {
+    var clickTarget = event.target;
+    var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
+    $("#spotlight .person-row").removeClass("active");
+    // TODO: show new active person
+
+    console.log(personLink);
+    event.preventDefault();
+  });
+
 });
 

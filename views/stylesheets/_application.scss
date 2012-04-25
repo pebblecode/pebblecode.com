@@ -520,7 +520,7 @@ footer{
     }
   }
   .people-copy{
-    margin-bottom: $baseline*2;
+    margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
   }
   #spotlight{
     .row:first-child{
@@ -543,6 +543,9 @@ footer{
       height: $baseline*12;
       text-align: center;
     }
+    h1 {
+      margin-top: $baseline*2;
+    }
     h3{
       margin-bottom: $baseline;
     }
@@ -552,19 +555,26 @@ footer{
   }
 
   .employees{
-    .row:first-child{
-      margin-bottom: $baseline;
-    }
+    .row:first-child,
     .row:nth-child(3){
       margin-bottom: $baseline;
     }
     hr{
       margin-bottom: $baseline;
     }
+    li:first-child .person,
+    li:nth-child(7) .person {
+      margin-left: 0;
+    }
     .person{
+      display: block;
       margin-bottom: $baseline;
+      margin-left: $column-gutter;
       // Need this for when names go over 2 lines
       min-height: $baseline*10;
+      &:hover {
+        text-decoration: none;
+      }
       .img{
         width: 100%;
         height: $baseline*5;
