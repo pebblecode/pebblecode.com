@@ -3,13 +3,28 @@
 	background-color: red;
 }
 
+.comments-wrapper #dsq-sort-select {
+  display: none;
+}
+
 .comments-wrapper .dsq-comment-body {
 }
 
 .comments-wrapper .dsq-textarea-reply {
+  background: red;
 }
 
 .comments-wrapper .dsq-textarea .dsq-textarea-background {
+  background: white;
+  border: 1px solid #ccc;
+  
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  
+  -webkit-box-shadow: #f6f4ee 3px 3px 0;
+  -moz-box-shadow: #f6f4ee 3px 3px 0;
+  box-shadow: #f6f4ee 3px 3px 0;
 }
 
 .comments-wrapper .dsq-post-tools .dsq-post-as .dsq-button {
@@ -19,4 +34,8 @@
 }
 
 .comments-wrapper .dsq-comment-header {
+  background:none;
+  padding:0;
+  border:none;
+  line-height:1.2;
 }
