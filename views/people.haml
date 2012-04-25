@@ -122,5 +122,7 @@
     - people.shuffle.each do |p|
       %li.columns1.frame.person
         .img
+          / Height is same as .img height
+          %img{:src => p[:image], :height => 110}/
         %h4= p[:name]
         %p.size0= p[:title]
