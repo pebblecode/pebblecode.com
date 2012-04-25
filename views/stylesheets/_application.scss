@@ -559,7 +559,8 @@ footer{
     }
     .person{
       margin-bottom: $baseline;
-
+      // Need this for when names go over 2 lines
+      min-height: $baseline*10;
       .img{
         width: 100%;
         height: $baseline*5;
@@ -568,8 +569,12 @@ footer{
         background-position-y: 50%;
         margin-bottom: 7px;
       }
+      h4 {
+        // font-size: 14px;
+      }
       p{
         margin-bottom: -5px;
+        // font-size: 12px;
       }
     }
   }
