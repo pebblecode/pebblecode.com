@@ -47,7 +47,7 @@ Set up production deployment with
 
 To deploy to production
 
-    git shipit:production
+    rake shipit:production
 
 This merges the master branch to the production branch, pushes to origin, deploys to production, and checkouts out the master branch.
 
