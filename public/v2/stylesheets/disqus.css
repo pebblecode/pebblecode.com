@@ -1,6 +1,5 @@
 /* Disqus styles for tumblr */
 .comments-wrapper #dsq-content h3 {
-	background-color: red;
 }
 
 .comments-wrapper #dsq-sort-select {
@@ -31,11 +30,19 @@
 }
 
 .comments-wrapper #dsq-content .dsq-comment-text {
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .comments-wrapper .dsq-comment-header {
   background:none;
   padding:0;
   border:none;
-  line-height:1.2;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.comments-wrapper .dsq-commenter-name {
+  line-height: 34px;
+  font-size: 16px;
 }
