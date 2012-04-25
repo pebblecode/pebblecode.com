@@ -82,19 +82,23 @@
       %h1.size2
         in the spotlight
   %hr.background-random/
-  %section.row
-    .columns2.frame
-      .img
-    %article.columns4
-      %h2.size3 First / Last (name)
-      %h3.size2 The boss (job title)
-      %p A little bit about this guy. consectetur adipiscing elit. Quisque viverra dictum hendrerit. Ut ac nunc eget justo blandit elementum nec sed dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed veliblandit id, semper sit amet est. Suspendisse lobortis metus sed
-      %p.link
-        twitter:
-        %a{:href => "http://"} twitter link
-      %p.link
-        github:
-        %a{:href => "http://"} github link
+  - random_index = rand(people.length)
+  - people.each_with_index do |p, index|
+    %section{:class => "row person-row #{"active" if random_index == index}"} 
+      .columns2.frame
+        .img
+      %article.columns4
+        %h2.size3= p[:name]
+        %h3.size2= p[:title]
+        %p= p[:description]
+        - if p[:twitter]
+          %p.link
+            twitter:
+            %a{:href => p[:twitter]}= p[:twitter]
+        - if p[:github]
+          %p.link
+            github:
+            %a{:href => p[:github]}= p[:github]
 .employees
   .row
     .columns6
