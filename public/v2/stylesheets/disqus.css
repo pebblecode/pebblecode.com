@@ -60,14 +60,14 @@
   font-size: 16px;
 }
 
-.comments-wrapper .dsq-avatar{
-  left: 10px;
-  top: 10px;
-}
-
 .comments-wrapper .dsq-reply .dsq-avatar{
   left: 0;
   top: 46px;
+}
+
+.comments-wrapper .dsq-avatar{
+  left: 10px;
+  top: 10px;
 }
 
 .comments-wrapper .dsq-media-embed h4{
@@ -94,7 +94,7 @@
   opacity: 1;
 }
 
-.dsq-button{
+.dsq-post-tools .dsq-post-as .dsq-button{
   background: none;
   border: none; 
   
