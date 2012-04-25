@@ -2,7 +2,7 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}
-      %title HOMEPAGE -- pebblecode.com html template
+      %title= "#{@page_name.upcase} -- pebblecode.com"
       %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "http://pebblecode.com/images/favicon.ico"}/
 
       %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
@@ -11,7 +11,6 @@
       %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
       %script{:src => "/javascripts/script.js", :type => "text/javascript"}
       %script{:src => "/javascripts/lib/slides.min.jquery.js", :type => "text/javascript"}
-      
 
       %meta{:content => "width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
   %body{:class => @page_name}
@@ -20,22 +19,12 @@
         %a{:href => "/"}
           %img{:alt => "pebble{code} logo", :src => "/images/logo.png"}/
         %ul
-          %li
-            %span {
-            %a{:href => "/people"} our people
-            %span }
-          %li
-            %span {
-            %a{:href => "/work"} our work
-            %span }
-          %li
-            %span {
-            %a{:href => "/products"} our products
-            %span }
-          %li
-            %span {
-            %a{:href => "/thoughts"} our thoughts
-            %span }
+          - nav_names = ["people", "work", "products", "thoughts"]
+          - nav_names.each do |nav_name|
+            %li{:class => "#{"nav-active" if @page_name == nav_name}"}
+              = surround "<span>{</span>", "<span>}</span>" do
+                %a{:href => "/#{nav_name}"}= "our #{nav_name}"
+
     #wrap
       = yield
       #wrap-footer
