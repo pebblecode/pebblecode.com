@@ -1,22 +1,22 @@
 /* Disqus styles for tumblr */
-#dsq-content h3 {
+.comments-wrapper #dsq-content h3 {
 	background-color: blue;
 }
 
-.dsq-comment-body {
+.comments-wrapper .dsq-comment-body {
 }
 
-.dsq-textarea-reply {
+.comments-wrapper .dsq-textarea-reply {
 }
 
-.dsq-textarea .dsq-textarea-background {
+.comments-wrapper .dsq-textarea .dsq-textarea-background {
 }
 
-.dsq-post-tools .dsq-post-as .dsq-button {
+.comments-wrapper .dsq-post-tools .dsq-post-as .dsq-button {
 }
 
-#dsq-content .dsq-comment-text {
+.comments-wrapper #dsq-content .dsq-comment-text {
 }
 
-.dsq-comment-header {
+.comments-wrapper .dsq-comment-header {
 }
