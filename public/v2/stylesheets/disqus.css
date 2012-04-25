@@ -7,23 +7,23 @@
 }
 
 .comments-wrapper .dsq-comment-body {
+  padding: 15px;
 }
 
 .comments-wrapper .dsq-textarea-reply {
-  background: red;
 }
 
 .comments-wrapper .dsq-textarea .dsq-textarea-background {
-  background: white;
-  border: 1px solid #ccc;
+  background: #FDFDFC;
+  border: 1px solid #eee;
   
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   
-  -webkit-box-shadow: #f6f4ee 3px 3px 0;
-  -moz-box-shadow: #f6f4ee 3px 3px 0;
-  box-shadow: #f6f4ee 3px 3px 0;
+  -webkit-box-shadow: #FAF8F5 3px 3px 0;
+  -moz-box-shadow: #FAF8F5 3px 3px 0;
+  box-shadow: #FAF8F5 3px 3px 0;
 }
 
 .comments-wrapper .dsq-post-tools .dsq-post-as .dsq-button {
@@ -40,9 +40,38 @@
   border:none;
   line-height: 22px;
   font-size: 16px;
+  margin: 0;
+  padding-left: 46px;
+  margin-bottom: 10px;
 }
 
 .comments-wrapper .dsq-commenter-name {
   line-height: 34px;
   font-size: 16px;
+}
+
+.comments-wrapper .dsq-avatar{
+  left: 10px;
+  top: 10px;
+}
+
+.comments-wrapper .dsq-reply .dsq-avatar{
+  left: 0;
+  top: 46px;
+}
+
+.comments-wrapper .dsq-media-embed h4{
+  margin-bottom: 5px;
+}
+
+.comments-wrapper .dsq-post-tools{
+  background: none;
+  
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
