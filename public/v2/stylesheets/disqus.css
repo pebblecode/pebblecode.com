@@ -65,7 +65,7 @@
   top: 46px;
 }
 
-.comments-wrapper .dsq-avatar{
+.comments-wrapper .dsq-comment .dsq-avatar{
   left: 10px;
   top: 10px;
 }
@@ -94,15 +94,19 @@
   opacity: 1;
 }
 
-.dsq-post-tools .dsq-post-as .dsq-button{
-  background: none;
-  border: none; 
+.dsq-textarea-background .dsq-post-tools .dsq-post-as .dsq-button{
+  background: none !important;
+  border: none !important; 
   
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
   
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body form textarea{
+  color: red;
 }
