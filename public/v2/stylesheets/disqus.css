@@ -8,6 +8,16 @@
 
 .comments-wrapper .dsq-comment-body {
   padding: 15px;
+  background: #FDFDFC;
+  border: 1px solid #eee;
+  
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  
+  -webkit-box-shadow: #FAF8F5 3px 3px 0;
+  -moz-box-shadow: #FAF8F5 3px 3px 0;
+  box-shadow: #FAF8F5 3px 3px 0;
 }
 
 .comments-wrapper .dsq-textarea-reply {
@@ -66,6 +76,27 @@
 
 .comments-wrapper .dsq-post-tools{
   background: none;
+  
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.dsq-like-thread, .dsq-dislike-thread, .dsq-global-toolbar-right{
+  opacity: 0.3;
+}
+
+.dsq-like-thread:hover, .dsq-dislike-thread:hover, .dsq-global-toolbar-right:hover{
+  opacity: 1;
+}
+
+.dsq-button{
+  background: none;
+  border: none; 
   
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
