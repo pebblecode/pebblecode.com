@@ -46,6 +46,8 @@ Set up deployment branches with
 
 ### Push to staging
 
+The staging site is at http://pebblecode-staging.herokuapp.com/. It requires authentication with username `pebblecode`, and password `pebblecode`.
+
 To deploy master branch to staging
 
 	rake shipit:production
