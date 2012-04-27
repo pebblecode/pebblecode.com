@@ -48,28 +48,29 @@ $(document).ready(function() {
   }
 
   randColors('.background-random', function(obj, randColor) {
-    $(obj).addClass(randArrayItem(COLORS)+"-background");
+    $(obj).addClass(randColor + "-background");
   });
 
   randColors('.case-study', function(obj, randColor) {
     $("h2, h3", obj).addClass(randColor);
-    $("hr, .img", obj).addClass(randColor+"-background");
+    $("hr, .img", obj).addClass(randColor + "-background");
   });
 
   randColors('.blog-post', function(obj, randColor) {
     $("h2, h3, a", obj).addClass(randColor);
-    $(".img, .comments a", obj).addClass(randColor+"-background");
-    $(".blog-content", obj).addClass(randColor+"-border");
-  });
-
-  randColors('#spotlight', function(obj, randColor) {
-    $("h2, h3, a", obj).addClass(randColor);
-    $(".img", obj).addClass(randColor+"-background");
+    $(".img, .comments a", obj).addClass(randColor + "-background");
+    $(".blog-content", obj).addClass(randColor + "-border");
   });
 
   randColors('.person', function(obj, randColor) {
     $("h4",obj).addClass(randColor);
-    $(".img",obj).addClass(randColor+"-background");
+    $(".img",obj).addClass(randColor + "-background");
+
+    // Color spotlight person row the same
+    var personIndex = $(obj).parent().prevAll().length;
+    var spotlightPerson = $("#spotlight .person-row")[personIndex];
+    $(spotlightPerson).find("h2, h3, a").addClass(randColor);
+    $(spotlightPerson).find(".img").addClass(randColor + "-background");
   });
 
   $('.person').click(function(event) {
