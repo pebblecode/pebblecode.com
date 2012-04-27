@@ -330,7 +330,7 @@ footer{
 
 /* @group homepage */
 
-.homepage{
+.page-homepage{
   .strapline{
     margin-top: $baseline*3;
     text-align: center;
@@ -429,7 +429,7 @@ footer{
 
 /* @group work */
 
-.work{
+.page-work{
 
   .row:first-child{
     margin-bottom: $baseline*2;
@@ -462,7 +462,7 @@ footer{
 
 /* @group products */
 
-.products{
+.page-products{
 
   .row:first-child{
     .columns6{
@@ -509,7 +509,7 @@ footer{
 
 /* @group people */
 
-.people{
+.page-people{
   .people-img{
     .columns6{
       margin-top: $baseline*3;
@@ -596,7 +596,7 @@ footer{
 
 /* @group thoughts */
 
-.thoughts{
+.page-thoughts{
   #thoughts-heading{
     margin-top: $baseline*3;
   }
@@ -688,6 +688,18 @@ footer{
   }
 }
 /* @end */
+
+.page-404{
+  .row{
+    margin-top: $baseline*3;
+  }
+  .error-header{
+    text-align: center;
+  }
+  .error-copy{
+    margin-top: $baseline*2;
+  }
+}
 
 /* @group media queries Group */
 

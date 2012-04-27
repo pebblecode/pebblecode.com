@@ -14,7 +14,7 @@
       %script{:src => "/javascripts/lib/slides.min.jquery.js", :type => "text/javascript"}
 
       %meta{:content => "width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
-  %body{:class => @page_name}
+  %body{:class => "page-#{@page_name}"}
     %header.background-random
       %nav
         %a{:href => "/"}
