@@ -9,11 +9,11 @@ $(document).ready(function() {
     });
   }
 
-/*
-* re-order content for mobile
-*/
+  /*
+  * re-order content for mobile
+  */
 
-var width = $(window).width();
+  var width = $(window).width();
 
   if(width < 650) {
     $(".case-study:nth-child(3) .frame").insertAfter(".case-study:nth-child(3) p");
@@ -26,47 +26,50 @@ var width = $(window).width();
   /*
   * random colours
   */
-  function randOrd() {
-    return (Math.round(Math.random())-0.5); 
+
+  function randArrayItem(array) {
+    var randIndex = Math.floor(Math.random() * array.length);
+    return array[randIndex];
   }
-  
-  var colors = [ 'pink', 'green', 'blue', 'orange', 'aqua', 'purple','pink', 'green', 'blue', 'orange', 'aqua', 'purple'];
-  
-  colors.sort( randOrd );
+
+  function randArrayItemExcept(array, exceptItem) {
+    return randArrayItem(_.without(array, exceptItem));
+  }
+
+  var colors = [ 'pink', 'green', 'blue', 'orange', 'aqua', 'purple' ];
+
   $('.background-random').each(function(i, val) {
-    $(this).addClass(colors[i]+"-background");
-  });
-  
-  colors.sort( randOrd );
-  $('.case-study').each(function(i, val) {
-    $("h2, h3",this).addClass(colors[i]);
-    $("hr, .img",this).addClass(colors[i]+"-background");
-  });
-  
-  colors.sort( randOrd );
-  $('.blog-post').each(function(i, val) {
-    $("h2, h3, a",this).addClass(colors[i]);
-    $(".img, .comments a",this).addClass(colors[i]+"-background");
-    $(".blog-content",this).addClass(colors[i]+"-border");
-  });
-  
-  colors.sort( randOrd );
-  $('#spotlight').each(function(i, val) {
-    $("h2, h3, a",this).addClass(colors[i]);
-    $(".img",this).addClass(colors[i]+"-background");
-  });
-  
-  colors.sort( randOrd );
-  $('.person').each(function(i, val) {
-    $("h4",this).addClass(colors[i]);
-    $(".img",this).addClass(colors[i]+"-background");
+    $(this).addClass(randArrayItem(colors)+"-background");
   });
 
-  colors.sort( randOrd );
-  $('.person').each(function(i, val) {
-    $("h4",this).addClass(colors[12]);
-    $(".img",this).addClass(colors[12]+"-background");
+  $('.case-study').each(function(i, val) {
+    var randColor = randArrayItem(colors);
+    $("h2, h3",this).addClass(randColor);
+    $("hr, .img",this).addClass(randColor+"-background");
   });
+
+  $('.blog-post').each(function(i, val) {
+    var randColor = randArrayItem(colors);
+    $("h2, h3, a",this).addClass(randColor);
+    $(".img, .comments a",this).addClass(randColor+"-background");
+    $(".blog-content",this).addClass(randColor+"-border");
+  });
+
+  $('#spotlight').each(function(i, val) {
+    var randColor = randArrayItem(colors);
+    $("h2, h3, a",this).addClass(randColor);
+    $(".img",this).addClass(randColor+"-background");
+  });
+
+  {
+    // Don't show same colors next to each other
+    var lastColor = colors[0];
+    $('.person').each(function(i, val) {
+      $("h4",this).addClass(lastColor);
+      $(".img",this).addClass(lastColor+"-background");
+      lastColor = randArrayItemExcept(colors, lastColor);
+    });
+  }
 
   $('.person').click(function(event) {
     var clickTarget = event.target;
