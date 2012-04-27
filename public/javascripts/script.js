@@ -76,10 +76,10 @@ $(document).ready(function() {
     var clickTarget = event.target;
     var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
     $("#spotlight .person-row").removeClass("active");
-    // TODO: show new active person
 
-    console.log(personLink);
-    event.preventDefault();
+    var personIndex = $(personLink).parent().prevAll().length;
+    var personRow = $("#spotlight .person-row")[personIndex];
+    $(personRow).addClass("active");
   });
 
 });
