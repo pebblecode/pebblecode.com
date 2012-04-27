@@ -39,17 +39,47 @@ The site is hosted on [Heroku][5], and deployment is wrapped around a rake task.
 
 ### Prerequisites
 
-Set up production deployment with
+Set up deployment branches with
 
+		git remote add staging git@heroku.com:pebblecode-staging.git
     git remote add production git@heroku.com:pebblecode.git
+
+### Push to staging
+
+To deploy master branch to staging
+
+	rake shipit:production
+
+To manually deploy an arbitrary branch eg, `version-2` branch
+
+  git checkout version-2
+  git checkout staging
+  git merge version-2
+  git push origin staging:staging
+  git push staging version-2:master
+  git checkout version-2
+
+#### Initial set up
+
+Only needs to be done once
+
+    heroku create pebblecode-staging --stack cedar --remote staging
+    heroku config:add RACK_ENV=staging --app pebblecode-staging
 
 ### Ship it!
 
-To deploy to production
+To deploy master branch to production
 
     rake shipit:production
 
 This merges the master branch to the production branch, pushes to origin, deploys to production, and checkouts out the master branch.
+
+### Maintenance mode
+
+To turn on/off maintenance mode on heroku
+
+    heroku maintenance:on --app [app]
+    heroku maintenance:off --app [app]
 
 [1]: http://www.sinatrarb.com/
 [2]: http://github.com/rtomayko/shotgun/

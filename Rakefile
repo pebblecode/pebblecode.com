@@ -33,6 +33,11 @@ namespace "merge_push_to" do
     end
   end
 
+  desc "Switch to staging branch, merge master branch and switch back to master branch."
+  task :staging do |t, args|
+    Rake::Task["merge_push_to:branch"].invoke("staging")
+  end
+
   desc "Switch to production branch, merge master branch and switch back to master branch."
   task :production do |t, args|
     Rake::Task["merge_push_to:branch"].invoke("production")
@@ -46,6 +51,11 @@ namespace "deploy" do
     args.with_defaults(:branch => "staging")
     deploy_cmd = "git push #{args.branch} #{args.branch}:master"
     sh deploy_cmd
+  end
+
+  desc "Deploy staging branch to http://pebblecode-staging.herokuapp.com/"
+  task :staging do
+    Rake::Task["deploy:branch"].invoke("staging")
   end
 
   desc "Deploy production branch to http://pebblecode.com/"
