@@ -6,6 +6,7 @@ require 'sass'
 require 'compass'
 
 helpers Sinatra::Partials
+require_relative 'helpers/init'
 
 set :environment, ENV["RACK_ENV"] || "development"
 set :blog_url, "http://blog.pebblecode.com"
@@ -26,11 +27,15 @@ get '/stylesheets/screen.css' do
 end
 
 get '/' do
+  protected! if settings.environment == "staging"
+
   @page_name = "homepage"
   haml :index, :layout => :'layouts/application'
 end
 
 get '/thoughts' do
+  protected! if settings.environment == "staging"
+
   if settings.environment == "development"
     # Tumblr blog styles
     erb :thoughts
@@ -41,6 +46,8 @@ get '/thoughts' do
 end
 
 get '/:page' do
+  protected! if settings.environment == "staging"
+
   @page_name = params['page']
   haml "#{@page_name}".to_sym, :layout => :'layouts/application'
 end
