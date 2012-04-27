@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'rake'
 gem "sinatra"
+gem 'thin'
 
 # Front end
 gem "haml"
@@ -15,6 +16,5 @@ group :development, :test do
   # Servers
   gem 'shotgun'
   gem 'foreman'
-  gem 'thin'
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
