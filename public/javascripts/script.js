@@ -81,6 +81,9 @@ $(document).ready(function() {
     var personIndex = $(personLink).parent().prevAll().length;
     var personRow = $("#spotlight .person-row")[personIndex];
     $(personRow).addClass("active");
+
+    $.scrollTo( $('#spotlight'), 600);
+    event.preventDefault();
   });
 
 });

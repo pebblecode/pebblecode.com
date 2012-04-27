@@ -10,8 +10,8 @@
 
       %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
       %script{:src => "/javascripts/lib/underscore-min.js", :type => "text/javascript"}
-      %script{:src => "/javascripts/script.js", :type => "text/javascript"}
       %script{:src => "/javascripts/lib/slides.min.jquery.js", :type => "text/javascript"}
+      %script{:src => "/javascripts/lib/jquery.scrollTo-1.4.2-min.js", :type => "text/javascript"}
 
       %meta{:content => "width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
   %body{:class => @page_name}
@@ -45,6 +45,7 @@
             %a#twitter{:href => "http://twitter.com/#!/pebblecode"} twitter
           %li
             %a#google-plus{:href => "https://plus.google.com/113628709817662471448/posts"} G+
+    %script{:src => "/javascripts/script.js", :type => "text/javascript"}
     :plain
       <script type="text/javascript">
         var _gaq = _gaq || [];
