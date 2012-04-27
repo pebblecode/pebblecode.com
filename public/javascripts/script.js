@@ -27,6 +27,17 @@ $(document).ready(function() {
   * random colours
   */
 
+  var COLORS = [ 'pink', 'green', 'blue', 'orange', 'aqua', 'purple' ];
+  var LAST_COLOR = COLORS[0];
+
+  // Find random colors, without having the same colors after another
+  function randColors(elem, funct) {
+    $(elem).each(function(i, val) {
+      funct(this, LAST_COLOR);
+      LAST_COLOR = randArrayItemExcept(COLORS, LAST_COLOR);
+    });
+  }
+
   function randArrayItem(array) {
     var randIndex = Math.floor(Math.random() * array.length);
     return array[randIndex];
@@ -36,40 +47,30 @@ $(document).ready(function() {
     return randArrayItem(_.without(array, exceptItem));
   }
 
-  var colors = [ 'pink', 'green', 'blue', 'orange', 'aqua', 'purple' ];
-
-  $('.background-random').each(function(i, val) {
-    $(this).addClass(randArrayItem(colors)+"-background");
+  randColors('.background-random', function(obj, randColor) {
+    $(obj).addClass(randArrayItem(COLORS)+"-background");
   });
 
-  $('.case-study').each(function(i, val) {
-    var randColor = randArrayItem(colors);
-    $("h2, h3",this).addClass(randColor);
-    $("hr, .img",this).addClass(randColor+"-background");
+  randColors('.case-study', function(obj, randColor) {
+    $("h2, h3", obj).addClass(randColor);
+    $("hr, .img", obj).addClass(randColor+"-background");
   });
 
-  $('.blog-post').each(function(i, val) {
-    var randColor = randArrayItem(colors);
-    $("h2, h3, a",this).addClass(randColor);
-    $(".img, .comments a",this).addClass(randColor+"-background");
-    $(".blog-content",this).addClass(randColor+"-border");
+  randColors('.blog-post', function(obj, randColor) {
+    $("h2, h3, a", obj).addClass(randColor);
+    $(".img, .comments a", obj).addClass(randColor+"-background");
+    $(".blog-content", obj).addClass(randColor+"-border");
   });
 
-  $('#spotlight').each(function(i, val) {
-    var randColor = randArrayItem(colors);
-    $("h2, h3, a",this).addClass(randColor);
-    $(".img",this).addClass(randColor+"-background");
+  randColors('#spotlight', function(obj, randColor) {
+    $("h2, h3, a", obj).addClass(randColor);
+    $(".img", obj).addClass(randColor+"-background");
   });
 
-  {
-    // Don't show same colors next to each other
-    var lastColor = colors[0];
-    $('.person').each(function(i, val) {
-      $("h4",this).addClass(lastColor);
-      $(".img",this).addClass(lastColor+"-background");
-      lastColor = randArrayItemExcept(colors, lastColor);
-    });
-  }
+  randColors('.person', function(obj, randColor) {
+    $("h4",obj).addClass(randColor);
+    $(".img",obj).addClass(randColor+"-background");
+  });
 
   $('.person').click(function(event) {
     var clickTarget = event.target;
