@@ -51,3 +51,8 @@ get '/:page' do
   @page_name = params['page']
   haml "#{@page_name}".to_sym, :layout => :'layouts/application'
 end
+
+error do
+  @page_name = "404"
+  haml "404".to_sym, :layout => :'layouts/application'
+end
