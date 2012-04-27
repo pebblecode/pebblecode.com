@@ -52,14 +52,9 @@ To deploy master branch to staging
 
 	rake shipit:production
 
-To manually deploy an arbitrary branch eg, `version-2` branch
+To manually deploy an arbitrary branch to staging eg, `version-2` branch
 
-  git checkout version-2
-  git checkout staging
-  git merge version-2
-  git push origin staging:staging
-  git push staging version-2:master
-  git checkout version-2
+  rake shipit:temp[version-2,staging]
 
 #### Initial set up
 
