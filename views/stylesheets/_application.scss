@@ -331,7 +331,6 @@ footer{
 /* @group homepage */
 
 .page-homepage{
-  
   .row:first-child{
     margin-top: $baseline*3;
     margin-bottom: $baseline*2;
@@ -765,128 +764,128 @@ header{
 }
 
 
-.homepage{
-  .slideshow{
+.page-homepage {
+  .slideshow {
     margin-top: -15px;
     height: $baseline*8;
-    h1{
+    h1 {
       display: none;
     }
   }
-  .columns2{
-    a{
+  .columns2 {
+    a {
       margin-bottom: $baseline*2;
     }
-    .blog-snipet{
+    .blog-snipet {
       margin-bottom: -$baseline;
     }
   }
 }
 
 
-.work{
-  .row:first-child{
-    .columns3{
+.page-work {
+  .row:first-child {
+    .columns3 {
       margin-top: -25px
     }
-    p{
+    p {
       padding-top: $baseline +25px;
     }
   }
-  .case-study{
+  .case-study {
     padding-top: $baseline;
     margin-bottom: 0;
   }
-  .frame{
+  .frame {
     margin-bottom: $baseline;
   }
-  h3{
+  h3 {
     font-size: 16px;
     line-height: $baseline;
   }
 }
 
 
-.products{
-  .row:first-child{
+.page-products {
+  .row:first-child {
     .columns6{
       margin-top: -25px;
     }
   }
-  
-  .row:nth-child(2){
+
+  .row:nth-child(2) {
     margin-bottom: 0;
   }
-  
-  .frame{
+
+  .frame {
     margin-bottom: $baseline;
   }
-  h2{
+  h2 {
     margin-top: $baseline;
     margin-bottom: $baseline;
   }
-  hr{
+  hr {
     margin-bottom: $baseline;
   }
-  .open-source{
+  .open-source {
     p{
       margin-top: $baseline;
     }
   }
 }
 
-.people{
-  .people-img{
-    .columns6{
+.page-people {
+  .people-img {
+    .columns6 {
       margin-top: -15px;
       .img{
         height: $baseline*8;
       }
     }
   }
-  .people-copy{
+  .people-copy {
     margin-bottom: 0;
   }
-  #spotlight{
-    .row:first-child{
+  #spotlight {
+    .row:first-child {
       margin-bottom: $baseline;
     }
-    hr{
+    hr {
       margin-bottom: $baseline;
     }
-    .img{
+    .img {
       width: 100%;
       height: $baseline*12;
     }
-    h2{
+    h2 {
       margin-top: $baseline;
       margin-bottom: $baseline;
     }
-    h3{
+    h3 {
       margin-bottom: $baseline;
       font-size: 16px;
       line-height: $baseline;
     }
-    .link{
+    .link {
       margin-bottom: 0;
       a{
         color: $green;
       }
     }
   }
-  
-  .employees{
-  .row:nth-child(3){
-    margin-bottom: 0;
-  }
-    .person{
+
+  .employees {
+    .row:nth-child(3) {
+      margin-bottom: 0;
+    }
+    .person {
         width: 47.5%;
         margin-left: 5%;
         float: left;
         margin-bottom: $baseline;
-        &:nth-child(odd){
+        &:nth-child(odd) {
           margin-left: 0;
-        } 
+        }
       p{
         margin-bottom: -5px;
       }
@@ -895,21 +894,21 @@ header{
 }
 
 
-.thoughts{
-  #thoughts-heading{
+.page-thoughts {
+  #thoughts-heading {
     margin-top: -15px;
   }
-  hr{
+  hr {
     margin-bottom: $baseline;
   }
-  .blog-post{
+  .blog-post {
     margin-bottom: $baseline*3;
-    .img{
+    .img {
       background: $orange;
       height: $baseline*8;
     }
   }
-  .blog-sidebar{
+  .blog-sidebar {
     display: none;
   }
 }
