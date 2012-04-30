@@ -562,13 +562,16 @@ footer{
     hr{
       margin-bottom: $baseline;
     }
-    li:first-child .person{
-      margin-left: 0;
+
+    // Allow employees rows to have 6 people by default.
+    // Also see media css for max-width: 1130px, where this gets cancelled out.
+    li:nth-child(6) .person{
+      margin-right: 0;
     }
     .person{
       display: block;
       margin-bottom: $baseline;
-      margin-right: $column-gutter;
+      margin-right: 30px;
       // Need this for when names go over 2 lines
       min-height: $baseline*10;
       min-width: 145px;
@@ -702,6 +705,15 @@ footer{
 }
 
 /* @group media queries Group */
+@media only screen and (max-width: 1130px) {
+  .page-people {
+    .employees {
+      li:nth-child(6) .person{
+        margin-right: 30px;
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 650px) {
 
