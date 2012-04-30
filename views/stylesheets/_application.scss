@@ -331,12 +331,9 @@ footer{
 /* @group homepage */
 
 .page-homepage{
-  .strapline{
+  
+  .row:first-child{
     margin-top: $baseline*3;
-    text-align: center;
-  }
-
-  .row:nth-child(2){
     margin-bottom: $baseline*2;
   }
 
@@ -422,12 +419,6 @@ footer{
     h2{
       margin-bottom: $baseline;
     }
-
-    a{
-      margin-top: -$baseline;
-      display: block;
-    }
-
     .blog-snipet{
       margin-bottom: $baseline*2;
     }
@@ -444,8 +435,8 @@ footer{
     .columns3{
       margin-top: $baseline*3;
     }
-    p{
-      padding-top: $baseline*3;
+    p:first-child{
+      padding-top: $baseline;
     }
   }
 
@@ -488,11 +479,17 @@ footer{
       height: $baseline*9;
       background-color: $pink;
     }
+    a{
+      color: $pink;
+    }
   }
 
   .vistazo{
     .img{
       background-color: $blue;
+    }
+    a{
+      color: $blue;
     }
   }
 
@@ -769,10 +766,8 @@ header{
 
 
 .homepage{
-  .strapline{
-    margin-top: -15px;
-  }
   .slideshow{
+    margin-top: -15px;
     height: $baseline*8;
     h1{
       display: none;
