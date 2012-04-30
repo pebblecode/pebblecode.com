@@ -511,7 +511,7 @@ footer div #social li a {
   width: 20px;
   text-indent: 99999px;
   margin: 26px 0 0 5px;
-  background-image: url("http://pebblecode/v2/images/social.png");
+  background-image: url("http://pebblecode.com/v2/images/social.png");
   background-color: #d9d9d9;
 }
 /* line 313, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
@@ -559,7 +559,7 @@ footer div #social li #google-plus {
 }
 /* line 356, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
 .page-homepage .slideshow .slides_container li.slide1 {
-  background: #ee5080 url("http://pebblecode/v2/images/zebra.jpg") no-repeat center 0;
+  background: #ee5080 url("http://pebblecode.com/v2/images/zebra.jpg") no-repeat center 0;
 }
 /* line 358, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
 .page-homepage .slideshow .slides_container li.slide1 h1 {
@@ -873,7 +873,7 @@ footer div #social li #google-plus {
 .page-thoughts .blog-post .blog-sidebar .comments a {
   color: #fefcf8;
   display: block;
-  background-image: url("http://pebblecode/v2/images/comment.png");
+  background-image: url("http://pebblecode.com/v2/images/comment.png");
   width: 20px;
   height: 26px;
   margin-top: 10px;
@@ -990,7 +990,7 @@ footer div #social li #google-plus {
   }
   /* line 776, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .page-homepage .slideshow .slides_container li.slide1 {
-    background: #ee5080 url("http://pebblecode/v2/images/zebra-small.jpg") no-repeat center 110px;
+    background: #ee5080 url("http://pebblecode.com/v2/images/zebra-small.jpg") no-repeat center 110px;
   }
   /* line 783, /Users/ttt/Work/Dev/pebblecode.com/views/stylesheets/_application.scss */
   .page-homepage .columns2 a {
