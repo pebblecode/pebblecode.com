@@ -7,6 +7,15 @@ $(document).ready(function() {
     $(".slideshow").slides({
       play: 5500,
     });
+    // Auto resize slide widths dynamically (so you can center images)
+    adjustSlideWidth();
+    $(window).resize(function() {
+      adjustSlideWidth();
+    });
+    function adjustSlideWidth() {
+      var slidesWidth = $(".slides_container").width();
+      $(".slides_container li").width(slidesWidth);
+    }
   }
 
   /*

@@ -345,34 +345,42 @@ footer{
 
     .slides_container {
       height: $baseline*18;
+
+      // ".slides_container li" width is dynamically adjusted using js (so you can center images)
+      li {
+        height: $baseline*18;
+        width: 100%;
+
+        h1 {
+          color: white;
+          width: 100%;
+          text-align: center;
+          margin-top: $baseline*6;
+        }
+        &.slide1{
+          background: $pink url("/images/zebra.jpg") no-repeat center 0;
+          h1 {
+            color: $green;
+          }
+        }
+        &.slide2{
+          background-color: $green;
+        }
+        &.slide3{
+          background-color: $orange;
+        }
+        &.slide4{
+          background-color: $aqua;
+        }
+        &.slide5{
+          background-color: $purple;
+        }
+        &.slide6{
+          background-color: $blue;
+        }
+      }
     }
 
-    h1{
-      color: white;
-      margin: $baseline*6 9.5%;
-    }
-    .slide1,.slide2,.slide3,.slide4,.slide5,.slide6{
-      height: $baseline*18;
-      width: 100%;
-    }
-    .slide1{
-      background-color: $pink;
-    }
-    .slide2{
-      background-color: $green;
-    }
-    .slide3{
-      background-color: $orange;
-    }
-    .slide4{
-      background-color: $aqua;
-    }
-    .slide5{
-      background-color: $purple;
-    }
-    .slide6{
-      background-color: $blue;
-    }
     .pagination{
       width: 132px;
       margin: $baseline auto;
