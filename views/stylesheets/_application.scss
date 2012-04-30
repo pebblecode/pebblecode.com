@@ -562,16 +562,16 @@ footer{
     hr{
       margin-bottom: $baseline;
     }
-    li:first-child .person,
-    li:nth-child(7) .person {
+    li:first-child .person{
       margin-left: 0;
     }
     .person{
       display: block;
       margin-bottom: $baseline;
-      margin-left: $column-gutter;
+      margin-right: $column-gutter;
       // Need this for when names go over 2 lines
       min-height: $baseline*10;
+      min-width: 145px;
       &:hover {
         text-decoration: none;
       }
