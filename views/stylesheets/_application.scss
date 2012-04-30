@@ -331,12 +331,9 @@ footer{
 /* @group homepage */
 
 .page-homepage{
-  .strapline{
+  
+  .row:first-child{
     margin-top: $baseline*3;
-    text-align: center;
-  }
-
-  .row:nth-child(2){
     margin-bottom: $baseline*2;
   }
 
@@ -749,10 +746,8 @@ header{
 
 
 .homepage{
-  .strapline{
-    margin-top: -15px;
-  }
   .slideshow{
+    margin-top: -15px;
     height: $baseline*8;
     h1{
       display: none;
