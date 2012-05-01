@@ -330,13 +330,13 @@ footer{
 
 /* @group homepage */
 
-.page-homepage{
+.page-homepage {
   .row:first-child{
     margin-top: $baseline*3;
     margin-bottom: $baseline*2;
   }
 
-  .slideshow{
+  .slideshow {
     @include box-sizing(border-box);
 
     .slides_container {
@@ -378,18 +378,21 @@ footer{
     }
 
     .pagination{
-      width: 132px;
+      width: 138px;
       margin: $baseline auto;
-      li a{
+      li {
         float: left;
-        color: transparent;
-        width: 12px;
-        height: 12px;
-        margin-left:10px;
-        border: 6px solid $pink;
+        a {
+          display: block;
+          color: transparent;
+          width: 12px;
+          height: 12px;
+          margin-left:10px;
+          border: 6px solid $pink;
 
-        @include box-sizing(border-box);
-        @include border-radius(10px);
+          @include box-sizing(border-box);
+          @include border-radius(10px);
+        }
       }
 
       .current a{
@@ -710,6 +713,25 @@ footer{
   }
 }
 
+.no-borderradius {
+  .page-homepage .slideshow .pagination {
+    li {
+      a {
+        text-indent: -9999px;
+        height: 5px;
+        width: 5px;
+        border-width: 4px;
+      }
+
+      &.current a{
+        border-width: 2px;
+        height: 9px;
+        width: 9px;
+      }
+    }
+  } // .page-homepage .slideshow .slides_container .pagination
+} // .no-borderradius
+
 /* @group media queries Group */
 @media only screen and (max-width: 1130px) {
   .page-people {
@@ -722,7 +744,6 @@ footer{
 }
 
 @media only screen and (max-width: 650px) {
-
 [class*=columns]{
   width: 100%;
   margin-left: 0;
@@ -918,7 +939,6 @@ header{
     display: none;
   }
 }
-
 } /* media-q end */
 
 /* @end */
