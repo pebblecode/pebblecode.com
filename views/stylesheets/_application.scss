@@ -774,7 +774,7 @@ header{
     .slides_container {
       li {
         &.slide1 {
-          background: $pink url("/images/zebra-small.jpg") no-repeat center $baseline*5;
+          background: $pink url("/images/zebra-small.jpg") no-repeat center;
         }
       }
     }
