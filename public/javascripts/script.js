@@ -3,19 +3,19 @@ $(document).ready(function() {
   * Slideshow using http://slidesjs.com/
   * play = time for each slide
   */
+  function adjustSlideWidth() {
+    var slidesWidth = $(".slides_container").width();
+    $(".slides_container li").width(slidesWidth);
+  }
   if ($(".slideshow").length > 0) {
     $(".slideshow").slides({
-      play: 5500,
+      play: 5500
     });
     // Auto resize slide widths dynamically (so you can center images)
     adjustSlideWidth();
     $(window).resize(function() {
       adjustSlideWidth();
     });
-    function adjustSlideWidth() {
-      var slidesWidth = $(".slides_container").width();
-      $(".slides_container li").width(slidesWidth);
-    }
   }
 
   /*
@@ -99,7 +99,7 @@ $(document).ready(function() {
   * Tumblr blog
   */
   function populateRecentPosts(elemSel) {
-    const MAX_POSTS = 3;
+    var MAX_POSTS = 3;
 
     var tumblrApiUrl = _.template("http://blog.pebblecode.com/api/read/json?num=<%= maxPosts %>&callback=?");
     var tumblrUrl = tumblrApiUrl({ maxPosts: MAX_POSTS });
