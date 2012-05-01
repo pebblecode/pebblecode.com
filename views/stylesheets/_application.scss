@@ -360,10 +360,25 @@ footer{
           }
         }
         &.slide2{
-          background-color: $green;
+          background: $green url("/images/zig-zag.png") no-repeat center 0;
+          h1 {
+            text-align: left;
+            margin-top: $baseline*3;
+            margin-left: 10%;
+          }
+          h2{
+            margin-left: 10%;
+            color: white;
+            width: 50%;
+          }
         }
         &.slide3{
-          background-color: $orange;
+          background: $orange url("/images/zag-zig.png") no-repeat center 0;
+          h1 {
+            text-align: left;
+            margin-top: $baseline*3;
+            margin-left: 10%;
+          }
         }
         &.slide4{
           background-color: $aqua;
