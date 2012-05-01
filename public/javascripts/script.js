@@ -95,5 +95,37 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
+  /*
+  * Tumblr blog
+  */
+  function populateRecentPosts(elemSel) {
+    const MAX_POSTS = 3;
+
+    var tumblrApiUrl = _.template("http://blog.pebblecode.com/api/read/json?num=<%= maxPosts %>&callback=?");
+    tumblrApiUrl({ maxPosts: MAX_POSTS });
+
+    var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
+    $.getJSON(tumblrApiUrl({ maxPosts: MAX_POSTS }), function(response) {
+      var tumblr_api_read = response || null;
+      if (tumblr_api_read != null) {
+        var recentPostsHtml = "<h2 class='size2'>Recent blog posts</h2><ul>";
+        for (var i = 0; i < MAX_POSTS; i++) {
+          var url = tumblr_api_read.posts[i].url;
+          var title = tumblr_api_read.posts[i]["regular-title"];
+
+          // Trim body
+          // body = $('<div></div>');
+          // body.html(tumblr_api_read.posts[i]["regular-body"]);
+          // text = body.text();
+          // body = "<p>" + text.substring(0, 128) + "</p>";
+
+          recentPostsHtml += recentPost({ url: url, title: title });
+        }
+        recentPostsHtml += "</ul>";
+        $(elemSel).append(recentPostsHtml);
+      }
+    });
+  }
+  populateRecentPosts("#recent-posts");
 });
 

@@ -414,12 +414,14 @@ footer{
     }
   }
 
-  .columns2{
-    h2{
-      margin-bottom: $baseline;
-    }
-    .blog-snipet{
-      margin-bottom: $baseline*2;
+  #recent-posts {
+    ul {
+      list-style: disc;
+      margin-left: 1.5em;
+
+      li {
+
+      }
     }
   }
 }
@@ -783,7 +785,7 @@ header{
     a {
       margin-bottom: $baseline*2;
     }
-    .blog-snipet {
+    .blog-snippet {
 
     }
   }
