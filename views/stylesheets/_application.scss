@@ -730,6 +730,15 @@ footer{
 
 // Mainly used to fix IE bugs
 .no-borderradius {
+  .columns2 {
+    width: $column-width*2 + $column-gutter - 3%;
+  }
+  .columns3 {
+    width: $column-width*3 + $column-gutter*2 - 3%;
+  }
+  .columns4 {
+    width: $column-width*4 + $column-gutter*3 - 3%;
+  }
   .page-people {
     .employees {
       .columns1 {
@@ -760,12 +769,6 @@ footer{
 
   #recent-posts {
     width: 31%;
-  }
-  .columns3 {
-    width: $column-width*3 + $column-gutter*2 - 0.1%;
-  }
-  .columns4 {
-    width: $column-width*4 + $column-gutter*3 - 3%;
   }
 } // .no-borderradius
 
