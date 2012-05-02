@@ -268,7 +268,7 @@ footer{
   overflow: hidden;
   clear: both;
   position: relative;
-  height: $baseline*3;
+  height: 80px;
 
   div{
     width: 100%;
@@ -279,6 +279,12 @@ footer{
       margin-top: 16px;
       margin-left: 12px;
       float: left;
+
+      .address{
+        a{
+          margin-left: 14px;
+        }
+      }
 
       li.size0{
         color: hsl(0, 0%, 70%);
@@ -306,7 +312,7 @@ footer{
           height: 20px;
           width: 20px;
           text-indent: 99999px;
-          margin: 26px 0 0 5px;
+          margin: 32px 0 0 5px;
           background-image: url('/images/social.png');
           background-color: hsl(0, 0%, 85%);
 
@@ -347,47 +353,31 @@ footer{
         height: $baseline*18;
         width: 100%;
 
-        h1 {
+        h1, h2{
           color: white;
-          width: 100%;
-          text-align: center;
-          margin-top: $baseline*6;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        h1{
+          margin-top: $baseline;
         }
         &.slide1{
-          background: $pink url("/images/zebra.jpg") no-repeat center 0;
-          h1 {
-            color: $green;
-          }
+          background: $pink url("/images/zig-zag-6.gif") no-repeat center 0;
         }
         &.slide2{
-          background: $green url("/images/zig-zag.png") no-repeat center 0;
-          h1 {
-            text-align: left;
-            margin-top: $baseline*3;
-            margin-left: 10%;
-          }
-          h2{
-            margin-left: 10%;
-            color: white;
-            width: 50%;
-          }
+          background: $green url("/images/zig-zag-2.gif") no-repeat center 0;
         }
         &.slide3{
-          background: $orange url("/images/zag-zig.png") no-repeat center 0;
-          h1 {
-            text-align: left;
-            margin-top: $baseline*3;
-            margin-left: 10%;
-          }
+          background: $green url("/images/zig-zag-1.gif") no-repeat center 0;
         }
         &.slide4{
-          background-color: $aqua;
+          background: $green url("/images/zig-zag-3.gif") no-repeat center 0;
         }
         &.slide5{
-          background-color: $purple;
+          background: $green url("/images/zig-zag-5.gif") no-repeat center 0;
         }
         &.slide6{
-          background-color: $blue;
+          background: $green url("/images/zig-zag-4.gif") no-repeat center 0;
         }
       }
     }
@@ -617,6 +607,15 @@ footer{
       }
     }
   }
+  .pebble-it{
+    padding: $baseline*2 0 $baseline;
+    .row{
+      margin-bottom: $baseline;
+    }
+    h1,a{
+      color: #009be8;
+    }
+  }
 }
 
 /* @end */
@@ -838,11 +837,7 @@ header{
       display: none;
     }
     .slides_container {
-      li {
-        &.slide1 {
-          background: $pink url("/images/zebra-small.jpg") no-repeat center;
-        }
-      }
+      
     }
   }
   .columns2 {
