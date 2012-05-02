@@ -717,8 +717,11 @@ footer{
 /* @end */
 
 .page-404{
+  #wrap > .row:first-child {
+    padding-top: 106px;
+  }
   .row{
-    margin-top: $baseline*3;
+    margin-top: -6px;
   }
   .error-header{
     text-align: center;
