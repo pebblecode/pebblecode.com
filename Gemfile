@@ -4,6 +4,9 @@ gem 'rake'
 gem "sinatra"
 gem 'thin'
 
+# Asset packaging
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
+
 # Front end
 gem "haml"
 gem "sass"
