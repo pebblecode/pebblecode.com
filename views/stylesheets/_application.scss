@@ -712,20 +712,41 @@ footer{
   }
 }
 
+// Mainly used to fix IE bugs
 .no-borderradius {
-  .page-homepage .slideshow .pagination {
-    li {
-      a {
-        text-indent: -9999px;
-        height: 5px;
-        width: 5px;
-        border-width: 4px;
+  .columns2 {
+    width: $column-width*2 + $column-gutter - 3%;
+  }
+  .columns3 {
+    width: $column-width*3 + $column-gutter*2 - 3%;
+  }
+  .columns4 {
+    width: $column-width*4 + $column-gutter*3 - 3%;
+  }
+  .page-people {
+    .employees {
+      .columns1 {
+        width: 135px;
+        margin-left: 0;
+        margin-right: 60px;
       }
+    }
+  }
+  .page-homepage {
+    .slideshow .pagination {
+      li {
+        a {
+          text-indent: -9999px;
+          height: 5px;
+          width: 5px;
+          border-width: 4px;
+        }
 
-      &.current a{
-        border-width: 2px;
-        height: 9px;
-        width: 9px;
+        &.current a{
+          border-width: 2px;
+          height: 9px;
+          width: 9px;
+        }
       }
     }
   } // .page-homepage .slideshow .slides_container .pagination
