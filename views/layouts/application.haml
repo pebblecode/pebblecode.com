@@ -28,8 +28,7 @@
   %body{:class => "page-#{@page_name}"}
     %header.background-random
       %nav
-        %a{:href => "/"}
-          %img{:alt => "pebble{code} logo", :src => "/images/logo.png"}/
+        %a.logo{:href => "/"}
         %ul
           - nav_names = ["people", "work", "products", "thoughts"]
           - nav_names.each do |nav_name|

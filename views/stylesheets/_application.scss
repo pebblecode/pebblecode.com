@@ -212,10 +212,15 @@ header{
     max-width: $grid-max-width;
     margin: 0 auto;
 
-    img{
+    .logo{
       float: left;
       margin-top: 10px;
       margin-left: 12px;
+      display: block;
+      width: 142px;
+      height: 23px;
+      text-indent: -9999px;
+      background-image: url('../images/logo.png');
     }
 
     ul{
@@ -810,9 +815,9 @@ header{
   position: relative;
   height: $baseline*5 +8px;
   nav{
-    img{
+    .logo{
       float: left;
-      padding-top: $baseline +15px;
+      margin-top: 47px;
     }
     ul{
       font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -980,3 +985,17 @@ header{
 } /* media-q end */
 
 /* @end */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  #social li a {
+    background-image: url('../images/social@2x.png') !important;
+    background-size: 60px 20px;
+  }
+
+  .logo{
+    background-image: url('../images/logo@2x.png') !important;
+    background-size: 142px 23px;
+  }
+}
