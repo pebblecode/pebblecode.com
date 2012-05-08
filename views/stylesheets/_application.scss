@@ -492,6 +492,8 @@ footer{
       width: 100%;
       height: $baseline*9;
       background-color: $pink;
+      background-image: url("/images/tricklr.jpg");
+      background-position-x: 50%;
     }
     a{
       color: $pink;
@@ -501,6 +503,7 @@ footer{
   .vistazo{
     .img{
       background-color: $blue;
+      background-image: url("/images/vistazo.jpg");
     }
     a{
       color: $blue;
