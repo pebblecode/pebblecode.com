@@ -7,3 +7,8 @@ nodemon-ignore
 
 public/stylesheets/style.styl
 .sass-cache
+
+# Screws up node app when deployed
+Gemfile
+Gemfile.lock
+Rakefile
