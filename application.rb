@@ -7,6 +7,7 @@ require 'haml'
 require 'sass'
 require 'compass'
 require 'sinatra/assetpack'
+require 'rdiscount'
 
 helpers Sinatra::Partials
 require_relative 'helpers/init'

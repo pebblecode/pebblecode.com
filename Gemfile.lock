@@ -33,6 +33,7 @@ GEM
     rack-test (0.6.1)
       rack (>= 1.0)
     rake (0.9.2.2)
+    rdiscount (1.6.8)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     ruby-debug-base19 (0.11.25)
@@ -74,6 +75,7 @@ DEPENDENCIES
   haml
   heroku
   rake
+  rdiscount
   ruby-debug19
   sass
   shotgun

@@ -11,6 +11,7 @@ gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
 gem "haml"
 gem "sass"
 gem "compass"
+gem 'rdiscount'  # For markdown usage
 
 # For production deployment
 gem 'heroku'

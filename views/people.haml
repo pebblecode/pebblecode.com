@@ -1,5 +1,6 @@
 :ruby
   # Content of the page
+  # NOTE: Descriptions are in markdown (http://daringfireball.net/projects/markdown/)
   people = [
     {
       :name => "Toby Hunt",
@@ -81,7 +82,7 @@
       :name => "Gayle Smith",
       :title => "Admin Assistant",
       :image => "/images/mug-shots/gayle.png",
-      :description => "Gayle studied classics at University College London and worked in HR for three years. At pebble, Gayle keeps both <a href="http://pebblecode.com">pebble {code}</a> and <a href="http://pebbleit.com">pebble.it</a> in order! When not in work she tutors Latin and Ancient Greek and also enjoy pub quizzes, live music and zombie films."
+      :description => "Gayle studied classics at University College London and worked in HR for three years. At pebble, Gayle keeps both [pebble {code}](http://pebblecode.com) and [pebble.it](http://pebbleit.com) in order! When not in work she tutors Latin and Ancient Greek and also enjoy pub quizzes, live music and zombie films."
     }
   ]
   people.shuffle!
@@ -110,7 +111,7 @@
       %article.columns4
         %h2.size3= p[:name]
         %h3.size2= p[:title]
-        %p= p[:description]
+        %p= RDiscount.new(p[:description]).to_html
         - if p[:website]
           %p.link
             website:
