@@ -770,6 +770,12 @@ footer{
   }
 }
 
+.page-address {
+  .row:first-child {
+    margin-top: $baseline*3;
+  }
+}
+
 // Mainly used to fix IE bugs
 .no-borderradius {
   .columns2 {
