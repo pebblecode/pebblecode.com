@@ -427,7 +427,16 @@ footer{
     }
   }
 
+  article {
+    h2 {
+      margin-bottom: $baseline;
+    }
+  }
+
   #recent-posts {
+    h2 {
+      margin-bottom: $baseline;
+    }
     ul {
       list-style: disc;
       margin-left: 1.5em;
