@@ -773,6 +773,12 @@ footer{
 .page-address {
   .row:first-child {
     margin-top: $baseline*3;
+    margin-bottom: $baseline;
+  }
+  .row {
+    h1 {
+      margin-bottom: $baseline;
+    }
   }
 }
 
