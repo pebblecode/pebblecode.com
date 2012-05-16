@@ -779,6 +779,9 @@ footer{
     h1 {
       margin-bottom: $baseline;
     }
+    address {
+      margin-bottom: $baseline;
+    }
   }
 }
 
@@ -1029,6 +1032,14 @@ header{
     display: none;
   }
 }
+
+.page-address {
+  .size2 {
+    font-size: 16px;
+    line-height: $baseline;
+  }
+}
+
 } /* media-q end */
 
 /* @end */

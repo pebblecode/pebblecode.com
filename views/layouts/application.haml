@@ -2,7 +2,7 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}
-      %title= "#{@page_name.upcase} -- pebblecode.com"
+      %title= "#{@page_name.capitalize} -- pebblecode.com"
       %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "http://pebblecode.com/images/favicon.ico"}/
 
       %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
@@ -47,9 +47,9 @@
             %a{:href => "tel:+44 20 3327 3940"} +44 20 3327 3940
           %li.size0
             E:
-            %a{:href => "mailto:hello@pebblecode.com"} info@pebblecode.com
+            %a{:href => "mailto:hello@pebblecode.com"} hello@pebblecode.com
           %li.size0.address
-            %a{:href => "/address"} find us
+            %a{:href => "/find_us"} find us
         %ul#social
           %li
             %a#facebook{:href => "http://www.facebook.com/pebblecode"} facebook
