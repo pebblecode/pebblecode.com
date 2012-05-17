@@ -358,11 +358,17 @@ footer{
         height: $baseline*18;
         width: 100%;
 
-        h1, h2{
+        h1, h2, ul{
           color: white;
           margin-left: 5%;
           margin-right: 5%;
         }
+
+        ul {
+          font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+          color: white;
+        }
+
         h1{
           margin-top: $baseline;
           margin-bottom: $baseline;
@@ -475,6 +481,19 @@ footer{
       margin-bottom: $baseline;
     }
   }
+
+  .work-contact {
+    p, a {
+      margin-top: $baseline*2;
+      float: left;
+    }
+    p:first-child {
+      margin-right: 40px;
+    }
+    a {
+      margin: $baseline*2 10px 0;
+    }
+  }
 }
 /* @end */
 
@@ -483,8 +502,12 @@ footer{
 .page-products{
 
   .row:first-child{
+    margin-top: $baseline*3;
     .columns6{
-      margin-top: $baseline*3;
+      margin-left: 0;
+      p {
+        margin-top: $baseline;
+      }
     }
   }
 
@@ -525,8 +548,11 @@ footer{
   }
 
   .open-source{
+    .columns6 {
+      margin-left: 0;
+    }
     p{
-      margin-top: $baseline*2;
+      margin-top: $baseline;
       margin-bottom: 0;
     }
   }
