@@ -475,14 +475,30 @@ footer{
       margin-bottom: $baseline*2;
     }
     .row {
-      margin-bottom: $baseline;
-    }
-    .img {
-      width: 100%;
-      height: $baseline*8;
-    }
-    h2 {
-      margin-bottom: $baseline;
+      margin-bottom: $baseline*3;
+      .frame {
+        .img {
+          height: $baseline*6;
+          padding-top: $baseline*2;
+          h2 {
+            width: 100%;
+            text-align: center;
+            color: white;
+          }
+          &.gaming {
+            background-image: url("/images/gaming_tile.png");
+          }
+          &.finace {
+            background-image: url("/images/finance_tile.png");
+          }
+          &.clarity {
+            background-image: url("/images/clarity_tile.png");
+          }
+        }
+      }
+      .columns3:nth-child(2) {
+        margin-left: 0;
+      }
     }
   }
 
