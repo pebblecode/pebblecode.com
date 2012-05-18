@@ -3,6 +3,8 @@
   %head
     %meta{:charset => "utf-8"}
       %title= yield_content :title
+      %meta{:name => "description", :content => yield_content(:description)}
+      %meta{:name => "keywords", :content => yield_content(:keywords)}
       %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "http://pebblecode.com/images/favicon.ico"}/
 
       %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
