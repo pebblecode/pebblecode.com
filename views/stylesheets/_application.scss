@@ -487,16 +487,7 @@ footer{
   }
 
   .work-contact {
-    p, a {
-      margin-top: $baseline*2;
-      float: left;
-    }
-    p:first-child {
-      margin-right: 40px;
-    }
-    a {
-      margin: $baseline*2 10px 0;
-    }
+    margin-top: $baseline*2;
   }
 }
 /* @end */
@@ -507,6 +498,7 @@ footer{
 
   .row:first-child{
     margin-top: $baseline*3;
+    margin-bottom: $baseline;
     .columns6{
       margin-left: 0;
       p {
@@ -573,6 +565,9 @@ footer{
       .img{
         width: 100%;
         height: $baseline*12;
+        background-image: url("/images/people-title.png");
+        background-repeat: no-repeat;
+        background-position-x: 50%;
       }
     }
   }
@@ -805,10 +800,13 @@ footer{
   }
 }
 
-.page-address {
+.page-find-us {
   .row:first-child {
     margin-top: $baseline*3;
     margin-bottom: $baseline;
+    .frame {
+      padding: 10px 10px 5px;
+    }
   }
   .row {
     h1 {
@@ -816,6 +814,11 @@ footer{
     }
     address {
       margin-bottom: $baseline;
+    }
+    .contact {
+      h2 {
+        margin-bottom: $baseline;
+      }
     }
   }
 }
