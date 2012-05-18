@@ -25,11 +25,9 @@ $(document).ready(function() {
   var width = $(window).width();
 
   if(width < 650) {
-    $(".case-study:nth-child(3) .frame").insertAfter(".case-study:nth-child(3) p");
-    $(".case-study:nth-child(7) .frame").insertAfter(".case-study:nth-child(7) p");
     $(".tricklr h2").insertBefore(".tricklr .frame");
     $(".vistazo h2").insertBefore(".vistazo .frame");
-    $("<hr/>").addClass("background-random").insertBefore(".tricklr h2, .vistazo h2");
+    $("<hr/>").addClass("background-random").insertBefore(".vistazo h2");
   };
 
   /*
