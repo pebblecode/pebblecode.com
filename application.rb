@@ -8,9 +8,11 @@ require 'sass'
 require 'compass'
 require 'sinatra/assetpack'
 require 'rdiscount'
+require 'sinatra/content_for'
 
 helpers Sinatra::Partials
 require_relative 'helpers/init'
+helpers Sinatra::ContentFor
 # register Sinatra::AssetPack
 
 set :root, File.dirname(__FILE__)

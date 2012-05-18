@@ -6,7 +6,7 @@ gem 'thin'
 
 # Asset packaging
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
-
+gem 'sinatra-contrib'
 # Front end
 gem "haml"
 gem "sass"
