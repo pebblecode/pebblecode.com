@@ -375,6 +375,10 @@ footer{
         }
         &.slide1{
           background: $pink url("/images/zig-zag-6.gif") no-repeat center 0;
+          h1:nth-child(2) {
+            line-height: 40px;
+            margin-bottom: 38px;
+          }
         }
         &.slide2{
           background: $green url("/images/zig-zag-2.gif") no-repeat center 0;
@@ -919,11 +923,19 @@ header{
   .slideshow {
     margin-top: -15px;
     height: $baseline*8;
-    h1 {
-      display: none;
-    }
     .slides_container {
-      
+      li {
+        &.slide1{
+          h1:nth-child(2) {
+            line-height: $baseline*2;
+            margin-bottom: $baseline;
+          }
+        }
+      }
+      .size2 {
+        font-size: 24px;
+        line-height: $baseline*1.5 ;
+      }
     }
   }
   .columns2 {
