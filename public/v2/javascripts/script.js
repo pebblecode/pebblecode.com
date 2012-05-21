@@ -17,7 +17,7 @@ $(document).ready(function() {
     mattward: "Matt Ward"
   };
 
-  jQuery(".blog .meta .author").each(function(i) {
+  jQuery(".blog-sidebar .author").each(function(i) {
     author = this.innerHTML;
     this.innerHTML = this.innerHTML.replace(author, tumblr_authors[author]||author);
   });
