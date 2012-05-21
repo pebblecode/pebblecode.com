@@ -399,7 +399,7 @@ footer{
     }
 
     .pagination{
-      width: 138px;
+      width: 69px;
       margin: $baseline auto;
       li {
         float: left;
@@ -832,8 +832,12 @@ footer{
       margin-bottom: $baseline;
     }
     .contact {
-      h2 {
-        margin-bottom: $baseline;
+      a {
+        color: hsl(0, 0%, 55%);
+        display: block;
+        &:hover {
+          color: hsl(0, 0%, 50%);
+        }
       }
     }
   }
