@@ -368,6 +368,14 @@ footer{
           margin-right: 5%;
         }
 
+        a {
+          color: white;
+          text-decoration: underline;
+          &:hover {
+            color: white;
+          }
+        }
+
         ul {
           font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
           color: white;
