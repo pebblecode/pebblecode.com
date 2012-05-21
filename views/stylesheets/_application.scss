@@ -575,17 +575,9 @@ footer{
 /* @group people */
 
 .page-people{
-  .people-img{
-    .columns6{
-      margin-top: $baseline*3;
-      .img{
-        width: 100%;
-        height: $baseline*12;
-        background-image: url("/images/people-title.png");
-        background-repeat: no-repeat;
-        background-position-x: 50%;
-      }
-    }
+  .headline {
+    margin-top: $baseline*3;
+    margin-bottom: $baseline;
   }
   .people-copy{
     margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
@@ -1024,14 +1016,6 @@ header{
 }
 
 .page-people {
-  .people-img {
-    .columns6 {
-      margin-top: -15px;
-      .img{
-        height: $baseline*8;
-      }
-    }
-  }
   .people-copy {
     margin-bottom: 0;
   }
