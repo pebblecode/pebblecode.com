@@ -101,6 +101,7 @@ To edit the tumblr blog:
  * Commit the changes
  * Merge with `production` branch
  * `git push heroku production:master` (Assuming you've added the remote branch: `git remote add heroku git@heroku.com:pebblecode.git`)
+
 1. There is also the `/views/thoughts.erb` file, which is the expanded html version of `/views/tumblr_template/template.html` (without the tumblr tags). You should edit this file manually, as copying pasting from the tumblr template file won't show it properly.
    This is there mainly for testing purposes, when viewing the styles locally.
 1. The tumblr blog can be viewed at
