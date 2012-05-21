@@ -1,4 +1,27 @@
 $(document).ready(function() {
+  
+  /*
+  * Author name replacement - needed because tumblr doesn't have full names
+  */
+  var tumblr_authors = {
+    thatsinthebook: "Toby Hunt",
+    shapeshed: "George Ornbo",
+    elpabl0: "Paul Evans",
+    sebbo: "Sebastian Nash",
+    abutcher: "Alex Butcher",
+    tutaktran: "Tak Tran",
+    josephjeganathan: "Joseph Jeganathan",
+    eyko: "Vincent Martinez",
+    markdurrant: "Mark Durrant",
+    danielrbradley: "Daniel Bradley",
+    mattward: "Matt Ward"
+  };
+
+  jQuery(".blog-sidebar .author").each(function(i) {
+    author = this.innerHTML;
+    this.innerHTML = this.innerHTML.replace(author, tumblr_authors[author]||author);
+  });
+
   /*
   * Slideshow using http://slidesjs.com/
   * play = time for each slide
