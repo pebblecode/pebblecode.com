@@ -388,15 +388,6 @@ footer{
           background: $green url("/images/zig-zag-2.gif") no-repeat center 0;
         }
         &.slide3{
-          background: $green url("/images/zig-zag-1.gif") no-repeat center 0;
-        }
-        &.slide4{
-          background: $green url("/images/zig-zag-3.gif") no-repeat center 0;
-        }
-        &.slide5{
-          background: $green url("/images/zig-zag-5.gif") no-repeat center 0;
-        }
-        &.slide6{
           background: $green url("/images/zig-zag-4.gif") no-repeat center 0;
         }
       }
@@ -428,15 +419,6 @@ footer{
         border-color: $green;
       }
       li:nth-child(3) a{
-        border-color: $orange;
-      }
-      li:nth-child(4) a{
-        border-color: $aqua;
-      }
-      li:nth-child(5) a{
-        border-color: $purple;
-      }
-      li:nth-child(6) a{
         border-color: $blue;
       }
     }

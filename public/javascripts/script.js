@@ -106,7 +106,7 @@ $(document).ready(function() {
       <h2 class='size2'>Latest thoughts</h2> \
       <ul> \
         <% _.each(tumblrPosts, function(post) { %> \
-          <li>&#187;&nbsp;&nbsp;<a href='<%= post.url %>'><%= post['regular-title'] %></a></li> \
+          <li>&#8226;&#160;<a href='<%= post.url %>'><%= post['regular-title'] %></a></li> \
         <% }) %> \
       </ul> \
     ");
