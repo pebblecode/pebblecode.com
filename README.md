@@ -78,6 +78,31 @@ To turn on/off maintenance mode on heroku
     heroku maintenance:on --app [app]
     heroku maintenance:off --app [app]
 
+## Setting up the Tumblr blog
+
+To edit the tumblr blog:
+
+1. Edit the local file at `/views/tumblr_template/template.html`. This file is in the [tumblr template format](http://www.tumblr.com/docs/en/custom_themes), and special tumblr specific tags. Note the section with `id="staging-message"`, which shows the yellow staging message on the top. Remove this for the production site.
+1. Copy and paste the file into the tumblr edit html section, after clicking the `Edit Html` button on:
+
+ * Staging: http://www.tumblr.com/customize/pebblecodestaging
+ * Production: http://www.tumblr.com/customize/pebblecode
+
+   Also remember to add in the Disqus code, otherwise the comments won't show. Sometimes the disqus code disappears after editing for some strange reason. The Disqus shortcodes are:
+
+ * Staging: pebblecodestaging
+ * Production: pebblecodeblog
+
+1. There is also the `/views/thoughts.erb` file, which is the expanded html version of `/views/tumblr_template/template.html` (without the tumblr tags). You should edit this file manually, as copying pasting from the tumblr template file won't show it properly.
+   This is there mainly for testing purposes, when viewing the styles locally.
+1. The tumblr blog can be viewed at
+
+ * Staging: http://www.tumblr.com/blog/pebblecodestaging (password: `pebblecodestaging`)
+ * Production: http://www.tumblr.com/blog/pebblecode
+
+1. Remember to push the changes to git, so that others have the changed template. **If someone replaces the template on tumblr, there is no version history on tumblr!**
+
+
 [1]: http://www.sinatrarb.com/
 [2]: http://github.com/rtomayko/shotgun/
 [3]: http://haml-lang.com/
