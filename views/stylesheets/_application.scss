@@ -327,15 +327,15 @@ footer{
         }
 
         #facebook{
-          background-position-x: 40px;
+          background-position-x: 40;
         }
 
         #github{
-          background-position-x: 60px;
+          background-position-x: 20;
         }
 
         #google-plus{
-          background-position-x: 20px;
+          background-position-x: 60;
         }
       }
     }
@@ -1093,7 +1093,7 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
   #social li a {
     background-image: url('../images/social@2x.png') !important;
-    background-size: 60px 20px;
+    background-size: 80px 20px;
   }
 
   .logo{
