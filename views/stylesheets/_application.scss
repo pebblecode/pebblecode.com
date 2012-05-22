@@ -368,6 +368,14 @@ footer{
           margin-right: 5%;
         }
 
+        a {
+          color: white;
+          text-decoration: underline;
+          &:hover {
+            color: white;
+          }
+        }
+
         ul {
           font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
           color: white;
@@ -499,7 +507,7 @@ footer{
 .page-products{
 
   .row:first-child{
-    margin-top: $baseline*3;
+    margin-top: $baseline*2;
     margin-bottom: $baseline;
     .columns6{
       margin-left: 0;
@@ -562,7 +570,7 @@ footer{
 
 .page-people{
   .headline {
-    margin-top: $baseline*3;
+    margin-top: $baseline*2;
     margin-bottom: $baseline;
   }
   .people-copy{
@@ -1085,7 +1093,7 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
   #social li a {
     background-image: url('../images/social@2x.png') !important;
-    background-size: 60px 20px;
+    background-size: 80px 20px;
   }
 
   .logo{
