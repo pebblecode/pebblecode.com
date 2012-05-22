@@ -16,6 +16,7 @@ $(document).ready(function() {
     danielrbradley: "Daniel Bradley",
     mattward: "Matt Ward"
   };
+  var tumblrCssPrefix = "tumblr-";
 
   // Link authors to their relevant people page
   jQuery(".blog-sidebar .author").each(function(i) {
@@ -24,7 +25,7 @@ $(document).ready(function() {
 
     // Use localhost for testing, but pebblecode.com for everything else
     var peopleUrlPrefix = (location.hostname === "localhost") ? "http://localhost:7100/people#" : "http://pebblecode.com/people#";
-    var authorUrl = peopleUrlPrefix + encodeURIComponent(authorName);
+    var authorUrl = peopleUrlPrefix + authorId;
     var authorLink = "<a href='" + authorUrl + "'>" + authorName + "</a>";
 
     // Insert link inside .author
@@ -119,17 +120,18 @@ $(document).ready(function() {
 
   if (onPeoplePage()) {
     var personHash = unescape(location.hash.substring(1));
-    if (_.contains(_.values(tumblr_authors), personHash)) {
+    if (_.contains(_.keys(tumblr_authors), personHash)) {
       // Find the hash person
-      var nameElem = _.find($("#spotlight .person-row .name"), function(obj) {
-        return (obj.innerHTML === personHash);
-      });
+      var personContainer = $("#spotlight #" + tumblrCssPrefix + personHash);
 
-      if (nameElem) {
+      if (personContainer.length > 0) {
         // Remove all active classes
         $("#spotlight .person-row").removeClass("active");
         // Set it as active
-        nameElem.parentNode.parentNode.className = nameElem.parentNode.parentNode.className + " active";
+        personContainer.addClass("active");
+      } else {
+        // Clear out hash value if it is invalid
+        location.hash = "";
       }
     } else {
       // Clear out hash value if it is invalid

@@ -15,7 +15,9 @@
       :image => "/images/mug-shots/toby.png",
       :description => "Toby studied computer science at university, did a spell in the corporate world, then co-founded [pebble.it](http://pebbleit.com/) in 2006 and [pebble {code}](http://pebblecode.com/) in 2010. He loves travel, funk music and a healthy lifestyle (at least most of the time).",
       :website => "http://thatsinthebook.com",
-      :twitter => "http://twitter.com/tobyhunt"
+      :twitter => "http://twitter.com/tobyhunt",
+      :tumblr_name => "thatsinthebook"
+
     },
     {
       :name => "George Ornbo",
@@ -24,14 +26,16 @@
       :description => "George is a Ruby and JavaScript developer with a strong interest in web browsers and applications. When not hacking at a terminal he enjoys making things in the kitchen and a bit of cricket. George is currently writing [Sams teach yourself Node.js in 24 hours](http://nodejsbook.io/)",
       :website => "http://shapeshed.com",
       :github => "https://github.com/shapeshed",
-      :twitter => "http://twitter.com/shapeshed"
+      :twitter => "http://twitter.com/shapeshed",
+      :tumblr_name => "shapeshed"
     },
     {
       :name => "Alex Butcher",
       :title => "Technical Director",
       :image => "/images/mug-shots/alex.png",
       :description => "A first class computer science graduate, Alex worked in a range of software engineering and architecture roles before co-founding pebble {code} in 2010. A long time advocate of functional programming and C#, he also has a dangerous obsession with all things cycling.",
-      :twitter => "http://twitter.com/alexbutcher"
+      :twitter => "http://twitter.com/alexbutcher",
+      :tumblr_name => "abutcher"
     },
     {
       :name => "Mark Durrant",
@@ -39,8 +43,8 @@
       :image => "/images/mug-shots/mark.png",
       :description => "After spending several years working for charities, Mark managed to get himself a degree in graphic design. He's has always been interested in technology and the web and has found pebble {code} the perfect place to pursue these interests. Mark is a bit of a geek and spends his time off with comics, video games, anime and beer.",
       :website => "http://markdurrant.co.uk",
-      :github => "https://github.com/markdurrant"
-
+      :github => "https://github.com/markdurrant",
+      :tumblr_name => "markdurrant"
     },
     {
       :name => "Matt Ward",
@@ -49,7 +53,8 @@
       :description => "Matt's first real dive into programming was with COMAL, a language unheard of outside Scandinavia. He used it to create a program to predict the results of football matches, but sadly this did not make him a millionaire. In his spare time he works on [SharpDevelop](http://www.icsharpcode.net/OpenSource/SD/), an open source integrated development environment written in C#.",
       :website => "http://community.sharpdevelop.net/blogs/mattward/",
       :github => "https://github.com/icsharpcode/SharpDevelop",
-      :twitter => "http://twitter/SharpDevelop"
+      :twitter => "http://twitter/SharpDevelop",
+      :tumblr_name => "mattward"
     },
     {
       :name => "Vincent Mart&iacute;nez",
@@ -57,7 +62,8 @@
       :image => "/images/mug-shots/vince.png",
       :description => "After studying software engineering in Valencia and a brief experience in the ugly world of platform dependent C code and libraries, Vincent moved to the web, mainly working in Ruby and Javascript. Vincent admires simplicity and minimalism in design. When not coding, he enjoys photography, sunny days when they come and, of course, Bar&ccedil;a.",
       :twitter => "http://github.com/eyko",
-      :github => "http://twitter.com/eyko"
+      :github => "http://twitter.com/eyko",
+      :tumblr_name => "eyko"
     },
     {
       :name => "Tak Tran",
@@ -65,7 +71,8 @@
       :image => "/images/mug-shots/tak.png",
       :description => "A UK-born, Sydney-raised web developer who's predominantly embedded in the world of Ruby and other (often hipster) related technologies. Tak finds great joy in discussing software craftsmanship, food and universal ideas.",
       :twitter => "http://twitter.com/zlog",
-      :github => "https://github.com/taktran"
+      :github => "https://github.com/taktran",
+      :tumblr_name => "tutaktran"
     },
     {
       :name => "Joseph Jeganathan",
@@ -74,7 +81,8 @@
       :description => "Joseph is a .NET techie with a masters in enterprise software engineering. He loves to take on any challenge, focusing on leading edge technologies and algorithms that deliver the very best solutions. Aside from his life as a programmer, he is an athlete and good cricketer.",
       :website => "http://josephjeganathan.com",
       :github => "https://github.com/josephjeganathan",
-      :twitter => "https://github.com/josephjeganathan"
+      :twitter => "https://github.com/josephjeganathan",
+      :tumblr_name => "josephjeganathan"
     },
     {
       :name => "Daniel Bradley",
@@ -83,7 +91,8 @@
       :description => "After graduating as a software engineer in London, Daniel got stuck into developing products for the media sector. He's an open source advocate and author of the cloud-based [Plywood](https://github.com/danielrbradley/Plywood) software deployment system. Outside of programming, he's a drummer and keen photographer.",
       :website => "http://danielbradley.net",
       :twitter => "http://twitter.com/danielrbradley",
-      :github => "https://github.com/danielrbradley"
+      :github => "https://github.com/danielrbradley",
+      :tumblr_name => "danielrbradley"
     },
     {
       :name => "Gayle Smith",
@@ -111,7 +120,7 @@
   %hr.background-random/
   - random_index = rand(people.length)
   - people.each_with_index do |p, index|
-    %section{:class => "row person-row #{"active" if random_index == index}"}
+    %section{:id => "#{("tumblr-" + p[:tumblr_name]) if p[:tumblr_name]}", :class => "row person-row #{"active" if random_index == index}"}
       .columns2.frame
         .img
           / Height is same as .img height
