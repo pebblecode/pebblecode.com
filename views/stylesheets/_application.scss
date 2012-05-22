@@ -236,7 +236,7 @@ header{
         margin-left: 10px;
 
         span{
-          color: transparent;
+          color: $pink;
         }
 
         a{
@@ -627,7 +627,7 @@ footer{
       margin-bottom: $baseline;
       margin-right: 30px;
       // Need this for when names go over 2 lines
-      min-height: $baseline*9;
+      min-height: 205px;
       min-width: 145px;
       &:hover {
         text-decoration: none;
