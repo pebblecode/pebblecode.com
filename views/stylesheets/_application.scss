@@ -48,7 +48,7 @@ pre {
 /* @group typography */
 
 h1,h2,h3,h4,h5,h6,h7,h8{
-  font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: hsl(0, 0%, 55%);
 }
 
@@ -225,7 +225,7 @@ header{
 
     ul{
       float: right;
-      font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
       font-size: 18px;
       line-height: 38px;
       letter-spacing: 1px;
@@ -236,7 +236,7 @@ header{
         margin-left: 10px;
 
         span{
-          color: transparent;
+          color: $pink;
         }
 
         a{
@@ -327,15 +327,15 @@ footer{
         }
 
         #facebook{
-          background-position-x: 40px;
+          background-position: 40px 0;
         }
 
         #github{
-          background-position-x: 60px;
+          background-position: 60px 0;
         }
 
         #google-plus{
-          background-position-x: 20px;
+          background-position: 20px 0;
         }
       }
     }
@@ -627,7 +627,7 @@ footer{
       margin-bottom: $baseline;
       margin-right: 30px;
       // Need this for when names go over 2 lines
-      min-height: $baseline*10;
+      min-height: 205px;
       min-width: 145px;
       &:hover {
         text-decoration: none;
@@ -929,13 +929,23 @@ header{
 
 
 .page-homepage {
+  .row:first-child{
+    margin-top: $baseline;
+  }
+
   .slideshow {
     margin-top: -15px;
-    height: $baseline*8;
+    
     .slides_container {
+      height: 330px;
       li {
-        &.slide1{
+        &.slide1 {
+          h1:first-child {
+            margin-bottom: 0;
+          }
           h1:nth-child(2) {
+            margin-top: 0;
+            font-size: 35px;
             line-height: $baseline*2;
             margin-bottom: $baseline;
           }
@@ -960,8 +970,9 @@ header{
 
 .page-work {
   .row:first-child {
+    margin-top: 0;
     .columns3 {
-      margin-top: -25px
+      margin-top: -25px;
     }
     p {
       padding-top: $baseline +25px;
@@ -970,6 +981,27 @@ header{
   .case-study {
     padding-top: $baseline;
     margin-bottom: 0;
+    .row {
+      margin-top: $baseline;
+      margin-bottom: 0;
+      .columns3 {
+        margin-bottom: $baseline;
+      }
+      .frame {
+        .img {
+          height: $baseline*4;
+          padding-top: $baseline*2;
+          &.clarity {
+            height: $baseline*5;
+            padding-top: $baseline*1;
+          }
+        }
+      }
+
+    }
+  }
+  hr:nth-child(even) {
+    margin-top: $baseline;
   }
   .frame {
     margin-bottom: $baseline;
@@ -983,6 +1015,7 @@ header{
 
 .page-products {
   .row:first-child {
+    margin-top: $baseline;
     .columns6{
       margin-top: -25px;
     }
@@ -1010,6 +1043,9 @@ header{
 }
 
 .page-people {
+  .headline {
+    margin-top: 0;
+  }
   .people-copy {
     margin-bottom: 0;
   }
@@ -1023,6 +1059,9 @@ header{
     .img {
       width: 100%;
       height: $baseline*12;
+    }
+    h1 {
+      margin-top: $baseline;
     }
     h2 {
       margin-top: $baseline;
@@ -1042,13 +1081,14 @@ header{
   }
 
   .employees {
-    li:nth-child(even) .person {
-      margin-right: 0;
+    li{
+      width: 50%;
     }
     .person {
         width: 47.5%;
         float: left;
-        margin-right: 17px;
+        margin-right: 8px;
+        margin-left: 8px;
         margin-bottom: $baseline;
       p{
         margin-bottom: -5px;
