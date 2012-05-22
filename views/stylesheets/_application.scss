@@ -213,23 +213,14 @@ header{
     margin: 0 auto;
 
     .logo{
-      // float: left;
-      // margin-top: 10px;
-      // margin-left: 12px;
-      // display: block;
-      // width: 142px;
-      // height: 23px;
-      // text-indent: -9999px;
-      // background-image: url('../images/logo.png');
-      font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-      font-size: 18px;
-      line-height: 38px;
-      letter-spacing: 1px;
-      margin-left: 15px;
-      color: white;
-      &:hover {
-      text-decoration: none;
-      }
+      float: left;
+      margin-top: 10px;
+      margin-left: 12px;
+      display: block;
+      width: 142px;
+      height: 23px;
+      text-indent: -9999px;
+      background-image: url('../images/logo.png');
     }
 
     ul{
@@ -920,7 +911,7 @@ header{
   nav{
     .logo{
       float: left;
-      margin-top: 40px;
+      margin-top: 47px;
     }
     ul{
       font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -944,8 +935,9 @@ header{
 
   .slideshow {
     margin-top: -15px;
-    height: $baseline*6;
+    
     .slides_container {
+      height: $baseline*6;
       li {
         &.slide1 {
           h1:first-child {
@@ -953,6 +945,7 @@ header{
           }
           h1:nth-child(2) {
             margin-top: 0;
+            font-size: 36px;
             line-height: $baseline*2;
             margin-bottom: $baseline;
           }
@@ -1143,8 +1136,8 @@ only screen and (min-device-pixel-ratio : 1.5) {
     background-size: 80px 20px;
   }
 
-  // .logo{
-  //   background-image: url('../images/logo@2x.png') !important;
-  //   background-size: 142px 23px;
-  // }
+  .logo{
+    background-image: url('../images/logo@2x.png') !important;
+    background-size: 142px 23px;
+  }
 }
