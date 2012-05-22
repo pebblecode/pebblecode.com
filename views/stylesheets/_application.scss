@@ -47,7 +47,7 @@ pre {
 
 /* @group typography */
 
-h1,h2,h3,h4,h5,h6,h7,h8{
+h1,h2,h3,h4,h5,h6{
   font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: hsl(0, 0%, 55%);
 }
@@ -377,7 +377,7 @@ footer{
         }
 
         ul {
-          font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+          font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
           color: white;
         }
 
@@ -914,7 +914,7 @@ header{
       margin-top: 47px;
     }
     ul{
-      font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
       line-height: 18px;
       width: 50%;
       li{
@@ -1121,6 +1121,16 @@ header{
   .size2 {
     font-size: 16px;
     line-height: $baseline;
+  }
+}
+
+.page-find-us {
+  .size2 {
+    font-size: 16px;
+    line-height: $baseline;
+  }
+  .row:first-child {
+    margin-top: $baseline;
   }
 }
 
