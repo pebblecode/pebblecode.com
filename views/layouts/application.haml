@@ -8,8 +8,15 @@
       %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "http://pebblecode.com/images/favicon.ico"}/
 
       %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
-      %link{:href => "/fonts/meta.css", :rel => "stylesheet", :type => "text/css"}/
+      
+      / commented out to test typekit
+      / %link{:href => "/fonts/meta.css", :rel => "stylesheet", :type => "text/css"}/
+      
       / = css :app, :media => 'screen'
+
+      / typekit required jascript
+      <script type="text/javascript" src="http://use.typekit.com/dpm5rbg.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
       %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
       = js :lib
