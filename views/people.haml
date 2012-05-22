@@ -60,7 +60,7 @@
       :github => "http://twitter.com/eyko"
     },
     {
-      :name => "Tu Tak Tran",
+      :name => "Tak Tran",
       :title => "Developer",
       :image => "/images/mug-shots/tak.png",
       :description => "A UK-born, Sydney-raised web developer who's predominantly embedded in the world of Ruby and other (often hipster) related technologies. Tak finds great joy in discussing software craftsmanship, food and universal ideas.",
@@ -117,7 +117,7 @@
           / Height is same as .img height
           %img{:src => p[:image], :height => 264}/
       %article.columns4
-        %h2.size3= p[:name]
+        %h2.size3.name= p[:name]
         %h3.size2= p[:title]
         %p= RDiscount.new(p[:description]).to_html
         - if p[:website]
