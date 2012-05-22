@@ -149,8 +149,8 @@
   %hr.background-random/
   %ul.row
     - people.each do |p|
-      %li.columns1
-        %a{:href => "#spotlight", :class => "frame person"}
+      %li
+        %a{:href => "#spotlight", :class => "columns1 frame person"}
           .img
             / Height is same as .img height
             %img{:src => p[:image], :height => 110}/
