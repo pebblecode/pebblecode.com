@@ -929,13 +929,21 @@ header{
 
 
 .page-homepage {
+  .row:first-child{
+    margin-top: $baseline;
+  }
+
   .slideshow {
     margin-top: -15px;
-    height: $baseline*8;
+    height: $baseline*6;
     .slides_container {
       li {
-        &.slide1{
+        &.slide1 {
+          h1:first-child {
+            margin-bottom: 0;
+          }
           h1:nth-child(2) {
+            margin-top: 0;
             line-height: $baseline*2;
             margin-bottom: $baseline;
           }
