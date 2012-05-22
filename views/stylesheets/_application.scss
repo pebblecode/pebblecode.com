@@ -627,7 +627,7 @@ footer{
       margin-bottom: $baseline;
       margin-right: 30px;
       // Need this for when names go over 2 lines
-      min-height: $baseline*10;
+      min-height: $baseline*9;
       min-width: 145px;
       &:hover {
         text-decoration: none;
@@ -1018,6 +1018,9 @@ header{
 }
 
 .page-people {
+  .headline {
+    margin-top: 0;
+  }
   .people-copy {
     margin-bottom: 0;
   }
@@ -1050,13 +1053,14 @@ header{
   }
 
   .employees {
-    li:nth-child(even) .person {
-      margin-right: 0;
+    li{
+      width: 50%;
     }
     .person {
         width: 47.5%;
         float: left;
-        margin-right: 17px;
+        margin-right: 8px;
+        margin-left: 8px;
         margin-bottom: $baseline;
       p{
         margin-bottom: -5px;
