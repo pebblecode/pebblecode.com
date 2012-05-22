@@ -11,15 +11,25 @@ $(document).ready(function() {
     abutcher: "Alex Butcher",
     tutaktran: "Tak Tran",
     josephjeganathan: "Joseph Jeganathan",
-    eyko: "Vincent Martinez",
+    eyko: "Vincent Mart&iacute;nez",
     markdurrant: "Mark Durrant",
     danielrbradley: "Daniel Bradley",
     mattward: "Matt Ward"
   };
+  var tumblrCssPrefix = "tumblr-";
 
+  // Link authors to their relevant people page
   jQuery(".blog-sidebar .author").each(function(i) {
-    author = this.innerHTML;
-    this.innerHTML = this.innerHTML.replace(author, tumblr_authors[author]||author);
+    var authorId = this.innerHTML;
+    var authorName = tumblr_authors[authorId] || authorId;
+
+    // Use localhost for testing, but pebblecode.com for everything else
+    var peopleUrlPrefix = (location.hostname === "localhost") ? "http://localhost:7100/people#" : "http://pebblecode.com/people#";
+    var authorUrl = peopleUrlPrefix + authorId;
+    var authorLink = "<a href='" + authorUrl + "'>" + authorName + "</a>";
+
+    // Insert link inside .author
+    this.innerHTML = authorLink;
   });
 
   /*
@@ -103,6 +113,33 @@ $(document).ready(function() {
     $(spotlightPerson).find(".img").addClass(randColor + "-background");
   });
 
+  // Set spotlight if there is a url hash of the person
+  function onPeoplePage() {
+    return location.pathname === "/people";
+  }
+
+  if (onPeoplePage()) {
+    var personHash = unescape(location.hash.substring(1));
+    if (_.contains(_.keys(tumblr_authors), personHash)) {
+      // Find the hash person
+      var personContainer = $("#spotlight #" + tumblrCssPrefix + personHash);
+
+      if (personContainer.length > 0) {
+        // Remove all active classes
+        $("#spotlight .person-row").removeClass("active");
+        // Set it as active
+        personContainer.addClass("active");
+      } else {
+        // Clear out hash value if it is invalid
+        location.hash = "";
+      }
+    } else {
+      // Clear out hash value if it is invalid
+      location.hash = "";
+    }
+  }
+
+  // Spotlight changes when person is clicked on
   $('.person').click(function(event) {
     var clickTarget = event.target;
     var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
