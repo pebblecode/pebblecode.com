@@ -937,7 +937,7 @@ header{
     margin-top: -15px;
     
     .slides_container {
-      height: $baseline*6;
+      height: 330px;
       li {
         &.slide1 {
           h1:first-child {
@@ -945,7 +945,7 @@ header{
           }
           h1:nth-child(2) {
             margin-top: 0;
-            font-size: 36px;
+            font-size: 34px;
             line-height: $baseline*2;
             margin-bottom: $baseline;
           }
