@@ -968,8 +968,9 @@ header{
 
 .page-work {
   .row:first-child {
+    margin-top: $baseline;
     .columns3 {
-      margin-top: -25px
+      margin-top: -25px;
     }
     p {
       padding-top: $baseline +25px;
@@ -978,6 +979,27 @@ header{
   .case-study {
     padding-top: $baseline;
     margin-bottom: 0;
+    .row {
+      margin-top: $baseline;
+      margin-bottom: 0;
+      .columns3 {
+        margin-bottom: $baseline;
+      }
+      .frame {
+        .img {
+          height: $baseline*4;
+          padding-top: $baseline*2;
+          &.clarity {
+            height: $baseline*5;
+            padding-top: $baseline*1;
+          }
+        }
+      }
+
+    }
+  }
+  hr:nth-child(even) {
+    margin-top: $baseline;
   }
   .frame {
     margin-bottom: $baseline;
