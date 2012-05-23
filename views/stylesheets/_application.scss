@@ -610,6 +610,7 @@ footer{
     article { // Right float
       width: 100%;
       float: left;
+      margin-left: 0;
       .inner-wrapper {
         margin-left: 320px;
       }
