@@ -635,12 +635,6 @@ footer{
     hr{
       margin-bottom: $baseline;
     }
-
-    // Allow employees rows to have 6 people by default.
-    // Also see media css for max-width: 1130px, where this gets cancelled out.
-    li:nth-child(6) .person{
-      margin-right: 0;
-    }
     .person{
       display: block;
       margin-bottom: $baseline;
@@ -901,16 +895,6 @@ footer{
 } // .no-borderradius
 
 /* @group media queries Group */
-@media only screen and (max-width: 1130px) {
-  .page-people {
-    .employees {
-      li:nth-child(6) .person{
-        margin-right: 8px;
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 650px) {
 [class*=columns]{
   width: 100%;
@@ -962,7 +946,7 @@ header{
 
   .slideshow {
     margin-top: -15px;
-    
+
     .slides_container {
       height: 330px;
       li {
@@ -1204,3 +1188,59 @@ only screen and (min-device-pixel-ratio : 1.5) {
     background-size: 142px 23px;
   }
 }
+
+/* Employee padding - changed based on screen size */
+// Not using it, as it gets pretty buggy between certain
+// screen widths
+// The tradeoff is that there is a gap on the right of each row
+
+// .page-people {
+//   .employees {
+//     // Allow employees rows to have 6 people by default.
+//     li:nth-child(6n) .person {
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 1134px) {
+//   .page-people {
+//     .employees {
+//       li:nth-child(6n) .person {
+//         margin-right: 30px;
+//       }
+//       li:nth-child(5n) .person {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 938px) {
+//   .page-people {
+//     .employees {
+//       li:nth-child(6n) .person,
+//       li:nth-child(5n) .person {
+//         margin-right: 30px;
+//       }
+//       li:nth-child(4n) .person {
+//         margin-right: 0px;
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 774px) {
+//   .page-people {
+//     .employees {
+//       li:nth-child(6n) .person,
+//       li:nth-child(5n) .person,
+//       li:nth-child(4n) .person {
+//         margin-right: 30px;
+//       }
+//       li:nth-child(3n) .person {
+//         margin-right: 0px;
+//       }
+//     }
+//   }
+// }
