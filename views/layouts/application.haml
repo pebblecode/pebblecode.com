@@ -1,0 +1,83 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+      %title= yield_content :title
+      %meta{:name => "description", :content => yield_content(:description)}
+      %meta{:name => "keywords", :content => yield_content(:keywords)}
+      %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "http://pebblecode.com/images/favicon.ico"}/
+
+      %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
+      
+      / commented out to test typekit
+      / %link{:href => "/fonts/meta.css", :rel => "stylesheet", :type => "text/css"}/
+      
+      / = css :app, :media => 'screen'
+
+      / typekit required jascript
+      <script type="text/javascript" src="http://use.typekit.com/dpm5rbg.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+      %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
+      = js :lib
+
+      %script{:type => "text/javascript"}
+        :plain
+          var $buoop = {vs:{i:6,f:3.5,o:10.6,s:3.2,n:9}}
+          $buoop.ol = window.onload;
+          window.onload=function(){
+           try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+           var e = document.createElement("script");
+           e.setAttribute("type", "text/javascript");
+           e.setAttribute("src", "http://browser-update.org/update.js");
+           document.body.appendChild(e);
+          }
+
+      %meta{:content => "width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;", :name => "viewport"}/
+  %body{:class => "page-#{@page_name}"}
+    %header.background-random
+      %nav
+        %a.logo{:href => "/"} pebble{code}
+        %ul
+          - nav_names = ["people", "work", "products", "thoughts"]
+          - nav_names.each do |nav_name|
+            %li{:class => "#{"nav-active" if @page_name == nav_name}"}
+              = surround "<span>{</span>", "<span>}</span>" do
+                %a{:href => "/#{nav_name}"}= "our #{nav_name}"
+
+    #wrap
+      = yield
+      #wrap-footer
+    %footer
+      %div
+        %ul#contact
+          %li.size0
+            T:
+            %a{:href => "tel:+44 20 3327 3940"} +44 (0) 20 3327 3940
+          %li.size0
+            E:
+            %a{:href => "mailto:hello@pebblecode.com"} hello@pebblecode.com
+          %li.size0.address
+            %a{:href => "/find-us"} find us
+        %ul#social
+          %li
+            %a#twitter{:href => "http://twitter.com/#!/pebblecode"} twitter
+          %li
+            %a#github{:href => "http://github.com/pebblecode/"} github
+          %li
+            %a#facebook{:href => "http://www.facebook.com/pebblecode"} facebook
+          %li
+            %a#google-plus{:href => "https://plus.google.com/113628709817662471448/posts"} G+
+    %script{:src => "/javascripts/script.js", :type => "text/javascript"}
+    :plain
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-26218261-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>

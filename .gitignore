@@ -6,6 +6,4 @@ logs
 nodemon-ignore
 
 public/stylesheets/style.styl
-Gemfile
-Gemfile.lock
-Rakefile
+.sass-cache
