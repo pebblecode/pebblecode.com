@@ -861,6 +861,14 @@ footer{
   }
   .page-people {
     .employees {
+      .row li {
+        float: left; // Need extra float, otherwise the elements flow in a jagged fashion
+        margin-bottom: $baseline;
+
+        a {
+          margin-bottom: 0; // Cancel out margin where it works
+        }
+      }
       .columns1 {
         width: 135px;
         margin-left: 0;
