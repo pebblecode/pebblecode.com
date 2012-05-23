@@ -388,7 +388,7 @@ footer{
         &.slide1{
           background: $pink url("/images/zig-zag-6.gif") no-repeat center 0;
           h1:nth-child(2) {
-            line-height: 40px;
+            margin-top: -15px;
             margin-bottom: 38px;
           }
         }
