@@ -1000,6 +1000,10 @@ header{
   .case-study {
     padding-top: $baseline;
     margin-bottom: 0;
+    &:nth-child(4) {
+      padding-top: 0;
+      margin-bottom: -$baseline;
+    }
     .row {
       margin-top: $baseline;
       margin-bottom: 0;
