@@ -676,6 +676,9 @@ footer{
 /* @group thoughts */
 
 .page-thoughts{
+  h1 {
+    font-weight: bold;
+  }
   #thoughts-heading{
     margin-top: $baseline*3;
   }
