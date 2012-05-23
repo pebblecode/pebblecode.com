@@ -121,26 +121,33 @@
   - random_index = rand(people.length)
   - people.each_with_index do |p, index|
     %section{:id => "#{("tumblr-" + p[:tumblr_name]) if p[:tumblr_name]}", :class => "row person-row #{"active" if random_index == index}"}
-      .columns2.frame
+      / Shown on small screens
+      .columns2.frame.top
         .img
           / Height is same as .img height
           %img{:src => p[:image], :height => 264}/
       %article.columns4
-        %h2.size3.name= p[:name]
-        %h3.size2= p[:title]
-        %p= RDiscount.new(p[:description]).to_html
-        - if p[:website]
-          %p.link
-            website:
-            %a{:href => p[:website], :target => "_blank"}= p[:website]
-        - if p[:twitter]
-          %p.link
-            twitter:
-            %a{:href => p[:twitter], :target => "_blank"}= p[:twitter]
-        - if p[:github]
-          %p.link
-            github:
-            %a{:href => p[:github], :target => "_blank"}= p[:github]
+        .inner-wrapper
+          %h2.size3.name= p[:name]
+          %h3.size2= p[:title]
+          %p= RDiscount.new(p[:description]).to_html
+          - if p[:website]
+            %p.link
+              website:
+              %a{:href => p[:website], :target => "_blank"}= p[:website]
+          - if p[:twitter]
+            %p.link
+              twitter:
+              %a{:href => p[:twitter], :target => "_blank"}= p[:twitter]
+          - if p[:github]
+            %p.link
+              github:
+              %a{:href => p[:github], :target => "_blank"}= p[:github]
+      / Shown on large screens
+      .columns2.frame.bottom
+        .img
+          / Height is same as .img height
+          %img{:src => p[:image], :height => 264}/
 .employees
   .row
     .columns6
