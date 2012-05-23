@@ -897,7 +897,7 @@ footer{
   .page-people {
     .employees {
       li:nth-child(6) .person{
-        margin-right: 30px;
+        margin-right: 8px;
       }
     }
   }
@@ -1000,6 +1000,10 @@ header{
   .case-study {
     padding-top: $baseline;
     margin-bottom: 0;
+    &:nth-child(4) {
+      padding-top: 0;
+      margin-bottom: -$baseline;
+    }
     .row {
       margin-top: $baseline;
       margin-bottom: 0;
@@ -1130,6 +1134,7 @@ header{
         margin-right: 8px;
         margin-left: 8px;
         margin-bottom: $baseline;
+        min-width: 125px;
       p{
         margin-bottom: -5px;
       }
