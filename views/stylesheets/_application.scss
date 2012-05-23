@@ -897,7 +897,7 @@ footer{
   .page-people {
     .employees {
       li:nth-child(6) .person{
-        margin-right: 30px;
+        margin-right: 8px;
       }
     }
   }
@@ -1130,6 +1130,7 @@ header{
         margin-right: 8px;
         margin-left: 8px;
         margin-bottom: $baseline;
+        min-width: 125px;
       p{
         margin-bottom: -5px;
       }
