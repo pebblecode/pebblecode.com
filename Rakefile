@@ -74,6 +74,11 @@ namespace "shipit" do
     Rake::Task["deploy:branch"].invoke(args.branch)
   end
 
+  desc "Merge and push staging branch to github, then deploy to http://pebblecode-staging.herokuapp.com/"
+  task :staging do
+    Rake::Task["shipit:branch"].invoke("staging")
+  end
+
   desc "Merge and push production branch to github, then deploy to http://pebblecode.com/"
   task :production do
     Rake::Task["shipit:branch"].invoke("production")
