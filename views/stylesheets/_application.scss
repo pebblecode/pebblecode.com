@@ -825,6 +825,10 @@ footer{
     margin-bottom: $baseline;
     .frame {
       padding: 10px 10px 5px;
+      #map{
+        width: 100%;
+        height: $baseline*18;
+      }
     }
   }
   .row {
