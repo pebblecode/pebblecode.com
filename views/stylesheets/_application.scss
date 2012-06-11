@@ -237,6 +237,7 @@ header{
 
         span{
           color: $pink;
+          font-weight: bold;
         }
 
         a{
@@ -824,6 +825,10 @@ footer{
     margin-bottom: $baseline;
     .frame {
       padding: 10px 10px 5px;
+      #map{
+        width: 100%;
+        height: $baseline*18;
+      }
     }
   }
   .row {
@@ -1175,6 +1180,40 @@ header{
 }
 
 } /* media-q end */
+
+
+/* Fix for homepage text going out of slide. */
+@media only screen and (max-width: 770px) {
+
+
+.slides_container {
+  .size4{
+    font-size: 38px;
+    line-height: $baseline*2;
+  }
+
+  height: 330px;
+  li {
+    &.slide1 {
+      h1:first-child {
+        margin-bottom: 0;
+      }
+      h1:nth-child(2) {
+        margin-top: 0;
+        font-size: 35px;
+        line-height: $baseline*2;
+        margin-bottom: $baseline;
+      }
+    }
+  }
+  .size2 {
+    font-size: 24px;
+    line-height: $baseline*1.5 ;
+  }
+}
+
+}
+
 
 /* @end */
 
