@@ -46,18 +46,15 @@ Set up deployment branches with
 
 ### Push to staging
 
+The staging site is at http://pebblecode-staging.herokuapp.com/. It requires authentication with username `pebblecode`, and password `pebblecode`.
+
 To deploy master branch to staging
 
 	rake shipit:production
 
-To manually deploy an arbitrary branch eg, `version-2` branch
+To manually deploy an arbitrary branch to staging eg, `version-2` branch
 
-  git checkout version-2
-  git checkout staging
-  git merge version-2
-  git push origin staging:staging
-  git push staging version-2:master
-  git checkout version-2
+  rake shipit:temp[version-2,staging]
 
 #### Initial set up
 
@@ -80,6 +77,39 @@ To turn on/off maintenance mode on heroku
 
     heroku maintenance:on --app [app]
     heroku maintenance:off --app [app]
+
+## Setting up the Tumblr blog
+
+To edit the tumblr blog:
+
+1. Edit the local file at `/views/tumblr_template/template.html`. This file is in the [tumblr template format](http://www.tumblr.com/docs/en/custom_themes), and special tumblr specific tags. Note the section with `id="staging-message"`, which shows the yellow staging message on the top. Remove this for the production site.
+1. Copy and paste the file into the tumblr edit html section, after clicking the `Edit Html` button on:
+
+ * Staging: http://www.tumblr.com/customize/pebblecodestaging
+ * Production: http://www.tumblr.com/customize/pebblecode
+
+   Also remember to add in the Disqus code, otherwise the comments won't show. Sometimes the disqus code disappears after editing for some strange reason. The Disqus shortcodes are:
+
+ * Staging: pebblecodestaging
+ * Production: pebblecodeblog
+
+1. **(Temporary)** Note that currently **all** references to files (images/css/javascript) are at the location `http://pebblecode.com/v2/`. These files are on the `master` branch. To upload these files:
+
+ * Switch to the `master` branch (or even better, create new local folder with the `master` branch as default)
+ * Put the files to the `/public/v2` folder.
+   For css files, because sass can't be generated until the `version-2` switch over, the best way to get the plain css is to load the `version-2` site, and copy and paste the generated file into the `master` branch css file.
+ * Commit the changes
+ * Merge with `production` branch
+ * `git push heroku production:master` (Assuming you've added the remote branch: `git remote add heroku git@heroku.com:pebblecode.git`)
+
+1. There is also the `/views/thoughts.erb` file, which is the expanded html version of `/views/tumblr_template/template.html` (without the tumblr tags). You should edit this file manually, as copying pasting from the tumblr template file won't show it properly.
+   This is there mainly for testing purposes, when viewing the styles locally.
+1. The tumblr blog can be viewed at
+
+ * Staging: http://www.tumblr.com/blog/pebblecodestaging (password: `pebblecodestaging`)
+ * Production: http://www.tumblr.com/blog/pebblecode
+1. Remember to push the changes to git, so that others have the changed template. **If someone replaces the template on tumblr, there is no version history on tumblr!**
+
 
 [1]: http://www.sinatrarb.com/
 [2]: http://github.com/rtomayko/shotgun/

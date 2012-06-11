@@ -1,39 +1,32 @@
-%section.row
-  .columns6.strapline
-    %h1.size4 pebble stapline
-    %h1.size4 - yeah we the shit -
+- content_for :title do
+  We design and develop elegant software and apps | pebble code
+- content_for :description do
+  Software and app design and development. Agile approach, technical experts, front-end design. We turn complicated problems into simple, beautiful apps!
+- content_for :keywords do
+  pebble, pebble code, software, app, web app, design, development, beautiful, agile, software, simple, London, technical, Vistazo, Tricklr
+
 %section.row
   .columns6
     .slideshow
       .frame
-        .slides_container
-          .slide1
-            %h1.size4 Slide one
-          .slide2
-            %h1.size4 Slide two
-          .slide3
-            %h1.size4 Slide three
-          .slide4
-            %h1.size4 Slide four
-          .slide5
-            %h1.size4 Slide five
-          .slide6
-            %h1.size4 Slide six
+        %ul.slides_container
+          %li.slide1
+            %h1.size4 Expert coding. 
+            %h1.size4 Elegant design.
+            %h2.size2 We build software that's a joy to use.
+          %li.slide2
+            %h1.size4 We speak many languages
+            %h2.size2 Our expertise includes F#, C#, Ruby, Rails, Node.js, JavaScript and HTML5.
+          %li.slide3
+            %h1.size4 Apps we've built
+            %h2.size2 We've built some apps to make our lives easier - try them in your business too. <a href="/products">Tricklr</a>. <a href="/products">Vistazo</a>.
+
 %section.row
   %article.columns2
-    %h2.size2 Newest work : Client / Product
-    %p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-    %a{:href => "http://"} read more...
+    %h2.size2 Join the team
+    %p We work with cutting-edge technology on technically difficult problems. If you want to work with first-rate developers in a stimulating environment, <a href="mailto:jobs@pebblecode.com">contact us.</a>
   %article.columns2
-    %h2.size2 Jobs : Node book
-    %p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-    %a{:href => "http://"} read more...
-  %section.columns2
-    %article.blog-snipet
-      %h2.size2 Blog post one
-      %p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      %a{:href => "http://"} read more...
-    %article.blog-snipet
-      %h2.size2 Blog post two
-      %p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      %a{:href => "http://"} read more...
+    %h2.size2 What's new?
+    %p The latest version of Vistazo - an easy app to help you manage your team - is now available. <a href="http://vistazoapp.com/">Learn more and get started instantly.</a>
+  %section#recent-posts.columns2
+    / Filled in using js

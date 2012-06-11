@@ -47,8 +47,8 @@ pre {
 
 /* @group typography */
 
-h1,h2,h3,h4,h5,h6,h7,h8{
-  font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+h1,h2,h3,h4,h5,h6{
+  font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: hsl(0, 0%, 55%);
 }
 
@@ -212,15 +212,20 @@ header{
     max-width: $grid-max-width;
     margin: 0 auto;
 
-    img{
+    .logo{
       float: left;
       margin-top: 10px;
       margin-left: 12px;
+      display: block;
+      width: 142px;
+      height: 23px;
+      text-indent: -9999px;
+      background-image: url('../images/logo.png');
     }
 
     ul{
       float: right;
-      font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
       font-size: 18px;
       line-height: 38px;
       letter-spacing: 1px;
@@ -231,7 +236,7 @@ header{
         margin-left: 10px;
 
         span{
-          color: transparent;
+          color: $pink;
         }
 
         a{
@@ -268,7 +273,7 @@ footer{
   overflow: hidden;
   clear: both;
   position: relative;
-  height: $baseline*3;
+  height: 80px;
 
   div{
     width: 100%;
@@ -279,6 +284,12 @@ footer{
       margin-top: 16px;
       margin-left: 12px;
       float: left;
+
+      .address{
+        a{
+          margin-left: 14px;
+        }
+      }
 
       li.size0{
         color: hsl(0, 0%, 70%);
@@ -306,7 +317,7 @@ footer{
           height: 20px;
           width: 20px;
           text-indent: 99999px;
-          margin: 26px 0 0 5px;
+          margin: 32px 0 0 5px;
           background-image: url('/images/social.png');
           background-color: hsl(0, 0%, 85%);
 
@@ -315,12 +326,16 @@ footer{
           }
         }
 
-        #twitter{
-          background-position-x: 20px;
+        #facebook{
+          background-position: 40px 0;
         }
-        
+
+        #github{
+          background-position: 60px 0;
+        }
+
         #google-plus{
-          background-position-x: 40px;
+          background-position: 20px 0;
         }
       }
     }
@@ -330,62 +345,78 @@ footer{
 
 /* @group homepage */
 
-.homepage{
-  .strapline{
+.page-homepage {
+  .row:first-child{
     margin-top: $baseline*3;
-    text-align: center;
-  }
-
-  .row:nth-child(2){
     margin-bottom: $baseline*2;
   }
 
-  .slideshow{
+  .slideshow {
     @include box-sizing(border-box);
 
     .slides_container {
       height: $baseline*18;
+
+      // ".slides_container li" width is dynamically adjusted using js (so you can center images)
+      li {
+        height: $baseline*18;
+        width: 100%;
+
+        h1, h2, ul{
+          color: white;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+
+        a {
+          color: white;
+          text-decoration: underline;
+          &:hover {
+            color: white;
+          }
+        }
+
+        ul {
+          font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+          color: white;
+        }
+
+        h1{
+          margin-top: $baseline;
+          margin-bottom: $baseline;
+        }
+        &.slide1{
+          background: $pink url("/images/zig-zag-6.gif") no-repeat center 0;
+          h1:nth-child(2) {
+            margin-top: -15px;
+            margin-bottom: 38px;
+          }
+        }
+        &.slide2{
+          background: $green url("/images/zig-zag-2.gif") no-repeat center 0;
+        }
+        &.slide3{
+          background: $green url("/images/zig-zag-4.gif") no-repeat center 0;
+        }
+      }
     }
 
-    h1{
-      color: white;
-      margin: $baseline*6 9.5%;
-    }
-    .slide1,.slide2,.slide3,.slide4,.slide5,.slide6{
-      height: $baseline*18;
-      width: 100%;
-    }
-    .slide1{
-      background-color: $pink;
-    }
-    .slide2{
-      background-color: $green;
-    }
-    .slide3{
-      background-color: $orange;
-    }
-    .slide4{
-      background-color: $aqua;
-    }
-    .slide5{
-      background-color: $purple;
-    }
-    .slide6{
-      background-color: $blue;
-    }
     .pagination{
-      width: 132px;
+      width: 69px;
       margin: $baseline auto;
-      li a{
+      li {
         float: left;
-        color: transparent;
-        width: 12px;
-        height: 12px;
-        margin-left:10px;
-        border: 6px solid $pink;
+        a {
+          display: block;
+          color: transparent;
+          width: 12px;
+          height: 12px;
+          margin-left:10px;
+          border: 6px solid $pink;
 
-        @include box-sizing(border-box);
-        @include border-radius(10px);
+          @include box-sizing(border-box);
+          @include border-radius(10px);
+        }
       }
 
       .current a{
@@ -396,32 +427,20 @@ footer{
         border-color: $green;
       }
       li:nth-child(3) a{
-        border-color: $orange;
-      }
-      li:nth-child(4) a{
-        border-color: $aqua;
-      }
-      li:nth-child(5) a{
-        border-color: $purple;
-      }
-      li:nth-child(6) a{
         border-color: $blue;
       }
     }
   }
 
-  .columns2{
-    h2{
+  article {
+    h2 {
       margin-bottom: $baseline;
     }
+  }
 
-    a{
-      margin-top: -$baseline;
-      display: block;
-    }
-
-    .blog-snipet{
-      margin-bottom: $baseline*2;
+  #recent-posts {
+    h2 {
+      margin-bottom: $baseline;
     }
   }
 }
@@ -429,44 +448,72 @@ footer{
 
 /* @group work */
 
-.work{
+.page-work {
 
-  .row:first-child{
+  .row:first-child {
+    margin-top: $baseline*2;
     margin-bottom: $baseline*2;
-    .columns3{
-      margin-top: $baseline*3;
+    .columns6 {
+      margin-left: 0;
     }
-    p{
-      padding-top: $baseline*3;
+    p:first-child {
+      padding-top: $baseline;
+      margin-bottom: 0;
+      max-width: 700px;
     }
   }
 
-  .case-study{
+  .case-study {
 
-    hr{
+    hr {
       margin-bottom: $baseline*2;
     }
-    .row{
-      margin-bottom: $baseline;
+    .row {
+      margin-bottom: $baseline*3;
+      .frame {
+        .img {
+          height: $baseline*6;
+          padding-top: $baseline*2;
+          h2 {
+            width: 100%;
+            text-align: center;
+            color: white;
+          }
+          &.gaming {
+            background-image: url("/images/gaming_tile.png");
+          }
+          &.finace {
+            background-image: url("/images/finance_tile.png");
+          }
+          &.clarity {
+            background-image: url("/images/clarity_tile.png");
+          }
+        }
+      }
+      .columns3:nth-child(2) {
+        margin-left: 0;
+      }
     }
-    .img{
-      width: 100%;
-      height: $baseline*8;
-    }
-    h3{
-      margin-bottom: $baseline;
-    }
+  }
+
+  .work-contact {
+    margin-top: $baseline*2;
   }
 }
 /* @end */
 
 /* @group products */
 
-.products{
+.page-products{
 
   .row:first-child{
+    margin-top: $baseline*2;
+    margin-bottom: $baseline;
     .columns6{
-      margin-top: $baseline*3;
+      margin-left: 0;
+      p {
+        margin-top: $baseline;
+      }
     }
   }
 
@@ -479,12 +526,21 @@ footer{
       width: 100%;
       height: $baseline*9;
       background-color: $pink;
+      background-image: url("/images/tricklr.jpg");
+      background-position-x: 50%;
+    }
+    a{
+      color: $pink;
     }
   }
 
   .vistazo{
     .img{
       background-color: $blue;
+      background-image: url("/images/vistazo.jpg");
+    }
+    a{
+      color: $blue;
     }
   }
 
@@ -498,8 +554,11 @@ footer{
   }
 
   .open-source{
+    .columns6 {
+      margin-left: 0;
+    }
     p{
-      margin-top: $baseline*2;
+      margin-top: $baseline;
       margin-bottom: 0;
     }
   }
@@ -509,15 +568,10 @@ footer{
 
 /* @group people */
 
-.people{
-  .people-img{
-    .columns6{
-      margin-top: $baseline*3;
-      .img{
-        width: 100%;
-        height: $baseline*12;
-      }
-    }
+.page-people{
+  .headline {
+    margin-top: $baseline*2;
+    margin-bottom: $baseline;
   }
   .people-copy{
     margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
@@ -538,11 +592,30 @@ footer{
     hr{
       margin-bottom: $baseline;
     }
-    .img{
-      width: 100%;
-      height: $baseline*12;
-      text-align: center;
+
+    .frame { // Left float
+      width: 290px;
+      float: left;
+      margin-left: -100%;
+
+      &.top {
+        display: none; // Showing bottom image
+      }
+      .img{
+        height: $baseline*12;
+        text-align: center;
+      }
     }
+
+    article { // Right float
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      .inner-wrapper {
+        margin-left: 320px;
+      }
+    }
+
     h1 {
       margin-top: $baseline*2;
     }
@@ -562,16 +635,13 @@ footer{
     hr{
       margin-bottom: $baseline;
     }
-    li:first-child .person,
-    li:nth-child(7) .person {
-      margin-left: 0;
-    }
     .person{
       display: block;
       margin-bottom: $baseline;
-      margin-left: $column-gutter;
+      margin-right: 30px;
       // Need this for when names go over 2 lines
-      min-height: $baseline*10;
+      min-height: 205px;
+      min-width: 145px;
       &:hover {
         text-decoration: none;
       }
@@ -590,13 +660,25 @@ footer{
       }
     }
   }
+  .pebble-it{
+    padding: $baseline*2 0 $baseline;
+    .row{
+      margin-bottom: $baseline;
+    }
+    h1,a{
+      color: #009be8;
+    }
+  }
 }
 
 /* @end */
 
 /* @group thoughts */
 
-.thoughts{
+.page-thoughts{
+  h1 {
+    font-weight: bold;
+  }
   #thoughts-heading{
     margin-top: $baseline*3;
   }
@@ -689,10 +771,134 @@ footer{
 }
 /* @end */
 
+.page-404{
+  #wrap > .row:first-child {
+    padding-top: 106px;
+  }
+  .row{
+    margin-top: -20px;
+  }
+  .error-header{
+    text-align: center;
+  }
+  .error-copy{
+    margin-top: $baseline*2;
+  }
+}
+
+.page-json-api {
+  #wrap {
+    width: 960px;
+    margin-bottom: $baseline;
+
+    h1,h2,h3 {
+      margin-bottom: $baseline;
+    }
+
+    ol {
+      list-style: decimal;
+      margin-left: 2.5em;
+      font-weight: bold;
+    }
+
+    .row:first-child {
+      padding-top: $baseline*4;
+    }
+    .data-vis {
+      background-color: $pink;
+      height: $baseline*24;
+      width: 100%;
+    }
+    .documentation {
+      .columns6 {
+        margin-left: 0;
+        margin-bottom: $baseline;
+      }
+    }
+  }
+}
+
+.page-find-us {
+  .row:first-child {
+    margin-top: $baseline*3;
+    margin-bottom: $baseline;
+    .frame {
+      padding: 10px 10px 5px;
+    }
+  }
+  .row {
+    h1 {
+      margin-bottom: $baseline;
+    }
+    address {
+      margin-bottom: $baseline;
+    }
+    .contact {
+      a {
+        color: hsl(0, 0%, 55%);
+        display: block;
+        &:hover {
+          color: hsl(0, 0%, 50%);
+        }
+      }
+    }
+  }
+}
+
+// Mainly used to fix IE bugs
+.no-borderradius {
+  .columns2 {
+    width: $column-width*2 + $column-gutter - 3%;
+  }
+  .columns3 {
+    width: $column-width*3 + $column-gutter*2 - 3%;
+  }
+  .columns4 {
+    width: $column-width*4 + $column-gutter*3 - 3%;
+  }
+  .page-people {
+    .employees {
+      .row li {
+        float: left; // Need extra float, otherwise the elements flow in a jagged fashion
+        margin-bottom: $baseline;
+
+        a {
+          margin-bottom: 0; // Cancel out margin where it works
+        }
+      }
+      .columns1 {
+        width: 135px;
+        margin-left: 0;
+        margin-right: 30px;
+      }
+    }
+  }
+  .page-homepage {
+    .slideshow .pagination {
+      li {
+        a {
+          text-indent: -9999px;
+          height: 5px;
+          width: 5px;
+          border-width: 4px;
+        }
+
+        &.current a{
+          border-width: 2px;
+          height: 9px;
+          width: 9px;
+        }
+      }
+    }
+  } // .page-homepage .slideshow .slides_container .pagination
+
+  #recent-posts {
+    width: 31%;
+  }
+} // .no-borderradius
+
 /* @group media queries Group */
-
 @media only screen and (max-width: 650px) {
-
 [class*=columns]{
   width: 100%;
   margin-left: 0;
@@ -717,12 +923,12 @@ header{
   position: relative;
   height: $baseline*5 +8px;
   nav{
-    img{
+    .logo{
       float: left;
-      padding-top: $baseline +15px;
+      margin-top: 47px;
     }
     ul{
-      font-family: "meta-bold", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
       line-height: 18px;
       width: 50%;
       li{
@@ -736,130 +942,194 @@ header{
 }
 
 
-.homepage{
-  .strapline{
-    margin-top: -15px;
+.page-homepage {
+  .row:first-child{
+    margin-top: $baseline;
   }
-  .slideshow{
-    height: $baseline*8;
-    h1{
-      display: none;
+
+  .slideshow {
+    margin-top: -15px;
+
+    .slides_container {
+      height: 330px;
+      li {
+        &.slide1 {
+          h1:first-child {
+            margin-bottom: 0;
+          }
+          h1:nth-child(2) {
+            margin-top: 0;
+            font-size: 35px;
+            line-height: $baseline*2;
+            margin-bottom: $baseline;
+          }
+        }
+      }
+      .size2 {
+        font-size: 24px;
+        line-height: $baseline*1.5 ;
+      }
     }
   }
-  .columns2{
-    a{
+  .columns2 {
+    a {
       margin-bottom: $baseline*2;
     }
-    .blog-snipet{
-      margin-bottom: -$baseline;
+    .blog-snippet {
+
     }
   }
 }
 
 
-.work{
-  .row:first-child{
-    .columns3{
-      margin-top: -25px
+.page-work {
+  .row:first-child {
+    margin-top: 0;
+    .columns3 {
+      margin-top: -25px;
     }
-    p{
+    p {
       padding-top: $baseline +25px;
     }
   }
-  .case-study{
+  .case-study {
     padding-top: $baseline;
     margin-bottom: 0;
+    &:nth-child(4) {
+      padding-top: 0;
+      margin-bottom: -$baseline;
+    }
+    .row {
+      margin-top: $baseline;
+      margin-bottom: 0;
+      .columns3 {
+        margin-bottom: $baseline;
+      }
+      .frame {
+        .img {
+          height: $baseline*4;
+          padding-top: $baseline*2;
+          &.clarity {
+            height: $baseline*5;
+            padding-top: $baseline*1;
+          }
+        }
+      }
+
+    }
   }
-  .frame{
+  hr:nth-child(even) {
+    margin-top: $baseline;
+  }
+  .frame {
     margin-bottom: $baseline;
   }
-  h3{
+  h3 {
     font-size: 16px;
     line-height: $baseline;
   }
 }
 
 
-.products{
-  .row:first-child{
+.page-products {
+  .row:first-child {
+    margin-top: $baseline;
     .columns6{
       margin-top: -25px;
     }
   }
-  
-  .row:nth-child(2){
+
+  .row:nth-child(2) {
     margin-bottom: 0;
   }
-  
-  .frame{
+
+  .frame {
     margin-bottom: $baseline;
   }
-  h2{
+  h2 {
     margin-top: $baseline;
     margin-bottom: $baseline;
   }
-  hr{
+  hr {
     margin-bottom: $baseline;
   }
-  .open-source{
+  .open-source {
     p{
       margin-top: $baseline;
     }
   }
 }
 
-.people{
-  .people-img{
-    .columns6{
-      margin-top: -15px;
-      .img{
-        height: $baseline*8;
-      }
-    }
+.page-people {
+  .headline {
+    margin-top: 0;
   }
-  .people-copy{
+  .people-copy {
     margin-bottom: 0;
   }
-  #spotlight{
-    .row:first-child{
+  #spotlight {
+    .row:first-child {
       margin-bottom: $baseline;
     }
-    hr{
+    hr {
       margin-bottom: $baseline;
     }
-    .img{
+
+    .frame { // 100% row
+      width: auto;
+      float: none;
+      margin-left: 0;
+
+      &.top {
+        display: block; // Showing bottom image
+      }
+      &.bottom {
+        display: none; // Showing bottom image
+      }
+      .img{
+        width: 100%;
+      }
+    }
+
+    article { // Next row under image
       width: 100%;
-      height: $baseline*12;
+      float: none;
+      .inner-wrapper {
+        margin-left: 0;
+      }
     }
-    h2{
+
+    h1 {
+      margin-top: $baseline;
+    }
+    h2 {
       margin-top: $baseline;
       margin-bottom: $baseline;
     }
-    h3{
+    h3 {
       margin-bottom: $baseline;
       font-size: 16px;
       line-height: $baseline;
     }
-    .link{
+    .link {
       margin-bottom: 0;
       a{
         color: $green;
       }
     }
   }
-  
-  .employees{
-  .row:nth-child(3){
-    margin-bottom: 0;
-  }
-    .person{
-        width: 47.5%;
-        margin-left: 5%;
+
+  .employees {
+    li{
+      // width: 50%;
+    }
+    .person {
+        width: 40.5%;
         float: left;
+        margin-right: 8px;
+        margin-left: 8px;
         margin-bottom: $baseline;
-        &:nth-child(odd){
-          margin-left: 0;
-        } 
+        min-width: 125px;
       p{
         margin-bottom: -5px;
       }
@@ -868,25 +1138,112 @@ header{
 }
 
 
-.thoughts{
-  #thoughts-heading{
+.page-thoughts {
+  #thoughts-heading {
     margin-top: -15px;
   }
-  hr{
+  hr {
     margin-bottom: $baseline;
   }
-  .blog-post{
+  .blog-post {
     margin-bottom: $baseline*3;
-    .img{
+    .img {
       background: $orange;
       height: $baseline*8;
     }
   }
-  .blog-sidebar{
+  .blog-sidebar {
     display: none;
+  }
+}
+
+.page-address {
+  .size2 {
+    font-size: 16px;
+    line-height: $baseline;
+  }
+}
+
+.page-find-us {
+  .size2 {
+    font-size: 16px;
+    line-height: $baseline;
+  }
+  .row:first-child {
+    margin-top: $baseline;
   }
 }
 
 } /* media-q end */
 
 /* @end */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  #social li a {
+    background-image: url('../images/social@2x.png') !important;
+    background-size: 80px 20px;
+  }
+
+  .logo{
+    background-image: url('../images/logo@2x.png') !important;
+    background-size: 142px 23px;
+  }
+}
+
+/* Employee padding - changed based on screen size */
+// Not using it, as it gets pretty buggy between certain
+// screen widths
+// The tradeoff is that there is a gap on the right of each row
+
+// .page-people {
+//   .employees {
+//     // Allow employees rows to have 6 people by default.
+//     li:nth-child(6n) .person {
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 1134px) {
+//   .page-people {
+//     .employees {
+//       li:nth-child(6n) .person {
+//         margin-right: 30px;
+//       }
+//       li:nth-child(5n) .person {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 938px) {
+//   .page-people {
+//     .employees {
+//       li:nth-child(6n) .person,
+//       li:nth-child(5n) .person {
+//         margin-right: 30px;
+//       }
+//       li:nth-child(4n) .person {
+//         margin-right: 0px;
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 774px) {
+//   .page-people {
+//     .employees {
+//       li:nth-child(6n) .person,
+//       li:nth-child(5n) .person,
+//       li:nth-child(4n) .person {
+//         margin-right: 30px;
+//       }
+//       li:nth-child(3n) .person {
+//         margin-right: 0px;
+//       }
+//     }
+//   }
+// }
