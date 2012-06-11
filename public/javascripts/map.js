@@ -1,6 +1,6 @@
 function load(){
 
-  var point = new google.maps.LatLng(51.48285265767117, -0.11863946914672852);
+  var point = new google.maps.LatLng(51.4860604, -0.118939);
 
   var myMapOptions = {
     zoom: 15,
