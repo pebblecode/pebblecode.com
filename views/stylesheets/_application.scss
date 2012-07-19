@@ -645,6 +645,10 @@ footer{
       width: 45%;
       margin-left: 0;
       margin-right: 5%;
+
+      &:hover{
+        text-decoration: none;
+      }
       
       .img{
         width: 100%;
