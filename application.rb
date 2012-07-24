@@ -78,6 +78,33 @@ get '/thoughts' do
   end
 end
 
+############################################################
+# Olympic data visualisation
+############################################################
+
+get '/stylesheets/olympic-data-vis.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  scss :'stylesheets/olympic-data-vis'
+end
+
+get '/olympic-data-vis' do
+  @page_name = "olympic-data-vis"
+  haml :"olympic-data-vis", :layout => :'layouts/application'
+end
+
+# Get an arbitrary path
+get '/get' do
+  url_path = params["url"]
+  return "Error" if url_path.empty?
+
+  uri = URI.parse(url_path)
+  response = Net::HTTP.get_response uri
+
+  response.body
+end
+
+############################################################
+
 get '/:page' do
   protected! if settings.environment == "staging"
 

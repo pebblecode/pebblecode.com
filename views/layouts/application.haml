@@ -8,10 +8,11 @@
       %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "http://pebblecode.com/images/favicon.ico"}/
 
       %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
-      
+      = yield_content :css
+
       / commented out to test typekit
       / %link{:href => "/fonts/meta.css", :rel => "stylesheet", :type => "text/css"}/
-      
+
       / = css :app, :media => 'screen'
 
       / typekit required jascript
@@ -24,6 +25,7 @@
         / add google maps api.
         %script{:src => "http://maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
       = js :lib
+      = yield_content :js_lib
 
       %script{:type => "text/javascript"}
         :plain
@@ -73,6 +75,7 @@
           %li
             %a#google-plus{:href => "https://plus.google.com/113628709817662471448/posts"} G+
     %script{:src => "/javascripts/script.js", :type => "text/javascript"}
+    = yield_content :script_js
 
     / add js for google maps api. 
     %script{:src => "/javascripts/map.js", :type => "text/javascript"}
