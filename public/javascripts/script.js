@@ -159,7 +159,7 @@ $(document).ready(function() {
   function populateRecentPosts(elemSel) {
     var MAX_POSTS = 3;
 
-    var tumblrApiUrl = _.template("http://blog.pebblecode.com/api/read/json?num=<%= maxPosts %>&callback=?");
+    var tumblrApiUrl = _.template("http://pebblecode.tumblr.com/api/read/json?num=<%= maxPosts %>&callback=?");
     var tumblrUrl = tumblrApiUrl({ maxPosts: MAX_POSTS });
 
     var recentPostTemplate = _.template(" \
