@@ -21,9 +21,6 @@
 
       %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
 
-      - if @page_name == "find-us"
-        / add google maps api.
-        %script{:src => "http://maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
       = js :lib
       = yield_content :js_lib
 
@@ -77,8 +74,6 @@
     %script{:src => "/javascripts/script.js", :type => "text/javascript"}
     = yield_content :script_js
 
-    / add js for google maps api. 
-    %script{:src => "/javascripts/map.js", :type => "text/javascript"}
     :plain
       <script type="text/javascript">
         var _gaq = _gaq || [];

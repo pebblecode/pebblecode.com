@@ -4,8 +4,12 @@
   See where in London pebble code is based, get a map and view full contact details for this software development company.
 - content_for :keywords do
   pebble, pebble code, contact, address, details, Vauxhall, street, email, map, find us, welcome, tea, meet, office
-
-
+- content_for :js_lib do
+  / add google maps api.
+  %script{:src => "http://maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
+- content_for :script_js do
+  / add js for google maps api.
+  %script{:src => "/javascripts/map.js", :type => "text/javascript"}
 
 
 %section.row
