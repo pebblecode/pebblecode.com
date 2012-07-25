@@ -9,6 +9,7 @@ require 'compass'
 require 'sinatra/assetpack'
 require 'rdiscount'
 require 'sinatra/content_for'
+require 'newrelic_rpm'
 
 helpers Sinatra::Partials
 require_relative 'helpers/init'
