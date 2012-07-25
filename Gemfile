@@ -16,6 +16,9 @@ gem 'rdiscount'  # For markdown usage
 # For production deployment
 gem 'heroku'
 
+# New relic
+gem 'newrelic_rpm'
+
 group :development, :test do
   # Servers
   gem 'shotgun'
