@@ -19,7 +19,7 @@ set :root, File.dirname(__FILE__)
 set :environment, ENV["RACK_ENV"] || "development"
 # set :blog_url, "http://blog.pebblecode.com"
 # Use tumblr url for now, while dns propagates
-set :blog_url, "http://pebblecode.tumblr.com"
+set :blog_url, "http://blog.pebblecode.com"
 
 configure do
   Compass.configuration do |config|
