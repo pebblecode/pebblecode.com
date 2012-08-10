@@ -18,6 +18,14 @@ body{
   @include box-sizing(border-box);
 }
 
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
 hr{
   height: 3px;
   border: none;
