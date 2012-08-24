@@ -14,7 +14,8 @@ $(document).ready(function() {
     eyko: "Vincent Mart&iacute;nez",
     markdurrant: "Mark Durrant",
     danielrbradley: "Daniel Bradley",
-    mattward: "Matt Ward"
+    mattward: "Matt Ward",
+    andreamis1: "Andrea Miskulin"
   };
   var tumblrCssPrefix = "tumblr-";
 
