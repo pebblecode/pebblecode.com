@@ -15,7 +15,8 @@ $(document).ready(function() {
     markdurrant: "Mark Durrant",
     danielrbradley: "Daniel Bradley",
     mattward: "Matt Ward",
-    andreamis1: "Andrea Miskulin"
+    andreamis1: "Andrea Miskulin",
+    akashchopra: "Akash Chopra"
   };
   var tumblrCssPrefix = "tumblr-";
 
