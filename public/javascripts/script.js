@@ -98,7 +98,7 @@ $(document).ready(function() {
   });
 
   randColors('.blog-post', function(obj, randColor) {
-    $("h2, h3, a", obj).addClass(randColor);
+    $("h2, h3, h4, a", obj).addClass(randColor);
     $(".img, .comments a", obj).addClass(randColor + "-background");
     $(".blog-content", obj).addClass(randColor + "-border");
   });
