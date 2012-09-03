@@ -691,6 +691,18 @@ footer{
     margin-bottom: $baseline*2;
   }
   .blog-post{
+
+    blockquote{
+      font-style: italic;
+      margin-bottom: $baseline*2;
+      padding: 0 5%;
+      text-indent: -7px;
+
+      &:before, &:after{
+        content: '"';
+      }
+    }
+
     ol, ul {
       margin-bottom: 1.5em;
       list-style: disc;
