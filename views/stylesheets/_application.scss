@@ -798,6 +798,21 @@ footer{
 }
 /* @end */
 
+.page-pebbles-good-code{
+  h1{
+    @extend .size4;
+    margin: $baseline*3 0 $baseline*2;
+    text-align: center;
+    color: $pink;
+  }
+
+  h3{
+    @extend .size2;
+    margin-bottom: $baseline;
+    color: $pink;
+  }
+}
+
 .page-404{
   #wrap > .row:first-child {
     padding-top: 106px;
