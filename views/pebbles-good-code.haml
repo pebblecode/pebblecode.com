@@ -22,26 +22,27 @@
     %p We don&rsquo;t really know this yet.
     %h3 FAQ
     %p for smaller questions
-    %h3 Aplication
 
     %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST"}
 
-      .ss-form-entry
+      %h3 Aplication
+
+      .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_0"}
           Your organisations name
         %input#entry_0.ss-q-short{:name => "entry.0.single", :type => "text", :value => ""}/
 
-      .ss-form-entry
+      .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_1"}
           Your organisations website
         %input#entry_1.ss-q-short{:name => "entry.1.single", :type => "text", :value => ""}/
 
-      .ss-form-entry
+      .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_2"}
           Your name
         %input#entry_2.ss-q-short{:name => "entry.2.single", :type => "text", :value => ""}/
 
-      .ss-form-entry
+      .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_3"}
           Your email
         %input#entry_3.ss-q-short{:name => "entry.3.single", :type => "text", :value => ""}/

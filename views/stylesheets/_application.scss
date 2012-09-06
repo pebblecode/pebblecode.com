@@ -817,6 +817,15 @@ footer{
   }
 }
 
+#ss-form{
+  max-width: 640px;
+  margin: 0 auto;
+
+  h3{
+    text-align: center;
+  }
+}
+
 .ss-form-entry{
   margin-bottom: $baseline;
   text-align: center;
@@ -831,6 +840,11 @@ footer{
 .ss-q-long,
 .ss-q-short{
   width: 100%;
+}
+
+.ss-form-entry-short{
+  max-width: 450px;
+  margin: 0 auto $baseline;
 }
 
 input,
@@ -848,6 +862,8 @@ textarea{
   height: 30px;
   width: 100%;
   font-size: 18px;
+  margin: 0 auto;
+  max-width: 400px;
 
   &:active{
     background: darken($pink,  15);
