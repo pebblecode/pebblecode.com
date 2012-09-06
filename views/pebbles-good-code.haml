@@ -20,76 +20,48 @@
     %p Charities and nonprofits.
     %h3 Application process
     %p We don&rsquo;t really know this yet.
-    %h3 Maybe some kind of FAQ for smaller questions
-    %h2 Aplication
-    %p application forms go here.
-    .ss-form
+    %h3 FAQ
+    %p for smaller questions
+    %h3 Aplication
+
     %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST"}
-      %br
-        .errorbox-good
-          .ss-item.ss-item-required.ss-text
-            .ss-form-entry
-              %label.ss-q-title{:for => "entry_0"}
-                Your organisations name
-                %span.ss-required-asterisk *
-              %label.ss-q-help{:for => "entry_0"}
-              %input#entry_0.ss-q-short{:name => "entry.0.single", :type => "text", :value => ""}/
-        %br
-          .errorbox-good
-            .ss-item.ss-item-required.ss-text
-              .ss-form-entry
-                %label.ss-q-title{:for => "entry_1"}
-                  Your organisations website
-                  %span.ss-required-asterisk *
-                %label.ss-q-help{:for => "entry_1"}
-                %input#entry_1.ss-q-short{:name => "entry.1.single", :type => "text", :value => ""}/
-          %br
-            .errorbox-good
-              .ss-item.ss-item-required.ss-text
-                .ss-form-entry
-                  %label.ss-q-title{:for => "entry_2"}
-                    Your name
-                    %span.ss-required-asterisk *
-                  %label.ss-q-help{:for => "entry_2"}
-                  %input#entry_2.ss-q-short{:name => "entry.2.single", :type => "text", :value => ""}/
-            %br
-              .errorbox-good
-                .ss-item.ss-item-required.ss-text
-                  .ss-form-entry
-                    %label.ss-q-title{:for => "entry_3"}
-                      Your email
-                      %span.ss-required-asterisk *
-                    %label.ss-q-help{:for => "entry_3"}
-                    %input#entry_3.ss-q-short{:name => "entry.3.single", :type => "text", :value => ""}/
-              %br
-                .errorbox-good
-                  .ss-item.ss-item-required.ss-paragraph-text
-                    .ss-form-entry
-                      %label.ss-q-title{:for => "entry_4"}
-                        Organisation description
-                        %span.ss-required-asterisk *
-                      %label.ss-q-help{:for => "entry_4"} Tell us a little bit about your organisation. (max 150 words)
-                      %textarea#entry_4.ss-q-long{:cols => "75", :name => "entry.4.single", :rows => "8"}
-                %br
-                  .errorbox-good
-                    .ss-item.ss-item-required.ss-paragraph-text
-                      .ss-form-entry
-                        %label.ss-q-title{:for => "entry_5"}
-                          Idea / problem description
-                          %span.ss-required-asterisk *
-                        %label.ss-q-help{:for => "entry_5"} Tell us a little about your idea or problem. (max 150 words)
-                        %textarea#entry_5.ss-q-long{:cols => "75", :name => "entry.5.single", :rows => "8"}
-                  %br
-                    .errorbox-good
-                      .ss-item.ss-paragraph-text
-                        .ss-form-entry
-                          %label.ss-q-title{:for => "entry_7"}
-                            How did you find out about this opportunity?
-                          %label.ss-q-help{:for => "entry_7"}
-                          %textarea#entry_7.ss-q-long{:cols => "75", :name => "entry.7.single", :rows => "8"}
-                    %br
-                      %input{:name => "pageNumber", :type => "hidden", :value => "0"}
-                        %input{:name => "backupCache", :type => "hidden", :value => ""}
-                          .ss-item.ss-navigate
-                            .ss-form-entry
-                              %input{:name => "submit", :type => "submit", :value => "Submit"}/
+
+      .ss-form-entry
+        %label.ss-q-title{:for => "entry_0"}
+          Your organisations name
+        %input#entry_0.ss-q-short{:name => "entry.0.single", :type => "text", :value => ""}/
+
+      .ss-form-entry
+        %label.ss-q-title{:for => "entry_1"}
+          Your organisations website
+        %input#entry_1.ss-q-short{:name => "entry.1.single", :type => "text", :value => ""}/
+
+      .ss-form-entry
+        %label.ss-q-title{:for => "entry_2"}
+          Your name
+        %input#entry_2.ss-q-short{:name => "entry.2.single", :type => "text", :value => ""}/
+
+      .ss-form-entry
+        %label.ss-q-title{:for => "entry_3"}
+          Your email
+        %input#entry_3.ss-q-short{:name => "entry.3.single", :type => "text", :value => ""}/
+
+      .ss-form-entry
+        %label.ss-q-title{:for => "entry_4"}
+          Organisation description
+        %label.ss-q-help{:for => "entry_4"} Tell us a little bit about your organisation. (max 150 words)
+        %textarea#entry_4.ss-q-long{:cols => "75", :name => "entry.4.single", :rows => "8"}
+
+      .ss-form-entry
+        %label.ss-q-title{:for => "entry_5"}
+          Idea / problem description
+        %label.ss-q-help{:for => "entry_5"} Tell us a little about your idea or problem. (max 150 words)
+        %textarea#entry_5.ss-q-long{:cols => "75", :name => "entry.5.single", :rows => "8"}
+
+      .ss-form-entry
+        %label.ss-q-title{:for => "entry_7"}
+          How did you find out about this opportunity?
+        %textarea#entry_7.ss-q-long{:cols => "75", :name => "entry.7.single", :rows => "8"}
+    
+      .ss-form-entry
+        %input{:name => "submit", :type => "submit", :value => "Submit"}/
