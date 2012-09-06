@@ -711,6 +711,10 @@ footer{
       &:before, &:after{
         content: '"';
       }
+
+      p{
+        display: inline;
+      }
     }
 
     ol, ul {
