@@ -798,6 +798,11 @@ footer{
 }
 /* @end */
 
+
+
+// =================================================================
+// §GOOD-CODE
+// =================================================================
 .page-pebbles-good-code{
   h1{
     @extend .size4;
@@ -811,6 +816,47 @@ footer{
     color: $pink;
   }
 }
+
+.ss-form-entry{
+  margin-bottom: $baseline;
+  text-align: center;
+}
+
+.ss-q-help,
+.ss-q-long,
+.ss-q-short{
+  display: block;
+}
+
+.ss-q-long,
+.ss-q-short{
+  width: 100%;
+}
+
+input,
+textarea{
+  background-color: hsl(40, 40, 99.5);
+  border: 1px solid hsl(0,0,80);
+  min-height: 20px;
+}
+
+.submit{
+  background: $pink;
+  color: white;
+  border: none;
+  @include border-radius(5px);
+  height: 30px;
+  width: 100%;
+  font-size: 18px;
+
+  &:active{
+    background: darken($pink,  15);
+  }
+}
+
+// =================================================================
+
+
 
 .page-404{
   #wrap > .row:first-child {
