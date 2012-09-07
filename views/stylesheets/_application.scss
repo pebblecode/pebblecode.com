@@ -803,7 +803,8 @@ footer{
 // =================================================================
 // §GOOD-CODE
 // =================================================================
-.page-pebbles-good-code{
+.page-pebbles-good-code,
+.page-pebbles-good-code-form-complete{
   h1{
     @extend .size4;
     margin: $baseline*3 0 $baseline*2;
@@ -811,9 +812,18 @@ footer{
     color: $pink;
   }
 
-  h3{
+  h3,
+  h2{
     @extend .size2;
     color: $pink;
+  }
+}
+
+.page-pebbles-good-code-form-complete{
+  text-align: center;
+  
+  p{
+    margin-top: $baseline;
   }
 }
 
@@ -854,20 +864,30 @@ textarea{
   min-height: 20px;
 }
 
-.submit{
+.submit,
+.complete-links{
+  display: block;
   background: $pink;
   color: white;
   border: none;
+  font-weight: normal;
   @include border-radius(5px);
   height: 30px;
   width: 100%;
   font-size: 18px;
   margin: 0 auto;
   max-width: 400px;
+  cursor: pointer;
 
   &:active{
     background: darken($pink,  15);
+    color: white;
+    text-decoration: none;
   }
+}
+
+.complete-links{
+  padding-top: 8px;
 }
 
 // =================================================================
