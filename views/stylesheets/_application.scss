@@ -816,8 +816,11 @@ footer{
   h1{
     @extend .size4;
     margin: $baseline*3 0 $baseline*2;
-    text-align: center;
     color: $pink;
+  }
+
+  hr{
+    margin-bottom: $baseline*2;
   }
 
   .green{
@@ -831,10 +834,13 @@ footer{
     @extend .size2;
     color: $pink;
   }
+
+  .size0{
+    margin-bottom: 11px;
+  }
 }
 
 .page-pebbles-good-code-form-complete{
-  text-align: center;
   
   p{
     margin-top: $baseline;
@@ -843,17 +849,10 @@ footer{
 
 #ss-form{
   max-width: 640px;
-  margin: 0 auto;
-
-  h3,
-  p{
-    text-align: center;
-  }
 }
 
 .ss-form-entry{
   margin-bottom: $baseline;
-  text-align: center;
 }
 
 .ss-q-help,
@@ -868,8 +867,7 @@ footer{
 }
 
 .ss-form-entry-short{
-  max-width: 450px;
-  margin: 0 auto $baseline;
+  margin: 0 0 $baseline;
 }
 
 input,
@@ -879,8 +877,7 @@ textarea{
   min-height: 20px;
 }
 
-.submit,
-.complete-links{
+.submit{
   display: block;
   background: $pink;
   color: white;
@@ -891,7 +888,6 @@ textarea{
   width: 100%;
   font-size: 18px;
   margin: 0 auto;
-  max-width: 400px;
   cursor: pointer;
 
   &:hover{
