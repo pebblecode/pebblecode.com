@@ -415,7 +415,7 @@ footer{
           width: 12px;
           height: 12px;
           margin-left:10px;
-          border: 2px solid $orange;
+          border: 2px solid $pink;
 
           @include box-sizing(border-box);
           @include border-radius(12px);
@@ -427,7 +427,7 @@ footer{
       }
 
       li:nth-child(2) a{
-        border-color: $pink;
+        border-color: $orange;
       }
       li:nth-child(3) a{
         border-color: $green;
