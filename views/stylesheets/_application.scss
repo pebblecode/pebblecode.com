@@ -383,6 +383,11 @@ footer{
           margin-top: $baseline;
           margin-bottom: $baseline;
         }
+
+        &.slide-good{
+          background: $orange url("/images/zig-zag-1.gif") no-repeat center 0;
+        }
+
         &.slide1{
           background: $pink url("/images/zig-zag-6.gif") no-repeat center 0;
           h1:nth-child(2) {
@@ -400,7 +405,7 @@ footer{
     }
 
     .pagination{
-      width: 69px;
+      width: 89px;
       margin: $baseline auto;
       li {
         float: left;
@@ -410,7 +415,7 @@ footer{
           width: 12px;
           height: 12px;
           margin-left:10px;
-          border: 6px solid $pink;
+          border: 2px solid $orange;
 
           @include box-sizing(border-box);
           @include border-radius(10px);
@@ -418,13 +423,16 @@ footer{
       }
 
       .current a{
-        border-width: 3px;
+        border-width: 7px;
       }
 
       li:nth-child(2) a{
-        border-color: $green;
+        border-color: $pink;
       }
       li:nth-child(3) a{
+        border-color: $green;
+      }
+      li:nth-child(4) a{
         border-color: $blue;
       }
     }
