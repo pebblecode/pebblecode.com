@@ -812,6 +812,12 @@ footer{
     color: $pink;
   }
 
+  .green{
+    font-family: "gooddog-new";
+    display: inline-block;
+    @include rotate(-7.5deg);
+  }
+
   h3,
   h2{
     @extend .size2;
