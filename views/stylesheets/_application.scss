@@ -405,7 +405,7 @@ footer{
     }
 
     .pagination{
-      width: 89px;
+      width: 93px;
       margin: $baseline auto;
       li {
         float: left;
@@ -418,12 +418,12 @@ footer{
           border: 2px solid $orange;
 
           @include box-sizing(border-box);
-          @include border-radius(10px);
+          @include border-radius(12px);
         }
       }
 
       .current a{
-        border-width: 7px;
+        border-width: 5px;
       }
 
       li:nth-child(2) a{
