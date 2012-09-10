@@ -25,16 +25,17 @@
 
     %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST"}
 
-      %h3 Aplication
+      %h3 Application
+      %p all fields are required
 
       .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_0"}
-          Your organisations name
+          Your organizations name
         %input#entry_0.ss-q-short{:name => "entry.0.single", :type => "text", :value => ""}/
 
       .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_1"}
-          Your organisations website
+          Your organizations website
         %input#entry_1.ss-q-short{:name => "entry.1.single", :type => "text", :value => ""}/
 
       .ss-form-entry.ss-form-entry-short
@@ -49,8 +50,8 @@
 
       .ss-form-entry
         %label.ss-q-title{:for => "entry_4"}
-          Organisation description
-        %label.ss-q-help.size0{:for => "entry_4"} Tell us a little bit about your organisation. (max 150 words)
+          Organization description
+        %label.ss-q-help.size0{:for => "entry_4"} Tell us a little bit about your organization. (max 150 words)
         %textarea#entry_4.ss-q-long{:cols => "75", :name => "entry.4.single", :rows => "8"}
 
       .ss-form-entry

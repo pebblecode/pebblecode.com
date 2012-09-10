@@ -879,7 +879,7 @@ textarea{
   max-width: 400px;
   cursor: pointer;
 
-  &:active{
+  &:hover{
     background: darken($pink,  15);
     color: white;
     text-decoration: none;
