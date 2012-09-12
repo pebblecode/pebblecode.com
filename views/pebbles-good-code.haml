@@ -15,29 +15,34 @@
     %hr.pink-background
     %h3 who are we?
     %p pebble {code} was founded in 2010 to provide clients with bespoke software applications to help them run their businesses. From financial services to online gaming, pebble {code} has tackled many hard problems. For more information, have an explore around the site.
-    %h3 
+    %h3
       why pebble&#039;s&nbsp;
       %span.green> Good
       &nbsp;{code}
-    %p< 
-      pebble {code}&rsquo;s experienced, approachable, friendly and professional team of software developers and designers, is offering 
+    %p<
+      pebble {code}&rsquo;s experienced, approachable, friendly and professional team of software developers and designers, is offering
       %strong> &nbsp;2 man-months of free service&nbsp;
-      to the 
-      %strong charitable / not-for-profit sector. 
+      to the
+      %strong charitable / not-for-profit sector.
       Whether it is a web application, mobile site or some marketing material, if it can be done (or at least started) in 2 months, we&rsquo;ll have a go!
-    %p First and foremost, we want to build a reputation for producing top class software. However, we also want to do so by being socially responsible and by contributing to the open source community. 
+    %p First and foremost, we want to build a reputation for producing top class software. However, we also want to do so by being socially responsible and by contributing to the open source community.
     %h3 open source?
-    %p Open source software is software that anyone can use or modify.  We have used software from many open source projects in the past, and want to give back to that community. 
+    %p Open source software is software that anyone can use or modify.  We have used software from many open source projects in the past, and want to give back to that community.
     %h3 applications
-    %p< 
-      Please fill out the simple web form below by 
+    %p<
+      Please fill out the simple web form below by
       %strong> midday 12th October 2012
       Successful applicants will be notified by email shortly after the closing date and we will set up interviews via Skype (face to face if in London).
     %p deally, results will be achieved by Christmas and we can showcase results and experience via our blogs and gain some good exposure for your organisation.
-    %p We look forward to hearing from you. 
+    %p We look forward to hearing from you.
 
     %hr.pink-background
-    %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST"}
+
+    :plain
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe"
+      style="display:none;" onload="if(submitted) {window.location='/pebbles-good-code-form-complete';}"></iframe>
+    %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST", :target => "hidden_iframe", :onsubmit => "submitted=true;"}
 
       %p.size0 (all fields are required)
 
@@ -77,6 +82,6 @@
         %label.ss-q-title{:for => "entry_7"}
           How did you find out about this opportunity?
         %textarea#entry_7.ss-q-long{:cols => "75", :name => "entry.7.single", :rows => "3"}
-    
+
       .ss-form-entry
         %input.submit{:name => "submit", :type => "submit", :value => "Submit"}/
