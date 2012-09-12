@@ -45,7 +45,12 @@
     %p We look forward to hearing from you. 
 
     %hr.pink-background
-    %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST"}
+
+    :plain
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe"
+      style="display:none;" onload="if(submitted) {window.location='/pebbles-good-code-form-complete';}"></iframe>
+    %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST", :target => "hidden_iframe", :onsubmit => "submitted=true;"}
 
       %p.size0 (all fields are required)
 
@@ -85,6 +90,6 @@
         %label.ss-q-title{:for => "entry_7"}
           How did you find out about this opportunity?
         %textarea#entry_7.ss-q-long{:cols => "75", :name => "entry.7.single", :rows => "3"}
-    
+
       .ss-form-entry
         %input.submit{:name => "submit", :type => "submit", :value => "Submit"}/
