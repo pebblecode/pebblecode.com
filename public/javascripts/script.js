@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   /*
   * Author name replacement - needed because tumblr doesn't have full names
   */
@@ -181,5 +181,12 @@ $(document).ready(function() {
     });
   }
   populateRecentPosts("#recent-posts");
+
+  /*
+   * Pebble's good code
+   */
+  if ($.validator) {
+    $("#ss-form").validate();
+  }
 });
 

@@ -5,7 +5,7 @@ html, body{
 }
 
 body{
-  font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;  
+  font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   background-color: hsl(40, 70%, 98.5%);
   color: hsl(0, 0%, 50%);
 }
@@ -106,13 +106,13 @@ a{
 .aqua{color: $aqua; &:hover{color: $aqua;}}
 .green{color: $green; &:hover{color: $green;}}
 .orange{color: $orange; &:hover{color: $orange;}}
-.pink-background{background-color: $pink; } 
+.pink-background{background-color: $pink; }
 .purple-background{background-color: $purple;}
 .blue-background{background-color: $blue;}
 .aqua-background{background-color: $aqua;}
 .green-background{background-color: $green;}
 .orange-background{background-color: $orange;}
-.pink-border{border-color: $pink;} 
+.pink-border{border-color: $pink;}
 .purple-border{border-color: $purple;}
 .blue-border{border-color: $blue;}
 .aqua-border{border-color: $aqua;}
@@ -654,7 +654,7 @@ footer{
       &:hover{
         text-decoration: none;
       }
-      
+
       .img{
         width: 100%;
         height: $baseline*5;
@@ -703,7 +703,7 @@ footer{
     h2, h3, h4{
       margin-bottom: $baseline;
       font-weight: bold;
-    }    
+    }
 
     h3{
       font-size: 26px;
@@ -763,7 +763,7 @@ footer{
       }
       .comments{
         a {
-          color: hsl(40, 70%, 98.5%);  
+          color: hsl(40, 70%, 98.5%);
           display: block;
           background-image: url('/images/comment.png');
           width: 20px;
@@ -841,7 +841,6 @@ footer{
 }
 
 .page-pebbles-good-code-form-complete{
-  
   p{
     margin-top: $baseline;
   }
@@ -849,6 +848,17 @@ footer{
 
 #ss-form{
   max-width: 640px;
+
+  label.error {
+    @extend .size0;
+    color: $error-label-color;
+    font-style: italic;
+  }
+
+  input.error, textarea.error {
+    color: $error-color;
+    background-color: $error-bg-color;
+  }
 }
 
 .ss-form-entry{

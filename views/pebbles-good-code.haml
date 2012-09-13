@@ -4,6 +4,8 @@
   Software and app design and development. Agile approach, technical experts, front-end design. We turn complicated problems into simple, beautiful apps!
 - content_for :keywords do
   pebble, pebble code, software, app, web app, design, development, beautiful, agile, software, simple, London, technical, Vistazo, Tricklr
+- content_for :js_lib do
+  %script{:src => "/javascripts/lib/jquery.validate.min.js", :type => "text/javascript"}
 
 %section.row
   .columns12
@@ -43,45 +45,44 @@
       <iframe name="hidden_iframe" id="hidden_iframe"
       style="display:none;" onload="if(submitted) {window.location='/pebbles-good-code-form-complete';}"></iframe>
     %form#ss-form{:action => "https://docs.google.com/a/pebblecode.com/spreadsheet/formResponse?formkey=dDhkOTJwaXVOOVpmSmNiWlFjT0NQSkE6MQ&theme=0AX42CRMsmRFbUy1iOGYwN2U2Mi1hNWU0LTRlNjEtYWMyOC1lZmU4ODg1ODc1ODI&ifq", :method => "POST", :target => "hidden_iframe", :onsubmit => "submitted=true;"}
-
       %p.size0 (all fields are required)
 
       .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_0"}
           Your organisation name
-        %input#entry_0.ss-q-short{:name => "entry.0.single", :type => "text", :value => ""}/
+        %input#entry_0.ss-q-short{:name => "entry.0.single", :type => "text", :value => "", :class => "required", :maxLength => "100"}/
 
       .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_1"}
           Your organisation website
-        %input#entry_1.ss-q-short{:name => "entry.1.single", :type => "text", :value => ""}/
+        %input#entry_1.ss-q-short{:name => "entry.1.single", :type => "text", :value => "http://", :class => "required url", :maxLength => "100"}/
 
       .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_2"}
           Your name
-        %input#entry_2.ss-q-short{:name => "entry.2.single", :type => "text", :value => ""}/
+        %input#entry_2.ss-q-short{:name => "entry.2.single", :type => "text", :value => "", :class => "required", :maxLength => "100"}/
 
       .ss-form-entry.ss-form-entry-short
         %label.ss-q-title{:for => "entry_3"}
           Your email
-        %input#entry_3.ss-q-short{:name => "entry.3.single", :type => "text", :value => ""}/
+        %input#entry_3.ss-q-short{:name => "entry.3.single", :type => "text", :value => "", :class => "required email", :maxLength => "150"}/
 
       .ss-form-entry
         %label.ss-q-title{:for => "entry_4"}
           Organisation description
         %label.ss-q-help.size0{:for => "entry_4"} Tell us a little bit about your organisation. (max 150 words)
-        %textarea#entry_4.ss-q-long{:cols => "75", :name => "entry.4.single", :rows => "8"}
+        %textarea#entry_4.ss-q-long{:cols => "75", :name => "entry.4.single", :rows => "8", :class => "required", :maxLength => "150"}
 
       .ss-form-entry
         %label.ss-q-title{:for => "entry_5"}
           Idea / problem description
         %label.ss-q-help.size0{:for => "entry_5"} Tell us a little about your idea or problem. (max 150 words)
-        %textarea#entry_5.ss-q-long{:cols => "75", :name => "entry.5.single", :rows => "8"}
+        %textarea#entry_5.ss-q-long{:cols => "75", :name => "entry.5.single", :rows => "8", :class => "required", :maxLength => "150"}
 
       .ss-form-entry
         %label.ss-q-title{:for => "entry_7"}
           How did you find out about this opportunity?
-        %textarea#entry_7.ss-q-long{:cols => "75", :name => "entry.7.single", :rows => "3"}
+        %textarea#entry_7.ss-q-long{:cols => "75", :name => "entry.7.single", :rows => "3", :class => "required", :maxLength => "1000"}
 
       .ss-form-entry
         %input.submit{:name => "submit", :type => "submit", :value => "Submit"}/
