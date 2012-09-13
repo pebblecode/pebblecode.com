@@ -194,7 +194,7 @@ $(document).ready(function() {
     };
 
     jQuery.validator.addMethod("lessThan150Words", function(value, element) {
-      return this.optional(element) || (countWords(value) < 150);
+      return this.optional(element) || (countWords(value) <= 150);
     }, "Please write less than 150 words.");
 
     $("#ss-form").validate();
