@@ -838,6 +838,16 @@ footer{
   .size0{
     margin-bottom: 11px;
   }
+
+  ul{
+    margin-bottom: $baseline;
+  }
+
+  li{
+    list-style: disc;
+    margin-bottom: 6px;
+    margin-left: 18px;
+  }
 }
 
 .page-pebbles-good-code-form-complete{
