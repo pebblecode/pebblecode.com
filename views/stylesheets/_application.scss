@@ -5,7 +5,7 @@ html, body{
 }
 
 body{
-  font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;  
+  font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   background-color: hsl(40, 70%, 98.5%);
   color: hsl(0, 0%, 50%);
 }
@@ -106,13 +106,13 @@ a{
 .aqua{color: $aqua; &:hover{color: $aqua;}}
 .green{color: $green; &:hover{color: $green;}}
 .orange{color: $orange; &:hover{color: $orange;}}
-.pink-background{background-color: $pink; } 
+.pink-background{background-color: $pink; }
 .purple-background{background-color: $purple;}
 .blue-background{background-color: $blue;}
 .aqua-background{background-color: $aqua;}
 .green-background{background-color: $green;}
 .orange-background{background-color: $orange;}
-.pink-border{border-color: $pink;} 
+.pink-border{border-color: $pink;}
 .purple-border{border-color: $purple;}
 .blue-border{border-color: $blue;}
 .aqua-border{border-color: $aqua;}
@@ -383,6 +383,11 @@ footer{
           margin-top: $baseline;
           margin-bottom: $baseline;
         }
+
+        &.slide-good{
+          background: $orange url("/images/zig-zag-1.gif") no-repeat center 0;
+        }
+
         &.slide1{
           background: $pink url("/images/zig-zag-6.gif") no-repeat center 0;
           h1:nth-child(2) {
@@ -400,7 +405,7 @@ footer{
     }
 
     .pagination{
-      width: 69px;
+      width: 93px;
       margin: $baseline auto;
       li {
         float: left;
@@ -410,21 +415,24 @@ footer{
           width: 12px;
           height: 12px;
           margin-left:10px;
-          border: 6px solid $pink;
+          border: 2px solid $pink;
 
           @include box-sizing(border-box);
-          @include border-radius(10px);
+          @include border-radius(12px);
         }
       }
 
       .current a{
-        border-width: 3px;
+        border-width: 5px;
       }
 
       li:nth-child(2) a{
-        border-color: $green;
+        border-color: $orange;
       }
       li:nth-child(3) a{
+        border-color: $green;
+      }
+      li:nth-child(4) a{
         border-color: $blue;
       }
     }
@@ -646,7 +654,7 @@ footer{
       &:hover{
         text-decoration: none;
       }
-      
+
       .img{
         width: 100%;
         height: $baseline*5;
@@ -695,7 +703,7 @@ footer{
     h2, h3, h4{
       margin-bottom: $baseline;
       font-weight: bold;
-    }    
+    }
 
     h3{
       font-size: 26px;
@@ -759,7 +767,7 @@ footer{
       }
       .comments{
         a {
-          color: hsl(40, 70%, 98.5%);  
+          color: hsl(40, 70%, 98.5%);
           display: block;
           background-image: url('/images/comment.png');
           width: 20px;
@@ -801,6 +809,128 @@ footer{
   }
 }
 /* @end */
+
+
+
+// =================================================================
+// §GOOD-CODE
+// =================================================================
+.page-pebbles-good-code,
+.page-pebbles-good-code-form-complete{
+  h1{
+    @extend .size4;
+    margin: $baseline*3 0 $baseline*2;
+    color: $pink;
+  }
+
+  hr{
+    margin-bottom: $baseline*2;
+  }
+
+  .green{
+    font-family: "gooddog-new";
+    display: inline-block;
+    @include rotate(-7.5deg);
+  }
+
+  h3,
+  h2{
+    @extend .size2;
+    color: $pink;
+  }
+
+  .size0{
+    margin-bottom: 11px;
+  }
+}
+
+.idea-examples{
+  margin-bottom: $baseline;
+
+  li{
+    list-style: disc;
+    margin-bottom: 6px;
+    margin-left: 18px;
+  }
+}
+
+.page-pebbles-good-code-form-complete{
+  p{
+    margin-top: $baseline;
+  }
+}
+
+#ss-form{
+  max-width: 640px;
+
+  label.error {
+    @extend .size0;
+    color: $error-label-color;
+    font-style: italic;
+  }
+
+  input.error, textarea.error {
+    color: $error-color;
+    background-color: $error-bg-color;
+  }
+}
+
+.ss-form-entry{
+  margin-bottom: $baseline;
+}
+
+.ss-q-help,
+.ss-q-long,
+.ss-q-short{
+  display: block;
+}
+
+.ss-q-long,
+.ss-q-short{
+  width: 100%;
+}
+
+.ss-form-entry-short{
+  margin: 0 0 $baseline;
+}
+
+input,
+textarea{
+  background-color: hsl(40, 40, 99.5);
+  border: 1px solid hsl(0,0,80);
+  min-height: 20px;
+  padding: 4px;
+  font-size: 16px;
+  color: hsl(0,0,30);
+}
+
+.submit{
+  display: block;
+  background: $pink;
+  color: white;
+  border: none;
+  font-weight: normal;
+  @include border-radius(5px);
+  height: 30px;
+  width: 100%;
+  font-size: 18px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover{
+    background: darken($pink,  15);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.complete-links{
+  padding-top: 8px;
+}
+
+// =================================================================
+
+
 
 .page-404{
   #wrap > .row:first-child {
