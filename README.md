@@ -50,11 +50,7 @@ The staging site is at http://pebblecode-staging.herokuapp.com/. It requires aut
 
 To deploy master branch to staging
 
-	rake shipit:staging
-
-To manually deploy an arbitrary branch to staging eg, `version-2` branch
-
-  rake shipit:temp[version-2,staging]
+	rake shipit[staging]
 
 #### Initial set up
 
@@ -67,7 +63,7 @@ Only needs to be done once
 
 To deploy master branch to production
 
-    rake shipit:production
+    rake shipit[production]
 
 This merges the master branch to the production branch, pushes to origin, deploys to production, and checkouts out the master branch.
 
