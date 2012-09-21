@@ -41,8 +41,8 @@ The site is hosted on [Heroku][5], and deployment is wrapped around a rake task.
 
 Set up deployment branches with
 
-		git remote add staging git@heroku.com:pebblecode-staging.git
-    git remote add production git@heroku.com:pebblecode.git
+  git remote add staging git@heroku.com:pebblecode-staging.git
+  git remote add production git@heroku.com:pebblecode.git
 
 ### Push to staging
 
