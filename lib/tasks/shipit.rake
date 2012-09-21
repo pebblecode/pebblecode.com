@@ -58,6 +58,7 @@ end
 def merge_branch!(from_branch, to_branch)
   git_checkout!(to_branch) do |checkout_ok, checkout_resp|
     if checkout_ok
+      puts "checkout worked"
       git_merge!(from_branch) do |merge_ok, merge_resp|
         if merge_ok
           puts "merge worked"
