@@ -60,6 +60,7 @@ def merge_branch!(from_branch, to_branch)
     if checkout_ok
       git_merge!(from_branch) do |merge_ok, merge_resp|
         if merge_ok
+          puts "merge worked"
           git_push_origin!(to_branch, to_branch)
           git_checkout!(from_branch)
         else
