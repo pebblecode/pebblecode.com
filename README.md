@@ -52,6 +52,10 @@ To deploy master branch to staging
 
 	rake shipit[staging]
 
+To deploy another branch to staging
+
+  rake shipit[another-branch,staging]
+
 #### Initial set up
 
 Only needs to be done once

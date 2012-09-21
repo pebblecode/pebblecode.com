@@ -11,9 +11,13 @@
 #
 # Usage:
 #
-#     # Do work on master, and commit
-#     # Merge master to deployment-branch, and deploy with:
+#     # Do work on `master`, and commit
+#     # Merge `master` to `deployment-branch`, and deploy with:
 #     bundle exec rake shipit[deployment-branch]
+#
+#     # Do work on `some-branch`, and commit
+#     # Merge `some-branch` to `deployment-branch`, and deploy with:
+#     bundle exec rake shipit:branch[some-branch,deployment-branch]
 #
 # Notes:
 #
@@ -23,7 +27,7 @@
 
 require 'fileutils'
 
-ALL_DEPLOYMENT_BRANCHES = ["staging", "production", "design"]
+ALL_DEPLOYMENT_BRANCHES = ["staging", "production", "design", "shipit"]
 DEPLOY_ONLY_BRANCHES = ["design"]
 
 def deploy_command(branch)
@@ -79,5 +83,21 @@ task "shipit", [:branch] do |t, args|
   else
     puts "Invalid deployment branch: #{args.branch}"
     puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
+  end
+end
+
+namespace "shipit" do
+  desc "Merge branch to deployment branch, push to remote server, and deploy."
+  task :branch, :branch_name, :deploy_branch do |t, args|
+    if ALL_DEPLOYMENT_BRANCHES.include? deploy_branch
+      unless DEPLOY_ONLY_BRANCHES.include? deploy_branch
+        merge_branch!(args.branch_name, args.deploy_branch)
+      end
+
+      Rake::Task["deploy"].invoke(args.branch)
+    else
+      puts "Invalid deployment branch: #{args.branch}"
+      puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
+    end
   end
 end
