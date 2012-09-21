@@ -71,6 +71,6 @@ task "shipit", [:branch] do |t, args|
     Rake::Task["deploy"].invoke(args.branch)
   else
     puts "Invalid deployment branch: #{args.branch}"
-    puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_sentence}"
+    puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
   end
 end
