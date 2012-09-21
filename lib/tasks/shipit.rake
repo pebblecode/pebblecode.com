@@ -42,10 +42,12 @@ def push_origin_command(local_branch, remote_branch)
   "git push origin #{local_branch}:#{remote_branch}"
 end
 
-desc "Merge master to branch, and push to origin server."
-task "merge_master_and_push_to", [:branch] do |t, args|
-  from_branch = "master"
-  to_branch = args.branch
+def deploy_branch!(branch)
+  sh deploy_command(branch)
+end
+
+# Merge branch and push to remote server
+def merge_branch!(from_branch, to_branch)
   sh(merge_command(from_branch, to_branch)) do |ok, res|
     if ok
       sh push_origin_command(to_branch, to_branch)
@@ -56,9 +58,14 @@ task "merge_master_and_push_to", [:branch] do |t, args|
   end
 end
 
+desc "Merge master to branch, and push to origin server."
+task "merge_master_and_push_to", [:branch] do |t, args|
+  merge_branch!("master", args.branch)
+end
+
 desc "Deploy branch to server."
 task :deploy, [:branch] do |t, args|
-  deploy_branch(args.branch)
+  deploy_branch!(args.branch)
 end
 
 desc "Ship it! Merge master and push branch to origin (if not in `DEPLOY_ONLY_BRANCHES`), then deploy to the server."
