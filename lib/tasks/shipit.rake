@@ -12,8 +12,8 @@
 # Usage:
 #
 #     # Do work on master, and commit
-#     # Merge master to some-branch, and deploy with:
-#     bundle exec rake shipit[some-branch]
+#     # Merge master to deployment-branch, and deploy with:
+#     bundle exec rake shipit[deployment-branch]
 #
 # Notes:
 #
@@ -26,14 +26,12 @@ require 'fileutils'
 ALL_DEPLOYMENT_BRANCHES = ["staging", "production", "design"]
 DEPLOY_ONLY_BRANCHES = ["design"]
 
-def deploy_branch(branch)
-  # For capitrano
-  # deploy_cmd = "bundle exec cap #{branch} deploy"
+def deploy_command(branch)
+  # For capitrano - Assume that capistrano task is the same name as the branch
+  # "bundle exec cap #{branch} deploy"
 
-  # For heroku
-  deploy_cmd = "git push #{branch} #{branch}:master"
-
-  sh deploy_cmd
+  # For heroku - Assume local branch is set up with remote heroku branch
+  "git push #{branch} #{branch}:master"
 end
 
 def merge_command(from_branch, to_branch)
