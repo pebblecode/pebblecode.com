@@ -27,7 +27,7 @@
 
 require 'fileutils'
 
-ALL_DEPLOYMENT_BRANCHES = ["staging", "production", "design", "shipit"]
+ALL_DEPLOYMENT_BRANCHES = ["staging", "production", "design"]
 DEPLOY_ONLY_BRANCHES = ["design"]
 
 def deploy_command(branch)
@@ -88,13 +88,14 @@ end
 
 namespace "shipit" do
   desc "Merge branch to deployment branch, push to remote server, and deploy."
-  task :branch, :branch_name, :deploy_branch do |t, args|
-    if ALL_DEPLOYMENT_BRANCHES.include? deploy_branch
-      unless DEPLOY_ONLY_BRANCHES.include? deploy_branch
-        merge_branch!(args.branch_name, args.deploy_branch)
-      end
+  task :branch, :from_branch, :deploy_branch do |t, args|
+    from_branch = args.from_branch
+    deploy_branch = args.deploy_branch
 
-      Rake::Task["deploy"].invoke(args.branch)
+    if ALL_DEPLOYMENT_BRANCHES.include? deploy_branch
+      merge_branch!(from_branch, deploy_branch)
+
+      Rake::Task["deploy"].invoke(deploy_branch)
     else
       puts "Invalid deployment branch: #{args.branch}"
       puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
