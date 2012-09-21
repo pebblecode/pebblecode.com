@@ -88,7 +88,7 @@ end
 
 namespace "shipit" do
   desc "Merge branch to deployment branch, push to remote server, and deploy."
-  task :branch, :from_branch, :deploy_branch do |t, args|
+  task :branch, [:from_branch, :deploy_branch] do |t, args|
     from_branch = args.from_branch
     deploy_branch = args.deploy_branch
 
