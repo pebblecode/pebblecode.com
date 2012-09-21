@@ -1,6 +1,6 @@
 # Ship it! rake task
 #
-# Merge master to deployment branch, and deploy to server.
+# Merge branch (master by default) to deployment branch, and deploy to server.
 #
 # Prerequisite:
 #
@@ -11,6 +11,8 @@
 #
 # Usage:
 #
+#     # Do work on master, and commit
+#     # Merge master to some-branch, and deploy with:
 #     bundle exec rake shipit[some-branch]
 #
 # Notes:
@@ -61,7 +63,7 @@ task :deploy, [:branch] do |t, args|
   deploy_branch(args.branch)
 end
 
-desc "Ship it! Merge and push branch to origin (if not in `DEPLOY_ONLY_BRANCHES`), then deploy to the server."
+desc "Ship it! Merge master and push branch to origin (if not in `DEPLOY_ONLY_BRANCHES`), then deploy to the server."
 task "shipit", [:branch] do |t, args|
   if ALL_DEPLOYMENT_BRANCHES.include? args.branch
     unless DEPLOY_ONLY_BRANCHES.include? args.branch
