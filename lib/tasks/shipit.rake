@@ -38,12 +38,12 @@ def deploy_command(branch)
   "git push #{branch} #{branch}:master"
 end
 
-def git_checkout!(branch)
-  sh "git checkout #{branch}"
+def git_checkout!(branch, &next_command)
+  sh "git checkout #{branch}", &next_command
 end
 
-def git_merge!(branch)
-  sh "git merge #{branch}"
+def git_merge!(branch, &next_command)
+  sh "git merge #{branch}", &next_command
 end
 
 def git_push_origin!(local_branch, remote_branch)
@@ -56,22 +56,25 @@ end
 
 # Merge `from_branch` and push to remote server, and checkout `from_branch` at the end.
 def merge_branch!(from_branch, to_branch)
-  git_checkout!(to_branch) do |checkout_ok, checkout_resp|
-    if checkout_ok
-      puts "checkout worked"
-      git_merge!(from_branch) do |merge_ok, merge_resp|
-        if merge_ok
-          puts "merge worked"
-          git_push_origin!(to_branch, to_branch)
-          git_checkout!(from_branch)
-        else
-          abort(merge_resp)
-        end
-      end
+  run_push_origin = Proc.new do |ok, resp|
+    if ok
+      git_push_origin!(to_branch, to_branch)
+      git_checkout!(from_branch)
     else
-      abort(checkout_resp)
+      abort(resp.to_s)
     end
   end
+
+  run_merge = Proc.new do |ok, resp|
+    if ok
+      git_merge!(from_branch, &run_push_origin)
+    else
+      abort(resp.to_s)
+    end
+  end
+
+  # Checkout -> merge -> push origin
+  git_checkout! to_branch, &run_merge
 end
 
 desc "Merge master to branch, and push to origin server."
@@ -84,19 +87,19 @@ task :deploy, [:branch] do |t, args|
   deploy_branch!(args.branch)
 end
 
-# desc "Ship it! Merge master and push branch to origin (if not in `DEPLOY_ONLY_BRANCHES`), then deploy to the server."
-# task "shipit", [:branch] do |t, args|
-#   if ALL_DEPLOYMENT_BRANCHES.include? args.branch
-#     unless DEPLOY_ONLY_BRANCHES.include? args.branch
-#       Rake::Task["merge_master_and_push_to"].invoke(args.branch)
-#     end
+desc "Ship it! Merge master and push branch to origin (if not in `DEPLOY_ONLY_BRANCHES`), then deploy to the server."
+task "shipit", [:branch] do |t, args|
+  if ALL_DEPLOYMENT_BRANCHES.include? args.branch
+    unless DEPLOY_ONLY_BRANCHES.include? args.branch
+      Rake::Task["merge_master_and_push_to"].invoke(args.branch)
+    end
 
-#     Rake::Task["deploy"].invoke(args.branch)
-#   else
-#     puts "Invalid deployment branch: #{args.branch}"
-#     puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
-#   end
-# end
+    Rake::Task["deploy"].invoke(args.branch)
+  else
+    puts "Invalid deployment branch: #{args.branch}"
+    puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
+  end
+end
 
 namespace "shipit" do
   desc "Merge branch to deployment branch, push to remote server, and deploy."
