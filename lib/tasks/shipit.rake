@@ -7,7 +7,7 @@
 #   * Set up branches on local machine and deployment server
 #   * Declare all deployment branches in `ALL_DEPLOYMENT_BRANCHES`
 #   * Declare deploy only branches in `DEPLOY_ONLY_BRANCHES` (ie, does not merge master)
-#   * Modify `deploy_branch` function as necessary
+#   * Modify `deploy_command` function as necessary
 #
 # Usage:
 #
