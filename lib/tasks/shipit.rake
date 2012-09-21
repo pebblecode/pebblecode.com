@@ -38,26 +38,36 @@ def deploy_command(branch)
   "git push #{branch} #{branch}:master"
 end
 
-def merge_command(from_branch, to_branch)
-  "git checkout #{to_branch}; git merge #{from_branch}"
+def git_checkout!(branch)
+  sh "git checkout #{branch}"
 end
 
-def push_origin_command(local_branch, remote_branch)
-  "git push origin #{local_branch}:#{remote_branch}"
+def git_merge!(branch)
+  sh "git merge #{branch}"
+end
+
+def git_push_origin!(local_branch, remote_branch)
+  sh "git push origin #{local_branch}:#{remote_branch}"
 end
 
 def deploy_branch!(branch)
   sh deploy_command(branch)
 end
 
-# Merge branch and push to remote server
+# Merge `from_branch` and push to remote server, and checkout `from_branch` at the end.
 def merge_branch!(from_branch, to_branch)
-  sh(merge_command(from_branch, to_branch)) do |ok, res|
-    if ok
-      sh push_origin_command(to_branch, to_branch)
-      sh %{ git checkout #{from_branch} }
+  git_checkout!(to_branch) do |checkout_ok, checkout_resp|
+    if checkout_ok
+      git_merge!(from_branch) do |merge_ok, merge_resp|
+        if merge_ok
+          git_push_origin!(to_branch, to_branch)
+          git_checkout!(from_branch)
+        else
+          abort(merge_resp)
+        end
+      end
     else
-      puts res
+      abort(checkout_resp)
     end
   end
 end
