@@ -7,7 +7,7 @@
 #   * Set up branches on local machine and deployment server
 #   * Declare all deployment branches in `ALL_DEPLOYMENT_BRANCHES`
 #   * Declare deploy only branches in `DEPLOY_ONLY_BRANCHES` (ie, does not merge master)
-#   * Modify `deploy_command` function as necessary
+#   * Modify `Deploy.command` function as necessary
 #
 # Usage:
 #
@@ -30,61 +30,65 @@ require 'fileutils'
 ALL_DEPLOYMENT_BRANCHES = ["staging", "production", "design"]
 DEPLOY_ONLY_BRANCHES = ["design"]
 
-def deploy_command(branch)
-  # For capitrano - Assume that capistrano task is the same name as the branch
-  # "bundle exec cap #{branch} deploy"
+module Deploy
+  def self.command(branch)
+    # For capitrano - Assume that capistrano task is the same name as the branch
+    # "bundle exec cap #{branch} deploy"
 
-  # For heroku - Assume local branch is set up with remote heroku branch
-  "git push #{branch} #{branch}:master"
-end
-
-def git_checkout!(branch, &next_command)
-  sh "git checkout #{branch}", &next_command
-end
-
-def git_merge!(branch, &next_command)
-  sh "git merge #{branch}", &next_command
-end
-
-def git_push_origin!(local_branch, remote_branch)
-  sh "git push origin #{local_branch}:#{remote_branch}"
-end
-
-def deploy_branch!(branch)
-  sh deploy_command(branch)
-end
-
-# Merge `from_branch` and push to remote server, and checkout `from_branch` at the end.
-def merge_branch!(from_branch, to_branch)
-  run_push_origin = Proc.new do |ok, resp|
-    if ok
-      git_push_origin!(to_branch, to_branch)
-      git_checkout!(from_branch)
-    else
-      abort(resp.to_s)
-    end
+    # For heroku - Assume local branch is set up with remote heroku branch
+    "git push #{branch} #{branch}:master"
   end
 
-  run_merge = Proc.new do |ok, resp|
-    if ok
-      git_merge!(from_branch, &run_push_origin)
-    else
-      abort(resp.to_s)
-    end
+  def self.branch!(branch)
+    Rake.sh self.command(branch)
+  end
+end
+
+module Git
+  def self.checkout!(branch, &next_command)
+    Rake.sh "git checkout #{branch}", &next_command
   end
 
-  # Checkout -> merge -> push origin
-  git_checkout! to_branch, &run_merge
+  def self.merge!(branch, &next_command)
+    Rake.sh "git merge #{branch}", &next_command
+  end
+
+  def self.push_origin!(local_branch, remote_branch)
+    Rake.sh "git push origin #{local_branch}:#{remote_branch}"
+  end
+
+  # Merge `from_branch` and push to remote server, and checkout `from_branch` at the end.
+  def self.merge_branch!(from_branch, to_branch)
+    run_push_origin = Proc.new do |ok, resp|
+      if ok
+        self.push_origin!(to_branch, to_branch)
+        self.checkout!(from_branch)
+      else
+        abort(resp.to_s)
+      end
+    end
+
+    run_merge = Proc.new do |ok, resp|
+      if ok
+        self.merge!(from_branch, &run_push_origin)
+      else
+        abort(resp.to_s)
+      end
+    end
+
+    # Checkout -> merge -> push origin
+    self.checkout! to_branch, &run_merge
+  end
 end
 
 desc "Merge master to branch, and push to origin server."
 task "merge_master_and_push_to", [:branch] do |t, args|
-  merge_branch!("master", args.branch)
+  Git.merge_branch!("master", args.branch)
 end
 
 desc "Deploy branch to server."
 task :deploy, [:branch] do |t, args|
-  deploy_branch!(args.branch)
+  Deploy.branch!(args.branch)
 end
 
 desc "Ship it! Merge master and push branch to origin (if not in `DEPLOY_ONLY_BRANCHES`), then deploy to the server."
@@ -108,7 +112,7 @@ namespace "shipit" do
     deploy_branch = args.deploy_branch
 
     if ALL_DEPLOYMENT_BRANCHES.include? deploy_branch
-      merge_branch!(from_branch, deploy_branch)
+      Git.merge_branch!(from_branch, deploy_branch)
 
       Rake::Task["deploy"].invoke(deploy_branch)
     else
