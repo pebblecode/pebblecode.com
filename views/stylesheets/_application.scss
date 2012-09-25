@@ -710,6 +710,14 @@ footer{
       line-height: $baseline*1.5;
     }
 
+    p code {
+      font-family: monospace;
+      font-color: black;
+      font-weight: bold;
+      background-color: #F0F0F0;
+      padding: 0.1em 0.5em;
+    }
+
     blockquote{
       font-style: italic;
       margin-bottom: $baseline*1;
