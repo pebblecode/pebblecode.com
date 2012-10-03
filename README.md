@@ -2,7 +2,6 @@
 
 This is a simple brochure site written with [sinatra][1].
 
-
 ## Installation
 
 1. Install bundler
