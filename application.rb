@@ -57,7 +57,7 @@ end
 
 get '/stylesheets/screen.css' do
   content_type 'text/css', :charset => 'utf-8'
-  scss :'stylesheets/screen'
+  scss :'stylesheets/screen', :style => :compressed
 end
 
 get '/' do

@@ -2,7 +2,6 @@
 
 This is a simple brochure site written with [sinatra][1].
 
-
 ## Installation
 
 To hack on the site you need to install bundler
