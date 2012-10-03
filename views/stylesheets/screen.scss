@@ -513,6 +513,142 @@ footer{
 
 
 // =============================================================================
+// ~OUR-PEOPLE
+// =============================================================================
+
+.headline {
+  margin-top: $baseline*2;
+  margin-bottom: $baseline;
+}
+
+.people-copy{
+  margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
+}
+
+// ~SPOTLIGHT
+// -----------------------------------------------------------------------------
+
+#spotlight{
+
+  .row:first-child{
+    margin-bottom: $baseline;
+  }
+  .row:nth-child(3){
+    margin-bottom: $baseline;
+  }
+
+  article { // Right float
+    width: 100%;
+    float: left;
+    margin-left: 0;
+  }
+
+  h1 {
+    margin-top: $baseline*2;
+  }
+
+  h3{
+    margin-bottom: $baseline;
+  }
+
+  hr{
+    margin-bottom: $baseline;
+  }
+} // ends spotlight
+
+.inner-wrapper {
+  margin-left: 320px;
+}
+
+.link{
+  margin-bottom: 0;
+}
+
+.person-row{
+  display: none;
+
+  &.active{
+    display: block;
+  }
+}
+
+.frame { 
+  width: 290px;
+  float: left;
+  margin-left: -100%;
+
+  &.top {
+    display: none; // Showing bottom image
+  }
+
+  .img{
+    height: $baseline*12;
+    text-align: center;
+  }
+}
+
+// ~EMPLOYEES
+// -----------------------------------------------------------------------------
+
+.employees{
+  .row:first-child,
+  .row:nth-child(3){
+    margin-bottom: $baseline;
+  }
+  hr{
+    margin-bottom: $baseline;
+  }
+
+  .person{
+    display: block;
+    margin-bottom: $baseline;
+    min-height: 205px;
+    min-width: 145px;
+    width: 45%;
+    margin-left: 0;
+    margin-right: 5%;
+
+    &:hover{
+      text-decoration: none;
+    }
+
+    .img{
+      width: 100%;
+      height: $baseline*5;
+      margin-bottom: 7px;
+      text-align: center;
+    }
+    p{
+      margin-bottom: -5px;
+    }
+  }
+
+  li:nth-child(2n){
+    .person{
+      margin-left: 5%;
+      margin-right: 0;
+    }
+  }
+}
+
+// ~PEBBLE-IT
+// -----------------------------------------------------------------------------
+
+.pebble-it{
+  padding: $baseline*2 0 $baseline;
+
+  .row{
+    margin-bottom: $baseline;
+  }
+
+  h1,a{
+    color: #009be8;
+  }
+}
+
+
+
+// =============================================================================
 // ~OUR-WORK
 // =============================================================================
 
@@ -631,122 +767,6 @@ footer{
     p{
       margin-top: $baseline;
       margin-bottom: 0;
-    }
-  }
-}
-
-
-
-// =============================================================================
-// ~OUR-PEOPLE
-// =============================================================================
-
-.page-people{
-  .headline {
-    margin-top: $baseline*2;
-    margin-bottom: $baseline;
-  }
-  .people-copy{
-    margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
-  }
-  #spotlight{
-    .row:first-child{
-      margin-bottom: $baseline;
-    }
-    .row:nth-child(3){
-      margin-bottom: $baseline;
-    }
-    .person-row{
-      display: none;
-      &.active{
-        display: block;
-      }
-    }
-    hr{
-      margin-bottom: $baseline;
-    }
-
-    .frame { // Left float
-      width: 290px;
-      float: left;
-      margin-left: -100%;
-
-      &.top {
-        display: none; // Showing bottom image
-      }
-      .img{
-        height: $baseline*12;
-        text-align: center;
-      }
-    }
-
-    article { // Right float
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      .inner-wrapper {
-        margin-left: 320px;
-      }
-    }
-
-    h1 {
-      margin-top: $baseline*2;
-    }
-    h3{
-      margin-bottom: $baseline;
-    }
-    .link{
-      margin-bottom: 0;
-    }
-  }
-
-  .employees{
-    .row:first-child,
-    .row:nth-child(3){
-      margin-bottom: $baseline;
-    }
-    hr{
-      margin-bottom: $baseline;
-    }
-
-    .person{
-      display: block;
-      margin-bottom: $baseline;
-      min-height: 205px;
-      min-width: 145px;
-      width: 45%;
-      margin-left: 0;
-      margin-right: 5%;
-
-      &:hover{
-        text-decoration: none;
-      }
-
-      .img{
-        width: 100%;
-        height: $baseline*5;
-        margin-bottom: 7px;
-        text-align: center;
-      }
-      p{
-        margin-bottom: -5px;
-      }
-    }
-
-    li:nth-child(2n){
-      .person{
-        margin-left: 5%;
-        margin-right: 0;
-      }
-    }
-  }
-  .pebble-it{
-    padding: $baseline*2 0 $baseline;
-    .row{
-      margin-bottom: $baseline;
-    }
-    h1,a{
-      color: #009be8;
     }
   }
 }
