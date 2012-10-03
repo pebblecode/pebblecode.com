@@ -244,66 +244,61 @@ header{
   width: 100%;
   @include box-shadow(hsla(0, 0%, 0%, 0.1) 0 5px 0);
   z-index: 10;
+}
 
-  nav{
-    height: 40px;
-    width: 100%;
-    max-width: $grid-max-width;
-    margin: 0 auto;
+nav{
+  height: 40px;
+  width: 100%;
+  max-width: $grid-max-width;
+  margin: 0 auto;
 
-    .logo{
-      float: left;
-      margin-top: 10px;
-      margin-left: 12px;
-      display: block;
-      width: 142px;
-      height: 23px;
-      text-indent: -9999px;
-      background-image: url('../images/logo.png');
+  ul{
+    float: right;
+    font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 18px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    margin-right: 5px;    
+  }
+
+  li{
+    float: left;
+    margin-left: 10px;
+
+    &:hover span{
+      color: white;
     }
+  }
 
-    ul{
-      float: right;
-      font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-      font-size: 18px;
-      line-height: 38px;
-      letter-spacing: 1px;
-      margin-right: 5px;
+  span{
+    color: $pink;
+    font-weight: bold;
+  }
 
-      li{
-        float: left;
-        margin-left: 10px;
+  a{
+    color: white;
 
-        span{
-          color: $pink;
-          font-weight: bold;
-        }
-
-        a{
-          color: white;
-          &:hover{
-            color: white;
-            text-decoration: none;
-          }
-        }
-
-        &:hover{
-          span{
-            color: white;
-          }
-        }
-      }
-
-      .nav-active{
-        span{
-          color: white;
-        }
-      }
+    &:hover{
+      color: white;
+      text-decoration: none;
     }
   }
 }
 
+.logo{
+  float: left;
+  margin-top: 10px;
+  margin-left: 12px;
+  display: block;
+  width: 142px;
+  height: 23px;
+  text-indent: -9999px;
+  background-image: url('../images/logo.png');
+}
 
+.nav-active span{
+  color: white;
+}
 
 // =============================================================================
 // ~FOOTER
