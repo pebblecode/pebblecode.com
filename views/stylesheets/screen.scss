@@ -556,6 +556,21 @@ footer{
   hr{
     margin-bottom: $baseline;
   }
+
+  .frame { 
+    width: 290px;
+    float: left;
+    margin-left: -100%;
+
+    &.top {
+      display: none; // Showing bottom image
+    }
+
+    .img{
+      height: $baseline*12;
+      text-align: center;
+    }
+  }
 } // ends spotlight
 
 .inner-wrapper {
@@ -574,29 +589,18 @@ footer{
   }
 }
 
-.frame { 
-  width: 290px;
-  float: left;
-  margin-left: -100%;
 
-  &.top {
-    display: none; // Showing bottom image
-  }
-
-  .img{
-    height: $baseline*12;
-    text-align: center;
-  }
-}
 
 // ~EMPLOYEES
 // -----------------------------------------------------------------------------
 
 .employees{
+
   .row:first-child,
   .row:nth-child(3){
     margin-bottom: $baseline;
   }
+
   hr{
     margin-bottom: $baseline;
   }
@@ -659,9 +663,7 @@ footer{
   .row:first-child {
     margin-top: $baseline*2;
     margin-bottom: $baseline*2;
-    .columns6 {
-      margin-left: 0;
-    }
+    
     p:first-child {
       padding-top: $baseline;
       margin-bottom: 0;
@@ -669,44 +671,52 @@ footer{
     }
   }
 
-  .case-study {
-
-    hr {
-      margin-bottom: $baseline*2;
-    }
-    .row {
-      margin-bottom: $baseline*3;
-      .frame {
-        .img {
-          height: $baseline*6;
-          padding-top: $baseline*2;
-          h2 {
-            width: 100%;
-            text-align: center;
-            color: white;
-          }
-          &.gaming {
-            background-image: url("/images/gaming_tile.png");
-          }
-          &.finace {
-            background-image: url("/images/finance_tile.png");
-          }
-          &.clarity {
-            background-image: url("/images/clarity_tile.png");
-          }
-        }
-      }
-      .columns3:nth-child(2) {
-        margin-left: 0;
-      }
-    }
-  }
-
-  .work-contact {
-    margin-top: $baseline*2;
+  .columns6 {
+    margin-left: 0;
   }
 }
 
+.case-study {
+
+  hr {
+    margin-bottom: $baseline*2;
+  }
+
+  .row {
+    margin-bottom: $baseline*3;
+  }
+    
+  .img {
+    height: $baseline*6;
+    padding-top: $baseline*2;
+  }
+
+  .columns3:nth-child(2) {
+    margin-left: 0;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+}
+
+.gaming {
+  background-image: url("/images/gaming_tile.png");
+}
+
+.finace {
+  background-image: url("/images/finance_tile.png");
+}
+
+.clarity {
+  background-image: url("/images/clarity_tile.png");
+}
+
+.work-contact {
+  margin-top: $baseline*2;
+}
 
 
 // =============================================================================
@@ -718,8 +728,10 @@ footer{
   .row:first-child{
     margin-top: $baseline*2;
     margin-bottom: $baseline;
+    
     .columns6{
       margin-left: 0;
+      
       p {
         margin-top: $baseline;
       }
@@ -728,29 +740,6 @@ footer{
 
   .row:nth-child(2){
     margin-bottom: $baseline*2;
-  }
-
-  .tricklr, .vistazo{
-    .img{
-      width: 100%;
-      height: $baseline*9;
-      background-color: $pink;
-      background-image: url("/images/tricklr.jpg");
-      background-position-x: 50%;
-    }
-    a{
-      color: $pink;
-    }
-  }
-
-  .vistazo{
-    .img{
-      background-color: $blue;
-      background-image: url("/images/vistazo.jpg");
-    }
-    a{
-      color: $blue;
-    }
   }
 
   h2{
@@ -766,6 +755,7 @@ footer{
     .columns6 {
       margin-left: 0;
     }
+    
     p{
       margin-top: $baseline;
       margin-bottom: 0;
@@ -773,7 +763,30 @@ footer{
   }
 }
 
+.tricklr, .vistazo{
+  .img{
+    width: 100%;
+    height: $baseline*9;
+    background-color: $pink;
+    background-image: url("/images/tricklr.jpg");
+    background-position-x: 50%;
+  }
 
+  a{
+    color: $pink;
+  }
+}
+
+.vistazo{
+  .img{
+    background-color: $blue;
+    background-image: url("/images/vistazo.jpg");
+  }
+
+  a{
+    color: $blue;
+  }
+}
 
 // =============================================================================
 // ~OUR-THOUGHTS
@@ -783,132 +796,142 @@ footer{
   h1 {
     font-weight: bold;
   }
-  #thoughts-heading{
-    margin-top: $baseline*3;
-  }
+
   hr{
     margin-bottom: $baseline*2;
   }
-  .blog-post{
+}
 
-    h2, h3, h4{
-      margin-bottom: $baseline;
-      font-weight: bold;
-    }
+.blog-post{
+  h2, h3, h4{
+    margin-bottom: $baseline;
+    font-weight: bold;
+  }
 
-    h3{
-      font-size: 26px;
-      line-height: $baseline*1.5;
-    }
+  h3{
+    font-size: 26px;
+    line-height: $baseline*1.5;
+  }
 
-    p code {
-      font-family: monospace;
-      color: black;
-      font-weight: bold;
-      background-color: #F0F0F0;
-      padding: 0.1em 0.5em;
-    }
+  p code {
+    font-family: monospace;
+    color: black;
+    font-weight: bold;
+    background-color: #F0F0F0;
+    padding: 0.1em 0.5em;
+  }
 
-    blockquote{
-      font-style: italic;
-      margin-bottom: $baseline*1;
-      padding: 0 5%;
-      text-indent: -7px;
+  blockquote{
+    font-style: italic;
+    margin-bottom: $baseline*1;
+    padding: 0 5%;
+    text-indent: -7px;
 
-      &:before, &:after{
-        content: '"';
-      }
-
-      p{
-        display: inline;
-      }
+    &:before, &:after{
+      content: '"';
     }
 
-    ol, ul {
-      margin-bottom: 1.5em;
-      list-style: disc;
-      margin-left: 1.5em;
+    p{
+      display: inline;
     }
-    .img{
-      width: 100%;
-      height: $baseline*11;
-    }
-    .frame{
-      margin-bottom: $baseline;
-    }
-    .heading{
-      margin-bottom: $baseline;
-    }
-    .blog-content{
-      border-bottom-style: dashed;
-      border-bottom-width: 1px;
-      padding-bottom: $baseline;
-    }
-    .blog-sidebar{
-      margin-top: $baseline*3;
-      p{
-        margin-bottom: 0;
-      }
-      .tags{
-        margin-top: $baseline;
-        list-style: none;
-        margin-left: 0;
-        a{
-          font-weight: 400;
-          display: block;
-        }
-        li a:after {
-          content: ",";
-        }
-        li:last-child a:after {
-          content: "";
-        }
-      }
-      .comments{
-        a {
-          color: hsl(40, 70%, 98.5%);
-          display: block;
-          background-image: url('/images/comment.png');
-          width: 20px;
-          height: 26px;
-          margin-top: 10px;
-          padding: 4px 12px 6px;
-          display: inline-block;
-          font-weight: bold;
-          letter-spacing: 1px;
-          text-align: center;
-        }
-      }
-    }
-    .comments-wrapper {
-      @extend .columns4;
-    } // .comments-wrapper
+  }
 
-    .share-this-wrapper {
-      clear: both;
-    }
-  } // .blog-post
+  ol, ul {
+    margin-bottom: 1.5em;
+    list-style: disc;
+    margin-left: 1.5em;
+  }
 
-  #blog-navigation {
-    @extend .columns4;
-    margin: 60px 0 0 0;
+  .img{
+    width: 100%;
+    height: $baseline*11;
+  }
 
-    li {
-      width: 50%;
-    }
+  .frame{
+    margin-bottom: $baseline;
+  }
 
-    .prev {
-      float: left;
-    }
+  .heading{
+    margin-bottom: $baseline;
+  }  
+} //  end blog-post
 
-    .next {
-      float: right;
-      text-align: right;
-    }
+#blog-navigation {
+  @extend .columns4;
+  margin: 60px 0 0 0;
+
+  li {
+    width: 50%;
+  }
+
+  .prev {
+    float: left;
+  }
+
+  .next {
+    float: right;
+    text-align: right;
   }
 }
 
+.blog-content{
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  padding-bottom: $baseline;
+}
 
+.blog-sidebar{
+  margin-top: $baseline*3;
+  
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.tags{
+  margin-top: $baseline;
+  list-style: none;
+  margin-left: 0;
+
+  a{
+    font-weight: 400;
+    display: block;
+  }
+
+  li a:after {
+    content: ",";
+  }
+
+  li:last-child a:after {
+    content: "";
+  }
+}
+
+.comments a {
+  color: hsl(40, 70%, 98.5%);
+  display: block;
+  background-image: url('/images/comment.png');
+  width: 20px;
+  height: 26px;
+  margin-top: 10px;
+  padding: 4px 12px 6px;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.comments-wrapper {
+  @extend .columns4;
+}
+
+.share-this-wrapper {
+  clear: both;
+}
+
+#thoughts-heading{
+  margin-top: $baseline*3;
+}
 
 // =============================================================================
 // ~PEBBLE'S-GOOD-CODE
@@ -1037,12 +1060,15 @@ textarea{
   #wrap > .row:first-child {
     padding-top: 106px;
   }
+
   .row{
     margin-top: -20px;
   }
+
   .error-header{
     text-align: center;
   }
+
   .error-copy{
     margin-top: $baseline*2;
   }
@@ -1072,18 +1098,18 @@ textarea{
     .row:first-child {
       padding-top: $baseline*4;
     }
-    .data-vis {
-      background-color: $pink;
-      height: $baseline*24;
-      width: 100%;
-    }
-    .documentation {
-      .columns6 {
-        margin-left: 0;
-        margin-bottom: $baseline;
-      }
-    }
   }
+}
+
+.data-vis {
+  background-color: $pink;
+  height: $baseline*24;
+  width: 100%;
+}
+
+.documentation .columns6{   
+  margin-left: 0;
+  margin-bottom: $baseline;
 }
 
 
