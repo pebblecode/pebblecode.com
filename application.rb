@@ -18,9 +18,8 @@ helpers Sinatra::ContentFor
 
 set :root, File.dirname(__FILE__)
 set :environment, ENV["RACK_ENV"] || "development"
-# set :blog_url, "http://blog.pebblecode.com"
-# Use tumblr url for now, while dns propagates
 set :blog_url, "http://blog.pebblecode.com"
+set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
 configure do
   Compass.configuration do |config|
@@ -77,6 +76,11 @@ get '/thoughts' do
     # Actual tumblr blog
     redirect settings.blog_url
   end
+end
+
+get '/jobs' do
+  # Stackoverflow blog
+  redirect settings.jobs_url
 end
 
 ############################################################
