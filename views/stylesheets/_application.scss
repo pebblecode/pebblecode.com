@@ -648,6 +648,10 @@ footer{
       margin-left: 0;
       margin-right: 5%;
 
+      .size0{
+        line-height: 16px;
+      }
+
       &:hover{
         text-decoration: none;
       }
@@ -1298,6 +1302,7 @@ header{
         margin-right: 5%;
         margin-bottom: $baseline;
         min-width: 125px;
+        height: 210px;
       p{
         margin-bottom: -5px;
       }
