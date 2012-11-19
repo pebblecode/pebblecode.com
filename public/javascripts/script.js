@@ -1,4 +1,10 @@
+// Recruitment console message
+if (!window.console) console = {};
+console.warn = console.warn || function(){};
+
 $(document).ready(function() {
+    
+  //console.warn("We can see your curious, how about a job?");
 
   /*
   * Author name replacement - needed because tumblr doesn't have full names
