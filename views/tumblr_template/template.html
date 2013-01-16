@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Theme: Pebble Code v2.0
+  Theme: Pebble Code v2.1
   Author: pebblecode [http://pebblecode.com/]
   For: Tumblr [http://tumblr.com/]
   Terms: Non-free
@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Our thoughts - software development company blog | pebble code</title>
+  <title>{block:PostTitle}{PostTitle} | {/block:PostTitle}pebble code</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="http://pebblecode.com/stylesheets/screen.css" type="text/css" />
   <link rel="stylesheet" title="Default" href="http://pebblecode.com/highlight/styles/default.css">
   <script type="text/javascript" src="http://use.typekit.com/asa8yjy.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- Styles for blog comments -->
   <link rel="stylesheet" href="http://pebblecode.com/stylesheets/disqus.css" type="text/css" />
 
@@ -66,7 +66,6 @@
   </header>
 
   <div id="wrap">
-    <section id="staging-message" style="position:absolute;top:0; width: 100%; background-color: yellow; color: black; height: 25px; z-index: 2000; left: 0; text-align: center; font-size: 15px; line-height: 25px">This is pebble { code } staging (For the real site go to <a href="http://pebblecode.com/">pebblecode.com)</a></section>
 
     <div class="row">
       <div class="columns6"  id="thoughts-heading">
@@ -148,8 +147,14 @@
       <ul id="contact">
         <li class="size0">T: <a href="tel:020 3327 1081">020 3327 1081</a></li>
         <li class="size0">E: <a href="mailto:info@pebblecode.com">info@pebblecode.com</a></li>
+        <li class="size0 address">
+            <a href="http://pebblecode.com/find-us">find us</a>
+          </li>
       </ul>
       <ul id="social">
+      <li>
+            <a href="http://twitter.com/#!/pebblecode" id="twitter">twitter</a>
+          </li>
         <li><a href="http://www.facebook.com/pebblecode" id="facebook">facebook</a></li>
         <li><a href="http://twitter.com/#!/pebblecode" id="twitter">twitter</a></li>
         <li><a href="https://plus.google.com/113628709817662471448/posts" id="google-plus">G+</a></li>
@@ -175,7 +180,7 @@
   {/block:IfDisqusShortname}
   <script type="text/javascript">
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-28661003-3]);
+    _gaq.push(['_setAccount', 'UA-28661003-3']);
     _gaq.push(['_trackPageview']);
 
     (function() {
