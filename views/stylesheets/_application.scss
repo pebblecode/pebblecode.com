@@ -512,8 +512,10 @@ footer{
   .row:first-child{
     margin-top: $baseline*2;
     margin-bottom: $baseline;
+
     .columns6{
       margin-left: 0;
+
       p {
         margin-top: $baseline;
       }
@@ -1209,7 +1211,8 @@ header{
 .page-products {
   .row:first-child {
     margin-top: $baseline;
-    .columns6{
+    
+    .columns6:first-child{
       margin-top: -25px;
     }
   }
