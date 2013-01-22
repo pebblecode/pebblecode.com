@@ -822,12 +822,18 @@ footer{
 /* @end */
 
 /* group archive */
-#archive-list{
-  margin-top: 200px;
+.page-archive{
+  h1{
+    margin-top: $baseline*4;
+  }
+  
+  hr{
+    margin-top: $baseline*2;
+    margin-bottom: $baseline*2;
+  }
 }
 
 #archive-list li{
-  text-align: center;
   @extend .size2;
   margin-bottom: $baseline;
 
