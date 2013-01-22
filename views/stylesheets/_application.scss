@@ -821,7 +821,70 @@ footer{
 }
 /* @end */
 
+/* group archive */
+#archive-list{
+  margin-top: 200px;
+}
 
+#archive-list li{
+  text-align: center;
+  @extend .size2;
+  margin-bottom: $baseline;
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  &:nth-child(6n) a{
+    color: $pink;
+
+    &:hover{
+      color: darken($pink, 17.5);
+    }
+  }
+
+  &:nth-child(6n+1) a{
+    color: $blue;
+
+    &:hover{
+      color: darken($blue, 17.5);
+    }
+  }
+
+  &:nth-child(6n+2) a{
+    color: $green;
+
+    &:hover{
+      color: darken($green, 17.5);
+    }
+  }
+
+  &:nth-child(6n+3) a{
+    color: $orange;
+
+    &:hover{
+      color: darken($orange, 17.5);
+    }
+  }
+
+  &:nth-child(6n+4) a{
+    color: $purple;
+
+    &:hover{
+      color: darken($purple, 17.5);
+    }
+  }
+
+  &:nth-child(6n+5) a{
+    color: $aqua;
+
+    &:hover{
+      color: darken($aqua, 17.5);
+    }
+  }
+}
+
+/* end archive */
 
 // =================================================================
 // §GOOD-CODE
