@@ -401,6 +401,9 @@ footer{
         &.slide3{
           background: $green url("/images/zig-zag-4.gif") no-repeat center 0;
         }
+        &.slide4{
+          background: $green url("/images/zig-zag-1.gif") no-repeat center 0;
+        }
       }
     }
 
@@ -431,6 +434,9 @@ footer{
       }
       li:nth-child(3) a{
         border-color: $blue;
+      }
+      li:nth-child(4) a{
+        border-color: $orange;
       }
     }
   }
@@ -1208,6 +1214,9 @@ header{
             line-height: $baseline*2;
             margin-bottom: $baseline;
           }
+        }
+        &.slide2 h2{
+            line-height: 1.2;
         }
       }
       .size2 {
