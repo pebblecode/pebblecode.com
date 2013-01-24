@@ -846,7 +846,17 @@ footer{
     text-decoration: none;
   }
 
-  &:nth-child(6n) a{
+  span{
+    font-size: .5em;
+    display: inline-block;
+    width: 220px;
+    height: 33px;
+    overflow: hidden;
+    font-weight: normal;
+  }
+
+  &:nth-child(6n) a,
+  &:nth-child(6n) span{
     color: $pink;
 
     &:hover{
@@ -854,7 +864,8 @@ footer{
     }
   }
 
-  &:nth-child(6n+1) a{
+  &:nth-child(6n+1) a,
+  &:nth-child(6n+1) span{
     color: $blue;
 
     &:hover{
@@ -862,7 +873,8 @@ footer{
     }
   }
 
-  &:nth-child(6n+2) a{
+  &:nth-child(6n+2) a,
+  &:nth-child(6n+2) span{
     color: $green;
 
     &:hover{
@@ -870,7 +882,8 @@ footer{
     }
   }
 
-  &:nth-child(6n+3) a{
+  &:nth-child(6n+3) a,
+  &:nth-child(6n+3) span{
     color: $orange;
 
     &:hover{
@@ -878,7 +891,8 @@ footer{
     }
   }
 
-  &:nth-child(6n+4) a{
+  &:nth-child(6n+4) a,
+  &:nth-child(6n+4) span{
     color: $purple;
 
     &:hover{
@@ -886,7 +900,8 @@ footer{
     }
   }
 
-  &:nth-child(6n+5) a{
+  &:nth-child(6n+5) a,
+  &:nth-child(6n+5) span{
     color: $aqua;
 
     &:hover{

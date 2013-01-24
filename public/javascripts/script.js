@@ -218,7 +218,7 @@ $(document).ready(function() {
     var recentPostTemplate = _.template(" \
       <ul> \
         <% _.each(tumblrPosts, function(post) { %> \
-          <li><a href='<%= post.url %>'><%= post['regular-title'] %></a></li> \
+          <li><a href='<%= post.url %>'><%= post['regular-title'] %> <span><%= post.date %></span> </a></li> \
         <% }) %> \
       </ul> \
     ");
