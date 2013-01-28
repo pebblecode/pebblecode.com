@@ -482,7 +482,10 @@ footer{
     }
     .row {
       margin-bottom: $baseline*3;
+      
       .frame {
+        margin-bottom: $baseline;
+
         .img {
           height: $baseline*6;
           padding-top: $baseline*2;
