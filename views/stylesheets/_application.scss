@@ -393,7 +393,7 @@ footer{
         }
 
         &.slide1{
-          background: $pink url("/images/zig-zag-6.gif") no-repeat center 0;
+          background: $pink url("/images/zig-zag-3.gif") no-repeat center 0;
           h1:nth-child(2) {
             margin-top: -15px;
             margin-bottom: 38px;
@@ -422,7 +422,7 @@ footer{
           width: 12px;
           height: 12px;
           margin-left:10px;
-          border: 2px solid $pink;
+          border: 2px solid $aqua;
 
           @include box-sizing(border-box);
           @include border-radius(12px);
