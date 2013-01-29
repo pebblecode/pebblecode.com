@@ -466,12 +466,19 @@ footer{
   .row:first-child {
     margin-top: $baseline*2;
     margin-bottom: $baseline*2;
-    .columns6 {
-      margin-left: 0;
+
+    h1{
+      text-transform: lowercase;
     }
 
     h2{
-      margin-top: $baseline;
+      line-height: 1.2;
+      font-size: 1.5em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .columns6 {
+      margin-left: 0;
     }
   }
 
@@ -528,8 +535,15 @@ footer{
     .columns6{
       margin-left: 0;
 
+      h1{
+        text-transform: lowercase;
+      }
+
       h2{
         margin-top: $baseline;
+        font-size: 1.5em;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.2;
       }
     }
   }
@@ -589,6 +603,10 @@ footer{
   .headline {
     margin-top: $baseline*2;
     margin-bottom: $baseline;
+
+    h1{
+      text-transform: lowercase;
+    }
   }
   .people-copy{
     margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
@@ -710,6 +728,16 @@ footer{
 
   #thoughts-heading{
     margin-top: $baseline*3;
+
+    h1{
+      text-transform: lowercase;
+    }
+
+    h2{
+      font-size: 1.5em;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.2;
+    }
 
     .archive{
       display: block;
