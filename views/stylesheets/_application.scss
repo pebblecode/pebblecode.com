@@ -471,6 +471,7 @@ footer{
     }
 
     h2{
+      margin-top: $baseline;
       line-height: 1.2;
       font-size: 1.5em;
       -webkit-font-smoothing: antialiased;
@@ -495,11 +496,14 @@ footer{
         .img {
           height: $baseline*6;
           padding-top: $baseline*2;
+          
           h2 {
             width: 100%;
             text-align: center;
             color: white;
+            font-size: 3em;
           }
+
           &.gaming {
             background-image: url("/images/gaming_tile.png");
           }
