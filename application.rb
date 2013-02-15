@@ -22,6 +22,9 @@ set :blog_url, "http://blog.pebblecode.com"
 set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
 configure do
+  # Redirect all urls on production (http://github.com/cwninja/rack-force_domain)
+  use Rack::ForceDomain, ENV["DOMAIN"]
+
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)
     config.sass_dir = 'views/stylesheets'

@@ -16,6 +16,9 @@ gem 'rdiscount'  # For markdown usage
 # For production deployment
 gem 'heroku'
 
+# Redirect domains
+gem "rack-force_domain"
+
 # New relic
 gem 'newrelic_rpm'
 
