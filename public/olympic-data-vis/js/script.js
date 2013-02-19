@@ -6,7 +6,8 @@ var App = App || {};
 // Parameters:
 // startYear
 // endYear
-App.dataUrlTemplate = _.template("/get?url=http%3A%2F%2Fnolympics.pebblecode.net%2Fapi%2FMedals%2F%3Ffirst%3D<%= startYear %>%26last%3D<%= endYear %>")
+// App.dataUrlTemplate = _.template("/get?url=http%3A%2F%2Fnolympics.pebblecode.net%2Fapi%2FMedals%2F%3Ffirst%3D<%= startYear %>%26last%3D<%= endYear %>")
+App.dataUrlTemplate = _.template("/olympic-data-vis/olympic-medals.json")
 // App.dataUrl = _.template("/api/Medals/?first=<%= startYear %>&last=<%= endYear %>"
 
 // Constants
