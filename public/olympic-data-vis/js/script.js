@@ -12,7 +12,7 @@ App.dataUrlTemplate = _.template("/olympic-data-vis/olympic-medals.json")
 
 // Constants
 App.summerStartYear = 1896;
-App.summerEndYear = 2008;
+App.summerEndYear = 2012;
 App.winterStartYear = 1994;
 App.winterEndYear = 2006; // Winter olympics was the same year as the summer olympics until 1992
 App.yearsBetweenOlympics = 4;
