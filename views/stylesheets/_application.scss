@@ -524,7 +524,19 @@ footer{
     margin-bottom: $baseline*2;
   }
 
-  .tricklr, .vistazo{
+  .tricklr, 
+  .vistazo{
+
+    .frame,
+    div{
+      float: left;
+      width: 47.5%;
+    }
+
+    .product-container{
+      margin-left: 5%;
+    }
+
     .img{
       width: 100%;
       height: $baseline*9;
@@ -548,7 +560,6 @@ footer{
   }
 
   h2{
-    margin-top: $baseline*2;
     margin-bottom: $baseline;
   }
 
