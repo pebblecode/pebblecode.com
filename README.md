@@ -56,6 +56,9 @@ To deploy another branch to staging
 
   rake shipit[another-branch,staging]
 
+To deploy another branch to staging (without rake)
+git push -f staging branchname:master
+
 #### Initial set up
 
 Only needs to be done once
