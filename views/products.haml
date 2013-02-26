@@ -17,6 +17,16 @@
 :ruby
   projects = [
     {
+      :title => "Noisy URIs",
+      :description => "Ready-made noise images as data URIs. Available in Sass, LESS, and vanilla CSS flavours.",
+      :pebblers => "Mark",
+      :github => "https://github.com/markdurrant/noisy-uris",
+      :livelink => "http://markdurrant.github.com/noisy-uris/",
+      :bloglink => "http://blog.pebblecode.com/post/43139609779/noisy-uris",
+      :blogtext => "Noisy URIs blog post",
+      :image => "/images/projects/noisy.png"
+    },
+    {
       :title => "Fear the IOC",
       :description => "Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.",
       :pebblers => "Mark",
@@ -24,7 +34,17 @@
       :livelink => "http://pebblecode.github.com/fear-the-IOC/",
       :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
       :blogtext => "part of the pebble olympics hackday",
-      :image => ""
+      :image => "/images/projects/fear.png"
+    },
+    {
+      :title => "Vistazo",
+      :description => "Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.",
+      :pebblers => "Mark",
+      :github => "https://github.com/pebblecode/fear-the-IOC/",
+      :livelink => "http://pebblecode.github.com/fear-the-IOC/",
+      :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
+      :blogtext => "part of the pebble olympics hackday",
+      :image => "/images/projects/fear.png"
     }
   ]
 
@@ -32,7 +52,7 @@
   .columns6
     %h1.size3 The pebble playground
   .columns6
-    %p We have built these apps to make our lives easier. Try them in your business too.
+    %p Projects form 10% time, hack-days, and all our other code-adventures
 %hr.background-random
 %section.row
   %article.columns3.tricklr
@@ -56,18 +76,17 @@
   %ul
     - projects.each do |p|
       %li.project
-        .frame
-          %img{:src => p[:image]}
-        %ul
+        .frame.columns1
+          %img.background-random{:src => p[:image]}
+        %ul.columns5
           %li
             %h3.size2= p[:title]
-          %li= p[:description]
-          %li= p[:pebblers]
-          %li 
-            %a{:href => p[:github], :target => "_blank"} view on Github
-          - if p[:livelink]
-            %li
-              %a{:href => p[:livelink], :target => "_blank"} see the project here
-          %li
-            %a{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
+            %p= p[:pebblers]
+          %p= p[:description]
+          %p.project-links
+            %a.pink{:href => p[:github], :target => "_blank"} view on Github
+            - if p[:livelink]
+              %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
+            - if p[:bloglink]
+              %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
 
