@@ -5,6 +5,18 @@
 - content_for :keywords do
   Trickr, Vistazo, team, time, track, manage, Twitter, automation, open source, software, apps, simplify, tools, workload, web apo, efficient, easy
 
+:ruby
+  projects = [
+    {
+      :title => "",
+      :authors => "",
+      :github => "",
+      :blog-link => "",
+      :description => "",
+      :image => ""
+    },
+  ]
+
 .row
   .columns6
     %h1.size3 Our products
@@ -27,11 +39,4 @@
       Track what everyone in your team is working on and when. Visualise people's workloads at a glance, without getting sucked into micromanagement. 
       %a{:href => "http://vistazoapp.com/"} Learn more about Vistazo.
 %hr.background-random
-%section.row.open-source
-  .columns6
-    %h3.size3
-      we &hearts; open source
-  .columns6
-    %p 
-      Being active in the open source community is a big part of our business. 
-      %a{:href => "http://github.com/pebblecode/"} Check us out on GitHub.
+%section.row
