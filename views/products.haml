@@ -5,14 +5,25 @@
 - content_for :keywords do
   Trickr, Vistazo, team, time, track, manage, Twitter, automation, open source, software, apps, simplify, tools, workload, web apo, efficient, easy
 
+-# title = the title of the project
+-# description = (short) description of the project
+-# pebblers = who created the project
+-# github = url of the project on github
+-# livelink = link to a live demo of project (if it exsits)
+-# bloglink = url of blog post relating to project (if applicatble)
+-# blogtext = text for blog link (if applicatble)
+-# image = an image for the project (if applicatble)
+
 :ruby
   projects = [
     {
-      :title => "",
-      :authors => "",
-      :github => "",
-      :bloglink => "",
-      :description => "",
+      :title => "Fear the IOC",
+      :description => "Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.",
+      :pebblers => "Mark",
+      :github => "https://github.com/pebblecode/fear-the-IOC/",
+      :livelink => "http://pebblecode.github.com/fear-the-IOC/",
+      :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
+      :blogtext => "part of the pebble olympics hackday",
       :image => ""
     }
   ]
@@ -41,5 +52,22 @@
         Track what everyone in your team is working on and when. Visualise people's workloads at a glance, without getting sucked into micromanagement. 
         %a{:href => "http://vistazoapp.com/"} Learn more about Vistazo.
 %hr.background-random
-%section.projects.row
+%section.projects-list
+  %ul
+    - projects.each do |p|
+      %li.project
+        .frame
+          %img{:src => p[:image]}
+        %ul
+          %li
+            %h3.size2= p[:title]
+          %li= p[:description]
+          %li= p[:pebblers]
+          %li 
+            %a{:href => p[:github], :target => "_blank"} view on Github
+          - if p[:livelink]
+            %li
+              %a{:href => p[:livelink], :target => "_blank"} see the project here
+          %li
+            %a{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
 
