@@ -7,6 +7,7 @@
 
 -# title = the title of the project
 -# description = (short) description of the project
+-# date = month and year project was released (E.g. Febuary 2012)
 -# pebblers = who created the project
 -# github = url of the project on github
 -# livelink = link to a live demo of project (if it exsits)
@@ -19,6 +20,7 @@
     {
       :title => "Noisy URIs",
       :description => "Ready-made noise images as data URIs. Available in Sass, LESS, and vanilla CSS flavours.",
+      :date => "Febuary 2013",
       :pebblers => "Mark",
       :github => "https://github.com/markdurrant/noisy-uris",
       :livelink => "http://markdurrant.github.com/noisy-uris/",
@@ -29,6 +31,7 @@
     {
       :title => "Fear the IOC",
       :description => "Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.",
+      :date => "April 2012",
       :pebblers => "Mark",
       :github => "https://github.com/pebblecode/fear-the-IOC/",
       :livelink => "http://pebblecode.github.com/fear-the-IOC/",
@@ -38,13 +41,75 @@
     },
     {
       :title => "Vistazo",
-      :description => "Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.",
-      :pebblers => "Mark",
-      :github => "https://github.com/pebblecode/fear-the-IOC/",
-      :livelink => "http://pebblecode.github.com/fear-the-IOC/",
+      :description => "Track what everyone in your team is working on and when. Visualise people's workloads at a glance, without getting sucked into micromanagement.",
+      :date => "April 2012",
+      :pebblers => "Tak, Mark",
+      :livelink => "http://vistazoapp.com/",
       :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
       :blogtext => "part of the pebble olympics hackday",
       :image => "/images/projects/fear.png"
+    },
+    {
+      :title => "WTF",
+      :description => "WTF is a simple image guessing game. It supports guessing cities and movies. It uses the flickr api for getting images.",
+      :date => "October 2012",
+      :pebblers => "Tak, Matt",
+      :livelink => "http://pebblecode.github.com/wtf/",
+      :github => "https://github.com/pebblecode/wtf/",
+      :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
+      :blogtext => "part of the pebble games hackday",
+    },
+    {
+      :title => "Keyboard Demon",
+      :description => "Keyboard Demon is a simple keyboard based game about mashing keys as quickly as possible. Based on <a href='http://hackertyper.net/'>hacker typer</a>.",
+      :date => "October 2012",
+      :pebblers => "Mark, Vince",
+      :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
+      :blogtext => "part of the pebble games hackday",
+    },
+    {
+      :title => "Battleships",
+      :description => "Hack-ships is an extended idea of Battleships, instead of a square board on a plane surface we've chosen to play the game on a Google map.",
+      :date => "October 2012",
+      :pebblers => "Joseph, Akash, Sava, Toby",
+      :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
+      :blogtext => "part of the pebble games hackday",
+    },
+    {
+      :title => "Hangover hunt",
+      :description => "The player is asked a series of questions. They have to go to the location (a pub!) and answer the question with either location specific information or using location data from their browser or phone.",
+      :date => "October 2012",
+      :pebblers => "Daniel, Tom, Plamen",
+      :github => "https://github.com/pebblecode/hangover-hunt",
+      :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
+      :blogtext => "part of the pebble games hackday",
+    },
+    {
+      :title => "Campfire quiz",
+      :date => "October 2012",
+      :description => "A quiz gameplay engine for <a href='http://campfirenow.com/'>campfire</a>.",
+      :pebblers => "Alex, James",
+      :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
+      :blogtext => "part of the pebble games hackday",
+    },
+    {
+      :title => "Pebble custom reset",
+      :date => "August 2012",
+      :description => "Pebble custom reset uses Sass to compile a custom reset based on Eric Meyer's <a href='http://meyerweb.com/eric/tools/css/reset/'>CSS reset</a> with a few additions.",
+      :pebblers => "Mark",
+      :livelink => "http://pebblecode.github.com/PCR/",
+      :github => "https://github.com/pebblecode/PCR",
+      :bloglink => "http://blog.pebblecode.com/post/29614270562/the-great-css-experiment",
+      :blogtext => "pebble custom reset blog post",
+    },
+    {
+      :title => "Olympic data vis",
+      :description => "July 2012",
+      :date => "Data visualisation of all past olympic medals won",
+      :pebblers => "Alex, Tak",
+      :livelink => "http://pebblecode.com/olympic-data-vis",
+      :bloglink => "http://blog.pebblecode.com/post/27976232997/olympics-hackery",
+      :blogtext => "Olympics hackery",
     }
   ]
 
@@ -55,7 +120,7 @@
     %p Projects form 10% time, hack-days, and all our other code-adventures
 %hr.background-random
 %section.row
-  %article.columns3.tricklr
+  %article.tricklr
     .frame
       .img
     .product-container
@@ -63,28 +128,22 @@
       %p
         Stay active on Twitter without having to monitor it constantly. Put your tweets in a queue and Tricklr will send them for you at regular intervals.
         %a{:href => "http://tricklrapp.com"} Learn more about Tricklr.
-  %article.columns3.vistazo
-    .frame
-      .img
-    .product-container
-      %h2.size2 Vistazo
-      %p
-        Track what everyone in your team is working on and when. Visualise people's workloads at a glance, without getting sucked into micromanagement. 
-        %a{:href => "http://vistazoapp.com/"} Learn more about Vistazo.
 %hr.background-random
 %section.projects-list
   %ul
     - projects.each do |p|
       %li.project
-        .frame.columns1
-          %img.background-random{:src => p[:image]}
-        %ul.columns5
-          %li
-            %h3.size2= p[:title]
-            %p= p[:pebblers]
-          %p= p[:description]
+        - if p[:image]
+          .frame.columns1
+            %img.background-random{:src => p[:image]}
+        .columns5
+          %h3.project-title.size2= p[:title]
+          %p.pebblers= p[:pebblers]
+          %p.date= p[:date]
+          %p.project-description= p[:description]
           %p.project-links
-            %a.pink{:href => p[:github], :target => "_blank"} view on Github
+            - if p[:github]
+              %a.pink{:href => p[:github], :target => "_blank"} view on Github
             - if p[:livelink]
               %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
             - if p[:bloglink]
