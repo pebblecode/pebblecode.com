@@ -42,7 +42,7 @@
       %nav
         %a.logo{:href => "/"} pebble{code}
         %ul
-          - nav_names = ["people", "work", "products", "thoughts"]
+          - nav_names = ["people", "work", "playground", "thoughts"]
           - nav_names.each do |nav_name|
             %li{:class => "#{"nav-active" if @page_name == nav_name}"}
               = surround "<span>{</span>", "<span>}</span>" do
