@@ -549,16 +549,6 @@ footer{
     }
   }
 
-  .vistazo{
-    .img{
-      background-color: $blue;
-      background-image: url("/images/vistazo.jpg");
-    }
-    a{
-      color: $blue;
-    }
-  }
-
   h2{
     margin-bottom: $baseline;
   }
@@ -578,10 +568,6 @@ footer{
   }
 }
 
-.projects-list{
-
-}
-
 .project{
   margin-bottom: $baseline;
 
@@ -596,9 +582,17 @@ footer{
     margin-bottom: 0;
   }
 
+  .frame{
+    width: 8em; 
+    height: 8em;
+    float: left;
+    margin-right: $baseline;
+    margin-bottom: $baseline;
+  }
+
   img{
     width: 100%;
-    height: 7.5em;
+    height: 100%;
   }
 }
 
@@ -1270,6 +1264,22 @@ header{
     p{
       margin-top: $baseline;
     }
+  }
+
+  .tricklr{
+    .frame{
+      width: 100%;
+    }
+
+    .product-container{
+      margin-left: 0;
+      margin-bottom: $baseline;
+      width: 100%;
+    }
+  }
+
+  .project .frame{
+    display: none;
   }
 }
 

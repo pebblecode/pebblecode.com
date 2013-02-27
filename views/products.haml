@@ -1,5 +1,5 @@
 - content_for :title do
-  Our products - apps to simplify tasks | pebble code
+  Our playground - projects from 10% time, hack-days, and all our other code-adventures | pebble code
 - content_for :description do
   See our Twitter automation and easy team management apps. Straightforward, effective, easy-to-use software from pebble code.
 - content_for :keywords do
@@ -58,6 +58,7 @@
       :github => "https://github.com/pebblecode/wtf/",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday",
+      :image => "/images/projects/noisy.png"
     },
     {
       :title => "Keyboard Demon",
@@ -66,6 +67,7 @@
       :pebblers => "Mark, Vince",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday",
+      :image => "/images/projects/noisy.png"
     },
     {
       :title => "Battleships",
@@ -74,6 +76,7 @@
       :pebblers => "Joseph, Akash, Sava, Toby",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday",
+      :image => "/images/projects/noisy.png"
     },
     {
       :title => "Hangover hunt",
@@ -83,6 +86,7 @@
       :github => "https://github.com/pebblecode/hangover-hunt",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday",
+      :image => "/images/projects/noisy.png"
     },
     {
       :title => "Campfire quiz",
@@ -91,6 +95,7 @@
       :pebblers => "Alex, James",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday",
+      :image => "/images/projects/noisy.png"
     },
     {
       :title => "Pebble custom reset",
@@ -101,6 +106,7 @@
       :github => "https://github.com/pebblecode/PCR",
       :bloglink => "http://blog.pebblecode.com/post/29614270562/the-great-css-experiment",
       :blogtext => "pebble custom reset blog post",
+      :image => "/images/projects/noisy.png"
     },
     {
       :title => "Olympic data vis",
@@ -110,6 +116,7 @@
       :livelink => "http://pebblecode.com/olympic-data-vis",
       :bloglink => "http://blog.pebblecode.com/post/27976232997/olympics-hackery",
       :blogtext => "Olympics hackery",
+      :image => ""
     }
   ]
 
@@ -117,7 +124,7 @@
   .columns6
     %h1.size3 The pebble playground
   .columns6
-    %p Projects form 10% time, hack-days, and all our other code-adventures
+    %p Projects from 10% time, hack-days, and all our other code-adventures
 %hr.background-random
 %section.row
   %article.tricklr
@@ -134,18 +141,17 @@
     - projects.each do |p|
       %li.project
         - if p[:image]
-          .frame.columns1
+          .frame
             %img.background-random{:src => p[:image]}
-        .columns5
-          %h3.project-title.size2= p[:title]
-          %p.pebblers= p[:pebblers]
-          %p.date= p[:date]
-          %p.project-description= p[:description]
-          %p.project-links
-            - if p[:github]
-              %a.pink{:href => p[:github], :target => "_blank"} view on Github
-            - if p[:livelink]
-              %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
-            - if p[:bloglink]
-              %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
+        %h3.project-title.size2= p[:title]
+        %p.pebblers= p[:pebblers]
+        %p.date= p[:date]
+        %p.project-description= p[:description]
+        %p.project-links
+          - if p[:github]
+            %a.pink{:href => p[:github], :target => "_blank"} view on Github
+          - if p[:livelink]
+            %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
+          - if p[:bloglink]
+            %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
 
