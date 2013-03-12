@@ -231,17 +231,11 @@
           %h3.size2= p[:title]
           %p= RDiscount.new(p[:description]).to_html
           - if p[:website]
-            %p.link
-              website:
-              %a{:href => p[:website], :target => "_blank"}= p[:website]
+            %a{:href => p[:website], :target => "_blank", :class => "person-link"} W
           - if p[:twitter]
-            %p.link
-              twitter:
-              %a{:href => p[:twitter], :target => "_blank"}= p[:twitter]
+            %a{:href => p[:twitter], :target => "_blank", :class => "person-link"} T
           - if p[:github]
-            %p.link
-              github:
-              %a{:href => p[:github], :target => "_blank"}= p[:github]
+            %a{:href => p[:github], :target => "_blank", :class => "person-link"} G
       / Shown on large screens
       .columns2.frame.bottom
         .img

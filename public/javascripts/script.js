@@ -117,8 +117,8 @@ $(document).ready(function() {
     // Color spotlight person row the same
     var personIndex = $(obj).parent().prevAll().length;
     var spotlightPerson = $("#spotlight .person-row")[personIndex];
-    $(spotlightPerson).find("h2, h3, a").addClass(randColor);
-    $(spotlightPerson).find(".img").addClass(randColor + "-background");
+    $(spotlightPerson).find("h2, h3").addClass(randColor);
+    $(spotlightPerson).find(".img, .person-link").addClass(randColor + "-background");
   });
 
   // Set spotlight if there is a url hash of the person

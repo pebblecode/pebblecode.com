@@ -765,6 +765,24 @@ footer{
   }
 }
 
+.person-link{
+  font-family: 'pc_social';
+  color: hsl(40, 70%, 98.5%);
+  font-size: 1.6em;
+  line-height: 1.7em;
+  margin-right: .2em;
+  width: 1.7em;
+  text-align: center;
+  display: inline-block;
+  @include border-radius(.2em);
+
+  &:hover{
+    color: hsl(40, 70%, 98.5%);
+    text-decoration: none;
+  }
+}
+
+
 /* @end */
 
 /* @group thoughts */
