@@ -232,6 +232,13 @@ $(document).ready(function() {
   }
   populateArchive("#archive-list");
 
-
+  // footer map stuff
+  $("footer").hover(
+    function () {
+      $(this).css("height", "500px");
+      $.scrollTo($('footer'), "max");
+    },
+    function () {
+      $(this).animate({height: "80px"}, 500 );
+    });
 });
-

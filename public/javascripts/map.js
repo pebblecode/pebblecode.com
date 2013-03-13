@@ -5,9 +5,11 @@ function load(){
   var myMapOptions = {
     zoom: 15,
     center: point,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false
   };
 
+  // find us page map
   var map = new google.maps.Map(document.getElementById("map"),myMapOptions);
 
   var image = new google.maps.MarkerImage(
