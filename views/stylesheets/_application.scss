@@ -661,14 +661,21 @@ footer{
     margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
   }
   #spotlight{
+    width: $column-width*2 + $column-gutter;
+    float: left;
+    margin-right: 30px;
+    height: 1200px;
+
     .row:first-child{
       margin-bottom: $baseline;
     }
     .row:nth-child(3){
       margin-bottom: $baseline;
     }
+
     .person-row{
       display: none;
+
       &.active{
         display: block;
       }
@@ -678,9 +685,7 @@ footer{
     }
 
     .frame { // Left float
-      width: 290px;
-      float: left;
-      margin-left: -100%;
+      margin-bottom: 30px;
 
       &.top {
         display: none; // Showing bottom image
@@ -695,9 +700,6 @@ footer{
       width: 100%;
       float: left;
       margin-left: 0;
-      .inner-wrapper {
-        margin-left: 320px;
-      }
     }
 
     h1 {
@@ -1828,7 +1830,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
           margin-right: 30px;
         }
       }
-      li:nth-child(6n){
+      li:nth-child(4n+1){
        .person,
        .join_us{
           margin-right: 0;

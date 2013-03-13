@@ -153,11 +153,11 @@ $(document).ready(function() {
     var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
     $("#spotlight .person-row").removeClass("active");
 
-    var personIndex = $(personLink).parent().prevAll().length;
+    var personIndex = $(personLink).parent().prevAll().length - 1;
     var personRow = $("#spotlight .person-row")[personIndex];
     $(personRow).addClass("active");
 
-    $.scrollTo( $('#spotlight'), 600);
+    $.scrollTo( $('#spotlight-scroll'), 600);
     event.preventDefault();
   });
 
