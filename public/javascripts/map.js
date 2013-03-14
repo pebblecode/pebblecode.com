@@ -1,5 +1,165 @@
 function load(){
 
+    var styles = [
+    {
+      featureType: 'water',
+      elementType: 'all',
+      stylers: [
+        { hue: '#061F42' },
+        { saturation: 70 },
+        { lightness: -81 },
+        { visibility: 'on' }
+      ]
+    },{
+      featureType: 'road.arterial',
+      elementType: 'all',
+      stylers: [
+        { hue: '#37bec0' },
+        { saturation: -45 },
+        { lightness: -37 },
+        { visibility: 'on' }
+      ]
+    },{
+      featureType: 'road.highway',
+      elementType: 'all',
+      stylers: [
+        { hue: '#a4ce4e' },
+        { saturation: -43 },
+        { lightness: -13 },
+        { visibility: 'on' }
+      ]
+    },{
+      featureType: 'transit',
+      elementType: 'all',
+      stylers: [
+        { hue: '#faad40' },
+        { saturation: 95 },
+        { lightness: -18 },
+        { visibility: 'on' }
+      ]
+    },{
+      featureType: 'landscape',
+      elementType: 'all',
+      stylers: [
+        { hue: '#2D2D2D' },
+        { saturation: -100 },
+        { lightness: -80 },
+        { visibility: 'on' }
+      ]
+    },{
+      featureType: 'poi.business',
+      elementType: 'labels',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'poi.park',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'road.local',
+      elementType: 'geometry',
+      stylers: [
+        { hue: '#3A3A3A' },
+        { saturation: -100 },
+        { lightness: -77 },
+        { visibility: 'on' }
+      ]
+    },{
+      featureType: 'poi.business',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'poi.attraction',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'poi.medical',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'poi.school',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'poi.government',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'poi.place_of_worship',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'administrative',
+      elementType: 'all',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: 0 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'road.local',
+      elementType: 'labels',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    },{
+      featureType: 'landscape',
+      elementType: 'labels',
+      stylers: [
+        { hue: '#000000' },
+        { saturation: -100 },
+        { lightness: -100 },
+        { visibility: 'off' }
+      ]
+    }
+  ];
+
+  var styledMap = new google.maps.StyledMapType(styles,
+  {name: "Styled Map"});
+
   var point = new google.maps.LatLng(51.485672, -0.118554);
 
   var myMapOptions = {
@@ -7,14 +167,16 @@ function load(){
     center: point,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
-    // panControl: false,
-    // zoomControl: false,
-    // scaleControl: false,
-    disableDefaultUI: true
+    disableDefaultUI: true,
+    mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    }
   };
 
-  // find us page map
   var map = new google.maps.Map(document.getElementById("map"),myMapOptions);
+
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
 
   var image = new google.maps.MarkerImage(
     'images/map-pin-image.png',
@@ -42,6 +204,5 @@ function load(){
     shape: shape,
     map: map,
     position: point
-  });
-
+  });  
 }
