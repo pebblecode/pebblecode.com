@@ -1849,3 +1849,34 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 }
 
+// =========================================================
+// MINI-MUGSHOTS
+// =========================================================
+
+.pebbler-test{
+  position: relative;
+
+  div,
+  span{
+    display: inline-block;
+    background-color: white;
+    padding: 4px 4px 0;
+    border: 1px solid hsl(0, 0%, 80%);
+    @include box-shadow(hsl(40, 30%, 95%) 3px 3px 0);
+    @include box-sizing(border-box);
+  }
+
+  img{
+    width: $baseline*3;
+    height: $baseline*3;
+    background-color: $pink;
+  }
+
+  span{
+    position: absolute;
+    padding-top: 0;
+    bottom: -30px;
+    left: 0;
+    @include box-shadow(hsla(40, 30%, 10%, .1) 3px 3px 0);
+  }
+}
