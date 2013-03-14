@@ -5,9 +5,9 @@ function load(){
       featureType: 'water',
       elementType: 'all',
       stylers: [
-        { hue: '#061F42' },
-        { saturation: 70 },
-        { lightness: -81 },
+        { hue: '#0ea2dc' },
+        { saturation: 78 },
+        { lightness: -40 },
         { visibility: 'on' }
       ]
     },{
@@ -29,22 +29,28 @@ function load(){
         { visibility: 'on' }
       ]
     },{
-      featureType: 'transit',
+      featureType :"poi.sports_complex",
       elementType: 'all',
       stylers: [
-        { hue: '#faad40' },
-        { saturation: 95 },
-        { lightness: -18 },
-        { visibility: 'on' }
+        { visibility: 'off' }
       ]
     },{
       featureType: 'landscape',
       elementType: 'all',
       stylers: [
-        { hue: '#2D2D2D' },
-        { saturation: -100 },
-        { lightness: -80 },
+        { hue: '#fefcf8' },
+        { saturation: 66 },
+        { lightness: 86 },
         { visibility: 'on' }
+      ]
+    },{
+      featureType: 'landscape',
+      elementType: 'labels',
+      stylers: [
+        { hue: '#fefcf8' },
+        { saturation: 66 },
+        { lightness: 86 },
+        { visibility: 'off' }
       ]
     },{
       featureType: 'poi.business',
@@ -66,12 +72,16 @@ function load(){
       ]
     },{
       featureType: 'road.local',
-      elementType: 'geometry',
+      elementType: 'all',
       stylers: [
-        { hue: '#3A3A3A' },
-        { saturation: -100 },
-        { lightness: -77 },
-        { visibility: 'on' }
+        { color: '#f2f2f2' },
+        { visibility: 'simplified' }
+      ]
+    },{
+      featureType: 'road.local',
+      elementType: 'labels',
+      stylers: [
+        { visibility: 'off' }
       ]
     },{
       featureType: 'poi.business',
@@ -137,22 +147,13 @@ function load(){
         { visibility: 'off' }
       ]
     },{
-      featureType: 'road.local',
-      elementType: 'labels',
+      featureType: 'transit',
+      elementType: 'all',
       stylers: [
-        { hue: '#000000' },
-        { saturation: -100 },
-        { lightness: -100 },
-        { visibility: 'off' }
-      ]
-    },{
-      featureType: 'landscape',
-      elementType: 'labels',
-      stylers: [
-        { hue: '#000000' },
-        { saturation: -100 },
-        { lightness: -100 },
-        { visibility: 'off' }
+        { hue: '#faad40' },
+        { saturation: 95 },
+        { lightness: -18 },
+        { visibility: 'on' }
       ]
     }
   ];
