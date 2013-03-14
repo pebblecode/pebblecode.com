@@ -6,7 +6,11 @@ function load(){
     zoom: 15,
     center: point,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false
+    scrollwheel: false,
+    // panControl: false,
+    // zoomControl: false,
+    // scaleControl: false,
+    disableDefaultUI: true
   };
 
   // find us page map
