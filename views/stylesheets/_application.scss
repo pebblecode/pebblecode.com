@@ -1854,10 +1854,11 @@ only screen and (min-device-pixel-ratio : 1.5) {
 // =========================================================
 
 .pebbler-test{
+  display: inline-block;
   position: relative;
+  margin: 0 5px 10px 0;
 
-  div,
-  span{
+  div{
     display: inline-block;
     background-color: white;
     padding: 4px 4px 0;
@@ -1867,16 +1868,26 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 
   img{
-    width: $baseline*3;
-    height: $baseline*3;
-    background-color: $pink;
+    width: $baseline*2;
+    height: $baseline*2;
   }
 
   span{
+    opacity: 0;
     position: absolute;
-    padding-top: 0;
     bottom: -30px;
     left: 0;
-    @include box-shadow(hsla(40, 30%, 10%, .1) 3px 3px 0);
+    text-align: center;
+    background: white;
+    padding: 0 4px;
+    border: 1px solid hsl(0, 0%, 80%);
+
+    @include transition-property(opacity);
+    @include transition-duration(.5s);
+ 
+  }
+
+  &:hover span{
+    opacity: 1;
   }
 }
