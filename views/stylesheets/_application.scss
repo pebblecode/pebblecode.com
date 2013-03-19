@@ -618,31 +618,7 @@ footer #map{
 }
 
 .project{
-  margin-bottom: $baseline;
 
-  // clearfix
-  &:after{
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  p{
-    margin-bottom: 0;
-  }
-
-  .frame{
-    width: 8em; 
-    height: 8em;
-    float: left;
-    margin-right: $baseline;
-    margin-bottom: $baseline;
-  }
-
-  img{
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .project-links a{
@@ -664,6 +640,31 @@ footer #map{
 
   .project.active{
     display: block;
+  }
+}
+
+.labs-filtering{
+  padding-bottom: $baseline*2;
+
+  p{
+    display: inline;
+    margin-right: 1em;
+  }
+}
+
+.filter{
+  @include border-radius(.2em);
+
+  font-size: 1em;
+  color: hsl(40, 75, 98);
+  border: 0;
+  padding: .5em .75em;
+  margin: 0 .5em 0 0;
+  cursor: pointer;
+
+  // just to show hover states
+  &:hover{
+    opacity: .8;
   }
 }
 
