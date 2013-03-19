@@ -241,4 +241,7 @@ $(document).ready(function() {
     function () {
       $(this).animate({height: "80px"}, 500 );
     });
+
+  // labs stuff
+  $('.labs-spotlight .project:first-child').addClass('active');
 });

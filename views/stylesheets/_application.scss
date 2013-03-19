@@ -545,7 +545,7 @@ footer #map{
 
 /* @end */
 
-/* @group products */
+/* @group labs */
 
 .page-labs{
 
@@ -647,6 +647,24 @@ footer #map{
 
 .project-links a{
   margin-right: 1em;
+}
+
+.labs-header{
+  background: hsl(220,100,90);
+  height: 10em;
+  width: 100%;
+  padding: .5em;
+}
+
+.labs-spotlight{
+
+  .project{
+    display: none;
+  }
+
+  .project.active{
+    display: block;
+  }
 }
 
 /* @end */
@@ -1851,43 +1869,43 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 // =========================================================
 // MINI-MUGSHOTS
+// stles for using images as avatars 
 // =========================================================
+// .pebbler-test{
+//   display: inline-block;
+//   position: relative;
+//   margin: 0 5px 10px 0;
 
-.pebbler-test{
-  display: inline-block;
-  position: relative;
-  margin: 0 5px 10px 0;
+//   div{
+//     display: inline-block;
+//     background-color: white;
+//     padding: 4px 4px 0;
+//     border: 1px solid hsl(0, 0%, 80%);
+//     @include box-shadow(hsl(40, 30%, 95%) 3px 3px 0);
+//     @include box-sizing(border-box);
+//   }
 
-  div{
-    display: inline-block;
-    background-color: white;
-    padding: 4px 4px 0;
-    border: 1px solid hsl(0, 0%, 80%);
-    @include box-shadow(hsl(40, 30%, 95%) 3px 3px 0);
-    @include box-sizing(border-box);
-  }
+//   img{
+//     width: $baseline*2;
+//     height: $baseline*2;
+//   }
 
-  img{
-    width: $baseline*2;
-    height: $baseline*2;
-  }
+//   span{
+//     opacity: 0;
+//     position: absolute;
+//     bottom: -30px;
+//     left: 0;
+//     text-align: center;
+//     background: white;
+//     padding: 0 4px;
+//     border: 1px solid hsl(0, 0%, 80%);
 
-  span{
-    opacity: 0;
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    text-align: center;
-    background: white;
-    padding: 0 4px;
-    border: 1px solid hsl(0, 0%, 80%);
-
-    @include transition-property(opacity);
-    @include transition-duration(.5s);
+//     @include transition-property(opacity);
+//     @include transition-duration(.5s);
  
-  }
+//   }
 
-  &:hover span{
-    opacity: 1;
-  }
-}
+//   &:hover span{
+//     opacity: 1;
+//   }
+// }

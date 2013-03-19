@@ -18,6 +18,16 @@
 :ruby
   projects = [
     {
+      :title => "Tricklr", 
+      :description => "Stay active on Twitter without having to monitor it constantly. Put your tweets in a queue and Tricklr will send them for you at regular intervals.",
+      :date => "Dec 2011",
+      :pebblers => "George, Tak, Mark",
+      :livelink => "http://tricklrapp.com/",
+      :bloglink => "http://blog.pebblecode.com/post/15777853652/tricklr-1-0",
+      :blogtext => "Tricklr 1.0",
+      :image => "/images/projects/tricklr.png"
+    },
+    {
       :title => "Noisy URIs",
       :description => "Ready-made noise images as data URIs. Available in Sass, LESS, and vanilla CSS flavours.",
       :date => "Febuary 2013",
@@ -34,8 +44,8 @@
       :date => "April 2012",
       :pebblers => "Tak, Mark",
       :livelink => "http://vistazoapp.com/",
-      :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
-      :blogtext => "part of the pebble olympics hackday",
+      :bloglink => "http://blog.pebblecode.com/post/21434355185/vistazo-the-making-of-our-new-baby",
+      :blogtext => "The making of our new baby",
       :image => "/images/projects/vistazo.png"
     },
     {
@@ -119,26 +129,42 @@
       :image => "/images/projects/fear.png"
     }
   ]
-  projects.shuffle!
   
 .row
-  .columns6
-    %h1.size3 The pebble playground
-  .columns6
-    %p Projects from 10% time, hack-days, and all our other code-adventures
+  .labs-header
+    %p labs header
 %hr.background-random
 %section.row
-  %article.tricklr
-    .frame
-      .img
-    .product-container
-      %h2.size2 Tricklr
-      %p
-        Stay active on Twitter without having to monitor it constantly. Put your tweets in a queue and Tricklr will send them for you at regular intervals.
-        %a{:href => "http://tricklrapp.com"} Learn more about Tricklr.
+  %article.labs-spotlight
+    %h2 In the spotlight
+    %ul
+      - projects.each_with_index do |p, index|
+        %li.project
+          - if p[:image]
+            .frame
+              %img.background-random{:src => p[:image]}
+          %h3.project-title.size2= p[:title]
+          %p.pebblers= p[:pebblers]
+          %p.date= p[:date]
+          %p.project-description= p[:description]
+          %p.project-links
+            - if p[:github]
+              %a.pink{:href => p[:github], :target => "_blank"} view on Github
+            - if p[:livelink]
+              %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
+            - if p[:bloglink]
+              %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
+%hr.background-random
+.labs-filtering
+  %p Filter by...
+  %button.filter 10% time
+  %button.filter Olympics hack day
+  %button.filter Games hack day
+  %button.filter Education hack day
 %hr.background-random
 %section.projects-list
   %ul
+    - projects.shuffle!
     - random_index = rand(projects.length)
     - projects.each_with_index do |p, index|
       %li.project
@@ -146,13 +172,4 @@
           .frame
             %img.background-random{:src => p[:image]}
         %h3.project-title.size2= p[:title]
-        %p.pebblers= p[:pebblers]
-        %p.date= p[:date]
         %p.project-description= p[:description]
-        %p.project-links
-          - if p[:github]
-            %a.pink{:href => p[:github], :target => "_blank"} view on Github
-          - if p[:livelink]
-            %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
-          - if p[:bloglink]
-            %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
