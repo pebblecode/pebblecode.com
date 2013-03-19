@@ -106,6 +106,17 @@
       :bloglink => "http://blog.pebblecode.com/post/27976232997/olympics-hackery",
       :blogtext => "Olympics hackery",
       :image => "/images/projects/data-vis.png"
+    },
+    {
+      :title => "Fear the IOC",
+      :description => "Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.",
+      :date => "April 2012",
+      :pebblers => "Mark",
+      :github => "https://github.com/pebblecode/fear-the-IOC/",
+      :livelink => "http://pebblecode.github.com/fear-the-IOC/",
+      :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
+      :blogtext => "part of the pebble olympics hackday",
+      :image => "/images/projects/fear.png"
     }
   ]
   projects.shuffle!
@@ -128,26 +139,6 @@
 %hr.background-random
 %section.projects-list
   %ul
-    / hard-care the fear project to test mugshot styles
-    %li.project
-      .frame
-        %img.background-random{:src => "/images/projects/fear.png"}
-      %h3.project-title.size2 Fear the IOC
-      %a.pebbler-test{:href => "#"}
-        %div
-          %img.background-random{:src => "/images/mug-shots/mark.png"}
-        %span Mark
-      %a.pebbler-test{:href => "#"}
-        %div
-          %img.background-random{:src => "/images/mug-shots/plamen.png"}
-        %span Plamen
-      %p.date April 2012
-      %p.project-description Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.
-      %p.project-links
-        %a.pink{:href => "https://github.com/pebblecode/fear-the-IOC/", :target => "_blank"} view on Github
-    /       %a.blue{:href => "http://pebblecode.github.com/fear-the-IOC/", :target => "_blank"} see the project here
-    /       %a.green{:href => "http://blog.pebblecode.com/post/21838814065/hack-day-live", :target => "_blank" part of the pebble olympics hackday
-
     - random_index = rand(projects.length)
     - projects.each_with_index do |p, index|
       %li.project
@@ -165,16 +156,3 @@
             %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
           - if p[:bloglink]
             %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
-
-
-    / {
-    /   :title => "Fear the IOC",
-    /   :description => "Fear the IOC (International Olympic Committee) is a bookmarklet that censors any text or images that the IOC may find litigious.",
-    /   :date => "April 2012",
-    /   :pebblers => "Mark",
-    /   :github => "https://github.com/pebblecode/fear-the-IOC/",
-    /   :livelink => "http://pebblecode.github.com/fear-the-IOC/",
-    /   :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
-    /   :blogtext => "part of the pebble olympics hackday",
-    /   :image => "/images/projects/fear.png"
-    / },
