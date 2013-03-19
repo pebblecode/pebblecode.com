@@ -244,4 +244,10 @@ $(document).ready(function() {
 
   // labs stuff
   $('.labs-spotlight .project:first-child').addClass('active');
+  var $container = $('.projects-list');
+
+  $container.isotope({
+    itemSelector : '.project',
+    layoutMode : 'masonry'
+  });
 });

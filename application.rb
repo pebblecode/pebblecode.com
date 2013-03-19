@@ -41,9 +41,10 @@ configure do
     # The second parameter defines where the compressed version will be served.
     # (Note: that parameter is optional, AssetPack will figure it out.)
     js :lib, '/javascripts/script.js', [
-      '/javascripts/lib/modernizr-2.5.3.js',
+      '/javascripts/lib/modernizr-2.6.2.js',
       '/javascripts/lib/underscore-min.js',
       '/javascripts/lib/slides.min.jquery.js',
+      '/javascripts/lib/isotope.min.js',
       '/javascripts/lib/jquery.scrollTo-1.4.2-min.js'
     ]
 

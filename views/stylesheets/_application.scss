@@ -621,6 +621,18 @@ footer #map{
 
 }
 
+.projects-list{
+  
+  img{
+    width: 100%;
+  }
+
+  .project{
+    width: 32%;
+    margin: .25em .5%;
+  }  
+}
+
 .project-links a{
   margin-right: 1em;
 }
@@ -634,12 +646,25 @@ footer #map{
 
 .labs-spotlight{
 
+  .frame{
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+  }
+
   .project{
     display: none;
   }
 
   .project.active{
     display: block;
+  }
+
+  .pebblers,
+  .date{
+    margin: 0;
   }
 }
 
