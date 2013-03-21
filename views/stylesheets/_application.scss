@@ -638,10 +638,41 @@ footer #map{
 }
 
 .labs-header{
-  background: hsl(220,100,90);
-  height: 10em;
+  position: relative;
+  background: red;
+  height: 158px;
   width: 100%;
-  padding: .5em;
+  background-position: 0 0;
+  background-image: url('/images/lab-bg.gif');
+  background-repeat: repeat;
+  -webkit-animation: fill 20s infinite;
+}
+
+@-webkit-keyframes fill {
+  000% {background-position: 0 (-158px * 0);};
+  013% {background-position: 0 (-158px * 0);};
+  016% {background-position: 0 (-158px * 1);};
+  029% {background-position: 0 (-158px * 1);};
+  032% {background-position: 0 (-158px * 2);};
+  045% {background-position: 0 (-158px * 2);};
+  048% {background-position: 0 (-158px * 3);};
+  061% {background-position: 0 (-158px * 3);};
+  064% {background-position: 0 (-158px * 4);};
+  077% {background-position: 0 (-158px * 4);};
+  080% {background-position: 0 (-158px * 5);};
+  095% {background-position: 0 (-158px * 5);};
+  098% {background-position: 0 (-158px * 6);};
+  100% {background-position: 0 (-158px * 6);};
+}
+
+.labs-header-img{
+  position: absolute;
+  top: 0;
+  left: 0; 
+  height: 158px;
+  width: 100%;
+  background-image: url('/images/labs.png');
+  background-position: center center;
 }
 
 .labs-spotlight{
