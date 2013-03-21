@@ -20,9 +20,16 @@ $(document).ready(function() {
     eyko: "Vincent Mart&iacute;nez",
     markdurrant: "Mark Durrant",
     danielrbradley: "Daniel Bradley",
+    danielbradleypebble: "Daniel Bradley",
     mattward: "Matt Ward",
     andreamis1: "Andrea Miskulin",
-    akashchopra: "Akash Chopra"
+    akashchopra: "Akash Chopra",
+    andypebble: "Andy Wardle",
+    jameswallacepebble: "James Wallace",
+    nbevans: "Nathan Evans",
+    ppenchev: "Plamen Penchev",
+    simonhdickson: "Simon Dickson",
+    tsquires10: "Tom Squires"
   };
   var tumblrCssPrefix = "tumblr-";
 
