@@ -135,7 +135,7 @@
     }
   ]
   
-.row
+.rows
   .labs-header
     .labs-header-img
 %section.row
@@ -162,11 +162,11 @@
 %hr.background-random
 .labs-filtering
   %p Filter by...
-  %button.filter.pink-background 10% time
-  %button.filter.blue-background Olympics hack day
-  %button.filter.green-background Games hack day
-  %button.filter.orange-background Education hack day
-  %button.filter.aqua-background products
+  %button.filter.pink-background{:filter => ".10-time"} 10% time
+  %button.filter.blue-background{:filter => ".olympic"} Olympics hack day
+  %button.filter.green-background{:filter => ".games"} Games hack day
+  %button.filter.orange-background{:filter => ".education"} Education hack day
+  %button.filter.aqua-background{:filter => ".product"} products
 %hr.background-random
 %section.projects-list
   %ul

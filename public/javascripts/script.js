@@ -250,4 +250,10 @@ $(document).ready(function() {
     itemSelector : '.project',
     layoutMode : 'masonry'
   });
+
+  $('button.filter').click(function(){
+    var selector = $(this).attr('filter');
+    $container.isotope({ filter : selector });
+    return false;
+  });
 });
