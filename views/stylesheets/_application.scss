@@ -603,7 +603,7 @@ footer #map{
   }
 
   hr{
-    margin-bottom: $baseline*2;
+    margin-bottom: $baseline;
   }
 
   .open-source{
@@ -639,7 +639,6 @@ footer #map{
 
 .labs-header{
   position: relative;
-  background: red;
   height: 158px;
   width: 100%;
   background-position: 0 0;
@@ -701,27 +700,32 @@ footer #map{
 }
 
 .labs-filtering{
-  padding-bottom: $baseline*2;
+  margin: 0 0 1em;
+}
 
-  p{
-    display: inline;
-    margin-right: 1em;
-  }
+.clear-filters{
+  background: hsl(0, 0, 20);
 }
 
 .filter{
   @include border-radius(.2em);
 
+  text-align: center;
+  width: 195px;
   font-size: 1em;
   color: hsl(40, 75, 98);
   border: 0;
-  padding: .5em .75em;
-  margin: 0 .5em 0 0;
+  padding: .3em .4em;
+  margin: 0 .5em .25em 0;
   cursor: pointer;
 
   // just to show hover states
   &:hover{
     opacity: .8;
+  }
+
+  &:nth-child(5){
+    margin-right: 0;
   }
 }
 
