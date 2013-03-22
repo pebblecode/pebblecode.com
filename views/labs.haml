@@ -140,7 +140,7 @@
     .labs-header-img
 %section.row
   %article.labs-spotlight
-    %h2 In the spotlight
+    %h2.size2 In the spotlight
     %ul
       - projects.each_with_index do |p, index|
         %li.project
@@ -167,6 +167,7 @@
   %button.filter.green-background{:filter => ".games"} Games hack day
   %button.filter.orange-background{:filter => ".education"} Education hack day
   %button.filter.aqua-background{:filter => ".product"} products
+  %button.filter.purple-background{:filter => "*"} clear filters
 %hr.background-random
 %section.projects-list
   %ul

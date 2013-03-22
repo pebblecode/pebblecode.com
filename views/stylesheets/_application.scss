@@ -645,6 +645,7 @@ footer #map{
   background-position: 0 0;
   background-image: url('/images/lab-bg.gif');
   background-repeat: repeat;
+  margin: $baseline*4 0 $baseline;
   -webkit-animation: fill 20s infinite;
 }
 
