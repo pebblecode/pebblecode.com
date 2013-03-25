@@ -115,7 +115,7 @@ $(document).ready(function() {
     $(".img",obj).addClass(randColor + "-background");
 
     // Color spotlight person row the same
-    var personIndex = $(obj).parent().prevAll().length -1;
+    var personIndex = $(obj).parent().prevAll().length;
     var spotlightPerson = $("#spotlight .person-row")[personIndex];
     $(spotlightPerson).find("h2, h3").addClass(randColor);
     $(spotlightPerson).find(".img, .person-link").addClass(randColor + "-background");
@@ -153,7 +153,7 @@ $(document).ready(function() {
     var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
     $("#spotlight .person-row").removeClass("active");
 
-    var personIndex = $(personLink).parent().prevAll().length - 1;
+    var personIndex = $(personLink).parent().prevAll().length;
     var personRow = $("#spotlight .person-row")[personIndex];
     $(personRow).addClass("active");
 
