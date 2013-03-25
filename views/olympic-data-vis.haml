@@ -11,30 +11,32 @@
   %link{:href => "/stylesheets/olympic-data-vis.css", :rel => "stylesheet", :type => "text/css"}/
   %link{:href => "/olympic-data-vis/css/jquery.qtip.css", :rel => "stylesheet", :type => "text/css"}/
 
-%section.row
-  .columns6
-    - # %ul.nav.nav-tabs
-    - #   %li#nav-summer-olympics.active
-    - #     %a{:href => '#summer-olympics', :"data-toggle" => "tab"} Summer Olympics
-    - #   %li#nav-winter-olympics
-    - #     %a{:href => '#winter-olympics', :"data-toggle" => "tab"} Winter Olympics
-    - # .tab-content
-    - #   #summer-olympics.tab-pane.active
-    - #     %h2 Comparison of total Summer Olympic medals won
-    - #     .medals-tree-map.loading
-    - #   #winter-olympics.tab-pane
-    - #     %h2 Comparison of total Winter Olympic medals won
-    - #     .medals-tree-map
-    #summer-olympics
-      %h2.size2 Comparison of total Summer Olympic medals won
-      .medals-tree-map.loading.frame
-    .warning
-      %p
+#wrap
+  %section.row
+    .columns6
+      - # %ul.nav.nav-tabs
+      - #   %li#nav-summer-olympics.active
+      - #     %a{:href => '#summer-olympics', :"data-toggle" => "tab"} Summer Olympics
+      - #   %li#nav-winter-olympics
+      - #     %a{:href => '#winter-olympics', :"data-toggle" => "tab"} Winter Olympics
+      - # .tab-content
+      - #   #summer-olympics.tab-pane.active
+      - #     %h2 Comparison of total Summer Olympic medals won
+      - #     .medals-tree-map.loading
+      - #   #winter-olympics.tab-pane
+      - #     %h2 Comparison of total Winter Olympic medals won
+      - #     .medals-tree-map
+      #summer-olympics
+        %h2.size2 Comparison of total Summer Olympic medals won
+        .medals-tree-map.loading.frame
+      .warning
+        %p
+          :plain
+            Note, the medal counts are currently using total individual medals won not the country medals won. Hence a team sport will have a count for every person who won a medal. Thanks for the heads up by <a href="https://twitter.com/gr33ndata/status/229722220652544001">@gr33ndata</a> and the others who picked it up.
+      %p.info
         :plain
-          Note, the medal counts are currently using total individual medals won not the country medals won. Hence a team sport will have a count for every person who won a medal. Thanks for the heads up by <a href="https://twitter.com/gr33ndata/status/229722220652544001">@gr33ndata</a> and the others who picked it up.
-    %p.info
-      :plain
-        This is a product of an <a href="http://blog.pebblecode.com/post/21838814065/hack-day-live">internal hack day</a> at <a href="http://pebblecode.com">pebble {code}</a>. Data sourced from <a href="http://databaseolympics.com">databaseolympics.com</a>.
-    %p.info
-      :plain
-        Related blog post: <a href="http://blog.pebblecode.com/post/27976232997/olympics-hackery">http://blog.pebblecode.com/post/27976232997/olympics-hackery</a>.
+          This is a product of an <a href="http://blog.pebblecode.com/post/21838814065/hack-day-live">internal hack day</a> at <a href="http://pebblecode.com">pebble {code}</a>. Data sourced from <a href="http://databaseolympics.com">databaseolympics.com</a>.
+      %p.info
+        :plain
+          Related blog post: <a href="http://blog.pebblecode.com/post/27976232997/olympics-hackery">http://blog.pebblecode.com/post/27976232997/olympics-hackery</a>.
+  #wrap-footer

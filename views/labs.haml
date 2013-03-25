@@ -134,46 +134,48 @@
       :image => "/images/projects/fear.jpg"
     }
   ]
-  
-.rows
-  .labs-header
-    .labs-header-img
-%section.row
-  %article.labs-spotlight
+
+#wrap 
+  .rows
+    .labs-header
+      .labs-header-img
+  %section.row
+    %article.labs-spotlight
+      %ul
+        - projects.each_with_index do |p, index|
+          %li.project
+            - if p[:image]
+              .frame.columns2
+                %img.background-random{:src => p[:image]}
+            .columns4
+              %h3.project-title.size2= p[:title]
+              %p.pebblers= p[:pebblers]
+              %p.date= p[:date]
+              %p.project-description= p[:description]
+              %p.project-links
+                - if p[:github]
+                  %a.pink{:href => p[:github], :target => "_blank"} view on Github
+                - if p[:livelink]
+                  %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
+                - if p[:bloglink]
+                  %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
+  %hr.background-random
+  .labs-filtering
+    %button.filter.pink-background{:filter => ".10-time"} 10% time
+    %button.filter.blue-background{:filter => ".olympic"} Olympics hack day
+    %button.filter.green-background{:filter => ".games"} Games hack day
+    %button.filter.orange-background{:filter => ".education"} Education hack day
+    %button.filter.aqua-background{:filter => ".product"} products
+    %button.filter.clear-filters{:filter => "*"} clear filters
+  %hr.background-random
+  %section.projects-list
     %ul
+      - projects.shuffle!
+      - random_index = rand(projects.length)
       - projects.each_with_index do |p, index|
-        %li.project
+        %li.project.frame{:class => p[:type]}
           - if p[:image]
-            .frame.columns2
-              %img.background-random{:src => p[:image]}
-          .columns4
-            %h3.project-title.size2= p[:title]
-            %p.pebblers= p[:pebblers]
-            %p.date= p[:date]
-            %p.project-description= p[:description]
-            %p.project-links
-              - if p[:github]
-                %a.pink{:href => p[:github], :target => "_blank"} view on Github
-              - if p[:livelink]
-                %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
-              - if p[:bloglink]
-                %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
-%hr.background-random
-.labs-filtering
-  %button.filter.pink-background{:filter => ".10-time"} 10% time
-  %button.filter.blue-background{:filter => ".olympic"} Olympics hack day
-  %button.filter.green-background{:filter => ".games"} Games hack day
-  %button.filter.orange-background{:filter => ".education"} Education hack day
-  %button.filter.aqua-background{:filter => ".product"} products
-  %button.filter.clear-filters{:filter => "*"} clear filters
-%hr.background-random
-%section.projects-list
-  %ul
-    - projects.shuffle!
-    - random_index = rand(projects.length)
-    - projects.each_with_index do |p, index|
-      %li.project.frame{:class => p[:type]}
-        - if p[:image]
-          %img{:src => p[:image], :height => "306px"}
-        %h3.project-title.size2= p[:title]
-        %p.project-description= p[:description]
+            %img{:src => p[:image], :height => "306px"}
+          %h3.project-title.size2= p[:title]
+          %p.project-description= p[:description]
+  #wrap-footer

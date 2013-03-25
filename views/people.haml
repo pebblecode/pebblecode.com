@@ -194,49 +194,50 @@
     }
   ]
   people.shuffle!
+#wrap
+  .row.headline
+    %h1.size3 Our people
+  %section.row.people-copy
+    .columns3
+      %p 
+        Put a small, multi-disciplinary team into a stimulating environment. Give them the best tools, encourage them to work together creatively and big things happen.
+    .columns3
+      %p 
+        That's how we do things. Everyone here has their own expertise, and that combination of skills, personalities and ideas lies at the heart of everything we create.
 
-.row.headline
-  %h1.size3 Our people
-%section.row.people-copy
-  .columns3
-    %p 
-      Put a small, multi-disciplinary team into a stimulating environment. Give them the best tools, encourage them to work together creatively and big things happen.
-  .columns3
-    %p 
-      That's how we do things. Everyone here has their own expertise, and that combination of skills, personalities and ideas lies at the heart of everything we create.
-
-.employees
-  .row
-    .columns6
-      %h1.size2#spotlight-scroll
-        Our team
-  %hr.background-random/
-  .row
-    #spotlight.columns2
-      - random_index = rand(people.length)
-      - people.each_with_index do |p, index|
-        %section{:id => "#{("tumblr-" + p[:tumblr_name]) if p[:tumblr_name]}", :class => "person-row #{"active" if random_index == index}"}
-          .frame
-            .img
-              / Height is same as .img height
-              %img{:src => p[:image]}
-          %article
-            %h2.size2 In the spotlight
-            %h2.size2.name= p[:name]
-            %h3.size1= p[:title]
-            %p= RDiscount.new(p[:description]).to_html
-            - if p[:website]
-              %a{:href => p[:website], :target => "_blank", :class => "person-link"} W
-            - if p[:twitter]
-              %a{:href => p[:twitter], :target => "_blank", :class => "person-link"} T
-            - if p[:github]
-              %a{:href => p[:github], :target => "_blank", :class => "person-link"} G
-    %ul.row.people-list.columns4
-      - people.each do |p|
-        %li
-          %a{:href => "#spotlight", :class => "columns1 frame person"}
-            .img
-              / Height is same as .img height
-              %img{:src => p[:image], :height => 110}/
-            %h4= p[:name]
-            %p.size0= p[:title]
+  .employees
+    .row
+      .columns6
+        %h1.size2#spotlight-scroll
+          Our team
+    %hr.background-random/
+    .row
+      #spotlight.columns2
+        - random_index = rand(people.length)
+        - people.each_with_index do |p, index|
+          %section{:id => "#{("tumblr-" + p[:tumblr_name]) if p[:tumblr_name]}", :class => "person-row #{"active" if random_index == index}"}
+            .frame
+              .img
+                / Height is same as .img height
+                %img{:src => p[:image]}
+            %article
+              %h2.size2 In the spotlight
+              %h2.size2.name= p[:name]
+              %h3.size1= p[:title]
+              %p= RDiscount.new(p[:description]).to_html
+              - if p[:website]
+                %a{:href => p[:website], :target => "_blank", :class => "person-link"} W
+              - if p[:twitter]
+                %a{:href => p[:twitter], :target => "_blank", :class => "person-link"} T
+              - if p[:github]
+                %a{:href => p[:github], :target => "_blank", :class => "person-link"} G
+      %ul.row.people-list.columns4
+        - people.each do |p|
+          %li
+            %a{:href => "#spotlight", :class => "columns1 frame person"}
+              .img
+                / Height is same as .img height
+                %img{:src => p[:image], :height => 110}/
+              %h4= p[:name]
+              %p.size0= p[:title]
+  #wrap-footer

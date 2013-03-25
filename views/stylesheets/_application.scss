@@ -467,80 +467,52 @@ footer #map{
 
 .page-work {
 
-  .row:first-child {
-    margin-top: $baseline*2;
-    margin-bottom: $baseline*2;
+}
 
-    h1{
-      text-transform: lowercase;
-    }
+#work-wrap{
+  margin: 0 auto -60px;
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+}
 
-    h2{
-      margin-top: $baseline;
-      line-height: 1.2;
-      font-size: 1.5em;
-      -webkit-font-smoothing: antialiased;
-    }
+.work-container{
+  padding: $baseline*4 0;
 
-    .columns6 {
-      margin-left: 0;
-    }
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
   }
 
-  .case-study {
-
-    hr {
-      margin-bottom: $baseline*2;
-    }
-    .row {
-      margin-bottom: $baseline*3;
-      
-      .frame {
-        margin-bottom: $baseline;
-
-        .img {
-          height: $baseline*6;
-          padding-top: $baseline*2;
-          
-          h2 {
-            width: 100%;
-            text-align: center;
-            color: white;
-            font-size: 3em;
-          }
-
-          &.gaming {
-            background-image: url("/images/gaming_tile.png");
-          }
-          &.finace {
-            background-image: url("/images/finance_tile.png");
-          }
-          &.clarity {
-            background-image: url("/images/clarity_tile.png");
-          }
-        }
-      }
-      .columns3:nth-child(2) {
-        margin-left: 0;
-      }
-    }
+  &.finance{
+    background-color: hsl(220,100,98);
+    padding-top: $baseline*6;
   }
 
-  .work-contact {
-    margin-top: $baseline*2;
+  &.games{
+    background-color: hsl(0,100,98);
+  }
+
+  &.ads{
+    background-color: hsl(140,100,98);
+    padding-bottom: $baseline*6;
   }
 }
 
-.pebble-it{
-  padding: $baseline*2 0 $baseline;
-  margin-bottom: 10em;
-  
-  .row{
-    margin-bottom: $baseline;
-  }
-  h1,a{
-    color: #009be8;
-  }
+.extra,
+.main,
+.tech,{
+  width: 40%;
+  float: left;
+}
+
+.extra{
+  margin: 0 10% 0 -20%;
+}
+
+.tech{
+  margin: 0 -20% 0 10%; 
 }
 
 /* @end */

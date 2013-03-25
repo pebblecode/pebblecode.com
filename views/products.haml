@@ -119,39 +119,39 @@
       :image => "/images/projects/data-vis.png"
     }
   ]
-
-.row
-  .columns6
-    %h1.size3 The pebble playground
-  .columns6
-    %p Projects from 10% time, hack-days, and all our other code-adventures
-%hr.background-random
-%section.row
-  %article.tricklr
-    .frame
-      .img
-    .product-container
-      %h2.size2 Tricklr
-      %p
-        Stay active on Twitter without having to monitor it constantly. Put your tweets in a queue and Tricklr will send them for you at regular intervals.
-        %a{:href => "http://tricklrapp.com"} Learn more about Tricklr.
-%hr.background-random
-%section.projects-list
-  %ul
-    - projects.each do |p|
-      %li.project
-        - if p[:image]
-          .frame
-            %img.background-random{:src => p[:image]}
-        %h3.project-title.size2= p[:title]
-        %p.pebblers= p[:pebblers]
-        %p.date= p[:date]
-        %p.project-description= p[:description]
-        %p.project-links
-          - if p[:github]
-            %a.pink{:href => p[:github], :target => "_blank"} view on Github
-          - if p[:livelink]
-            %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
-          - if p[:bloglink]
-            %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
-
+#wrap
+  .row
+    .columns6
+      %h1.size3 The pebble playground
+    .columns6
+      %p Projects from 10% time, hack-days, and all our other code-adventures
+  %hr.background-random
+  %section.row
+    %article.tricklr
+      .frame
+        .img
+      .product-container
+        %h2.size2 Tricklr
+        %p
+          Stay active on Twitter without having to monitor it constantly. Put your tweets in a queue and Tricklr will send them for you at regular intervals.
+          %a{:href => "http://tricklrapp.com"} Learn more about Tricklr.
+  %hr.background-random
+  %section.projects-list
+    %ul
+      - projects.each do |p|
+        %li.project
+          - if p[:image]
+            .frame
+              %img.background-random{:src => p[:image]}
+          %h3.project-title.size2= p[:title]
+          %p.pebblers= p[:pebblers]
+          %p.date= p[:date]
+          %p.project-description= p[:description]
+          %p.project-links
+            - if p[:github]
+              %a.pink{:href => p[:github], :target => "_blank"} view on Github
+            - if p[:livelink]
+              %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
+            - if p[:bloglink]
+              %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
+  #wrap-footer
