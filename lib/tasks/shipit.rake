@@ -42,6 +42,11 @@ module Deploy
   def self.branch!(branch)
     Rake.sh self.command(branch)
   end
+
+  # Force a push into the sandbox server for given branch
+  def self.sandbox!(branch)
+    Rake.sh "git push -f sandbox #{branch}:master"
+  end
 end
 
 module Git
@@ -120,4 +125,9 @@ namespace "shipit" do
       puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
     end
   end
+end
+
+desc "Deploy branch to sandbox"
+task :sandbox, [:branch] do |t, args|
+  Deploy.sandbox!(args.branch)
 end
