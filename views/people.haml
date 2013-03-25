@@ -221,6 +221,7 @@
               / Height is same as .img height
               %img{:src => p[:image]}
           %article
+            %h2.size2 In the spotlight
             %h2.size2.name= p[:name]
             %h3.size1= p[:title]
             %p= RDiscount.new(p[:description]).to_html

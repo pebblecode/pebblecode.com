@@ -117,7 +117,7 @@ $(document).ready(function() {
     // Color spotlight person row the same
     var personIndex = $(obj).parent().prevAll().length;
     var spotlightPerson = $("#spotlight .person-row")[personIndex];
-    $(spotlightPerson).find("h2, h3").addClass(randColor);
+    $(spotlightPerson).find(".name, h3").addClass(randColor);
     $(spotlightPerson).find(".img, .person-link").addClass(randColor + "-background");
   });
 
@@ -244,6 +244,7 @@ $(document).ready(function() {
 
   // labs stuff
   $('.labs-spotlight .project:first-child').addClass('active');
+
   var $container = $('.projects-list');
 
   $container.isotope({
