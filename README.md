@@ -15,7 +15,7 @@ Then install all the required gems
 
 Start the server
 
-		rake server
+	rake server
 
 Go to `http://localhost:7100`
 
@@ -35,40 +35,70 @@ Todo
 
 ## Deployment
 
-The site is hosted on [Heroku][5], and deployment is wrapped around a rake task.
+The site is hosted on [Heroku][5].
+
+Development workflow works like this:
+
+* Play around and try new things on [sandbox site](http://pebblecode-sandbox.herokuapp.com/)
+* If a feature is something intended for production, develop on a branch and merge into `master` (or just work off `master` directly if it is a small change)
+* When master is ready to be show to someone else, push to [staging site](http://pebblecode-staging.herokuapp.com/)
+* When `staging` is ready for production, push to [production site](http://pebblecode.com/)
 
 ### Prerequisites
 
 Set up deployment branches with
 
+  git remote add sandbox git@heroku.com:pebblecode-sandbox.git
   git remote add staging git@heroku.com:pebblecode-staging.git
   git remote add production git@heroku.com:pebblecode.git
 
-### Push to staging
+### Sandbox
 
-The staging site is at http://pebblecode-staging.herokuapp.com/. It requires authentication with username `pebblecode`, and password `pebblecode`.
+The sandbox site (http://pebblecode-sandbox.herokuapp.com/) is intended to be a temporary site to show particular changes. It is used when you don't intend to push the change to staging or production, but want to show someone else.
 
-To deploy master branch to staging
+The sandbox site requires authentication with username `pebblecode`, and password `pebblecode`.
 
-	rake shipit[staging]
+To push to the sandbox
 
-To deploy another branch to staging
+    rake sandbox[branch-name]
 
-  rake shipit[another-branch,staging]
+This is just an alias for
 
-To deploy another branch to staging (without rake)
-git push -f staging branchname:master
+    git push -f sandbox [branch-name]:master
+
+**Note: You will need to run `git remote add sandbox git@heroku.com:pebblecode-sandbox.git` if the sandbox branch has not already been set up**
 
 #### Initial set up
 
-Only needs to be done once
+Only needs to be done once, when setting up the heroku site
+
+    heroku create pebblecode-sandbox --stack cedar --remote sandbox
+    heroku config:add RACK_ENV=staging --app pebblecode-sandbox
+
+### Staging
+
+The staging site (http://pebblecode-staging.herokuapp.com/) is intended as a staging ground for changes before they go into production. It is a place for sanity checks before it goes live.
+
+The staging site requires authentication with username `pebblecode`, and password `pebblecode`.
+
+To deploy the master branch to staging
+
+	rake shipit[staging]
+	
+**Note: If you want to push changes that won't be going into production any time soon, push into the sandbox site instead**
+
+#### Initial set up
+
+Only needs to be done once, when setting up the heroku site
 
     heroku create pebblecode-staging --stack cedar --remote staging
     heroku config:add RACK_ENV=staging --app pebblecode-staging
 
-### Ship it!
+### Production
 
-To deploy master branch to production
+The [production site](http://pebblecode.com/) is the live public facing site for all the world to see.
+
+To deploy the master branch to production
 
     rake shipit[production]
 
