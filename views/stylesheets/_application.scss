@@ -748,9 +748,8 @@ footer #map{
   }
 
   #spotlight{
-    width: $column-width*2 + $column-gutter;
-    float: left;
-    margin-right: 30px;
+    margin-bottom: $baseline*2;
+
 
     .row:first-child{
       margin-bottom: $baseline;
@@ -777,8 +776,13 @@ footer #map{
         display: none; // Showing bottom image
       }
       .img{
-        height: $baseline*12;
         text-align: center;
+        height: $baseline*12;
+      }
+
+      img{
+        width: 100%;
+        max-width: $baseline*12;
       }
     }
 
@@ -814,7 +818,8 @@ footer #map{
       margin-bottom: $baseline;
       min-height: 205px;
       min-width: 145px;
-      margin-right: 30px;
+      width: 22%;
+      margin-right: 4%;
 
       .size0{
         line-height: 16px;
@@ -848,8 +853,8 @@ footer #map{
 }
 
 .people-list{
-  float: left;
-  width: $column-width*4 + $column-gutter*3;
+  // float: left;
+  // width: $column-width*4 + $column-gutter*3;
 }
 
 .person-link{
@@ -1578,6 +1583,10 @@ header{
       }
       .img{
         width: 100%;
+        position: static;
+      }
+      img{
+        position: static; 
       }
     }
 
@@ -1626,7 +1635,6 @@ header{
     li:nth-child(2n){
       .person,
       .join_us{
-        margin-left: 5%;
         margin-right: 0;
       }
     }
@@ -1720,6 +1728,66 @@ only screen and (min-device-pixel-ratio : 1.5) {
   .logo{
     background-image: url('../images/logo@2x.png') !important;
     background-size: 142px 23px;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .page-people .employees{
+
+    .person,
+    .join_us{
+      width: 30%;
+      margin-right: 5%;
+    }
+
+    li:nth-child(4n) a{
+      margin-right: 5%;
+    }
+
+    li:nth-child(3n) a{
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .page-people .employees{
+
+    .person,
+    .join_us{
+      width: 47.5%;
+      margin-right: 5%;
+    }
+
+    li:nth-child(4n) a{
+      margin-right: 5%;
+    }
+
+    li:nth-child(3n) a{
+      margin-right: 5%;
+    }
+
+    li:nth-child(2n) a{
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  #spotlight .frame { // Left float
+    .img{
+      text-align: center;
+      height: $baseline*12;
+      position: relative;
+    }
+
+    img{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: auto;
+      width: 100%
+    }
   }
 }
 
