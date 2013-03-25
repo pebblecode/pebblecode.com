@@ -65,11 +65,11 @@ $(document).ready(function() {
 
   var width = $(window).width();
 
-  if(width < 650) {
+  if (width < 650) {
     $(".tricklr h2").insertBefore(".tricklr .frame");
     $(".vistazo h2").insertBefore(".vistazo .frame");
     $("<hr/>").addClass("background-random").insertBefore(".vistazo h2");
-  };
+  }
 
   /*
   * random colours
@@ -180,8 +180,8 @@ $(document).ready(function() {
     ");
     var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
     $.getJSON(tumblrUrl, function(tumblrData) {
-      if (tumblrData != null) {
-        var recentPostsHtml = recentPostTemplate({ tumblrPosts: tumblrData.posts })
+      if (tumblrData !== null) {
+        var recentPostsHtml = recentPostTemplate({ tumblrPosts: tumblrData.posts });
         $(elemSel).append(recentPostsHtml);
       }
     });
@@ -192,7 +192,7 @@ $(document).ready(function() {
    * Pebble's good code
    */
   if ($.validator) {
-    function countWords(s){
+    var countWords = function(s) {
       s = s.replace(/(^\s*)|(\s*$)/gi,"");
       s = s.replace(/[ ]{2,}/gi," ");
       s = s.replace(/\n /,"\n");
@@ -224,8 +224,8 @@ $(document).ready(function() {
     ");
     var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
     $.getJSON(tumblrUrl, function(tumblrData) {
-      if (tumblrData != null) {
-        var recentPostsHtml = recentPostTemplate({ tumblrPosts: tumblrData.posts })
+      if (tumblrData !== null) {
+        var recentPostsHtml = recentPostTemplate({ tumblrPosts: tumblrData.posts });
         $(elemSel).append(recentPostsHtml);
       }
     });
