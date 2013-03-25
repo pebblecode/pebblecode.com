@@ -478,6 +478,11 @@ footer #map{
 
 .work-container{
   padding: $baseline*4 0;
+  color: #333;
+
+  h1{
+    color: #333;
+  }
 
   &:after{
     content: "";
@@ -485,17 +490,24 @@ footer #map{
     clear: both;
   }
 
+  &.finance,
+  &.games,
+  &.ads{
+    background-position: center center;
+    background-size: cover;
+  }
+
   &.finance{
-    background-color: hsl(220,100,98);
+    background-image: url("/images/finance.jpg");
     padding-top: $baseline*6;
   }
 
   &.games{
-    background-color: hsl(0,100,98);
+    background-image: url("/images/games.jpg");
   }
 
   &.ads{
-    background-color: hsl(140,100,98);
+    background-image: url("/images/ads.jpg");
     padding-bottom: $baseline*6;
   }
 }
@@ -503,12 +515,17 @@ footer #map{
 .extra,
 .main,
 .tech,{
-  width: 40%;
+  //@include border-radius(.3em);
+
+  width: 38%;
   float: left;
+  padding: 1em 1%;
+  //background-color: hsla(0, 0, 0, .65);
 }
 
 .extra{
   margin: 0 10% 0 -20%;
+  text-align: right;
 }
 
 .tech{
