@@ -27,10 +27,10 @@ require.config({
   },
 
   paths: {
-    jquery: "/javascripts/lib/jquery.min",
-    underscore: "/javascripts/lib/underscore-min",
+    jquery: "/javascripts/lib/jquery",
+    underscore: "/javascripts/lib/underscore",
     backbone: "/javascripts/lib/backbone",
-    modernizr: "/javascripts/lib/modernizr-2.6.2",
+    modernizr: "/javascripts/lib/modernizr",
 
     "random-colors": "/javascripts/lib/random-colors",
 

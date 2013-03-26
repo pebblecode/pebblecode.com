@@ -28,16 +28,16 @@ require.config({
   },
 
   paths: {
-    jquery: "lib/jquery.min",
-    underscore: "lib/underscore-min",
+    jquery: "lib/jquery",
+    underscore: "lib/underscore",
     backbone: "lib/backbone",
-    modernizr: "lib/modernizr-2.6.2",
+    modernizr: "lib/modernizr",
 
     "random-colors": "/javascripts/lib/random-colors",
 
-    "jquery.isotope": "lib/isotope.min",
+    "jquery.isotope": "lib/isotope",
     "jquery.scrollTo": "lib/jquery.scrollTo",
-    "jquery.slides": "lib/slides.min.jquery"
+    "jquery.slides": "lib/jquery.slides"
   }
 });
 
