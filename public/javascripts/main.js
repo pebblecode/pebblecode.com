@@ -28,12 +28,12 @@ require.config({
   },
 
   paths: {
+    shared: "app/shared",
+
     jquery: "lib/jquery",
     underscore: "lib/underscore",
     backbone: "lib/backbone",
     modernizr: "lib/modernizr",
-
-    "random-colors": "/javascripts/lib/random-colors",
 
     "jquery.isotope": "lib/isotope",
     "jquery.scrollTo": "lib/jquery.scrollTo",
@@ -48,8 +48,8 @@ require([
   "jquery.scrollTo",
   "jquery.slides",
   "modernizr",
-  "random-colors"
-  ], function ($, _, isotope, scrollTo, slides, modernizr, randomColors) {
+  "shared/random-colors"
+], function ($, _, isotope, scrollTo, slides, modernizr, randomColors) {
   "use strict";
 
   $(document).ready(function() {
