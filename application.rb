@@ -13,7 +13,6 @@ require 'newrelic_rpm'
 helpers Sinatra::Partials
 require_relative 'helpers/init'
 helpers Sinatra::ContentFor
-# register Sinatra::AssetPack
 
 set :root, File.dirname(__FILE__)
 set :environment, ENV["RACK_ENV"] || "development"
@@ -31,30 +30,6 @@ configure do
 
   set :haml, { :format => :html5 }
   set :scss, Compass.sass_engine_options
-
-  # assets {
-  #   serve '/javascripts', from: 'public/javascripts'
-  #   # serve '/stylesheets', from: '/stylesheets'
-  #   serve '/images', from: 'public/images'
-
-  #   # The second parameter defines where the compressed version will be served.
-  #   # (Note: that parameter is optional, AssetPack will figure it out.)
-  #   js :lib, '/javascripts/script.js', [
-  #     '/javascripts/lib/modernizr-2.6.2.js',
-  #     '/javascripts/lib/underscore-min.js',
-  #     '/javascripts/lib/slides.min.jquery.js',
-  #     '/javascripts/lib/isotope.min.js',
-  #     '/javascripts/lib/jquery.scrollTo-1.4.2-min.js'
-  #   ]
-
-  #   # css :app, '/stylesheets/screen.css', [
-  #   #   '/stylesheets/screen.css',
-  #   #   '/fonts/meta.css'
-  #   # ]
-
-  #   js_compression  :jsmin
-  #   css_compression :sass
-  # }
 end
 
 get '/stylesheets/screen.css' do
