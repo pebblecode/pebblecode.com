@@ -32,6 +32,8 @@ require.config({
     backbone: "/javascripts/lib/backbone",
     modernizr: "/javascripts/lib/modernizr-2.6.2",
 
+    "random-colors": "/javascripts/lib/random-colors",
+
     // Olympics data vis dependencies
     d3: "/olympic-data-vis/js/lib/d3.v2",
     "jquery.browser": "/javascripts/lib/jquery.browser",
@@ -42,8 +44,9 @@ require.config({
 require([
   "backbone",
   "d3",
-  "jquery.qtip"
-  ], function(Backbone, d3, qtip) {
+  "jquery.qtip",
+  "random-colors"
+  ], function(Backbone, d3, qtip, randomColors) {
 
     // Global app namespace
     var App = App || {};
