@@ -1,4 +1,5 @@
 !!!
+- yield_content :global_variables
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}
@@ -76,7 +77,8 @@
             %a#linkedin{:href => "http://www.linkedin.com/company/pebble-code"} linkedin
       #map
 
-    %script{:"data-main" => "javascripts/main", :src => "javascripts/lib/require.js"}
+    - unless (defined? DO_NOT_LOAD_SCRIPTS) && DO_NOT_LOAD_SCRIPTS
+      %script{:"data-main" => "javascripts/main", :src => "javascripts/lib/require.js"}
     = yield_content :script_js
 
     :plain

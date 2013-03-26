@@ -8,7 +8,7 @@ require.config({
     },
     backbone: {
       exports: "Backbone",
-      deps: ["underscore", "jquery"]
+      deps: ["underscore"]
     },
     "jquery.isotope": {
       deps: ["jquery"],
@@ -17,6 +17,10 @@ require.config({
     "jquery.slides": {
       deps: ["jquery"],
       exports: "jQuery.fn.slides"
+    },
+    "jquery.qtip": {
+      deps: ["jquery"],
+      exports: "jQuery.fn.qtip"
     },
     modernizr: {
       exports: "Modernizr"
