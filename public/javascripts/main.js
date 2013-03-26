@@ -4,18 +4,34 @@
 require.config({
   shim: {
     underscore: {
-      exports: '_'
+      exports: "_"
+    },
+    backbone: {
+      exports: "Backbone",
+      deps: ["underscore", "jquery"]
+    },
+    "jquery.isotope": {
+      deps: ["jquery"],
+      exports: "jQuery.fn.isotope"
     }
   },
 
   paths: {
-    jquery: 'lib/jquery.min',
-    underscore: 'lib/underscore-min'
+    jquery: "lib/jquery.min",
+    underscore: "lib/underscore-min",
+    backbone: "lib/backbone",
+    "jquery.isotope": "lib/isotope.min",
+    "jquery.scrollTo": "lib/jquery.scrollTo"
   }
 });
 
-require(['underscore'], function (_) {
-  'use strict';
+require([
+  "jquery",
+  "underscore",
+  "jquery.isotope",
+  "jquery.scrollTo"
+  ], function ($, _, isotope, scrollTo) {
+  "use strict";
 
   $(document).ready(function() {
     // Recruitment console message
@@ -165,6 +181,25 @@ require(['underscore'], function (_) {
       });
     }
     populateRecentPosts("#recent-posts");
+
+    function onPeoplePage() {
+      return location.pathname === "/people";
+    }
+
+    // Spotlight changes when person is clicked on
+    $('.person').click(function(event) {
+      event.preventDefault();
+      var clickTarget = event.target;
+      var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
+      $("#spotlight .person-row").removeClass("active");
+
+      var personIndex = $(personLink).parent().prevAll().length - 1;
+      var personRow = $("#spotlight .person-row")[personIndex];
+      $(personRow).addClass("active");
+
+      $.scrollTo( $('#spotlight-scroll'), 600);
+    });
+
 
     /*
      * Pebble's good code
