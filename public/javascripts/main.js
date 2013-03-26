@@ -13,6 +13,9 @@ require.config({
     "jquery.isotope": {
       deps: ["jquery"],
       exports: "jQuery.fn.isotope"
+    },
+    modernizr: {
+      exports: "Modernizr"
     }
   },
 
@@ -20,6 +23,7 @@ require.config({
     jquery: "lib/jquery.min",
     underscore: "lib/underscore-min",
     backbone: "lib/backbone",
+    modernizr: "lib/modernizr-2.6.2",
     "jquery.isotope": "lib/isotope.min",
     "jquery.scrollTo": "lib/jquery.scrollTo"
   }
@@ -29,8 +33,9 @@ require([
   "jquery",
   "underscore",
   "jquery.isotope",
-  "jquery.scrollTo"
-  ], function ($, _, isotope, scrollTo) {
+  "jquery.scrollTo",
+  "modernizr"
+  ], function ($, _, isotope, scrollTo, modernizr) {
   "use strict";
 
   $(document).ready(function() {
