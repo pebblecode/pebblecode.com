@@ -21,7 +21,6 @@
 
       %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
 
-      = js :lib
       = yield_content :js_lib
 
       / add google maps api.
@@ -81,7 +80,7 @@
             %a#linkedin{:href => "http://www.linkedin.com/company/pebble-code"} linkedin
       #map
 
-    %script{:src => "/javascripts/script.js", :type => "text/javascript"}
+    %script{:"data-main" => "javascripts/main", :src => "javascripts/lib/require.js"}
     = yield_content :script_js
 
     :plain
