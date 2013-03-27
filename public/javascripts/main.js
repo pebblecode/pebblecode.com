@@ -52,13 +52,12 @@ function(){
 require([
   "jquery",
   "underscore",
-  "jquery.isotope",
   "jquery.scrollTo",
   "modernizr",
   "shared/random-colors",
   "shared/map",
   "shared/footer"
-], function ($, _, isotope, scrollTo, modernizr, randomColors, map, footer) {
+], function ($, _, scrollTo, modernizr, randomColors, map, footer) {
   "use strict";
 
   $(document).ready(function() {
@@ -79,20 +78,5 @@ require([
       $(".vistazo h2").insertBefore(".vistazo .frame");
       $("<hr/>").addClass("background-random").insertBefore(".vistazo h2");
     }
-
-    // labs stuff
-    $('.labs-spotlight .project:first-child').addClass('active');
-    var $container = $('.projects-list');
-
-    $container.isotope({
-      itemSelector : '.project',
-      layoutMode : 'masonry'
-    });
-
-    $('button.filter').click(function(){
-      var selector = $(this).attr('filter');
-      $container.isotope({ filter : selector });
-      return false;
-    });
   });
 });
