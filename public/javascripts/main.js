@@ -1,6 +1,3 @@
-/*global $, document */
-/*jshint indent:2 */
-
 require.config({
   shim: {
     underscore: {
