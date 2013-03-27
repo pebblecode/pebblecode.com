@@ -1,9 +1,11 @@
+/*jshint multistr:true*/
 /*
  * Archive page javascript
  */
 require([
   "jquery"
 ], function($) {
+  "use strict";
 
   function populateArchive(elemSel) {
     var MAX_POSTS = 200;
@@ -18,7 +20,7 @@ require([
         <% }) %> \
       </ul> \
     ");
-    var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
+    // var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
     $.getJSON(tumblrUrl, function(tumblrData) {
       if (tumblrData !== null) {
         var recentPostsHtml = recentPostTemplate({ tumblrPosts: tumblrData.posts });

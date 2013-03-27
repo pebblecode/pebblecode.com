@@ -40,7 +40,9 @@ require.config({
 
 // convert Google Maps into an AMD module
 define('gmaps', ['async!http://maps.google.com/maps/api/js?v=3&sensor=false'],
-function(){
+function() {
+  "use strict";
+
   // return the gmaps namespace for brevity
   return window.google.maps;
 });
@@ -51,6 +53,11 @@ require([
   "shared/map",
   "shared/footer",
   "shared/mobile"
-], function (modernizr, randomColors, map, footer) {
+], function(modernizr, randomColors, map, footer) {
+  "use strict";
 
+  void(modernizr);
+  void(randomColors);
+  void(map);
+  void(footer);
 });

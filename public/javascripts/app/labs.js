@@ -2,6 +2,9 @@ require([
   "jquery",
   "jquery.isotope"
 ], function($, isotope) {
+  "use strict";
+
+  void(isotope);
 
   $('.labs-spotlight .project:first-child').addClass('active');
   var $container = $('.projects-list');

@@ -1,7 +1,10 @@
+/*jshint multistr:true*/
 require([
   "jquery",
   "jquery.slides"
 ], function($, slides) {
+  "use strict";
+  void(slides);
 
   /*
    * Slideshow using http://slidesjs.com/
@@ -42,7 +45,7 @@ require([
         <% }) %> \
       </ul> \
     ");
-    var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
+    // var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
     $.getJSON(tumblrUrl, function(tumblrData) {
       if (tumblrData !== null) {
         var recentPostsHtml = recentPostTemplate({ tumblrPosts: tumblrData.posts });

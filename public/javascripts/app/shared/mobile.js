@@ -1,6 +1,7 @@
 require([
   "jquery"
 ], function($) {
+  "use strict";
 
   /*
    * re-order content for mobile

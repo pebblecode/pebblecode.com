@@ -2,6 +2,10 @@ require([
   "jquery",
   "jquery.validator"
 ], function($, jValidator) {
+  "use strict";
+
+  void(jValidator);
+
   /*
    * Pebble's good code
    */
@@ -13,7 +17,7 @@ require([
       return s.split(' ').length;
     };
 
-    jQuery.validator.addMethod("lessThan150Words", function(value, element) {
+    $.validator.addMethod("lessThan150Words", function(value, element) {
       return this.optional(element) || (countWords(value) <= 150);
     }, "Please write less than 150 words.");
 

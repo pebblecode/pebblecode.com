@@ -4,7 +4,7 @@
 require([
   "jquery",
   "underscore"
-  ], function($, _) {
+], function($, _) {
   "use strict";
 
   var COLORS = [ 'pink', 'green', 'blue', 'orange', 'aqua', 'purple' ];
@@ -12,7 +12,7 @@ require([
 
   // Find random colors, without having the same colors after another
   function randColors(elem, funct) {
-    $(elem).each(function(i, val) {
+    $(elem).each(function() {
       funct(this, LAST_COLOR);
       LAST_COLOR = randArrayItemExcept(COLORS, LAST_COLOR);
     });

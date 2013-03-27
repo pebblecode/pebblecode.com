@@ -2,6 +2,7 @@
 require([
   "jquery"
 ], function($) {
+  "use strict";
 
   // footer map stuff
   $("footer").hover(

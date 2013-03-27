@@ -2,6 +2,9 @@ require([
   "jquery",
   "jquery.scrollTo"
 ], function($, scrollTo) {
+  "use strict";
+
+  void(scrollTo);
 
   // Spotlight changes when person is clicked on
   $('.person').click(function(event) {

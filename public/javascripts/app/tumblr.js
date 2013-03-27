@@ -4,11 +4,12 @@
 require([
   "jquery"
 ], function($) {
+  "use strict";
 
   /*
    * Author name replacement - needed because tumblr doesn't have full names
    */
-  var tumblr_authors = {
+  var tumblrAuthors = {
     thatsinthebook: "Toby Hunt",
     shapeshed: "George Ornbo",
     elpabl0: "Paul Evans",
@@ -23,12 +24,12 @@ require([
     andreamis1: "Andrea Miskulin",
     akashchopra: "Akash Chopra"
   };
-  var tumblrCssPrefix = "tumblr-";
+  // var tumblrCssPrefix = "tumblr-";
 
   // Link authors to their relevant people page
-  $(".blog-sidebar .author").each(function(i) {
+  $(".blog-sidebar .author").each(function() {
     var authorId = this.innerHTML;
-    var authorName = tumblr_authors[authorId] || authorId;
+    var authorName = tumblrAuthors[authorId] || authorId;
 
     // Use localhost for testing, but pebblecode.com for everything else
     var peopleUrlPrefix = (location.hostname === "localhost") ? "http://localhost:7100/people#" : "http://pebblecode.com/people#";

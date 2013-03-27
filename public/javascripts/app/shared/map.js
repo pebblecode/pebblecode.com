@@ -2,6 +2,8 @@
  * Custom google map styles
  */
 define(['gmaps'], function(gmaps) {
+  "use strict";
+
   function load() {
 
     var styles = [
@@ -162,40 +164,40 @@ define(['gmaps'], function(gmaps) {
       }
     ];
 
-    var styledMap = new google.maps.StyledMapType(styles, {
+    var styledMap = new gmaps.StyledMapType(styles, {
       name: "Styled Map"
     });
 
-    var point = new google.maps.LatLng(51.485672, -0.118554);
+    var point = new gmaps.LatLng(51.485672, -0.118554);
 
     var myMapOptions = {
       zoom: 15,
       center: point,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeId: gmaps.MapTypeId.ROADMAP,
       scrollwheel: false,
       disableDefaultUI: true,
       mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        mapTypeIds: [gmaps.MapTypeId.ROADMAP, 'map_style']
       }
     };
 
-    var map = new google.maps.Map(document.getElementById("map"),myMapOptions);
+    var map = new gmaps.Map(document.getElementById("map"),myMapOptions);
 
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
 
-    var image = new google.maps.MarkerImage(
+    var image = new gmaps.MarkerImage(
       'images/map-pin-image.png',
-      new google.maps.Size(200,74),
-      new google.maps.Point(0,0),
-      new google.maps.Point(100,74)
+      new gmaps.Size(200,74),
+      new gmaps.Point(0,0),
+      new gmaps.Point(100,74)
     );
 
-    var shadow = new google.maps.MarkerImage(
+    var shadow = new gmaps.MarkerImage(
       'images/map-pin-shadow.png',
-      new google.maps.Size(240,74),
-      new google.maps.Point(0,0),
-      new google.maps.Point(100,74)
+      new gmaps.Size(240,74),
+      new gmaps.Point(0,0),
+      new gmaps.Point(100,74)
     );
 
     var shape = {
@@ -203,7 +205,7 @@ define(['gmaps'], function(gmaps) {
       type: 'poly'
     };
 
-    var marker = new google.maps.Marker({
+    new gmaps.Marker({
       draggable: false,
       icon: image,
       shadow: shadow,

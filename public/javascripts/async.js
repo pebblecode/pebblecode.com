@@ -1,3 +1,4 @@
+/*jshint indent:4 */
 /** @license
  * RequireJS plugin for async dependency load like JSONP and Google Maps
  * Author: Miller Medeiros
@@ -5,14 +6,19 @@
  * Released under the MIT license
  */
 define(function(){
+    "use strict";
 
     var DEFAULT_PARAM_NAME = 'callback',
         _uid = 0;
 
     function injectScript(src){
         var s, t;
-        s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = src;
-        t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s,t);
+        s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = src;
+        t = document.getElementsByTagName('script')[0];
+        t.parentNode.insertBefore(s,t);
     }
 
     function formatUrl(name, id){
