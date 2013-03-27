@@ -41,13 +41,22 @@ require.config({
   }
 });
 
+// convert Google Maps into an AMD module
+define('gmaps', ['async!http://maps.google.com/maps/api/js?v=3&sensor=false'],
+function(){
+  // return the gmaps namespace for brevity
+  return window.google.maps;
+});
+
+
 require([
   "jquery",
   "underscore",
   "jquery.isotope",
   "jquery.scrollTo",
   "modernizr",
-  "shared/random-colors"
+  "shared/random-colors",
+  "shared/map"
 ], function ($, _, isotope, scrollTo, modernizr, randomColors) {
   "use strict";
 
