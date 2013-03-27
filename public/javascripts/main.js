@@ -56,8 +56,9 @@ require([
   "jquery.scrollTo",
   "modernizr",
   "shared/random-colors",
-  "shared/map"
-], function ($, _, isotope, scrollTo, modernizr, randomColors) {
+  "shared/map",
+  "shared/footer"
+], function ($, _, isotope, scrollTo, modernizr, randomColors, map, footer) {
   "use strict";
 
   $(document).ready(function() {
@@ -78,16 +79,6 @@ require([
       $(".vistazo h2").insertBefore(".vistazo .frame");
       $("<hr/>").addClass("background-random").insertBefore(".vistazo h2");
     }
-
-    // footer map stuff
-    $("footer").hover(
-      function () {
-        $(this).css("height", "500px");
-        $.scrollTo($('footer'), "max");
-      },
-      function () {
-        $(this).animate({height: "80px"}, 500 );
-      });
 
     // labs stuff
     $('.labs-spotlight .project:first-child').addClass('active');
