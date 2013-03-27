@@ -48,35 +48,12 @@ function(){
   return window.google.maps;
 });
 
-
 require([
-  "jquery",
-  "underscore",
-  "jquery.scrollTo",
   "modernizr",
   "shared/random-colors",
   "shared/map",
-  "shared/footer"
-], function ($, _, scrollTo, modernizr, randomColors, map, footer) {
-  "use strict";
+  "shared/footer",
+  "shared/mobile"
+], function (modernizr, randomColors, map, footer) {
 
-  $(document).ready(function() {
-    // Recruitment console message
-    // if (!window.console) console = {};
-    // console.warn = console.warn || function(){};
-
-    //console.warn("We can see your curious, how about a job?");
-
-    /*
-    * re-order content for mobile
-    */
-
-    var width = $(window).width();
-
-    if (width < 650) {
-      $(".tricklr h2").insertBefore(".tricklr .frame");
-      $(".vistazo h2").insertBefore(".vistazo .frame");
-      $("<hr/>").addClass("background-random").insertBefore(".vistazo h2");
-    }
-  });
 });
