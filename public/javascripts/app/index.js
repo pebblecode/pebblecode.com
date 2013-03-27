@@ -13,6 +13,7 @@ require([
   }
 
   if ($(".slideshow").length > 0) {
+    $(".slideshow").removeClass("js-hide");
     $(".slideshow").slides({
       play: 5500
     });
