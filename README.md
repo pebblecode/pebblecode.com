@@ -13,11 +13,15 @@ Then install all the required gems
 
     bundle install
 
+Also, install [grunt](http://gruntjs.com/) to validate javascript files
+
+    npm install
+
 Start the server
 
 	rake server
 
-Go to `http://localhost:7100`
+Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
 
 ## Automatic reloading
 
@@ -84,7 +88,7 @@ The staging site requires authentication with username `pebblecode`, and passwor
 To deploy the master branch to staging
 
 	rake shipit[staging]
-	
+
 **Note: If you want to push changes that won't be going into production any time soon, push into the sandbox site instead**
 
 #### Initial set up
