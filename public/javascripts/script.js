@@ -257,4 +257,49 @@ $(document).ready(function() {
     $container.isotope({ filter : selector });
     return false;
   });
+
+  // work page stuff. 
+  var i = 1;
+
+  function icons () {
+    if ($('.icons li').length > 9){
+      $('.icons li:first-child').fadeOut('fast', function(){
+        $('.icons li:first-child').remove();
+      });
+    }
+
+    $('.active').css(
+      "margin-left", "20px"
+    );
+
+    $('.active').toggleClass('active');
+
+    if (i % 3 == 0) {
+      $('.icons').append(
+        '<li class="icon pie active"></li>'   
+      );
+    }
+    else if (i % 2 == 0) {
+      $('.icons').append(
+        '<li class="icon plot active"></li>'   
+      );
+    }
+    else {
+      $('.icons').append(
+        '<li class="icon glass active"></li>'
+      );
+    }
+
+    $('.active').animate({
+      'margin-left': '62px'}, 500
+    );
+
+    i++;
+
+    if (i > 3) {
+      i = 1;
+    }
+  };
+
+  window.setInterval(icons, 1000);
 });

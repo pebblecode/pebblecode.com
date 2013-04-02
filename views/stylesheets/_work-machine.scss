@@ -1,0 +1,122 @@
+//===============================================================================
+// §MACHINE
+//===============================================================================
+// <div class="machine conatiner">
+// <div class="main conatiner colors">
+//   <div class="img"></div>
+// </div>
+// <div class="belt conatiner">
+//   <div class="img"></div>
+// </div>
+// <ul class="icons clear-fix">
+// </ul>
+// </div> <!-- end .machine .conatiner -->
+//===============================================================================
+.machine.conatiner{
+  position: relative;
+  height: 440px;
+}
+
+.machine .conatiner{
+  position: absolute;
+}
+
+.img{
+}
+
+.main{
+  top: 0;
+  left: 0;
+
+  .img{
+    width: 371px;
+    height: 440px;
+    background-image: url("/images/work-main.png");
+  }
+}
+
+.belt{
+  top: 409px;
+  left: 371px; 
+
+  .img{
+    width: 649px;
+    height: 26px;
+    background-image: url("/images/work-belt.png");
+  }
+}
+
+.colors{
+  // stops for gradients
+  $stop: 100% / 7;
+
+  @include background-image(linear-gradient(90deg, $pink   $stop * 0, $pink   $stop * 1,
+                                                   $purple $stop * 1, $purple $stop * 2,
+                                                   $blue   $stop * 2, $blue   $stop * 3,
+                                                   $aqua   $stop * 3, $aqua   $stop * 4,
+                                                   $green  $stop * 4, $green  $stop * 5,
+                                                   $orange $stop * 5, $orange $stop * 6,
+                                                   $pink   $stop * 6, $pink   $stop * 7));
+
+  background-size: (100% * 7) 100%;
+  -webkit-animation: colors 30s linear infinite;
+}
+
+@-webkit-keyframes colors {
+        0% {background-position-x: (100% / 6) * 6;}
+  15.6666% {background-position-x: (100% / 6) * 6;}
+  16.6666% {background-position-x: (100% / 6) * 5;}
+  32.3333% {background-position-x: (100% / 6) * 5;}
+  33.3333% {background-position-x: (100% / 6) * 4;}
+  49.0000% {background-position-x: (100% / 6) * 4;}
+  50.0000% {background-position-x: (100% / 6) * 3;}
+  65.6666% {background-position-x: (100% / 6) * 3;}
+  66.6666% {background-position-x: (100% / 6) * 2;}
+  82.3333% {background-position-x: (100% / 6) * 2;}
+  83.3333% {background-position-x: (100% / 6) * 1;}
+  99.0000% {background-position-x: (100% / 6) * 1;}
+      100% {background-position-x: (100% / 6) * 0;}
+}
+
+.icons{
+  position: absolute;
+  top: 362px;
+  left: 320px;
+  z-index: -1;
+}
+
+.icon{
+  float: right;
+  width: 42px; 
+  height: 42px;
+  background-image: url("/images/work-icons.png");
+  padding-left: 0;
+}
+
+.pie{
+  background-color: $pink;
+}
+
+.plot{
+  background-color: $orange;
+  background-position-x: -42px;
+}
+
+.glass{
+  background-color: $blue;
+  background-position-x: 42px;
+}
+
+.reset{
+  margin-top: 2em;
+}
+
+.finance{
+  position: relative;
+  z-index: 9;
+  padding-left: 340px;
+
+  h1{
+    margin-bottom: $baseline;
+  }
+}
