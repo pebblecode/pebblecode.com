@@ -191,6 +191,12 @@ a{
 [class*=columns].offset5{
   margin-left: $column-width*5 + $column-gutter*5;
 }
+
+.clear-fix:after{
+  content: '';
+  display: table;
+  clear: both;
+}
 /* @end */
 
 /* @group header */

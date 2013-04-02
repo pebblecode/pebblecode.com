@@ -302,4 +302,15 @@ $(document).ready(function() {
   };
 
   window.setInterval(icons, 1000);
+
+  $('.copy-btn').click(function () {
+    $('.main-copy').toggleClass('main-copy-move');
+
+    if ($('.copy-btn').text() == 'the tech') {
+      $('.copy-btn').text('back');
+    }
+    else {
+      $('.copy-btn').text('the tech');
+    }
+  });
 });

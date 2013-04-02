@@ -54,7 +54,9 @@
               = surround "<span>{</span>", "<span>}</span>" do
                 %a{:href => "/#{nav_name}"}= "#{nav_name}"
 
-    = yield
+    #wrap 
+      = yield
+      #wrap-footer
     %footer
       .inner-footer
         %ul#contact

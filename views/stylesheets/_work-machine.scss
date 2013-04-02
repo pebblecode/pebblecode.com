@@ -2,7 +2,7 @@
 // §MACHINE
 //===============================================================================
 // <div class="machine conatiner">
-// <div class="main conatiner colors">
+// <div class="machine-main conatiner colors">
 //   <div class="img"></div>
 // </div>
 // <div class="belt conatiner">
@@ -15,6 +15,7 @@
 .machine.conatiner{
   position: relative;
   height: 440px;
+  margin-top: $baseline*3;
 }
 
 .machine .conatiner{
@@ -24,7 +25,7 @@
 .img{
 }
 
-.main{
+.machine-main{
   top: 0;
   left: 0;
 
@@ -114,9 +115,61 @@
 .finance{
   position: relative;
   z-index: 9;
-  padding-left: 340px;
+  width: 684px;
+  margin-left: 340px;
+  overflow: hidden;
 
   h1{
     margin-bottom: $baseline;
+  }
+}
+
+.copy-btn{
+  @include border-radius(.2em);
+
+  display: block;
+  float: right;
+  text-align: center;
+  color: hsl(40, 75, 98);
+  border: 0;
+  padding: .15em .5em;
+  margin: 0 1% .25em 0;
+  cursor: pointer;
+  background-color: $blue;
+
+  &:hover{
+    color: hsl(40, 75, 98);
+    text-decoration: none;
+    background-color: darken($blue, 10);
+  }
+
+  &:nth-child(4){
+    margin-right: 0;
+  }
+}
+
+.copy{
+  width: 200%;
+}
+
+.main-copy,
+.the-tech{
+  width: 50%;
+  float: left;  
+}
+
+.main-copy{
+  @include transition-property(all);
+  @include transition-duration(.5s);
+}
+
+.main-copy-move{
+  margin-left: -50%;
+}
+
+.the-tech{
+  ul{
+    list-style: disc;
+    padding-left: 1.3em;   
   }
 }
