@@ -49,9 +49,8 @@ function() {
 
 require([
   "modernizr",
-  "shared/random-colors",
-  //"shared/footer", // Not showing map on all pages right now
-  "shared/mobile"
+  "shared/random-colors"
+  //"shared/footer" // Not showing map on all pages right now
 ], function(modernizr, randomColors) {
   "use strict";
 });
