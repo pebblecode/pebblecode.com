@@ -601,6 +601,7 @@ footer #map{
       background-image: url("/images/tricklr.jpg");
       background-position-x: 50%;
     }
+
     a{
       color: $pink;
     }
@@ -646,38 +647,45 @@ footer #map{
 }
 
 .labs-header{
+  $stop: 100% / 7;
+  @include background-image(linear-gradient($pink   $stop * 0, $pink   $stop * 1,
+                                            $purple $stop * 1, $purple $stop * 2,
+                                            $blue   $stop * 2, $blue   $stop * 3,
+                                            $aqua   $stop * 3, $aqua   $stop * 4,
+                                            $green  $stop * 4, $green  $stop * 5,
+                                            $orange $stop * 5, $orange $stop * 6,
+                                            $pink   $stop * 6, $pink   $stop * 7));
+
   position: relative;
-  height: 158px;
+  height: 165px;
   width: 100%;
-  background-position: 0 0;
-  background-image: url('/images/lab-bg.gif');
-  background-repeat: repeat;
   margin: $baseline*4 0 $baseline;
-  -webkit-animation: fill 20s infinite;
+  background-color: $pink;
+  background-size: 100% 700%;
+  -webkit-animation: colors 30s linear infinite;
 }
 
-@-webkit-keyframes fill {
-  000% {background-position: 0 (-158px * 0);};
-  013% {background-position: 0 (-158px * 0);};
-  016% {background-position: 0 (-158px * 1);};
-  029% {background-position: 0 (-158px * 1);};
-  032% {background-position: 0 (-158px * 2);};
-  045% {background-position: 0 (-158px * 2);};
-  048% {background-position: 0 (-158px * 3);};
-  061% {background-position: 0 (-158px * 3);};
-  064% {background-position: 0 (-158px * 4);};
-  077% {background-position: 0 (-158px * 4);};
-  080% {background-position: 0 (-158px * 5);};
-  095% {background-position: 0 (-158px * 5);};
-  098% {background-position: 0 (-158px * 6);};
-  100% {background-position: 0 (-158px * 6);};
+@-webkit-keyframes colors {
+        0% {background-position-y: (100% / 6) * 6;}
+  15.6666% {background-position-y: (100% / 6) * 6;}
+  16.6666% {background-position-y: (100% / 6) * 5;}
+  32.3333% {background-position-y: (100% / 6) * 5;}
+  33.3333% {background-position-y: (100% / 6) * 4;}
+  49.0000% {background-position-y: (100% / 6) * 4;}
+  50.0000% {background-position-y: (100% / 6) * 3;}
+  65.6666% {background-position-y: (100% / 6) * 3;}
+  66.6666% {background-position-y: (100% / 6) * 2;}
+  82.3333% {background-position-y: (100% / 6) * 2;}
+  83.3333% {background-position-y: (100% / 6) * 1;}
+  99.0000% {background-position-y: (100% / 6) * 1;}
+      100% {background-position-y: (100% / 6) * 0;}
 }
 
 .labs-header-img{
   position: absolute;
   top: 0;
   left: 0;
-  height: 158px;
+  height: 165px;
   width: 100%;
   background-image: url('/images/labs.png');
   background-position: center center;
