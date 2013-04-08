@@ -5,21 +5,22 @@ This is a simple brochure site written with [sinatra][1].
 
 ## Installation
 
-To hack on the site you need to install bundler
+1. Install bundler
 
-    gem install bundler
+        gem install bundler
 
-Then install all the required gems
+2. Install all required gems
 
-    bundle install
+        bundle install
 
-Also, install [grunt](http://gruntjs.com/) to validate javascript files
+3. Install [grunt](http://gruntjs.com/) to validate javascript files by following instructions at http://gruntjs.com/getting-started
+4. Install node packages
 
-    npm install
+        npm install
 
-Start the server
+5. Start the server
 
-	rake server
+	    rake server
 
 Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
 
