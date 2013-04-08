@@ -50,14 +50,8 @@ function() {
 require([
   "modernizr",
   "shared/random-colors",
-  "shared/map",
   //"shared/footer", // Not showing map on all pages right now
   "shared/mobile"
-], function(modernizr, randomColors, map, footer) {
+], function(modernizr, randomColors) {
   "use strict";
-
-  void(modernizr);
-  void(randomColors);
-  void(map);
-  void(footer);
 });
