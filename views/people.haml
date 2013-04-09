@@ -207,7 +207,7 @@
   people.shuffle!
 
   # Selected person index
-  selected_person_index = people.index {|p| p[:name].to_slug == @person} if @person
+  selected_person_index = people.index {|p| p[:name].to_slug == @person_slug} if @person_slug
 
 .row.headline
   %h1.size3 Our people

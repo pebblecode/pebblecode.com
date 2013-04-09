@@ -101,7 +101,7 @@ get '/:page' do
 end
 
 get '/people/:person' do
-  @person = params['person']
+  @person_slug = params['person']
 
   render_page("people")
 end
