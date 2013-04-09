@@ -206,6 +206,9 @@
   ]
   people.shuffle!
 
+  # Selected person index
+  selected_person_index = people.index {|p| p[:name].to_slug == @person} if @person
+
 .row.headline
   %h1.size3 Our people
 %section.row.people-copy
@@ -224,9 +227,9 @@
   %hr.background-random/
   %ul.row
     %li#spotlight
-      - random_index = rand(people.length)
+      - person_index = selected_person_index ? selected_person_index : rand(people.length)
       - people.each_with_index do |p, index|
-        %section{:id => p[:name].to_slug, :"data-tumblr" => p[:tumblr_name], :class => "person-row #{"active" if random_index == index}"}
+        %section{:id => p[:name].to_slug, :"data-tumblr" => p[:tumblr_name], :class => "person-row #{"active" if person_index == index}"}
           .frame
             .img
               / Height is same as .img height
