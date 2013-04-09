@@ -5,10 +5,6 @@ define([
 ], function($, Backbone, _s) {
   "use strict";
 
-  function slug(name) {
-    return _s.slugify(name);
-  }
-
   // From http://stackoverflow.com/a/5298684/111884
   function removeHash() {
     var scrollV, scrollH, loc = window.location;
@@ -32,6 +28,12 @@ define([
     return ($("#" + slug).length > 0);
   }
 
+  function selectSlug(slug) {
+    $("#spotlight .person-row").removeClass("active");
+    $("#" + slug).addClass("active");
+    $.scrollTo($('#spotlight-scroll'), 600);
+  }
+
   // Url handling
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -39,8 +41,9 @@ define([
     }
   });
   var appRouter = new AppRouter();
+
   appRouter.on('route:getPerson', function(person) {
-    var personSlug = slug(person);
+    var personSlug = _s.slugify(person);
     if (havePersonSlug(personSlug)) {
       selectSlug(personSlug);
     } else { // No slug available
@@ -49,12 +52,6 @@ define([
   });
 
   Backbone.history.start();
-
-  function selectSlug(slug) {
-    $("#spotlight .person-row").removeClass("active");
-    $("#" + slug).addClass("active");
-    $.scrollTo($('#spotlight-scroll'), 600);
-  }
 
   return {
     selectSlug: selectSlug
