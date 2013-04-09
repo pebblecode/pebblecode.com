@@ -29,15 +29,15 @@ require.config({
   paths: {
     shared: "/javascripts/app/shared",
 
-    jquery: "/javascripts/lib/jquery",
-    underscore: "/javascripts/lib/underscore",
-    backbone: "/javascripts/lib/backbone",
-    modernizr: "/javascripts/lib/modernizr",
+    jquery: "/javascripts/vendor/jquery",
+    underscore: "/javascripts/vendor/underscore",
+    backbone: "/javascripts/vendor/backbone",
+    modernizr: "/javascripts/vendor/modernizr",
 
     // Olympics data vis dependencies
-    d3: "/olympic-data-vis/js/lib/d3.v2",
-    "jquery.browser": "/javascripts/lib/jquery.browser",
-    "jquery.qtip": "/olympic-data-vis/js/lib/jquery.qtip.min"
+    d3: "/olympic-data-vis/js/vendor/d3.v2",
+    "jquery.browser": "/javascripts/vendor/jquery.browser",
+    "jquery.qtip": "/olympic-data-vis/js/vendor/jquery.qtip.min"
   }
 });
 

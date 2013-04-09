@@ -31,15 +31,15 @@ require.config({
   paths: {
     shared: "app/shared",
 
-    jquery: "lib/jquery",
-    underscore: "lib/underscore",
-    "underscore.string": "lib/underscore.string",
-    backbone: "lib/backbone",
-    modernizr: "lib/modernizr",
+    jquery: "vendor/jquery",
+    underscore: "vendor/underscore",
+    "underscore.string": "vendor/underscore.string",
+    backbone: "vendor/backbone",
+    modernizr: "vendor/modernizr",
 
-    "jquery.isotope": "lib/isotope",
-    "jquery.scrollTo": "lib/jquery.scrollTo",
-    "jquery.slides": "lib/jquery.slides"
+    "jquery.isotope": "vendor/isotope",
+    "jquery.scrollTo": "vendor/jquery.scrollTo",
+    "jquery.slides": "vendor/jquery.slides"
   }
 });
 
