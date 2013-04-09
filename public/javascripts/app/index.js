@@ -1,8 +1,9 @@
 /*jshint multistr:true*/
 require([
   "jquery",
+  "underscore",
   "jquery.slides"
-], function($, slides) {
+], function($, _, slides) {
   "use strict";
   void(slides);
 

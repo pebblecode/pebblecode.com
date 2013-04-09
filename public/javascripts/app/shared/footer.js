@@ -1,6 +1,7 @@
 // Javascript for the footer
 require([
-  "jquery"
+  "jquery",
+  "shared/map"
 ], function($) {
   "use strict";
 

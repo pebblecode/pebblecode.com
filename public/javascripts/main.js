@@ -23,7 +23,7 @@ require.config({
       exports: "Modernizr"
     }
   },
-
+  baseUrl: "javascripts",
   paths: {
     shared: "app/shared",
 
@@ -49,15 +49,8 @@ function() {
 
 require([
   "modernizr",
-  "shared/random-colors",
-  "shared/map",
-  //"shared/footer", // Not showing map on all pages right now
-  "shared/mobile"
-], function(modernizr, randomColors, map, footer) {
+  "shared/random-colors"
+  //"shared/footer" // Not showing map on all pages right now
+], function(modernizr, randomColors) {
   "use strict";
-
-  void(modernizr);
-  void(randomColors);
-  void(map);
-  void(footer);
 });
