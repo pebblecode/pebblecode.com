@@ -716,14 +716,15 @@ footer #map{
 }
 
 .labs-filtering{
-  margin: 0 0 1em;
+  margin: 0 0 .7em;
+  text-align: center;
 }
 
 .filter{
   font-size: 1em;
   color: hsl(0, 0%, 50%);
   padding: .3em .4em;
-  margin: 0 .5em .25em 0;
+  margin: 0 .5em .8em 0;
   cursor: pointer;
 
   &:hover{
@@ -1521,13 +1522,14 @@ header{
     }
   }
 
+  .filter{
+    font-size: .9em;
+  }
+
   .row:nth-child(2) {
     margin-bottom: 0;
   }
 
-  .frame {
-    margin-bottom: $baseline;
-  }
   h2 {
     margin-bottom: $baseline;
   }
