@@ -1,21 +1,41 @@
 require([
   "jquery",
-  "jquery.scrollTo"
-], function($, scrollTo) {
+  "jquery.scrollTo",
+  "backbone",
+  "underscore.string"
+], function($, scrollTo, Backbone, _s) {
   "use strict";
+
+  function slug(name) {
+    return _s.slugify(name);
+  }
+
+  // Url handling
+  var AppRouter = Backbone.Router.extend({
+    routes: {
+      ":person": "getPerson"
+    }
+  });
+  var appRouter = new AppRouter();
+  appRouter.on('route:getPerson', function(person) {
+    var personSlug = slug(person);
+    selectPerson(personSlug);
+  });
+
+  Backbone.history.start();
 
   // Spotlight changes when person is clicked on
   $('.person').click(function(event) {
-    var clickTarget = event.target;
-    var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
-    $("#spotlight .person-row").removeClass("active");
+    var clickTarget = event.target,
+      personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first(),
+      personSlug = $(personLink).attr("data-person-slug");
 
-    var personIndex = $(personLink).parent().prevAll().length - 1;
-    var personRow = $("#spotlight .person-row")[personIndex];
-    $(personRow).addClass("active");
-
-    $.scrollTo( $('#spotlight-scroll'), 600);
-    event.preventDefault();
+    selectPerson(personSlug);
   });
 
+  function selectPerson(slug) {
+    $("#spotlight .person-row").removeClass("active");
+    $("#" + slug).addClass("active");
+    $.scrollTo($('#spotlight-scroll'), 600);
+  }
 });

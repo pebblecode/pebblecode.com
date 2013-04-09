@@ -3,6 +3,7 @@
 require 'rubygems'
 require 'sinatra'
 require './lib/partials'
+require './lib/string'
 require 'haml'
 require 'sass'
 require 'compass'

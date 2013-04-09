@@ -3,6 +3,10 @@ require.config({
     underscore: {
       exports: "_"
     },
+    "underscore.string": {
+      exports: "_s",
+      deps: ["underscore"]
+    },
     backbone: {
       exports: "Backbone",
       deps: ["underscore"]
@@ -29,6 +33,7 @@ require.config({
 
     jquery: "lib/jquery",
     underscore: "lib/underscore",
+    "underscore.string": "lib/underscore.string",
     backbone: "lib/backbone",
     modernizr: "lib/modernizr",
 

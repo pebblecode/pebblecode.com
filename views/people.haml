@@ -1,3 +1,4 @@
+-# coding: utf-8
 - content_for :script_js do
   %script{ :type => "text/javascript" }
     require(["app/people"]);
@@ -60,7 +61,7 @@
       :tumblr_name => "mattward"
     },
     {
-      :name => "Vincent Mart&iacute;nez",
+      :name => "Vincent Martínez",
       :title => "Software Developer",
       :image => "/images/mug-shots/vince.png",
       :description => "After studying software engineering in Valencia and a brief experience in the ugly world of platform dependent C code and libraries, Vincent moved to the web, mainly working in Ruby and JavaScript. Vincent admires simplicity and minimalism in design. When not coding, he enjoys photography, sunny days when they come and, of course, Bar&ccedil;a.",
@@ -225,7 +226,7 @@
     %li#spotlight
       - random_index = rand(people.length)
       - people.each_with_index do |p, index|
-        %section{:id => "#{("tumblr-" + p[:tumblr_name]) if p[:tumblr_name]}", :class => "person-row #{"active" if random_index == index}"}
+        %section{:id => p[:name].to_slug, :"data-tumblr" => p[:tumblr_name], :class => "person-row #{"active" if random_index == index}"}
           .frame
             .img
               / Height is same as .img height
@@ -243,7 +244,7 @@
 
     - people.each do |p|
       %li
-        %a{:href => "#spotlight", :class => "columns1 frame person"}
+        %a{:href => "##{p[:name].to_slug}", :class => "columns1 frame person"}
           .img
             / Height is same as .img height
             %img{:src => p[:image], :height => 110}/
