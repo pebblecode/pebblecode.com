@@ -53,8 +53,4 @@ define([
   });
 
   Backbone.history.start();
-
-  return {
-    selectSlug: selectSlug
-  };
 });
