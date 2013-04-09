@@ -37,6 +37,8 @@ require.config({
     backbone: "vendor/backbone",
     modernizr: "vendor/modernizr",
 
+    urlHandler: "app/lib/url-handler",
+
     "jquery.isotope": "vendor/isotope",
     "jquery.scrollTo": "vendor/jquery.scrollTo",
     "jquery.slides": "vendor/jquery.slides"

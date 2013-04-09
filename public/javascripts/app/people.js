@@ -1,55 +1,9 @@
 require([
   "jquery",
   "jquery.scrollTo",
-  "backbone",
-  "underscore.string"
-], function($, scrollTo, Backbone, _s) {
+  "urlHandler"
+], function($, scrollTo, urlHandler) {
   "use strict";
-
-  function slug(name) {
-    return _s.slugify(name);
-  }
-
-  // From http://stackoverflow.com/a/5298684/111884
-  function removeHash() {
-    var scrollV, scrollH, loc = window.location;
-
-    if ("pushState" in history)
-      history.pushState("", document.title, loc.pathname + loc.search);
-    else {
-      // Prevent scrolling by storing the page's current scroll offset
-      scrollV = document.body.scrollTop;
-      scrollH = document.body.scrollLeft;
-
-      loc.hash = "";
-
-      // Restore the scroll offset, should be flicker free
-      document.body.scrollTop = scrollV;
-      document.body.scrollLeft = scrollH;
-    }
-  }
-
-  function havePersonSlug(slug) {
-    return ($("#" + slug).length > 0);
-  }
-
-  // Url handling
-  var AppRouter = Backbone.Router.extend({
-    routes: {
-      ":person": "getPerson"
-    }
-  });
-  var appRouter = new AppRouter();
-  appRouter.on('route:getPerson', function(person) {
-    var personSlug = slug(person);
-    if (havePersonSlug(personSlug)) {
-      selectPerson(personSlug);
-    } else { // No slug available
-      removeHash();
-    }
-  });
-
-  Backbone.history.start();
 
   // Spotlight changes when person is clicked on
   $('.person').click(function(event) {
@@ -57,12 +11,6 @@ require([
       personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first(),
       personSlug = $(personLink).attr("data-person-slug");
 
-    selectPerson(personSlug);
+    urlHandler.selectSlug(personSlug);
   });
-
-  function selectPerson(slug) {
-    $("#spotlight .person-row").removeClass("active");
-    $("#" + slug).addClass("active");
-    $.scrollTo($('#spotlight-scroll'), 600);
-  }
 });
