@@ -92,13 +92,12 @@ end
 def render_page(page_name)
   protected! if settings.environment == "staging"
 
+  @page_name = page_name
   haml "#{page_name}".to_sym, :layout => :'layouts/application'
 end
 
 get '/:page' do
-  @page_name = params['page']
-
-  render_page(@page_name)
+  render_page(params['page'])
 end
 
 get '/people/:person' do
