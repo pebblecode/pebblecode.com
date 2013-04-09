@@ -89,11 +89,22 @@ end
 
 ############################################################
 
-get '/:page' do
+def render_page(page_name)
   protected! if settings.environment == "staging"
 
+  haml "#{page_name}".to_sym, :layout => :'layouts/application'
+end
+
+get '/:page' do
   @page_name = params['page']
-  haml "#{@page_name}".to_sym, :layout => :'layouts/application'
+
+  render_page(@page_name)
+end
+
+get '/people/:person' do
+  @person = params['person']
+
+  render_page("people")
 end
 
 error do

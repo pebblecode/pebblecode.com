@@ -1,7 +1,6 @@
 require([
-  "jquery",
   "urlHandler"
-], function($, urlHandler) {
+], function(urlHandler) {
   "use strict";
 
 });

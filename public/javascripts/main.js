@@ -27,7 +27,7 @@ require.config({
       exports: "Modernizr"
     }
   },
-  baseUrl: "javascripts",
+  baseUrl: "/javascripts",
   paths: {
     shared: "app/shared",
 
