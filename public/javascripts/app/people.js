@@ -1,8 +1,7 @@
 require([
   "jquery",
-  "jquery.scrollTo",
   "urlHandler"
-], function($, scrollTo, urlHandler) {
+], function($, urlHandler) {
   "use strict";
 
   // Spotlight changes when person is clicked on

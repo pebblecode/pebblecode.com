@@ -1,8 +1,9 @@
 define([
   "jquery",
+  "jquery.scrollTo",
   "backbone",
   "underscore.string"
-], function($, Backbone, _s) {
+], function($, scrollTo, Backbone, _s) {
   "use strict";
 
   // From http://stackoverflow.com/a/5298684/111884
