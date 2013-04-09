@@ -5,7 +5,6 @@ require([
   "jquery.slides"
 ], function($, _, slides) {
   "use strict";
-  void(slides);
 
   /*
    * Slideshow using http://slidesjs.com/
