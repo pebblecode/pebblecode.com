@@ -141,26 +141,6 @@
 .rows
   .labs-header
     .labs-header-img
-%section.row
-  %article.labs-spotlight
-    %ul
-      - projects.each_with_index do |p, index|
-        %li.project
-          - if p[:image]
-            .frame.columns2
-              %img.background-random{:src => p[:image]}
-          .columns4
-            %h3.project-title.size2= p[:title]
-            %p.pebblers= p[:pebblers]
-            %p.date= p[:date]
-            %p.project-description= p[:description]
-            %p.project-links
-              - if p[:github]
-                %a.pink{:href => p[:github], :target => "_blank"} view on Github
-              - if p[:livelink]
-                %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
-              - if p[:bloglink]
-                %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
 %hr.background-random
 .labs-filtering
   %button.filter.pink-background{:filter => ".10-time"} 10% time
