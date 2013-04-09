@@ -17,6 +17,10 @@ require([
   $('button.filter').click(function(){
     var selector = $(this).attr('filter');
     $container.isotope({ filter : selector });
+    $('button.filter').removeClass('active');
+    if (!($(this).hasClass('clear-filters'))) {
+      $(this).addClass('active');
+    }
     return false;
   });
 

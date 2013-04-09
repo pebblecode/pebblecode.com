@@ -719,31 +719,22 @@ footer #map{
   margin: 0 0 1em;
 }
 
-.clear-filters{
-  background: hsl(0, 0, 20);
-}
-
 .filter{
-  @include border-radius(.2em);
-
-  text-align: center;
-  width: 195px;
   font-size: 1em;
-  color: hsl(40, 75, 98);
-  border: 0;
+  color: hsl(0, 0%, 50%);
   padding: .3em .4em;
   margin: 0 .5em .25em 0;
   cursor: pointer;
 
-  // just to show hover states
   &:hover{
-    opacity: .8;
+    background-color: #EFEFEF;
   }
 
-  &:nth-child(5){
-    margin-right: 0;
+  &.active{
+    @include box-shadow(inset 3px 0 0 red);
   }
 }
+
 
 /* @end */
 
