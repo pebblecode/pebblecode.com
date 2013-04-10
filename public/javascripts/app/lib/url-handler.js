@@ -51,18 +51,18 @@ define([
 
       url = Backbone.history.getFragment();
       return _gaq.push(['_trackPageview', "/" + url]);
+    },
+
+    getPerson: function(person) {
+      var personSlug = _s.slugify(person);
+      if (havePersonSlug(personSlug)) {
+        selectSlug(personSlug);
+      } else { // No slug available
+        removeHash();
+      }
     }
   });
   var appRouter = new AppRouter();
-
-  appRouter.on('route:getPerson', function(person) {
-    var personSlug = _s.slugify(person);
-    if (havePersonSlug(personSlug)) {
-      selectSlug(personSlug);
-    } else { // No slug available
-      removeHash();
-    }
-  });
 
   // Routing with person link
   $(document).on("click", ".person", function(event) {
