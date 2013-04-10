@@ -102,9 +102,12 @@ get '/:page' do
 end
 
 get '/people/:person' do
-  @person_slug = params['person']
-
-  render_page("people")
+  if Person.slug_exists? params['person']
+    @person_slug = params['person']
+    render_page("people")
+  else
+    redirect "/people"
+  end
 end
 
 error do

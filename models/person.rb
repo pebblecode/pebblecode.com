@@ -205,4 +205,8 @@ class Person
   def self.random_person_index
     rand(@people.length)
   end
+
+  def self.slug_exists?(slug)
+    @people.select {|p| p[:name].to_slug == slug}.length > 0
+  end
 end
