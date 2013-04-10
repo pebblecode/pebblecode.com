@@ -20,7 +20,7 @@ This is a simple brochure site written with [sinatra][1].
 
 5. Start the server
 
-	    rake server
+	      rake server
 
 Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
 
@@ -53,9 +53,9 @@ Development workflow works like this:
 
 Set up deployment branches with
 
-  git remote add sandbox git@heroku.com:pebblecode-sandbox.git
-  git remote add staging git@heroku.com:pebblecode-staging.git
-  git remote add production git@heroku.com:pebblecode.git
+    git remote add sandbox git@heroku.com:pebblecode-sandbox.git
+    git remote add staging git@heroku.com:pebblecode-staging.git
+    git remote add production git@heroku.com:pebblecode.git
 
 ### Sandbox
 
@@ -88,7 +88,7 @@ The staging site requires authentication with username `pebblecode`, and passwor
 
 To deploy the master branch to staging
 
-	rake shipit[staging]
+	  rake shipit[staging]
 
 **Note: If you want to push changes that won't be going into production any time soon, push into the sandbox site instead**
 
