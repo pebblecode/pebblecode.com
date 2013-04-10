@@ -1,5 +1,8 @@
 require.config({
   shim: {
+    jquery: {
+      exports: "$"
+    },
     underscore: {
       exports: "_"
     },
