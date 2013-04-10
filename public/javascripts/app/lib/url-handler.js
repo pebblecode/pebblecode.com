@@ -32,6 +32,9 @@ define([
   function selectSlug(slug) {
     $("#spotlight .person-row").removeClass("active");
     $("#" + slug).addClass("active");
+  }
+
+  function scrollToSpotlight() {
     $.scrollTo($('#spotlight-scroll'), 600);
   }
 
@@ -60,6 +63,7 @@ define([
       // Remove initial /
       var url = $(event.currentTarget).attr("href").replace(/^\//, "");
       appRouter.navigate(url, { trigger: true });
+      scrollToSpotlight();
     }
   });
 
