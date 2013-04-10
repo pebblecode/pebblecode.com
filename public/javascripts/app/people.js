@@ -12,7 +12,7 @@ require([
     var personLink = $(clickTarget).is("a") ? clickTarget : $(clickTarget).parents("a").first();
     $("#spotlight .person-row").removeClass("active");
 
-    var personIndex = $(personLink).parent().prevAll().length - 1;
+    var personIndex = $(personLink).parent().prevAll().length;
     var personRow = $("#spotlight .person-row")[personIndex];
     $(personRow).addClass("active");
 

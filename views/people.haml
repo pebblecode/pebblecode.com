@@ -26,7 +26,7 @@
       :name => "George Ornbo",
       :title => "Creative Director",
       :image => "/images/mug-shots/george.png",
-      :description => "George is a Ruby and JavaScript developer with a strong interest in web browsers and applications. When not hacking at a terminal he enjoys making things in the kitchen and a bit of cricket. George is currently writing [Sams teach yourself Node.js in 24 hours](http://nodejsbook.io/).",
+      :description => "George is a JavaScript developer with a strong interest in web browsers and applications. When not hacking at a terminal he enjoys making things in the kitchen and a bit of cricket. George is the author of [Sams teach yourself Node.js in 24 hours](http://nodejsbook.io/).",
       :website => "http://shapeshed.com",
       :github => "https://github.com/shapeshed",
       :twitter => "http://twitter.com/shapeshed",
@@ -177,13 +177,6 @@
       :github => "https://github.com/svnlto"
     },
     {
-      :name => "Karen Williams",
-      :title => "Software Developer",
-      :image => "/images/mug-shots/karen.png",
-      :description => "Karen has reinvented herself several times. Firstly a Casualty Nurse, then a Teaching Assistant, then a Maths Teacher. Karen started a Maths degree with The Open University but got sidetracked when she did a course in IT and discovered she could do JavaScript.<br><br> Realising that her love of logic puzzles could be satisfied by writing code, the Maths degree was dropped and changed to Computer Science. After 4 and a half years of juggling work, study and family, Karen achieved her Open University degree and found rewarding work as a developer - firstly Java, now C#.NET.<br><br> In her spare time, Karen has a passion for treading the boards and has recently been Charles Dickens' daughter, a Mexican terrified of chickens and a Scary Clown.",
-      :github => "https://github.com/KarenWilliams"
-    },
-    {
       :name => "John Mildinhall",
       :title => "User-Centered Design Specialist",
       :image => "/images/mug-shots/john.png",
@@ -236,11 +229,11 @@
             %h3.size1= p[:title]
             %p= RDiscount.new(p[:description]).to_html
             - if p[:website]
-              %a{:href => p[:website], :target => "_blank", :class => "person-link"} W
+              %a{:href => p[:website], :target => "_blank", :class => "person-link website frame"} Website
             - if p[:twitter]
-              %a{:href => p[:twitter], :target => "_blank", :class => "person-link"} T
+              %a{:href => p[:twitter], :target => "_blank", :class => "person-link twitter frame"} Twitter
             - if p[:github]
-              %a{:href => p[:github], :target => "_blank", :class => "person-link"} G
+              %a{:href => p[:github], :target => "_blank", :class => "person-link github frame"} Github
     %ul.row.people-list.columns4
       - people.each do |p|
         %li
