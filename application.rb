@@ -17,6 +17,7 @@ helpers Sinatra::ContentFor
 
 set :root, File.dirname(__FILE__)
 set :environment, ENV["RACK_ENV"] || "development"
+set :disable_http_password, ENV["DISABLE_HTTP_PASSWORD"] || false
 set :blog_url, "http://blog.pebblecode.com"
 set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
@@ -90,7 +91,7 @@ end
 ############################################################
 
 def render_page(page_name)
-  protected! if settings.environment == "staging"
+  protected! if settings.environment == "staging" && settings.disable_http_password == false
 
   @people = Person.all.shuffle # Shuffle every time it reloads
   @page_name = page_name
