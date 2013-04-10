@@ -15,7 +15,7 @@ Then install all the required gems
 
 Start the server
 
-	rake server
+    rake server
 
 Go to `http://localhost:7100`
 
@@ -48,9 +48,9 @@ Development workflow works like this:
 
 Set up deployment branches with
 
-  git remote add sandbox git@heroku.com:pebblecode-sandbox.git
-  git remote add staging git@heroku.com:pebblecode-staging.git
-  git remote add production git@heroku.com:pebblecode.git
+    git remote add sandbox git@heroku.com:pebblecode-sandbox.git
+    git remote add staging git@heroku.com:pebblecode-staging.git
+    git remote add production git@heroku.com:pebblecode.git
 
 ### Sandbox
 
