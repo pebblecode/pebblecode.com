@@ -29,7 +29,7 @@ require.config({
 });
 
 require([
-  "Modernizr",
+  "modernizr",
   "shared/random-colors",
   "underscore.string"
 ], function(modernizr, randomColors, _s) {
