@@ -1,5 +1,4 @@
-# encoding utf-8
-
+# encoding: utf-8
 require 'rubygems'
 require 'sinatra'
 require './lib/partials'
@@ -13,6 +12,7 @@ require 'newrelic_rpm'
 
 helpers Sinatra::Partials
 require_relative 'helpers/init'
+require_relative 'models/init'
 helpers Sinatra::ContentFor
 
 set :root, File.dirname(__FILE__)
@@ -92,6 +92,8 @@ end
 def render_page(page_name)
   protected! if settings.environment == "staging"
 
+  @people = Person.all
+  @people.shuffle! # Shuffle every time it reloads
   @page_name = page_name
   haml "#{page_name}".to_sym, :layout => :'layouts/application'
 end
