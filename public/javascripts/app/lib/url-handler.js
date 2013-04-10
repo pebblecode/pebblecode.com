@@ -40,8 +40,17 @@ define([
 
   // Set up router
   var AppRouter = Backbone.Router.extend({
+    initialize: function() {
+      return this.bind('route', this._trackPageview);
+    },
     routes: {
       "people/:person": "getPerson"
+    },
+    _trackPageview: function() {
+      var url;
+
+      url = Backbone.history.getFragment();
+      return _gaq.push(['_trackPageview', "/" + url]);
     }
   });
   var appRouter = new AppRouter();
