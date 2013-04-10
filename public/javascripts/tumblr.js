@@ -29,10 +29,11 @@ require.config({
 });
 
 require([
+  "jquery",
   "modernizr",
   "shared/random-colors",
   "underscore.string"
-], function(modernizr, randomColors, _s) {
+], function($, modernizr, randomColors, _s) {
   "use strict";
 
   /*
