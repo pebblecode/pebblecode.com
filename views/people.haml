@@ -26,7 +26,7 @@
         Our team
   %hr.background-random/
   %ul.row
-    %li#spotlight
+    %li#spotlight.columns2
       - selected_person_index = Person.slug_index(@person_slug)
       -# Show selected person index or show a random one
       - person_index = selected_person_index ? selected_person_index : Person.random_person_index
@@ -35,8 +35,9 @@
           .frame
             .img
               / Height is same as .img height
-              %img{:src => p[:image], :height => 264}/
+              %img{:src => p[:image]}/
           %article
+            %h2.size2 In the spotlight
             %h2.size2.name= p[:name]
             %h3.size1= p[:title]
             %p= RDiscount.new(p[:description]).to_html
@@ -47,11 +48,12 @@
             - if p[:github]
               %a{:href => p[:github], :target => "_blank", :class => "person-link"} G
 
-    - @people.each do |p|
-      %li
-        %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
-          .img
-            / Height is same as .img height
-            %img{:src => p[:image], :height => 110}/
-          %h4= p[:name]
-          %p.size0= p[:title]
+    %ul.row.people-list.columns4
+      - @people.each do |p|
+        %li
+          %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
+            .img
+              / Height is same as .img height
+              %img{:src => p[:image], :height => 110}/
+            %h4= p[:name]
+            %p.size0= p[:title]

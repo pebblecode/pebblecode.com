@@ -637,8 +637,8 @@ footer #map{
   }
 
   .project{
-    width: 32%;
-    margin: .25em .5%;
+    width: 300px;
+    margin: 5px;
   }
 }
 
@@ -716,34 +716,26 @@ footer #map{
 }
 
 .labs-filtering{
-  margin: 0 0 1em;
-}
-
-.clear-filters{
-  background: hsl(0, 0, 20);
+  margin: 0 0 .7em;
+  text-align: center;
 }
 
 .filter{
-  @include border-radius(.2em);
-
-  text-align: center;
-  width: 195px;
   font-size: 1em;
-  color: hsl(40, 75, 98);
-  border: 0;
+  color: hsl(0, 0%, 50%);
   padding: .3em .4em;
-  margin: 0 .5em .25em 0;
+  margin: 0 .5em .8em 0;
   cursor: pointer;
 
-  // just to show hover states
   &:hover{
-    opacity: .8;
+    background-color: #EFEFEF;
   }
 
-  &:nth-child(5){
-    margin-right: 0;
+  &.active{
+    @include box-shadow(inset 3px 0 0 red);
   }
 }
+
 
 /* @end */
 
@@ -758,14 +750,14 @@ footer #map{
       text-transform: lowercase;
     }
   }
+
   .people-copy{
     margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
   }
+
   #spotlight{
-    width: $column-width*2 + $column-gutter;
-    float: left;
-    margin-right: 30px;
-    height: 1200px;
+    margin-bottom: $baseline*2;
+
 
     .row:first-child{
       margin-bottom: $baseline;
@@ -792,8 +784,13 @@ footer #map{
         display: none; // Showing bottom image
       }
       .img{
-        height: $baseline*12;
         text-align: center;
+        height: $baseline*12;
+      }
+
+      img{
+        width: 100%;
+        max-width: $baseline*12;
       }
     }
 
@@ -829,9 +826,8 @@ footer #map{
       margin-bottom: $baseline;
       min-height: 205px;
       min-width: 145px;
-      width: 45%;
-      margin-left: 0;
-      margin-right: 5%;
+      width: 22%;
+      margin-right: 4%;
 
       .size0{
         line-height: 16px;
@@ -852,12 +848,8 @@ footer #map{
       }
     }
 
-    li:nth-child(2n){
-      .person,
-      .join_us{
-        margin-left: 5%;
-        margin-right: 0;
-      }
+    li:nth-child(4n) a{
+      margin-right: 0;
     }
   }
 
@@ -866,6 +858,11 @@ footer #map{
     font-size: 10em;
     line-height: .45;
   }
+}
+
+.people-list{
+  // float: left;
+  // width: $column-width*4 + $column-gutter*3;
 }
 
 .person-link{
@@ -1530,13 +1527,14 @@ header{
     }
   }
 
+  .filter{
+    font-size: .9em;
+  }
+
   .row:nth-child(2) {
     margin-bottom: 0;
   }
 
-  .frame {
-    margin-bottom: $baseline;
-  }
   h2 {
     margin-bottom: $baseline;
   }
@@ -1594,6 +1592,10 @@ header{
       }
       .img{
         width: 100%;
+        position: static;
+      }
+      img{
+        position: static; 
       }
     }
 
@@ -1642,14 +1644,11 @@ header{
     li:nth-child(2n){
       .person,
       .join_us{
-        margin-left: 5%;
         margin-right: 0;
       }
     }
   }
 }
-
-
 
 .page-thoughts {
   #thoughts-heading {
@@ -1799,148 +1798,62 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 
 
-@media only screen and (min-width: 600px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 30%;
-        margin-right: 5%;
-      }
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 5%;
-          margin-left: 0;
-        }
-      }
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
+@media only screen and (max-width: 1140px) {
+  .page-people .employees{
+
+    .person,
+    .join_us{
+      width: 30%;
+      margin-right: 5%;
+    }
+
+    li:nth-child(4n) a{
+      margin-right: 5%;
+    }
+
+    li:nth-child(3n) a{
+      margin-right: 0;
     }
   }
 }
 
+@media only screen and (max-width: 830px) {
+  .page-people .employees{
 
-@media only screen and (min-width: 770px) and (max-width: 1600px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 22.75%;
-        margin-right: 3%;
-      }
+    .person,
+    .join_us{
+      width: 47.5%;
+      margin-right: 5%;
+    }
 
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 3%;
-          margin-left: 0;
-        }
-      }
+    li:nth-child(4n) a{
+      margin-right: 5%;
+    }
 
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 3%;
-        }
-      }
+    li:nth-child(3n) a{
+      margin-right: 5%;
+    }
 
-      li:nth-child(4n){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
+    li:nth-child(2n) a{
+      margin-right: 0;
     }
   }
 }
 
-@media only screen and (min-width: 1040px) and (max-width: 1250px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 17%;
-        margin-right: 3.75%;
-      }
-
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 3.75%;
-          margin-left: 0;
-        }
-      }
-
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 3.75%;
-        }
-      }
-
-      li:nth-child(4n){
-       .person,
-       .join_us{
-          margin-right: 3.75%;
-        }
-      }
-      li:nth-child(5n){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
+@media only screen and (max-width: 1020px) {
+  #spotlight .frame { // Left float
+    .img{
+      text-align: center;
+      height: $baseline*12;
+      position: relative;
     }
-  }
-}
 
-@media only screen and (min-width: 1250px) and (max-width: 5000px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 0;
-        margin-right: 30px;
-      }
-
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-          margin-left: 0;
-        }
-      }
-
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-        }
-      }
-
-      li:nth-child(4n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-        }
-      }
-      li:nth-child(5n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-        }
-      }
-      li:nth-child(4n+1){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
+    img{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: auto;
+      width: 100%
     }
   }
 }
