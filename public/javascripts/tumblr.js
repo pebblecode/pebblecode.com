@@ -3,6 +3,9 @@
  */
 require.config({
   shim: {
+    jquery: {
+      exports: "$"
+    },
     underscore: {
       exports: "_"
     },
@@ -17,6 +20,8 @@ require.config({
   baseUrl: "http://pebblecode-sandbox.herokuapp.com/javascripts",
   paths: {
     shared: "app/shared",
+
+    jquery: "vendor/jquery",
     underscore: "vendor/underscore",
     "underscore.string": "vendor/underscore.string",
     modernizr: "vendor/modernizr",
