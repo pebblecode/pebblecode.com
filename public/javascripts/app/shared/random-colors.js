@@ -47,7 +47,7 @@ require([
     $(".img",obj).addClass(randColor + "-background");
 
     // Color spotlight person row the same
-    var personIndex = $(obj).parent().prevAll().length -1;
+    var personIndex = $(obj).parent().prevAll().length;
     var spotlightPerson = $("#spotlight .person-row")[personIndex];
     $(spotlightPerson).find("h2, h3").addClass(randColor);
     $(spotlightPerson).find(".img, .person-link").addClass(randColor + "-background");
