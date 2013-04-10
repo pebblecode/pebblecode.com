@@ -10,9 +10,9 @@ define([
   function removeHash() {
     var scrollV, scrollH, loc = window.location;
 
-    if ("pushState" in history)
+    if ("pushState" in history) {
       history.pushState("", document.title, loc.pathname + loc.search);
-    else {
+    } else {
       // Prevent scrolling by storing the page's current scroll offset
       scrollV = document.body.scrollTop;
       scrollH = document.body.scrollLeft;
