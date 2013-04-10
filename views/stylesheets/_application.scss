@@ -821,9 +821,8 @@ footer #map{
       margin-bottom: $baseline;
       min-height: 205px;
       min-width: 145px;
-      width: 45%;
-      margin-left: 0;
-      margin-right: 5%;
+      width: 22%;
+      margin-right: 4%;
 
       .size0{
         line-height: 16px;
@@ -844,12 +843,8 @@ footer #map{
       }
     }
 
-    li:nth-child(2n){
-      .person,
-      .join_us{
-        margin-left: 5%;
-        margin-right: 0;
-      }
+    li:nth-child(4n) a{
+      margin-right: 0;
     }
   }
 
