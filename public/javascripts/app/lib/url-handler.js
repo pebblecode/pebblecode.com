@@ -35,10 +35,10 @@ define([
     $.scrollTo($('#spotlight-scroll'), 600);
   }
 
-  // Url handling
+  // Set up router
   var AppRouter = Backbone.Router.extend({
     routes: {
-      ":person": "getPerson"
+      "people/:person": "getPerson"
     }
   });
   var appRouter = new AppRouter();
@@ -52,5 +52,18 @@ define([
     }
   });
 
-  Backbone.history.start();
+  // Routing with person link
+  $(document).on("click", ".person", function(event) {
+    // Ignore control keys to open link in new window
+    if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
+      event.preventDefault();
+      // Remove initial /
+      var url = $(event.currentTarget).attr("href").replace(/^\//, "");
+      appRouter.navigate(url, { trigger: true });
+    }
+  });
+
+  Backbone.history.start({
+    pushState: true
+  });
 });

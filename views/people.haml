@@ -247,7 +247,7 @@
 
     - people.each do |p|
       %li
-        %a{:href => "##{p[:name].to_slug}", :class => "columns1 frame person"}
+        %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
           .img
             / Height is same as .img height
             %img{:src => p[:image], :height => 110}/
