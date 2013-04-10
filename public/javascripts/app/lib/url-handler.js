@@ -64,19 +64,23 @@ define([
   });
   var appRouter = new AppRouter();
 
-  // Routing with person link
-  $(document).on("click", ".person", function(event) {
-    // Ignore control keys to open link in new window
-    if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
-      event.preventDefault();
-      // Remove initial /
-      var url = $(event.currentTarget).attr("href").replace(/^\//, "");
-      appRouter.navigate(url, { trigger: true });
-      scrollToSpotlight();
-    }
-  });
+  // Enable pushState for compatible browsers
+  var enablePushState = true;
 
-  Backbone.history.start({
-    pushState: true
-  });
+  // Disable for older browsers
+  var pushState = !!(enablePushState && window.history && window.history.pushState);
+  if (pushState) {
+    // Routing with person link
+    $(document).on("click", ".person", function(event) {
+      // Ignore control keys to open link in new window
+      if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
+        event.preventDefault();
+        // Remove initial /
+        var url = $(event.currentTarget).attr("href").replace(/^\//, "");
+        appRouter.navigate(url, { trigger: true });
+        scrollToSpotlight();
+      }
+    });
+  } // else link urls force a page refresh
+  Backbone.history.start({ pushState: pushState, hashChange: pushState });
 });
