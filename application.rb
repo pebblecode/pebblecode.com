@@ -92,8 +92,7 @@ end
 def render_page(page_name)
   protected! if settings.environment == "staging"
 
-  @people = Person.all
-  @people.shuffle! # Shuffle every time it reloads
+  @people = Person.all.shuffle # Shuffle every time it reloads
   @page_name = page_name
   haml "#{page_name}".to_sym, :layout => :'layouts/application'
 end
