@@ -201,4 +201,8 @@ class Person
   def self.slug_index(slug)
     @people.index {|p| p[:name].to_slug == slug}
   end
+
+  def self.random_person_index
+    rand(@people.length)
+  end
 end

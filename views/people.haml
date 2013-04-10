@@ -29,7 +29,7 @@
     %li#spotlight
       - selected_person_index = Person.slug_index(@person_slug)
       -# Show selected person index or show a random one
-      - person_index = selected_person_index ? selected_person_index : rand(@people.length)
+      - person_index = selected_person_index ? selected_person_index : Person.random_person_index
       - @people.each_with_index do |p, index|
         %section{:id => p[:name].to_slug, :"data-tumblr" => p[:tumblr_name], :class => "person-row #{"active" if person_index == index}"}
           .frame
