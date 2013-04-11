@@ -280,7 +280,6 @@ footer{
   clear: both;
   position: relative;
   height: 80px;
-  cursor: pointer;
 
   .inner-footer{
     width: 100%;
@@ -866,21 +865,35 @@ footer #map{
 }
 
 .person-link{
-  font-family: 'pc_social';
-  color: hsl(40, 70%, 98.5%);
-  font-size: 1.6em;
-  line-height: 1.7em;
-  margin-right: .2em;
-  width: 1.7em;
-  text-align: center;
-  display: inline-block;
-  @include border-radius(.2em);
+  line-height: 3.2;
+  color: hsl(0, 0%, 50%);
+  padding: .3em .4em;
+  margin: 0 .5em .8em 0;
+  cursor: pointer;
 
   &:hover{
-    color: hsl(40, 70%, 98.5%);
     text-decoration: none;
+    background-color: #EFEFEF;
+  }
+
+  &:after{
+    font-family: 'pc_social';
+    margin-left: .5em;
   }
 }
+
+.website:after{
+  content: "W";
+}
+
+.twitter:after{
+  content: "T";
+}
+
+.github:after{
+  content: "G";
+}
+
 
 
 /* @end */
@@ -1578,6 +1591,10 @@ header{
   .project .frame{
     display: none;
   }
+}
+
+.labs-header{
+  margin: $baseline*2 0 $baseline;
 }
 
 .page-people {

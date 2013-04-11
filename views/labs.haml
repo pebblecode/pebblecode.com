@@ -36,7 +36,7 @@
       :description => "Ready-made noise images as data URIs. Available in Sass, LESS, and vanilla CSS flavours.",
       :date => "Febuary 2013",
       :pebblers => "Mark",
-      :type => "10-time",
+      :type => "ten-time",
       :github => "https://github.com/markdurrant/noisy-uris",
       :livelink => "http://markdurrant.github.com/noisy-uris/",
       :bloglink => "http://blog.pebblecode.com/post/43139609779/noisy-uris",
@@ -108,7 +108,7 @@
       :date => "August 2012",
       :description => "Pebble custom reset uses Sass to compile a custom reset based on Eric Meyer's <a href='http://meyerweb.com/eric/tools/css/reset/'>CSS reset</a> with a few additions.",
       :pebblers => "Mark",
-      :type => "10-time",
+      :type => "ten-time",
       :livelink => "http://pebblecode.github.com/PCR/",
       :github => "https://github.com/pebblecode/PCR",
       :bloglink => "http://blog.pebblecode.com/post/29614270562/the-great-css-experiment",
@@ -141,34 +141,14 @@
 .rows
   .labs-header
     .labs-header-img
-%section.row
-  %article.labs-spotlight
-    %ul
-      - projects.each_with_index do |p, index|
-        %li.project
-          - if p[:image]
-            .frame.columns2
-              %img.background-random{:src => p[:image]}
-          .columns4
-            %h3.project-title.size2= p[:title]
-            %p.pebblers= p[:pebblers]
-            %p.date= p[:date]
-            %p.project-description= p[:description]
-            %p.project-links
-              - if p[:github]
-                %a.pink{:href => p[:github], :target => "_blank"} view on Github
-              - if p[:livelink]
-                %a.blue{:href => p[:livelink], :target => "_blank"} see the project here
-              - if p[:bloglink]
-                %a.green{:href => p[:bloglink], :target => "_blank"}= p[:blogtext]
 %hr.background-random
 .labs-filtering
-  %button.filter.pink-background{:filter => ".10-time"} 10% time
-  %button.filter.blue-background{:filter => ".olympic"} Olympics hack day
-  %button.filter.green-background{:filter => ".games"} Games hack day
-  %button.filter.orange-background{:filter => ".education"} Education hack day
-  %button.filter.aqua-background{:filter => ".product"} products
-  %button.filter.clear-filters{:filter => "*"} clear filters
+  %button.filter.frame{:filter => ".ten-time"} 10% time
+  %button.filter.frame{:filter => ".olympic"} Olympics hack day
+  %button.filter.frame{:filter => ".games"} Games hack day
+  %button.filter.frame{:filter => ".education"} Education hack day
+  %button.filter.frame{:filter => ".product"} products
+  %button.filter.frame.clear-filters{:filter => "*"} &#x2715;
 %hr.background-random
 %section.projects-list
   %ul
@@ -179,4 +159,11 @@
         - if p[:image]
           %img{:src => p[:image], :height => "306px"}
         %h3.project-title.size2= p[:title]
+        %p.project-by= p[:pebblers]
         %p.project-description= p[:description]
+        - if p[:livelink]
+          %a{:href => p[:livelink], :target => "_blank", :class => "project-link"} project
+        - if p[:github]
+          %a{:href => p[:github], :target => "_blank", :class => "project-link"}= [:blogtext]
+        - if p[:bloglink]
+          %a{:href => p[:bloglink], :target => "_blank", :class => "project-link"}= [:blogtext]
