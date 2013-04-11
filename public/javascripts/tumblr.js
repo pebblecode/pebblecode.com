@@ -58,8 +58,8 @@ require([
   // Link authors to their relevant people page
   $(".blog-sidebar .author").each(function() {
     var tumblrName = this.innerHTML,
-      authorSlug = _s.slugify(tumblrName),
-      authorName = tumblrAuthors[authorSlug] || authorSlug;
+      authorName = tumblrAuthors[authorSlug] || authorSlug,
+      authorSlug = _s.slugify(authorName);
 
     // Use localhost for testing, but pebblecode.com for everything else
     var peopleUrlPrefix = (location.hostname === "localhost") ? "http://localhost:7100/people/" : "http://pebblecode.com/people/";
