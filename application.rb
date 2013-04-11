@@ -46,7 +46,7 @@ get '/' do
   haml :index, :layout => :'layouts/application'
 end
 
-get '/thoughts' do
+get '/blog' do
   protected! if settings.environment == "staging"
 
   if settings.environment == "development"
@@ -61,6 +61,18 @@ end
 get '/jobs' do
   # Stackoverflow blog
   redirect settings.jobs_url
+end
+
+############################################################
+# Legacy routes
+############################################################
+
+get '/thoughts' do
+  redirect '/blog'
+end
+
+get '/products' do
+  redirect '/labs'
 end
 
 ############################################################
