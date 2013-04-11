@@ -15,6 +15,9 @@ require.config({
     },
     modernizr: {
       exports: "Modernizr"
+    },
+    highlight: {
+      exports: "hljs"
     }
   },
   baseUrl: "http://pebblecode-sandbox.herokuapp.com/javascripts",
@@ -24,16 +27,19 @@ require.config({
     jquery: "vendor/jquery",
     underscore: "vendor/underscore",
     "underscore.string": "vendor/underscore.string",
-    modernizr: "vendor/modernizr"
+    modernizr: "vendor/modernizr",
+
+    highlight: "vendor/highlight/highlight"
   }
 });
 
 require([
   "jquery",
   "modernizr",
+  "highlight",
   "shared/random-colors",
   "underscore.string"
-], function($, modernizr, randomColors, _s) {
+], function($, modernizr, hljs, randomColors, _s) {
   "use strict";
 
   /*
@@ -71,4 +77,5 @@ require([
   });
 
   randomColors.init();
+  hljs.initHighlightingOnLoad();
 });
