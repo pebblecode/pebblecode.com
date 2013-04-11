@@ -51,7 +51,7 @@ get '/blog' do
 
   if settings.environment == "development"
     # Tumblr blog styles
-    erb :thoughts
+    erb :blog
   else
     # Actual tumblr blog
     redirect settings.blog_url
