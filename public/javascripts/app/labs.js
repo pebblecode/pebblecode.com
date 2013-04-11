@@ -8,8 +8,8 @@ require([
   var $container = $('.projects-list');
 
   $container.isotope({
-    itemSelector : '.project',
-    layoutMode : 'masonry'
+    itemSelector: '.project',
+    layoutMode: 'masonry',
   });
 
   $('button.filter').click(function(){
