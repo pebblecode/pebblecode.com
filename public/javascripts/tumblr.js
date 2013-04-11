@@ -1,6 +1,10 @@
 /**
  * Tumblr specific javascript
  */
+function isLocalhost() {
+  return (location.hostname === "localhost");
+}
+
 require.config({
   shim: {
     jquery: {
@@ -20,7 +24,7 @@ require.config({
       exports: "hljs"
     }
   },
-  baseUrl: "http://pebblecode-sandbox.herokuapp.com/javascripts",
+  baseUrl: isLocalhost() ? "/javascripts" : "http://pebblecode-sandbox.herokuapp.com/javascripts",
   paths: {
     shared: "app/shared",
 
@@ -29,7 +33,7 @@ require.config({
     "underscore.string": "vendor/underscore.string",
     modernizr: "vendor/modernizr",
 
-    highlight: "vendor/highlight/highlight"
+    highlight: "vendor/highlight/highlight.pack"
   }
 });
 
@@ -68,7 +72,7 @@ require([
       authorSlug = _s.slugify(authorName);
 
     // Use localhost for testing, but pebblecode.com for everything else
-    var peopleUrlPrefix = (location.hostname === "localhost") ? "http://localhost:7100/people/" : "http://pebblecode.com/people/";
+    var peopleUrlPrefix = isLocalhost() ? "http://localhost:7100/people/" : "http://pebblecode.com/people/";
     var authorUrl = peopleUrlPrefix + authorSlug;
     var authorLink = "<a href='" + authorUrl + "'>" + authorName + "</a>";
 
@@ -76,6 +80,9 @@ require([
     this.innerHTML = authorLink;
   });
 
+  // Initialise random colours
   randomColors.init();
-  hljs.initHighlightingOnLoad();
+
+  // Initialise syntax highlighting
+  hljs.initHighlighting();
 });
