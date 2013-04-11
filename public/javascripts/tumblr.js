@@ -58,7 +58,7 @@ require([
   // Link authors to their relevant people page
   $(".blog-sidebar .author").each(function() {
     var tumblrName = this.innerHTML,
-      authorName = tumblrAuthors[authorSlug] || authorSlug,
+      authorName = tumblrAuthors[tumblrName] || tumblrName,
       authorSlug = _s.slugify(authorName);
 
     // Use localhost for testing, but pebblecode.com for everything else
