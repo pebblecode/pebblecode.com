@@ -25,9 +25,6 @@ require.config({
     "jquery.qtip": {
       deps: ["jquery"],
       exports: "jQuery.fn.qtip"
-    },
-    modernizr: {
-      exports: "Modernizr"
     }
   },
   baseUrl: "/javascripts",
@@ -38,7 +35,6 @@ require.config({
     underscore: "vendor/underscore",
     "underscore.string": "vendor/underscore.string",
     backbone: "vendor/backbone",
-    modernizr: "vendor/modernizr",
 
     urlHandler: "app/lib/url-handler",
 
