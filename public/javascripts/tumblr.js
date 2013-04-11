@@ -68,5 +68,7 @@ require([
 
     // Insert link inside .author
     this.innerHTML = authorLink;
+
+    randomColors.init();
   });
 });

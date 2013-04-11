@@ -63,4 +63,6 @@ require([
   //"shared/footer" // Not showing map on all pages right now
 ], function(modernizr, randomColors) {
   "use strict";
+
+  randomColors.init();
 });
