@@ -20,23 +20,13 @@
   <link rel="icon" type="image/x-icon" href="http://pebblecode.com/images/favicon.ico">
 
   <link rel="stylesheet" href="http://pebblecode.com/stylesheets/screen.css" type="text/css" />
-  <link rel="stylesheet" title="Default" href="http://pebblecode.com/highlight/styles/default.css">
+  <link rel="stylesheet" title="Default" href="http://pebblecode.com/javascripts/vendor/highlight/styles/default.css">
   <script type="text/javascript" src="http://use.typekit.com/asa8yjy.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- Styles for blog comments -->
   <link rel="stylesheet" href="http://pebblecode.com/stylesheets/disqus.css" type="text/css" />
 
-  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-  <script src="http://pebblecode.com/javascripts/vendor/modernizr.js" type="text/javascript"></script>
-  <script src="http://pebblecode.com/javascripts/vendor/underscore.js" type="text/javascript"></script>
-  <script src="http://pebblecode.com/javascripts/script.js" type="text/javascript"></script>
-  <script src="http://pebblecode.com/javascripts/vendor/jquery.slides.js" type="text/javascript"></script>
-  <script src="http://pebblecode.com/highlight/highlight.pack.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-  </script>
+  <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 
   <script type="text/javascript">
     var $buoop = {vs:{i:6,f:3.5,o:10.6,s:3.2,n:9}}
@@ -52,15 +42,15 @@
 </head>
 <body class="page-thoughts">
 
-  <header class="background-random">
+  <header class="pink-background">
     <nav>
       <a class="logo" href="http://pebblecode.com/">pebble{code}</a>
 
       <ul>
-        <li><span>{</span><a href = "http://pebblecode.com/people">our people</a><span>}</span></li>
-        <li><span>{</span><a href = "http://pebblecode.com/work">our work</a><span>}</span></li>
-        <li><span>{</span><a href = "http://pebblecode.com/products">our products</a><span>}</span></li>
-        <li class="nav-active"><span>{</span><a href = "http://pebblecode.com/thoughts">our thoughts</a><span>}</span></li>
+        <li><span>{</span><a href = "http://pebblecode.com/people">people</a><span>}</span></li>
+        <li><span>{</span><a href = "http://pebblecode.com/work">work</a><span>}</span></li>
+        <li><span>{</span><a href = "http://pebblecode.com/labs">labs</a><span>}</span></li>
+        <li class="nav-active"><span>{</span><a href = "http://pebblecode.com/thoughts">blog</a><span>}</span></li>
       </ul>
     </nav>
   </header>
@@ -143,7 +133,7 @@
   </div>
 
   <footer>
-    <div>
+    <div class="inner-footer">
       <ul id="contact">
         <li class="size0">T: <a href="tel:020 3327 1081">020 3327 1081</a></li>
         <li class="size0">E: <a href="mailto:info@pebblecode.com">info@pebblecode.com</a></li>
@@ -161,6 +151,8 @@
       </ul>
     </div>
   </footer>
+
+  <script type="text/javascript" data-main="http://pebblecode.com/javascripts/tumblr" src="http://pebblecode.com/javascripts/vendor/require.js"></script>
 
   {block:IfDisqusShortname}
     <script type="text/javascript">
