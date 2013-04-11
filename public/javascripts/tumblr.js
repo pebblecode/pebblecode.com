@@ -24,7 +24,7 @@ require.config({
     jquery: "vendor/jquery",
     underscore: "vendor/underscore",
     "underscore.string": "vendor/underscore.string",
-    modernizr: "vendor/modernizr",
+    modernizr: "vendor/modernizr"
   }
 });
 
