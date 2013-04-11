@@ -1,7 +1,9 @@
-  /*
-   * Show random colours on the website
-   */
-require([
+/*
+ * Show random colours on the website
+ *
+ * @return {Object} obj.init() initialises random colours
+ */
+define([
   "jquery",
   "underscore"
 ], function($, _) {
