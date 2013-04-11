@@ -651,8 +651,8 @@ footer #map{
   }
 }
 
-.project-links a{
-  margin-right: 1em;
+.project-link{
+  margin-right: .5em;
 }
 
 .labs-header{
@@ -742,6 +742,16 @@ footer #map{
 
   &.active{
     @include box-shadow(inset 3px 0 0 red);
+  }
+}
+
+.github-link:after{
+  font-family: 'pc_social';
+  margin-left: .25em;
+  content: "G";
+
+  &:hover{
+    text-decoration: none;
   }
 }
 
