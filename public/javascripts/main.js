@@ -1,7 +1,14 @@
 require.config({
   shim: {
+    jquery: {
+      exports: "$"
+    },
     underscore: {
       exports: "_"
+    },
+    "underscore.string": {
+      exports: "_s",
+      deps: ["underscore"]
     },
     backbone: {
       exports: "Backbone",
@@ -23,18 +30,21 @@ require.config({
       exports: "Modernizr"
     }
   },
-  baseUrl: "javascripts",
+  baseUrl: "/javascripts",
   paths: {
     shared: "app/shared",
 
-    jquery: "lib/jquery",
-    underscore: "lib/underscore",
-    backbone: "lib/backbone",
-    modernizr: "lib/modernizr",
+    jquery: "vendor/jquery",
+    underscore: "vendor/underscore",
+    "underscore.string": "vendor/underscore.string",
+    backbone: "vendor/backbone",
+    modernizr: "vendor/modernizr",
 
-    "jquery.isotope": "lib/isotope",
-    "jquery.scrollTo": "lib/jquery.scrollTo",
-    "jquery.slides": "lib/jquery.slides"
+    urlHandler: "app/lib/url-handler",
+
+    "jquery.isotope": "vendor/isotope",
+    "jquery.scrollTo": "vendor/jquery.scrollTo",
+    "jquery.slides": "vendor/jquery.slides"
   }
 });
 
@@ -53,4 +63,6 @@ require([
   //"shared/footer" // Not showing map on all pages right now
 ], function(modernizr, randomColors) {
   "use strict";
+
+  randomColors.init();
 });

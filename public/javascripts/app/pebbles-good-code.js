@@ -4,8 +4,6 @@ require([
 ], function($, jValidator) {
   "use strict";
 
-  void(jValidator);
-
   /*
    * Pebble's good code
    */

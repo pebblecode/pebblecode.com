@@ -1,7 +1,9 @@
-  /*
-   * Show random colours on the website
-   */
-require([
+/*
+ * Show random colours on the website
+ *
+ * @return {Object} obj.init() initialises random colours
+ */
+define([
   "jquery",
   "underscore"
 ], function($, _) {
@@ -27,30 +29,35 @@ require([
     return randArrayItem(_.without(array, exceptItem));
   }
 
-  randColors('.background-random', function(obj, randColor) {
-    $(obj).addClass(randColor + "-background");
-  });
+  function init() {
+    randColors('.background-random', function(obj, randColor) {
+      $(obj).addClass(randColor + "-background");
+    });
 
-  randColors('.case-study', function(obj, randColor) {
-    $("h2, h3", obj).addClass(randColor);
-    $("hr, .img", obj).addClass(randColor + "-background");
-  });
+    randColors('.case-study', function(obj, randColor) {
+      $("h2, h3", obj).addClass(randColor);
+      $("hr, .img", obj).addClass(randColor + "-background");
+    });
 
-  randColors('.blog-post', function(obj, randColor) {
-    $("h2, h3, h4, a", obj).addClass(randColor);
-    $(".img, .comments a", obj).addClass(randColor + "-background");
-    $(".blog-content", obj).addClass(randColor + "-border");
-  });
+    randColors('.blog-post', function(obj, randColor) {
+      $("h2, h3, h4, a", obj).addClass(randColor);
+      $(".img, .comments a", obj).addClass(randColor + "-background");
+      $(".blog-content", obj).addClass(randColor + "-border");
+    });
 
-  randColors('.person', function(obj, randColor) {
-    $("h4",obj).addClass(randColor);
-    $(".img",obj).addClass(randColor + "-background");
+    randColors('.person', function(obj, randColor) {
+      $("h4",obj).addClass(randColor);
+      $(".img",obj).addClass(randColor + "-background");
 
-    // Color spotlight person row the same
-    var personIndex = $(obj).parent().prevAll().length;
-    var spotlightPerson = $("#spotlight .person-row")[personIndex];
-    $(spotlightPerson).find("h2, h3").addClass(randColor);
-    $(spotlightPerson).find(".img").addClass(randColor + "-background");
-  });
+      // Color spotlight person row the same
+      var personIndex = $(obj).parent().prevAll().length;
+      var spotlightPerson = $("#spotlight .person-row")[personIndex];
+      $(spotlightPerson).find("h2, h3").addClass(randColor);
+      $(spotlightPerson).find(".img, .person-link").addClass(randColor + "-background");
+    });
+  }
 
+  return {
+    init: init
+  };
 });

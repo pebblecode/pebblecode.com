@@ -20,7 +20,7 @@ This is a simple brochure site written with [sinatra][1].
 
 5. Start the server
 
-	    rake server
+	      rake server
 
 Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
 
@@ -49,19 +49,33 @@ Development workflow works like this:
 * When master is ready to be show to someone else, push to [staging site](http://pebblecode-staging.herokuapp.com/)
 * When `staging` is ready for production, push to [production site](http://pebblecode.com/)
 
+### HTTP password
+
+By default the staging/sandbox sites have a http password with username `pebblecode`, and password `pebblecode`.
+
+To disable the password
+
+    # For staging
+    heroku config:set DISABLE_HTTP_PASSWORD=true --app pebblecode-staging
+
+    # For sandbox
+    heroku config:set DISABLE_HTTP_PASSWORD=true --app pebblecode-sandbox
+
+To enable the password
+
+    heroku config:unset DISABLE_HTTP_PASSWORD --app [heroku-app-name]
+
 ### Prerequisites
 
 Set up deployment branches with
 
-  git remote add sandbox git@heroku.com:pebblecode-sandbox.git
-  git remote add staging git@heroku.com:pebblecode-staging.git
-  git remote add production git@heroku.com:pebblecode.git
+    git remote add sandbox git@heroku.com:pebblecode-sandbox.git
+    git remote add staging git@heroku.com:pebblecode-staging.git
+    git remote add production git@heroku.com:pebblecode.git
 
 ### Sandbox
 
 The sandbox site (http://pebblecode-sandbox.herokuapp.com/) is intended to be a temporary site to show particular changes. It is used when you don't intend to push the change to staging or production, but want to show someone else.
-
-The sandbox site requires authentication with username `pebblecode`, and password `pebblecode`.
 
 To push to the sandbox
 
@@ -84,11 +98,9 @@ Only needs to be done once, when setting up the heroku site
 
 The staging site (http://pebblecode-staging.herokuapp.com/) is intended as a staging ground for changes before they go into production. It is a place for sanity checks before it goes live.
 
-The staging site requires authentication with username `pebblecode`, and password `pebblecode`.
-
 To deploy the master branch to staging
 
-	rake shipit[staging]
+	  rake shipit[staging]
 
 **Note: If you want to push changes that won't be going into production any time soon, push into the sandbox site instead**
 

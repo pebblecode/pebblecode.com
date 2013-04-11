@@ -1,8 +1,8 @@
-# encoding utf-8
-
+# encoding: utf-8
 require 'rubygems'
 require 'sinatra'
 require './lib/partials'
+require './lib/string'
 require 'haml'
 require 'sass'
 require 'compass'
@@ -12,10 +12,12 @@ require 'newrelic_rpm'
 
 helpers Sinatra::Partials
 require_relative 'helpers/init'
+require_relative 'models/init'
 helpers Sinatra::ContentFor
 
 set :root, File.dirname(__FILE__)
 set :environment, ENV["RACK_ENV"] || "development"
+set :disable_http_password, ENV["DISABLE_HTTP_PASSWORD"] || false
 set :blog_url, "http://blog.pebblecode.com"
 set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
@@ -88,11 +90,25 @@ end
 
 ############################################################
 
-get '/:page' do
-  protected! if settings.environment == "staging"
+def render_page(page_name)
+  protected! if settings.environment == "staging" && settings.disable_http_password == false
 
-  @page_name = params['page']
-  haml "#{@page_name}".to_sym, :layout => :'layouts/application'
+  @people = Person.all.shuffle # Shuffle every time it reloads
+  @page_name = page_name
+  haml "#{page_name}".to_sym, :layout => :'layouts/application'
+end
+
+get '/:page' do
+  render_page(params['page'])
+end
+
+get '/people/:person' do
+  if Person.slug_exists? params['person']
+    @person_slug = params['person']
+    render_page("people")
+  else
+    redirect "/people"
+  end
 end
 
 error do
