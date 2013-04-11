@@ -1,6 +1,10 @@
 /**
  * Tumblr specific javascript
  */
+function isLocalhost() {
+  return (location.hostname === "localhost");
+}
+
 require.config({
   shim: {
     jquery: {
@@ -15,25 +19,31 @@ require.config({
     },
     modernizr: {
       exports: "Modernizr"
+    },
+    highlight: {
+      exports: "hljs"
     }
   },
-  baseUrl: "http://pebblecode-sandbox.herokuapp.com/javascripts",
+  baseUrl: isLocalhost() ? "/javascripts" : "http://pebblecode-sandbox.herokuapp.com/javascripts",
   paths: {
     shared: "app/shared",
 
     jquery: "vendor/jquery",
     underscore: "vendor/underscore",
     "underscore.string": "vendor/underscore.string",
-    modernizr: "vendor/modernizr"
+    modernizr: "vendor/modernizr",
+
+    highlight: "vendor/highlight/highlight.pack"
   }
 });
 
 require([
   "jquery",
   "modernizr",
+  "highlight",
   "shared/random-colors",
   "underscore.string"
-], function($, modernizr, randomColors, _s) {
+], function($, modernizr, hljs, randomColors, _s) {
   "use strict";
 
   /*
@@ -62,7 +72,7 @@ require([
       authorSlug = _s.slugify(authorName);
 
     // Use localhost for testing, but pebblecode.com for everything else
-    var peopleUrlPrefix = (location.hostname === "localhost") ? "http://localhost:7100/people/" : "http://pebblecode.com/people/";
+    var peopleUrlPrefix = isLocalhost() ? "http://localhost:7100/people/" : "http://pebblecode.com/people/";
     var authorUrl = peopleUrlPrefix + authorSlug;
     var authorLink = "<a href='" + authorUrl + "'>" + authorName + "</a>";
 
@@ -70,5 +80,9 @@ require([
     this.innerHTML = authorLink;
   });
 
+  // Initialise random colours
   randomColors.init();
+
+  // Initialise syntax highlighting
+  hljs.initHighlighting();
 });

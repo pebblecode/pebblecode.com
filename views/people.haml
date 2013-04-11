@@ -42,11 +42,11 @@
             %h3.size1= p[:title]
             %p= RDiscount.new(p[:description]).to_html
             - if p[:website]
-              %a{:href => p[:website], :target => "_blank", :class => "person-link"} W
+              %a{:href => p[:website], :target => "_blank", :class => "person-link frame website"} Website
             - if p[:twitter]
-              %a{:href => p[:twitter], :target => "_blank", :class => "person-link"} T
+              %a{:href => p[:twitter], :target => "_blank", :class => "person-link frame twitter"} Twitter
             - if p[:github]
-              %a{:href => p[:github], :target => "_blank", :class => "person-link"} G
+              %a{:href => p[:github], :target => "_blank", :class => "person-link frame github"} Github
 
     %ul.row.people-list.columns4
       - @people.each do |p|

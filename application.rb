@@ -46,12 +46,12 @@ get '/' do
   haml :index, :layout => :'layouts/application'
 end
 
-get '/thoughts' do
+get '/blog' do
   protected! if settings.environment == "staging"
 
   if settings.environment == "development"
     # Tumblr blog styles
-    erb :thoughts
+    erb :blog
   else
     # Actual tumblr blog
     redirect settings.blog_url
@@ -61,6 +61,18 @@ end
 get '/jobs' do
   # Stackoverflow blog
   redirect settings.jobs_url
+end
+
+############################################################
+# Legacy routes
+############################################################
+
+get '/thoughts' do
+  redirect '/blog'
+end
+
+get '/products' do
+  redirect '/labs'
 end
 
 ############################################################

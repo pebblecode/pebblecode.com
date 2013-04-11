@@ -53,7 +53,7 @@ define([
       var personIndex = $(obj).parent().prevAll().length;
       var spotlightPerson = $("#spotlight .person-row")[personIndex];
       $(spotlightPerson).find("h2, h3").addClass(randColor);
-      $(spotlightPerson).find(".img, .person-link").addClass(randColor + "-background");
+      $(spotlightPerson).find(".img").addClass(randColor + "-background");
     });
   }
 
