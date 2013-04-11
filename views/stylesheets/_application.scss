@@ -880,20 +880,19 @@ footer #map{
     font-family: 'pc_social';
     margin-left: .5em;
   }
-}
 
-.website:after{
-  content: "W";
-}
+  &.website:after{
+    content: "W";
+  }
 
-.twitter:after{
-  content: "T";
-}
+  &.twitter:after{
+    content: "T";
+  }
 
-.github:after{
-  content: "G";
+  &.github:after{
+    content: "G";
+  }
 }
-
 
 
 /* @end */
