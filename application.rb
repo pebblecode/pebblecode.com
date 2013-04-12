@@ -1,23 +1,23 @@
-# encoding utf-8
-
+# encoding: utf-8
 require 'rubygems'
 require 'sinatra'
 require './lib/partials'
+require './lib/string'
 require 'haml'
 require 'sass'
 require 'compass'
-require 'sinatra/assetpack'
 require 'rdiscount'
 require 'sinatra/content_for'
 require 'newrelic_rpm'
 
 helpers Sinatra::Partials
 require_relative 'helpers/init'
+require_relative 'models/init'
 helpers Sinatra::ContentFor
-# register Sinatra::AssetPack
 
 set :root, File.dirname(__FILE__)
 set :environment, ENV["RACK_ENV"] || "development"
+set :disable_http_password, ENV["DISABLE_HTTP_PASSWORD"] || false
 set :blog_url, "http://blog.pebblecode.com"
 set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
@@ -32,29 +32,6 @@ configure do
 
   set :haml, { :format => :html5 }
   set :scss, Compass.sass_engine_options
-
-  assets {
-    serve '/javascripts', from: 'public/javascripts'
-    # serve '/stylesheets', from: '/stylesheets'
-    serve '/images', from: 'public/images'
-
-    # The second parameter defines where the compressed version will be served.
-    # (Note: that parameter is optional, AssetPack will figure it out.)
-    js :lib, '/javascripts/script.js', [
-      '/javascripts/lib/modernizr-2.5.3.js',
-      '/javascripts/lib/underscore-min.js',
-      '/javascripts/lib/slides.min.jquery.js',
-      '/javascripts/lib/jquery.scrollTo-1.4.2-min.js'
-    ]
-
-    # css :app, '/stylesheets/screen.css', [
-    #   '/stylesheets/screen.css',
-    #   '/fonts/meta.css'
-    # ]
-
-    js_compression  :jsmin
-    css_compression :sass
-  }
 end
 
 get '/stylesheets/screen.css' do
@@ -69,12 +46,12 @@ get '/' do
   haml :index, :layout => :'layouts/application'
 end
 
-get '/thoughts' do
+get '/blog' do
   protected! if settings.environment == "staging"
 
   if settings.environment == "development"
     # Tumblr blog styles
-    erb :thoughts
+    erb :blog
   else
     # Actual tumblr blog
     redirect settings.blog_url
@@ -84,6 +61,18 @@ end
 get '/jobs' do
   # Stackoverflow blog
   redirect settings.jobs_url
+end
+
+############################################################
+# Legacy routes
+############################################################
+
+get '/thoughts' do
+  redirect '/blog'
+end
+
+get '/products' do
+  redirect '/labs'
 end
 
 ############################################################
@@ -113,11 +102,25 @@ end
 
 ############################################################
 
-get '/:page' do
-  protected! if settings.environment == "staging"
+def render_page(page_name)
+  protected! if settings.environment == "staging" && settings.disable_http_password == false
 
-  @page_name = params['page']
-  haml "#{@page_name}".to_sym, :layout => :'layouts/application'
+  @people = Person.all.shuffle # Shuffle every time it reloads
+  @page_name = page_name
+  haml "#{page_name}".to_sym, :layout => :'layouts/application'
+end
+
+get '/:page' do
+  render_page(params['page'])
+end
+
+get '/people/:person' do
+  if Person.slug_exists? params['person']
+    @person_slug = params['person']
+    render_page("people")
+  else
+    redirect "/people"
+  end
 end
 
 error do

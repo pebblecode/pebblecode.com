@@ -42,6 +42,14 @@ pre {
   }
 }
 
+// Hide for javascript, but not if javascript isn't available
+.js-hide {
+  visibility: hidden;
+}
+.no-js .js-hide {
+  display: block;
+}
+
 /* @group typography */
 
 h1,h2,h3,h4,h5,h6{
@@ -273,14 +281,13 @@ footer{
   position: relative;
   height: 80px;
 
-  div{
+  .inner-footer{
     width: 100%;
     max-width: $grid-max-width;
     margin: 0 auto;
 
     #contact{
-      margin-top: 16px;
-      margin-left: 12px;
+      margin: 16px 0 16px 12px;
       float: left;
 
       .address{
@@ -342,6 +349,11 @@ footer{
       }
     }
   }
+}
+
+footer #map{
+  width: 100%;
+  height: $baseline*20;
 }
 /* @end */
 
@@ -489,14 +501,14 @@ footer{
     }
     .row {
       margin-bottom: $baseline*3;
-      
+
       .frame {
         margin-bottom: $baseline;
 
         .img {
           height: $baseline*6;
           padding-top: $baseline*2;
-          
+
           h2 {
             width: 100%;
             text-align: center;
@@ -525,11 +537,24 @@ footer{
     margin-top: $baseline*2;
   }
 }
+
+.pebble-it{
+  padding: $baseline*2 0 $baseline;
+  margin-bottom: 10em;
+
+  .row{
+    margin-bottom: $baseline;
+  }
+  h1,a{
+    color: #009be8;
+  }
+}
+
 /* @end */
 
-/* @group products */
+/* @group labs */
 
-.page-products{
+.page-labs{
 
   .row:first-child{
     margin-top: $baseline*2;
@@ -555,7 +580,19 @@ footer{
     margin-bottom: $baseline*2;
   }
 
-  .tricklr, .vistazo{
+  .tricklr,
+  .vistazo{
+
+    .frame,
+    div{
+      float: left;
+      width: 47.5%;
+    }
+
+    .product-container{
+      margin-left: 5%;
+    }
+
     .img{
       width: 100%;
       height: $baseline*9;
@@ -563,28 +600,18 @@ footer{
       background-image: url("/images/tricklr.jpg");
       background-position-x: 50%;
     }
+
     a{
       color: $pink;
     }
   }
 
-  .vistazo{
-    .img{
-      background-color: $blue;
-      background-image: url("/images/vistazo.jpg");
-    }
-    a{
-      color: $blue;
-    }
-  }
-
   h2{
-    margin-top: $baseline*2;
     margin-bottom: $baseline;
   }
 
   hr{
-    margin-bottom: $baseline*2;
+    margin-bottom: $baseline;
   }
 
   .open-source{
@@ -597,6 +624,117 @@ footer{
     }
   }
 }
+
+.project{
+
+}
+
+.projects-list{
+
+  img{
+    width: 100%;
+  }
+
+  .project{
+    width: 300px;
+    margin: 5px;
+  }
+}
+
+.project-links a{
+  margin-right: 1em;
+}
+
+.labs-header{
+  $stop: 100% / 7;
+  @include background-image(linear-gradient($pink   $stop * 0, $pink   $stop * 1,
+                                            $purple $stop * 1, $purple $stop * 2,
+                                            $blue   $stop * 2, $blue   $stop * 3,
+                                            $aqua   $stop * 3, $aqua   $stop * 4,
+                                            $green  $stop * 4, $green  $stop * 5,
+                                            $orange $stop * 5, $orange $stop * 6,
+                                            $pink   $stop * 6, $pink   $stop * 7));
+
+  position: relative;
+  height: 165px;
+  width: 100%;
+  margin: $baseline*4 0 $baseline;
+  background-color: $pink;
+  background-size: 100% 700%;
+  -webkit-animation: colors 30s linear infinite;
+}
+
+@-webkit-keyframes colors {
+        0% {background-position-y: (100% / 6) * 6;}
+  15.6666% {background-position-y: (100% / 6) * 6;}
+  16.6666% {background-position-y: (100% / 6) * 5;}
+  32.3333% {background-position-y: (100% / 6) * 5;}
+  33.3333% {background-position-y: (100% / 6) * 4;}
+  49.0000% {background-position-y: (100% / 6) * 4;}
+  50.0000% {background-position-y: (100% / 6) * 3;}
+  65.6666% {background-position-y: (100% / 6) * 3;}
+  66.6666% {background-position-y: (100% / 6) * 2;}
+  82.3333% {background-position-y: (100% / 6) * 2;}
+  83.3333% {background-position-y: (100% / 6) * 1;}
+  99.0000% {background-position-y: (100% / 6) * 1;}
+      100% {background-position-y: (100% / 6) * 0;}
+}
+
+.labs-header-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 165px;
+  width: 100%;
+  background-image: url('/images/labs.png');
+  background-position: center center;
+}
+
+.labs-spotlight{
+
+  .frame{
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  .project{
+    display: none;
+  }
+
+  .project.active{
+    display: block;
+  }
+
+  .pebblers,
+  .date{
+    margin: 0;
+  }
+}
+
+.labs-filtering{
+  margin: 0 0 .7em;
+  text-align: center;
+}
+
+.filter{
+  font-size: 1em;
+  color: hsl(0, 0%, 50%);
+  padding: .3em .4em;
+  margin: 0 .5em .8em 0;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #EFEFEF;
+  }
+
+  &.active{
+    @include box-shadow(inset 3px 0 0 red);
+  }
+}
+
 
 /* @end */
 
@@ -611,18 +749,25 @@ footer{
       text-transform: lowercase;
     }
   }
+
   .people-copy{
     margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
   }
+
   #spotlight{
+    margin-bottom: $baseline*2;
+
+
     .row:first-child{
       margin-bottom: $baseline;
     }
     .row:nth-child(3){
       margin-bottom: $baseline;
     }
+
     .person-row{
       display: none;
+
       &.active{
         display: block;
       }
@@ -632,16 +777,19 @@ footer{
     }
 
     .frame { // Left float
-      width: 290px;
-      float: left;
-      margin-left: -100%;
+      margin-bottom: 30px;
 
       &.top {
         display: none; // Showing bottom image
       }
       .img{
-        height: $baseline*12;
         text-align: center;
+        height: $baseline*12;
+      }
+
+      img{
+        width: 100%;
+        max-width: $baseline*12;
       }
     }
 
@@ -649,9 +797,6 @@ footer{
       width: 100%;
       float: left;
       margin-left: 0;
-      .inner-wrapper {
-        margin-left: 320px;
-      }
     }
 
     h1 {
@@ -680,9 +825,8 @@ footer{
       margin-bottom: $baseline;
       min-height: 205px;
       min-width: 145px;
-      width: 45%;
-      margin-left: 0;
-      margin-right: 5%;
+      width: 22%;
+      margin-right: 4%;
 
       .size0{
         line-height: 16px;
@@ -703,12 +847,8 @@ footer{
       }
     }
 
-    li:nth-child(2n){
-      .person,
-      .join_us{
-        margin-left: 5%;
-        margin-right: 0;
-      }
+    li:nth-child(4n) a{
+      margin-right: 0;
     }
   }
 
@@ -717,19 +857,43 @@ footer{
     font-size: 10em;
     line-height: .45;
   }
+}
 
-  .pebble-it{
-    padding: $baseline*2 0 $baseline;
-    margin-bottom: 10em;
-    
-    .row{
-      margin-bottom: $baseline;
-    }
-    h1,a{
-      color: #009be8;
-    }
+.people-list{
+  // float: left;
+  // width: $column-width*4 + $column-gutter*3;
+}
+
+.person-link{
+  line-height: 3.2;
+  color: hsl(0, 0%, 50%);
+  padding: .3em .4em;
+  margin: 0 .5em .8em 0;
+  cursor: pointer;
+
+  &:hover{
+    text-decoration: none;
+    background-color: #EFEFEF;
+  }
+
+  &:after{
+    font-family: 'pc_social';
+    margin-left: .5em;
+  }
+
+  &.website:after{
+    content: "W";
+  }
+
+  &.twitter:after{
+    content: "T";
+  }
+
+  &.github:after{
+    content: "G";
   }
 }
+
 
 /* @end */
 
@@ -868,23 +1032,43 @@ footer{
     @extend .columns4;
     margin: 60px 0 0 0;
 
+    // For archive functionality
+    // li {
+    //   float: left;
+    //   width: 33%;
+    // }
+
+    // .prev {
+
+    // }
+
+    // .archive{
+    //   text-align: center;
+    // }
+
+    // .next {
+    //   text-align: right;
+    // }
+
+    // Standard prev/next styles
     li {
-      float: left;
-      width: 33%;
+      width: 50%;
     }
 
     .prev {
-      
-    }
-
-    .archive{
-      text-align: center;
+      float: left;
     }
 
     .next {
+      float: right;
       text-align: right;
     }
+
   }
+}
+
+.blog-tags{
+  margin-bottom: $baseline*2;
 }
 /* @end */
 
@@ -893,7 +1077,7 @@ footer{
   h1{
     margin-top: $baseline*4;
   }
-  
+
   hr{
     margin-top: $baseline;
     margin-bottom: $baseline*2;
@@ -1362,24 +1546,24 @@ header{
 }
 
 
-.page-products {
+.page-labs {
   .row:first-child {
     margin-top: $baseline;
-    
+
     .columns6:first-child{
       margin-top: -25px;
     }
+  }
+
+  .filter{
+    font-size: .9em;
   }
 
   .row:nth-child(2) {
     margin-bottom: 0;
   }
 
-  .frame {
-    margin-bottom: $baseline;
-  }
   h2 {
-    margin-top: $baseline;
     margin-bottom: $baseline;
   }
   hr {
@@ -1390,6 +1574,26 @@ header{
       margin-top: $baseline;
     }
   }
+
+  .tricklr{
+    .frame{
+      width: 100%;
+    }
+
+    .product-container{
+      margin-left: 0;
+      margin-bottom: $baseline;
+      width: 100%;
+    }
+  }
+
+  .project .frame{
+    display: none;
+  }
+}
+
+.labs-header{
+  margin: $baseline*2 0 $baseline;
 }
 
 .page-people {
@@ -1420,6 +1624,10 @@ header{
       }
       .img{
         width: 100%;
+        position: static;
+      }
+      img{
+        position: static;
       }
     }
 
@@ -1468,14 +1676,11 @@ header{
     li:nth-child(2n){
       .person,
       .join_us{
-        margin-left: 5%;
         margin-right: 0;
       }
     }
   }
 }
-
-
 
 .page-thoughts {
   #thoughts-heading {
@@ -1625,149 +1830,105 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 
 
-@media only screen and (min-width: 600px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 30%;
-        margin-right: 5%;
-      }
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 5%;
-          margin-left: 0;
-        }
-      }
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
+@media only screen and (max-width: 1140px) {
+  .page-people .employees{
+
+    .person,
+    .join_us{
+      width: 30%;
+      margin-right: 5%;
+    }
+
+    li:nth-child(4n) a{
+      margin-right: 5%;
+    }
+
+    li:nth-child(3n) a{
+      margin-right: 0;
     }
   }
 }
 
+@media only screen and (max-width: 830px) {
+  .page-people .employees{
 
-@media only screen and (min-width: 770px) and (max-width: 1600px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 22.75%;
-        margin-right: 3%;
-      }
+    .person,
+    .join_us{
+      width: 47.5%;
+      margin-right: 5%;
+    }
 
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 3%;
-          margin-left: 0;
-        }
-      }
+    li:nth-child(4n) a{
+      margin-right: 5%;
+    }
 
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 3%;
-        }
-      }
+    li:nth-child(3n) a{
+      margin-right: 5%;
+    }
 
-      li:nth-child(4n){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
+    li:nth-child(2n) a{
+      margin-right: 0;
     }
   }
 }
 
-@media only screen and (min-width: 1040px) and (max-width: 1250px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 17%;
-        margin-right: 3.75%;
-      }
+@media only screen and (max-width: 1020px) {
+  #spotlight .frame { // Left float
+    .img{
+      text-align: center;
+      height: $baseline*12;
+      position: relative;
+    }
 
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 3.75%;
-          margin-left: 0;
-        }
-      }
-
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 3.75%;
-        }
-      }
-
-      li:nth-child(4n){
-       .person,
-       .join_us{
-          margin-right: 3.75%;
-        }
-      }
-      li:nth-child(5n){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
+    img{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: auto;
+      width: 100%
     }
   }
 }
 
-@media only screen and (min-width: 1250px) and (max-width: 5000px) {
-  .page-people {
-    .employees {
-      .person,
-      .join_us{
-        width: 0;
-        margin-right: 30px;
-      }
+// =========================================================
+// MINI-MUGSHOTS
+// stles for using images as avatars
+// =========================================================
+// .pebbler-test{
+//   display: inline-block;
+//   position: relative;
+//   margin: 0 5px 10px 0;
 
-      li:nth-child(2n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-          margin-left: 0;
-        }
-      }
+//   div{
+//     display: inline-block;
+//     background-color: white;
+//     padding: 4px 4px 0;
+//     border: 1px solid hsl(0, 0%, 80%);
+//     @include box-shadow(hsl(40, 30%, 95%) 3px 3px 0);
+//     @include box-sizing(border-box);
+//   }
 
-      li:nth-child(3n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-        }
-      }
+//   img{
+//     width: $baseline*2;
+//     height: $baseline*2;
+//   }
 
-      li:nth-child(4n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-        }
-      }
-      li:nth-child(5n){
-       .person,
-       .join_us{
-          margin-right: 30px;
-        }
-      }
-      li:nth-child(6n){
-       .person,
-       .join_us{
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
+//   span{
+//     opacity: 0;
+//     position: absolute;
+//     bottom: -30px;
+//     left: 0;
+//     text-align: center;
+//     background: white;
+//     padding: 0 4px;
+//     border: 1px solid hsl(0, 0%, 80%);
 
+//     @include transition-property(opacity);
+//     @include transition-duration(.5s);
+
+//   }
+
+//   &:hover span{
+//     opacity: 1;
+//   }
+// }

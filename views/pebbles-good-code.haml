@@ -4,8 +4,9 @@
   Software and app design and development. Agile approach, technical experts, front-end design. We turn complicated problems into simple, beautiful apps!
 - content_for :keywords do
   pebble, pebble code, software, app, web app, design, development, beautiful, agile, software, simple, London, technical, Vistazo, Tricklr
-- content_for :js_lib do
-  %script{:src => "/javascripts/lib/jquery.validate.min.js", :type => "text/javascript"}
+- content_for :script_js do
+  %script{ :type => "text/javascript" }
+    require(["app/pebbles-good-code"]);
 
 %section.row
   .columns12

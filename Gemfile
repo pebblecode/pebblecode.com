@@ -1,12 +1,12 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rake'
 gem "sinatra"
 gem 'thin'
 
-# Asset packaging
-gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
+# Helper libs
 gem 'sinatra-contrib'
+
 # Front end
 gem "haml"
 gem "sass"
