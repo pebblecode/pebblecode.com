@@ -39,6 +39,7 @@ require.config({
     urlHandler: "app/lib/url-handler",
 
     "jquery.isotope": "vendor/isotope",
+    "jquery.isotope.center": "vendor/isotope.center",
     "jquery.scrollTo": "vendor/jquery.scrollTo",
     "jquery.slides": "vendor/jquery.slides"
   }

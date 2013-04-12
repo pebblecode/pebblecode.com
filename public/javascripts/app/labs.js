@@ -1,15 +1,16 @@
 require([
   "jquery",
-  "jquery.isotope"
-], function($, isotope) {
+  "jquery.isotope",
+  "jquery.isotope.center"
+], function($, isotope, isotopeCenter) {
   "use strict";
 
   $('.labs-spotlight .project:first-child').addClass('active');
   var $container = $('.projects-list');
 
   $container.isotope({
-    itemSelector : '.project',
-    layoutMode : 'masonry'
+    itemSelector: '.project',
+    layoutMode: 'masonry'
   });
 
   $('button.filter').click(function(){
