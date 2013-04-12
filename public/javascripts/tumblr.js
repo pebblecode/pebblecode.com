@@ -24,7 +24,6 @@ require.config({
       exports: "hljs"
     }
   },
-  baseUrl: isLocalhost() ? "/javascripts" : "http://pebblecode-sandbox.herokuapp.com/javascripts",
   paths: {
     shared: "app/shared",
 
