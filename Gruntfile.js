@@ -48,5 +48,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['watch']);
 
   // Generate production javascript
-  grunt.registerTask('production', ['jshint', 'requirejs']);
+  grunt.registerTask('build', ['jshint', 'requirejs']);
 };
