@@ -642,6 +642,15 @@ footer #map{
   }
 }
 
+.project-by{
+  margin: ($baseline / 2) 0;
+  font-weight: bold;
+
+  &:before{
+    content: "by "
+  }
+}
+
 .project-links a{
   margin-right: 1em;
 }

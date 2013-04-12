@@ -24,7 +24,7 @@
       :title => "Tricklr",
       :description => "Stay active on Twitter without having to monitor it constantly. Put your tweets in a queue and Tricklr will send them for you at regular intervals.",
       :date => "Dec 2011",
-      :pebblers => "George, Tak, Mark",
+      :pebblers => "George, Tak, and Mark",
       :type => "product",
       :livelink => "http://tricklrapp.com/",
       :bloglink => "http://blog.pebblecode.com/post/15777853652/tricklr-1-0",
@@ -47,7 +47,7 @@
       :title => "Vistazo",
       :description => "Track what everyone in your team is working on and when. Visualise people's workloads at a glance, without getting sucked into micromanagement.",
       :date => "April 2012",
-      :pebblers => "Tak, Mark",
+      :pebblers => "Tak and Mark",
       :type => "product",
       :livelink => "http://vistazoapp.com/",
       :bloglink => "http://blog.pebblecode.com/post/21434355185/vistazo-the-making-of-our-new-baby",
@@ -59,7 +59,7 @@
       :description => "WTF is a simple image guessing game. It supports guessing cities and movies. It uses the flickr api for getting images.",
       :date => "October 2012",
       :type => "games",
-      :pebblers => "Tak, Matt",
+      :pebblers => "Tak and Matt",
       :livelink => "http://pebblecode.github.com/wtf/",
       :github => "https://github.com/pebblecode/wtf/",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
@@ -69,7 +69,7 @@
       :title => "Keyboard Demon",
       :description => "Keyboard Demon is a simple keyboard based game about mashing keys as quickly as possible. Based on <a href='http://hackertyper.net/'>hacker typer</a>.",
       :date => "October 2012",
-      :pebblers => "Mark, Vince",
+      :pebblers => "Mark and Vince",
       :type => "games",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday : blog post",
@@ -79,7 +79,7 @@
       :title => "Battleships",
       :description => "Hack-ships is an extended idea of Battleships, instead of a square board on a plane surface we've chosen to play the game on a Google map.",
       :date => "October 2012",
-      :pebblers => "Joseph, Akash, Sava, Toby",
+      :pebblers => "Joseph, Akash, Sava, and Toby",
       :type => "games",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday : blog post",
@@ -88,7 +88,7 @@
       :title => "Hangover hunt",
       :description => "The player is asked a series of questions. They have to go to the location (a pub!) and answer the question with either location specific information or using location data from their browser or phone.",
       :date => "October 2012",
-      :pebblers => "Daniel, Tom, Plamen",
+      :pebblers => "Daniel, Tom, and Plamen",
       :type => "games",
       :github => "https://github.com/pebblecode/hangover-hunt",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
@@ -98,7 +98,7 @@
       :title => "Campfire quiz",
       :date => "October 2012",
       :description => "A quiz gameplay engine for <a href='http://campfirenow.com/'>campfire</a>.",
-      :pebblers => "Alex, James",
+      :pebblers => "Alex and James",
       :type => "games",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday : blog post",
@@ -116,9 +116,9 @@
     },
     {
       :title => "Olympic data vis",
-      :description => "July 2012",
-      :date => "Data visualisation of all past olympic medals won",
-      :pebblers => "Alex, Tak",
+      :description => "Data visualisation of all past olympic medals won",
+      :date => "July 2012",
+      :pebblers => "Alex and Tak",
       :type => "olympic",
       :livelink => "http://pebblecode.com/olympic-data-vis",
       :bloglink => "http://blog.pebblecode.com/post/27976232997/olympics-hackery",
@@ -162,8 +162,8 @@
         %p.project-by= p[:pebblers]
         %p.project-description= p[:description]
         - if p[:livelink]
-          %a{:href => p[:livelink], :target => "_blank", :class => "project-link"} project
+          %a{:href => p[:livelink], :target => "_blank", :class => "project-link live-link"} view the project
         - if p[:github]
-          %a{:href => p[:github], :target => "_blank", :class => "project-link"}= [:blogtext]
+          %a{:href => p[:github], :target => "_blank", :class => "project-link github-link"} view on Github
         - if p[:bloglink]
-          %a{:href => p[:bloglink], :target => "_blank", :class => "project-link"}= [:blogtext]
+          %a{:href => p[:bloglink], :target => "_blank", :class => "project-link project-link"}= p[:blogtext]
