@@ -54,10 +54,9 @@ function() {
 });
 
 require([
-  "modernizr",
   "shared/random-colors"
   //"shared/footer" // Not showing map on all pages right now
-], function(modernizr, randomColors) {
+], function(randomColors) {
   "use strict";
 
   randomColors.init();
