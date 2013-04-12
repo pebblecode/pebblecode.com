@@ -32,11 +32,25 @@ module.exports = function (grunt) {
           name: "main",
           baseUrl: "public/javascripts",
           mainConfigFile: "public/javascripts/main.js",
-          out: "public/build/javascripts/main.js",
+
+          // Output directory
+          dir: 'public/build/javascripts',
 
           // For debugging
           optimize: "none"
-        }
+        },
+        modules: [
+          {
+            name: "main",
+            include: ["main"]
+          },
+          // Needed?
+          {
+            name: "app/people",
+            include: ["app/people"]
+          }
+          // TODO: Add the rest?
+        ]
       }
     }
   });
