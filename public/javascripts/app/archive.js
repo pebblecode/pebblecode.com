@@ -2,7 +2,7 @@
 /*
  * Archive page javascript
  */
-require([
+define([
   "jquery"
 ], function($) {
   "use strict";

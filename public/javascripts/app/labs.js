@@ -1,4 +1,4 @@
-require([
+define([
   "jquery",
   "jquery.isotope",
   "jquery.isotope.center"

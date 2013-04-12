@@ -1,4 +1,4 @@
-require([
+define([
   "jquery",
   "jquery.validator"
 ], function($, jValidator) {

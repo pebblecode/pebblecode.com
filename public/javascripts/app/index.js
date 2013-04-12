@@ -1,5 +1,5 @@
 /*jshint multistr:true*/
-require([
+define([
   "jquery",
   "underscore",
   "jquery.slides"
