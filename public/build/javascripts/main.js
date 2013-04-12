@@ -111,7 +111,6 @@ require.config({
       exports: "jQuery.fn.qtip"
     }
   },
-  baseUrl: "/javascripts",
   paths: {
     shared: "app/shared",
 
