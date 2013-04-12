@@ -32,7 +32,7 @@ module.exports = function (grunt) {
           name: "main",
           baseUrl: "public/javascripts",
           mainConfigFile: "public/javascripts/main.js",
-          out: "build/javascripts/main.js",
+          out: "public/build/javascripts/main.js",
 
           // For debugging
           optimize: "none"
