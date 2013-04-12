@@ -24,12 +24,29 @@ module.exports = function (grunt) {
         files: ['<%= jshint.js.src %>'],
         tasks: ['jshint']
       }
+    },
+
+    requirejs: {
+      compile: {
+        options: {
+          name: "main",
+          baseUrl: "public/javascripts",
+          mainConfigFile: "public/javascripts/main.js",
+          out: "build/javascripts/main.js",
+
+          // For debugging
+          optimize: "none"
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   grunt.registerTask('default', ['watch']);
 
+  // Generate production javascript
+  grunt.registerTask('production', ['jshint', 'requirejs']);
 };
