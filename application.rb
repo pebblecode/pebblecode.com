@@ -40,16 +40,16 @@ get '/stylesheets/screen.css' do
 end
 
 get '/' do
-  protected! if settings.environment == "staging"
+  protected! if is_staging?
 
   @page_name = "homepage"
   haml :index, :layout => :'layouts/application'
 end
 
 get '/blog' do
-  protected! if settings.environment == "staging"
+  protected! if is_staging?
 
-  if settings.environment == "development"
+  if is_development?
     # Tumblr blog styles
     erb :blog
   else
@@ -103,7 +103,7 @@ end
 ############################################################
 
 def render_page(page_name)
-  protected! if settings.environment == "staging" && settings.disable_http_password == false
+  protected! if is_staging? && settings.disable_http_password == false
 
   @people = Person.all.shuffle # Shuffle every time it reloads
   @page_name = page_name
