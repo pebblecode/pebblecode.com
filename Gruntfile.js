@@ -63,10 +63,7 @@ module.exports = function (grunt) {
               name: "app/people",
               exclude: ["main"]
             }
-          ],
-
-          // For debugging
-          optimize: "none"
+          ]
         }
       }
     }
