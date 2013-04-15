@@ -25,6 +25,10 @@ require.config({
     "jquery.qtip": {
       deps: ["jquery"],
       exports: "jQuery.fn.qtip"
+    },
+    "jquery.validation": {
+      deps: ["jquery"],
+      exports: "jQuery.fn.validator"
     }
   },
   paths: {
@@ -41,7 +45,8 @@ require.config({
     "jquery.isotope": "vendor/isotope",
     "jquery.isotope.center": "vendor/isotope.center",
     "jquery.scrollTo": "vendor/jquery.scrollTo",
-    "jquery.slides": "vendor/jquery.slides"
+    "jquery.slides": "vendor/jquery.slides",
+    "jquery.validation": "vendor/jquery.validation"
   }
 });
 

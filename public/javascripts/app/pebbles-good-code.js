@@ -1,6 +1,6 @@
 define([
   "jquery",
-  "jquery.validator"
+  "jquery.validation"
 ], function($, jValidator) {
   "use strict";
 
