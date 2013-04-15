@@ -1,13 +1,7 @@
 /**
  * Custom google map styles
  */
-window._mapsLoaded = $.Deferred();
-window.gmapsLoaded = function(data) {
-  delete window.gmapsLoaded;
-  _mapsLoaded.resolve();
-};
-
-define(["http://maps.google.com/maps/api/js?v=3&sensor=false&callback=gmapsLoaded"], function() {
+define(["gmapsDone"], function(gmapsDone) {
   "use strict";
 
   function load() {
@@ -221,5 +215,5 @@ define(["http://maps.google.com/maps/api/js?v=3&sensor=false&callback=gmapsLoade
     });
   }
 
-  _mapsLoaded.done(load);
+  gmapsDone(load);
 });

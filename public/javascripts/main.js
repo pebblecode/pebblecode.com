@@ -40,7 +40,7 @@ require.config({
     backbone: "vendor/backbone",
 
     urlHandler: "app/lib/url-handler",
-    gmaps: "app/lib/gmaps",
+    gmapsDone: "app/lib/gmapsDone",
 
     "jquery.isotope": "vendor/isotope",
     "jquery.isotope.center": "vendor/isotope.center",
