@@ -1,6 +1,0 @@
-define([
-  "urlHandler"
-], function(urlHandler) {
-  
-
-});
