@@ -36,21 +36,13 @@ require.config({
     backbone: "vendor/backbone",
 
     urlHandler: "app/lib/url-handler",
+    gmaps: "app/lib/gmaps",
 
     "jquery.isotope": "vendor/isotope",
     "jquery.isotope.center": "vendor/isotope.center",
     "jquery.scrollTo": "vendor/jquery.scrollTo",
     "jquery.slides": "vendor/jquery.slides"
   }
-});
-
-// convert Google Maps into an AMD module
-define('gmaps', ['async!http://maps.google.com/maps/api/js?v=3&sensor=false'],
-function() {
-  "use strict";
-
-  // return the gmaps namespace for brevity
-  return window.google.maps;
 });
 
 require([
