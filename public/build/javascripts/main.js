@@ -109,6 +109,10 @@ require.config({
     "jquery.qtip": {
       deps: ["jquery"],
       exports: "jQuery.fn.qtip"
+    },
+    "jquery.validation": {
+      deps: ["jquery"],
+      exports: "jQuery.fn.validator"
     }
   },
   paths: {
@@ -120,21 +124,14 @@ require.config({
     backbone: "vendor/backbone",
 
     urlHandler: "app/lib/url-handler",
+    gmaps: "app/lib/gmaps",
 
     "jquery.isotope": "vendor/isotope",
     "jquery.isotope.center": "vendor/isotope.center",
     "jquery.scrollTo": "vendor/jquery.scrollTo",
-    "jquery.slides": "vendor/jquery.slides"
+    "jquery.slides": "vendor/jquery.slides",
+    "jquery.validation": "vendor/jquery.validation"
   }
-});
-
-// convert Google Maps into an AMD module
-define('gmaps', ['async!http://maps.google.com/maps/api/js?v=3&sensor=false'],
-function() {
-  
-
-  // return the gmaps namespace for brevity
-  return window.google.maps;
 });
 
 require([

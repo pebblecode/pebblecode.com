@@ -40,10 +40,29 @@ module.exports = function (grunt) {
               name: "main"
             },
             {
+              name: "app/archive",
+              exclude: ["main"]
+            },
+            {
+              name: "app/find-us",
+              exclude: ["main"]
+            },
+            {
+              name: "app/index",
+              exclude: ["main"]
+            },
+            {
+              name: "app/labs",
+              exclude: ["main"]
+            },
+            {
+              name: "app/pebbles-good-code",
+              exclude: ["main"]
+            },
+            {
               name: "app/people",
               exclude: ["main"]
             }
-            // TODO: Add the rest?
           ],
 
           // For debugging

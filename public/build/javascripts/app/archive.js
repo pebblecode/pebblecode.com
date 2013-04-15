@@ -1,8 +1,9 @@
+
 /*jshint multistr:true*/
 /*
  * Archive page javascript
  */
-define([
+define('app/archive',[
   "jquery"
 ], function($) {
   
