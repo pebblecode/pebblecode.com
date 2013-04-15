@@ -29,28 +29,26 @@ module.exports = function (grunt) {
     requirejs: {
       compile: {
         options: {
-          name: "main",
           baseUrl: "public/javascripts",
           mainConfigFile: "public/javascripts/main.js",
 
           // Output directory
           dir: 'public/build/javascripts',
 
+          modules: [
+            {
+              name: "main"
+            },
+            {
+              name: "app/people",
+              exclude: ["main"]
+            }
+            // TODO: Add the rest?
+          ],
+
           // For debugging
           optimize: "none"
-        },
-        modules: [
-          {
-            name: "main",
-            include: ["main"]
-          },
-          // Needed?
-          {
-            name: "app/people",
-            include: ["app/people"]
-          }
-          // TODO: Add the rest?
-        ]
+        }
       }
     }
   });

@@ -69,3 +69,11 @@ vendor/jquery.js
 vendor/underscore.js
 app/shared/random-colors.js
 main.js
+
+app/people.js
+----------------
+vendor/jquery.scrollTo.js
+vendor/backbone.js
+vendor/underscore.string.js
+app/lib/url-handler.js
+app/people.js
