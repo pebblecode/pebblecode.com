@@ -1,6 +1,9 @@
 - content_for :script_js do
   %script{ :type => "text/javascript" }
-    require(["app/labs"]);
+    :plain
+      require(["main"], function() {
+        require(["app/labs"]);
+      });
 - content_for :title do
   Our playground - projects from 10% time, hack-days, and all our other code-adventures | pebble code
 - content_for :description do
