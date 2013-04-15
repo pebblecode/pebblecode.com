@@ -74,9 +74,10 @@
       #map
 
     - unless (defined? DO_NOT_LOAD_SCRIPTS) && DO_NOT_LOAD_SCRIPTS
-      / TODO: Work this out
-      / %script{:"data-main" => "/javascripts/main", :src => "/javascripts/vendor/require.js"}
-      %script{:"data-main" => "/build/javascripts/main", :src => "/javascripts/vendor/require.js"}
+      - if is_development?
+        %script{:"data-main" => "/javascripts/main", :src => "/javascripts/vendor/require.js"}
+      - else
+        %script{:"data-main" => "/build/javascripts/main", :src => "/build/javascripts/vendor/require.js"}
     = yield_content :script_js
 
     :plain
