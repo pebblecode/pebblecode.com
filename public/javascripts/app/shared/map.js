@@ -1,11 +1,17 @@
 /**
  * Custom google map styles
  */
-define(['gmaps'], function(gmaps) {
+window._mapsLoaded = $.Deferred();
+window.gmapsLoaded = function(data) {
+  delete window.gmapsLoaded;
+  _mapsLoaded.resolve();
+};
+
+define(["http://maps.google.com/maps/api/js?v=3&sensor=false&callback=gmapsLoaded"], function() {
   "use strict";
 
   function load() {
-
+    var gmaps = window.google.maps;
     var styles = [
       {
         featureType: 'water',
@@ -215,5 +221,5 @@ define(['gmaps'], function(gmaps) {
     });
   }
 
-  load();
+  _mapsLoaded.done(load);
 });
