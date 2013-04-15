@@ -6,7 +6,10 @@
   pebble, pebble code, software, app, web app, design, development, beautiful, agile, software, simple, London, technical, Vistazo, Tricklr
 - content_for :script_js do
   %script{ :type => "text/javascript" }
-    require(["app/pebbles-good-code"]);
+    :plain
+      require(["main"], function() {
+        require(["app/pebbles-good-code"]);
+      });
 
 %section.row
   .columns12
