@@ -1,11 +1,11 @@
 /**
  * Custom google map styles
  */
-define(['gmaps'], function(gmaps) {
+define(["gmapsDone"], function(gmapsDone) {
   
 
   function load() {
-
+    var gmaps = window.google.maps;
     var styles = [
       {
         featureType: 'water',
@@ -215,5 +215,5 @@ define(['gmaps'], function(gmaps) {
     });
   }
 
-  load();
+  gmapsDone(load);
 });

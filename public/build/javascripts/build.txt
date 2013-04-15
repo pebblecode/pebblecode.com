@@ -76,7 +76,7 @@ app/archive.js
 
 app/find-us.js
 ----------------
-app/lib/gmaps.js
+app/lib/gmapsDone.js
 app/shared/map.js
 app/find-us.js
 

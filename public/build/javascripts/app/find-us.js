@@ -1,43 +1,45 @@
 
-/*jshint -W058, evil:true */
+/*global $:false, window:false */
 
-// Google maps code converted to an AMD module
-// From http://maps.google.com/maps/api/js?v=3&sensor=false
-define('gmaps',[],function() {
+/**
+ * Load google maps asynchonously and return a function
+ * to wrap around a callback function for when google
+ * maps finishes loading.
+ *
+ * Note: need to load jQuery 1.5+ before this module
+ * is loaded.
+ *
+ * Usage:
+ *
+ *     define(["gmapsDone"], function(gmapsDone) {
+ *       function load() {
+ *         // Do something
+ *       }
+ *       gmapsDone(load);
+ *     });
+ *
+ * @return {Function} function to wrap a callback
+ * function for when google maps finishes loading
+ */
+window._mapsLoaded = $.Deferred();
+window.gmapsLoaded = function() {
+  delete window.gmapsLoaded;
+  _mapsLoaded.resolve();
+};
+
+define('gmapsDone',["http://maps.google.com/maps/api/js?v=3&sensor=false&callback=gmapsLoaded"], function(gmaps) {
   
 
-  window.google = window.google || {};
-  google.maps = google.maps || {};
-  (function() {
-
-    function getScript(src) {
-      document.write('<' + 'script src="' + src + '"' +
-                     ' type="text/javascript"><' + '/script>');
-    }
-
-    var modules = google.maps.modules = {};
-    google.maps.__gjsload__ = function(name, text) {
-      modules[name] = text;
-    };
-
-    google.maps.Load = function(apiLoad) {
-      delete google.maps.Load;
-      apiLoad([0.009999999776482582,[[["http://mt0.googleapis.com/vt?lyrs=m@212000000\u0026src=api\u0026hl=en-US\u0026","http://mt1.googleapis.com/vt?lyrs=m@212000000\u0026src=api\u0026hl=en-US\u0026"],null,null,null,null,"m@212000000"],[["http://khm0.googleapis.com/kh?v=127\u0026hl=en-US\u0026","http://khm1.googleapis.com/kh?v=127\u0026hl=en-US\u0026"],null,null,null,1,"127"],[["http://mt0.googleapis.com/vt?lyrs=h@212000000\u0026src=api\u0026hl=en-US\u0026","http://mt1.googleapis.com/vt?lyrs=h@212000000\u0026src=api\u0026hl=en-US\u0026"],null,null,"imgtp=png32\u0026",null,"h@212000000"],[["http://mt0.googleapis.com/vt?lyrs=t@130,r@212000000\u0026src=api\u0026hl=en-US\u0026","http://mt1.googleapis.com/vt?lyrs=t@130,r@212000000\u0026src=api\u0026hl=en-US\u0026"],null,null,null,null,"t@130,r@212000000"],null,null,[["http://cbk0.googleapis.com/cbk?","http://cbk1.googleapis.com/cbk?"]],[["http://khm0.googleapis.com/kh?v=74\u0026hl=en-US\u0026","http://khm1.googleapis.com/kh?v=74\u0026hl=en-US\u0026"],null,null,null,null,"74"],[["http://mt0.googleapis.com/mapslt?hl=en-US\u0026","http://mt1.googleapis.com/mapslt?hl=en-US\u0026"]],[["http://mt0.googleapis.com/mapslt/ft?hl=en-US\u0026","http://mt1.googleapis.com/mapslt/ft?hl=en-US\u0026"]],[["http://mt0.googleapis.com/vt?hl=en-US\u0026","http://mt1.googleapis.com/vt?hl=en-US\u0026"]],[["http://mt0.googleapis.com/mapslt/loom?hl=en-US\u0026","http://mt1.googleapis.com/mapslt/loom?hl=en-US\u0026"]],[["https://mts0.googleapis.com/mapslt?hl=en-US\u0026","https://mts1.googleapis.com/mapslt?hl=en-US\u0026"]],[["https://mts0.googleapis.com/mapslt/ft?hl=en-US\u0026","https://mts1.googleapis.com/mapslt/ft?hl=en-US\u0026"]]],["en-US","US",null,0,null,null,"http://maps.gstatic.com/mapfiles/","http://csi.gstatic.com","https://maps.googleapis.com","http://maps.googleapis.com"],["http://maps.gstatic.com/intl/en_us/mapfiles/api-3/11/16","3.11.16"],[1757846482],1.0,null,null,null,null,0,"",null,null,0,"http://khm.googleapis.com/mz?v=127\u0026",null,"https://earthbuilder.googleapis.com","https://earthbuilder.googleapis.com",null,"http://mt.googleapis.com/vt/icon"], loadScriptTime);
-    };
-    var loadScriptTime = (new Date).getTime();
-    getScript("http://maps.gstatic.com/intl/en_us/mapfiles/api-3/11/16/main.js");
-  })();
-
-  return window.google.maps;
+  return window._mapsLoaded.done;
 });
 /**
  * Custom google map styles
  */
-define('shared/map',['gmaps'], function(gmaps) {
+define('shared/map',["gmapsDone"], function(gmapsDone) {
   
 
   function load() {
-
+    var gmaps = window.google.maps;
     var styles = [
       {
         featureType: 'water',
@@ -247,7 +249,7 @@ define('shared/map',['gmaps'], function(gmaps) {
     });
   }
 
-  load();
+  gmapsDone(load);
 });
 define('app/find-us',[
   "shared/map"
