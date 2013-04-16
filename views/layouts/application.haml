@@ -74,7 +74,7 @@
       #map
 
     - unless (defined? DO_NOT_LOAD_SCRIPTS) && DO_NOT_LOAD_SCRIPTS
-      - if is_development?
+      - if load_dev_scripts?
         %script{:"data-main" => "/javascripts/main", :src => "/javascripts/vendor/require.js"}
       - else
         %script{:"data-main" => "/build/javascripts/main", :src => "/build/javascripts/vendor/require.js"}

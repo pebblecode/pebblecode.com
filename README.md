@@ -67,7 +67,6 @@ To create a new javascript page
            exclude: ["main"]
          }
 
-
 ### Minification
 
 To combine and minimize the javascript files for production run
@@ -75,6 +74,10 @@ To combine and minimize the javascript files for production run
     grunt build
 
 Commit the changes, and the layout file will automatically handle using the built files on non-development environments.
+
+To force the page to use the development js, add `?dev` to the url.
+
+To force the page to use the production js, add `?prod` to the url (this also overrides `?dev`).
 
 ## Tests
 
