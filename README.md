@@ -60,16 +60,16 @@ To create a new javascript page
                 require(["app/[js-file-name]"]);
               });
 
-3. Add the js file into `Gruntfile.js` under requirejs > compile > options > modules (for minification)
+3. Add the js file into `Gruntfile.js` under requirejs > compile > options > modules (for optimization)
 
          {
            name: "app/[js-file-name]",
            exclude: ["main"]
          }
 
-### Minification
+### Optimization
 
-To combine and minimize the javascript files for production run
+To optimization the javascript files for production run
 
     grunt build
 
