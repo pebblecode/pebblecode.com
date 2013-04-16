@@ -34,6 +34,14 @@ The files you'll be most concerned with are the view files (under /views) and th
 
 The view files are written in [haml][3] and the stylesheets are written in [scss][4].
 
+## Javascript
+
+To combine and minimize the javascript files for production run
+
+    grunt build
+
+Commit the changes, and the layout file will automatically handle using the built files on non-development environments.
+
 ## Tests
 
 Todo
