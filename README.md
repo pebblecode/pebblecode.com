@@ -36,6 +36,40 @@ The view files are written in [haml][3] and the stylesheets are written in [scss
 
 ## Javascript
 
+### Development
+
+To create a new javascript page
+
+1. Create a js file in `public/javascripts/app/[page-name].js` with the following structure
+
+        define([
+          // required modules
+        ], function() { // <-- parameters for the modules
+          "use strict";
+
+          // Code here
+
+        });
+
+2. Include the js file into the `views/[page-name].haml` files (note: no need for `.js` extension)
+
+        - content_for :script_js do
+          %script{ :type => "text/javascript" }
+            :plain
+              require(["main"], function() {
+                require(["app/[js-file-name]"]);
+              });
+
+3. Add the js file into `Gruntfile.js` under requirejs > compile > options > modules (for minification)
+
+         {
+           name: "app/[js-file-name]",
+           exclude: ["main"]
+         }
+
+
+### Minification
+
 To combine and minimize the javascript files for production run
 
     grunt build
