@@ -75,9 +75,9 @@ To optimization the javascript files for production run
 
 Commit the changes, and the layout file will automatically handle using the built files on non-development environments.
 
-To force the page to use the development js, add `?dev` to the url.
+To force the page to use the development js, add `dev` as a query parameter in the url eg, http://localhost:7770?dev
 
-To force the page to use the production js, add `?prod` to the url (this also overrides `?dev`).
+To force the page to use the production js, add `prod` as a query parameter in the url (this also overrides `dev`) eg, http://localhost:7770?prod
 
 ## Tests
 
