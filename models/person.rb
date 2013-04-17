@@ -167,13 +167,6 @@ class Person
       :github => "https://github.com/svnlto"
     },
     {
-      :name => "Karen Williams",
-      :title => "Software Developer",
-      :image => "/images/mug-shots/karen.png",
-      :description => "Karen has reinvented herself several times. Firstly a Casualty Nurse, then a Teaching Assistant, then a Maths Teacher. Karen started a Maths degree with The Open University but got sidetracked when she did a course in IT and discovered she could do JavaScript.<br><br> Realising that her love of logic puzzles could be satisfied by writing code, the Maths degree was dropped and changed to Computer Science. After 4 and a half years of juggling work, study and family, Karen achieved her Open University degree and found rewarding work as a developer - firstly Java, now C#.NET.<br><br> In her spare time, Karen has a passion for treading the boards and has recently been Charles Dickens' daughter, a Mexican terrified of chickens and a Scary Clown.",
-      :github => "https://github.com/KarenWilliams"
-    },
-    {
       :name => "John Mildinhall",
       :title => "User-Centered Design Specialist",
       :image => "/images/mug-shots/john.png",
