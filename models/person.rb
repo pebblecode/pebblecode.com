@@ -6,9 +6,10 @@ class Person
       :name => "Toby Hunt",
       :title => "CEO",
       :image => "/images/mug-shots/toby-2.png",
-      :description => "Toby studied computer science at university, did a spell in the corporate world, then co-founded [pebble.it](http://pebbleit.com/) in 2006 and [pebble {code}](http://pebblecode.com/) in 2010. He loves travel, funk music and a healthy lifestyle (at least most of the time).",
+      :description => "Toby is passionate about ideas and making them happen. He believes that environment is paramount to happiness and together with the rest of the team, has strived to make pebble {code} an inspiring place to work. After studying computer science at university, Toby did a spell in the corporate world doing business systems analysis for M&S, then co-founded pebble.it in 2006 and pebble {code} in 2010. He loves people, travel and fun.",
       :website => "http://thatsinthebook.com",
       :twitter => "http://twitter.com/tobyhunt",
+      :linkedin => "http://www.linkedin.com/in/tobyhunt",
       :tumblr_name => "thatsinthebook"
 
     },
@@ -165,13 +166,6 @@ class Person
       :website => "http://svenlito.com/",
       :twitter => "https://twitter.com/svenlito",
       :github => "https://github.com/svnlto"
-    },
-    {
-      :name => "Karen Williams",
-      :title => "Software Developer",
-      :image => "/images/mug-shots/karen.png",
-      :description => "Karen has reinvented herself several times. Firstly a Casualty Nurse, then a Teaching Assistant, then a Maths Teacher. Karen started a Maths degree with The Open University but got sidetracked when she did a course in IT and discovered she could do JavaScript.<br><br> Realising that her love of logic puzzles could be satisfied by writing code, the Maths degree was dropped and changed to Computer Science. After 4 and a half years of juggling work, study and family, Karen achieved her Open University degree and found rewarding work as a developer - firstly Java, now C#.NET.<br><br> In her spare time, Karen has a passion for treading the boards and has recently been Charles Dickens' daughter, a Mexican terrified of chickens and a Scary Clown.",
-      :github => "https://github.com/KarenWilliams"
     },
     {
       :name => "John Mildinhall",

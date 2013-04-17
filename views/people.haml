@@ -6,14 +6,14 @@
         require(["app/people"]);
       });
 - content_for :title do
-  Our people - a small development team doing big things | pebble code
+  Our People - a small development team doing big things | pebble {code}
 - content_for :description do
   Our expert software development team is multi-skilled, creative and ready for any challenge. .NET, C#, F#, Node.js, Ruby on Rails, JavaScript and more.
 - content_for :keywords do
   people, team, skills, skilled, creative, .NET, C#, F#, Node.js, Ruby on Rails, JavaScript, project, development, expertise, personalities, ideas
 
 .row.headline
-  %h1.size3 Our people
+  %h1.size3 Our People
 %section.row.people-copy
   .columns3
     %p
@@ -40,7 +40,7 @@
               / Height is same as .img height
               %img{:src => p[:image]}/
           %article
-            %h2.size2 In the spotlight
+            %h2.size2 In the spotlight:
             %h2.size2.name= p[:name]
             %h3.size1= p[:title]
             %p= RDiscount.new(p[:description]).to_html
@@ -50,6 +50,8 @@
               %a{:href => p[:twitter], :target => "_blank", :class => "person-link frame twitter"} Twitter
             - if p[:github]
               %a{:href => p[:github], :target => "_blank", :class => "person-link frame github"} Github
+            - if p[:linkedin]
+              %a{:href => p[:linkedin], :target => "_blank", :class => "person-link frame linkedin"} linkedin
 
     %ul.row.people-list.columns4
       - @people.each do |p|
