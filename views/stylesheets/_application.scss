@@ -140,7 +140,7 @@ a{
   height: auto !important;
 }
 #wrap #wrap-footer{
-  height: 180px;
+  height: 80px;
 }
 .row{
   width: 100%;
@@ -289,12 +289,6 @@ footer{
     #contact{
       margin: 16px 0 16px 12px;
       float: left;
-
-      .address{
-        a{
-          margin-left: 14px;
-        }
-      }
 
       li.size0{
         color: hsl(0, 0%, 70%);
