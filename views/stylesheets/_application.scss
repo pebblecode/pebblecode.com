@@ -634,8 +634,25 @@ footer #map{
   }
 }
 
-.project-links a{
-  margin-right: 1em;
+.project-link{
+  margin-right: .5em;
+
+  &:after{
+    font-family: 'pc_social';
+    margin-left: .5em;
+  }
+
+  &.live-link:after{
+    content: "W";
+  }
+
+  &.blog-link:after{
+    content: "B";
+  }
+
+  &.github-link:after{
+    content: "G";
+  }
 }
 
 .labs-header{
@@ -871,7 +888,7 @@ footer #map{
   }
 
   &.website:after{
-    content: "W";
+    content: "P";
   }
 
   &.twitter:after{
