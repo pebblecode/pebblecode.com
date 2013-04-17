@@ -50,6 +50,8 @@
               %a{:href => p[:twitter], :target => "_blank", :class => "person-link frame twitter"} Twitter
             - if p[:github]
               %a{:href => p[:github], :target => "_blank", :class => "person-link frame github"} Github
+            - if p[:linkedin]
+              %a{:href => p[:linkedin], :target => "_blank", :class => "person-link frame linkedin"} linkedin
 
     %ul.row.people-list.columns4
       - @people.each do |p|

@@ -885,6 +885,10 @@ footer #map{
   &.github:after{
     content: "G";
   }
+
+  &.linkedin:after{
+    content: "L";
+  }
 }
 
 
