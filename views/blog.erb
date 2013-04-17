@@ -175,7 +175,18 @@ end
     </div>
   </footer>
 
-  <script type="text/javascript" data-main="/javascripts/tumblr" src="/javascripts/vendor/require.js"></script>
+
+  <!-- //////////////////////////////////////////////// -->
+  <!-- NOTE: Different to tumblr blog -->
+  <% if load_dev_scripts? %>
+    <script type="text/javascript" data-main="/javascripts/tumblr" src="/javascripts/vendor/require.js"></script>
+  <% else %>
+    <script type="text/javascript" data-main="/build/javascripts/tumblr" src="/build/javascripts/vendor/require.js"></script>
+  <% end %>
+
+  <!-- //////////////////////////////////////////////// -->
+
+
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
