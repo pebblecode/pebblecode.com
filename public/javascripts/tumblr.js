@@ -1,9 +1,6 @@
 /**
  * Tumblr specific javascript
  */
-function isLocalhost() {
-  return (location.hostname === "localhost");
-}
 
 require.config({
   shim: {
@@ -39,6 +36,10 @@ require([
   "underscore.string"
 ], function($, hljs, randomColors, _s) {
   "use strict";
+
+  function isLocalhost() {
+    return (location.hostname === "localhost");
+  }
 
   /*
    * Author name replacement - needed because tumblr doesn't have full names
