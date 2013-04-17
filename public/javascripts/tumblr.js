@@ -17,9 +17,6 @@ require.config({
       exports: "_s",
       deps: ["underscore"]
     },
-    modernizr: {
-      exports: "Modernizr"
-    },
     highlight: {
       exports: "hljs"
     }
@@ -30,7 +27,6 @@ require.config({
     jquery: "vendor/jquery",
     underscore: "vendor/underscore",
     "underscore.string": "vendor/underscore.string",
-    modernizr: "vendor/modernizr",
 
     highlight: "vendor/highlight/highlight.pack"
   }
@@ -38,11 +34,10 @@ require.config({
 
 require([
   "jquery",
-  "modernizr",
   "highlight",
   "shared/random-colors",
   "underscore.string"
-], function($, modernizr, hljs, randomColors, _s) {
+], function($, hljs, randomColors, _s) {
   "use strict";
 
   /*
