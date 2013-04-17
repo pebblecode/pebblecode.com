@@ -65,6 +65,7 @@ vendor/highlight/styles/zenburn.css
 
 main.js
 ----------------
+vendor/almond.js
 vendor/jquery.js
 vendor/underscore.js
 app/shared/random-colors.js

@@ -34,10 +34,11 @@ module.exports = function (grunt) {
 
           // Output directory
           dir: 'public/build/javascripts',
-
+          optimize: "none",
           modules: [
             {
-              name: "main"
+              name: "main",
+              include: ["vendor/almond"]
             },
             {
               name: "app/archive",

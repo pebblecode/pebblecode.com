@@ -1,1 +1,55 @@
-hljs.LANGUAGES.smalltalk=function(){var e="[a-z][a-zA-Z0-9_]*",t={className:"char",begin:"\\$.{1}"},n={className:"symbol",begin:"#"+hljs.UNDERSCORE_IDENT_RE};return{defaultMode:{keywords:{self:1,"super":1,nil:1,"true":1,"false":1,thisContext:1},contains:[{className:"comment",begin:'"',end:'"',relevance:0},hljs.APOS_STRING_MODE,{className:"class",begin:"\\b[A-Z][A-Za-z0-9_]*",relevance:0},{className:"method",begin:e+":"},hljs.C_NUMBER_MODE,n,t,{className:"localvars",begin:"\\|\\s*(("+e+")\\s*)+\\|"},{className:"array",begin:"\\#\\(",end:"\\)",contains:[hljs.APOS_STRING_MODE,t,hljs.C_NUMBER_MODE,n]}]}}}();
+/*
+Language: Smalltalk
+Author: Vladimir Gubarkov <xonixx@gmail.com>
+*/
+
+hljs.LANGUAGES.smalltalk = function() {
+  var VAR_IDENT_RE = '[a-z][a-zA-Z0-9_]*';
+  var CHAR = {
+    className: 'char',
+    begin: '\\$.{1}'
+  };
+  var SYMBOL = {
+    className: 'symbol',
+    begin: '#' + hljs.UNDERSCORE_IDENT_RE
+  };
+  return {
+    defaultMode: {
+      keywords: {'self': 1, 'super': 1, 'nil': 1, 'true': 1, 'false': 1, 'thisContext': 1}, // only 6
+      contains: [
+        {
+          className: 'comment',
+          begin: '"', end: '"',
+          relevance: 0
+        },
+        hljs.APOS_STRING_MODE,
+        {
+          className: 'class',
+          begin: '\\b[A-Z][A-Za-z0-9_]*',
+          relevance: 0
+        },
+        {
+          className: 'method',
+          begin: VAR_IDENT_RE + ':'
+        },
+        hljs.C_NUMBER_MODE,
+        SYMBOL,
+        CHAR,
+        {
+          className: 'localvars',
+          begin: '\\|\\s*((' + VAR_IDENT_RE + ')\\s*)+\\|'
+        },
+        {
+          className: 'array',
+          begin: '\\#\\(', end: '\\)',
+          contains: [
+            hljs.APOS_STRING_MODE,
+            CHAR,
+            hljs.C_NUMBER_MODE,
+            SYMBOL
+          ]
+        }
+      ]
+    }
+  };
+}();

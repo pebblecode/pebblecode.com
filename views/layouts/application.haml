@@ -77,7 +77,7 @@
       - if load_dev_scripts?
         %script{:"data-main" => "/javascripts/main", :src => "/javascripts/vendor/require.js"}
       - else
-        %script{:"data-main" => "/build/javascripts/main", :src => "/build/javascripts/vendor/require.js"}
+        %script{:src => "/build/javascripts/main.js"}
     = yield_content :script_js
 
     :plain

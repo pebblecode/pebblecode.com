@@ -1,1 +1,41 @@
-(function(e,t,n){var r,i;e.uaMatch=function(e){e=e.toLowerCase();var t=/(chrome)[ \/]([\w.]+)/.exec(e)||/(opera)(?:.*version|)[ \/]([\w.]+)/.exec(e)||/(webkit)[ \/]([\w.]+)/.exec(e)||/(msie) ([\w.]+)/.exec(e)||e.indexOf("compatible")<0&&/(mozilla)(?:.*? rv:([\w.]+)|)/.exec(e)||[];return{browser:t[1]||"",version:t[2]||"0"}},r=e.uaMatch(t.navigator.userAgent),i={},r.browser&&(i[r.browser]=!0,i.version=r.version),i.chrome||i.opera&&parseFloat(i.version)>12.14?i.webkit=!0:i.webkit&&(i.safari=!0),e.browser=i})(jQuery,window);
+// jquery.browser.js
+// From https://gist.github.com/EaterOfCorpses/5081294
+(function( jQuery, window, undefined ) {
+
+
+var matched, browser;
+
+jQuery.uaMatch = function( ua ) {
+  ua = ua.toLowerCase();
+
+  var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+    /(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+    /(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+    /(msie) ([\w.]+)/.exec( ua ) ||
+    ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+    [];
+
+  return {
+    browser: match[ 1 ] || "",
+    version: match[ 2 ] || "0"
+  };
+};
+
+matched = jQuery.uaMatch( window.navigator.userAgent );
+browser = {};
+
+if ( matched.browser ) {
+  browser[ matched.browser ] = true;
+  browser.version = matched.version;
+}
+
+// Chrome and Safari > 12.14 is Webkit, but Webkit is also Safari.
+if ( browser.chrome || (browser.opera && parseFloat(browser.version) > 12.14 ) ) {
+  browser.webkit = true;
+} else if ( browser.webkit ) {
+  browser.safari = true;
+}
+
+jQuery.browser = browser;
+
+})( jQuery, window );

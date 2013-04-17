@@ -1,1 +1,63 @@
-define(["jquery","underscore"],function(e,t){function i(t,i){e(t).each(function(){i(this,r),r=o(n,r)})}function s(e){var t=Math.floor(Math.random()*e.length);return e[t]}function o(e,n){return s(t.without(e,n))}function u(){i(".background-random",function(t,n){e(t).addClass(n+"-background")}),i(".case-study",function(t,n){e("h2, h3",t).addClass(n),e("hr, .img",t).addClass(n+"-background")}),i(".blog-post",function(t,n){e("h2, h3, h4, a",t).addClass(n),e(".img, .comments a",t).addClass(n+"-background"),e(".blog-content",t).addClass(n+"-border")}),i(".person",function(t,n){e("h4",t).addClass(n),e(".img",t).addClass(n+"-background");var r=e(t).parent().prevAll().length,i=e("#spotlight .person-row")[r];e(i).find("h2, h3").addClass(n),e(i).find(".img").addClass(n+"-background")})}var n=["pink","green","blue","orange","aqua","purple"],r=n[0];return{init:u}});
+/*
+ * Show random colours on the website
+ *
+ * @return {Object} obj.init() initialises random colours
+ */
+define([
+  "jquery",
+  "underscore"
+], function($, _) {
+  
+
+  var COLORS = [ 'pink', 'green', 'blue', 'orange', 'aqua', 'purple' ];
+  var LAST_COLOR = COLORS[0];
+
+  // Find random colors, without having the same colors after another
+  function randColors(elem, funct) {
+    $(elem).each(function() {
+      funct(this, LAST_COLOR);
+      LAST_COLOR = randArrayItemExcept(COLORS, LAST_COLOR);
+    });
+  }
+
+  function randArrayItem(array) {
+    var randIndex = Math.floor(Math.random() * array.length);
+    return array[randIndex];
+  }
+
+  function randArrayItemExcept(array, exceptItem) {
+    return randArrayItem(_.without(array, exceptItem));
+  }
+
+  function init() {
+    randColors('.background-random', function(obj, randColor) {
+      $(obj).addClass(randColor + "-background");
+    });
+
+    randColors('.case-study', function(obj, randColor) {
+      $("h2, h3", obj).addClass(randColor);
+      $("hr, .img", obj).addClass(randColor + "-background");
+    });
+
+    randColors('.blog-post', function(obj, randColor) {
+      $("h2, h3, h4, a", obj).addClass(randColor);
+      $(".img, .comments a", obj).addClass(randColor + "-background");
+      $(".blog-content", obj).addClass(randColor + "-border");
+    });
+
+    randColors('.person', function(obj, randColor) {
+      $("h4",obj).addClass(randColor);
+      $(".img",obj).addClass(randColor + "-background");
+
+      // Color spotlight person row the same
+      var personIndex = $(obj).parent().prevAll().length;
+      var spotlightPerson = $("#spotlight .person-row")[personIndex];
+      $(spotlightPerson).find("h2, h3").addClass(randColor);
+      $(spotlightPerson).find(".img").addClass(randColor + "-background");
+    });
+  }
+
+  return {
+    init: init
+  };
+});

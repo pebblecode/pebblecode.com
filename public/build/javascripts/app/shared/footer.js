@@ -1,1 +1,19 @@
-require(["jquery","shared/map"],function(e){e("footer").hover(function(){e(this).css("height","500px"),e.scrollTo(e("footer"),"max")},function(){e(this).animate({height:"80px"},500)})});
+// Javascript for the footer
+require([
+  "jquery",
+  "shared/map"
+], function($) {
+  
+
+  // footer map stuff
+  $("footer").hover(
+    function () {
+      $(this).css("height", "500px");
+      $.scrollTo($('footer'), "max");
+    },
+    function () {
+      $(this).animate({height: "80px"}, 500 );
+    }
+  );
+
+});
