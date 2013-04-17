@@ -103,3 +103,12 @@ vendor/backbone.js
 vendor/underscore.string.js
 app/lib/url-handler.js
 app/people.js
+
+tumblr.js
+----------------
+vendor/jquery.js
+vendor/highlight/highlight.pack.js
+vendor/underscore.js
+app/shared/random-colors.js
+vendor/underscore.string.js
+tumblr.js

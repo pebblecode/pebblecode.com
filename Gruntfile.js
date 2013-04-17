@@ -62,6 +62,13 @@ module.exports = function (grunt) {
             {
               name: "app/people",
               exclude: ["main"]
+            },
+
+            // Note: require.config for tumblr needs to
+            // be defined in `main.js` as well for optimization
+            // to work.
+            {
+              name: "tumblr"
             }
           ]
         }

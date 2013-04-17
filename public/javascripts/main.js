@@ -29,6 +29,9 @@ require.config({
     "jquery.validation": {
       deps: ["jquery"],
       exports: "jQuery.fn.validator"
+    },
+    highlight: {
+      exports: "hljs"
     }
   },
   paths: {
@@ -46,7 +49,9 @@ require.config({
     "jquery.isotope.center": "vendor/isotope.center",
     "jquery.scrollTo": "vendor/jquery.scrollTo",
     "jquery.slides": "vendor/jquery.slides",
-    "jquery.validation": "vendor/jquery.validation"
+    "jquery.validation": "vendor/jquery.validation",
+
+    highlight: "vendor/highlight/highlight.pack"
   }
 });
 
