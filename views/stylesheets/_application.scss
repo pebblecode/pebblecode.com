@@ -470,8 +470,7 @@ footer #map{
 
   .row:first-child {
     margin-top: $baseline*2;
-    margin-bottom: $baseline*2;
-
+    margin-bottom: $baseline;
 
     h2{
       margin-top: $baseline;
@@ -483,6 +482,10 @@ footer #map{
     .columns6 {
       margin-left: 0;
     }
+  }
+
+  .row:nth-child(2){
+    margin-bottom: $baseline;
   }
 
   .case-study {
