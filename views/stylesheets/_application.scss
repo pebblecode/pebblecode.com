@@ -675,9 +675,43 @@ footer #map{
   background-color: $pink;
   background-size: 100% 700%;
   -webkit-animation: colors 30s linear infinite;
+  -moz-animation: colors 30s linear infinite;
+  -o-animation: colors 30s linear infinite;
 }
 
 @-webkit-keyframes colors {
+        0% {background-position-y: (100% / 6) * 6;}
+  15.6666% {background-position-y: (100% / 6) * 6;}
+  16.6666% {background-position-y: (100% / 6) * 5;}
+  32.3333% {background-position-y: (100% / 6) * 5;}
+  33.3333% {background-position-y: (100% / 6) * 4;}
+  49.0000% {background-position-y: (100% / 6) * 4;}
+  50.0000% {background-position-y: (100% / 6) * 3;}
+  65.6666% {background-position-y: (100% / 6) * 3;}
+  66.6666% {background-position-y: (100% / 6) * 2;}
+  82.3333% {background-position-y: (100% / 6) * 2;}
+  83.3333% {background-position-y: (100% / 6) * 1;}
+  99.0000% {background-position-y: (100% / 6) * 1;}
+      100% {background-position-y: (100% / 6) * 0;}
+}
+
+@-moz-keyframes colors {
+        0% {background-position-y: (100% / 6) * 6;}
+  15.6666% {background-position-y: (100% / 6) * 6;}
+  16.6666% {background-position-y: (100% / 6) * 5;}
+  32.3333% {background-position-y: (100% / 6) * 5;}
+  33.3333% {background-position-y: (100% / 6) * 4;}
+  49.0000% {background-position-y: (100% / 6) * 4;}
+  50.0000% {background-position-y: (100% / 6) * 3;}
+  65.6666% {background-position-y: (100% / 6) * 3;}
+  66.6666% {background-position-y: (100% / 6) * 2;}
+  82.3333% {background-position-y: (100% / 6) * 2;}
+  83.3333% {background-position-y: (100% / 6) * 1;}
+  99.0000% {background-position-y: (100% / 6) * 1;}
+      100% {background-position-y: (100% / 6) * 0;}
+}
+
+@-o-keyframes colors {
         0% {background-position-y: (100% / 6) * 6;}
   15.6666% {background-position-y: (100% / 6) * 6;}
   16.6666% {background-position-y: (100% / 6) * 5;}
