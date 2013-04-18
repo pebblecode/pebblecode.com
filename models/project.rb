@@ -54,7 +54,7 @@ class Project
       :live_link => "http://pebblecode.github.com/wtf/",
       :github => "https://github.com/pebblecode/wtf/",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blog_text => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post"
     },
     {
       :title => "Keyboard Demon",
@@ -73,7 +73,7 @@ class Project
       :pebblers => "Joseph, Akash, Sava, and Toby",
       :type => "games",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blog_text => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post"
     },
     {
       :title => "Hangover hunt",
@@ -83,7 +83,7 @@ class Project
       :type => "games",
       :github => "https://github.com/pebblecode/hangover-hunt",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blog_text => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post"
     },
     {
       :title => "Campfire quiz",
@@ -92,7 +92,7 @@ class Project
       :pebblers => "Alex and James",
       :type => "games",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blog_text => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post"
     },
     {
       :title => "pebble custom reset",
@@ -103,7 +103,7 @@ class Project
       :live_link => "http://pebblecode.github.com/PCR/",
       :github => "https://github.com/pebblecode/PCR",
       :blog_link => "http://blog.pebblecode.com/post/29614270562/the-great-css-experiment",
-      :blog_text => "pebble custom reset blog post : blog post",
+      :blog_text => "pebble custom reset blog post : blog post"
     },
     {
       :title => "Olympic data vis",
