@@ -8,7 +8,7 @@ class Project
   # :github = url of the project on github
   # :live_link = link to a live demo of project (if it exsits)
   # :blog_link = url of blog post relating to project (if applicatble)
-  # :blogtext = text for blog link (if applicatble)
+  # :blog_text = text for blog link (if applicatble)
   # :image = an image for the project (if applicatble)
   @projects = [
     {
@@ -19,7 +19,7 @@ class Project
       :type => "product",
       :live_link => "http://tricklrapp.com/",
       :blog_link => "http://blog.pebblecode.com/post/15777853652/tricklr-1-0",
-      :blogtext => "Tricklr 1.0 : blog post",
+      :blog_text => "Tricklr 1.0 : blog post",
       :image => "/images/projects/tricklr.jpg"
     },
     {
@@ -31,7 +31,7 @@ class Project
       :github => "https://github.com/markdurrant/noisy-uris",
       :live_link => "http://markdurrant.github.com/noisy-uris/",
       :blog_link => "http://blog.pebblecode.com/post/43139609779/noisy-uris",
-      :blogtext => "Noisy URIs : blog post",
+      :blog_text => "Noisy URIs : blog post",
       :image => "/images/projects/noise.jpg"
     },
     {
@@ -42,7 +42,7 @@ class Project
       :type => "product",
       :live_link => "http://vistazoapp.com/",
       :blog_link => "http://blog.pebblecode.com/post/21434355185/vistazo-the-making-of-our-new-baby",
-      :blogtext => "The making of our new baby : blog post",
+      :blog_text => "The making of our new baby : blog post",
       :image => "/images/projects/vistazo.jpg"
     },
     {
@@ -54,7 +54,7 @@ class Project
       :live_link => "http://pebblecode.github.com/wtf/",
       :github => "https://github.com/pebblecode/wtf/",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blogtext => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post",
     },
     {
       :title => "Keyboard Demon",
@@ -63,7 +63,7 @@ class Project
       :pebblers => "Mark and Vince",
       :type => "games",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blogtext => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post",
       :image => "/images/projects/keyboard-demon.jpg"
     },
     {
@@ -73,7 +73,7 @@ class Project
       :pebblers => "Joseph, Akash, Sava, and Toby",
       :type => "games",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blogtext => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post",
     },
     {
       :title => "Hangover hunt",
@@ -83,7 +83,7 @@ class Project
       :type => "games",
       :github => "https://github.com/pebblecode/hangover-hunt",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blogtext => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post",
     },
     {
       :title => "Campfire quiz",
@@ -92,7 +92,7 @@ class Project
       :pebblers => "Alex and James",
       :type => "games",
       :blog_link => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
-      :blogtext => "part of the pebble games hackday : blog post",
+      :blog_text => "part of the pebble games hackday : blog post",
     },
     {
       :title => "pebble custom reset",
@@ -103,7 +103,7 @@ class Project
       :live_link => "http://pebblecode.github.com/PCR/",
       :github => "https://github.com/pebblecode/PCR",
       :blog_link => "http://blog.pebblecode.com/post/29614270562/the-great-css-experiment",
-      :blogtext => "pebble custom reset blog post : blog post",
+      :blog_text => "pebble custom reset blog post : blog post",
     },
     {
       :title => "Olympic data vis",
@@ -113,7 +113,7 @@ class Project
       :type => "olympic",
       :live_link => "http://pebblecode.com/olympic-data-vis",
       :blog_link => "http://blog.pebblecode.com/post/27976232997/olympics-hackery",
-      :blogtext => "Olympics hack day : blog post",
+      :blog_text => "Olympics hack day : blog post",
     },
     {
       :title => "Fear the IOC",
@@ -124,7 +124,7 @@ class Project
       :github => "https://github.com/pebblecode/fear-the-IOC/",
       :live_link => "http://pebblecode.github.com/fear-the-IOC/",
       :blog_link => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
-      :blogtext => "part of the pebble olympics hackday : blog post",
+      :blog_text => "part of the pebble olympics hackday : blog post",
       :image => "/images/projects/fear.jpg"
     }
   ]
