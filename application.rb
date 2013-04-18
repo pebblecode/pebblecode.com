@@ -105,8 +105,6 @@ end
 def render_page(page_name)
   protected! if is_staging? && settings.disable_http_password == false
 
-  @projects = Project.all
-
   @page_name = page_name
   haml "#{page_name}".to_sym, :layout => :'layouts/application'
 end
@@ -119,6 +117,11 @@ def render_people_page(person = nil)
   else
     redirect "/people"
   end
+end
+
+get '/labs' do
+  @projects = Project.all
+  render_page "labs"
 end
 
 get '/people' do
