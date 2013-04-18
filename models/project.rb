@@ -129,7 +129,13 @@ class Project
     }
   ]
 
-  # def has_live_link
+  def self.has_live_link?(project)
+    return @projects.select { |p| (p[:title] == project[:title]) && p[:live_link] }.length > 0
+  end
+
+  def self.has_blog_link?(project)
+    return @projects.select { |p| (p[:title] == project[:title]) && p[:blog_link] }.length > 0
+  end
 
   def self.all
     @projects
