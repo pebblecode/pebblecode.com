@@ -863,7 +863,7 @@ footer #map{
     }
 
     .person,
-    .join_us{
+    .join-us{
       display: block;
       margin-bottom: $baseline;
       min-height: 205px;
@@ -1708,7 +1708,7 @@ header{
 
   .employees {
     .person,
-    .join_us{
+    .join-us{
         width: 45%;
         float: left;
         margin-left: 0;
@@ -1722,7 +1722,7 @@ header{
     }
     li:nth-child(2n){
       .person,
-      .join_us{
+      .join-us{
         margin-right: 0;
       }
     }
@@ -1881,7 +1881,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   .page-people .employees{
 
     .person,
-    .join_us{
+    .join-us{
       width: 30%;
       margin-right: 5%;
     }
@@ -1900,7 +1900,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   .page-people .employees{
 
     .person,
-    .join_us{
+    .join-us{
       width: 47.5%;
       margin-right: 5%;
     }
