@@ -106,6 +106,8 @@ def render_page(page_name)
   protected! if is_staging? && settings.disable_http_password == false
 
   @people = Person.all.shuffle # Shuffle every time it reloads
+  @projects = Project.all
+
   @page_name = page_name
   haml "#{page_name}".to_sym, :layout => :'layouts/application'
 end
