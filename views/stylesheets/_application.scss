@@ -470,8 +470,7 @@ footer #map{
 
   .row:first-child {
     margin-top: $baseline*2;
-    margin-bottom: $baseline*2;
-
+    margin-bottom: $baseline;
 
     h2{
       margin-top: $baseline;
@@ -483,6 +482,10 @@ footer #map{
     .columns6 {
       margin-left: 0;
     }
+  }
+
+  .row:nth-child(2){
+    margin-bottom: $baseline;
   }
 
   .case-study {
@@ -634,8 +637,25 @@ footer #map{
   }
 }
 
-.project-links a{
-  margin-right: 1em;
+.project-link{
+  margin-right: .5em;
+
+  &:after{
+    font-family: 'pc_social';
+    margin-left: .5em;
+  }
+
+  &.live-link:after{
+    content: "W";
+  }
+
+  &.blog-link:after{
+    content: "B";
+  }
+
+  &.github-link:after{
+    content: "G";
+  }
 }
 
 .labs-header{
@@ -871,7 +891,7 @@ footer #map{
   }
 
   &.website:after{
-    content: "W";
+    content: "P";
   }
 
   &.twitter:after{
