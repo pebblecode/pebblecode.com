@@ -6,7 +6,7 @@ class Project
   # :date = month and year project was released (E.g. Febuary 2012)
   # :pebblers = who created the project
   # :github = url of the project on github
-  # :livelink = link to a live demo of project (if it exsits)
+  # :live_link = link to a live demo of project (if it exsits)
   # :bloglink = url of blog post relating to project (if applicatble)
   # :blogtext = text for blog link (if applicatble)
   # :image = an image for the project (if applicatble)
@@ -17,7 +17,7 @@ class Project
       :date => "Dec 2011",
       :pebblers => "George, Tak, and Mark",
       :type => "product",
-      :livelink => "http://tricklrapp.com/",
+      :live_link => "http://tricklrapp.com/",
       :bloglink => "http://blog.pebblecode.com/post/15777853652/tricklr-1-0",
       :blogtext => "Tricklr 1.0 : blog post",
       :image => "/images/projects/tricklr.jpg"
@@ -29,7 +29,7 @@ class Project
       :pebblers => "Mark",
       :type => "ten-time",
       :github => "https://github.com/markdurrant/noisy-uris",
-      :livelink => "http://markdurrant.github.com/noisy-uris/",
+      :live_link => "http://markdurrant.github.com/noisy-uris/",
       :bloglink => "http://blog.pebblecode.com/post/43139609779/noisy-uris",
       :blogtext => "Noisy URIs : blog post",
       :image => "/images/projects/noise.jpg"
@@ -40,7 +40,7 @@ class Project
       :date => "April 2012",
       :pebblers => "Tak and Mark",
       :type => "product",
-      :livelink => "http://vistazoapp.com/",
+      :live_link => "http://vistazoapp.com/",
       :bloglink => "http://blog.pebblecode.com/post/21434355185/vistazo-the-making-of-our-new-baby",
       :blogtext => "The making of our new baby : blog post",
       :image => "/images/projects/vistazo.jpg"
@@ -51,7 +51,7 @@ class Project
       :date => "October 2012",
       :type => "games",
       :pebblers => "Tak and Matt",
-      :livelink => "http://pebblecode.github.com/wtf/",
+      :live_link => "http://pebblecode.github.com/wtf/",
       :github => "https://github.com/pebblecode/wtf/",
       :bloglink => "http://blog.pebblecode.com/post/33705863399/games-hack-day",
       :blogtext => "part of the pebble games hackday : blog post",
@@ -100,7 +100,7 @@ class Project
       :description => "pebble custom reset uses Sass to compile a custom reset based on Eric Meyer's <a href='http://meyerweb.com/eric/tools/css/reset/'>CSS reset</a> with a few additions.",
       :pebblers => "Mark",
       :type => "ten-time",
-      :livelink => "http://pebblecode.github.com/PCR/",
+      :live_link => "http://pebblecode.github.com/PCR/",
       :github => "https://github.com/pebblecode/PCR",
       :bloglink => "http://blog.pebblecode.com/post/29614270562/the-great-css-experiment",
       :blogtext => "pebble custom reset blog post : blog post",
@@ -111,7 +111,7 @@ class Project
       :date => "July 2012",
       :pebblers => "Alex and Tak",
       :type => "olympic",
-      :livelink => "http://pebblecode.com/olympic-data-vis",
+      :live_link => "http://pebblecode.com/olympic-data-vis",
       :bloglink => "http://blog.pebblecode.com/post/27976232997/olympics-hackery",
       :blogtext => "Olympics hack day : blog post",
     },
@@ -122,12 +122,14 @@ class Project
       :pebblers => "Mark",
       :type => "olympic",
       :github => "https://github.com/pebblecode/fear-the-IOC/",
-      :livelink => "http://pebblecode.github.com/fear-the-IOC/",
+      :live_link => "http://pebblecode.github.com/fear-the-IOC/",
       :bloglink => "http://blog.pebblecode.com/post/21838814065/hack-day-live",
       :blogtext => "part of the pebble olympics hackday : blog post",
       :image => "/images/projects/fear.jpg"
     }
   ]
+
+  # def has_live_link
 
   def self.all
     @projects

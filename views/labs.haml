@@ -34,8 +34,8 @@
         %h3.project-title.size2= p[:title]
         %p.project-by= p[:pebblers]
         %p.project-description= p[:description]
-        - if p[:livelink]
-          %a{:href => p[:livelink], :target => "_blank", :class => "project-link live-link"} view the project
+        - if p[:live_link]
+          %a{:href => p[:live_link], :target => "_blank", :class => "project-link live-link"} view the project
         - if p[:github]
           %a{:href => p[:github], :target => "_blank", :class => "project-link github-link"} view on Github
         - if p[:bloglink]
