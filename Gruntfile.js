@@ -73,15 +73,32 @@ module.exports = function (grunt) {
           ]
         }
       }
+    },
+
+    ghost: {
+      dist: {
+        src: ['tests/*'],
+        options: {
+          direct: true,
+          logLevel: 'info',
+          failFast: true,
+          printCommand: true,
+          printFilePaths: true
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-ghost');
 
   grunt.registerTask('default', ['watch']);
 
   // Generate production javascript
   grunt.registerTask('build', ['jshint', 'requirejs']);
+
+  // Run tests
+  grunt.registerTask('test', ['jshint', 'ghost']);
 };
