@@ -50,20 +50,20 @@
               %a{:href => p[:github], :target => "_blank", :class => "person-link frame github"} Github
             - if p[:linkedin]
               %a{:href => p[:linkedin], :target => "_blank", :class => "person-link frame linkedin"} linkedin
-
-    %ul.row.people-list.columns4
-      - @people.each do |p|
+    %li.columns4
+      %ul.row.people-list
+        - @people.each do |p|
+          %li
+            %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
+              .img
+                / Height is same as .img height
+                %img{:src => p[:image], :height => 110}/
+              %h4= p[:name]
+              %p.size0= p[:title]
         %li
-          %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
-            .img
+          %a{:href => "jobs", :class => "columns1 frame join-us"}
+            .img.blue-background
               / Height is same as .img height
-              %img{:src => p[:image], :height => 110}/
-            %h4= p[:name]
-            %p.size0= p[:title]
-      %li
-        %a{:href => "jobs", :class => "columns1 frame join-us"}
-          .img.blue-background
-            / Height is same as .img height
-            %img{:src => "images/plus.png", :height => 110}
-          %h4 join the team
-          %p.size0 we're hiring!
+              %img{:src => "images/plus.png", :height => 110}
+            %h4 join the team
+            %p.size0 we're hiring!

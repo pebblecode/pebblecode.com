@@ -152,6 +152,7 @@ a{
 .row:before,.row:after {
   display: table;
   content: "";
+  clear: both;
 }
 .row:after {
   clear: both;
