@@ -81,7 +81,15 @@ To force the page to use the production js, add `prod` as a query parameter in t
 
 ## Tests
 
-Todo
+Uses [casperjs](http://casperjs.org/).
+
+Install casper
+
+    brew install casperjs
+
+Run tests
+
+    grunt test
 
 ## Deployment
 

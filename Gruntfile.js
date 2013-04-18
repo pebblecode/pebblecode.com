@@ -15,14 +15,21 @@ module.exports = function (grunt) {
         src: ['Gruntfile.js']
       },
       js: {
-        src: ['public/javascripts/app/**/*.js', 'public/javascripts/*.js', 'test/**/*.js']
+        src: ['public/javascripts/app/**/*.js', 'public/javascripts/*.js']
+      },
+      test: {
+        src: ['tests/**/*.js']
       }
     },
 
     watch: {
       scripts: {
-        files: ['<%= jshint.js.src %>'],
+        files: ['<%= jshint.js.src %>', '<%= jshint.test.src %>'],
         tasks: ['jshint']
+      },
+      tests: {
+        files: ['<%= jshint.js.src %>', '<%= jshint.test.src %>'],
+        tasks: ['ghost']
       }
     },
 
@@ -73,15 +80,33 @@ module.exports = function (grunt) {
           ]
         }
       }
+    },
+
+    ghost: {
+      dist: {
+        src: ['tests/pages/*'],
+        options: {
+          direct: true,
+          logLevel: 'info',
+          failFast: true,
+          printCommand: true,
+          printFilePaths: true,
+          pre: ['tests/helpers/pre.js']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-ghost');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['watch:scripts']);
 
   // Generate production javascript
   grunt.registerTask('build', ['jshint', 'requirejs']);
+
+  // Run tests
+  grunt.registerTask('test', ['watch:tests']);
 };
