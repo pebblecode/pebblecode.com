@@ -84,13 +84,14 @@ module.exports = function (grunt) {
 
     ghost: {
       dist: {
-        src: ['tests/*'],
+        src: ['tests/pages/*'],
         options: {
           direct: true,
           logLevel: 'info',
           failFast: true,
           printCommand: true,
-          printFilePaths: true
+          printFilePaths: true,
+          pre: ['tests/helpers/pre.js']
         }
       }
     }

@@ -1,8 +1,7 @@
 /*global casper:false */
-var url = 'http://localhost:7100/';
 
 casper.test.comment('Homepage');
-casper.start(url, function() {
+casper.start(paths.homepage, function() {
 
   this.test.assertExists("body.page-homepage");
 
