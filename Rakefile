@@ -11,9 +11,8 @@ task "server" do
   sh start_server_cmd
 end
 
-
-#####################################################################
 # Deployment
-#####################################################################
-
 import "lib/tasks/shipit.rake"
+
+# RSpec
+import "lib/tasks/rspec.rake"

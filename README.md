@@ -81,7 +81,11 @@ To force the page to use the production js, add `prod` as a query parameter in t
 
 ## Tests
 
-Todo
+Uses [rspec](http://rspec.info/).
+
+Run tests with
+
+    bundle exec rake spec
 
 ## Deployment
 
