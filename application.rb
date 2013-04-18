@@ -105,24 +105,32 @@ end
 def render_page(page_name)
   protected! if is_staging? && settings.disable_http_password == false
 
-  @people = Person.all.shuffle # Shuffle every time it reloads
   @projects = Project.all
 
   @page_name = page_name
   haml "#{page_name}".to_sym, :layout => :'layouts/application'
 end
 
-get '/:page' do
-  render_page(params['page'])
-end
-
-get '/people/:person' do
-  if Person.slug_exists? params['person']
-    @person_slug = params['person']
+def render_people_page(person = nil)
+  if (person == nil) || (Person.slug_exists? person)
+    @people = Person.all.shuffle # Shuffle every time it reloads
+    @person_slug = person
     render_page("people")
   else
     redirect "/people"
   end
+end
+
+get '/people' do
+  render_people_page
+end
+
+get '/people/:person' do
+  render_people_page params['person']
+end
+
+get '/:page' do
+  render_page(params['page'])
 end
 
 error do
