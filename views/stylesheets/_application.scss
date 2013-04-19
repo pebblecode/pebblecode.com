@@ -1721,12 +1721,12 @@ header{
         margin-bottom: -5px;
       }
     }
-    li:nth-child(2n){
-      .person,
-      .join-us{
-        margin-right: 0;
-      }
-    }
+    // li:nth-child(2n){
+    //   .person,
+    //   .join-us{
+    //     margin-right: 0;
+    //   }
+    // }
   }
 }
 
@@ -1903,19 +1903,19 @@ only screen and (min-device-pixel-ratio : 1.5) {
     .person,
     .join-us{
       width: 47.5%;
-      margin-right: 5%;
-    }
-
-    li:nth-child(4n) a{
-      margin-right: 5%;
+      margin-right: 0;
     }
 
     li:nth-child(3n) a{
-      margin-right: 5%;
+      margin-right: 0;
     }
 
-    li:nth-child(2n) a{
+    li:nth-child(4n) a{
       margin-right: 0;
+    }
+
+    li:nth-child(2n-1) a{
+      margin-right: 5%;
     }
   }
 }
