@@ -86,6 +86,10 @@ Uses [rspec](http://rspec.info/) for unit tests and [casperjs](http://casperjs.o
 
 ### RSpec
 
+Install tidy (for html validation)
+
+    brew install tidy
+
 Run tests with
 
     bundle exec rake spec

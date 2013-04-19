@@ -29,6 +29,7 @@ group :development, :test do
   # Testing
   gem 'rack-test'
   gem 'capybara'
+  gem 'html_acceptance'
 
   # Servers
   gem 'shotgun'
