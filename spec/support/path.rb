@@ -3,8 +3,9 @@ module PathSpecHelper
   def paths
     {
       :homepage => '/',
-      :labs => '/labs',
-      :people => '/people'
+      :people => '/people',
+      :work => '/work',
+      :labs => '/labs'
     }
   end
 end
