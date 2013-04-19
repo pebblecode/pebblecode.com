@@ -32,10 +32,12 @@ class HaveValidHTML
     last_line = e["lastLine"]
     last_column = e["lastColumn"]
 
-    if first_line
-      out += "line #{first_line}[#{first_column}], #{last_line}[#{last_column}] => "
-    else
-      out += "line #{last_line}[#{first_column}:#{last_column}] => "
+    if first_line || first_column || last_line || last_column
+      if first_line
+        out += "line #{first_line}[#{first_column}], #{last_line}[#{last_column}] => "
+      else
+        out += "line #{last_line}[#{first_column}:#{last_column}] => "
+      end
     end
 
     out += "#{e["message"]}\n"
