@@ -9,6 +9,7 @@ require 'ruby-debug'
 # require 'capybara/rspec'
 
 require 'support/path'
+require 'support/have_valid_html'
 
 # Include in all rspec tests
 RSpec.configure do |conf|
