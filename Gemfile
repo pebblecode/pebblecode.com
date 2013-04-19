@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rake'
 gem "sinatra"
 gem 'thin'
+gem 'json'
 
 # Helper libs
 gem 'sinatra-contrib'
@@ -29,6 +30,7 @@ group :development, :test do
   # Testing
   gem 'rack-test'
   gem 'capybara'
+  gem 'validator.nu'
 
   # Servers
   gem 'shotgun'

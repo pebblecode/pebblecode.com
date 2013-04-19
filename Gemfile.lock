@@ -32,6 +32,7 @@ GEM
       netrc (~> 0.7.1)
       rest-client (~> 1.6.1)
       rubyzip
+    json (1.7.7)
     launchy (2.1.0)
       addressable (~> 2.2.6)
     libwebsocket (0.1.5)
@@ -97,8 +98,12 @@ GEM
       rack (>= 1.0.0)
     thor (0.14.6)
     tilt (1.3.3)
+    validator.nu (0.0.6)
+      validator.nu
+      yajl-ruby (= 1.1.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -109,6 +114,7 @@ DEPENDENCIES
   foreman
   haml
   heroku
+  json
   newrelic_rpm
   rack-force_domain
   rack-test
@@ -121,3 +127,4 @@ DEPENDENCIES
   sinatra
   sinatra-contrib
   thin
+  validator.nu
