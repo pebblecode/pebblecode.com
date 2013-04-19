@@ -32,12 +32,12 @@
         - if p[:image]
           - if Project.has_live_link?(p)
             %a{:href => p[:live_link], :target => "_blank"}
-              %img{:src => p[:image], :height => "306"}
+              %img{:alt => p[:title], :src => p[:image], :height => "306"}
           - elsif Project.has_blog_link?(p)
             %a{:href => p[:blog_link], :target => "_blank"}
-              %img{:src => p[:image], :height => "306"}
+              %img{:alt => p[:title], :src => p[:image], :height => "306"}
           - else
-            %img{:src => p[:image], :height => "306"}
+            %img{:alt => p[:title], :src => p[:image], :height => "306"}
         %h3.project-title.size2
           - if Project.has_live_link?(p)
             %a{:href => p[:live_link], :target => "_blank"}
