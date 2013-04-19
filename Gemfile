@@ -22,7 +22,14 @@ gem "rack-force_domain"
 # New relic
 gem 'newrelic_rpm'
 
+# Testing
+gem 'rspec'
+
 group :development, :test do
+  # Testing
+  gem 'rack-test'
+  gem 'capybara'
+
   # Servers
   gem 'shotgun'
   gem 'foreman'

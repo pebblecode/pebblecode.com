@@ -113,7 +113,7 @@ class Project
       :type => "olympic",
       :live_link => "http://pebblecode.com/olympic-data-vis",
       :blog_link => "http://blog.pebblecode.com/post/27976232997/olympics-hackery",
-      :blog_text => "Olympics hack day : blog post",
+      :blog_text => "Olympics hack day : blog post"
     },
     {
       :title => "Fear the IOC",
