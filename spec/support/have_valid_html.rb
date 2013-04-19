@@ -3,6 +3,8 @@ require 'json'
 
 # RSpec validator for html, using http://validator.nu
 #
+# See [JSON output](http://wiki.whatwg.org/wiki/Validator.nu_JSON_Output) for details of what is returned
+#
 # Usage:
 #
 #     last_response.should have_valid_html
