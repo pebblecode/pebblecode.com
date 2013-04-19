@@ -1391,6 +1391,12 @@ textarea{
     }
     address {
       margin-bottom: $baseline;
+
+      p {
+        font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        color: hsl(0, 0%, 55%);
+        margin-bottom: 0;
+      }
     }
     .contact {
       a {
@@ -1562,14 +1568,14 @@ header{
     .row {
       margin-top: $baseline;
       margin-bottom: 0;
-      
+
       .columns3 {
         margin-bottom: $baseline;
       }
-      
+
       .frame {
         margin-bottom: $baseline*2;
-        
+
         .img {
           height: $baseline*4;
           padding-top: $baseline;

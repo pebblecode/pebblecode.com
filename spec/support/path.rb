@@ -5,7 +5,8 @@ module PathSpecHelper
       :homepage => '/',
       :people => '/people',
       :work => '/work',
-      :labs => '/labs'
+      :labs => '/labs',
+      :"find-us" => '/find-us'
     }
   end
 end
