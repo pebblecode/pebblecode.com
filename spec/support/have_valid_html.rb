@@ -22,9 +22,11 @@ class HaveValidHTML
   end
 
   def failure_message
-   out = "Invalid html\nErrors:\n"
+   out = "Invalid html\n\nErrors:\n\n"
 
    for e in @errors
+    out += "* "
+
     first_line = e["firstLine"]
     first_column = e["firstColumn"]
     last_line = e["lastLine"]
