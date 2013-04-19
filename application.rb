@@ -40,14 +40,14 @@ get '/stylesheets/screen.css' do
 end
 
 get '/' do
-  protected! if is_staging?
+  protected_unless_disabled!
 
   @page_name = "homepage"
   haml :index, :layout => :'layouts/application'
 end
 
 get '/blog' do
-  protected! if is_staging?
+  protected_unless_disabled!
 
   if is_development?
     # Tumblr blog styles
@@ -103,7 +103,7 @@ end
 ############################################################
 
 def render_page(page_name)
-  protected! if is_staging? && settings.disable_http_password == false
+  protected_unless_disabled!
 
   @page_name = page_name
   haml "#{page_name}".to_sym, :layout => :'layouts/application'
