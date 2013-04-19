@@ -25,7 +25,17 @@ class HaveValidHTML
    out = "Invalid html\nErrors:\n"
 
    for e in @errors
-    out += "l#{e["firstLine"]}:#{e["firstColumn"]} - l#{e["lastLine"]}:#{e["lastColumn"]} => "
+    first_line = e["firstLine"]
+    first_column = e["firstColumn"]
+    last_line = e["lastLine"]
+    last_column = e["lastColumn"]
+
+    if first_line
+      out += "line #{first_line}[#{first_column}], #{last_line}[#{last_column}] => "
+    else
+      out += "line #{last_line}[#{first_column}:#{last_column}] => "
+    end
+
     out += "#{e["message"]}\n"
     out += "#{e["extract"]}\n"
    end
