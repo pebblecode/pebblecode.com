@@ -1553,38 +1553,53 @@ header{
     }
   }
   .case-study {
-    //padding-top: $baseline;
     margin-bottom: 0;
     &:nth-child(4) {
       padding-top: 0;
       margin-bottom: -$baseline;
     }
+
     .row {
       margin-top: $baseline;
       margin-bottom: 0;
+      
       .columns3 {
         margin-bottom: $baseline;
       }
+      
       .frame {
         margin-bottom: $baseline*2;
+        
         .img {
           height: $baseline*4;
-          padding-top: $baseline*2;
-          &.clarity {
+          padding-top: $baseline;
+
+          h2{
+            margin-top: 0;
+          }
+
+          &.clarity{
             height: $baseline*5;
-            padding-top: $baseline*1;
+            padding: 10px 0;
+
+            h2{
+              line-height: 1.1;
+            }
           }
         }
       }
 
     }
   }
+
   hr:nth-child(even) {
     margin-top: $baseline;
   }
+
   .frame {
     margin-bottom: $baseline;
   }
+
   h3 {
     font-size: 16px;
     line-height: $baseline;
