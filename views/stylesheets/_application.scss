@@ -1551,12 +1551,9 @@ header{
     .columns3 {
       margin-top: -25px;
     }
-    p {
-      padding-top: $baseline +25px;
-    }
   }
   .case-study {
-    padding-top: $baseline;
+    //padding-top: $baseline;
     margin-bottom: 0;
     &:nth-child(4) {
       padding-top: 0;
@@ -1569,6 +1566,7 @@ header{
         margin-bottom: $baseline;
       }
       .frame {
+        margin-bottom: $baseline*2;
         .img {
           height: $baseline*4;
           padding-top: $baseline*2;
