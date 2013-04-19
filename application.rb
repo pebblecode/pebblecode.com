@@ -23,7 +23,7 @@ set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
 configure do
   # Redirect all urls on production (http://github.com/cwninja/rack-force_domain)
-  use Rack::ForceDomain, ENV["DOMAIN"]
+  use Rack::ForceDomain, ENV["DOMAIN"] if settings.environment != "test"
 
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)

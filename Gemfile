@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rake'
 gem "sinatra"
 gem 'thin'
+gem 'json'
 
 # Helper libs
 gem 'sinatra-contrib'
@@ -22,7 +23,15 @@ gem "rack-force_domain"
 # New relic
 gem 'newrelic_rpm'
 
+# Testing
+gem 'rspec'
+
 group :development, :test do
+  # Testing
+  gem 'rack-test'
+  gem 'capybara'
+  gem 'validator.nu'
+
   # Servers
   gem 'shotgun'
   gem 'foreman'

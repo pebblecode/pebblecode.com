@@ -81,7 +81,16 @@ To force the page to use the production js, add `prod` as a query parameter in t
 
 ## Tests
 
-Uses [casperjs](http://casperjs.org/).
+
+Uses [rspec](http://rspec.info/) for unit tests and [casperjs](http://casperjs.org/) for integration tests (probably remove one of them in future).
+
+### RSpec
+
+Run tests with
+
+    bundle exec rake spec
+
+### Casper
 
 Install casper
 
