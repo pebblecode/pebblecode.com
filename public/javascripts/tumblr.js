@@ -55,9 +55,15 @@ require([
     eyko: "Vincent Martínez",
     markdurrant: "Mark Durrant",
     danielrbradley: "Daniel Bradley",
-    mattward: "Matt Ward",
+    wardm: "Matt Ward",
     andreamis1: "Andrea Miskulin",
-    akashchopra: "Akash Chopra"
+    akashchopra: "Akash Chopra",
+    simonhdickson: "Simon Dickson",
+    tsquires10: "Tom Squires",
+    jameswallacepebble: "James Wallace",
+    nbevans: "Nathan Evans",
+    andypebble: "Andy Wardle",
+    svnlto: "Sven Lito"
   };
 
   // Link authors to their relevant people page
