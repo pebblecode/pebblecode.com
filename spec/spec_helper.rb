@@ -17,6 +17,9 @@ RSpec.configure do |conf|
   conf.mock_with :rspec
 
   conf.include PathSpecHelper
+
+  # Exclude validate html (you should run it manually)
+  conf.filter_run_excluding :validate_html => true
 end
 
 # Capybara.save_and_open_page_path = "./tmp"

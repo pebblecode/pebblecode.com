@@ -101,6 +101,10 @@ To run an individual spec
     # eg,
     bundle exec rake spec:run[spec/controllers/application_spec.rb]
 
+The validation spec (`spec/integration/validation_spec.rb`) is ignored by default, as it makes an external call to http://validator.nu/ for html validation. To run this spec
+
+    bundle exec rspec -t validate_html spec/integration/validation_spec.rb
+
 ### Casper
 
 Install casper

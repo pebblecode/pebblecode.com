@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-describe "All paths" do
+describe "All paths", :validate_html => true do
   it "have valid html" do
     for path in paths.values
       get path
