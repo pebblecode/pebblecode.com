@@ -28,5 +28,7 @@ String.class_eval do
     value.gsub!(/[^a-zA-Z0-9 ]/,"")
     value.gsub!(/[ ]+/," ")
     value.gsub!(/ /,"-")
+
+    value
   end
 end
