@@ -68,11 +68,11 @@ end
 ############################################################
 
 get '/thoughts' do
-  redirect '/blog'
+  redirect '/blog', 301
 end
 
 get '/products' do
-  redirect '/labs'
+  redirect '/labs', 301
 end
 
 # Route all tumblr names to person name url
@@ -84,7 +84,7 @@ Person.all_with_tumblr_name.each do |person|
     name_url = "/people/" + name.to_slug
 
     get tumblr_url do
-      redirect name_url
+      redirect name_url, 301
     end
   end
 end
