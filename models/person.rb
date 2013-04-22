@@ -48,7 +48,7 @@ class Person
       :website => "http://community.sharpdevelop.net/blogs/mattward/",
       :github => "https://github.com/icsharpcode/SharpDevelop",
       :twitter => "http://twitter/SharpDevelop",
-      :tumblr_name => "mattward"
+      :tumblr_name => "wardm"
     },
     {
       :name => "Vincent Martínez",
@@ -84,7 +84,8 @@ class Person
       :image => "/images/mug-shots/simon.png",
       :description => "After graduating from the University of Hull with an MEng in computer science in 2010, Simon worked at a photographic software house based in Reigate, until joining pebble {code}. He works primarily in C#, with a particular fondness for Linq, and is very into his Scotch whiskey.",
       :twitter => "https://twitter.com/simonhdickson",
-      :github => "https://github.com/simonhdickson"
+      :github => "https://github.com/simonhdickson",
+      :tumblr_name => "simonhdickson"
     },
     {
       :name => "Daniel Bradley",
@@ -102,13 +103,15 @@ class Person
       :image => "/images/mug-shots/akash.png",
       :description => "It took a PhD in Computational Physics for Akash to figure out that he enjoyed the \"computational\" part more than the physics. That revelation eventually lead, via an extended spell developing stochastic financial risk modelling software, to pebble {code}. Outside work he loves food, cycling and squash.",
       :website => "http://www.itworksonmymachine.co.uk",
-      :twitter => "http://twitter.com/akashchopra"
+      :twitter => "http://twitter.com/akashchopra",
+      :tumblr_name => "akashchopra"
     },
     {
       :name => "Andrea Miskulin",
       :title => "Office Assistant",
       :image => "/images/mug-shots/andrea.png",
-      :description => "Prior to her role at pebble {code}, Andrea successfully facilitated a director and team in the media and creative industry. She is now responsible for pebble {code}'s office administration - which she does with a smile and plenty of enthusiasm.<br><br>In her spare time, Andrea enjoys creating gourmet dinners, smoothies, going to keep-fit classes, music and movies."
+      :description => "Prior to her role at pebble {code}, Andrea successfully facilitated a director and team in the media and creative industry. She is now responsible for pebble {code}'s office administration - which she does with a smile and plenty of enthusiasm.<br><br>In her spare time, Andrea enjoys creating gourmet dinners, smoothies, going to keep-fit classes, music and movies.",
+      :tumblr_name => "andreamis1"
     },
     {
       :name => "Gayle Smith",
@@ -120,13 +123,15 @@ class Person
       :name => "Tom Squires",
       :title => "Software Developer",
       :image => "/images/mug-shots/tom.png",
-      :description => "Tom is a .NET developer, initially starting out building CMS websites, but quickly moving into back-end systems and APIs. In his spare time he enjoys computer gaming and brewing his own real ale. Tom also loves music and often frequents festivals and gigs."
+      :description => "Tom is a .NET developer, initially starting out building CMS websites, but quickly moving into back-end systems and APIs. In his spare time he enjoys computer gaming and brewing his own real ale. Tom also loves music and often frequents festivals and gigs.",
+      :tumblr_name => "tsquires10"
     },
     {
       :name => "James Wallace",
       :title => "Software Developer",
       :image => "/images/mug-shots/james.png",
-      :description => "James graduated from Heriot-Watt with a 1st in Computer Science and was immediately employed by a relatively small company in Edinburgh developing financial risk modelling software. Two years later, James found himself leading a small team of developers within a corporation of 4000+ and realised that he hadn't written code in months. James yearned to return to the truly rockstar life of the software developer, then he found pebble..."
+      :description => "James graduated from Heriot-Watt with a 1st in Computer Science and was immediately employed by a relatively small company in Edinburgh developing financial risk modelling software. Two years later, James found himself leading a small team of developers within a corporation of 4000+ and realised that he hadn't written code in months. James yearned to return to the truly rockstar life of the software developer, then he found pebble...",
+      :tumblr_name => "jameswallacepebble"
     },
     {
       :name => "Sava Varadzhakov",
@@ -150,13 +155,15 @@ class Person
       :description => "Nathan is an extremely passionate software developer with frequent bursts of creativity. He spent his early teenage years (which fortuitously coincided with the birth of the Web) building an online business that successfully sold his software creations as &quot;shareware&quot;.<br><br>Nathan then graduated with a 1st in Computer Science and went on to invest an extremely productive six years in a small successful start-up based in Cambridge. As its technical co-founder, this is where Nathan cut his teeth as an enterprise .NET developer. ",
       :website => "http://nbevans.wordpress.com/",
       :twitter => "http://twitter.com/nbevans",
-      :github => "http://github.com/nbevans"
+      :github => "http://github.com/nbevans",
+      :tumblr_name => "nbevans"
     },
     {
       :name => "Andy Wardle",
       :title => "Senior Software Developer",
       :image => "/images/mug-shots/andy.png",
-      :description => "Andy is a .NET developer with experience dating back to the dark days of .NET 1.1, thankfully only for a very short while. His experience spans the full stack going from MVC, Service Bus, WCF to SQL Server. Outside of work he has a bit of an obsession with football and leads a relatively active lifestyle trying to fit in rock climbing, golf and other sports around going to the pub."
+      :description => "Andy is a .NET developer with experience dating back to the dark days of .NET 1.1, thankfully only for a very short while. His experience spans the full stack going from MVC, Service Bus, WCF to SQL Server. Outside of work he has a bit of an obsession with football and leads a relatively active lifestyle trying to fit in rock climbing, golf and other sports around going to the pub.",
+      :tumblr_name => "andypebble"
     },
     {
       :name => "Sven Lito",
@@ -165,7 +172,8 @@ class Person
       :description => "Sven studied computer science at university and then worked as a systems engineer at some fortune 500 companies in Germany. After deciding to move to the UK, and on the look out for new adventures, he eventually started working in the web industry. Sven also helps maintain the well known Node.js module <a href='https://github.com/felixge/node-formidable'>Formidable</a>.<br><br>Sven enjoys green tea, monospaced font, JavaScript, Cycling and Rock Climbing.",
       :website => "http://svenlito.com/",
       :twitter => "https://twitter.com/svenlito",
-      :github => "https://github.com/svnlto"
+      :github => "https://github.com/svnlto",
+      :tumblr_name => "svnlto"
     },
     {
       :name => "John Mildinhall",
