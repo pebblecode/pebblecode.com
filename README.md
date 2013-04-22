@@ -88,7 +88,18 @@ Uses [rspec](http://rspec.info/) for unit tests and [casperjs](http://casperjs.o
 
 Run tests with
 
+    bundle exec guard
+
+Also to run it separately
+
     bundle exec rake spec
+
+To run an individual spec
+
+    bundle exec rake spec:run[filename]
+
+    # eg,
+    bundle exec rake spec:run[spec/controllers/application_spec.rb]
 
 ### Casper
 
