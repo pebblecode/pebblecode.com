@@ -75,6 +75,20 @@ get '/products' do
   redirect '/labs'
 end
 
+# Route all tumblr names to person name url
+Person.all_with_tumblr_name.each do |person|
+  tumblr_name = person[:tumblr_name]
+  if tumblr_name
+    tumblr_url = "/people/" + tumblr_name.to_slug
+    name = person[:name]
+    name_url = "/people/" + name.to_slug
+
+    get tumblr_url do
+      redirect name_url
+    end
+  end
+end
+
 ############################################################
 # Olympic data visualisation
 ############################################################

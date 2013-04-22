@@ -200,6 +200,14 @@ class Person
     @people
   end
 
+  def self.all_with_tumblr_name
+    @people.select {|p| p[:tumblr_name]}
+  end
+
+  def self.find_by_name(name)
+    @people.select {|p| p[:name] == name}.first
+  end
+
   def self.slug_index(slug)
     @people.index {|p| p[:name].to_slug == slug}
   end

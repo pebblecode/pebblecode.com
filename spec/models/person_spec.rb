@@ -6,4 +6,30 @@ describe Person do
       expect(Person.all.length).to be > 0
     end
   end
+
+  # Bad test, as it's tied to data in Person, but works
+  # for now
+  describe "#find_by_name" do
+    it "finds Toby Hunt" do
+      person = Person.find_by_name("Toby Hunt")
+      expect(person[:name]).to eql("Toby Hunt")
+    end
+  end
+
+  # Bad test, as it's tied to data in Person, but works
+  # for now
+  #
+  # Note: these tests could break if people add/remove
+  # tumblr accounts
+  describe "#all_with_tumblr_name" do
+    it "has Toby Hunt" do
+      toby = Person.find_by_name("Toby Hunt")
+      expect(Person.all_with_tumblr_name.include? toby).to be_true
+    end
+
+    it "does not have Dom Crossley" do
+      dom = Person.find_by_name("Dom Crossley")
+      expect(Person.all_with_tumblr_name.include? dom).to be_false
+    end
+  end
 end
