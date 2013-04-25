@@ -18,10 +18,10 @@
     / %link{:href => "/fonts/meta.css", :rel => "stylesheet", :type => "text/css"}/
 
     / typekit required jascript
-    <script type="text/javascript" src="//use.typekit.net/asa8yjy.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="//use.typekit.net/asa8yjy.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 
-    <script src="/javascripts/vendor/modernizr.js" type="text/javascript"></script>
+    <script src="/javascripts/vendor/modernizr.js"></script>
 
     = yield_content :js_lib
 
@@ -87,7 +87,7 @@
     = yield_content :script_js
 
     :plain
-      <script type="text/javascript">
+      <script>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-28661003-3']);
         _gaq.push(['_trackPageview']);
