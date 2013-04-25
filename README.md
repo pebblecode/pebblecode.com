@@ -30,9 +30,11 @@ To autoload the site, this app uses [shotgun][2], but this is wrapped around the
 
 ## Views and styling
 
-The files you'll be most concerned with are the view files (under /views) and the stylesheet files (under /views/stylesheets).
+The files you'll be most concerned with are the view files (under `/views`) and the stylesheet files (under `/views/stylesheets`).
 
 The view files are written in [haml][3] and the stylesheets are written in [scss][4].
+
+The optimized css is in `/public/build` (see Optimization).
 
 ## Javascript
 
