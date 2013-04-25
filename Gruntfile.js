@@ -94,6 +94,16 @@ module.exports = function (grunt) {
           pre: ['tests/helpers/pre.js']
         }
       }
+    },
+
+    compass: {                  // Task
+      dist: {                   // Target
+        options: {              // Target options
+          sassDir: 'views/stylesheets',
+          cssDir: 'public/build/css',
+          environment: 'production'
+        }
+      }
     }
   });
 
@@ -101,11 +111,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-ghost');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   grunt.registerTask('default', ['watch:scripts']);
 
   // Generate production javascript
-  grunt.registerTask('build', ['jshint', 'requirejs']);
+  grunt.registerTask('build', ['jshint', 'requirejs', 'compass:dist']);
 
   // Run tests
   grunt.registerTask('test', ['watch:tests']);

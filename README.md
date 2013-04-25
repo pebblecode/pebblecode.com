@@ -69,9 +69,11 @@ To create a new javascript page
 
 ### Optimization
 
-To optimization the javascript files for production run
+To optimization the css/javascript files for production run
 
     grunt build
+
+Optimized files are generated into `public/build`.
 
 Commit the changes, and the layout file will automatically handle using the built files on non-development environments.
 

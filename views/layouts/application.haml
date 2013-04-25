@@ -8,7 +8,10 @@
     %meta{:name => "keywords", :content => yield_content(:keywords)}
     %link{:rel => "shortcut icon", :type => "image/x-icon", :href => "http://pebblecode.com/images/favicon.ico"}/
 
-    %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
+    - if load_dev?
+      %link{:href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css"}/
+    - else
+      %link{:href => "/build/css/screen.css", :rel => "stylesheet", :type => "text/css"}/
     = yield_content :css
 
     / commented out to test typekit
@@ -77,7 +80,7 @@
       /#map
 
     - unless (defined? DO_NOT_LOAD_SCRIPTS) && DO_NOT_LOAD_SCRIPTS
-      - if load_dev_scripts?
+      - if load_dev?
         %script{:"data-main" => "/javascripts/main", :src => "/javascripts/vendor/require.js"}
       - else
         %script{:"data-main" => "/build/javascripts/main", :src => "/build/javascripts/vendor/require.js"}

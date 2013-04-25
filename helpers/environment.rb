@@ -14,7 +14,7 @@ module Sinatra
       settings.environment == "development"
     end
 
-    def load_dev_scripts?
+    def load_dev?
       load_dev = is_development?
 
       # Override to true if `dev` url param exists
