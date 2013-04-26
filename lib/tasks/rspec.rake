@@ -19,4 +19,11 @@ namespace "spec" do
                     end
     sh run_spec_cmd
   end
+
+  desc "Run html/css validation specs"
+  task :validation, :spec_file do
+    run_spec_cmd =  "bundle exec rspec --color -t validate_html spec/integration/validation_spec.rb"
+
+    sh run_spec_cmd
+  end
 end
