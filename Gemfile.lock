@@ -115,6 +115,9 @@ GEM
     validator.nu (0.0.6)
       validator.nu
       yajl-ruby (= 1.1.0)
+    w3c_validators (1.2)
+      json
+      nokogiri
     xpath (0.1.4)
       nokogiri (~> 1.3)
     yajl-ruby (1.1.0)
@@ -147,3 +150,4 @@ DEPENDENCIES
   sinatra-contrib
   thin
   validator.nu
+  w3c_validators

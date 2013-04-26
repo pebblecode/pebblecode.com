@@ -25,6 +25,7 @@ gem 'newrelic_rpm'
 
 # Testing
 gem 'rspec'
+gem 'w3c_validators'
 
 group :development, :test do
   # Testing
