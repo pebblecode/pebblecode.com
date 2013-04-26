@@ -22,6 +22,12 @@ module.exports = function (grunt) {
       }
     },
 
+    csslint: {
+      strict: {
+        src: ['public/build/css/screen.css']
+      }
+    },
+
     watch: {
       scripts: {
         files: ['<%= jshint.js.src %>', '<%= jshint.test.src %>'],
@@ -101,7 +107,9 @@ module.exports = function (grunt) {
         options: {              // Target options
           sassDir: 'views/stylesheets',
           cssDir: 'public/build/css',
-          environment: 'production'
+          environment: 'production',
+          outputStyle: 'nested'
+          // TODO: Need to sort this out for minification again
         }
       }
     }
@@ -112,6 +120,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-ghost');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
 
   grunt.registerTask('default', ['watch:scripts']);
 
