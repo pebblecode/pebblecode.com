@@ -24,7 +24,7 @@ class HaveValidCSS
   end
 
   def failure_message
-   out = "Invalid CSS\n\nErrors:\n\n"
+   out = "Invalid CSS\n\nErrors (#{@errors.length}):\n\n"
 
    for e in @errors
     out += "* "
