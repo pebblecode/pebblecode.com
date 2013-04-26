@@ -36,6 +36,10 @@ The view files are written in [haml][3] and the stylesheets are written in [scss
 
 The optimized css is in `/public/build` (see Optimization).
 
+To validate CSS, run
+
+    grunt csslint
+
 ## Javascript
 
 ### Development
