@@ -1,9 +1,4 @@
 require_relative '../spec_helper'
-require 'w3c_validators'
-
-include W3CValidators
-
-@validator = MarkupValidator.new
 
 describe "All paths", :validate_html => true do
   it "have valid html" do
@@ -14,16 +9,9 @@ describe "All paths", :validate_html => true do
   end
 end
 
-describe "screen.css", :validate_html => true do
-  before do
-    @validator = CSSValidator.new
-  end
-
+describe "/stylesheets/screen.css", :validate_html => true do
   it "should be valid" do
     get "/stylesheets/screen.css"
-
-    results = @validator.validate_text(last_response.body)
-
-    expect(results.errors.length).to be(0)
+    last_response.should have_valid_css
   end
 end

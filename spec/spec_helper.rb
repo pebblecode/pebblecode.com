@@ -10,6 +10,7 @@ require 'ruby-debug'
 
 require 'support/path'
 require 'support/have_valid_html'
+require 'support/have_valid_css'
 
 # Include in all rspec tests
 RSpec.configure do |conf|
