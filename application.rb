@@ -25,6 +25,9 @@ configure do
   # Redirect all urls on production (http://github.com/cwninja/rack-force_domain)
   use Rack::ForceDomain, ENV["DOMAIN"] if settings.environment != "test"
 
+  # Gzips pages
+  use Rack::Deflater
+
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)
     config.sass_dir = 'views/stylesheets'
