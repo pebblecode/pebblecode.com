@@ -1,5 +1,6 @@
-# Rake file to help with Vistazo development
+# Rake file to help with development
 
+Dir.glob('lib/tasks/*.rake').each { |r| import r }
 
 #####################################################################
 # Server
@@ -10,12 +11,3 @@ task "server" do
   start_server_cmd = "foreman start -f Procfile_development"
   sh start_server_cmd
 end
-
-# Deployment
-import "lib/tasks/shipit.rake"
-
-# RSpec
-import "lib/tasks/rspec.rake"
-
-# Heroku helpers
-import "lib/tasks/http_password.rake"
