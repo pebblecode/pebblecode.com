@@ -10,8 +10,8 @@ describe "All paths", :validate_html => true do
 end
 
 describe "/stylesheets/screen.css", :validate_html => true do
-  it "should be valid" do
+  it "is valid CSS" do
     get "/stylesheets/screen.css"
-    last_response.body.should have_valid_css
+    last_response.body.should be_valid_css
   end
 end

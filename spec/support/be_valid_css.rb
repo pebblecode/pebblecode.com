@@ -4,9 +4,9 @@ require 'w3c_validators'
 #
 # Usage:
 #
-#     css_string.should have_valid_css
+#     css_string.should be_valid_css
 #
-class HaveValidCSS
+class BeValidCSS
   include W3CValidators
 
   # @param {String} css - the CSS of a page
@@ -20,7 +20,7 @@ class HaveValidCSS
   end
 
   def description
-    "Have valid CSS"
+    "Valid CSS"
   end
 
   def failure_message
@@ -36,6 +36,6 @@ class HaveValidCSS
 
 end
 
-def have_valid_css
-  HaveValidCSS.new
+def be_valid_css
+  BeValidCSS.new
 end
