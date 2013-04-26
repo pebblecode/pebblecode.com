@@ -12,6 +12,6 @@ end
 describe "/stylesheets/screen.css", :validate_html => true do
   it "should be valid" do
     get "/stylesheets/screen.css"
-    last_response.should have_valid_css
+    last_response.body.should have_valid_css
   end
 end

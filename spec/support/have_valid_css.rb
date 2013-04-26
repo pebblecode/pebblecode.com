@@ -4,28 +4,27 @@ require 'w3c_validators'
 #
 # Usage:
 #
-#     last_response.should have_valid_css
+#     css_string.should have_valid_css
 #
 class HaveValidCSS
   include W3CValidators
 
-  # @param response - the page response
-  def matches?(response)
+  # @param {String} css - the CSS of a page
+  def matches?(css)
     @validator = CSSValidator.new
 
-    @contents = response.body
-    @results = @validator.validate_text(@contents)
+    @results = @validator.validate_text(css)
     @errors = @results.errors
 
     @errors.length <= 0
   end
 
   def description
-    "Have valid css"
+    "Have valid CSS"
   end
 
   def failure_message
-   out = "Invalid css\n\nErrors:\n\n"
+   out = "Invalid CSS\n\nErrors:\n\n"
 
    for e in @errors
     out += "* "
