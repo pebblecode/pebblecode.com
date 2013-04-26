@@ -16,3 +16,6 @@ import "lib/tasks/shipit.rake"
 
 # RSpec
 import "lib/tasks/rspec.rake"
+
+# Heroku helpers
+import "lib/tasks/http_password.rake"

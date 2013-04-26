@@ -137,14 +137,14 @@ By default the staging/sandbox sites have a http password with username `pebblec
 To disable the password
 
     # For staging
-    heroku config:add DISABLE_HTTP_PASSWORD=true --app pebblecode-staging
+    bundle exec rake password:disable[staging]
 
     # For sandbox
-    heroku config:add DISABLE_HTTP_PASSWORD=true --app pebblecode-sandbox
+    bundle exec rake password:disable[sandbox]
 
 To enable the password
 
-    heroku config:remove DISABLE_HTTP_PASSWORD --app [heroku-app-name]
+    bundle exec rake password:enable[environment]
 
 ### Prerequisites
 
