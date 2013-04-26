@@ -9,7 +9,7 @@ require 'ruby-debug'
 # require 'capybara/rspec'
 
 require 'support/path'
-require 'support/have_valid_html'
+require 'support/be_valid_html'
 require 'support/be_valid_css'
 
 # Include in all rspec tests

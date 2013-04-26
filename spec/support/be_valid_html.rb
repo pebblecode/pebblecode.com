@@ -1,18 +1,18 @@
 require 'validator.nu'
 require 'json'
 
-# RSpec validator for html, using http://validator.nu
+# RSpec validator for HTML, using http://validator.nu
 #
 # See [JSON output](http://wiki.whatwg.org/wiki/Validator.nu_JSON_Output) for details of what is returned
 #
 # Usage:
 #
-#     last_response.should have_valid_html
+#     html.should be_valid_html
 #
-class HaveValidHTML
-  # @param response - the page response
-  def matches?(response)
-    @contents = response.body
+class BeValidHTML
+  # @param {String} html - the page HTML
+  def matches?(html)
+    @contents = html
     @results = JSON.parse(Validator.nu(@contents))
     @errors = @results["messages"].select {|x| x["type"] == "error"}
 
@@ -20,11 +20,11 @@ class HaveValidHTML
   end
 
   def description
-    "Have valid html"
+    "Valid HTML"
   end
 
   def failure_message
-   out = "Invalid html\n\nErrors:\n\n"
+   out = "Invalid HTML\n\nErrors (#{@errors.length}):\n\n"
 
    for e in @errors
     out += "* "
@@ -51,6 +51,6 @@ class HaveValidHTML
 
 end
 
-def have_valid_html
-  HaveValidHTML.new
+def be_valid_html
+  BeValidHTML.new
 end
