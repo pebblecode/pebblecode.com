@@ -1,6 +1,6 @@
 require 'w3c_validators'
 
-# RSpec validator for CSS, using W3C validators
+# RSpec validator for CSS, using W3C validator
 #
 # Usage:
 #
