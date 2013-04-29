@@ -241,7 +241,7 @@ To edit the tumblr blog:
    This is there mainly for testing purposes, when viewing the styles locally.
 1. The tumblr blog can be viewed at
 
- * Staging: http://www.tumblr.com/blog/pebblecodestaging (password: `pebblecodestaging`)
+ * Staging: http://www.tumblr.com/blog/pebblecodestaging
  * Production: http://www.tumblr.com/blog/pebblecode
 1. Remember to push the changes to git, so that others have the changed template. **If someone replaces the template on tumblr, there is no version history on tumblr!**
 
