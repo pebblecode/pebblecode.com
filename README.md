@@ -132,7 +132,7 @@ Development workflow works like this:
 
 ### HTTP password
 
-By default the staging/sandbox sites have a http password with username `pebblecode`, and password `pebblecode`.
+By default the staging/sandbox sites have a http password.
 
 To disable the password
 
@@ -145,6 +145,10 @@ To disable the password
 To enable the password
 
     bundle exec rake password:enable[environment]
+
+To set the password (also see `helpers/http_password.rb` for how it works)
+
+    bundle exec rake password:set[environment,user,password]
 
 ### Prerequisites
 
