@@ -3,6 +3,7 @@ require 'rubygems'
 require 'sinatra'
 require './lib/partials'
 require './lib/string'
+require './lib/constants'
 require 'haml'
 require 'sass'
 require 'compass'
@@ -40,6 +41,18 @@ end
 get '/stylesheets/screen.css' do
   content_type 'text/css', :charset => 'utf-8'
   scss :'stylesheets/screen'
+end
+
+# Show lib/robots_txt_to_exclude_all.txt
+#
+# Only show on non-production sites
+get '/robots.txt' do
+  if is_production?
+    redirect not_found
+  else
+    content_type 'text/plain', :charset => 'utf-8'
+    File.read(File.join('lib', 'robots_txt_to_exclude_all.txt'))
+  end
 end
 
 get '/' do
