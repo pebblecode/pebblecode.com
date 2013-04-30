@@ -210,7 +210,7 @@ This merges the master branch to the production branch, pushes to origin, deploy
 
 After deployment, you should ping search engines if the pages have been updated. The pages are listed in `spec/support/path.rb`
 
-To do this ping the search engines
+To do this
 
 1. Generate the changes with
 
@@ -222,7 +222,12 @@ To do this ping the search engines
 
 3. Ping the search engines
 
-    rake sitemap:refresh
+    rake sitemap:ping_search_engines
+
+### Seach engine web master tools
+
+* [Google](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://www.pebblecode.com/)
+* [Bing](https://ssl.bing.com/webmaster/home/dashboard?url=http%3A%2F%2Fwww.pebblecode.com%2F)
 
 ### Seach engine web master tools
 
