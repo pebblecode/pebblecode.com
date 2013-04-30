@@ -10,6 +10,7 @@ require 'compass'
 require 'rdiscount'
 require 'sinatra/content_for'
 require 'newrelic_rpm'
+# require 'sitemap_generator'
 
 helpers Sinatra::Partials
 require_relative 'helpers/init'
@@ -47,10 +48,11 @@ end
 #
 # Only show on non-production sites
 get '/robots.txt' do
+  content_type 'text/plain', :charset => 'utf-8'
+
   if is_production?
-    redirect not_found
+    File.read(File.join('lib', 'robots_txt_standard.txt'))
   else
-    content_type 'text/plain', :charset => 'utf-8'
     File.read(File.join('lib', 'robots_txt_to_exclude_all.txt'))
   end
 end
