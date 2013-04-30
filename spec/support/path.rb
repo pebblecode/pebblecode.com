@@ -7,7 +7,8 @@ def paths
     :people => '/people',
     :work => '/work',
     :labs => '/labs',
-    :"find-us" => '/find-us'
+    :"find-us" => '/find-us',
+    :"pebbles-good-code" => '/pebbles-good-code'
   }
 end
 
