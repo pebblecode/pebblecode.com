@@ -224,6 +224,11 @@ To do this ping the search engines
 
     rake sitemap:refresh
 
+### Seach engine web master tools
+
+* [Google](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://www.pebblecode.com/)
+* [Bing](https://ssl.bing.com/webmaster/home/dashboard?url=http%3A%2F%2Fwww.pebblecode.com%2F)
+
 ### Maintenance mode
 
 To turn on/off maintenance mode on heroku
