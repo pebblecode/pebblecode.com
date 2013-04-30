@@ -1,5 +1,6 @@
 # Helper methods to navigate to paths in the application
 
+# Note all these paths are added to the sitemap in `config/sitemap.rb`
 def paths
   {
     :homepage => '/',

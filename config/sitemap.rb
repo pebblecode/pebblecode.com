@@ -1,11 +1,15 @@
 require 'rubygems'
 require 'sitemap_generator'
 
+require File.join("#{File.dirname(__FILE__)}/../spec/support", "path")
+
 SitemapGenerator::Sitemap.default_host = 'http://pebblecode.com'
 SitemapGenerator::Sitemap.create do
-  add '/', :changefreq => 'daily', :priority => 0.9
-  add '/people', :changefreq => 'weekly'
-  add '/work', :changefreq => 'weekly'
-  add '/labs', :changefreq => 'weekly'
-  add '/find-us', :changefreq => 'weekly'
+  paths.each do |key, p|
+    if p == '/'
+      add '/', :changefreq => 'daily', :priority => 0.9
+    else
+      add p, :changefreq => 'weekly'
+    end
+  end
 end

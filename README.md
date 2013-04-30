@@ -208,7 +208,9 @@ This merges the master branch to the production branch, pushes to origin, deploy
 
 #### Sitemap
 
-After deployment, you should ping search engines if the `config/sitemap.rb` has been updated. To do this
+After deployment, you should ping search engines if the pages have been updated. The pages are listed in `spec/support/path.rb`
+
+To do this ping the search engines
 
 1. Generate the changes with
 
