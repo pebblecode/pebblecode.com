@@ -168,6 +168,10 @@ get '/:page' do
 end
 
 error do
+  redirect not_found
+end
+
+not_found do
   @page_name = "404"
   haml "404".to_sym, :layout => :'layouts/application'
 end
