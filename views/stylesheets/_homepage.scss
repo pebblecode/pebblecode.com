@@ -2,6 +2,7 @@
 // HOMEPAGE
 //===============================================================================
 .page-homepage {
+  
   .row:first-child{
     margin-top: $baseline*3;
     margin-bottom: $baseline*2;
@@ -64,46 +65,45 @@
       }
     }
 
-    .pagination{
-      width: 93px;
-      margin: $baseline auto;
-      li {
-        float: left;
-        a {
-          display: block;
-          color: transparent;
-          width: 12px;
-          height: 12px;
-          margin-left:10px;
-          border: 2px solid $aqua;
-
-          @include box-sizing(border-box);
-          @include border-radius(12px);
-        }
-      }
-
-      .current a{
-        border-width: 5px;
-      }
-
-      li:nth-child(2) a{
-        border-color: $blue;
-      }
-      li:nth-child(3) a{
-        border-color: $orange;
-      }
-    }
-  }
-
   article {
     h2 {
       margin-bottom: $baseline;
     }
   }
+}
 
-  #recent-posts {
-    h2 {
-      margin-bottom: $baseline;
+.pagination{
+    width: 93px;
+    margin: $baseline auto;
+    li {
+      float: left;
+      a {
+        display: block;
+        color: transparent;
+        width: 12px;
+        height: 12px;
+        margin-left:10px;
+        border: 2px solid $aqua;
+
+        @include box-sizing(border-box);
+        @include border-radius(12px);
+      }
     }
+
+    .current a{
+      border-width: 5px;
+    }
+
+    li:nth-child(2) a{
+      border-color: $blue;
+    }
+    li:nth-child(3) a{
+      border-color: $orange;
+    }
+  }
+}
+
+#recent-posts h2 {
+    margin-bottom: $baseline;
   }
 }
