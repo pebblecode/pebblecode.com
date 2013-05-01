@@ -7,9 +7,9 @@ body{
 }
 
 body{
-  font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   background-color: hsl(40, 70%, 98.5%);
   color: hsl(0, 0%, 50%);
+  font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 h1,
@@ -18,20 +18,20 @@ h3,
 h4,
 h5,
 h6{
-  font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: hsl(0, 0%, 55%);
+  font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 p{
+  margin-bottom: $baseline;
   font-size: 16px;
   line-height: $baseline;
-  margin-bottom: $baseline;
 }
 
 a{
   color: hsl(0, 0%, 45%);
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 
   &:hover{
     color: hsl(0, 0%, 30%);
@@ -48,17 +48,17 @@ strong {
 }
 
 hr{
-  height: 3px;
-  border: none;
   margin-top: -1px;
   margin-bottom: -2px;
+  height: 3px;
+  border: none;
 }
 
 pre {
   margin-bottom: 1.5em;
 
   code {
-    font-family: monospace;
     overflow-x: auto;
+    font-family: monospace;
   }
 }
