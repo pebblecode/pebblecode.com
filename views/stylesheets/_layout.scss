@@ -2,11 +2,11 @@
 // LAYOUT
 //===============================================================================
 #wrap{
+  clear: both;
   margin: 0 auto -60px;
+  min-height: 100%;
   max-width: $grid-max-width;
   width: $grid-width;
-  clear: both;
-  min-height: 100%;
   height: auto !important;
 }
 
@@ -15,21 +15,21 @@
 }
 
 .row{
-  width: 100%;
   margin-bottom: $baseline*3;
+  width: 100%;
 }
 
 #wrap > .row:first-child{
   padding-top: 40px;
 }
 
-.row:before,.row:after {
+.row:before,.row:after{
   display: table;
-  content: "";
   clear: both;
+  content: "";
 }
 
-.row:after {
+.row:after{
   clear: both;
 }
 
@@ -38,7 +38,7 @@
   margin-left: $column-gutter;
 }
 
-[class*=columns]:first-child {
+[class*=columns]:first-child{
   margin-left: 0;
 }
 
@@ -46,7 +46,7 @@
   width: $column-width;
 }
 
-.columns1:nth-child(7) {
+.columns1:nth-child(7){
   margin-left: 0;
 }
 
