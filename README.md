@@ -22,7 +22,18 @@ This is a simple brochure site written with [sinatra][1].
 
 	    rake server
 
-Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
+   Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
+
+   To change the port number, run
+
+       rake server[8888]
+
+   If you want run on a local ip address (eg, to test on an external device), run
+
+       rake server[7100,true]
+
+   where the first parameter is the port number.
+
 
 ## Automatic reloading
 
