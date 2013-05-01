@@ -2,7 +2,6 @@
 
 This is a simple brochure site written with [sinatra][1].
 
-
 ## Installation
 
 1. Install bundler
@@ -132,7 +131,7 @@ Development workflow works like this:
 
 ### HTTP password
 
-By default the staging/sandbox sites have a http password with username `pebblecode`, and password `pebblecode`.
+By default the staging/sandbox sites have a http password.
 
 To disable the password
 
@@ -145,6 +144,10 @@ To disable the password
 To enable the password
 
     bundle exec rake password:enable[environment]
+
+To set the password (also see `helpers/http_password.rb` for how it works)
+
+    bundle exec rake password:set[environment,user,password]
 
 ### Prerequisites
 
@@ -202,6 +205,29 @@ To deploy the master branch to production
 
 This merges the master branch to the production branch, pushes to origin, deploys to production, and checkouts out the master branch.
 
+#### Sitemap
+
+After deployment, you should ping search engines if the pages have been updated. The pages are listed in `spec/support/path.rb`
+
+To do this
+
+1. Generate the changes with
+
+    bundle exec rake sitemap:refresh:no_ping
+
+2. Commit and push updates to production
+
+    bundle exec rake shipit[production]
+
+3. Ping the search engines
+
+    rake sitemap:ping_search_engines
+
+### Seach engine web master tools
+
+* [Google](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://www.pebblecode.com/)
+* [Bing](https://ssl.bing.com/webmaster/home/dashboard?url=http%3A%2F%2Fwww.pebblecode.com%2F)
+
 ### Maintenance mode
 
 To turn on/off maintenance mode on heroku
@@ -237,7 +263,7 @@ To edit the tumblr blog:
    This is there mainly for testing purposes, when viewing the styles locally.
 1. The tumblr blog can be viewed at
 
- * Staging: http://www.tumblr.com/blog/pebblecodestaging (password: `pebblecodestaging`)
+ * Staging: http://www.tumblr.com/blog/pebblecodestaging
  * Production: http://www.tumblr.com/blog/pebblecode
 1. Remember to push the changes to git, so that others have the changed template. **If someone replaces the template on tumblr, there is no version history on tumblr!**
 

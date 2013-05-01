@@ -15,11 +15,14 @@ module Sinatra
     end
 
     def authorized?
+      user = ENV["HTTP_USER"] || "user"
+      password = ENV["HTTP_PASSWORD"] || "password"
+
       @auth ||=  Rack::Auth::Basic::Request.new(request.env)
       @auth.provided? &&
         @auth.basic? &&
         @auth.credentials &&
-        @auth.credentials == ['pebblecode', 'pebblecode']
+        @auth.credentials == [user, password]
     end
   end
 

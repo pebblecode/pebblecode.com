@@ -1,0 +1,39 @@
+//===============================================================================
+// FIND-US
+//===============================================================================
+.page-find-us {
+  .row:first-child {
+    margin-top: $baseline*3;
+    margin-bottom: $baseline;
+    .frame {
+      padding: 10px 10px 5px;
+      #map{
+        width: 100%;
+        height: $baseline*18;
+      }
+    }
+  }
+  .row {
+    h1 {
+      margin-bottom: $baseline;
+    }
+    address {
+      margin-bottom: $baseline;
+
+      p {
+        font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        color: hsl(0, 0%, 55%);
+        margin-bottom: 0;
+      }
+    }
+    .contact {
+      a {
+        color: hsl(0, 0%, 55%);
+        display: block;
+        &:hover {
+          color: hsl(0, 0%, 50%);
+        }
+      }
+    }
+  }
+}

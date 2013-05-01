@@ -3,6 +3,7 @@ require 'rubygems'
 require 'sinatra'
 require './lib/partials'
 require './lib/string'
+require './lib/constants'
 require 'haml'
 require 'sass'
 require 'compass'
@@ -39,7 +40,20 @@ end
 
 get '/stylesheets/screen.css' do
   content_type 'text/css', :charset => 'utf-8'
-  scss :'stylesheets/screen'
+  scss :'stylesheets/screen', :style => :compressed
+end
+
+# Show lib/robots_txt_to_exclude_all.txt
+#
+# Only show on non-production sites
+get '/robots.txt' do
+  content_type 'text/plain', :charset => 'utf-8'
+
+  if is_production?
+    File.read(File.join('lib', 'robots_txt_standard.txt'))
+  else
+    File.read(File.join('lib', 'robots_txt_to_exclude_all.txt'))
+  end
 end
 
 get '/' do
@@ -154,6 +168,10 @@ get '/:page' do
 end
 
 error do
+  redirect not_found
+end
+
+not_found do
   @page_name = "404"
   haml "404".to_sym, :layout => :'layouts/application'
 end
