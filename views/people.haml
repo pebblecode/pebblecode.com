@@ -3,6 +3,8 @@
   %script{ :type => "text/javascript" }
     :plain
       require(["main"], function() {
+        // Load people
+        window.PEOPLE = #{Person.all.to_json};
         require(["app/people"]);
       });
 - content_for :title do
