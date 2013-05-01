@@ -205,6 +205,29 @@ To deploy the master branch to production
 
 This merges the master branch to the production branch, pushes to origin, deploys to production, and checkouts out the master branch.
 
+#### Sitemap
+
+After deployment, you should ping search engines if the pages have been updated. The pages are listed in `spec/support/path.rb`
+
+To do this
+
+1. Generate the changes with
+
+    bundle exec rake sitemap:refresh:no_ping
+
+2. Commit and push updates to production
+
+    bundle exec rake shipit[production]
+
+3. Ping the search engines
+
+    rake sitemap:ping_search_engines
+
+### Seach engine web master tools
+
+* [Google](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://www.pebblecode.com/)
+* [Bing](https://ssl.bing.com/webmaster/home/dashboard?url=http%3A%2F%2Fwww.pebblecode.com%2F)
+
 ### Maintenance mode
 
 To turn on/off maintenance mode on heroku
