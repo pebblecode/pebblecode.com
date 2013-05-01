@@ -12,7 +12,7 @@ require.config({
     },
     backbone: {
       exports: "Backbone",
-      deps: ["underscore"]
+      deps: ["jquery", "underscore"]
     },
     "jquery.isotope": {
       deps: ["jquery"],
@@ -56,12 +56,21 @@ require.config({
 });
 
 require([
+  "underscore",
   "shared/random-colors",
   "shared/retina"
   //"shared/footer" // Not showing map on all pages right now
-], function(randomColors, retina) {
+], function(_, randomColors, retina) {
   "use strict";
 
   randomColors.init();
   retina.init();
+
+  // Use mustache symbols in templates
+  // To interpolate values from input use: {{ ... }}
+  // To evaluate js use: {% ... %}
+  _.templateSettings = {
+    interpolate: /\{\{(.+?)\}\}/g,
+    evaluate: /\{\%(.+?)\%\}/g
+  };
 });
