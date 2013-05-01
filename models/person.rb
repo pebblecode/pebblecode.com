@@ -1,4 +1,6 @@
 # encoding: utf-8
+require_relative '../lib/string'
+
 class Person
   # NOTE: Descriptions are in markdown (http://daringfireball.net/projects/markdown/)
   @people = [
@@ -17,7 +19,7 @@ class Person
       :name => "George Ornbo",
       :title => "Creative Director",
       :image => "george.png",
-      :description => "George is a Ruby and JavaScript developer with a strong interest in web browsers and applications. When not hacking at a terminal he enjoys making things in the kitchen and a bit of cricket. George is currently writing [Sams teach yourself Node.js in 24 hours](http://nodejsbook.io/).",
+      :description => "George is a Ruby and JavaScript developer with a strong interest in web browsers and applications. When not hacking at a terminal he enjoys making things in the kitchen and a bit of cricket. George is the author of <a href='http://nodejsbook.io/'>Sams teach yourself Node.js in 24 hours</a>.",
       :website => "http://shapeshed.com",
       :github => "https://github.com/shapeshed",
       :twitter => "http://twitter.com/shapeshed",
@@ -44,7 +46,7 @@ class Person
       :name => "Matt Ward",
       :title => "Senior Software Developer",
       :image => "matt.png",
-      :description => "Matt's first real dive into programming was with COMAL, a language unheard of outside Scandinavia. He used it to create a program to predict the results of football matches, but sadly this did not make him a millionaire. In his spare time he works on [SharpDevelop](http://www.icsharpcode.net/OpenSource/SD/), an open source integrated development environment written in C#.",
+      :description => "Matt's first real dive into programming was with COMAL, a language unheard of outside Scandinavia. He used it to create a program to predict the results of football matches, but sadly this did not make him a millionaire. In his spare time he works on <a href='http://www.icsharpcode.net/OpenSource/SD/'>SharpDevelop</a>, an open source integrated development environment written in C#.",
       :website => "http://community.sharpdevelop.net/blogs/mattward/",
       :github => "https://github.com/icsharpcode/SharpDevelop",
       :twitter => "http://twitter/SharpDevelop",
@@ -91,7 +93,7 @@ class Person
       :name => "Daniel Bradley",
       :title => "Software Developer",
       :image => "dan.png",
-      :description => "After graduating as a software engineer in London, Daniel got stuck into developing products for the media sector. He's an open source advocate and author of the cloud-based [Plywood](https://github.com/danielrbradley/Plywood) software deployment system. Outside of programming, he's a drummer and keen photographer.",
+      :description => "After graduating as a software engineer in London, Daniel got stuck into developing products for the media sector. He's an open source advocate and author of the cloud-based <a href='https://github.com/danielrbradley/Plywood'>Plywood</a> software deployment system. Outside of programming, he's a drummer and keen photographer.",
       :website => "http://danielbradley.net",
       :twitter => "http://twitter.com/danielrbradley",
       :github => "https://github.com/danielrbradley",
@@ -200,12 +202,20 @@ class Person
     @people
   end
 
+  def self.all_urls
+    @people.map {|p| Person.slug(p) }
+  end
+
   def self.all_with_tumblr_name
     @people.select {|p| p[:tumblr_name]}
   end
 
   def self.find_by_name(name)
     @people.select {|p| p[:name] == name}.first
+  end
+
+  def self.find_by_index(index)
+    @people[index]
   end
 
   def self.slug_index(slug)
@@ -218,6 +228,10 @@ class Person
 
   def self.slug_exists?(slug)
     @people.select {|p| p[:name].to_slug == slug}.length > 0
+  end
+
+  def self.slug(person)
+    "/people/#{person[:name].to_slug}"
   end
 
   def self.small_image(name)

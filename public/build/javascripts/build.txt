@@ -65,9 +65,10 @@ vendor/highlight/styles/zenburn.css
 
 main.js
 ----------------
-vendor/jquery.js
 vendor/underscore.js
+vendor/jquery.js
 app/shared/random-colors.js
+app/shared/retina.js
 main.js
 
 app/archive.js
@@ -98,9 +99,9 @@ app/pebbles-good-code.js
 
 app/people.js
 ----------------
+vendor/underscore.string.js
 vendor/jquery.scrollTo.js
 vendor/backbone.js
-vendor/underscore.string.js
 app/lib/url-handler.js
 app/people.js
 
