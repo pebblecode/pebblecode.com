@@ -1,0 +1,106 @@
+//===============================================================================
+// REUSABLE-STYLES
+//===============================================================================
+.frame{
+  @include box-sizing(border-box);
+  @include box-shadow(hsl(40, 30%, 95%) 3px 3px 0);
+
+  padding: 10px;
+  border: 1px solid hsl(0, 0%, 80%);
+  background-color: white;
+}
+
+.pink{
+  color: $pink; 
+  
+  &:hover{
+    color: $pink;
+  }
+}
+
+.purple{
+  color: $purple; 
+  
+  &:hover{
+    color: $purple;
+  }
+}
+
+.blue{
+  color: $blue; 
+  
+  &:hover{
+    color: $blue;
+  }
+}
+.aqua{
+  color: $aqua; 
+  
+  &:hover{
+    color: $aqua;
+  }
+}
+
+.green{
+  color: $green; 
+  
+  &:hover{
+    color: $green;
+  }
+}
+
+.orange{
+  color: $orange; 
+  
+  &:hover{
+    color: $orange;
+  }
+}
+
+.pink-background{
+  background-color: $pink; 
+}
+
+.purple-background{
+  background-color: $purple;
+}
+
+.blue-background{
+  background-color: $blue;
+}
+
+.aqua-background{
+  background-color: $aqua;
+}
+
+.green-background{
+  background-color: $green;
+}
+
+.orange-background{
+  background-color: $orange;
+}
+
+.pink-border{
+  border-color: $pink;
+}
+
+.purple-border{
+  border-color: $purple;
+}
+
+.blue-border{
+  border-color: $blue;
+}
+
+.aqua-border{
+  border-color: $aqua;
+}
+
+.green-border{
+  border-color: $green;
+}
+
+.orange-border{
+  border-color: $orange;
+}

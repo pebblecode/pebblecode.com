@@ -1,0 +1,64 @@
+//===============================================================================
+// ELEMENTS
+//===============================================================================
+html, 
+body{
+  height: 100%;
+}
+
+body{
+  font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  background-color: hsl(40, 70%, 98.5%);
+  color: hsl(0, 0%, 50%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  color: hsl(0, 0%, 55%);
+}
+
+p{
+  font-size: 16px;
+  line-height: $baseline;
+  margin-bottom: $baseline;
+}
+
+a{
+  color: hsl(0, 0%, 45%);
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover{
+    color: hsl(0, 0%, 30%);
+    text-decoration: underline;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+hr{
+  height: 3px;
+  border: none;
+  margin-top: -1px;
+  margin-bottom: -2px;
+}
+
+pre {
+  margin-bottom: 1.5em;
+
+  code {
+    font-family: monospace;
+    overflow-x: auto;
+  }
+}
