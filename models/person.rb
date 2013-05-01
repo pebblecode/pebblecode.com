@@ -208,6 +208,10 @@ class Person
     @people.select {|p| p[:name] == name}.first
   end
 
+  def self.find_by_index(index)
+    @people[index]
+  end
+
   def self.slug_index(slug)
     @people.index {|p| p[:name].to_slug == slug}
   end

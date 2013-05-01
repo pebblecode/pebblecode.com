@@ -9,6 +9,15 @@ describe Person do
 
   # Bad test, as it's tied to data in Person, but works
   # for now
+  describe "#find_by_index" do
+    it "finds Toby Hunt" do
+      person = Person.find_by_index(0)
+      expect(person[:name]).to eql("Toby Hunt")
+    end
+  end
+
+  # Bad test, as it's tied to data in Person, but works
+  # for now
   describe "#find_by_name" do
     it "finds Toby Hunt" do
       person = Person.find_by_name("Toby Hunt")
