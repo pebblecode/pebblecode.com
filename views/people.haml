@@ -36,7 +36,7 @@
           .frame
             .img
               / Height is same as .img height
-              %img{:alt => p[:name], :src => p[:image]}/
+              %img{:alt => p[:name], :src => Person.big_image(p[:name])}/
           %article
             %h2.size2 In the spotlight:
             %h2.size2.name= p[:name]
@@ -57,7 +57,7 @@
             %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
               .img
                 / Height is same as .img height
-                %img{:alt => p[:title], :src => p[:image], :height => 110}/
+                %img{:alt => p[:title], :src => Person.small_image(p[:name]), :height => 110}/
               %h4= p[:name]
               %p.size0= p[:title]
         %li
