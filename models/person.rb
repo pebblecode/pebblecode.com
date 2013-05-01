@@ -226,6 +226,12 @@ class Person
     "/images/mug-shots/small/#{person[:image]}"
   end
 
+  def self.small_retina_image(name)
+    person = self.find_by_name(name)
+
+    "/images/mug-shots/small-retina/#{person[:image]}"
+  end
+
   def self.big_image(name)
     person = self.find_by_name(name)
 

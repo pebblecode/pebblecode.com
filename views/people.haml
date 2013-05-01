@@ -57,7 +57,7 @@
             %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
               .img
                 / Height is same as .img height
-                %img{:alt => p[:title], :src => Person.small_image(p[:name]), :height => 110}/
+                %img{:alt => p[:title], :src => Person.small_image(p[:name]), :"data-src2x" => Person.small_retina_image(p[:name]), :height => 110}/
               %h4= p[:name]
               %p.size0= p[:title]
         %li

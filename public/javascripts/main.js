@@ -56,10 +56,12 @@ require.config({
 });
 
 require([
-  "shared/random-colors"
+  "shared/random-colors",
+  "shared/retina"
   //"shared/footer" // Not showing map on all pages right now
-], function(randomColors) {
+], function(randomColors, retina) {
   "use strict";
 
   randomColors.init();
+  retina.init();
 });
