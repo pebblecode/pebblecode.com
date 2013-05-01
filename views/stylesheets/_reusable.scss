@@ -1,6 +1,7 @@
 //===============================================================================
 // REUSABLE-STYLES
 //===============================================================================
+// frame for images etc
 .frame{
   @include box-sizing(border-box);
   @include box-shadow(hsl(40, 30%, 95%) 3px 3px 0);
@@ -10,6 +11,7 @@
   background-color: white;
 }
 
+// text, background, & border color classes
 .pink{
   color: $pink; 
   
