@@ -8,54 +8,17 @@ define([
 ], function(_, _s, scrollTo, Backbone, urlHandler) {
   "use strict";
 
-  // From http://stackoverflow.com/a/5298684/111884
-  function removeHash() {
-    var scrollV, scrollH, loc = window.location;
-
-    if ("pushState" in history) {
-      history.pushState("", document.title, loc.pathname + loc.search);
-    } else {
-      // Prevent scrolling by storing the page's current scroll offset
-      scrollV = document.body.scrollTop;
-      scrollH = document.body.scrollLeft;
-
-      loc.hash = "";
-
-      // Restore the scroll offset, should be flicker free
-      document.body.scrollTop = scrollV;
-      document.body.scrollLeft = scrollH;
-    }
-  }
-
-  urlHandler.init({
-    routes: {
-      "people/:person": function(person) {
-        function havePersonSlug(slug) {
-          return ($("#" + slug).length > 0);
-        }
-
-        function selectSlug(slug) {
-          $("#spotlight .person-row").removeClass("active");
-          $("#" + slug).addClass("active");
-        }
-
-        var personSlug = _s.slugify(person);
-        if (havePersonSlug(personSlug)) {
-          selectSlug(personSlug);
-        } else { // No slug available
-          removeHash();
-        }
-      }
-    },
-    clickElem: ".person",
-    postClick: function(elem) {
-      $.scrollTo($('#spotlight-scroll'), 600);
-    }
-  });
-
   var Person = Backbone.Model.extend(),
     People = Backbone.Collection.extend({
-      model: Person
+      model: Person,
+      findBySlug: function findBySlug(slug) {
+        return _.find(this.models, function(person) {
+          return _s.slugify(person.get('name')) === slug;
+        });
+      },
+      havePersonSlug: function havePersonSlug(slug) {
+        return this.findBySlug(slug);
+      }
     }),
     people = new People(window.PEOPLE), // Init from global
     PersonView = Backbone.View.extend({
@@ -85,13 +48,48 @@ define([
         }));
         return this;
       }
-    }),
-    personView = new PersonView({
-      el: $("#spotlight"),
-      model: people.first()
     });
 
-  // TODO: Test code
-  window.people = people;
-  window.personView = personView;
+  // From http://stackoverflow.com/a/5298684/111884
+  function removeHash() {
+    var scrollV, scrollH, loc = window.location;
+
+    if ("pushState" in history) {
+      history.pushState("", document.title, loc.pathname + loc.search);
+    } else {
+      // Prevent scrolling by storing the page's current scroll offset
+      scrollV = document.body.scrollTop;
+      scrollH = document.body.scrollLeft;
+
+      loc.hash = "";
+
+      // Restore the scroll offset, should be flicker free
+      document.body.scrollTop = scrollV;
+      document.body.scrollLeft = scrollH;
+    }
+  }
+
+  urlHandler.init({
+    routes: {
+      "people/:person": function(personSlug) {
+        function selectSlug(slug) {
+          var personView = new PersonView({
+            el: $("#spotlight"),
+            model: people.findBySlug(slug)
+          });
+          personView.render();
+        }
+
+        if (people.havePersonSlug(personSlug)) {
+          selectSlug(personSlug);
+        } else { // No slug available
+          removeHash();
+        }
+      }
+    },
+    clickElem: ".person",
+    postClick: function(elem) {
+      $.scrollTo($('#spotlight-scroll'), 600);
+    }
+  });
 });
