@@ -58,11 +58,11 @@
           .frame
             .img
               / Height is same as .img height
-              %img{:alt => "{{ name }}", :src => "{{ big_image }}"}/
+              %img{:alt => "{{ name }}", :src => "{{ big_image }}", :class => "{{color}}-background"}/
           %article
             %h2.size2 In the spotlight:
-            %h2.size2.name= "{{ name }}"
-            %h3.size1= "{{ title }}"
+            %h2.size2.name{ :class => "{{color}}" }= "{{ name }}"
+            %h3.size1{ :class => "{{color}}" }= "{{ title }}"
             %div= "{{ description }}"
             :plain
               {% if (website) { %}

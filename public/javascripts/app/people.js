@@ -8,7 +8,23 @@ define([
 ], function(_, _s, scrollTo, Backbone, urlHandler) {
   "use strict";
 
-  var Person = Backbone.Model.extend(),
+  var Person = Backbone.Model.extend({
+    initialize: function() {
+      this.color = this._findColor();
+    },
+
+    /**
+     * Find colour of the person based on `data-color` attribute of heading
+     *
+     * @return {String} Colour of person
+     */
+    _findColor: function() {
+      var slug = _s.slugify(this.get('name')),
+        color = $(".person[href*='" + slug + "'] h4").attr("data-color");
+
+      return color;
+    }
+  }),
     People = Backbone.Collection.extend({
       model: Person,
       findBySlug: function findBySlug(slug) {
@@ -30,10 +46,17 @@ define([
       destroy: function(){
         delete this.model;
       },
-      render: function() {
+
+      /**
+       * Render the person in `this.el`
+       *
+       * @param color {String} Colour for the person spotlight
+       */
+      render: function(color) {
         var person = this.model;
 
         this.$el.html(this.template({
+          color: person.color,
           person: person,
           id: _s.slugify(person.get('name')),
           name: person.get('name'),
