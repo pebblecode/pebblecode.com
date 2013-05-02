@@ -34,10 +34,6 @@ define([
     $("#" + slug).addClass("active");
   }
 
-  function scrollToSpotlight() {
-    $.scrollTo($('#spotlight-scroll'), 600);
-  }
-
   // Set up router
   var AppRouter = Backbone.Router.extend({
     initialize: function() {
@@ -64,23 +60,39 @@ define([
   });
   var appRouter = new AppRouter();
 
-  // Enable pushState for compatible browsers
-  var enablePushState = true;
+  var init = function init(args) {
+    var clickElem = args.clickElem,
+        postClick = args.postClick;
 
-  // Disable for older browsers
-  var pushState = !!(enablePushState && window.history && window.history.pushState);
-  if (pushState) {
-    // Routing with person link
-    $(document).on("click", ".person", function(event) {
-      // Ignore control keys to open link in new window
-      if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
-        event.preventDefault();
-        // Remove initial /
-        var url = $(event.currentTarget).attr("href").replace(/^\//, "");
-        appRouter.navigate(url, { trigger: true });
-        scrollToSpotlight();
-      }
-    });
-  } // else link urls force a page refresh
-  Backbone.history.start({ pushState: pushState, hashChange: pushState });
+
+    // Enable pushState for compatible browsers
+    var enablePushState = true;
+    // Disable for older browsers
+    var pushState = !!(enablePushState && window.history && window.history.pushState);
+    if (pushState) {
+      // Routing with person link
+      $(document).on("click", clickElem, function(event) {
+        // Ignore control keys to open link in new window
+        if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
+          event.preventDefault();
+          // Remove initial /
+          var url = $(event.currentTarget).attr("href").replace(/^\//, "");
+          appRouter.navigate(url, { trigger: true });
+
+          if (postClick) {
+            postClick(event.target);
+          }
+        }
+      });
+    } // else link urls force a page refresh
+    Backbone.history.start({ pushState: pushState, hashChange: pushState });
+  };
+
+  init({
+    clickElem: ".person",
+    postClick: function(elem) {
+      $.scrollTo($('#spotlight-scroll'), 600);
+    }
+  });
+  // return router;
 });
