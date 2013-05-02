@@ -87,6 +87,13 @@ define([
   };
 
   return {
+    /**
+     * Initialise url handler
+     *
+     * @param args {Object} Arguments for initialisation
+     *   @param clickElem {string} The selector of the element clicked to change the url (location in `href` attribute)
+     *   @param [postClick] {function(elem)} Function called after a click
+     */
     init: init
   };
 });
