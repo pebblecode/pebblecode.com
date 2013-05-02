@@ -2,10 +2,18 @@
 define([
   "underscore",
   "underscore.string",
+  "jquery.scrollTo",
   "backbone",
   "urlHandler"
-], function(_, _s, Backbone, urlHandler) {
+], function(_, _s, scrollTo, Backbone, urlHandler) {
   "use strict";
+
+  urlHandler.init({
+    clickElem: ".person",
+    postClick: function(elem) {
+      $.scrollTo($('#spotlight-scroll'), 600);
+    }
+  });
 
   var Person = Backbone.Model.extend(),
     People = Backbone.Collection.extend({

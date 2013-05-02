@@ -1,9 +1,8 @@
 define([
   "jquery",
-  "jquery.scrollTo",
   "backbone",
   "underscore.string"
-], function($, scrollTo, Backbone, _s) {
+], function($, Backbone, _s) {
   "use strict";
 
   // From http://stackoverflow.com/a/5298684/111884
@@ -64,7 +63,6 @@ define([
     var clickElem = args.clickElem,
         postClick = args.postClick;
 
-
     // Enable pushState for compatible browsers
     var enablePushState = true;
     // Disable for older browsers
@@ -88,11 +86,7 @@ define([
     Backbone.history.start({ pushState: pushState, hashChange: pushState });
   };
 
-  init({
-    clickElem: ".person",
-    postClick: function(elem) {
-      $.scrollTo($('#spotlight-scroll'), 600);
-    }
-  });
-  // return router;
+  return {
+    init: init
+  };
 });
