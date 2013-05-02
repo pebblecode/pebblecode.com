@@ -14,6 +14,11 @@
 - content_for :keywords do
   people, team, skills, skilled, creative, .NET, C#, F#, Node.js, Ruby on Rails, JavaScript, project, development, expertise, personalities, ideas
 
+- selected_person_index = Person.slug_index(@person_slug)
+-# Show selected person index or show a random one
+- person_index = selected_person_index ? selected_person_index : Person.random_person_index
+- person = Person.find_by_index(person_index)
+
 .row.headline
   %h1.size3 Our People
 %section.row.people-copy
@@ -30,10 +35,6 @@
   %hr.background-random
   %ul.row
     %li#spotlight.columns2
-      - selected_person_index = Person.slug_index(@person_slug)
-      -# Show selected person index or show a random one
-      - person_index = selected_person_index ? selected_person_index : Person.random_person_index
-      - person = Person.find_by_index(person_index)
       %section{:id => person[:name].to_slug, :"data-tumblr" => person[:tumblr_name], :class => "person-row active"}
         .frame
           .img
@@ -80,7 +81,7 @@
     %li.columns4
       %ul.row.people-list
         - @people.each do |p|
-          %li
+          %li{:class => (p == person) ? "active" : ""}
             %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
               .img
                 / Height is same as .img height

@@ -52,6 +52,13 @@ define([
       $(".img", obj).addClass(randColor + "-background");
       $(".img", obj).attr("data-color", randColor);
     });
+
+    // Color spotlight person row the same as listing.
+    // Only needed in initialisation.
+    var spotlightPersonColor = $(".people-list .active h4").attr("data-color"),
+      spotlightPerson = $("#spotlight .person-row");
+    $(spotlightPerson).find(".name, h3").addClass(spotlightPersonColor);
+    $(spotlightPerson).find(".img").addClass(spotlightPersonColor + "-background");
   }
 
   return {
