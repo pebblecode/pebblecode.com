@@ -9,22 +9,22 @@ define([
   "use strict";
 
   var Person = Backbone.Model.extend({
-    initialize: function() {
-      this.color = this._findColor();
-    },
+      initialize: function() {
+        this.color = this._findColor();
+      },
 
-    /**
-     * Find colour of the person based on `data-color` attribute of heading
-     *
-     * @return {String} Colour of person
-     */
-    _findColor: function() {
-      var slug = _s.slugify(this.get('name')),
-        color = $(".person[href*='" + slug + "'] h4").attr("data-color");
+      /**
+       * Find colour of the person based on `data-color` attribute of heading
+       *
+       * @return {String} Colour of person
+       */
+      _findColor: function() {
+        var slug = _s.slugify(this.get('name')),
+          color = $(".person[href*='" + slug + "'] h4").attr("data-color");
 
-      return color;
-    }
-  }),
+        return color;
+      }
+    }),
     People = Backbone.Collection.extend({
       model: Person,
       findBySlug: function findBySlug(slug) {
