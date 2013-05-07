@@ -33,6 +33,8 @@ This is a simple brochure site written with [sinatra][1].
 
    where the first parameter is the port number.
 
+   Note that you will need to add the IP address to typekit for fonts to show.
+
 
 ## Automatic reloading
 
