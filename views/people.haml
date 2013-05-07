@@ -44,7 +44,7 @@
           %h2.size2 In the spotlight:
           %h2.size2.name= person[:name]
           %h3.size1= person[:title]
-          %div= RDiscount.new(person[:description]).to_html
+          %div= person[:description]
           - if person[:website]
             %a{:href => person[:website], :target => "_blank", :class => "person-link frame website"} Website
           - if person[:twitter]
