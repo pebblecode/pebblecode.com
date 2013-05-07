@@ -129,7 +129,9 @@ Install casper
 
 Run tests
 
-    grunt test
+    grunt test --url=[server-url]
+
+where `[server-url]` is the development server url to test on
 
 ## Deployment
 

@@ -2,8 +2,15 @@
 
 casper.test.comment('Load pre.js');
 
+var BASEURL = casper.cli.get('url');
+if (BASEURL === "undefined") {
+  casper.test.fail("Base url not defined. Use --url to define a url to test on");
+}
+// Add trailing slash
+BASEURL.replace(/\/?$/, '/');
+
 var utils = {
-  baseUrl: "http://192.168.3.148:7888/"
+  baseUrl: BASEURL
 };
 
 var paths = {

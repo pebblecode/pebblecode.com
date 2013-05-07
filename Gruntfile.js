@@ -86,6 +86,9 @@ module.exports = function (grunt) {
       dist: {
         src: ['tests/pages/*'],
         options: {
+          args: {
+            url: grunt.option('url')
+          },
           direct: true,
           logLevel: 'info',
           failFast: true,
