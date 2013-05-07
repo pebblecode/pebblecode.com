@@ -97,8 +97,13 @@ To force the page to use the production js, add `prod` as a query parameter in t
 
 ## Tests
 
-
 Uses [rspec](http://rspec.info/) for unit tests and [casperjs](http://casperjs.org/) for integration tests (probably remove one of them in future).
+
+To run all tests (rspec + casper)
+
+    bundle exec rake test:all[server-url]
+
+where `server-url` is the development server url to test on
 
 ### RSpec
 
@@ -129,9 +134,9 @@ Install casper
 
 Run tests
 
-    grunt test --url=[server-url]
+    grunt test --url=server-url
 
-where `[server-url]` is the development server url to test on
+where `server-url` is the development server url to test on
 
 ## Deployment
 
