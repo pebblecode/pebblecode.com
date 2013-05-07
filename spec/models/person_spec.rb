@@ -21,6 +21,15 @@ describe Person do
     end
   end
 
+  describe "#slug" do
+    it "returns a slug" do
+      person = {
+        :name => "Toby Hunt"
+      }
+      expect(Person.slug(person)).to eql("/people/toby-hunt")
+    end
+  end
+
   # Note: these tests could break if people add/remove
   # tumblr accounts
   describe "#all_with_tumblr_name" do

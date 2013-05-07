@@ -82,7 +82,7 @@
       %ul.row.people-list
         - @people.each do |p|
           %li{:class => (p == person) ? "active" : ""}
-            %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
+            %a{:href => Person.slug(p), :class => "columns1 frame person"}
               .img
                 / Height is same as .img height
                 %img{:alt => p[:title], :src => Person.small_image(p[:name]), :"data-src2x" => Person.small_retina_image(p[:name]), :height => 110}/

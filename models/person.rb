@@ -224,6 +224,10 @@ class Person
     @people.select {|p| p[:name].to_slug == slug}.length > 0
   end
 
+  def self.slug(person)
+    "/people/#{person[:name].to_slug}"
+  end
+
   def self.small_image(name)
     person = self.find_by_name(name)
 
