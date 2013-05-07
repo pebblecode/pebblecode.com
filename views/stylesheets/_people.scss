@@ -22,13 +22,6 @@
       margin-bottom: $baseline;
     }
 
-    .person-row{
-      display: none;
-
-      &.active{
-        display: block;
-      }
-    }
     hr{
       margin-bottom: $baseline;
     }

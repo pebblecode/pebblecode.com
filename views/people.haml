@@ -35,7 +35,7 @@
   %hr.background-random
   %ul.row
     %li#spotlight.columns2
-      %section{:id => person[:name].to_slug, :"data-tumblr" => person[:tumblr_name], :class => "person-row active"}
+      %section{:id => person[:name].to_slug, :"data-tumblr" => person[:tumblr_name], :class => "person-row"}
         .frame
           .img
             / Height is same as .img height
@@ -55,7 +55,7 @@
             %a{:href => person[:linkedin], :target => "_blank", :class => "person-link frame linkedin"} linkedin
       // Duplicate of above, but for js templates
       %script#person-template{:type => "text/template"}
-        %section{:id => "{{ id }}", :"data-tumblr" => "{{ tumblr_name }}", :class => "person-row active"}
+        %section{:id => "{{ id }}", :"data-tumblr" => "{{ tumblr_name }}", :class => "person-row"}
           .frame
             .img{:class => "{{color}}-background"}
               / Height is same as .img height
