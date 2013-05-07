@@ -57,9 +57,9 @@
       %script#person-template{:type => "text/template"}
         %section{:id => "{{ id }}", :"data-tumblr" => "{{ tumblr_name }}", :class => "person-row active"}
           .frame
-            .img
+            .img{:class => "{{color}}-background"}
               / Height is same as .img height
-              %img{:alt => "{{ name }}", :src => "{{ big_image }}", :class => "{{color}}-background"}/
+              %img{:alt => "{{ name }}", :src => "{{ big_image }}"}/
           %article
             %h2.size2 In the spotlight:
             %h2.size2.name{ :class => "{{color}}" }= "{{ name }}"
