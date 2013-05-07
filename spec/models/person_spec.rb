@@ -7,8 +7,6 @@ describe Person do
     end
   end
 
-  # Bad test, as it's tied to data in Person, but works
-  # for now
   describe "#find_by_index" do
     it "finds Toby Hunt" do
       person = Person.find_by_index(0)
@@ -16,8 +14,6 @@ describe Person do
     end
   end
 
-  # Bad test, as it's tied to data in Person, but works
-  # for now
   describe "#find_by_name" do
     it "finds Toby Hunt" do
       person = Person.find_by_name("Toby Hunt")
@@ -25,9 +21,6 @@ describe Person do
     end
   end
 
-  # Bad test, as it's tied to data in Person, but works
-  # for now
-  #
   # Note: these tests could break if people add/remove
   # tumblr accounts
   describe "#all_with_tumblr_name" do
