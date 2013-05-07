@@ -7,7 +7,6 @@ require './lib/constants'
 require 'haml'
 require 'sass'
 require 'compass'
-require 'rdiscount'
 require 'sinatra/content_for'
 require 'newrelic_rpm'
 
