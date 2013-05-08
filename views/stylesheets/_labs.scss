@@ -1,0 +1,240 @@
+//===============================================================================
+// LABS
+//===============================================================================
+.page-labs{
+
+  .row:first-child{
+    margin-top: $baseline*2;
+    margin-bottom: $baseline;
+
+    .columns6{
+      margin-left: 0;
+
+      h2{
+        margin-top: $baseline;
+        font-size: 1.5em;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .row:nth-child(2){
+    margin-bottom: $baseline*2;
+  }
+
+  .tricklr,
+  .vistazo{
+
+    .frame,
+    div{
+      float: left;
+      width: 47.5%;
+    }
+
+    .product-container{
+      margin-left: 5%;
+    }
+
+    .img{
+      width: 100%;
+      height: $baseline*9;
+      background-color: $pink;
+      background-image: url("/images/tricklr.jpg");
+      background-position: 50%;
+    }
+
+    a{
+      color: $pink;
+    }
+  }
+
+  h2{
+    margin-bottom: $baseline;
+  }
+
+  hr{
+    margin-bottom: $baseline;
+  }
+
+  .open-source{
+    .columns6 {
+      margin-left: 0;
+    }
+    p{
+      margin-top: $baseline;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.project{
+
+}
+
+.projects-list{
+  margin: 0 auto;
+
+  img{
+    width: 100%;
+  }
+
+  .project{
+    width: 300px;
+    margin: 5px;
+  }
+}
+
+.project-by{
+  margin: ($baseline / 2) 0;
+  font-weight: bold;
+
+  &:before{
+    content: "by "
+  }
+}
+
+.project-link{
+  margin-right: .5em;
+
+  &:after{
+    font-family: 'pc_social';
+    margin-left: .5em;
+  }
+
+  &.live-link:after{
+    content: "W";
+  }
+
+  &.blog-link:after{
+    content: "B";
+  }
+
+  &.github-link:after{
+    content: "G";
+  }
+}
+
+.labs-header{
+  $stop: 100% / 7;
+  @include background-image(linear-gradient($pink   $stop * 0, $pink   $stop * 1,
+                                            $purple $stop * 1, $purple $stop * 2,
+                                            $blue   $stop * 2, $blue   $stop * 3,
+                                            $aqua   $stop * 3, $aqua   $stop * 4,
+                                            $green  $stop * 4, $green  $stop * 5,
+                                            $orange $stop * 5, $orange $stop * 6,
+                                            $pink   $stop * 6, $pink   $stop * 7));
+
+  position: relative;
+  height: 165px;
+  width: 100%;
+  margin: $baseline*4 0 $baseline;
+  background-color: $pink;
+  background-size: 100% 700%;
+  -webkit-animation: colors 30s linear infinite;
+  -moz-animation: colors 30s linear infinite;
+  -o-animation: colors 30s linear infinite;
+}
+
+@-webkit-keyframes colors {
+        0% {background-position-y: (100% / 6) * 6;}
+  15.6666% {background-position-y: (100% / 6) * 6;}
+  16.6666% {background-position-y: (100% / 6) * 5;}
+  32.3333% {background-position-y: (100% / 6) * 5;}
+  33.3333% {background-position-y: (100% / 6) * 4;}
+  49.0000% {background-position-y: (100% / 6) * 4;}
+  50.0000% {background-position-y: (100% / 6) * 3;}
+  65.6666% {background-position-y: (100% / 6) * 3;}
+  66.6666% {background-position-y: (100% / 6) * 2;}
+  82.3333% {background-position-y: (100% / 6) * 2;}
+  83.3333% {background-position-y: (100% / 6) * 1;}
+  99.0000% {background-position-y: (100% / 6) * 1;}
+      100% {background-position-y: (100% / 6) * 0;}
+}
+
+@-moz-keyframes colors {
+        0% {background-position-y: (100% / 6) * 6;}
+  15.6666% {background-position-y: (100% / 6) * 6;}
+  16.6666% {background-position-y: (100% / 6) * 5;}
+  32.3333% {background-position-y: (100% / 6) * 5;}
+  33.3333% {background-position-y: (100% / 6) * 4;}
+  49.0000% {background-position-y: (100% / 6) * 4;}
+  50.0000% {background-position-y: (100% / 6) * 3;}
+  65.6666% {background-position-y: (100% / 6) * 3;}
+  66.6666% {background-position-y: (100% / 6) * 2;}
+  82.3333% {background-position-y: (100% / 6) * 2;}
+  83.3333% {background-position-y: (100% / 6) * 1;}
+  99.0000% {background-position-y: (100% / 6) * 1;}
+      100% {background-position-y: (100% / 6) * 0;}
+}
+
+@-o-keyframes colors {
+        0% {background-position-y: (100% / 6) * 6;}
+  15.6666% {background-position-y: (100% / 6) * 6;}
+  16.6666% {background-position-y: (100% / 6) * 5;}
+  32.3333% {background-position-y: (100% / 6) * 5;}
+  33.3333% {background-position-y: (100% / 6) * 4;}
+  49.0000% {background-position-y: (100% / 6) * 4;}
+  50.0000% {background-position-y: (100% / 6) * 3;}
+  65.6666% {background-position-y: (100% / 6) * 3;}
+  66.6666% {background-position-y: (100% / 6) * 2;}
+  82.3333% {background-position-y: (100% / 6) * 2;}
+  83.3333% {background-position-y: (100% / 6) * 1;}
+  99.0000% {background-position-y: (100% / 6) * 1;}
+      100% {background-position-y: (100% / 6) * 0;}
+}
+
+.labs-header-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 165px;
+  width: 100%;
+  background-image: url('/images/labs.png');
+  background-position: center center;
+}
+
+.labs-spotlight{
+
+  .frame{
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  .project{
+    display: none;
+  }
+
+  .project.active{
+    display: block;
+  }
+
+  .pebblers,
+  .date{
+    margin: 0;
+  }
+}
+
+.labs-filtering{
+  margin: 0 0 .7em;
+  text-align: center;
+}
+
+.filter{
+  font-size: 1em;
+  color: hsl(0, 0%, 50%);
+  padding: .3em .4em;
+  margin: 0 .5em .8em 0;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #EFEFEF;
+  }
+
+  &.active{
+    @include box-shadow(inset 3px 0 0 red);
+  }
+}

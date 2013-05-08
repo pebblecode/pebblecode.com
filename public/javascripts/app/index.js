@@ -34,18 +34,18 @@ define([
   function populateRecentPosts(elemSel) {
     var MAX_POSTS = 3;
 
-    var tumblrApiUrl = _.template("http://blog.pebblecode.com/api/read/json?num=<%= maxPosts %>&callback=?");
+    var tumblrApiUrl = _.template("http://blog.pebblecode.com/api/read/json?num={{ maxPosts }}&callback=?");
     var tumblrUrl = tumblrApiUrl({ maxPosts: MAX_POSTS });
 
     var recentPostTemplate = _.template(" \
       <h2 class='size2'>Latest blog posts</h2> \
       <ul> \
-        <% _.each(tumblrPosts, function(post) { %> \
-          <li>&#8226;&#160;<a href='<%= post.url %>'><%= post['regular-title'] %></a></li> \
-        <% }) %> \
+        {% _.each(tumblrPosts, function(post) { %} \
+          <li>&#8226;&#160;<a href='{{ post.url }}'>{{ post['regular-title'] }}</a></li> \
+        {% }); %} \
       </ul> \
     ");
-    // var recentPost = _.template("<li><a href='<%= url %>'><%= title %></a></li>");
+    // var recentPost = _.template("<li><a href='{{ url }}'>{{ title }}</a></li>");
     $.getJSON(tumblrUrl, function(tumblrData) {
       if (tumblrData !== null) {
         var recentPostsHtml = recentPostTemplate({ tumblrPosts: tumblrData.posts });

@@ -7,7 +7,6 @@ require './lib/constants'
 require 'haml'
 require 'sass'
 require 'compass'
-require 'rdiscount'
 require 'sinatra/content_for'
 require 'newrelic_rpm'
 
@@ -40,7 +39,7 @@ end
 
 get '/stylesheets/screen.css' do
   content_type 'text/css', :charset => 'utf-8'
-  scss :'stylesheets/screen'
+  scss :'stylesheets/screen', :style => :compressed
 end
 
 # Show lib/robots_txt_to_exclude_all.txt

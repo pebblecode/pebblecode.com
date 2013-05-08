@@ -2,7 +2,6 @@
 
 This is a simple brochure site written with [sinatra][1].
 
-
 ## Installation
 
 1. Install bundler
@@ -20,9 +19,22 @@ This is a simple brochure site written with [sinatra][1].
 
 5. Start the server
 
-	    rake server
+	      rake server
 
-Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
+   Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
+
+   To change the port number, run
+
+        rake server[8888]
+
+   If you want run on a local ip address (eg, to test on an external device), run
+
+        rake server[7100,true]
+
+   where the first parameter is the port number.
+
+   Note that you will need to add the IP address to typekit for fonts to show.
+
 
 ## Automatic reloading
 
@@ -71,7 +83,7 @@ To create a new javascript page
 
 ### Optimization
 
-To optimization the css/javascript files for production run
+To optimize the css/javascript files for production run
 
     grunt build
 
@@ -85,8 +97,13 @@ To force the page to use the production js, add `prod` as a query parameter in t
 
 ## Tests
 
-
 Uses [rspec](http://rspec.info/) for unit tests and [casperjs](http://casperjs.org/) for integration tests (probably remove one of them in future).
+
+To run all tests (rspec + casper)
+
+    bundle exec rake test:all[server-url]
+
+where `server-url` is the development server url to test on
 
 ### RSpec
 
@@ -117,7 +134,9 @@ Install casper
 
 Run tests
 
-    grunt test
+    grunt test --url=server-url
+
+where `server-url` is the development server url to test on
 
 ## Deployment
 
@@ -214,15 +233,15 @@ To do this
 
 1. Generate the changes with
 
-    bundle exec rake sitemap:refresh:no_ping
+      bundle exec rake sitemap:refresh:no_ping
 
 2. Commit and push updates to production
 
-    bundle exec rake shipit[production]
+      bundle exec rake shipit[production]
 
 3. Ping the search engines
 
-    rake sitemap:ping_search_engines
+      rake sitemap:ping_search_engines
 
 ### Seach engine web master tools
 
