@@ -65,7 +65,7 @@ class Person
       :name => "Tak Tran",
       :title => "Software Developer",
       :image => "tak.png",
-      :description => "A UK-born, Sydney-raised web developer who's predominantly embedded in the world of Ruby and other (often hipster) related technologies. Tak finds great joy in discussing software craftsmanship, food and universal ideas.",
+      :description => "A UK-born, Sydney-raised web developer who's predominantly embedded in the world of Ruby and Javascript, but aspires to be a polyglot. Tak finds great joy in discussing software craftsmanship, food and universal ideas.",
       :twitter => "http://twitter.com/zlog",
       :github => "https://github.com/taktran",
       :tumblr_name => "tutaktran"
