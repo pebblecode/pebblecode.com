@@ -2,7 +2,7 @@
 // HEADER
 //===============================================================================
 // global header styles
-header{
+header {
   @include box-shadow(hsla(0, 0%, 0%, 0.1) 0 5px 0);
 
   position: fixed;
@@ -12,13 +12,13 @@ header{
   width: 100%;
 }
 
-nav{
+nav {
   margin: 0 auto;
   max-width: $grid-max-width;
   width: 100%;
   height: 40px;
 
-  ul{
+  ul {
     float: right;
     margin-right: 5px;
     letter-spacing: 1px;
@@ -27,28 +27,28 @@ nav{
     line-height: 38px;
   }
 
-  li{
+  li {
     float: left;
     margin-left: 10px;
 
     &:hover a,
-    &:hover span{
+    &:hover span {
       color: white;
       text-decoration: none;
     }
   }
 
-  a{
+  a {
     color: white;
   }
 
-  span{
+  span {
     color: $pink;
     font-weight: bold;
   }
 }
 
-.logo{
+.logo {
   display: block;
   float: left;
   margin-top: 10px;
@@ -59,6 +59,6 @@ nav{
   text-indent: -9999px;
 }
 
-.nav-active span{
+.nav-active span {
   color: white;
 }

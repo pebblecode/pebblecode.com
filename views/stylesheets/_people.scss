@@ -1,28 +1,28 @@
 //===============================================================================
 // PEOPLE
 //===============================================================================
-.page-people{
+.page-people {
   .headline {
     margin-top: $baseline*2;
     margin-bottom: $baseline;
   }
 
-  .people-copy{
+  .people-copy {
     margin-bottom: 0; // Spacing in h1, instead of here (for # linking)
   }
 
-  #spotlight{
+  #spotlight {
     margin-bottom: $baseline*2;
 
 
-    .row:first-child{
+    .row:first-child {
       margin-bottom: $baseline;
     }
-    .row:nth-child(3){
+    .row:nth-child(3) {
       margin-bottom: $baseline;
     }
 
-    hr{
+    hr {
       margin-bottom: $baseline;
     }
 
@@ -32,12 +32,12 @@
       &.top {
         display: none; // Showing bottom image
       }
-      .img{
+      .img {
         text-align: center;
         height: $baseline*12;
       }
 
-      img{
+      img {
         width: 100%;
         max-width: $baseline*12;
       }
@@ -52,25 +52,25 @@
     h1 {
       margin-top: $baseline*2;
     }
-    h3{
+    h3 {
       margin-bottom: $baseline;
     }
-    .link{
+    .link {
       margin-bottom: 0;
     }
   }
 
-  .employees{
+  .employees {
     .row:first-child,
-    .row:nth-child(3){
+    .row:nth-child(3) {
       margin-bottom: $baseline;
     }
-    hr{
+    hr {
       margin-bottom: $baseline;
     }
 
     .person,
-    .join-us{
+    .join-us {
       display: block;
       margin-bottom: $baseline;
       min-height: 205px;
@@ -78,72 +78,72 @@
       width: 22%;
       margin-right: 4%;
 
-      .size0{
+      .size0 {
         line-height: 16px;
       }
 
-      &:hover{
+      &:hover {
         text-decoration: none;
       }
 
-      .img{
+      .img {
         width: 100%;
         height: $baseline*5;
         margin-bottom: 7px;
         text-align: center;
       }
-      p{
+      p {
         margin-bottom: -5px;
       }
     }
 
-    li:nth-child(4n) a{
+    li:nth-child(4n) a {
       margin-right: 0;
     }
   }
 
-  .plus{
+  .plus {
     color: hsla(0,0,100,.75);
     font-size: 10em;
     line-height: .45;
   }
 }
 
-.people-list{
+.people-list {
   // float: left;
   // width: $column-width*4 + $column-gutter*3;
 }
 
-.person-link{
+.person-link {
   line-height: 3.2;
   color: hsl(0, 0%, 50%);
   padding: .3em .4em;
   margin: 0 .5em .8em 0;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     text-decoration: none;
     background-color: #EFEFEF;
   }
 
-  &:after{
+  &:after {
     font-family: 'pc_social';
     margin-left: .5em;
   }
 
-  &.website:after{
+  &.website:after {
     content: "P";
   }
 
-  &.twitter:after{
+  &.twitter:after {
     content: "T";
   }
 
-  &.github:after{
+  &.github:after {
     content: "G";
   }
 
-  &.linkedin:after{
+  &.linkedin:after {
     content: "L";
   }
 }

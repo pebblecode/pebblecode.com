@@ -7,7 +7,7 @@
     margin-top: $baseline*2;
     margin-bottom: $baseline;
 
-    h2{
+    h2 {
       margin-top: $baseline;
       line-height: 1.2;
       font-size: 1.5em;
@@ -19,7 +19,7 @@
     }
   }
 
-  .row:nth-child(2){
+  .row:nth-child(2) {
     margin-bottom: $baseline;
   }
 
@@ -63,14 +63,14 @@
   }
 }
 
-.pebble-it{
+.pebble-it {
   padding: $baseline*2 0 $baseline;
   margin-bottom: 10em;
 
-  .row{
+  .row {
     margin-bottom: $baseline;
   }
-  h1,a{
+  h1,a {
     color: #009be8;
   }
 }
