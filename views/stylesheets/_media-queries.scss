@@ -3,39 +3,46 @@
 //===============================================================================
 /* @group media queries Group */
 @media only screen and (max-width: 650px) {
-[class*=columns]{
+[class*=columns] {
   width: 100%;
   margin-left: 0;
 }
-#wrap #wrap-footer{
+
+#wrap #wrap-footer {
   height: 80px;
 }
-.row{
+
+.row {
   margin-bottom: $baseline;
 }
-.size3{
-  font-size: 38px;
-  line-height: $baseline*2;
-}
-.size4{
+
+.size3 {
   font-size: 38px;
   line-height: $baseline*2;
 }
 
+.size4 {
+  font-size: 38px;
+  line-height: $baseline*2;
+}
 
-header{
+header {
   position: relative;
   height: $baseline*5 +8px;
-  nav{
-    .logo{
+
+  nav {
+
+    .logo {
       float: left;
       margin-top: 47px;
     }
-    ul{
+
+    ul {
       font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
       line-height: 18px;
       width: 50%;
-      li{
+
+      li {
         float: left;
         width: 100%;
         text-align: right;
@@ -47,7 +54,8 @@ header{
 
 
 .page-homepage {
-  .row:first-child{
+
+  .row:first-child {
     margin-top: $baseline;
   }
 
@@ -56,11 +64,15 @@ header{
 
     .slides_container {
       height: 330px;
+
       li {
+
         &.slide1 {
+
           h1:first-child {
             margin-bottom: 0;
           }
+
           h1:nth-child(2) {
             margin-top: 0;
             font-size: 35px;
@@ -68,36 +80,40 @@ header{
             margin-bottom: $baseline;
           }
         }
-        &.slide2 h2{
+
+        &.slide2 h2 {
             line-height: 1.2;
         }
       }
+
       .size2 {
         font-size: 24px;
         line-height: $baseline*1.5 ;
       }
     }
   }
+
   .columns2 {
     a {
       margin-bottom: $baseline*2;
-    }
-    .blog-snippet {
-
     }
   }
 }
 
 
 .page-work {
+
   .row:first-child {
     margin-top: 0;
+
     .columns3 {
       margin-top: -25px;
     }
   }
+
   .case-study {
     margin-bottom: 0;
+
     &:nth-child(4) {
       padding-top: 0;
       margin-bottom: -$baseline;
@@ -118,21 +134,20 @@ header{
           height: $baseline*4;
           padding-top: $baseline;
 
-          h2{
+          h2 {
             margin-top: 0;
           }
 
-          &.clarity{
+          &.clarity {
             height: $baseline*5;
             padding: 10px 0;
 
-            h2{
+            h2 {
               line-height: 1.1;
             }
           }
         }
       }
-
     }
   }
 
@@ -152,15 +167,16 @@ header{
 
 
 .page-labs {
+
   .row:first-child {
     margin-top: $baseline;
 
-    .columns6:first-child{
+    .columns6:first-child {
       margin-top: -25px;
     }
   }
 
-  .filter{
+  .filter {
     font-size: .9em;
   }
 
@@ -171,47 +187,53 @@ header{
   h2 {
     margin-bottom: $baseline;
   }
+
   hr {
     margin-bottom: $baseline;
   }
-  .open-source {
-    p{
-      margin-top: $baseline;
-    }
+
+  .open-source p {
+    margin-top: $baseline;
   }
 
-  .tricklr{
-    .frame{
+  .tricklr {
+
+    .frame {
       width: 100%;
     }
 
-    .product-container{
+    .product-container {
       margin-left: 0;
       margin-bottom: $baseline;
       width: 100%;
     }
   }
 
-  .project .frame{
+  .project .frame {
     display: none;
   }
 }
 
-.labs-header{
+.labs-header {
   margin: $baseline*2 0 $baseline;
 }
 
 .page-people {
+
   .headline {
     margin-top: 0;
   }
+
   .people-copy {
     margin-bottom: 0;
   }
+
   #spotlight {
+
     .row:first-child {
       margin-bottom: $baseline;
     }
+
     hr {
       margin-bottom: $baseline;
     }
@@ -224,14 +246,17 @@ header{
       &.top {
         display: block; // Showing bottom image
       }
+
       &.bottom {
         display: none; // Showing bottom image
       }
-      .img{
+
+      .img {
         width: 100%;
         position: static;
       }
-      img{
+
+      img {
         position: static;
       }
     }
@@ -239,6 +264,7 @@ header{
     article { // Next row under image
       width: 100%;
       float: none;
+
       .inner-wrapper {
         margin-left: 0;
       }
@@ -247,26 +273,30 @@ header{
     h1 {
       margin-top: $baseline;
     }
+
     h2 {
       margin-top: $baseline;
       margin-bottom: $baseline;
     }
+
     h3 {
       margin-bottom: $baseline;
       font-size: 16px;
       line-height: $baseline;
     }
+
     .link {
       margin-bottom: 0;
-      a{
+      a {
         color: $green;
       }
     }
   }
 
   .employees {
+
     .person,
-    .join-us{
+    .join-us {
         width: 45%;
         float: left;
         margin-left: 0;
@@ -274,13 +304,13 @@ header{
         margin-bottom: $baseline;
         min-width: 125px;
         height: 210px;
-      p{
+      p {
         margin-bottom: -5px;
       }
     }
-    // li:nth-child(2n){
+    // li:nth-child(2n) {
     //   .person,
-    //   .join-us{
+    //   .join-us {
     //     margin-right: 0;
     //   }
     // }
@@ -288,40 +318,41 @@ header{
 }
 
 .page-thoughts {
-  #thoughts-heading {
-    margin-top: -15px;
-  }
+
   hr {
     margin-bottom: $baseline;
   }
-  .blog-post {
-    margin-bottom: $baseline*3;
-    .img {
-      background: $orange;
-      height: $baseline*8;
-    }
-  }
-  .blog-sidebar {
-    display: none;
+}
+
+.blog-post {
+  margin-bottom: $baseline*3;
+
+  .img {
+    background: $orange;
+    height: $baseline*8;
   }
 }
 
-.page-thoughts #blog-navigation{
+.blog-sidebar {
+  display: none;
+}
+
+#blog-navigation {
   width: 100%;
 }
 
-.page-address {
-  .size2 {
-    font-size: 16px;
-    line-height: $baseline;
-  }
+.page-address .size2 {
+  font-size: 16px;
+  line-height: $baseline;
 }
 
 .page-find-us {
+
   .size2 {
     font-size: 16px;
     line-height: $baseline;
   }
+
   .row:first-child {
     margin-top: $baseline;
   }
@@ -335,25 +366,26 @@ header{
 
 
 .slides_container {
-  .size4{
+  height: 330px;
+
+  .size4 {
     font-size: 38px;
     line-height: $baseline*2;
   }
 
-  height: 330px;
-  li {
-    &.slide1 {
-      h1:first-child {
-        margin-bottom: 0;
-      }
-      h1:nth-child(2) {
-        margin-top: 0;
-        font-size: 35px;
-        line-height: $baseline*3;
-        margin-bottom: $baseline;
-      }
+  li.slide1 {
+    h1:first-child {
+      margin-bottom: 0;
+    }
+
+    h1:nth-child(2) {
+      margin-top: 0;
+      font-size: 35px;
+      line-height: $baseline*3;
+      margin-bottom: $baseline;
     }
   }
+
   .size2 {
     font-size: 24px;
     line-height: $baseline*1.5 ;
@@ -368,12 +400,13 @@ header{
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
+
   #social li a {
     background-image: url('/images/social@2x.png') !important;
     background-size: 100px 20px;
   }
 
-  .logo{
+  .logo {
     background-image: url('/images/logo@2x.png') !important;
     background-size: 142px 23px;
   }
@@ -440,42 +473,42 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 
 @media only screen and (max-width: 1140px) {
-  .page-people .employees{
+  .page-people .employees {
 
     .person,
-    .join-us{
+    .join-us {
       width: 30%;
       margin-right: 5%;
     }
 
-    li:nth-child(4n) a{
+    li:nth-child(4n) a {
       margin-right: 5%;
     }
 
-    li:nth-child(3n) a{
+    li:nth-child(3n) a {
       margin-right: 0;
     }
   }
 }
 
 @media only screen and (max-width: 830px) {
-  .page-people .employees{
+  .page-people .employees {
 
     .person,
-    .join-us{
+    .join-us {
       width: 47.5%;
       margin-right: 0;
     }
 
-    li:nth-child(3n) a{
+    li:nth-child(3n) a {
       margin-right: 0;
     }
 
-    li:nth-child(4n) a{
+    li:nth-child(4n) a {
       margin-right: 0;
     }
 
-    li:nth-child(2n-1) a{
+    li:nth-child(2n-1) a {
       margin-right: 5%;
     }
   }
@@ -483,13 +516,14 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 @media only screen and (max-width: 1020px) {
   #spotlight .frame { // Left float
-    .img{
+
+    .img {
       text-align: center;
       height: $baseline*12;
       position: relative;
     }
 
-    img{
+    img {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -503,12 +537,12 @@ only screen and (min-device-pixel-ratio : 1.5) {
 // MINI-MUGSHOTS
 // stles for using images as avatars
 // =========================================================
-// .pebbler-test{
+// .pebbler-test {
 //   display: inline-block;
 //   position: relative;
 //   margin: 0 5px 10px 0;
 
-//   div{
+//   div {
 //     display: inline-block;
 //     background-color: white;
 //     padding: 4px 4px 0;
@@ -517,12 +551,12 @@ only screen and (min-device-pixel-ratio : 1.5) {
 //     @include box-sizing(border-box);
 //   }
 
-//   img{
+//   img {
 //     width: $baseline*2;
 //     height: $baseline*2;
 //   }
 
-//   span{
+//   span {
 //     opacity: 0;
 //     position: absolute;
 //     bottom: -30px;
@@ -537,7 +571,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 //   }
 
-//   &:hover span{
+//   &:hover span {
 //     opacity: 1;
 //   }
 // }

@@ -1,16 +1,16 @@
 //===============================================================================
 // LABS
 //===============================================================================
-.page-labs{
+.page-labs {
 
-  .row:first-child{
+  .row:first-child {
     margin-top: $baseline*2;
     margin-bottom: $baseline;
 
-    .columns6{
+    .columns6 {
       margin-left: 0;
 
-      h2{
+      h2 {
         margin-top: $baseline;
         font-size: 1.5em;
         -webkit-font-smoothing: antialiased;
@@ -19,24 +19,24 @@
     }
   }
 
-  .row:nth-child(2){
+  .row:nth-child(2) {
     margin-bottom: $baseline*2;
   }
 
   .tricklr,
-  .vistazo{
+  .vistazo {
 
     .frame,
-    div{
+    div {
       float: left;
       width: 47.5%;
     }
 
-    .product-container{
+    .product-container {
       margin-left: 5%;
     }
 
-    .img{
+    .img {
       width: 100%;
       height: $baseline*9;
       background-color: $pink;
@@ -44,78 +44,76 @@
       background-position: 50%;
     }
 
-    a{
+    a {
       color: $pink;
     }
   }
 
-  h2{
+  h2 {
     margin-bottom: $baseline;
   }
 
-  hr{
+  hr {
     margin-bottom: $baseline;
   }
 
-  .open-source{
+  .open-source {
+
     .columns6 {
       margin-left: 0;
     }
-    p{
+
+    p {
       margin-top: $baseline;
       margin-bottom: 0;
     }
   }
 }
 
-.project{
-
-}
-
-.projects-list{
+.projects-list {
   margin: 0 auto;
 
-  img{
+  img {
     width: 100%;
   }
 
-  .project{
+  .project {
     width: 300px;
     margin: 5px;
   }
 }
 
-.project-by{
+.project-by {
   margin: ($baseline / 2) 0;
   font-weight: bold;
 
-  &:before{
+  &:before {
     content: "by "
   }
 }
 
-.project-link{
+.project-link {
   margin-right: .5em;
 
-  &:after{
+  &:after {
     font-family: 'pc_social';
     margin-left: .5em;
   }
 
-  &.live-link:after{
+  &.live-link:after {
     content: "W";
   }
 
-  &.blog-link:after{
+  &.blog-link:after {
     content: "B";
   }
 
-  &.github-link:after{
+  &.github-link:after {
     content: "G";
   }
 }
 
-.labs-header{
+.labs-header {
   $stop: 100% / 7;
   @include background-image(linear-gradient($pink   $stop * 0, $pink   $stop * 1,
                                             $purple $stop * 1, $purple $stop * 2,
@@ -184,7 +182,7 @@
       100% {background-position-y: (100% / 6) * 0;}
 }
 
-.labs-header-img{
+.labs-header-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -194,47 +192,47 @@
   background-position: center center;
 }
 
-.labs-spotlight{
+.labs-spotlight {
 
-  .frame{
+  .frame {
     text-align: center;
   }
 
-  img{
+  img {
     width: 100%;
   }
 
-  .project{
+  .project {
     display: none;
   }
 
-  .project.active{
+  .project.active {
     display: block;
   }
 
   .pebblers,
-  .date{
+  .date {
     margin: 0;
   }
 }
 
-.labs-filtering{
+.labs-filtering {
   margin: 0 0 .7em;
   text-align: center;
 }
 
-.filter{
+.filter {
   font-size: 1em;
   color: hsl(0, 0%, 50%);
   padding: .3em .4em;
   margin: 0 .5em .8em 0;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: #EFEFEF;
   }
 
-  &.active{
+  &.active {
     @include box-shadow(inset 3px 0 0 red);
   }
 }

@@ -2,79 +2,79 @@
 // FOOTER
 //===============================================================================
 // global footer styles
-footer{
+footer {
   width: 100%;
   background-color: hsl(0, 0%, 95%);
   overflow: hidden;
   clear: both;
   position: relative;
   height: 80px;
+}
 
-  .inner-footer{
-    width: 100%;
-    max-width: $grid-max-width;
-    margin: 0 auto;
+footer #map {
+  width: 100%;
+  height: $baseline*20;
+}
 
-    #contact{
-      margin: 16px 0 16px 12px;
-      float: left;
+.inner-footer {
+  width: 100%;
+  max-width: $grid-max-width;
+  margin: 0 auto;
+}
 
-      li.size0{
-        color: hsl(0, 0%, 70%);
-        margin-bottom: -6px;
+#contact {
+  margin: 16px 0 16px 12px;
+  float: left;
 
-        a{
-          color: hsl(0, 0%, 50%);
+  li.size0 {
+    color: hsl(0, 0%, 70%);
+    margin-bottom: -6px;
 
-          &:hover{
-            color: hsl(0, 0%, 40%);
-          }
-        }
-      }
-    }
+    a {
+      color: hsl(0, 0%, 50%);
 
-    #social{
-      float: right;
-      margin-right: 12px;
-
-      li{
-        float: left;
-
-        a{
-          display: block;
-          height: 20px;
-          width: 20px;
-          text-indent: 99999px;
-          margin: 32px 0 0 5px;
-          background-image: url('/images/social.png');
-          background-color: hsl(0, 0%, 85%);
-
-          &:hover{
-            background-color: hsl(0, 0%, 75%);
-          }
-        }
-
-        #facebook{
-          background-position: 60px 0;
-        }
-
-        #github{
-          background-position: 80px 0;
-        }
-
-        #google-plus{
-          background-position: 40px 0;
-        }
-
-        #linkedin{
-          background-position: 20px 0;
-        }
+      &:hover {
+        color: hsl(0, 0%, 40%);
       }
     }
   }
 }
 
-footer #map{
-  width: 100%;
-  height: $baseline*20;
+#social {
+  float: right;
+  margin-right: 12px;
+
+  li {
+    float: left;
+
+    a {
+      display: block;
+      height: 20px;
+      width: 20px;
+      text-indent: 99999px;
+      margin: 32px 0 0 5px;
+      background-image: url('/images/social.png');
+      background-color: hsl(0, 0%, 85%);
+
+      &:hover {
+        background-color: hsl(0, 0%, 75%);
+      }
+    }
+
+    #facebook {
+      background-position: 60px 0;
+    }
+
+    #github {
+      background-position: 80px 0;
+    }
+
+    #google-plus {
+      background-position: 40px 0;
+    }
+
+    #linkedin {
+      background-position: 20px 0;
+    }
+  }
 }

@@ -2,7 +2,7 @@
 // REUSABLE-STYLES
 //===============================================================================
 // frame for images etc
-.frame{
+.frame {
   @include box-sizing(border-box);
   @include box-shadow(hsl(40, 30%, 95%) 3px 3px 0);
 
@@ -12,97 +12,98 @@
 }
 
 // text, background, & border color classes
-.pink{
-  color: $pink; 
-  
-  &:hover{
+.pink {
+  color: $pink;
+
+  &:hover {
     color: $pink;
   }
 }
 
-.purple{
-  color: $purple; 
-  
-  &:hover{
+.purple {
+  color: $purple;
+
+  &:hover {
     color: $purple;
   }
 }
 
-.blue{
-  color: $blue; 
-  
-  &:hover{
+.blue {
+  color: $blue;
+
+  &:hover {
     color: $blue;
   }
 }
-.aqua{
-  color: $aqua; 
-  
-  &:hover{
+
+.aqua {
+  color: $aqua;
+
+  &:hover {
     color: $aqua;
   }
 }
 
-.green{
-  color: $green; 
-  
-  &:hover{
+.green {
+  color: $green;
+
+  &:hover {
     color: $green;
   }
 }
 
-.orange{
-  color: $orange; 
-  
-  &:hover{
+.orange {
+  color: $orange;
+
+  &:hover {
     color: $orange;
   }
 }
 
-.pink-background{
-  background-color: $pink; 
+.pink-background {
+  background-color: $pink;
 }
 
-.purple-background{
+.purple-background {
   background-color: $purple;
 }
 
-.blue-background{
+.blue-background {
   background-color: $blue;
 }
 
-.aqua-background{
+.aqua-background {
   background-color: $aqua;
 }
 
-.green-background{
+.green-background {
   background-color: $green;
 }
 
-.orange-background{
+.orange-background {
   background-color: $orange;
 }
 
-.pink-border{
+.pink-border {
   border-color: $pink;
 }
 
-.purple-border{
+.purple-border {
   border-color: $purple;
 }
 
-.blue-border{
+.blue-border {
   border-color: $blue;
 }
 
-.aqua-border{
+.aqua-border {
   border-color: $aqua;
 }
 
-.green-border{
+.green-border {
   border-color: $green;
 }
 
-.orange-border{
+.orange-border {
   border-color: $orange;
 }

@@ -2,51 +2,53 @@
 // GOOD-CODE
 //===============================================================================
 .page-pebbles-good-code,
-.page-pebbles-good-code-form-complete{
-  h1{
+.page-pebbles-good-code-form-complete {
+
+  h1 {
     @extend .size4;
     margin: $baseline*3 0 $baseline*2;
     color: $pink;
   }
 
-  hr{
+  hr {
     margin-bottom: $baseline*2;
   }
 
-  .green{
+  .green {
+    @include rotate(-7.5deg);
     font-family: "gooddog-new";
     display: inline-block;
-    @include rotate(-7.5deg);
   }
 
   h3,
-  h2{
+  h2 {
     @extend .size2;
     color: $pink;
   }
 
-  .size0{
+  .size0 {
     margin-bottom: 11px;
   }
 }
 
-.idea-examples{
+.idea-examples {
   margin-bottom: $baseline;
 
-  li{
+  li {
     list-style: disc;
     margin-bottom: 6px;
     margin-left: 18px;
   }
 }
 
-.page-pebbles-good-code-form-complete{
-  p{
+.page-pebbles-good-code-form-complete {
+
+  p {
     margin-top: $baseline;
   }
 }
 
-#ss-form{
+#ss-form {
   max-width: 640px;
 
   label.error {
@@ -61,27 +63,27 @@
   }
 }
 
-.ss-form-entry{
+.ss-form-entry {
   margin-bottom: $baseline;
 }
 
 .ss-q-help,
 .ss-q-long,
-.ss-q-short{
+.ss-q-short {
   display: block;
 }
 
 .ss-q-long,
-.ss-q-short{
+.ss-q-short {
   width: 100%;
 }
 
-.ss-form-entry-short{
+.ss-form-entry-short {
   margin: 0 0 $baseline;
 }
 
 input,
-textarea{
+textarea {
   background-color: hsl(40, 40, 99.5);
   border: 1px solid hsl(0,0,80);
   min-height: 20px;
@@ -90,26 +92,26 @@ textarea{
   color: hsl(0,0,30);
 }
 
-.submit{
+.submit {
+  @include border-radius(5px);
   display: block;
   background: $pink;
   color: white;
   border: none;
   font-weight: normal;
-  @include border-radius(5px);
   height: 30px;
   width: 100%;
   font-size: 18px;
   margin: 0 auto;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background: darken($pink,  15);
     color: white;
     text-decoration: none;
   }
 }
 
-.complete-links{
+.complete-links {
   padding-top: 8px;
 }
