@@ -255,37 +255,38 @@ To turn on/off maintenance mode on heroku
     heroku maintenance:on --app [app]
     heroku maintenance:off --app [app]
 
-## Setting up the Tumblr blog
+## Tumblr blog updates
 
-To edit the tumblr blog:
+There are 2 tumblr blogs for pebblecode:
 
-1. Edit the local file at `/views/tumblr_template/template.html`. This file is in the [tumblr template format](http://www.tumblr.com/docs/en/custom_themes), and special tumblr specific tags. Note the section with `id="staging-message"`, which shows the yellow staging message on the top. Remove this for the production site.
-1. Copy and paste the file into the tumblr edit html section, after clicking the `Edit Html` button on:
+* Staging
+  * Website: [http://pebblecodestaging.tumblr.com/](http://pebblecodestaging.tumblr.com/) (password protected)
+  * Tumblr customization: [http://www.tumblr.com/customize/pebblecodestaging](http://www.tumblr.com/customize/pebblecodestaging)
+  * Template: `/views/tumblr_template/template-staging.html`
+* Production
+  * Website: [http://blog.pebblecode.com/](http://blog.pebblecode.com/)
+  * Tumblr customization: [http://www.tumblr.com/customize/pebblecode](http://www.tumblr.com/customize/pebblecode)
+  * Template: `/views/tumblr_template/template.html`
 
- * Staging: http://www.tumblr.com/customize/pebblecodestaging
- * Production: http://www.tumblr.com/customize/pebblecode
+The difference between the staging and production templates should only be the referenced urls. Staging should use `http://pebblecode-staging.herokuapp.com` and production should use `http://pebblecode.com`.
+
+The process of updating the tumblr blog styles is:
+
+1. Modify the [tumblr edit html section for staging](http://www.tumblr.com/customize/pebblecodestaging) until done with changes
+2. Copy and paste the changes into `/views/tumblr_template/template-staging.html`
+3. Copy and paste `/views/tumblr_template/template-staging.html` into the production template `/views/tumblr_template/template.html`, and update the urls to `http://pebblecode.com`
+4. Update the [tumblr edit html section for production](http://www.tumblr.com/customize/pebblecode)
 
    Also remember to add in the Disqus code, otherwise the comments won't show. Sometimes the disqus code disappears after editing for some strange reason. The Disqus shortcodes are:
 
- * Staging: pebblecodestaging
- * Production: pebblecodeblog
+   * Staging: pebblecodestaging
+   * Production: pebblecodeblog
 
-1. **(Temporary)** Note that currently **all** references to files (images/css/javascript) are at the location `http://pebblecode.com/v2/`. These files are on the `master` branch. To upload these files:
+5. There is also the `/views/thoughts.erb` file, which is the expanded html version of `/views/tumblr_template/template.html` (without the tumblr tags). You should edit this file manually, as copying pasting from the tumblr template file won't show it properly.
 
- * Switch to the `master` branch (or even better, create new local folder with the `master` branch as default)
- * Put the files to the `/public/v2` folder.
-   For css files, because sass can't be generated until the `version-2` switch over, the best way to get the plain css is to load the `version-2` site, and copy and paste the generated file into the `master` branch css file.
- * Commit the changes
- * Merge with `production` branch
- * `git push heroku production:master` (Assuming you've added the remote branch: `git remote add heroku git@heroku.com:pebblecode.git`)
+   This is mainly for testing purposes, so styles can be viewed locally.
 
-1. There is also the `/views/thoughts.erb` file, which is the expanded html version of `/views/tumblr_template/template.html` (without the tumblr tags). You should edit this file manually, as copying pasting from the tumblr template file won't show it properly.
-   This is there mainly for testing purposes, when viewing the styles locally.
-1. The tumblr blog can be viewed at
-
- * Staging: http://www.tumblr.com/blog/pebblecodestaging
- * Production: http://www.tumblr.com/blog/pebblecode
-1. Remember to push the changes to git, so that others have the changed template. **If someone replaces the template on tumblr, there is no version history on tumblr!**
+6. Remember to push the changes to git, so that others have the updated template. **If someone replaces the template on tumblr, there is no version history on tumblr!**
 
 
 [1]: http://www.sinatrarb.com/
