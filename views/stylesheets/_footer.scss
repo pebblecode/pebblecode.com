@@ -2,7 +2,7 @@
 // FOOTER
 //===============================================================================
 // global footer styles
-footer{
+footer {
   width: 100%;
   background-color: hsl(0, 0%, 95%);
   overflow: hidden;
@@ -10,37 +10,37 @@ footer{
   position: relative;
   height: 80px;
 
-  .inner-footer{
+  .inner-footer {
     width: 100%;
     max-width: $grid-max-width;
     margin: 0 auto;
 
-    #contact{
+    #contact {
       margin: 16px 0 16px 12px;
       float: left;
 
-      li.size0{
+      li.size0 {
         color: hsl(0, 0%, 70%);
         margin-bottom: -6px;
 
-        a{
+        a {
           color: hsl(0, 0%, 50%);
 
-          &:hover{
+          &:hover {
             color: hsl(0, 0%, 40%);
           }
         }
       }
     }
 
-    #social{
+    #social {
       float: right;
       margin-right: 12px;
 
-      li{
+      li {
         float: left;
 
-        a{
+        a {
           display: block;
           height: 20px;
           width: 20px;
@@ -49,24 +49,24 @@ footer{
           background-image: url('/images/social.png');
           background-color: hsl(0, 0%, 85%);
 
-          &:hover{
+          &:hover {
             background-color: hsl(0, 0%, 75%);
           }
         }
 
-        #facebook{
+        #facebook {
           background-position: 60px 0;
         }
 
-        #github{
+        #github {
           background-position: 80px 0;
         }
 
-        #google-plus{
+        #google-plus {
           background-position: 40px 0;
         }
 
-        #linkedin{
+        #linkedin {
           background-position: 20px 0;
         }
       }
@@ -74,7 +74,7 @@ footer{
   }
 }
 
-footer #map{
+footer #map {
   width: 100%;
   height: $baseline*20;
 }

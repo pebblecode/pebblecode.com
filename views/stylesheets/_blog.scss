@@ -1,8 +1,8 @@
 //===============================================================================
 // BLOG
 //===============================================================================
-.page-thoughts{
-  #wrap #wrap-footer{
+.page-thoughts {
+  #wrap #wrap-footer {
     height: 180px;
   }
 
@@ -10,34 +10,34 @@
     font-weight: bold;
   }
 
-  #thoughts-heading{
+  #thoughts-heading {
     margin-top: $baseline*3;
 
-    h2{
+    h2 {
       font-size: 1.5em;
       -webkit-font-smoothing: antialiased;
       line-height: 1.2;
     }
 
-    .archive{
+    .archive {
       display: block;
       margin-top: $baseline;
       margin-bottom: -($baseline*2);
     }
   }
 
-  hr{
+  hr {
     margin-bottom: $baseline*2;
   }
 
-  .blog-post{
+  .blog-post {
 
-    h2, h3, h4{
+    h2, h3, h4 {
       margin-bottom: $baseline;
       font-weight: bold;
     }
 
-    h3{
+    h3 {
       font-size: 26px;
       line-height: $baseline*1.5;
     }
@@ -50,17 +50,17 @@
       padding: 0.1em 0.5em;
     }
 
-    blockquote{
+    blockquote {
       font-style: italic;
       margin-bottom: $baseline*1;
       padding: 0 5%;
       text-indent: -7px;
 
-      &:before, &:after{
+      &:before, &:after {
         content: '"';
       }
 
-      p{
+      p {
         display: inline;
       }
     }
@@ -70,31 +70,31 @@
       list-style: disc;
       margin-left: 1.5em;
     }
-    .img{
+    .img {
       width: 100%;
       height: $baseline*11;
     }
-    .frame{
+    .frame {
       margin-bottom: $baseline;
     }
-    .heading{
+    .heading {
       margin-bottom: $baseline;
     }
-    .blog-content{
+    .blog-content {
       border-bottom-style: dashed;
       border-bottom-width: 1px;
       padding-bottom: $baseline;
     }
-    .blog-sidebar{
+    .blog-sidebar {
       margin-top: $baseline*3;
-      p{
+      p {
         margin-bottom: 0;
       }
-      .tags{
+      .tags {
         margin-top: $baseline;
         list-style: none;
         margin-left: 0;
-        a{
+        a {
           font-weight: 400;
           display: block;
         }
@@ -105,7 +105,7 @@
           content: "";
         }
       }
-      .comments{
+      .comments {
         a {
           color: hsl(40, 70%, 98.5%);
           display: block;
@@ -144,7 +144,7 @@
 
     // }
 
-    // .archive{
+    // .archive {
     //   text-align: center;
     // }
 
@@ -169,18 +169,18 @@
   }
 }
 
-.blog-tags{
+.blog-tags {
   margin-bottom: $baseline*2;
 }
 /* @end */
 
 /* group archive */
-.page-archive{
-  h1{
+.page-archive {
+  h1 {
     margin-top: $baseline*4;
   }
 
-  hr{
+  hr {
     margin-top: $baseline;
     margin-bottom: $baseline*2;
   }

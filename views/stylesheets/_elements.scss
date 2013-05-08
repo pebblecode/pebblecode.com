@@ -1,12 +1,12 @@
 //===============================================================================
 // ELEMENTS
 //===============================================================================
-html, 
-body{
+html,
+body {
   height: 100%;
 }
 
-body{
+body {
   background-color: hsl(40, 70%, 98.5%);
   color: hsl(0, 0%, 50%);
   font: 400 16px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -17,47 +17,47 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   color: hsl(0, 0%, 55%);
   font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
-p{
+p {
   margin-bottom: $baseline;
   font-size: 16px;
   line-height: $baseline;
 }
 
-a{
+a {
   color: hsl(0, 0%, 45%);
   text-decoration: none;
   font-weight: bold;
 
-  &:hover{
+  &:hover {
     color: hsl(0, 0%, 30%);
     text-decoration: underline;
   }
 }
 
-em{
+em {
   font-style: italic;
 }
 
-strong{
+strong {
   font-weight: bold;
 }
 
-hr{
+hr {
   margin-top: -1px;
   margin-bottom: -2px;
   height: 3px;
   border: none;
 }
 
-pre{
+pre {
   margin-bottom: 1.5em;
 
-  code{
+  code {
     overflow-x: auto;
     font-family: monospace;
   }

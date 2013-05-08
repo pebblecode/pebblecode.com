@@ -1,15 +1,15 @@
 //===============================================================================
 // ARCHIVE
 //===============================================================================
-#archive-list li{
+#archive-list li {
   @extend .size2;
   margin-bottom: $baseline;
 
-  a:hover{
+  a:hover {
     text-decoration: none;
   }
 
-  span{
+  span {
     font-size: .5em;
     display: inline-block;
     width: 220px;
@@ -19,55 +19,55 @@
   }
 
   &:nth-child(6n) a,
-  &:nth-child(6n) span{
+  &:nth-child(6n) span {
     color: $pink;
 
-    &:hover{
+    &:hover {
       color: darken($pink, 17.5);
     }
   }
 
   &:nth-child(6n+1) a,
-  &:nth-child(6n+1) span{
+  &:nth-child(6n+1) span {
     color: $blue;
 
-    &:hover{
+    &:hover {
       color: darken($blue, 17.5);
     }
   }
 
   &:nth-child(6n+2) a,
-  &:nth-child(6n+2) span{
+  &:nth-child(6n+2) span {
     color: $green;
 
-    &:hover{
+    &:hover {
       color: darken($green, 17.5);
     }
   }
 
   &:nth-child(6n+3) a,
-  &:nth-child(6n+3) span{
+  &:nth-child(6n+3) span {
     color: $orange;
 
-    &:hover{
+    &:hover {
       color: darken($orange, 17.5);
     }
   }
 
   &:nth-child(6n+4) a,
-  &:nth-child(6n+4) span{
+  &:nth-child(6n+4) span {
     color: $purple;
 
-    &:hover{
+    &:hover {
       color: darken($purple, 17.5);
     }
   }
 
   &:nth-child(6n+5) a,
-  &:nth-child(6n+5) span{
+  &:nth-child(6n+5) span {
     color: $aqua;
 
-    &:hover{
+    &:hover {
       color: darken($aqua, 17.5);
     }
   }

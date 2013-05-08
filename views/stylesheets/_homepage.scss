@@ -2,7 +2,7 @@
 // HOMEPAGE
 //===============================================================================
 .page-homepage {
-  .row:first-child{
+  .row:first-child {
     margin-top: $baseline*3;
     margin-bottom: $baseline*2;
   }
@@ -18,7 +18,7 @@
         height: $baseline*18;
         width: 100%;
 
-        h1, h2, ul{
+        h1, h2, ul {
           color: white;
           margin-left: 5%;
           margin-right: 5%;
@@ -37,34 +37,34 @@
           color: white;
         }
 
-        h1{
+        h1 {
           margin-top: $baseline;
           margin-bottom: $baseline;
         }
 
-        &.slide-good{
+        &.slide-good {
           background: $orange url("/images/zig-zag-1.gif") no-repeat center 0;
         }
 
-        &.slide1{
+        &.slide1 {
           background: $pink url("/images/zig-zag-3.gif") no-repeat center 0;
           h1:nth-child(2) {
             margin-top: -15px;
           }
         }
-        &.slide2{
+        &.slide2 {
           background: $green url("/images/zig-zag-2.gif") no-repeat center 0;
         }
-        &.slide3{
+        &.slide3 {
           background: $green url("/images/zig-zag-4.gif") no-repeat center 0;
         }
-        &.slide4{
+        &.slide4 {
           background: $green url("/images/zig-zag-1.gif") no-repeat center 0;
         }
       }
     }
 
-    .pagination{
+    .pagination {
       width: 93px;
       margin: $baseline auto;
       li {
@@ -82,14 +82,14 @@
         }
       }
 
-      .current a{
+      .current a {
         border-width: 5px;
       }
 
-      li:nth-child(2) a{
+      li:nth-child(2) a {
         border-color: $blue;
       }
-      li:nth-child(3) a{
+      li:nth-child(3) a {
         border-color: $orange;
       }
     }
