@@ -1,4 +1,6 @@
 # encoding: utf-8
+require_relative '../lib/string'
+
 class Person
   # NOTE: Descriptions are in markdown (http://daringfireball.net/projects/markdown/)
   @people = [
@@ -198,6 +200,10 @@ class Person
 
   def self.all
     @people
+  end
+
+  def self.all_urls
+    @people.map {|p| Person.slug(p) }
   end
 
   def self.all_with_tumblr_name

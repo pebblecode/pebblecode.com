@@ -11,6 +11,15 @@ describe Person do
       expect(toby.length).to be > 0
     end
   end
+
+  describe "#all_urls" do
+    it "exists" do
+      expect(Person.all_urls.length).to be > 0
+    end
+
+    it "returns '/people/toby-hunt'" do
+      expect(Person.all_urls).to include('/people/toby-hunt')
+    end
   end
 
   describe "#find_by_index" do
