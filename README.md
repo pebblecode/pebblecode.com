@@ -233,15 +233,15 @@ To do this
 
 1. Generate the changes with
 
-      bundle exec rake sitemap:refresh:no_ping
+        bundle exec rake sitemap:refresh:no_ping
 
 2. Commit and push updates to production
 
-      bundle exec rake shipit[production]
+        bundle exec rake shipit[production]
 
 3. Ping the search engines
 
-      rake sitemap:ping_search_engines
+        rake sitemap:ping_search_engines
 
 ### Seach engine web master tools
 
