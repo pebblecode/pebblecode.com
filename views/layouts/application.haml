@@ -21,7 +21,10 @@
     <script src="//use.typekit.net/asa8yjy.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
 
-    <script src="/javascripts/vendor/modernizr.js"></script>
+    :plain
+      <!--[if lt IE 9]>
+        <script src="build/javascripts/vendor/html5shiv.js"></script>
+      <![endif]-->
 
     = yield_content :js_lib
 

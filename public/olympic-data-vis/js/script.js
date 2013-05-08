@@ -20,9 +20,6 @@ require.config({
     "jquery.browser": {
       deps: ["jquery"],
       exports: "jQuery.fn.browser"
-    },
-    modernizr: {
-      exports: "Modernizr"
     }
   },
 
@@ -32,7 +29,6 @@ require.config({
     jquery: "/javascripts/vendor/jquery",
     underscore: "/javascripts/vendor/underscore",
     backbone: "/javascripts/vendor/backbone",
-    modernizr: "/javascripts/vendor/modernizr",
 
     // Olympics data vis dependencies
     d3: "/olympic-data-vis/js/vendor/d3.v2",
