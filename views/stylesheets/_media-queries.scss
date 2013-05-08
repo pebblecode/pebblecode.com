@@ -288,25 +288,26 @@ header {
 }
 
 .page-thoughts {
-  #thoughts-heading {
-    margin-top: -15px;
-  }
+
   hr {
     margin-bottom: $baseline;
   }
-  .blog-post {
-    margin-bottom: $baseline*3;
-    .img {
-      background: $orange;
-      height: $baseline*8;
-    }
-  }
-  .blog-sidebar {
-    display: none;
+}
+
+.blog-post {
+  margin-bottom: $baseline*3;
+
+  .img {
+    background: $orange;
+    height: $baseline*8;
   }
 }
 
-.page-thoughts #blog-navigation {
+.blog-sidebar {
+  display: none;
+}
+
+#blog-navigation {
   width: 100%;
 }
 
