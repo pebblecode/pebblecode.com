@@ -3,17 +3,23 @@
 //===============================================================================
 // Mainly used to fix IE bugs
 .no-borderradius {
+
   .columns2 {
     width: $column-width*2 + $column-gutter - 3%;
   }
+
   .columns3 {
     width: $column-width*3 + $column-gutter*2 - 3%;
   }
+
   .columns4 {
     width: $column-width*4 + $column-gutter*3 - 3%;
   }
+
   .page-people {
+
     .employees {
+
       .row li {
         float: left; // Need extra float, otherwise the elements flow in a jagged fashion
         margin-bottom: $baseline;
@@ -22,6 +28,7 @@
           margin-bottom: 0; // Cancel out margin where it works
         }
       }
+
       .columns1 {
         width: 135px;
         margin-left: 0;
@@ -29,9 +36,13 @@
       }
     }
   }
+
   .page-homepage {
+
     .slideshow .pagination {
+
       li {
+
         a {
           text-indent: -9999px;
           height: 5px;
