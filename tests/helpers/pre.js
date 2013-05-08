@@ -16,7 +16,8 @@ var utils = {
 var paths = {
   homepage: utils.baseUrl,
   labs: utils.baseUrl + "labs",
-  people: utils.baseUrl + "people"
+  people: utils.baseUrl + "people",
+  "find-us": utils.baseUrl + "find-us"
 };
 
 /**
