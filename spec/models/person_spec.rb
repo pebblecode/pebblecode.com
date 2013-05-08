@@ -5,6 +5,12 @@ describe Person do
     it "exists" do
       expect(Person.all.length).to be > 0
     end
+
+    it "returns Toby" do
+      toby = Person.all.select {|p| p[:name] == "Toby Hunt"}
+      expect(toby.length).to be > 0
+    end
+  end
   end
 
   describe "#find_by_index" do
