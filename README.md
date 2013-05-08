@@ -1,6 +1,8 @@
 # pebble {code} site
 
-This is a simple brochure site written with [sinatra][1].
+This is a simple brochure site written with [sinatra][1] for [pebble {code}](http://pebblecode.com).
+
+Some of the commands below will not work unless you are part of pebblecode, and have access to the git repo and deployment environments.
 
 ## Installation
 
@@ -19,7 +21,7 @@ This is a simple brochure site written with [sinatra][1].
 
 5. Start the server
 
-	      rake server
+	    rake server
 
    Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
 
