@@ -7,34 +7,41 @@
   width: 100%;
   margin-left: 0;
 }
+
 #wrap #wrap-footer {
   height: 80px;
 }
+
 .row {
   margin-bottom: $baseline;
 }
+
 .size3 {
   font-size: 38px;
   line-height: $baseline*2;
 }
+
 .size4 {
   font-size: 38px;
   line-height: $baseline*2;
 }
 
-
 header {
   position: relative;
   height: $baseline*5 +8px;
+
   nav {
+
     .logo {
       float: left;
       margin-top: 47px;
     }
+
     ul {
       font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
       line-height: 18px;
       width: 50%;
+
       li {
         float: left;
         width: 100%;
@@ -47,6 +54,7 @@ header {
 
 
 .page-homepage {
+
   .row:first-child {
     margin-top: $baseline;
   }
@@ -56,11 +64,15 @@ header {
 
     .slides_container {
       height: 330px;
+
       li {
+
         &.slide1 {
+
           h1:first-child {
             margin-bottom: 0;
           }
+
           h1:nth-child(2) {
             margin-top: 0;
             font-size: 35px;
@@ -68,36 +80,40 @@ header {
             margin-bottom: $baseline;
           }
         }
+
         &.slide2 h2 {
             line-height: 1.2;
         }
       }
+
       .size2 {
         font-size: 24px;
         line-height: $baseline*1.5 ;
       }
     }
   }
+
   .columns2 {
     a {
       margin-bottom: $baseline*2;
-    }
-    .blog-snippet {
-
     }
   }
 }
 
 
 .page-work {
+
   .row:first-child {
     margin-top: 0;
+
     .columns3 {
       margin-top: -25px;
     }
   }
+
   .case-study {
     margin-bottom: 0;
+
     &:nth-child(4) {
       padding-top: 0;
       margin-bottom: -$baseline;
@@ -132,7 +148,6 @@ header {
           }
         }
       }
-
     }
   }
 
@@ -152,6 +167,7 @@ header {
 
 
 .page-labs {
+
   .row:first-child {
     margin-top: $baseline;
 
@@ -171,16 +187,17 @@ header {
   h2 {
     margin-bottom: $baseline;
   }
+
   hr {
     margin-bottom: $baseline;
   }
-  .open-source {
-    p {
-      margin-top: $baseline;
-    }
+
+  .open-source p {
+    margin-top: $baseline;
   }
 
   .tricklr {
+
     .frame {
       width: 100%;
     }
@@ -202,16 +219,21 @@ header {
 }
 
 .page-people {
+
   .headline {
     margin-top: 0;
   }
+
   .people-copy {
     margin-bottom: 0;
   }
+
   #spotlight {
+
     .row:first-child {
       margin-bottom: $baseline;
     }
+
     hr {
       margin-bottom: $baseline;
     }
@@ -224,13 +246,16 @@ header {
       &.top {
         display: block; // Showing bottom image
       }
+
       &.bottom {
         display: none; // Showing bottom image
       }
+
       .img {
         width: 100%;
         position: static;
       }
+
       img {
         position: static;
       }
@@ -239,6 +264,7 @@ header {
     article { // Next row under image
       width: 100%;
       float: none;
+
       .inner-wrapper {
         margin-left: 0;
       }
@@ -247,15 +273,18 @@ header {
     h1 {
       margin-top: $baseline;
     }
+
     h2 {
       margin-top: $baseline;
       margin-bottom: $baseline;
     }
+
     h3 {
       margin-bottom: $baseline;
       font-size: 16px;
       line-height: $baseline;
     }
+
     .link {
       margin-bottom: 0;
       a {
@@ -265,6 +294,7 @@ header {
   }
 
   .employees {
+
     .person,
     .join-us {
         width: 45%;
@@ -311,18 +341,18 @@ header {
   width: 100%;
 }
 
-.page-address {
-  .size2 {
-    font-size: 16px;
-    line-height: $baseline;
-  }
+.page-address .size2 {
+  font-size: 16px;
+  line-height: $baseline;
 }
 
 .page-find-us {
+
   .size2 {
     font-size: 16px;
     line-height: $baseline;
   }
+
   .row:first-child {
     margin-top: $baseline;
   }
@@ -336,25 +366,26 @@ header {
 
 
 .slides_container {
+  height: 330px;
+
   .size4 {
     font-size: 38px;
     line-height: $baseline*2;
   }
 
-  height: 330px;
-  li {
-    &.slide1 {
-      h1:first-child {
-        margin-bottom: 0;
-      }
-      h1:nth-child(2) {
-        margin-top: 0;
-        font-size: 35px;
-        line-height: $baseline*3;
-        margin-bottom: $baseline;
-      }
+  li.slide1 {
+    h1:first-child {
+      margin-bottom: 0;
+    }
+
+    h1:nth-child(2) {
+      margin-top: 0;
+      font-size: 35px;
+      line-height: $baseline*3;
+      margin-bottom: $baseline;
     }
   }
+
   .size2 {
     font-size: 24px;
     line-height: $baseline*1.5 ;
@@ -369,6 +400,7 @@ header {
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
+
   #social li a {
     background-image: url('/images/social@2x.png') !important;
     background-size: 100px 20px;
@@ -484,6 +516,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 @media only screen and (max-width: 1020px) {
   #spotlight .frame { // Left float
+
     .img {
       text-align: center;
       height: $baseline*12;
