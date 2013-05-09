@@ -46,15 +46,19 @@ define([
     });
 
     randColors('.person', function(obj, randColor) {
-      $("h4",obj).addClass(randColor);
-      $(".img",obj).addClass(randColor + "-background");
+      $("h4", obj).addClass(randColor);
+      $("h4", obj).attr("data-color", randColor);
 
-      // Color spotlight person row the same
-      var personIndex = $(obj).parent().prevAll().length;
-      var spotlightPerson = $("#spotlight .person-row")[personIndex];
-      $(spotlightPerson).find(".name, h3").addClass(randColor);
-      $(spotlightPerson).find(".img").addClass(randColor + "-background");
+      $(".img", obj).addClass(randColor + "-background");
+      $(".img", obj).attr("data-color", randColor);
     });
+
+    // Color spotlight person row the same as listing.
+    // Only needed in initialisation.
+    var spotlightPersonColor = $(".people-list .active h4").attr("data-color"),
+      spotlightPerson = $("#spotlight .person-row");
+    $(spotlightPerson).find(".name, h3").addClass(spotlightPersonColor);
+    $(spotlightPerson).find(".img").addClass(spotlightPersonColor + "-background");
   }
 
   return {

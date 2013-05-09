@@ -1,0 +1,91 @@
+//===============================================================================
+// LAYOUT
+//===============================================================================
+#wrap{
+  clear: both;
+  margin: 0 auto -60px;
+  min-height: 100%;
+  max-width: $grid-max-width;
+  width: $grid-width;
+  height: auto !important;
+}
+
+#wrap #wrap-footer{
+  height: 80px;
+}
+
+.row{
+  margin-bottom: $baseline*3;
+  width: 100%;
+}
+
+#wrap > .row:first-child{
+  padding-top: 40px;
+}
+
+.row:before,.row:after{
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.row:after{
+  clear: both;
+}
+
+[class*=columns]{
+  float: left;
+  margin-left: $column-gutter;
+}
+
+[class*=columns]:first-child{
+  margin-left: 0;
+}
+
+.columns1{
+  width: $column-width;
+}
+
+.columns1:nth-child(7){
+  margin-left: 0;
+}
+
+.columns2{
+  width: $column-width*2 + $column-gutter;
+}
+
+.columns3{
+  width: $column-width*3 + $column-gutter*2;
+}
+
+.columns4{
+  width: $column-width*4 + $column-gutter*3;
+}
+
+.columns5{
+  width: $column-width*5 + $column-gutter*4;
+}
+
+.columns6{
+  width: 100%;
+}
+
+[class*=columns].offset1{
+  margin-left: $column-width + $column-gutter;
+}
+
+[class*=columns].offset2{
+  margin-left: $column-width*2 + $column-gutter*2;
+}
+
+[class*=columns].offset3{
+  margin-left: $column-width*3 + $column-gutter*3;
+}
+
+[class*=columns].offset4{
+  margin-left: $column-width*4 + $column-gutter*4;
+}
+
+[class*=columns].offset5{
+  margin-left: $column-width*5 + $column-gutter*5;
+}

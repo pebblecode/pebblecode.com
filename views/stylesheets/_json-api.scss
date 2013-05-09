@@ -1,0 +1,34 @@
+//===============================================================================
+// JSON-API
+//===============================================================================
+.page-json-api {
+  #wrap {
+    width: 960px;
+    margin-bottom: $baseline;
+
+    h1,h2,h3 {
+      margin-bottom: $baseline;
+    }
+
+    ol {
+      list-style: decimal;
+      margin-left: 2.5em;
+      font-weight: bold;
+    }
+
+    .row:first-child {
+      padding-top: $baseline*4;
+    }
+    .data-vis {
+      background-color: $pink;
+      height: $baseline*24;
+      width: 100%;
+    }
+    .documentation {
+      .columns6 {
+        margin-left: 0;
+        margin-bottom: $baseline;
+      }
+    }
+  }
+}

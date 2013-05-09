@@ -1,5 +1,79 @@
+//===============================================================================
+// VARIABLES
+//===============================================================================
+// Global variables
+
+// color vaiables
+$pink : #EE5080;
+$purple : #9B5CA4;
+$blue : #0EA2DC;
+$aqua : #37BEC0;
+$green : #A4CE4E;
+$orange : #FAAD40;
+$error-bg-color: hsl(342,82,92);
+$error-color: black;
+$error-label-color: #FF5050;
+
+// layout vaiables
+$baseline : 22px;
+$column-width : 14.1666667%;
+$column-gutter : 3%;
+$grid-width : 90%;
+$grid-max-width : 1024px;
+
+//===============================================================================
+// IMPORTS
+//===============================================================================
+// COMPASS: compass stuff
 @import "compass/reset";
 @import "compass/css3";
-@import "fonts";
-@import "application";
-@import "isotope";
+
+// MIXINS: define mixins for later use
+@import "_mixins";
+
+// FONTS: @font-face rules
+@import "_fonts";
+
+// THIRD-PARTY: styles for JS libs etc
+@import "_isotope";
+
+// ELEMENTS: styles for standard html elements
+@import "_elements";
+
+// HELPERS: helper classes. clear-fix etc
+@import "_helpers";
+
+// LAYOUT: grids, wraps etc
+@import "_layout";
+
+// TYPOGRAPHY:
+@import "_typography";
+
+// REUSABLE-STYLES: styles used across multiple pages
+@import "_reusable";
+
+// GLOBAL-ELEMENTS: elements that are used on every page. Eg headers & footers
+@import "_header";
+@import "_footer";
+
+// PAGES: styles per page
+@import "_homepage";
+@import "_people";
+@import "_find-us";
+@import "_work";
+@import "_labs";
+@import "_blog";
+@import "_archive";
+@import "_good-code";
+@import "_404";
+
+// BROWSER-FIXES: styles per page
+@import "_browser-fixes";
+
+// MEDIA-QUERIES:
+@import "_media-queries";
+
+//===============================================================================
+// DEV-STYLES
+//===============================================================================
+// playground for development

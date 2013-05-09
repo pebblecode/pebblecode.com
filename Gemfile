@@ -12,7 +12,6 @@ gem 'sinatra-contrib'
 gem "haml"
 gem "sass"
 gem "compass"
-gem 'rdiscount'  # For markdown usage
 
 # For production deployment
 gem 'heroku'
