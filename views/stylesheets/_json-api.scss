@@ -2,6 +2,7 @@
 // JSON-API
 //===============================================================================
 .page-json-api {
+
   #wrap {
     width: 960px;
     margin-bottom: $baseline;
@@ -19,12 +20,15 @@
     .row:first-child {
       padding-top: $baseline*4;
     }
+
     .data-vis {
       background-color: $pink;
       height: $baseline*24;
       width: 100%;
     }
+
     .documentation {
+
       .columns6 {
         margin-left: 0;
         margin-bottom: $baseline;
