@@ -84,14 +84,14 @@ module.exports = function (grunt) {
 
     ghost: {
       dist: {
-        src: ['tests/pages/*'],
+        filesSrc: ['tests/pages/*.js'],
         options: {
           args: {
             url: grunt.option('url')
           },
           direct: true,
           logLevel: 'info',
-          failFast: true,
+          failFast: false,
           printCommand: true,
           printFilePaths: true,
           pre: ['tests/helpers/pre.js']
