@@ -28,6 +28,7 @@
     hr {
       margin-bottom: $baseline*2;
     }
+
     .row {
       margin-bottom: $baseline*3;
 
@@ -48,14 +49,17 @@
           &.gaming {
             background-image: url("/images/gaming_tile.png");
           }
+
           &.finace {
             background-image: url("/images/finance_tile.png");
           }
+
           &.clarity {
             background-image: url("/images/clarity_tile.png");
           }
         }
       }
+
       .columns3:nth-child(2) {
         margin-left: 0;
       }
@@ -70,6 +74,7 @@
   .row {
     margin-bottom: $baseline;
   }
+
   h1,a {
     color: #009be8;
   }
