@@ -2,97 +2,10 @@
 // HOMEPAGE
 //===============================================================================
 .page-homepage {
+
   .row:first-child {
     margin-top: $baseline*3;
     margin-bottom: $baseline*2;
-  }
-
-  .slideshow {
-    @include box-sizing(border-box);
-
-    .slides_container {
-      height: $baseline*18;
-
-      // ".slides_container li" width is dynamically adjusted using js (so you can center images)
-      li {
-        height: $baseline*18;
-        width: 100%;
-
-        h1, h2, ul {
-          color: white;
-          margin-left: 5%;
-          margin-right: 5%;
-        }
-
-        a {
-          color: white;
-          text-decoration: underline;
-          &:hover {
-            color: white;
-          }
-        }
-
-        ul {
-          font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-          color: white;
-        }
-
-        h1 {
-          margin-top: $baseline;
-          margin-bottom: $baseline;
-        }
-
-        &.slide-good {
-          background: $orange url("/images/zig-zag-1.gif") no-repeat center 0;
-        }
-
-        &.slide1 {
-          background: $pink url("/images/zig-zag-3.gif") no-repeat center 0;
-          h1:nth-child(2) {
-            margin-top: -15px;
-          }
-        }
-        &.slide2 {
-          background: $green url("/images/zig-zag-2.gif") no-repeat center 0;
-        }
-        &.slide3 {
-          background: $green url("/images/zig-zag-4.gif") no-repeat center 0;
-        }
-        &.slide4 {
-          background: $green url("/images/zig-zag-1.gif") no-repeat center 0;
-        }
-      }
-    }
-
-    .pagination {
-      width: 93px;
-      margin: $baseline auto;
-      li {
-        float: left;
-        a {
-          display: block;
-          color: transparent;
-          width: 12px;
-          height: 12px;
-          margin-left:10px;
-          border: 2px solid $aqua;
-
-          @include box-sizing(border-box);
-          @include border-radius(12px);
-        }
-      }
-
-      .current a {
-        border-width: 5px;
-      }
-
-      li:nth-child(2) a {
-        border-color: $blue;
-      }
-      li:nth-child(3) a {
-        border-color: $orange;
-      }
-    }
   }
 
   article {
@@ -100,10 +13,101 @@
       margin-bottom: $baseline;
     }
   }
+}
 
-  #recent-posts {
-    h2 {
+.slideshow {
+  @include box-sizing(border-box);
+
+  .pagination {
+    width: 93px;
+    margin: $baseline auto;
+
+    li {
+      float: left;
+
+      a {
+        @include box-sizing(border-box);
+        @include border-radius(12px);
+
+        display: block;
+        color: transparent;
+        width: 12px;
+        height: 12px;
+        margin-left:10px;
+        border: 2px solid $aqua;
+      }
+    }
+
+    .current a {
+      border-width: 5px;
+    }
+
+    li:nth-child(2) a {
+      border-color: $blue;
+    }
+    li:nth-child(3) a {
+      border-color: $orange;
+    }
+  }
+}
+
+.slides_container {
+  height: $baseline*18;
+
+  // ".slides_container li" width is dynamically adjusted using js (so you can center images)
+  li {
+    height: $baseline*18;
+    width: 100%;
+
+    h1, h2, ul {
+      color: white;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    ul {
+      font-family: "ff-meta-web-pro", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+      color: white;
+    }
+
+    h1 {
+      margin-top: $baseline;
       margin-bottom: $baseline;
     }
+
+    &.slide-good {
+      background: $orange url("/images/zig-zag-1.gif") no-repeat center 0;
+    }
+
+    &.slide1 {
+      background: $pink url("/images/zig-zag-3.gif") no-repeat center 0;
+      h1:nth-child(2) {
+        margin-top: -15px;
+      }
+    }
+    &.slide2 {
+      background: $green url("/images/zig-zag-2.gif") no-repeat center 0;
+    }
+    &.slide3 {
+      background: $green url("/images/zig-zag-4.gif") no-repeat center 0;
+    }
+    &.slide4 {
+      background: $green url("/images/zig-zag-1.gif") no-repeat center 0;
+    }
+  }
+}
+
+#recent-posts {
+  h2 {
+    margin-bottom: $baseline;
   }
 }
