@@ -167,7 +167,7 @@ namespace "shipit" do
     import 'sitemap'
 
     # Push to public git
-    `git push public production:master`
+    Rake.sh "git push public production:master"
 
     # Ping search engines
     # Commented out - do this manually
