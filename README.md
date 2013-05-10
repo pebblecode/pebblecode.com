@@ -14,24 +14,24 @@ Some of the commands below will not work unless you are part of pebblecode, and 
 
         bundle install
 
-3. Install [grunt](http://gruntjs.com/) to validate javascript files by following instructions at http://gruntjs.com/getting-started
+3. Install [grunt](http://gruntjs.com/) to validate JavaScript files by following instructions at http://gruntjs.com/getting-started
 4. Install node packages
 
         npm install
 
 5. Start the server
 
-	    rake server
+	    bundle exec rake server
 
-   Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in javascript files.
+   Go to `http://localhost:7100`. Note that the console also logs any [jshint](http://jshint.com/) errors in JavaScript files.
 
    To change the port number, run
 
-        rake server[8888]
+        bundle exec rake server[8888]
 
    If you want run on a local ip address (eg, to test on an external device), run
 
-        rake server[7100,true]
+        bundle exec rake server[7100,true]
 
    where the first parameter is the port number.
 
@@ -54,7 +54,7 @@ The optimized css is in `/public/build` (see Optimization).
 
 ### Development
 
-To create a new javascript page
+To create a new JavaScript page
 
 1. Create a js file in `public/javascripts/app/[page-name].js` with the following structure
 
@@ -85,13 +85,11 @@ To create a new javascript page
 
 ### Optimization
 
-To optimize the css/javascript files for production run
+Optimized CSS/JavaScript files are automatically generated and pushed to the repo in the `bundle exec rake shipit[staging]` task, but to do this manually run
 
     grunt build
 
 Optimized files are generated into `public/build`.
-
-Commit the changes, and the layout file will automatically handle using the built files on non-development environments.
 
 To force the page to use the development js, add `dev` as a query parameter in the url eg, http://localhost:7770?dev
 
@@ -185,7 +183,7 @@ The sandbox site (http://pebblecode-sandbox.herokuapp.com/) is intended to be a 
 
 To push to the sandbox
 
-    rake sandbox[branch-name]
+    bundle exec rake sandbox[branch-name]
 
 This is just an alias for
 
@@ -206,7 +204,7 @@ The staging site (http://pebblecode-staging.herokuapp.com/) is intended as a sta
 
 To deploy the master branch to staging
 
-	  rake shipit[staging]
+	  bundle exec rake shipit[staging]
 
 **Note: If you want to push changes that won't be going into production any time soon, push into the sandbox site instead**
 
@@ -223,9 +221,9 @@ The [production site](http://pebblecode.com/) is the live public facing site for
 
 To deploy the master branch to production
 
-    rake shipit[production]
+    bundle exec rake shipit[production]
 
-This merges the master branch to the production branch, pushes to origin, deploys to production, and checkouts out the master branch.
+This merges the master branch to the production branch, pushes to origin, deploys to production, checkouts out the master branch and pushes the code to the public git repo.
 
 #### Sitemap
 
