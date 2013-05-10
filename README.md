@@ -37,6 +37,11 @@ Some of the commands below will not work unless you are part of pebblecode, and 
 
    Note that you will need to add the IP address to typekit for fonts to show.
 
+6. Add remote git repositories (for commands to work below)
+
+        bundle exec rake git:add_remotes
+
+
 
 ## Automatic reloading
 
@@ -169,27 +174,17 @@ To set the password (also see `helpers/http_password.rb` for how it works)
 
     bundle exec rake password:set[environment,user,password]
 
-### Prerequisites
-
-Set up deployment branches with
-
-    git remote add sandbox git@heroku.com:pebblecode-sandbox.git
-    git remote add staging git@heroku.com:pebblecode-staging.git
-    git remote add production git@heroku.com:pebblecode.git
-
 ### Sandbox
 
 The sandbox site (http://pebblecode-sandbox.herokuapp.com/) is intended to be a temporary site to show particular changes. It is used when you don't intend to push the change to staging or production, but want to show someone else.
 
-To push to the sandbox
+To push to the sandbox (assuming you have set up the git remote branch)
 
     bundle exec rake sandbox[branch-name]
 
 This is just an alias for
 
     git push -f sandbox [branch-name]:master
-
-**Note: You will need to run `git remote add sandbox git@heroku.com:pebblecode-sandbox.git` if the sandbox branch has not already been set up**
 
 #### Initial set up
 
@@ -202,7 +197,7 @@ Only needs to be done once, when setting up the heroku site
 
 The staging site (http://pebblecode-staging.herokuapp.com/) is intended as a staging ground for changes before they go into production. It is a place for sanity checks before it goes live.
 
-To deploy the master branch to staging
+To deploy the master branch to staging (assuming you have set up the git remote branch)
 
 	  bundle exec rake shipit[staging]
 
@@ -219,7 +214,7 @@ Only needs to be done once, when setting up the heroku site
 
 The [production site](http://pebblecode.com/) is the live public facing site for all the world to see.
 
-To deploy the master branch to production
+To deploy the master branch to production (assuming you have set up the git remote branch)
 
     bundle exec rake shipit[production]
 
