@@ -158,7 +158,8 @@ namespace "shipit" do
   desc "Before deploying to staging, generate optimized assets and sitemap"
   task :pre_staging do
     Rake::Task["optimize_assets"].invoke
-    Rake::Task["generate_sitemap"].invoke
+    # Commented out - do this manually
+    # Rake::Task["generate_sitemap"].invoke
   end
 
   desc "After deploying to production, ..."
@@ -169,7 +170,8 @@ namespace "shipit" do
     `git push public production:master`
 
     # Ping search engines
-    Rake::Task["sitemap:ping_search_engines"].invoke
+    # Commented out - do this manually
+    # Rake::Task["sitemap:ping_search_engines"].invoke
   end
 
   desc "Merge branch to deployment branch, push to remote server, and deploy."
