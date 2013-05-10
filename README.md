@@ -238,6 +238,14 @@ To do this
 
         rake sitemap:ping_search_engines
 
+#### Public git repository
+
+The production branch is also pushed to the public repository: [pebblecode.com-site](https://github.com/pebblecode/pebblecode.com-site).
+
+This is automatically done when the production deployment task is run, but to do it manually run (assuming you have set up the git remote branch)
+
+        git push public production:master
+
 ### Seach engine web master tools
 
 * [Google](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://www.pebblecode.com/)
