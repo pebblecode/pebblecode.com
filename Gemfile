@@ -19,6 +19,9 @@ gem 'heroku'
 # Redirect domains
 gem "rack-force_domain"
 
+# Rack contrib
+gem "rack-contrib"
+
 # New relic
 gem 'newrelic_rpm'
 

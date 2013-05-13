@@ -1,6 +1,8 @@
 # encoding: utf-8
 require 'rubygems'
 require 'sinatra'
+require 'rack'
+require 'rack/contrib'
 require './lib/partials'
 require './lib/string'
 require './lib/constants'
@@ -24,6 +26,9 @@ set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 configure do
   # Redirect all urls on production (http://github.com/cwninja/rack-force_domain)
   use Rack::ForceDomain, ENV["DOMAIN"] if settings.environment != "test"
+
+  # Caching images
+  use Rack::StaticCache, :urls => ["/images"], :versioning => false, :root => "public"
 
   # Gzips pages
   use Rack::Deflater
