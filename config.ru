@@ -10,4 +10,4 @@ Encoding.default_internal = Encoding::UTF_8
 $stdout.sync = true
 
 require './application'
-run Sinatra::Application
+run PebbleCodeApp

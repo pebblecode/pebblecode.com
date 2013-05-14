@@ -25,6 +25,6 @@ end
 
 # Define application for all spec files
 def app
-  Sinatra::Application
+  PebbleCodeApp
 end
 # Capybara.app = PebblecodeApp
