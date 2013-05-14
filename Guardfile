@@ -11,6 +11,8 @@ guard 'rspec', :cli => '--color', :version => 2 do
   watch(%r{^application.rb$})  { |m| ["spec"] }
   watch(%r{^spec/support/(.+)\.rb$})                  { "spec" }
 
+  watch(%r{^helpers/(.+)\.rb$}) { |m| ["spec"] }
+
   # Capybara request specs
   # watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
