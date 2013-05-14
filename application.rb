@@ -6,6 +6,7 @@ require 'sass'
 require 'compass'
 require 'sinatra/content_for'
 require 'newrelic_rpm'
+require 'sinatra/asset_pipeline'
 
 require './lib/string'
 require './lib/constants'
@@ -13,10 +14,15 @@ require './lib/helpers/init'
 require './models/init'
 
 class PebbleCodeApp < Sinatra::Base
+  register Sinatra::AssetPipeline
 
   set :root, File.dirname(__FILE__)
   set :environment, ENV["RACK_ENV"] || "development"
   set :disable_http_password, ENV["DISABLE_HTTP_PASSWORD"] || false
+
+  set :assets_precompile, %w(*.png *.gif *.jpg *.svg *.eot *.ttf *.woff)
+  set :assets_prefix, 'build'
+
   set :blog_url, "http://blog.pebblecode.com"
   set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
