@@ -1,15 +1,15 @@
 # encoding: utf-8
 require 'rubygems'
 require 'sinatra/base'
-require './lib/string'
-require './lib/constants'
 require 'haml'
 require 'sass'
 require 'compass'
 require 'sinatra/content_for'
 require 'newrelic_rpm'
 
-require './helpers/init'
+require './lib/string'
+require './lib/constants'
+require './lib/helpers/init'
 require './models/init'
 
 class PebbleCodeApp < Sinatra::Base
