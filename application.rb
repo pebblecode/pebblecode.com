@@ -1,7 +1,6 @@
 # encoding: utf-8
 require 'rubygems'
 require 'sinatra/base'
-require './lib/partials'
 require './lib/string'
 require './lib/constants'
 require 'haml'
