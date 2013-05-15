@@ -8,3 +8,4 @@ nodemon-ignore
 
 public/stylesheets/style.styl
 .sass-cache
+config/secrets.yml

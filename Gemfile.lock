@@ -157,6 +157,7 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  rest-client (~> 1.6.7)
   rspec
   ruby-debug19
   sass

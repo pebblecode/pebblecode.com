@@ -10,6 +10,8 @@ require 'sinatra/asset_pipeline'
 
 require './lib/string'
 require './lib/constants'
+require './lib/gplus'
+
 require './lib/helpers/init'
 require './models/init'
 
@@ -25,6 +27,10 @@ class PebbleCodeApp < Sinatra::Base
 
   set :blog_url, "http://blog.pebblecode.com"
   set :jobs_url, "http://pebblecode.mytribehr.com/careers"
+
+  # Use secrets yml file for development
+  # Production should have ENV variables
+  SECRETS = YAML.load_file("#{settings.root}/config/secrets.yml") if (settings.environment == "development")
 
   configure do
     # Redirect all urls on production (http://github.com/cwninja/rack-force_domain)
@@ -70,6 +76,12 @@ class PebbleCodeApp < Sinatra::Base
 
     @page_name = "homepage"
     haml :index, :layout => :'layouts/application'
+  end
+
+  # Temporary hack for development
+  get '/gplus' do
+    content_type :json
+    get_gplus_data
   end
 
   get '/blog' do
