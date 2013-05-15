@@ -1,8 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.2.7)
+    addressable (2.3.4)
     archive-tar-minitar (0.5.2)
+    autoparse (0.3.3)
+      addressable (>= 2.3.1)
+      extlib (>= 0.9.15)
+      multi_json (>= 1.0.0)
     backports (2.5.3)
     builder (3.2.0)
     capybara (1.1.2)
@@ -27,27 +31,46 @@ GEM
     daemons (1.1.8)
     diff-lcs (1.1.3)
     eventmachine (1.0.3)
+    excon (0.21.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    extlib (0.9.16)
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
     ffi (1.1.4)
     foreman (0.41.0)
       thor (>= 0.13.6)
     fssm (0.2.7)
+    google-api-client (0.6.3)
+      addressable (>= 2.3.2)
+      autoparse (>= 0.3.3)
+      extlib (>= 0.9.15)
+      faraday (~> 0.8.4)
+      jwt (>= 0.1.5)
+      launchy (>= 2.1.1)
+      multi_json (>= 1.0.0)
+      signet (>= 0.4.4)
+      uuidtools (>= 2.1.0)
     guard (1.3.0)
       listen (>= 0.4.2)
       thor (>= 0.14.6)
     guard-rspec (0.7.0)
       guard (>= 0.10.0)
     haml (3.1.3)
-    heroku (2.24.1)
+    heroku (2.39.2)
+      heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
-      netrc (~> 0.7.1)
+      netrc (~> 0.7.7)
       rest-client (~> 1.6.1)
       rubyzip
+    heroku-api (0.3.10)
+      excon (~> 0.21.0)
     hike (1.2.2)
     json (1.7.7)
-    launchy (2.1.0)
-      addressable (~> 2.2.6)
+    jwt (0.1.6)
+      multi_json (>= 1.0)
+    launchy (2.3.0)
+      addressable (~> 2.3)
     libwebsocket (0.1.5)
       addressable
     linecache19 (0.5.12)
@@ -56,9 +79,10 @@ GEM
       rb-fchange (~> 0.0.5)
       rb-fsevent (~> 0.9.1)
       rb-inotify (~> 0.8.8)
-    mime-types (1.18)
+    mime-types (1.23)
     multi_json (1.3.6)
-    netrc (0.7.1)
+    multipart-post (1.2.0)
+    netrc (0.7.7)
     newrelic_rpm (3.3.3)
     nokogiri (1.5.6)
     rack (1.3.5)
@@ -93,7 +117,7 @@ GEM
       ruby-debug-base19 (>= 0.11.19)
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
-    rubyzip (0.9.7)
+    rubyzip (0.9.9)
     sass (3.1.10)
     selenium-webdriver (2.25.0)
       childprocess (>= 0.2.5)
@@ -102,6 +126,11 @@ GEM
       rubyzip
     shotgun (0.9)
       rack (>= 1.0)
+    signet (0.4.5)
+      addressable (>= 2.2.3)
+      faraday (~> 0.8.1)
+      jwt (>= 0.1.5)
+      multi_json (>= 1.0.0)
     sinatra (1.3.1)
       rack (~> 1.3, >= 1.3.4)
       rack-protection (~> 1.1, >= 1.1.2)
@@ -139,6 +168,7 @@ GEM
       rack (>= 1.0.0)
     thor (0.14.6)
     tilt (1.3.3)
+    uuidtools (2.1.4)
     validator.nu (0.0.6)
       validator.nu
       yajl-ruby (= 1.1.0)
@@ -156,10 +186,11 @@ DEPENDENCIES
   capybara
   compass
   foreman
+  google-api-client (~> 0.6.3)
   guard
   guard-rspec
   haml
-  heroku
+  heroku (~> 2.39.2)
   json
   newrelic_rpm
   rack-force_domain

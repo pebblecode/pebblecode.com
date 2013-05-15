@@ -142,6 +142,10 @@ class PebbleCodeApp < Sinatra::Base
 
   ############################################################
 
+  get '/auth/google/callback' do
+    puts "params: " + params
+  end
+
   def render_page(page_name)
     protected_unless_disabled!
 
