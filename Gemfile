@@ -14,7 +14,7 @@ gem "sass"
 gem "compass"
 
 # For production deployment
-gem 'heroku'
+gem "heroku", "~> 2.39.2"
 
 # Redirect domains
 gem "rack-force_domain"
@@ -31,6 +31,9 @@ gem 'w3c_validators'
 
 # Sitemaps
 gem "sitemap_generator", "~> 3.4"
+
+# Google apis
+gem "google-api-client", "~> 0.6.3"
 
 group :development, :test do
   # Testing

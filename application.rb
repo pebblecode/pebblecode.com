@@ -10,6 +10,7 @@ require 'sinatra/asset_pipeline'
 
 require './lib/string'
 require './lib/constants'
+require './lib/gplus'
 require './lib/helpers/init'
 require './models/init'
 
@@ -67,6 +68,8 @@ class PebbleCodeApp < Sinatra::Base
 
   get '/' do
     protected_unless_disabled!
+
+    @gplus = get_gplus_data
 
     @page_name = "homepage"
     haml :index, :layout => :'layouts/application'
