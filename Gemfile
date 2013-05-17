@@ -14,7 +14,7 @@ gem "sass"
 gem "compass"
 
 # For production deployment
-gem 'heroku'
+gem "heroku", "~> 2.39.3"
 
 # Redirect domains
 gem "rack-force_domain"
