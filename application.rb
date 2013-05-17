@@ -86,7 +86,7 @@ class PebbleCodeApp < Sinatra::Base
     pebblecode_gplus_id = '111015721606354758456'
 
     content_type :json
-    gplus_public_activities(SECRETS["gplus_browser_key"], pebblecode_gplus_id)
+    gplus_public_activities(SECRETS["google"]["browser_key"], pebblecode_gplus_id)
   end
 
   get '/twitter' do
