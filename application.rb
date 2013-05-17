@@ -80,8 +80,10 @@ class PebbleCodeApp < Sinatra::Base
 
   # Temporary hack for development
   get '/gplus' do
+    pebblecode_gplus_id = '111015721606354758456'
+
     content_type :json
-    get_gplus_data
+    gplus_public_activities(SECRETS["gplus_browser_key"], pebblecode_gplus_id)
   end
 
   get '/blog' do
