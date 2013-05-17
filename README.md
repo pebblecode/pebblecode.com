@@ -19,7 +19,9 @@ Some of the commands below will not work unless you are part of pebblecode, and 
 
         npm install
 
-5. Start the server
+5. Copy `config/secrets.yml.sample` to `config/secrets.yml`, and fill in the secrets from the respective web services.
+
+6. Start the server
 
 	    bundle exec rake server
 
@@ -37,7 +39,7 @@ Some of the commands below will not work unless you are part of pebblecode, and 
 
    Note that you will need to add the IP address to typekit for fonts to show.
 
-6. Add remote git repositories (for commands to work below)
+7. Add remote git repositories (for commands to work below)
 
         bundle exec rake git:add_remotes
 
