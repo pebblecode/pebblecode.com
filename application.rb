@@ -8,6 +8,7 @@ require 'sinatra/content_for'
 require 'newrelic_rpm'
 require 'sinatra/asset_pipeline'
 require 'twitter'
+require 'tumblr_client'
 
 require './lib/string'
 require './lib/constants'
@@ -114,6 +115,19 @@ class PebbleCodeApp < Sinatra::Base
 
     content_type :json
     output.to_json
+  end
+
+  get '/tumblr' do
+    pebblecode_tumblr_url = "blog.pebblecode.com"
+
+    Tumblr.configure do |config|
+      config.consumer_key = SECRETS["tumblr"]["consumer_key"]
+      config.consumer_secret = SECRETS["tumblr"]["consumer_secret"]
+    end
+    client = Tumblr::Client.new
+
+    content_type :json
+    client.posts("blog.pebblecode.com", :limit => 10).to_json
   end
   ############################################################
 

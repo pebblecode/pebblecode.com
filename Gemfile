@@ -35,6 +35,9 @@ gem "rest-client", "~> 1.6.7"
 # Twitter
 gem "twitter", "~> 4.6.2"
 
+# Tumblr
+gem "tumblr_client", "~> 0.7.1"
+
 group :development, :test do
   # Testing
   gem 'rack-test'
