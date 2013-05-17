@@ -7,6 +7,7 @@ require 'compass'
 require 'sinatra/content_for'
 require 'newrelic_rpm'
 require 'sinatra/asset_pipeline'
+require 'twitter'
 
 require './lib/string'
 require './lib/constants'
@@ -78,6 +79,7 @@ class PebbleCodeApp < Sinatra::Base
     haml :index, :layout => :'layouts/application'
   end
 
+  ############################################################
   # Temporary hack for development
   get '/gplus' do
     pebblecode_gplus_id = '111015721606354758456'
@@ -85,6 +87,35 @@ class PebbleCodeApp < Sinatra::Base
     content_type :json
     gplus_public_activities(SECRETS["gplus_browser_key"], pebblecode_gplus_id)
   end
+
+  get '/twitter' do
+    pebblecode_twitter_screen_name = 'pebblecode'
+
+    Twitter.configure do |config|
+      config.consumer_key = SECRETS["twitter"]["consumer_key"]
+      config.consumer_secret = SECRETS["twitter"]["consumer_secret"]
+      config.oauth_token = SECRETS["twitter"]["oauth_token"]
+      config.oauth_token_secret = SECRETS["twitter"]["oauth_token_secret"]
+    end
+
+    output = []
+    tweets = Twitter.user_timeline(pebblecode_twitter_screen_name, :count => 10)
+    tweets.each do |tweet|
+      screen_name = tweet.user.screen_name
+
+      output << {
+        :id => tweet.id,
+        :text => tweet.text,
+        :screen_name => screen_name,
+        :created_at => tweet.created_at,
+        :url => "https://twitter.com/#{screen_name}/status/#{tweet.id}"
+      }
+    end
+
+    content_type :json
+    output.to_json
+  end
+  ############################################################
 
   get '/blog' do
     protected_unless_disabled!

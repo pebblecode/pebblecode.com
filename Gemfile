@@ -32,6 +32,9 @@ gem "sitemap_generator", "~> 3.4"
 # Rest client
 gem "rest-client", "~> 1.6.7"
 
+# Twitter
+gem "twitter", "~> 4.6.2"
+
 group :development, :test do
   # Testing
   gem 'rack-test'
