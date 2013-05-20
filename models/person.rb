@@ -188,13 +188,6 @@ class Person
       :title => "Software Developer",
       :image => "rytis.png",
       :description => "Rytis started programming as soon as he could get his hands on a computer and has not stopped since. He has worked in industries as diverse as accounting and games. Rytis loves .NET, and hates TFS."
-    },
-    {
-      :name => "Dom Crossley",
-      :title => "Senior Software Developer",
-      :image => "dom.png",
-      :description => "After studying Software Engineering at Sheffield Hallam University, Dominic moved into the world of .NET, working mainly in C#.  His professional interests have taken him outside of the .NET ecosystem and currently include Haskell, the Rosylyn compiler-as-a-service, and Intel's Transaction Synchronization Extensions (TSX).",
-      :github => "https://github.com/flashcurd"
     }
   ]
 
