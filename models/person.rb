@@ -110,7 +110,7 @@ class Person
     },
     {
       :name => "Andrea Miskulin",
-      :title => "Office Assistant",
+      :title => "Office Manager",
       :image => "andrea.png",
       :description => "Prior to her role at pebble {code}, Andrea successfully facilitated a director and team in the media and creative industry. She is now responsible for pebble {code}'s office administration - which she does with a smile and plenty of enthusiasm.<br><br>In her spare time, Andrea enjoys creating gourmet dinners, smoothies, going to keep-fit classes, music and movies.",
       :tumblr_name => "andreamis1"
