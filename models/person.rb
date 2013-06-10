@@ -185,7 +185,7 @@ class Person
     },
     {
       :name => "Rytis Bieliunas",
-      :title => "Software Developer",
+      :title => "Senior Software Developer",
       :image => "rytis.png",
       :description => "Rytis started programming as soon as he could get his hands on a computer and has not stopped since. He has worked in industries as diverse as accounting and games. Rytis loves .NET, and hates TFS."
     }
