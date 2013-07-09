@@ -13,9 +13,6 @@ gem "haml"
 gem "sass"
 gem "compass"
 
-# Redirect domains
-gem "rack-force_domain"
-
 # Assets
 gem 'sinatra-asset-pipeline'
 

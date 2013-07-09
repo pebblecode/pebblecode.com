@@ -27,9 +27,6 @@ class PebbleCodeApp < Sinatra::Base
   set :jobs_url, "http://pebblecode.mytribehr.com/careers"
 
   configure do
-    # Redirect all urls on production (http://github.com/cwninja/rack-force_domain)
-    use Rack::ForceDomain, ENV["DOMAIN"] if (settings.environment != "test" && settings.environment != "development")
-
     # Gzips pages
     use Rack::Deflater
 
