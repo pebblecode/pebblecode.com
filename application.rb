@@ -65,6 +65,15 @@ class PebbleCodeApp < Sinatra::Base
     end
   end
 
+  # Redirect all https requests to http
+  get "*" do
+    if request.secure?
+      redirect request.url.gsub(/^https/, "http")
+    else
+      pass # continue execution
+    end
+  end
+
   get '/' do
     protected_unless_disabled!
 
