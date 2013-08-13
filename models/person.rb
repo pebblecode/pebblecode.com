@@ -188,6 +188,20 @@ class Person
       :title => "Senior Software Developer",
       :image => "rytis.png",
       :description => "Rytis started programming as soon as he could get his hands on a computer and has not stopped since. He has worked in industries as diverse as accounting and games. Rytis loves .NET, and hates TFS."
+    },
+    {
+      :name => "Emma Nash",
+      :title => "Software Developer",
+      :image => "emma.png",
+      :description => "Emma writes code and gets things done. Her degree is in maths which she thinks is pretty cool. She likes to spend her time doing useless things like juggling and writing Haskell.",
+      :github => "https://github.com/emmanash"
+    },
+    {
+      :name => "Martin Schinz",
+      :title => "Senior Software Developer",
+      :image => "martin.png",
+      :description => "Martin is a dotNET and Ruby developer. He propagates strong conventions, and following best practices.  After a short excursion into the corporate world, he feels that being among like minded individuals at pebble is the best motivator for constant self improvement and having fun while coding.<br><br>The time he is not thinking about programming, Martin enjoys to spend with his wife and two children.",
+      :github => "https://github.com/mschinz"
     }
   ]
 
