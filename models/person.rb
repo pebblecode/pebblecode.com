@@ -198,7 +198,7 @@ class Person
     },
     {
       :name => "Martin Schinz",
-      :title => "Senior Software Developer",
+      :title => "Software Developer",
       :image => "martin.png",
       :description => "Martin is a dotNET and Ruby developer. He propagates strong conventions, and following best practices.  After a short excursion into the corporate world, he feels that being among like minded individuals at pebble is the best motivator for constant self improvement and having fun while coding.<br><br>The time he is not thinking about programming, Martin enjoys to spend with his wife and two children.",
       :github => "https://github.com/mschinz"
