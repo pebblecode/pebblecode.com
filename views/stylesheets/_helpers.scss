@@ -1,0 +1,11 @@
+//===============================================================================
+// HELPER-CLASSES
+//===============================================================================
+// Hide for javascript, but not if javascript isn't available
+.js-hide {
+  visibility: hidden;
+}
+
+.no-js .js-hide {
+  display: block;
+}

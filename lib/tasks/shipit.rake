@@ -98,19 +98,82 @@ end
 
 desc "Ship it! Merge master and push branch to origin (if not in `DEPLOY_ONLY_BRANCHES`), then deploy to the server."
 task "shipit", [:branch] do |t, args|
+  branch = args.branch
+
   if ALL_DEPLOYMENT_BRANCHES.include? args.branch
-    unless DEPLOY_ONLY_BRANCHES.include? args.branch
-      Rake::Task["merge_master_and_push_to"].invoke(args.branch)
+    # Special case for staging and production
+    if branch == "staging"
+      Rake::Task["shipit:pre_staging"].invoke
     end
 
-    Rake::Task["deploy"].invoke(args.branch)
+    unless DEPLOY_ONLY_BRANCHES.include? args.branch
+      Rake::Task["merge_master_and_push_to"].invoke(branch)
+    end
+
+    Rake::Task["deploy"].invoke(branch)
+
+    if branch == "production"
+      Rake::Task["shipit:post_production"].invoke
+    end
   else
-    puts "Invalid deployment branch: #{args.branch}"
+    puts "Invalid deployment branch: #{branch}"
     puts "Available deployment branches are: #{ALL_DEPLOYMENT_BRANCHES.to_s}"
   end
 end
 
+desc "Generate optimize assets and push changes"
+task "optimize_assets" do
+  build_dir = "public/build"
+
+  Rake.sh "git checkout master"
+
+  # Generate optimized css/js
+  Rake.sh "grunt build"
+  grunt_build_git_status = `git status -s #{build_dir}`
+
+  unless grunt_build_git_status.empty?
+    Rake.sh "git commit -m 'Update optimized assets' #{build_dir}"
+    Rake.sh "git push origin master"
+  end
+end
+
+desc "Generate sitemap and push changes"
+task "generate_sitemap" do
+  import 'sitemap'
+
+  sitemap_files = "public/sitemap*"
+
+  Rake.sh "git checkout master"
+  Rake::Task["sitemap:refresh:no_ping"].invoke
+
+  sitemap_git_status = `git status -s #{sitemap_files}`
+
+  unless sitemap_git_status.empty?
+    Rake.sh "git commit -m 'Update sitemap' #{sitemap_files}"
+    Rake.sh "git push origin master"
+  end
+end
+
 namespace "shipit" do
+  desc "Before deploying to staging, generate optimized assets and sitemap"
+  task :pre_staging do
+    Rake::Task["optimize_assets"].invoke
+    # Commented out - do this manually
+    # Rake::Task["generate_sitemap"].invoke
+  end
+
+  desc "After deploying to production, ..."
+  task :post_production do
+    import 'sitemap'
+
+    # Push to public git
+    Rake.sh "git push public production:master"
+
+    # Ping search engines
+    # Commented out - do this manually
+    # Rake::Task["sitemap:ping_search_engines"].invoke
+  end
+
   desc "Merge branch to deployment branch, push to remote server, and deploy."
   task :branch, [:from_branch, :deploy_branch] do |t, args|
     from_branch = args.from_branch

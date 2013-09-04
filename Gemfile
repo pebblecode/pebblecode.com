@@ -12,13 +12,9 @@ gem 'sinatra-contrib'
 gem "haml"
 gem "sass"
 gem "compass"
-gem 'rdiscount'  # For markdown usage
 
-# For production deployment
-gem 'heroku'
-
-# Redirect domains
-gem "rack-force_domain"
+# Assets
+gem 'sinatra-asset-pipeline'
 
 # New relic
 gem 'newrelic_rpm'

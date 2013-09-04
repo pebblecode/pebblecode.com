@@ -1,5 +1,5 @@
 @import "compass/css3";
-@import "constants";
+@import "screen";
 
 /* Variables
 ----------------------------------------------------------------------*/
@@ -11,6 +11,7 @@ $container-width: 920px;
 ----------------------------------------------------------------------*/
 
 .page-olympic-data-vis {
+
   .row:first-child {
     margin-top: $baseline*2;
     margin-bottom: $baseline*2;
@@ -30,11 +31,9 @@ rect {
   fill: none;
 }
 
-.tab-content {
-  h2 {
-    margin-bottom: 15px;
-    text-align: center;
-  }
+.tab-content h2 {
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .cell {
@@ -45,10 +44,10 @@ rect {
   position: relative;
   height: $baseline * 26;
   width: $container-width;
-
   margin: 0 auto 15px;
 
   .country {
+
     &.active rect {
       fill: black !important;
     }
@@ -57,10 +56,6 @@ rect {
       // display: none;
       fill: white;
       font-weight: bold;
-
-      &.name {
-
-      }
     }
   }
 

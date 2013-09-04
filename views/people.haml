@@ -3,6 +3,8 @@
   %script{ :type => "text/javascript" }
     :plain
       require(["main"], function() {
+        // Load people
+        window.PEOPLE = #{Person.all.to_json};
         require(["app/people"]);
       });
 - content_for :title do
@@ -11,6 +13,11 @@
   Our expert software development team is multi-skilled, creative and ready for any challenge. .NET, C#, F#, Node.js, Ruby on Rails, JavaScript and more.
 - content_for :keywords do
   people, team, skills, skilled, creative, .NET, C#, F#, Node.js, Ruby on Rails, JavaScript, project, development, expertise, personalities, ideas
+
+- selected_person_index = Person.slug_index(@person_slug)
+-# Show selected person index or show a random one
+- person_index = selected_person_index ? selected_person_index : Person.random_person_index
+- person = Person.find_by_index(person_index)
 
 .row.headline
   %h1.size3 Our People
@@ -28,36 +35,57 @@
   %hr.background-random
   %ul.row
     %li#spotlight.columns2
-      - selected_person_index = Person.slug_index(@person_slug)
-      -# Show selected person index or show a random one
-      - person_index = selected_person_index ? selected_person_index : Person.random_person_index
-      - @people.each_with_index do |p, index|
-        %section{:id => p[:name].to_slug, :"data-tumblr" => p[:tumblr_name], :class => "person-row #{"active" if person_index == index}"}
+      %section{:id => person[:name].to_slug, :"data-tumblr" => person[:tumblr_name], :class => "person-row"}
+        .frame
+          .img
+            / Height is same as .img height
+            %img{:alt => person[:name], :src => image_path(Person.big_image(person[:name]))}/
+        %article
+          %h2.size2 In the spotlight:
+          %h2.size2.name= person[:name]
+          %h3.size1= person[:title]
+          %div= person[:description]
+          - if person[:website]
+            %a{:href => person[:website], :target => "_blank", :class => "person-link frame website"} Website
+          - if person[:twitter]
+            %a{:href => person[:twitter], :target => "_blank", :class => "person-link frame twitter"} Twitter
+          - if person[:github]
+            %a{:href => person[:github], :target => "_blank", :class => "person-link frame github"} Github
+          - if person[:linkedin]
+            %a{:href => person[:linkedin], :target => "_blank", :class => "person-link frame linkedin"} linkedin
+      // Duplicate of above, but for js templates
+      %script#person-template{:type => "text/template"}
+        %section{:id => "{{ id }}", :"data-tumblr" => "{{ tumblr_name }}", :class => "person-row"}
           .frame
-            .img
+            .img{:class => "{{color}}-background"}
               / Height is same as .img height
-              %img{:alt => p[:name], :src => p[:image]}/
+              %img{:alt => "{{ name }}", :src => "{{ big_image }}"}/
           %article
             %h2.size2 In the spotlight:
-            %h2.size2.name= p[:name]
-            %h3.size1= p[:title]
-            %div= RDiscount.new(p[:description]).to_html
-            - if p[:website]
-              %a{:href => p[:website], :target => "_blank", :class => "person-link frame website"} Website
-            - if p[:twitter]
-              %a{:href => p[:twitter], :target => "_blank", :class => "person-link frame twitter"} Twitter
-            - if p[:github]
-              %a{:href => p[:github], :target => "_blank", :class => "person-link frame github"} Github
-            - if p[:linkedin]
-              %a{:href => p[:linkedin], :target => "_blank", :class => "person-link frame linkedin"} linkedin
+            %h2.size2.name{ :class => "{{color}}" }= "{{ name }}"
+            %h3.size1{ :class => "{{color}}" }= "{{ title }}"
+            %div= "{{ description }}"
+            :plain
+              {% if (website) { %}
+                <a href={{ website }} target="_blank" class="person-link frame website">Website</a>
+              {% } %}
+              {% if (twitter) { %}
+                <a href={{ twitter }} target="_blank" class="person-link frame twitter">Twitter</a>
+              {% } %}
+              {% if (github) { %}
+                <a href={{ github }} target="_blank" class="person-link frame github">Github</a>
+              {% } %}
+              {% if (linkedin) { %}
+                <a href={{ linkedin }} target="_blank" class="person-link frame linkedin">linkedin</a>
+              {% } %}
     %li.columns4
       %ul.row.people-list
         - @people.each do |p|
-          %li
-            %a{:href => "/people/#{p[:name].to_slug}", :class => "columns1 frame person"}
+          %li{:class => (p == person) ? "active" : ""}
+            %a{:href => Person.slug(p), :class => "columns1 frame person"}
               .img
                 / Height is same as .img height
-                %img{:alt => p[:title], :src => p[:image], :height => 110}/
+                %img{:alt => p[:title], :src => image_path(Person.small_image(p[:name])), :"data-src2x" => image_path(Person.small_retina_image(p[:name])), :height => 110}/
               %h4= p[:name]
               %p.size0= p[:title]
         %li

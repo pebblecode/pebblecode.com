@@ -1,0 +1,202 @@
+//===============================================================================
+// BLOG
+//===============================================================================
+.page-thoughts {
+
+  #wrap #wrap-footer {
+    height: 180px;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+
+  hr {
+    margin-bottom: $baseline*2;
+  }
+}
+
+.blog-post {
+
+  h2, h3, h4 {
+    margin-bottom: $baseline;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 26px;
+    line-height: $baseline*1.5;
+  }
+
+  p code {
+    font-family: monospace;
+    color: black;
+    font-weight: bold;
+    background-color: #F0F0F0;
+    padding: 0.1em 0.5em;
+  }
+
+  blockquote {
+    font-style: italic;
+    margin-bottom: $baseline*1;
+    padding: 0 5%;
+    text-indent: -7px;
+
+    &:before, &:after {
+      content: '"';
+    }
+
+    p {
+      display: inline;
+    }
+  }
+
+  ol, ul {
+    margin-bottom: 1.5em;
+    list-style: disc;
+    margin-left: 1.5em;
+  }
+
+  .img {
+    width: 100%;
+    height: $baseline*11;
+  }
+
+  .frame {
+    margin-bottom: $baseline;
+  }
+
+  .heading {
+    margin-bottom: $baseline;
+  }
+
+  .comments-wrapper {
+    @extend .columns4;
+  } // .comments-wrapper
+
+  .share-this-wrapper {
+    clear: both;
+  }
+} // .blog-post
+
+.blog-content {
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  padding-bottom: $baseline;
+}
+
+.blog-sidebar {
+  margin-top: $baseline*3;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .tags {
+    margin-top: $baseline;
+    list-style: none;
+    margin-left: 0;
+
+    a {
+      font-weight: 400;
+      display: block;
+    }
+
+    li a:after {
+      content: ",";
+    }
+
+    li:last-child a:after {
+      content: "";
+    }
+  }
+
+  .comments {
+
+    a {
+      color: hsl(40, 70%, 98.5%);
+      display: block;
+      background-image: url('/images/comment.png');
+      width: 20px;
+      height: 26px;
+      margin-top: 10px;
+      padding: 4px 12px 6px;
+      display: inline-block;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+}
+
+#thoughts-heading {
+  margin-top: $baseline*3;
+
+  h2 {
+    font-size: 1.5em;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.2;
+  }
+
+  .archive {
+    display: block;
+    margin-top: $baseline;
+    margin-bottom: -($baseline*2);
+  }
+}
+
+#blog-navigation {
+  @extend .columns4;
+  margin: 60px 0 0 0;
+
+  // For archive functionality
+  // li {
+  //   float: left;
+  //   width: 33%;
+  // }
+
+  // .prev {
+
+  // }
+
+  // .archive {
+  //   text-align: center;
+  // }
+
+  // .next {
+  //   text-align: right;
+  // }
+
+  // Standard prev/next styles
+  li {
+    width: 50%;
+  }
+
+  .prev {
+    float: left;
+  }
+
+  .next {
+    float: right;
+    text-align: right;
+  }
+
+}
+
+.blog-tags {
+  margin-bottom: $baseline*2;
+}
+/* @end */
+
+/* group archive */
+.page-archive {
+
+  h1 {
+    margin-top: $baseline*4;
+  }
+
+  hr {
+    margin-top: $baseline;
+    margin-bottom: $baseline*2;
+  }
+}
