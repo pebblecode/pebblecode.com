@@ -27,6 +27,9 @@ gem 'newrelic_rpm'
 gem 'rspec'
 gem 'w3c_validators'
 
+# Sitemaps
+gem "sitemap_generator", "~> 3.4"
+
 group :development, :test do
   # Testing
   gem 'rack-test'
