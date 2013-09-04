@@ -100,15 +100,6 @@ class Person
       :tumblr_name => "danielrbradley"
     },
     {
-      :name => "Akash Chopra",
-      :title => "Technical Architect",
-      :image => "akash.png",
-      :description => "It took a PhD in Computational Physics for Akash to figure out that he enjoyed the \"computational\" part more than the physics. That revelation eventually lead, via an extended spell developing stochastic financial risk modelling software, to pebble {code}. Outside work he loves food, cycling and squash.",
-      :website => "http://www.itworksonmymachine.co.uk",
-      :twitter => "http://twitter.com/akashchopra",
-      :tumblr_name => "akashchopra"
-    },
-    {
       :name => "Andrea Miskulin",
       :title => "Office Manager",
       :image => "andrea.png",
