@@ -1,23 +1,21 @@
 source 'https://rubygems.org'
+ruby "1.9.2"
 
-gem 'rake'
-gem "sinatra"
+gem 'rake', '~>0.9.2.2'
+gem "sinatra", '~>1.3.1'
 gem 'thin'
 gem 'json'
 
 # Helper libs
-gem 'sinatra-contrib'
+gem 'sinatra-contrib', '~>1.3.1'
 
 # Front end
 gem "haml"
 gem "sass"
 gem "compass"
 
-# For production deployment
-gem 'heroku'
-
-# Redirect domains
-gem "rack-force_domain"
+# Assets
+gem 'sinatra-asset-pipeline'
 
 # New relic
 gem 'newrelic_rpm'
@@ -32,7 +30,7 @@ gem "sitemap_generator", "~> 3.4"
 group :development, :test do
   # Testing
   gem 'rack-test'
-  gem 'capybara'
+  gem 'capybara', '~>1.1.2'
   gem 'validator.nu'
   gem 'guard'
   gem 'guard-rspec'

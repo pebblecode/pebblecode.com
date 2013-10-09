@@ -1,5 +1,3 @@
-require 'sinatra/base'
-
 module Sinatra
   module Environment
     def is_production?

@@ -9,7 +9,7 @@ describe "/robots.txt" do
   ["development", "staging"].each do |env|
     describe "on #{env}" do
       before do
-        settings.environment = env
+        app.settings.environment = env
         get @robots_path
       end
 
@@ -26,7 +26,7 @@ describe "/robots.txt" do
 
   describe "on production" do
     before do
-      settings.environment = "production"
+      app.settings.environment = "production"
       get @robots_path
     end
 

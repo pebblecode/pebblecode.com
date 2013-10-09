@@ -1,6 +1,4 @@
 # encoding: utf-8
-require 'sinatra/base'
-
 module Sinatra
   module HttpAuthentication
     def protected_unless_disabled!

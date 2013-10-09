@@ -100,17 +100,8 @@ class Person
       :tumblr_name => "danielrbradley"
     },
     {
-      :name => "Akash Chopra",
-      :title => "Technical Architect",
-      :image => "akash.png",
-      :description => "It took a PhD in Computational Physics for Akash to figure out that he enjoyed the \"computational\" part more than the physics. That revelation eventually lead, via an extended spell developing stochastic financial risk modelling software, to pebble {code}. Outside work he loves food, cycling and squash.",
-      :website => "http://www.itworksonmymachine.co.uk",
-      :twitter => "http://twitter.com/akashchopra",
-      :tumblr_name => "akashchopra"
-    },
-    {
       :name => "Andrea Miskulin",
-      :title => "Office Assistant",
+      :title => "Office Manager",
       :image => "andrea.png",
       :description => "Prior to her role at pebble {code}, Andrea successfully facilitated a director and team in the media and creative industry. She is now responsible for pebble {code}'s office administration - which she does with a smile and plenty of enthusiasm.<br><br>In her spare time, Andrea enjoys creating gourmet dinners, smoothies, going to keep-fit classes, music and movies.",
       :tumblr_name => "andreamis1"
@@ -185,16 +176,23 @@ class Person
     },
     {
       :name => "Rytis Bieliunas",
-      :title => "Software Developer",
+      :title => "Senior Software Developer",
       :image => "rytis.png",
       :description => "Rytis started programming as soon as he could get his hands on a computer and has not stopped since. He has worked in industries as diverse as accounting and games. Rytis loves .NET, and hates TFS."
     },
     {
-      :name => "Dom Crossley",
-      :title => "Senior Software Developer",
-      :image => "dom.png",
-      :description => "After studying Software Engineering at Sheffield Hallam University, Dominic moved into the world of .NET, working mainly in C#.  His professional interests have taken him outside of the .NET ecosystem and currently include Haskell, the Rosylyn compiler-as-a-service, and Intel's Transaction Synchronization Extensions (TSX).",
-      :github => "https://github.com/flashcurd"
+      :name => "Emma Nash",
+      :title => "Software Developer",
+      :image => "emma.png",
+      :description => "Emma writes code and gets things done. Her degree is in maths which she thinks is pretty cool. She likes to spend her time doing useless things like juggling and writing Haskell.",
+      :github => "https://github.com/emmanash"
+    },
+    {
+      :name => "Martin Schinz",
+      :title => "Software Developer",
+      :image => "martin.png",
+      :description => "Martin is a dotNET and Ruby developer. He propagates strong conventions, and following best practices.  After a short excursion into the corporate world, he feels that being among like minded individuals at pebble is the best motivator for constant self improvement and having fun while coding.<br><br>The time he is not thinking about programming, Martin enjoys to spend with his wife and two children.",
+      :github => "https://github.com/mschinz"
     }
   ]
 
