@@ -113,13 +113,6 @@ class Person
       :description => "Long time pebbler Gayle is currently studying to become a latin teacher, but will still lend us her HR superpowers from time to time - she is still very much a part of the big happy family we call pebble."
     },
     {
-      :name => "Tom Squires",
-      :title => "Software Developer",
-      :image => "tom.png",
-      :description => "Tom is a .NET developer, initially starting out building CMS websites, but quickly moving into back-end systems and APIs. In his spare time he enjoys computer gaming and brewing his own real ale. Tom also loves music and often frequents festivals and gigs.",
-      :tumblr_name => "tsquires10"
-    },
-    {
       :name => "James Wallace",
       :title => "Software Developer",
       :image => "james.png",
