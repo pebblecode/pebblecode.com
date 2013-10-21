@@ -251,6 +251,11 @@ This is automatically done when the production deployment task is run, but to do
 * [Google](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://www.pebblecode.com/)
 * [Bing](https://ssl.bing.com/webmaster/home/dashboard?url=http%3A%2F%2Fwww.pebblecode.com%2F)
 
+### Seach engine web master tools
+
+* [Google](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://www.pebblecode.com/)
+* [Bing](https://ssl.bing.com/webmaster/home/dashboard?url=http%3A%2F%2Fwww.pebblecode.com%2F)
+
 ### Maintenance mode
 
 To turn on/off maintenance mode on heroku
