@@ -186,6 +186,12 @@ class Person
       :image => "martin.png",
       :description => "Martin is a dotNET and Ruby developer. He propagates strong conventions, and following best practices.  After a short excursion into the corporate world, he feels that being among like minded individuals at pebble is the best motivator for constant self improvement and having fun while coding.<br><br>The time he is not thinking about programming, Martin enjoys to spend with his wife and two children.",
       :github => "https://github.com/mschinz"
+    },
+    {
+      :name => "Fergus Hynd",
+      :title => "Sales & Marketing",
+      :image => "fergus.png",
+      :description => "Fergus is a sales and marketing consultant; with over a decade of experience making advertising and communications for finance, telecommunication and ecommerce clients he still remains driven by his convictions that great ideas are the only thing worth going to work for and if you're not breaking some new ground everyday through your toils you should have stayed in bed. Other than that he eats a lot of bar-b-que. Not that you can tell."
     }
   ]
 
