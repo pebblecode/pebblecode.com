@@ -192,6 +192,12 @@ class Person
       :title => "Sales & Marketing",
       :image => "fergus.png",
       :description => "Fergus is a sales and marketing consultant; with over a decade of experience making advertising and communications for finance, telecommunication and ecommerce clients he still remains driven by his convictions that great ideas are the only thing worth going to work for and if you're not breaking some new ground everyday through your toils you should have stayed in bed. Other than that he eats a lot of bar-b-que. Not that you can tell."
+    },
+    {
+      :name => "Nancy Lee",
+      :title => "UI/UX Designer",
+      :image => "nancy.png",
+      :description => "Nancy studied design twice, interior and graphics, in two cities Sydney and Melbourne. She is now in London, city number three still designing."
     }
   ]
 
