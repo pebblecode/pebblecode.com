@@ -146,7 +146,7 @@ class Person
     },
     {
       :name => "Andy Wardle",
-      :title => "Senior Software Developer",
+      :title => "Technical Architect",
       :image => "andy.png",
       :description => "Andy is a .NET developer with experience dating back to the dark days of .NET 1.1, thankfully only for a very short while. His experience spans the full stack going from MVC, Service Bus, WCF to SQL Server. Outside of work he has a bit of an obsession with football and leads a relatively active lifestyle trying to fit in rock climbing, golf and other sports around going to the pub.",
       :tumblr_name => "andypebble"
