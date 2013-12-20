@@ -63,7 +63,8 @@ require([
     jameswallacepebble: "James Wallace",
     nbevans: "Nathan Evans",
     andypebble: "Andy Wardle",
-    svnlto: "Sven Lito"
+    svnlto: "Sven Lito",
+    serbio666: "Fergus Hynd"
   };
 
   // Link authors to their relevant people page
