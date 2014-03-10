@@ -44,4 +44,12 @@
 .address.tera,
 .phone-email.tera{
   font-size: 22px;
+
+  @media ( max-height: 470px ) {
+    font-size: 34px !important;
+  }
+
+  @media ( max-height: 470px ) and ( max-width: 500px ) {
+    font-size: 22px !important;
+  }
 }
