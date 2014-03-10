@@ -72,4 +72,9 @@ $(document).ready(function () {
     $( 'html' ).addClass( 'no-mq' );
   }
 
+  // video page stuff
+  $( '.az-video' ).click( function() {
+    document.getElementsByTagName("video")[0].play();
+  });
+
 });
