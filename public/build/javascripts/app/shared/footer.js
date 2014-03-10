@@ -1,1 +1,0 @@
-require(["jquery","shared/map"],function(e){e("footer").hover(function(){e(this).css("height","500px"),e.scrollTo(e("footer"),"max")},function(){e(this).animate({height:"80px"},500)})});

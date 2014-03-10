@@ -1,1 +1,0 @@
-define(["jquery"],function(e){return{init:function(){var e=window.devicePixelRatio?window.devicePixelRatio:1;e>1&&$("img").each(function(e,t){t=$(t),t.attr("data-src2x")&&(t.attr("data-src-orig",t.attr("src")),t.attr("src",t.attr("data-src2x")))})}}});
