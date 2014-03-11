@@ -104,8 +104,8 @@
   position: absolute;
 }
 
-.person,
-.ppl-text {
+.person {
+
   &::before,
   &::after {
     content: "";
@@ -113,15 +113,15 @@
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+    background-position: 0 0;
   }
 
   &::before {
-    background-position: 100% 0;
   }
 
   &::after {
-    background-position: 0 99%;
+    background-position: 0 1px;
   }
 }
 
@@ -225,6 +225,9 @@
   text-align: center;
   position: absolute;
   -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   padding: 0 5%;
   line-height: 1.1;
   font-size: 16px;
@@ -259,6 +262,9 @@
     padding: 0 5%;
     top: 50%;
     -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 
@@ -267,6 +273,9 @@
   top: 50%;
   width: 100%;
   -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   text-align: center;
 
   h3 {
