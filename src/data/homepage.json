@@ -9,6 +9,12 @@
   "cta-link": "mailto:info@pebblecode.com?subject=Book a hack day",
   "testimonials": [
     {
+      "text": "pebble have the most creative and innovative approach to development - and they manage to do it all at such a speed",
+      "client": "Nick Brown",
+      "title": ", Innovation & Technology Architect  ,",
+      "company": "AstraZeneca"
+    },
+    {
       "text": "pebble has always delivered fantastic results. I couldn't recommend them highly enough",
       "client": "Michael Brady",
       "title": ", CEO ,",
