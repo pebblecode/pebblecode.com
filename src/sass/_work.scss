@@ -21,7 +21,7 @@
     width: 4.5%;
     max-width: 20px;
     top: 0;
-    background-size: 100%;
+    background-size: 100% 100%;
   }
 
   &::before {
@@ -62,6 +62,7 @@
   margin-top: -15px;
   border: 0;
   background-image: url( '../img/hr-1.svg' );
+  background-size: 100% 100%;
   z-index: 1;
 
   &:nth-child( 3n + 2 ) {
