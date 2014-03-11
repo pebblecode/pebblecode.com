@@ -1,10 +1,22 @@
 //===============================================================================
 // AZ VIDEOS
 //===============================================================================
+.az-title {
+  width: 90%;
+  max-width: 800px;
+  margin: 60px auto 0;
+
+  @media ( min-width: 600px ) {
+    margin-top: 100px;
+    font-size: 44px;
+  }
+}
+
 .az-video-outer {
   padding-top: $header-height-small;
   width: 90%;
-  margin: 100px auto;
+  max-width: 800px;
+  margin: 20px auto 100px;
   position: relative;
 }
 
