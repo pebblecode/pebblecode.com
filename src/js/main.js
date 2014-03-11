@@ -72,9 +72,11 @@ $(document).ready(function () {
     $( 'html' ).addClass( 'no-mq' );
   }
 
-  // video page stuff
-  $( '.az-video' ).click( function() {
-    document.getElementsByTagName("video")[0].play();
-  });
+  // video page stuff // disable on FF
+  if ( (navigator.userAgent.indexOf('Firefox') !== -1) === false ) {
+    $( '.az-video' ).click( function() {
+      document.getElementsByTagName("video")[0].play();
+    });
+  }
 
 });
