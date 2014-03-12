@@ -108,6 +108,15 @@ module.exports = function ( grunt ) {
       }]
     },
 
+    cname: {
+      files: [{
+        expand: true,
+        cwd: 'src/',
+        src: [ 'CNAME' ],
+        dest: 'dist/'
+      }]
+    },
+
     astrazenecaVideos: {
       files: [{
         expand: true,
@@ -184,5 +193,5 @@ module.exports = function ( grunt ) {
 
   grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 
-  grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:favicon', 'copy:astrazenecaVideos' ] );
+  grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:favicon', 'copy:cname', 'copy:astrazenecaVideos' ] );
 };
