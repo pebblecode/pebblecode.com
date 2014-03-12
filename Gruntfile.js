@@ -99,6 +99,15 @@ module.exports = function ( grunt ) {
       }]
     },
 
+    favicon: {
+      files: [{
+        expand: true,
+        cwd: 'src/',
+        src: [ 'favicon.ico' ],
+        dest: 'dist/'
+      }]
+    },
+
     astrazenecaVideos: {
       files: [{
         expand: true,
@@ -175,5 +184,5 @@ module.exports = function ( grunt ) {
 
   grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 
-  grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:astrazenecaVideos' ] );
+  grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:favicon', 'copy:astrazenecaVideos' ] );
 };
