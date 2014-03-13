@@ -36,7 +36,7 @@ module.exports = function ( grunt ) {
 
   // clean up old html
   clean: {
-    all: [ 'dist/**/*.html' ]
+    all: [ 'dist/' ]
   },
 
   // compile Sass
@@ -187,7 +187,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-gh-pages' );
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask( 'default', [ 'connect', 'watch' ] );
+  grunt.registerTask( 'default', [ 'make', 'connect', 'watch' ] );
 
   grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:favicon', 'copy:cname' ] );
 };
