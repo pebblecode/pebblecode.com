@@ -72,11 +72,21 @@ $(document).ready(function () {
     $( 'html' ).addClass( 'no-mq' );
   }
 
-  // video page stuff // disable on FF
-  if ( (navigator.userAgent.indexOf('Firefox') !== -1) === false ) {
-    $( '.az-video' ).click( function() {
-      document.getElementsByTagName("video")[0].play();
-    });
-  }
-
+  // video stuff to deal with IE9
+  $('iframe').each(function() {
+    var url = $(this).attr("src");
+    if ($(this).attr("src").indexOf("?") > 0) {
+      $(this).attr({
+        "src" : url + "&wmode=transparent",
+        "wmode" : "Opaque"
+      });
+    }
+    else {
+      $(this).attr({
+        "src" : url + "?wmode=transparent",
+        "wmode" : "Opaque"
+      });
+    }
+  });
+  
 });
