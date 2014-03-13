@@ -23,6 +23,11 @@ module.exports = function ( grunt ) {
       dest: 'dist/'
     },
 
+    ourApproach: {
+      src: [ 'src/templates/pages/our-approach/*.hbs' ],
+      dest: 'dist/our-approach/' 
+    },
+
     astrazeneca: {
       src: [ 'src/templates/pages/astrazeneca/*.hbs' ],
       dest: 'dist/astrazeneca/' 
@@ -115,15 +120,6 @@ module.exports = function ( grunt ) {
         src: [ 'CNAME' ],
         dest: 'dist/'
       }]
-    },
-
-    astrazenecaVideos: {
-      files: [{
-        expand: true,
-        cwd: 'src/astrazeneca-videos/',
-        src: [ '**' ],
-        dest: 'dist/astrazeneca/'
-      }]
     }
   },
 
@@ -193,5 +189,5 @@ module.exports = function ( grunt ) {
 
   grunt.registerTask( 'default', [ 'connect', 'watch' ] );
 
-  grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:favicon', 'copy:cname', 'copy:astrazenecaVideos' ] );
+  grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:favicon', 'copy:cname' ] );
 };
