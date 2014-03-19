@@ -25,12 +25,12 @@ module.exports = function ( grunt ) {
 
     ourApproach: {
       src: [ 'src/templates/pages/our-approach/*.hbs' ],
-      dest: 'dist/our-approach/' 
+      dest: 'dist/our-approach/'
     },
 
     astrazeneca: {
       src: [ 'src/templates/pages/astrazeneca/*.hbs' ],
-      dest: 'dist/astrazeneca/' 
+      dest: 'dist/astrazeneca/'
     }
   },
 
@@ -167,7 +167,7 @@ module.exports = function ( grunt ) {
       tasks: [ 'copy:images' ]
     },
   },
-  
+
   'gh-pages': {
     options: {
       base: 'dist'
