@@ -32,6 +32,24 @@ If you wish to use liveReload you will need to install & activate the relivant b
 
 The staging site is hosted on heroku: http://pebblecode-staging.herokuapp.com/
 
+#### Setup
+
+Before being able to push to staging, you will need to run
+
+    git remote add staging git@heroku.com:pebblecode-staging.git
+
+#### Updating staging
+
+To push to staging, run:
+
+    git push staging [branch]:master
+
+where `[branch]` is the branch you want to push.
+
+To just deploy `master`, run
+
+   git push staging master
+
 #### HTTP passwords
 
 To check the username/password (HTTP_USERNAME/HTTP_PASSWORD respectively)
