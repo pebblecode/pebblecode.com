@@ -30,11 +30,7 @@ If you wish to use liveReload you will need to install & activate the relivant b
 
 ### Staging
 
-The staging site is hosted on heroku.
-
-It was initialised with
-
-    heroku config:add ENV=staging --app pebblecode-staging
+The staging site is hosted on heroku: http://pebblecode-staging.herokuapp.com/
 
 #### HTTP passwords
 
@@ -46,3 +42,9 @@ To change the username/password
 
     heroku config:add HTTP_USERNAME=name --app pebblecode-staging
     heroku config:add HTTP_PASSWORD=pass --app pebblecode-staging
+
+#### Initialisation
+
+It was initialised with
+
+    heroku config:add ENV=staging --app pebblecode-staging
