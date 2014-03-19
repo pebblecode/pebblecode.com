@@ -1,17 +1,17 @@
-"use strict";
+var port = process.env.PORT || 8080;
+var express = require("express");
+var logfmt = require("logfmt");
+var app = express();
 
-var nodeStatic = require('node-static');
+app.use(logfmt.requestLogger());
 
-var file = new(nodeStatic.Server)('./dist'),
-  port = process.env.PORT || 8080;
+app.use(express.static(__dirname + '/dist'));
+app.use(express.errorHandler({
+  dumpExceptions: true,
+  showStack: true
+}));
 
-console.log("Server started on http://localhost:" + port);
-
-require('http').createServer(function(request, response) {
-  file.serve(request, response, function(err, res) {
-    if (err) {
-      response.writeHead(err.status, err.headers);
-      response.end();
-    }
-  });
-}).listen(port);
+var port = Number(port);
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
