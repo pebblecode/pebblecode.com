@@ -2,6 +2,9 @@
   "name": "pebble-sites",
   "repository": "https://github.com/pebblecode/pebblecode.github.io",
   "version": "0.0.1",
+  "scripts": {
+    "start": "node bin/server.js"
+  },
   "engines": {
     "node": "0.10.x"
   },
