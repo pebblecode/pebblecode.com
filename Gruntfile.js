@@ -276,6 +276,7 @@ module.exports = function ( grunt ) {
     var tempProdFolder = grunt.config.get('constants').tempProdFolder;
     var gitStatusCmd = 'git status -s';
     var status = shell.exec(gitStatusCmd, { silent:true });
+    var force = grunt.option('force');
     var msg;
 
     // Check that deployment init has been run
@@ -284,7 +285,7 @@ module.exports = function ( grunt ) {
     }
 
     // Check that there aren't any uncommited changes
-    if (status.output !== "") {
+    if (!force && (status.output !== "")) {
       msg = 'You have uncommited changes:\n\n' + status.output + "\n" +
         "Commit or stash changes before proceeding.\n\n";
       throw new Error(msg);
