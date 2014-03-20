@@ -75,9 +75,10 @@ The deploy to production, run
 
     grunt deploy:production
 
+By default, it checks for uncommitted files, and won't allow you to proceed unless you commit/stash existing changes. To bypass this, use `--force`.
+
 The grunt task does the following:
 
-1. Copies files from `dist` to `temp/production`
-2. Copy files to https://github.com/pebblecode/pebblecode.github.io repo
-3. Pushes to `master` branch
+1. Copies files from `dist` to `temp/production` (which is a clone of https://github.com/pebblecode/pebblecode.github.io from `grunt deploy:init`)
+2. Pushes to the production `master` branch, which should automatically be deployed to github
 
