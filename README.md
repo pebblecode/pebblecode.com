@@ -71,9 +71,13 @@ It was initialised with
 
 The production site is hosted on github pages: http://pebblecode.com/, with files hosted at https://github.com/pebblecode/pebblecode.github.io
 
-Currently deployment is manual, with the following process:
+The deploy to production, run
 
-1. Development this [repo](https://github.com/pebblecode/pebblecode.com)
-2. Files are auto-generated in `dist` during development
-3. Copy files to https://github.com/pebblecode/pebblecode.github.io repo, and push to `master`
+    grunt deploy:production
+
+The grunt task does the following:
+
+1. Copies files from `dist` to `temp/production`
+2. Copy files to https://github.com/pebblecode/pebblecode.github.io repo
+3. Pushes to `master` branch
 

@@ -25,6 +25,8 @@
     "logfmt": "^1.0.0-pre3",
     "express": "^3.4.8",
     "ejs": "^0.8.5",
-    "grunt-shell": "^0.6.4"
+    "grunt-shell": "^0.6.4",
+    "shelljs": "^0.2.6",
+    "grunt-prompt": "^1.1.0"
   }
 }
