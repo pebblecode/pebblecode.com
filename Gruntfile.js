@@ -299,8 +299,11 @@ module.exports = function ( grunt ) {
 
     // Check for changes, and run commit task if
     // there are
+    var pwd = shell.pwd();
     shell.cd(tempProdFolder);
     var prodStatus = shell.exec(gitStatusCmd, { silent: true });
+    shell.cd(pwd); // Go back to initial directory
+
     if (prodStatus.output === "") {
       console.log("Nothing changed.");
     } else {
@@ -318,8 +321,11 @@ module.exports = function ( grunt ) {
 
     // From grunt prompt
     var commitMessage = grunt.config('commitMessage');
+    var pwd = shell.pwd();
     shell.cd(tempProdFolder);
-    shell.exec('git commit -m "' + commitMessage + '"');
+    shell.exec('git commit -am "' + commitMessage + '"');
     shell.exec('git push');
+
+    shell.cd(pwd); // Go back to initial directory
   });
 };
