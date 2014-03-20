@@ -2,6 +2,13 @@
   "name": "pebble-sites",
   "repository": "https://github.com/pebblecode/pebblecode.github.io",
   "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
@@ -14,6 +21,12 @@
     "assemble": "~0.4.0",
     "pretty": "~0.1.1",
     "grunt-gh-pages": "~0.7.0",
-    "grunt-contrib-uglify": "~0.2.7"
+    "grunt-contrib-uglify": "~0.2.7",
+    "logfmt": "^1.0.0-pre3",
+    "express": "^3.4.8",
+    "ejs": "^0.8.5",
+    "grunt-shell": "^0.6.4",
+    "shelljs": "^0.2.6",
+    "grunt-prompt": "^1.1.0"
   }
 }
