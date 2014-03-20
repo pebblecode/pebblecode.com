@@ -313,6 +313,8 @@ module.exports = function ( grunt ) {
 
   // Push changes from temp folder to production
   grunt.registerTask('deploy:production:pushChanges', function() {
+    var tempProdFolder = grunt.config.get('constants').tempProdFolder;
+
     // From grunt prompt
     var commitMessage = grunt.config('commitMessage');
     shell.cd(tempProdFolder);
