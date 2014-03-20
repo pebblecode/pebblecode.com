@@ -168,12 +168,52 @@ module.exports = function ( grunt ) {
     },
   },
 
+  shell: {
+    init: {
+      options: {
+        stdout: true,
+        stderr: true
+      },
+      command: function() {
+        var stagingInit = "git remote add staging git@heroku.com:pebblecode-staging.git";
+
+        return "echo '" + stagingInit + "';" +
+               stagingInit;
+      }
+    },
+    deployStaging: {
+      options: {
+        stdout: true,
+        stderr: true
+      },
+      command: function() {
+        var branch = grunt.option('branch');
+        var force = grunt.option('force');
+        var stagingDeployCmd = "git push staging";
+
+        if (branch) {
+          stagingDeployCmd = stagingDeployCmd + " " + branch + ":master";
+        } else {
+          stagingDeployCmd = stagingDeployCmd + " master";
+        }
+
+        if (force) {
+          stagingDeployCmd = stagingDeployCmd + " -f";
+        }
+
+        return "echo '" + stagingDeployCmd + "';" +
+               stagingDeployCmd;
+      }
+    }
+  },
+
   'gh-pages': {
     options: {
       base: 'dist'
     },
-      src: [ '*.html', 'js/**/*', 'css/**/*', 'img/**/*' ]
-    }
+    src: [ '*.html', 'js/**/*', 'css/**/*', 'img/**/*' ]
+  }
+
   });
 
   grunt.loadNpmTasks( 'assemble' );
@@ -186,8 +226,12 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks( 'grunt-contrib-jshint' );
   grunt.loadNpmTasks( 'grunt-gh-pages' );
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask( 'default', [ 'make', 'connect', 'watch' ] );
 
   grunt.registerTask( 'make', [ 'clean', 'assemble', 'sass', 'copy:scripts', 'copy:images', 'copy:robot', 'copy:favicon', 'copy:cname' ] );
+
+  grunt.registerTask('deploy:init', ['shell:init']);
+  grunt.registerTask('deploy:staging', ['shell:deployStaging']);
 };

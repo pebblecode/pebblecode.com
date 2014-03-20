@@ -28,27 +28,27 @@ If you wish to use liveReload you will need to install & activate the relivant b
 
 ## Deployment
 
+Before being able to deploy, you will need to setup your environmnet, with
+
+    grunt deploy:init
+
 ### Staging
 
 The staging site is hosted on heroku: http://pebblecode-staging.herokuapp.com/
 
-#### Setup
+To push the master branch to staging, run:
 
-Before being able to push to staging, you will need to run
+    grunt deploy:staging
 
-    git remote add staging git@heroku.com:pebblecode-staging.git
+Or if you want a particular branch, run:
 
-#### Updating staging
+    grunt deploy:staging --branch branch-name
 
-To push to staging, run:
+where `branch-name` is the branch you want to push.
 
-    git push staging [branch]:master
+If there are errors with the push eg, `error: failed to push some refs`, you can add the `--force` flag eg,
 
-where `[branch]` is the branch you want to push.
-
-To just deploy `master`, run
-
-   git push staging master
+    grunt deploy:staging --force
 
 #### HTTP passwords
 
