@@ -149,7 +149,7 @@ module.exports = function ( grunt ) {
     // watch for changes to templates and data. Remove all html then rebuild
     html: {
       files: [ 'src/templates/**/*.hbs', 'src/data/*.json' ],
-      tasks: [ 'clean', 'assemble' ]
+      tasks: [ 'assemble' ]
     },
     // watch for Sass changes. Complie to CSS
     css: {
