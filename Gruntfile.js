@@ -54,7 +54,8 @@ module.exports = function ( grunt ) {
       dist: {
         options: {
           style: 'compressed',
-          lineNumbers: true
+          lineNumbers: true,
+          sourcemap: true
         },
         files: {
           'dist/css/styles.css': 'src/sass/styles.scss'
