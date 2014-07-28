@@ -55,11 +55,9 @@
       "github": "https://github.com/simonhdickson"
     },
     {
-      "name": "Daniel Bradley",
+      "name": "Joe Fitter",
       "title": "Software Developer",
-      "image": "dan.png",
-      "twitter": "http://twitter.com/danielrbradley",
-      "github": "https://github.com/danielrbradley"
+      "image": "joe.png"
     },
     {
       "name": "Andrea Miskulin",
@@ -134,9 +132,9 @@
       "image": "fergus.png"
     },
     {
-      "name": "Nancy Lee",
+      "name": "Peter Tait",
       "title": "UI/UX Designer",
-      "image": "nancy.png"
+      "image": "peter.png"
     },
     {
       "name": "Tane Piper",
@@ -152,11 +150,6 @@
       "name": "Saverio Castelli",
       "title": "Software Developer",
       "image": "saverio.png"
-    },
-    {
-      "name": "Joe Fitter",
-      "title": "Software Developer",
-      "image": "joe.png"
     },
     {
       "name": "Lizzie Mead",
