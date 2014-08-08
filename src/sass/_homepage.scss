@@ -13,25 +13,39 @@
 }
 
 .homepage-head{
-  background: $code-head;
-  padding: 50px 10px;
+  background: $pc-pink;
+  background: rgba(238, 79, 126, 0.4);
+  padding: 60px 20px 110px;
   position: relative;
   margin-top: $header-height-small;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    display: block;
+    height: 80px;
+    background: $ink;
+    @include vendor( transform, rotate(1deg) scale(1.2) );
+  }
 
   h1,
   h2 {
-    color: $pc-pink;
+    color: $paper;
     margin: 0;
     text-align: center;
   }
 
   h1{
-    font-size: 46px;
+    font-size: 38px;
     margin-bottom: 20px; 
   }
 
   h2{
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.1;
     font-weight: 300;
   }
@@ -245,22 +259,205 @@
     }
   }
 
-.testamonials-container {
+.homepage-logos{
+  background: $ink;
+  padding: 0 20px 20px;
+  margin-bottom: 0;
+
+  li{
+    width: 50%;
+    float: left;
+    padding: 0 10px 10px;
+    text-align: center;
+    display: block;
+
+    img{
+      max-width: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+.homepage-grid-container{
   background: $paper;
-  padding: 60px 20px;
+  padding: 80px 20px 40px;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    display: block;
+    height: 40px;
+    background: $ink;
+    @include vendor( transform, rotate(-0.6deg) scale(1.2) );
+  }
+
+  .call-out.grid-title{
+    font-size: 32px;
+  }
+}
+
+.homepage-grid-inner{
+  float: left;
+  width: 100%;
+  margin: 0 0.25%;
   position: relative;
 
-  @media ( min-width: 1024px ) {
-    &::after {
+  .grid-inner-block{
+    margin: 8px 0;
+    color: $paper;
+    display: block;
+    clear: left;
+    position: relative;
+    @include vendor( transition, 0.2s ease-in-out);
+
+    &:hover{
+      @include vendor( transform, scale(1.02) );
+    }
+
+    &::before{
       content: "";
       position: absolute;
-      top: -12px;
-      height: 12px;
       width: 100%;
-      background: url("../img/testamonials.svg");
+      height: 100%;
+      top: 0;
       left: 0;
-      background-size: 100% 100%;
+      z-index: -1;
     }
+    .call-out{
+      color: rgba(0,0,0,0.4);
+      margin: 20px 0 10px;
+    }
+    
+    a{
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: $paper;
+
+      h2, h3, h4, p{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      h3{
+        color: $paper;
+        margin-bottom: 5px;
+        text-transform: none;
+      }
+      p{
+        font-weight: 300;
+      }
+    }
+    .image{
+      text-align: center;
+      padding: 30px 40px;
+      min-height: 150px;
+      background-repeat: no-repeat;
+
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+.block-cstudy{
+
+  &::before{
+    background: $pc-blue;
+    @include vendor( transform, rotate(0.53deg) skew(0.5deg) );
+  }
+
+  .image{
+    background: darken($pc-blue, 10);
+    @include vendor( transform, rotate(0.53deg) skew(0.5deg) );
+    background-size: 100%;
+    background-position: center;
+  }
+}
+.block-insight{
+  &::before{
+    background: $pc-orange;
+    @include vendor( transform, rotate(-0.3deg) skew(-0.4deg) );
+  }
+  .image{
+    background: darken($pc-orange, 10);
+    @include vendor( transform, rotate(-0.3deg) skew(-0.4deg) );
+    background-size: 100%;
+    background-position: center;
+  }
+}
+.block-lab{
+  &::before{
+    background: $pc-aqua;
+    @include vendor( transform, rotate(0.3deg) skew(0.8deg) );
+  }
+  .image{
+    background: darken($pc-aqua, 10);
+    @include vendor( transform, rotate(0.3deg) skew(0.8deg) );
+    background-size: 100%;
+    background-position: center;
+
+  }
+}
+.grid-inner-block.block-join{
+  &::before{
+    background: $pc-purple;
+    @include vendor( transform, rotate(0.3deg) skew(-0.4deg) );
+  }
+  .image{
+    background: darken($pc-purple, 10);
+    @include vendor( transform, rotate(0.3deg) skew(-0.4deg) );
+    background-size: 100%;
+    background-position: center;
+  }
+  h2.call-out{
+    color: $paper;
+    font-size: 72px;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+    padding: 30px 20px;
+    margin-top: 0;
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: darken($pc-purple, 10);
+      @include vendor( transform, rotate(0.3deg) skew(-0.4deg) );
+    }
+  }
+  p{
+    margin-top: 20px;
+  }
+}
+
+.testamonials-container {
+  background: lighten($ink, 47);
+  padding: 80px 20px 20px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    display: block;
+    height: 40px;
+    background: $paper;
+    @include vendor( transform, rotate(-0.7deg) scale(1.2) );
   }
 
   li {
@@ -268,8 +465,8 @@
   }
 
   .text {
-    font-size: 24px;
-    margin-bottom: 0;
+    font-size: 28px;
+    margin-bottom: 10px;
     color: $pc-pink;
 
     &:before,
@@ -280,6 +477,7 @@
 
   span{
     font-weight: 700;
+    line-height: 20px;
   }
 
   .title {

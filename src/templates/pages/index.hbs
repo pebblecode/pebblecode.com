@@ -7,37 +7,56 @@ title:
   <h2>{{ homepage.sub-head }}</h2>
 </header>
 
-<div class="cta-container-small">
-  <span class="block-1">
-    {{ homepage.cta-1 }}
-    {{#if homepage.cta-1a }}
-      <br>{{ homepage.cta-1a }}s
-    {{/if}}
-  </span>
-  <a href="{{ homepage.cta-link }}" target="_blank">
-    <span class="block-2" data-text="{{ homepage.cta-3 }}">{{ homepage.cta-2 }}</span>
-  </a>
-</div>
+<ul class="homepage-logos clear-fix">
+  {{#each homepage.logos }}
+  <li><img src="../img/clients/{{ image }}" alt="AstraZeneca"></li>
+  {{/each}}
+</ul>
 
-<div class="cta-container-large">
-  <a href="{{ homepage.cta-link }}" target="_blank">
-    <span class="block-1">
-      {{ homepage.cta-1 }}
-      {{#if homepage.cta-1a }}
-        <br>{{ homepage.cta-1a }}s
-      {{/if}}
-    </span>
-    <span class="block-2" data-text="{{ homepage.cta-3 }}">{{ homepage.cta-2 }}</span>
-  </a>
-  {{#if homepage.cta-help-text }}
-    <div class="cta-help-outer">
-      <div class="cta-help">
-        <h4 class="mega">{{ homepage.cta-help-header }}</h4>
-        <p>{{ homepage.cta-help-text }}</p>
+<div class="homepage-grid-container clear-fix">
+
+    <h2 class="grid-title call-out">Explore</h2>
+
+    <div class="homepage-grid-inner">
+
+      <div class="grid-inner-block block-cstudy">
+        <a href="../work" title="pebble {code} case study">
+          <div class="image" style="background-image: url(../img/{{ homepage.cstudy-image }});"></div>
+          <h4 class="call-out">Case Study</h4>
+          <h3>{{ homepage.cstudy-title }}</h3>
+          <p>{{{ homepage.cstudy-text }}}</p>
+        </a>
       </div>
+      <div class="grid-inner-block block-lab">
+        <a href="../blog" title="pebble {code} case lab">
+          <div class="image" style="background-image: url(../img/{{ homepage.lab-image }});"></div>
+          <h4 class="call-out">From the Lab</h4>
+          <h3>{{ homepage.lab-title }}</h3>
+          <p>{{{ homepage.lab-text }}}</p>
+        </a>
+      </div>
+
     </div>
-  {{/if}}
-  <span class="cta-help-btn">?</span>
+
+    <div class="homepage-grid-inner">
+
+      <div class="grid-inner-block block-insight">
+        <a href="../blog" title="pebble {code} blog">
+          <div class="image" style="background-image: url(../img/{{ homepage.insight-image }});"></div>
+          <h4 class="call-out">Insight</h4>
+          <h3>{{ homepage.insight-title }}</h3>
+          <p>{{{ homepage.insight-text }}}</p>
+        </a>
+      </div>
+      <div class="grid-inner-block block-join">
+        <a href="../people" title="pebble {code} case people">
+          <h2 class="call-out">{{ homepage.join-title }}</h2>
+          <p>{{{ homepage.join-text }}}</p>
+        </a>
+      </div>
+
+    </div>
+
 </div>
 
 <div class="testamonials-container">
@@ -52,4 +71,3 @@ title:
     {{/each}}
   </ul>
 </div>
-{{!-- <span class="theres-more">&#9660;</span> --}}

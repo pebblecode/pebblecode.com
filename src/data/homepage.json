@@ -1,36 +1,43 @@
 {
-  "headline": "WE BUILD INNOVATIVE SOFTWARE WITH BIG BUSINESSES",
-  "sub-head": "We get our kicks from solving complex business problems with our clients and together we make robust software that is a joy to use.",
-  "cta-1": "Take your first step along The Pebble Way today",
-  "cta-2": "Book your Hack Day with us here",
-  "cta-3": "Book A Hack Day",
-  "cta-help-header": "What are Hack Days?",
-  "cta-help-text": "Hack Days allow your best brains and ours to spend a day working together on your most pressing problems, generating loads of ideas and turning your favourites into a working prototypes THAT DAY.",
-  "cta-link": "mailto:info@pebblecode.com?subject=Book a hack day",
+  "headline": "Innovation & Data Visualisation Specialists",
+  "sub-head": "Using modern and disruptive processes, we create beautiful and bespoke software solutions to enable organisations to unlock value from their data, systems and people. ",
+  "logos": [
+    {
+      "image": "logo-az.png"
+    },
+    {
+      "image": "logo-bede.png"
+    },
+    {
+      "image": "logo-lloyds.png"
+    },
+    {
+      "image": "logo-pearson.png"
+    }
+  ],
+
+  "cstudy-title": "AstraZeneca: Harnessing Knowledge",
+  "cstudy-text": "AZ had over 200 million documents. Printed out on paper, that would weigh more than the Titanic. They used over 100 different applications to search them all. That meant over 100 passwords, interfaces and systems to learn and no common way to collate results.",
+  "cstudy-image": "hand-opacity.png",
+
+  "insight-title": "Innovation != Technology",
+  "insight-text": "Businesses are increasingly looking to technology to solve a requirement to innovate. Hack days are now the domain of corporations looking to generate ideas and creativity quickly. But for businesses to really embrace innovation cultural change is far more important than technology.",
+  "insight-image": "brain-opacity.png",
+
+  "lab-title": "Lab title goes here",
+  "lab-text": "AZ had over 200 million documents. Printed out on paper, that would weigh more than the Titanic. They used over 100 different applications to search them all.",
+  "lab-image": "cloud-opacity.png",
+
+  "join-title": "Join the team!",
+  "join-text": "Our method is simple: We hire the people we think are the best out there in their area of expertise.",
+  "join-image": "logo-az.png",
+
   "testimonials": [
     {
       "text": "pebble have the most creative and innovative approach to development - and they manage to do it all at such a speed",
       "client": "Nick Brown",
       "title": ", Innovation & Technology Architect ,",
       "company": "AstraZeneca"
-    },
-    {
-      "text": "pebble has always delivered fantastic results. I couldn't recommend them highly enough",
-      "client": "Michael Brady",
-      "title": ", CEO ,",
-      "company": "Bede Gaming"
-    },
-    {
-      "text": "I would not hesitate to recommend their services",
-      "client": "Geoff Wheeler",
-      "title": ", Managing Director ,",
-      "company": "RecoAuto Limited"
-    },
-    {
-      "text": "When I need work done I will only have one name in mind",
-      "client": "James Tuckett",
-      "title": ", Managing Director, Co-founder ,",
-      "company": "Up Investments"
     }
   ]
 }
