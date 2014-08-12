@@ -90,61 +90,29 @@ $(document).ready(function () {
   });
 
   // contact page
-  // Map Carousel - first checks if .map-carousel exists then creates carousel
-  if ($('.map-carousel').length > 0) {
-    $(".map-carousel").tinycarousel({
-        axis   : "x",
-        start: 0,
-        animationTime: 500
-        // callback: function(e){
-        //   $('.viewport, .overview li').css({'height': ($(e).height() + 10) +'px'});
-        // }
-      });
-    var mapCarousel = $(".map-carousel").data("plugin_tinycarousel");
-    $('.map-carousel-nav a').click(function(){
-      $('.map-carousel-nav a').removeClass('active');
-      $(this).addClass('active');
-    });
-      $('.map-carousel .london').click(function(){
-          mapCarousel.move(0);
-          return false;
-      });
-      $('.map-carousel .edinburgh').click(function(){
-          mapCarousel.move(1);
-          return false;
-      });
-      $('.map-carousel .newcastle').click(function(){
-          mapCarousel.move(3);
-          return false;
-      });
-      $('.map-carousel .sofia').click(function(){
-          mapCarousel.move(4);
-          return false;
-      });
-
-      // var oSlider = $('.map-carousel');
-      // oSlider.tinycarousel({
-      // callback: function(element){
-      //     element.css({ 'height': 100 });
-      //     $('.viewport', oSlider).css({ 'height': 100});
-      //   }
-      // });
-  }
+  $('.map-nav a').click(function(){
+    $('.map-nav a').removeClass('active');
+    $('.map-container').fadeTo(200, 0).css('z-index', '1');
+    $(this).addClass('active');
+  });
+  $('.map-nav .london').click(function(){
+    $('.london-map').fadeTo(300, 1).css('z-index', '4');
+  });
+  $('.map-nav .edinburgh').click(function(){
+    $('.edinburgh-map').fadeTo(300, 1).css('z-index', '4');
+  });
+  $('.map-nav .newcastle').click(function(){
+    $('.newcastle-map').fadeTo(300, 1).css('z-index', '4');
+  });
+  $('.map-nav .sofia').click(function(){
+    $('.sofia-map').fadeTo(300, 1).css('z-index', '4');
+  });
   
 });
 
 // Google Maps
 window.onload = function() {
 
-  
-
-  // contact page
-  // Checks if Map Carousel exists, then gets google maps
-  if ($('.map-carousel').length > 0) {
-
-    $('.site-footer').hide();
-    
-    // Google map: London
     var mapLondon = {
       center: new google.maps.LatLng(51.485672, -0.118554),
       zoom: 15,
@@ -159,7 +127,6 @@ window.onload = function() {
       title: "pebble {code}"
     });
 
-    // Google map: Edinburgh
     var mapEdinburgh = {
       center: new google.maps.LatLng(55.8959774, -3.296969),
       zoom: 15,
@@ -203,6 +170,4 @@ window.onload = function() {
       map: map,
       title: "pebble {code}"
     });
-  }
-
 };
