@@ -280,7 +280,7 @@
 
 .homepage-grid-container{
   background: $paper;
-  padding: 100px 20px 40px;
+  padding: 100px 20px 30px;
   margin-bottom: 0;
   position: relative;
   overflow: hidden;
@@ -408,11 +408,11 @@
 .grid-inner-block.block-join{
   &::before{
     background: $pc-purple;
-    @include vendor( transform, rotate(0.3deg) skew(-0.4deg) );
+    @include vendor( transform, rotate(0.2deg) skew(-0.3deg) );
   }
   .image{
     background: darken($pc-purple, 10);
-    @include vendor( transform, rotate(0.3deg) skew(-0.4deg) );
+    @include vendor( transform, rotate(0.2deg) skew(-0.3deg) );
     background-size: 100%;
     background-position: center;
   }

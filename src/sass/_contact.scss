@@ -1,55 +1,130 @@
 //===============================================================================
 // CONTACT
 //===============================================================================
-#map-canvas {
-  z-index: 1;
+// #map-canvas {
+//   z-index: 1;
+
+//   &:after{
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: hsla( 0, 0, 100, .4 );
+//   }
+// }
+
+// .address,
+// .phone-email {
+//   z-index: 2;
+//   position: absolute;
+//   left: 20px;
+//   padding-right: 20px;
+
+//   span,
+//   a {
+//     display: inline-block;
+//   }
+
+//   a {
+//     display: inline-block;
+//     text-decoration: none;
+//   }
+// }
+
+// .address {
+//   top: 100px;
+// }
+
+// .phone-email {
+//   bottom: 40px;
+// }
+
+// .address.tera,
+// .phone-email.tera{
+//   font-size: 22px;
+
+//   @media ( max-height: 470px ) {
+//     font-size: 34px !important;
+//   }
+
+//   @media ( max-height: 470px ) and ( max-width: 500px ) {
+//     font-size: 22px !important;
+//   }
+// }
+
+// .map-nav
+.map-nav{
+  position: absolute;
+  right: 22px;
+  top: 75px;
+  z-index: 10;
+
+  li{
+    display: block;
+    clear: both;
+  }
+  a{
+    display: table;
+    text-align: right;
+    color: $pc-pink;
+    margin: 5px 0 0;
+    font-size: 28px;
+    font-weight: 300;
+    background: white;
+    padding: 5px 15px 5px 30px;
+    float: right;
+    background: rgba(255,255,255,0.6);
+    color: rgba(107, 116, 130, 0.7);
+    transition: transform .2s ease-in-out;
+
+    &:hover, &.active{
+      background: white;
+      cursor: pointer;
+      transform: scale(1.1);
+      opacity: 1;
+      color: $pc-pink;
+      // color: $pc-aqua;
+      box-shadow: 0 0 15px rgba(107,116,130, 0.15);
+    }
+  }
+}
+
+// .map-list
+.map-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+// .map
+.map{
+  width: 100%;
+  height: 100%;
+  position: absolute;
 
   &:after{
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: hsla( 0, 0, 100, .4 );
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(237, 240, 246, 0.4);
   }
 }
-
-.address,
-.phone-email {
-  z-index: 2;
+.address{
   position: absolute;
-  left: 20px;
-  padding-right: 20px;
+  margin: 70px 0 0;
+  left: 22px;
+  right: 35%;
+  text-decoration: none;
+  text-shadow: 0 0 50px rgba(255,255,255,1);
+  z-index: 2;
+  text-align: left;
 
-  span,
-  a {
-    display: inline-block;
-  }
-
-  a {
-    display: inline-block;
-    text-decoration: none;
-  }
-}
-
-.address {
-  top: 100px;
-}
-
-.phone-email {
-  bottom: 40px;
-}
-
-.address.tera,
-.phone-email.tera{
-  font-size: 22px;
-
-  @media ( max-height: 470px ) {
-    font-size: 34px !important;
-  }
-
-  @media ( max-height: 470px ) and ( max-width: 500px ) {
-    font-size: 22px !important;
+  span{
+    display: block;
+    font-size: 64px;
   }
 }

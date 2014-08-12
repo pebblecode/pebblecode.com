@@ -85,6 +85,24 @@
 .work-inner {
   max-width: 700px;
   margin: 0 auto;
+  padding-top: 20px;
+}
+.work-inner-block{
+  max-width: 900px;
+  margin: 40px auto 40px;
+  padding:  40px 20px 25px;
+  position: relative;
+  z-index: 1;
+
+  &::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 img.small {
@@ -137,18 +155,13 @@ img.small {
   &::after {
     background-image: url( '../img/right-2.svg' );  
   }
-}
 
-.az-search-after {
-  background-color: darken($pc-aqua, 5);
-  padding-bottom: 40px;
-
-  &::before {
-    background-image: url( '../img/left-2.svg' );
-  }
-
-  &::after {
-    background-image: url( '../img/right-1.svg' );  
+  .work-inner-block{
+    &::after{
+      background: darken($pc-aqua, 5);
+      background: rgba(36, 148, 150, 0.5);
+      @include vendor( transform, rotate(0.5deg) skew(0.5deg) );
+    }
   }
 }
 
@@ -163,24 +176,19 @@ img.small {
   &::after {
     background-image: url( '../img/right-3.svg' );  
   }
-}
 
-.az-inno-after {
-  padding-bottom: 40px;
-  background-color: darken($pc-blue, 5);
-
-  &::before {
-    background-image: url( '../img/left-3.svg' );
-  }
-
-  &::after {
-    background-image: url( '../img/right-4.svg' );  
+  .work-inner-block{
+    &::after{
+      background: darken($pc-blue, 5);
+      @include vendor( transform, rotate(-0.5deg) skew(-0.4deg) );
+    }
   }
 }
 
 .reco-before {
   background-color: $pc-orange;
   padding-top: 40px;
+  margin-bottom: 20px;
 
   &::before {
     background-image: url( '../img/left-1.svg' );
@@ -189,20 +197,15 @@ img.small {
   &::after {
     background-image: url( '../img/right-2.svg' );  
   }
-}
 
-.reco-after {
-  background-color: darken($pc-orange, 5);
-  padding-bottom: 40px;
-
-  &::before {
-    background-image: url( '../img/left-2.svg' );
-  }
-
-  &::after {
-    background-image: url( '../img/right-1.svg' );  
+  .work-inner-block{
+    &::after{
+      background: darken($pc-orange, 5);
+      @include vendor( transform, rotate(0.5deg) skew(0.5deg) );
+    }
   }
 }
+
 
 .bede-before {
   background-color: $pc-purple;
@@ -215,17 +218,12 @@ img.small {
   &::after {
     background-image: url( '../img/right-3.svg' );  
   }
-}
 
-.bede-after {
-  background-color: darken($pc-purple, 5);
-  padding-bottom: 40px;
-
-  &::before {
-    background-image: url( '../img/left-3.svg' );
-  }
-
-  &::after {
-    background-image: url( '../img/right-4.svg' );  
+  .work-inner-block{
+    &::after{
+      background: darken($pc-purple, 5);
+      // background: rgba(36, 148, 150, 0.5);
+      @include vendor( transform, rotate(-0.5deg) skew(-0.7deg) );
+    }
   }
 }
