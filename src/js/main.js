@@ -68,82 +68,65 @@ $(document).ready(function () {
   // contact page
   $('.map-nav a').click(function(){
     $('.map-nav a').removeClass('active');
-    $('.map-container').fadeTo(200, 0).css('z-index', '1');
+    $('.address').fadeOut(100);
     $(this).addClass('active');
   });
+
+  // Google Maps: Pan between different Locations
+  var marker;
+  var map;
   $('.map-nav .london').click(function(){
-    $('.london-map').fadeTo(300, 1).css('z-index', '4');
+    changeMarkerPos(51.485672, -0.118554);
+    $('.map-addresses .london-address').fadeIn(200);
   });
   $('.map-nav .edinburgh').click(function(){
-    $('.edinburgh-map').fadeTo(300, 1).css('z-index', '4');
+    changeMarkerPos(55.8959774, -3.296969);
+    $('.map-addresses .edinburgh-address').fadeIn(200);
   });
   $('.map-nav .newcastle').click(function(){
-    $('.newcastle-map').fadeTo(300, 1).css('z-index', '4');
+    changeMarkerPos(55.0016746, -1.6156206);
+    $('.map-addresses .newcastle-address').fadeIn(200);
   });
   $('.map-nav .sofia').click(function(){
-    $('.sofia-map').fadeTo(300, 1).css('z-index', '4');
+    changeMarkerPos(42.6742392, 23.3543577);
+    $('.map-addresses .sofia-address').fadeIn(200);
   });
+  function initialize() {
+
+    var mapProp = {
+        center: new google.maps.LatLng(51.485672, -0.118554),
+        zoom: 15,
+        panControl: false,
+        zoomControl: false,
+        mapTypeControl: false,
+        scaleControl: true,
+        streetViewControl: false,
+        overviewMapControl: false,
+        rotateControl: true,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.485672, -0.118554),
+        animation: google.maps.Animation.DROP
+    });
+
+    marker.setMap(map);
+    map.panTo(marker.position);
+
+    google.maps.event.addListener(marker, "click", function () {
+
+    });
+}
+
+function changeMarkerPos(lat, lon){
+    myLatLng = new google.maps.LatLng(lat, lon)
+    marker.setPosition(myLatLng);
+    map.panTo(myLatLng);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
   
 });
-
-// Google Maps
-window.onload = function() {
-
-    var mapLondon = {
-      center: new google.maps.LatLng(51.485672, -0.118554),
-      zoom: 15,
-      scrollwheel: false,
-      disableDefaultUI: true
-    };
-    var map = new google.maps.Map(document.getElementById("london-map"),
-      mapLondon);
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(51.485672, -0.118554),
-      map: map,
-      title: "pebble {code}"
-    });
-
-    var mapEdinburgh = {
-      center: new google.maps.LatLng(55.8959774, -3.296969),
-      zoom: 15,
-      scrollwheel: false,
-      disableDefaultUI: true
-    };
-    var map = new google.maps.Map(document.getElementById("edinburgh-map"),
-      mapEdinburgh);
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(55.8959774, -3.296969),
-      map: map,
-      title: "pebble {code}"
-    });
-
-    // Google map: Newcastle
-    var mapNewcastle = {
-      center: new google.maps.LatLng(55.0016746, -1.6156206),
-      zoom: 15,
-      scrollwheel: false,
-      disableDefaultUI: true
-    };
-    var map = new google.maps.Map(document.getElementById("newcastle-map"),
-      mapNewcastle);
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(55.0016746, -1.6156206),
-      map: map,
-      title: "pebble {code}"
-    });
-
-    // Google map: Sofia
-    var mapSofia = {
-      center: new google.maps.LatLng(42.6742392, 23.3543577),
-      zoom: 15,
-      scrollwheel: false,
-      disableDefaultUI: true
-    };
-    var map = new google.maps.Map(document.getElementById("sofia-map"),
-      mapSofia);
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(42.6742392, 23.3543577),
-      map: map,
-      title: "pebble {code}"
-    });
-};

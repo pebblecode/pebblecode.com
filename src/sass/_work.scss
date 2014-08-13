@@ -160,7 +160,7 @@ img.small {
     &::after{
       background: darken($pc-aqua, 5);
       background: rgba(36, 148, 150, 0.5);
-      @include vendor( transform, rotate(0.5deg) skew(0.5deg) );
+      @include vendor( transform, rotate(0.5deg) skew(-0.2deg) );
     }
   }
 }
@@ -180,7 +180,7 @@ img.small {
   .work-inner-block{
     &::after{
       background: darken($pc-blue, 5);
-      @include vendor( transform, rotate(-0.5deg) skew(-0.4deg) );
+      @include vendor( transform, rotate(-0.5deg) skew(0.3deg) );
     }
   }
 }
@@ -201,7 +201,7 @@ img.small {
   .work-inner-block{
     &::after{
       background: darken($pc-orange, 5);
-      @include vendor( transform, rotate(0.5deg) skew(0.5deg) );
+      @include vendor( transform, rotate(0.8deg) skew(-0.3deg) );
     }
   }
 }
@@ -223,7 +223,7 @@ img.small {
     &::after{
       background: darken($pc-purple, 5);
       // background: rgba(36, 148, 150, 0.5);
-      @include vendor( transform, rotate(-0.5deg) skew(-0.7deg) );
+      @include vendor( transform, rotate(-1deg) skew(-1.2deg) );
     }
   }
 }
