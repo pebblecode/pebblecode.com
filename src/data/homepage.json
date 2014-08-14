@@ -16,6 +16,31 @@
     }
   ],
 
+  "services-headline": "Our Approach",
+  "services-sub-head": "We use a deep understanding of data and databases, behavioural science and rapid Agile software development to help organisations unlock value from their technology and people by create innovative, engaging and ultimately useful mobile, tablet and web applications to solve their business problems.",
+  "services": [
+    {
+      "image": "prototyping.svg",
+      "name": "Rapid prototyping & hacking"
+    },
+    {
+      "image": "science.svg",
+      "name": "Contextual user research & behavioural science"
+    },
+    {
+      "image": "design.svg",
+      "name": "User experience & user interface design"
+    },
+    {
+      "image": "software.svg",
+      "name": "Agile software development"
+    },
+    {
+      "image": "measure.svg",
+      "name": "Measurement of everything"
+    }
+  ],
+
   "cstudy-title": "AstraZeneca: Harnessing Knowledge",
   "cstudy-text": "AZ had over 200 million documents. Printed out on paper, that would weigh more than the Titanic. They used over 100 different applications to search them all. That meant over 100 passwords, interfaces and systems to learn and no common way to collate results.",
   "cstudy-image": "hand-dark.svg",
@@ -32,12 +57,8 @@
   "join-text": "Our method is simple: We hire the people we think are the best out there in their area of expertise.",
   "join-image": "logo-az.png",
 
-  "testimonials": [
-    {
-      "text": "pebble have the most creative and innovative approach to development - and they manage to do it all at such a speed",
-      "client": "Nick Brown",
-      "title": ", Innovation & Technology Architect ,",
-      "company": "AstraZeneca"
-    }
-  ]
+  "testimonial-text": "pebble have the most creative and innovative approach to development - and they manage to do it all at such a speed",
+  "testimonial-client": "Nick Brown",
+  "testimonial-title": ", Innovation & Technology Architect ,",
+  "testimonial-company": "AstraZeneca"
 }

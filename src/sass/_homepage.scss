@@ -56,13 +56,14 @@
 .homepage-logos{
   // background: $ink;
   display: block;
-  margin-top: 60px;
   margin-bottom: 0;
+  margin-top: 30px;
 
   li{
     width: 50%;
     float: left;
     padding: 15px 10px;
+    margin-top: 0;
     margin-bottom: 10px;
     text-align: center;
     display: block;
@@ -99,18 +100,20 @@
 
 .homepage-services-container{
   background: lighten($ink, 48);
-  padding: 20px 60px 90px;
+  padding: 10px 20px 90px;
+  text-align: center;
   overflow: hidden;
   position: relative;
   clear: both;
 
   h2{
-    margin-bottom: 20px;
-    font-size: 42px;
+    margin-bottom: 10px;
+    font-size: 38px;
   }
   h3{
     font-weight: 300;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    font-size: 18px;
   }
 
   &::after {
@@ -126,15 +129,15 @@
   }
 }
 .homepage-services{
+  margin-bottom: 0;
 
   li{
-    width: 19%;
-    margin-left: 0.5%;
-    margin-right: 0%;
-    padding: 30px 20px;
+    width: 32%;
+    margin: 0 0.5% 10px 0;
+    padding: 20px 10px 25px;
     display: inline-block;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     vertical-align: middle;
     font-family: "brandon-grotesque", sans-serif;
     font-weight: 900;
@@ -152,7 +155,7 @@
       top: 0;
       left: 0;
       z-index: -1;
-      background: lighten($ink, 46);
+      background: lighten($ink, 45);
       @include vendor( transform, rotate(-0.2deg) skew(0.5deg) );
     }
     &:nth-child(2):after{
@@ -171,7 +174,7 @@
     img{
       max-width: 150px;
       display: table;
-      margin: 0 auto 30px
+      margin: 0 auto 25px
     }
   }
 }
@@ -336,10 +339,6 @@
   position: relative;
   overflow: hidden;
   border-top: 1px solid lighten($ink, 50);
-
-  li {
-    margin-bottom: 30px;
-  }
 
   .text {
     font-size: 28px;
