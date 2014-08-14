@@ -218,7 +218,7 @@
   }
 
   .homepage-head {
-    padding: 120px 60px 180px;
+    padding: 90px 60px 120px;
 
     h1,
     h2 {
@@ -238,73 +238,10 @@
     }
   }
 
-  // .homepage-bg{
-  //   background-image: url('../img/homepage-bg.jpg');
-  //   background-size: cover;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   z-index: -1;
-  // }
-
-  // .homepage-head{
-  //   background-image: url('../img/homepage-bg.jpg');
-  //   background-size: cover;
-  //   padding: 120px 60px;
-  //   position: relative;
-  //   background-position: 0 -60px;
-  //   margin-top: $header-height-small;
-
-  //   -webkit-text-fill-color: transparent;
-  //   background: -webkit-linear-gradient(transparent, transparent),
-  //               url('../img/homepage-bg.jpg') repeat;
-  //   background: -o-linear-gradient(transparent, transparent);
-  //               -webkit-background-clip: text;
-
-  //   &::after{
-  //     background: which-pebble($code-head, $it-head);
-  //     content: '';
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100%;
-  //     z-index: -1;
-  //   }
-
-  //   h1,
-  //   h2 {
-  //     color: white;
-  //     margin: 0;
-  //     text-align: left;
-  //   }
-
-  //   h1{
-  //     font-size: (108px / 1.5);
-  //   }
-
-  //   h2{
-  //     font-size: (49px / 1.5);
-  //     line-height: 1.1;
-  //     font-weight: 300;
-  //   }
-  // }
-
-  .cta-container-small {
-    display: none;
-  }  
-
-  .cta-container-large {
-    display: block;
-  }
-
   .testamonials-container {
-    padding: 90px 0 50px;
+    padding: 50px 25px 50px;
 
     ul{
-      width: 95%;
       margin: 0 auto;
     }
 

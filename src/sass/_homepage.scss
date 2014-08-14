@@ -15,12 +15,12 @@
 .homepage-head{
   background: $pc-pink;
   background: rgba(238, 79, 126, 0.4);
-  padding: 60px 20px 110px;
+  padding: 50px 20px 80px;
   position: relative;
   margin-top: $header-height-small;
   overflow: hidden;
 
-  &::before {
+  &::after {
     content: "";
     z-index: 2;
     width: 100%;
@@ -28,8 +28,9 @@
     bottom: -40px;
     display: block;
     height: 80px;
-    background: $ink;
-    @include vendor( transform, rotate(1deg) scale(1.2) );
+    background: $paper;
+    background: lighten($ink, 48);
+    @include vendor( transform, rotate(1.5deg) scale(1.2) );
   }
 
   h1,
@@ -50,226 +51,44 @@
     font-weight: 300;
   }
 
-  @media ( min-width: 1024px ) {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -22px;
-      height: 22px;
-      width: 100%;
-      background: url("../img/homepage-head.svg");
-      background-size: 100% 100%;
-      left: 0;
-    }
-  }
 }
-
-.cta-container-small {
-
-  .block-1 {
-    display: block;
-    font-size: 32px;
-    line-height: 1.1;
-    color: white;
-    padding: 50px 20px 0;
-    text-align: center;
-  }
-
-  a {
-    display: block;
-    padding: 30px 20px 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .block-2 {
-    display: block;
-    background: $code-head;
-    color: white;
-    padding: 10px;
-    font-size: 24px;
-    font-family: "brandon-grotesque";
-    font-weight: 900;
-    font-style: italic;
-    text-transform: uppercase;
-    line-height: 1.1;
-  }
-}
-
-.no-csstransforms3d .block-1::after,
-.no-csstransforms3d .block-2::after{
-  display: none;
-}
-
-
-.cta-container-large {
-    display: none;
-    margin: 180px auto;
-    width: 740px;
-    background: white;
-    font-size: 30px;
-    text-align: center;
-    position: relative;
-
-    @media ( min-width: 1024px ) {
-      @include vendor( transform, rotate( 1deg ) );
-    }
-
-    a{
-      text-decoration: none;
-      display: block;
-      overflow: hidden;
-
-      &:hover{
-        color: $pc-pink;
-
-        .block-1::after,
-        .block-2::after{
-          @include vendor( transform, rotateY(0deg) );
-        } 
-      }
-    }
-
-    .block-1,
-    .block-2{
-      display: block;
-      font-size: 44px;
-      line-height: 1.2;
-      position: relative;
-    }
-
-    .block-1{
-      font-weight: 300;
-      padding: 50px 10px 4px;
-      @include vendor( perspective, 1000px );
-
-      &::after{
-        background-image: url('../img/reach.svg');
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: -1%;
-        right: 0;
-        background-color: $code-head;
-
-        @include vendor( transform-origin, 0 50% );
-        @include vendor( transform, rotateY(180deg) );
-        @include vendor( transition, -prefix- transform .2s );
-      }
-    }
-
-    .block-2{
-      padding: 4px 10px 50px;
-      @include vendor( perspective, 1000px );
-
-      &::after{
-        padding: 27px 0 0;
-        text-transform: uppercase;
-        font-family: "brandon-grotesque";
-        font-weight: 900;
-        font-style: italic;
-        content: attr(data-text);
-        color: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: $code-head;
-
-        @include vendor( transform-origin, 100% 50% );
-        @include vendor( transform, rotateY(-180deg) );
-        @include vendor( transition, -prefix- transform .2s );
-      }
-    }
-  }
-
-  .cta-help-outer {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
-
-  .cta-help {
-    position: absolute;
-    background: $pc-pink;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    pointer-events: auto;
-
-    @include vendor( transform, translateY( -100% ) );
-    @include vendor( transition, -prefix- transform .25s );
-
-    h4 {
-      color: white;
-      margin-top: 34px;
-    }
-
-    p {
-      color: white;
-      font-size: 23px;
-      padding: 0 10px;
-    }
-
-    &.active {
-      @include vendor( transform, translateY( 0 ) );
-    }
-  }
-
-  .cta-help-btn {
-    position: absolute;
-    background: white;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    top: 50%;
-    margin-top: -15px;
-    right: -40px;
-    line-height: 31px;
-    text-indent: 2px;
-    font-size: 24px;
-    cursor: pointer;
-    color: $pc-pink;
-    font-weight: 700;
-
-    &:before {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      height: 34px;
-      width: 34px;
-      top: -3px;
-      left: -3px;
-      border: 1px solid transparent;
-
-      @include vendor( transition, border-color .25s );
-    }
-
-    &:hover:before,
-    &.active:before {
-      border-color: white;
-    }
-  }
 
 .homepage-logos{
-  background: $ink;
-  padding: 0 20px 20px;
+  // background: $ink;
+  display: block;
+  margin-top: 60px;
   margin-bottom: 0;
 
   li{
     width: 50%;
     float: left;
-    padding: 0 10px 10px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
     text-align: center;
     display: block;
+    position: relative;
+
+    &:after{
+      content: "";
+      position: absolute;
+      width: 98%;
+      height: 99%;
+      top: 1%;
+      left: 1%;
+      right: 1%;
+      z-index: -1;
+      background: rgba(199, 48, 93, 0.8);
+      @include vendor( transform, rotate(0.3deg) skew(-0.3deg) );
+    }
+    &:nth-child(2):after{
+      @include vendor( transform, rotate(-0.2deg) skew(0.5deg) );
+    }
+    &:nth-child(3):after{
+      @include vendor( transform, rotate(0.3deg) skew(-0.5deg) );
+    }
+    &:nth-child(4):after{
+      @include vendor( transform, rotate(-0.5deg) skew(0.9deg) );
+    }
 
     img{
       max-width: 100%;
@@ -278,35 +97,103 @@
   }
 }
 
+.homepage-services-container{
+  background: lighten($ink, 48);
+  padding: 20px 60px 90px;
+  overflow: hidden;
+  position: relative;
+  clear: both;
+
+  h2{
+    margin-bottom: 20px;
+    font-size: 42px;
+  }
+  h3{
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+
+  &::after {
+    content: "";
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    display: block;
+    height: 80px;
+    background: $paper;
+    @include vendor( transform, rotate(-0.8deg) scale(1.2) );
+  }
+}
+.homepage-services{
+
+  li{
+    width: 19%;
+    margin-left: 0.5%;
+    margin-right: 0%;
+    padding: 30px 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    vertical-align: middle;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.05;
+    position: relative;
+    z-index: 1;
+
+    &:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: lighten($ink, 46);
+      @include vendor( transform, rotate(-0.2deg) skew(0.5deg) );
+    }
+    &:nth-child(2):after{
+      @include vendor( transform, rotate(-0.2deg) skew(0.5deg) );
+    }
+    &:nth-child(3):after{
+      @include vendor( transform, rotate(0.3deg) skew(-0.5deg) );
+    }
+    &:nth-child(4):after{
+      @include vendor( transform, rotate(-0.5deg) skew(0.9deg) );
+    }
+    &:nth-child(5):after{
+      @include vendor( transform, rotate(0.3deg) skew(-0.8deg) );
+    }
+
+    img{
+      max-width: 150px;
+      display: table;
+      margin: 0 auto 30px
+    }
+  }
+}
+
 .homepage-grid-container{
   background: $paper;
-  padding: 100px 20px 30px;
+  padding: 0 20px 40px;
   margin-bottom: 0;
   position: relative;
   overflow: hidden;
   z-index: 1;
 
-  &::before {
-    content: "";
-    z-index: 2;
-    width: 100%;
-    position: absolute;
-    top: -20px;
-    display: block;
-    height: 40px;
-    background: $ink;
-    @include vendor( transform, rotate(-0.6deg) scale(1.2) );
-  }
-
   .call-out.grid-title{
     font-size: 32px;
+    margin-top: 0;
   }
 }
-
 .homepage-grid-inner{
   float: left;
   width: 100%;
   margin: 0 0.25%;
+  padding: 0 2px;
   position: relative;
 
   .grid-inner-block{
@@ -314,6 +201,7 @@
     color: $paper;
     display: block;
     clear: left;
+    z-index: 1;
     position: relative;
     @include vendor( transition, 0.2s ease-in-out);
 
@@ -408,11 +296,11 @@
 .grid-inner-block.block-join{
   &::before{
     background: $pc-purple;
-    @include vendor( transform, rotate(0.2deg) skew(-0.3deg) );
+    @include vendor( transform, rotate(-0.4deg) skew(0.3deg) );
   }
   .image{
     background: darken($pc-purple, 10);
-    @include vendor( transform, rotate(0.2deg) skew(-0.3deg) );
+    @include vendor( transform, rotate(-0.4deg) skew(0.3deg) );
     background-size: 100%;
     background-position: center;
   }
@@ -443,22 +331,11 @@
 }
 
 .testamonials-container {
-  background: lighten($ink, 47);
-  padding: 80px 20px 20px;
+  background: $paper;
+  padding: 40px 20px;
   position: relative;
   overflow: hidden;
-
-  &::before {
-    content: "";
-    z-index: 2;
-    width: 100%;
-    position: absolute;
-    top: -20px;
-    display: block;
-    height: 40px;
-    background: $paper;
-    @include vendor( transform, rotate(-0.7deg) scale(1.2) );
-  }
+  border-top: 1px solid lighten($ink, 50);
 
   li {
     margin-bottom: 30px;

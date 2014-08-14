@@ -79,23 +79,44 @@
     <header class="homepage-head">
       <h1 class="call-out">Innovation &amp; Data Visualisation Specialists</h1>
       <h2>Using modern and disruptive processes, we create beautiful and bespoke software solutions to enable organisations to unlock value from their data, systems and people.</h2>
+      <ul class="homepage-logos clear-fix">
+        <li>
+          <img src="../img/clients/logo-az.png" alt="AstraZeneca">
+        </li>
+        <li>
+          <img src="../img/clients/logo-bede.png" alt="AstraZeneca">
+        </li>
+        <li>
+          <img src="../img/clients/logo-lloyds.png" alt="AstraZeneca">
+        </li>
+        <li>
+          <img src="../img/clients/logo-pearson.png" alt="AstraZeneca">
+        </li>
+      </ul>
     </header>
-    <ul class="homepage-logos clear-fix">
-      <li>
-        <img src="../img/clients/logo-az.png" alt="AstraZeneca">
-      </li>
-      <li>
-        <img src="../img/clients/logo-bede.png" alt="AstraZeneca">
-      </li>
-      <li>
-        <img src="../img/clients/logo-lloyds.png" alt="AstraZeneca">
-      </li>
-      <li>
-        <img src="../img/clients/logo-pearson.png" alt="AstraZeneca">
-      </li>
-    </ul>
+    <div class="homepage-services-container">
+      <h2 class="call-out">Our approach</h2>
+      <h3>We use a deep understanding of data and databases, behavioural science and rapid Agile software development to help organisations unlock value from their technology and people by create innovative, engaging and ultimately useful mobile, tablet and
+        web applications to solve their business problems.</h3>
+      <ul class="homepage-services clear-fix">
+        <li>
+          <img src="../img/services/prototyping.svg" alt="Rapid prototyping & hacking">Rapid prototyping &amp; hacking
+        </li>
+        <li>
+          <img src="../img/services/science.svg" alt="Contextual user research & behavioural science">Contextual user research &amp; behavioural science
+        </li>
+        <li>
+          <img src="../img/services/design.svg" alt="User experience & user interface design">User experience &amp; user interface design
+        </li>
+        <li>
+          <img src="../img/services/software.svg" alt="Agile software development">Agile software development
+        </li>
+        <li>
+          <img src="../img/services/measure.svg" alt="Measurement of everything">Measurement of everything
+        </li>
+      </ul>
+    </div>
     <div class="homepage-grid-container clear-fix">
-      <h2 class="grid-title call-out">Explore</h2>
       <div class="homepage-grid-inner">
         <div class="grid-inner-block block-cstudy">
           <a href="../work" title="pebble {code} case study">
@@ -158,45 +179,41 @@
         <li> <a class="newcastle">Newcastle</a>  </li>
         <li> <a class="sofia">Sofia</a>  </li>
       </ul>
-      <ul class="map-list">
-        <li class="map-container london-map">
-          <div id="london-map" class="map"></div>
-          <a href="https://maps.google.com/maps?q=pebble+%7Bcode%7D,+Durham+Street,+London,+United+Kingdom&hl=en-US&ll=51.485632,-0.118747&spn=0.011264,0.024312&sll=51.485672,-0.118554&sspn=0.022528,0.048623&oq=pebble+code&t=m&z=16&iwloc=A" class="address call-out tera"
-          target="_blank">
-            <span>W214 Westminster Business Square</span> 
-            <span>1-45 Durham Street</span> 
-            <span>London</span> 
-            <span>SE11 5JH</span> 
-          </a> 
-        </li>
-        <li class="map-container edinburgh-map">
-          <div id="edinburgh-map" class="map"></div>
-          <a href="https://www.google.co.uk/maps/place/pebble+%7Bcode%7D/@55.8959774,-3.296969,16z/data=!4m2!3m1!1s0x4887c406610c9aa1:0xa52499d7e0bc6a87" class="address call-out tera" target="_blank">
-            <span>5 Blinkbonny Steading</span> 
-            <span>Currie</span> 
-            <span>Edinburgh</span> 
-            <span>EH14 6AE</span> 
-          </a> 
-        </li>
-        <li class="map-container newcastle-map">
-          <div id="newcastle-map" class="map"></div>
-          <a href="https://www.google.co.uk/maps/place/pebble+%7Bcode%7D/@55.0016746,-1.6156206,17z/data=!3m1!4b1!4m2!3m1!1s0x487e712c1871d20b:0x74f4416846c6a6c" class="address call-out tera" target="_blank">
-            <span>1 Moor Road South</span> 
-            <span>Newcastle upon Tyne</span> 
-            <span>NE3 1NN</span> 
-          </a> 
-        </li>
-        <li class="map-container sofia-map">
-          <div id="sofia-map" class="map"></div>
-          <a href="https://www.google.co.uk/maps/place/pebble+%7Bcode%7D/@42.6742386,23.3543577,15z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0" class="address call-out tera" target="_blank">
-            <span>TechHuddle</span> 
-            <span>Business Center Tetrix</span> 
-            <span>23A Dragan Tsankov Blvd</span> 
-            <span>Sofia 1113</span> 
-            <span>Bulgaria</span> 
-          </a> 
-        </li>
-      </ul>
+      <div id="map"></div>
+      <div class="map-addresses">
+
+        <!-- London -->
+        <a href="https://maps.google.com/maps?q=pebble+%7Bcode%7D,+Durham+Street,+London,+United+Kingdom&hl=en-US&ll=51.485632,-0.118747&spn=0.011264,0.024312&sll=51.485672,-0.118554&sspn=0.022528,0.048623&oq=pebble+code&t=m&z=16&iwloc=A" class="address call-out tera london-address"
+        target="_blank">
+          <span>W214 Westminster Business Square</span> 
+          <span>1-45 Durham Street</span> 
+          <span>London</span> 
+          <span>SE11 5JH</span> 
+        </a> 
+
+        <!-- Edinburgh -->
+        <a href="https://www.google.co.uk/maps/place/pebble+%7Bcode%7D/@55.8959774,-3.296969,16z/data=!4m2!3m1!1s0x4887c406610c9aa1:0xa52499d7e0bc6a87" class="address call-out tera edinburgh-address" target="_blank">
+          <span>5 Blinkbonny Steading</span> 
+          <span>Currie</span> 
+          <span>Edinburgh</span> 
+          <span>EH14 6AE</span> 
+        </a> 
+
+        <!-- Newcastle -->
+        <a href="https://www.google.co.uk/maps/place/pebble+%7Bcode%7D/@55.0016746,-1.6156206,17z/data=!3m1!4b1!4m2!3m1!1s0x487e712c1871d20b:0x74f4416846c6a6c" class="address call-out tera newcastle-address" target="_blank">
+          <span>1 Moor Road South</span> 
+          <span>Newcastle upon Tyne</span> 
+          <span>NE3 1NN</span> 
+        </a> 
+
+        <!-- Sofia -->
+        <a href="https://www.google.co.uk/maps/place/pebble+%7Bcode%7D/@42.6742386,23.3543577,15z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0" class="address call-out tera sofia-address" target="_blank">
+          <span>TechHuddle</span> 
+          <span>Business Center Tetrix</span> 
+          <span>23A Dragan Tsankov Blvd</span> 
+          <span>Sofia 1113, Bulgaria</span> 
+        </a> 
+      </div>
       <div class="phone-email call-out alpha">
         <a href="tel:+442033273940" class="phone">+44 (0) 20 3327 3940</a> 
         <a href="mailto:hello@pebblecode.com">hello@pebblecode.com</a> 
