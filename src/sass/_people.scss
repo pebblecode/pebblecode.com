@@ -23,7 +23,6 @@
       width: 50%;
       padding-bottom: 0;
     }
-
     @media ( min-width: 960px ) {
       width: 33.3333%;
       padding-bottom: 0;
@@ -32,6 +31,36 @@
     @media ( min-width: 1280px ) {
       width: 33.3333%;
       padding-bottom: 0;
+    }
+
+  }
+
+  .ppl-outer-btm{
+
+    @media ( min-width: 640px ) {
+      width: 100%;
+      
+      .person{
+        width: 50%;
+        float: left;
+      }
+    }
+    @media ( min-width: 960px ) {
+      width: 33.3333%;
+      padding-bottom: 0;
+
+      .person{
+        width: 100%;
+      }
+    }
+
+    @media ( min-width: 1280px ) {
+      width: 33.3333%;
+      padding-bottom: 0;
+
+      .person{
+        width: 100%;
+      }
     }
   }
 
@@ -292,7 +321,7 @@
 }
 @media ( min-width: 960px ) {
   .ppl-block-9, .ppl-block-10{
-    padding-bottom: 15%;
+    padding-bottom: 12.7%;
   }
 }
 

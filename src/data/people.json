@@ -1,24 +1,30 @@
-{
+{ 
+  "copy-1": "<p>We put top notch people into small, dynamic teams, give them the best tools and encourage maximum collaboration in our stimulating and spacious work environment, and we find that’s how to make big things happen.</p>",
+  "cta": "Join the Team!",
+
   "person": [
     {
       "name": "Toby Hunt",
       "title": "CEO",
       "image": "toby.png",
       "twitter": "http://twitter.com/tobyhunt",
-      "linkedin": "http://www.linkedin.com/in/tobyhunt"
+      "linkedin": "http://www.linkedin.com/in/tobyhunt",
+      "text": "<p>Toby mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
     },
     {
       "name": "George Ornbo",
       "title": "Creative Director",
       "image": "george.png",
       "github": "https://github.com/shapeshed",
-      "twitter": "http://twitter.com/shapeshed"
+      "twitter": "http://twitter.com/shapeshed",
+      "text": "<p>George mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
     },
     {
       "name": "Alex Butcher",
       "title": "Technical Director",
       "image": "alex.png",
-      "twitter": "http://twitter.com/alexbutcher"
+      "twitter": "http://twitter.com/alexbutcher",
+      "text": "<p>Alex mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
     },
     {
       "name": "Mark Durrant",
@@ -107,7 +113,8 @@
     {
       "name": "John Mildinhall",
       "title": "User-Centered Design Specialist",
-      "image": "john.png"
+      "image": "john.png",
+      "text": "<p>John mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
     },
     {
       "name": "Rytis Bieliunas",
@@ -129,7 +136,8 @@
     {
       "name": "Fergus Hynd",
       "title": "Sales & Marketing",
-      "image": "fergus.png"
+      "image": "fergus.png",
+      "text": "<p>Fergus mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p><p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>"
     },
     {
       "name": "Peter Tait",
@@ -156,8 +164,5 @@
       "title": "Bookkeeper",
       "image": "lizzie.png"
     }
-  ],
-  "copy-1": "<p>Our method is simple: We hire the people we think are the best out there in their area of expertise.</p>",
-  "cta": "Join the Team!",
-  "copy-2": "<p>We put top notch people into small, dynamic teams, give them the best tools and encourage maximum collaboration in our stimulating and spacious work environment, and we find that’s how to make big things happen.</p>"
+  ]
 }
