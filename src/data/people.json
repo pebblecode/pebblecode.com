@@ -2,14 +2,14 @@
   "person": [
     {
       "name": "Toby Hunt",
-      "title": "CEO",
+      "title": "Director, Co-founder",
       "image": "toby.png",
       "twitter": "http://twitter.com/tobyhunt",
       "linkedin": "http://www.linkedin.com/in/tobyhunt"
     },
     {
       "name": "George Ornbo",
-      "title": "Creative Director",
+      "title": "Managing Director",
       "image": "george.png",
       "github": "https://github.com/shapeshed",
       "twitter": "http://twitter.com/shapeshed"
@@ -22,7 +22,7 @@
     },
     {
       "name": "Mark Durrant",
-      "title": "UI/UX Designer",
+      "title": "Lead Designer",
       "image": "mark.png",
       "github": "https://github.com/markdurrant"
     },
@@ -60,16 +60,6 @@
       "image": "joe.png"
     },
     {
-      "name": "Andrea Miskulin",
-      "title": "Office Manager",
-      "image": "andrea.png"
-    },
-    {
-      "name": "Gayle Smith",
-      "title": "HR Consultant",
-      "image": "gayle.png"
-    },
-    {
       "name": "James Wallace",
       "title": "Software Developer",
       "image": "james.png"
@@ -88,13 +78,6 @@
       "gitHub": "https://github.com/ppenchev"
     },
     {
-      "name": "Nathan Evans",
-      "title": "Software Developer",
-      "image": "nathan.png",
-      "twitter": "http://twitter.com/nbevans",
-      "github": "http://github.com/nbevans"
-    },
-    {
       "name": "Andy Wardle",
       "title": "Technical Architect",
       "image": "andy.png"
@@ -106,7 +89,7 @@
     },
     {
       "name": "John Mildinhall",
-      "title": "User-Centered Design Specialist",
+      "title": "Creative Director",
       "image": "john.png"
     },
     {
