@@ -1,0 +1,37 @@
+//===============================================================================
+// JOBS
+//===============================================================================
+.jobs-page-header {
+  background-color: $pc-aqua;
+  padding: 50px 20px 10px;
+  position: relative;
+  top: -20px;
+}
+
+.jobs-page-title {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.jobs-page-intro {
+  color: white;
+  font-size: 16px;
+}
+
+.jobs-list {
+  padding: 30px 20px 0;
+}
+
+.jobs-item {
+  margin-bottom: 20px;
+
+  h3 {
+    margin-bottom: -4px;
+    line-height: 1.2;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}
