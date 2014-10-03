@@ -300,6 +300,11 @@ module.exports = function ( grunt ) {
     // there are
     var pwd = shell.pwd();
     shell.cd(tempProdFolder);
+
+    // Add new files
+    shell.exec('git add ."');
+
+    // Get git status
     var prodStatus = shell.exec(gitStatusCmd, { silent: true });
     shell.cd(pwd); // Go back to initial directory
 
