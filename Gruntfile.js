@@ -302,7 +302,7 @@ module.exports = function ( grunt ) {
     shell.cd(tempProdFolder);
 
     // Add new files
-    shell.exec('git add ."');
+    shell.exec('git add .', { silent: true }).output;
 
     // Get git status
     var prodStatus = shell.exec(gitStatusCmd, { silent: true });
@@ -327,6 +327,7 @@ module.exports = function ( grunt ) {
     var commitMessage = grunt.config('commitMessage');
     var pwd = shell.pwd();
     shell.cd(tempProdFolder);
+
     shell.exec('git commit -am "' + commitMessage + '"');
     shell.exec('git push');
 
