@@ -1,4 +1,18 @@
 /*global $:true, console:true, Handlebars:true, JST:true*/
+$(window).bind("load", function() {
+  
+  // Masonry Grid
+  if ( $( '.msn-grid' ).length ) {
+    var msnry = new Masonry( '.msn-grid', {
+      columnWidth: '.msn-grid-item',
+      itemSelector: '.msn-grid-item',
+      gutter: 0,
+      transitionDuration: 0
+    });
+  }
+
+});
+
 $(document).ready(function () {
 
   // element caching
@@ -19,15 +33,6 @@ $(document).ready(function () {
 
   helpPanel.click( function() {
     helpPanel.toggleClass( 'active' );
-  });
-
-  // sliding contact
-  $('.find-us-link').click(function () {
-    contactPanel.addClass( 'active' );
-  });
-
-  $('#map-canvas, .site-header').click(function () {
-    contactPanel.removeClass( 'active' );
   });
 
   // people page

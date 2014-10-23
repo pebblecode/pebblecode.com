@@ -13,9 +13,10 @@
 }
 
 .homepage-head{
-  background: $pc-pink;
-  background: rgba(238, 79, 126, 0.4);
-  padding: 50px 20px 80px;
+  background: $code-head url(../img/machine-bg.png) repeat;
+  background-size: 40%;
+  background-attachment: fixed;
+  padding: 30px 20px 60px;
   position: relative;
   margin-top: $header-height-small;
   overflow: hidden;
@@ -30,22 +31,24 @@
     height: 80px;
     background: $paper;
     background: lighten($ink, 48);
-    @include vendor( transform, rotate(1.5deg) scale(1.2) );
+    @include vendor( transform, rotate(1.3deg) scale(1.2) );
   }
 
   h1,
   h2 {
     color: $paper;
+    // color: $pc-pink;
     margin: 0;
     text-align: center;
   }
 
   h1{
     font-size: 38px;
-    margin-bottom: 20px; 
+    margin-bottom: 30px; 
   }
 
   h2{
+    color: rgba($paper, 0.7);
     font-size: 20px;
     line-height: 1.1;
     font-weight: 300;
@@ -60,14 +63,15 @@
   margin-top: 30px;
 
   li{
-    width: 50%;
+    width: 49.5%;
     float: left;
-    padding: 15px 10px;
-    margin-top: 0;
-    margin-bottom: 10px;
+    padding: 25px 10px;
+    margin-right: 0.25%;
+    margin-left: 0.25%;
     text-align: center;
     display: block;
     position: relative;
+    @include vendor( transform, rotate(0.1deg) skew(-0.2deg) );
 
     &:after{
       content: "";
@@ -78,8 +82,8 @@
       left: 1%;
       right: 1%;
       z-index: -1;
-      background: rgba(199, 48, 93, 0.8);
-      @include vendor( transform, rotate(0.3deg) skew(-0.3deg) );
+      background-color: rgba(darken($code-head, 5), 0.7);
+      @include vendor( transform, rotate(0.1deg) skew(-0.2deg) );
     }
     &:nth-child(2):after{
       @include vendor( transform, rotate(-0.2deg) skew(0.5deg) );
@@ -100,7 +104,7 @@
 
 .homepage-services-container{
   background: lighten($ink, 48);
-  padding: 10px 20px 90px;
+  padding: 0 20px 90px;
   text-align: center;
   overflow: hidden;
   position: relative;
