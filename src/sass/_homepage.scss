@@ -176,8 +176,9 @@
     }
 
     img{
-      max-width: 150px;
-      display: table;
+      width: 150px;
+      height: auto;
+      display: block;
       margin: 0 auto 35px
     }
   }
