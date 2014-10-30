@@ -1,6 +1,6 @@
 /*global $:true, console:true, Handlebars:true, JST:true*/
 $(window).bind("load", function() {
-  
+
   // Masonry Grid
   if ( $( '.msn-grid' ).length ) {
     var msnry = new Masonry( '.msn-grid', {
@@ -70,7 +70,6 @@ $(document).ready(function () {
     }
   });
 
-  // contact page
   $('.map-nav a').click(function(){
     $('.map-nav a').removeClass('active');
     $('.address').fadeOut(100);
@@ -125,13 +124,16 @@ $(document).ready(function () {
     google.maps.event.addListener(marker, "click", function () {
 
     });
-}
+  }
 
-function changeMarkerPos(lat, lon){
-    myLatLng = new google.maps.LatLng(lat, lon)
-    marker.setPosition(myLatLng);
-    map.panTo(myLatLng);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-  
+  function changeMarkerPos(lat, lon){
+      myLatLng = new google.maps.LatLng(lat, lon);
+      marker.setPosition(myLatLng);
+      map.panTo(myLatLng);
+  }
+
+  if ( $( "#map" ).length ) {
+    google.maps.event.addDomListener(window, 'load', initialize);
+  }
+
 });
