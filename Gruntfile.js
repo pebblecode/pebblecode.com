@@ -38,6 +38,16 @@ module.exports = function ( grunt ) {
         dest: 'dist/our-approach/'
       },
 
+      designer: {
+        src: [ 'src/templates/pages/designer/*.hbs' ],
+        dest: 'dist/designer/'
+      },
+
+      peopleChampion: {
+        src: [ 'src/templates/pages/people-champion/*.hbs' ],
+        dest: 'dist/people-champion/'
+      },
+
       astrazeneca: {
         src: [ 'src/templates/pages/astrazeneca/*.hbs' ],
         dest: 'dist/astrazeneca/'
