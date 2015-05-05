@@ -3,7 +3,7 @@
 //===============================================================================
 // SELECTION
 ::selection {
-  background: rgba(darken($ink, 20), 0.3);
+  background: rgba($ink, 0.3);
 }
 
 // LINKS
@@ -74,9 +74,25 @@ ul {
 }
 
 dt {
-  font-weight: $bold;
+  font-weight: $font-bold;
 }
 
 dd {
   margin-left: 1.4em;
+}
+
+// Horizontal Lines
+hr {
+  border: 4px solid lighten($ink, 50);
+}
+
+// FIXES
+// Hidden Elements (For Screen Readers)
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

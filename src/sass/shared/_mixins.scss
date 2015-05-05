@@ -32,3 +32,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// If more than one of same, add margin
+// @include doubly(20px);
+@mixin doubly($margin) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}

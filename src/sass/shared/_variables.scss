@@ -3,26 +3,40 @@
 //===============================================================================
 // COLOURS
 $paper: white;
-$ink: #263238;
-$primary: $ink;
+$ink: #6b7482;
+
+$pink: #ed4f7e;
+$purple: #9b5ca4;
+$blue: #0ea2dc;
+$aqua: #37bec0;
+$green: #a4ce4e;
+$orange: #faad40;
+
+$grey: darken($ink, 20);
+$primary: $pink;
+
 
 // TYPOGRAPHY
-$base-font-size: 14px;
-$roboto: 'Roboto', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; 
+$base-font: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$museo: 'museo-sans', $base-font; 
+$brandon: 'brandon-grotesque', $base-font; 
 
-$bold: 700;
-$regular: 400;
-$book: 300;
+$body-font-size: 16px;
+$font-light: 100; // $museo only
+$font-regular: 300; // $museo only
+$font-bold: 700; // $museo only
+$font-black: 900; // $brandon only
 
-$tera: 86px;
+$tera: 80px;
 $giga: 60px;
-$mega: 48px;
-$alpha: 36px;
+$mega: 52px;
+$alpha: 42px;
 $beta: 24px;
 $gamma: 22px;
-$delta: 16px;
+$delta: 18px;
 $epsilon: 14px;
 $zeta: 12px;
+
 
 // SPACING: Grid, Viewports etc
 $large: 1000px;
