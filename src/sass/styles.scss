@@ -1,58 +1,34 @@
 //===============================================================================
 // IMPORTS
 //===============================================================================
-// VARIABLES: define mixins for later use
-@import "_variables";
 
-// MIXINS: define mixins for later use
-@import "_mixins";
+// SHARED
+// ===================================================
+// VARIABLES: Colours, Type sizes etc.
+@import "shared/_variables.scss";
 
-// FONTS: @font-face rules
-@import "_fonts";
+// NORMALIZE v3.0.0: Normalise across browsers
+@import "shared/_normalize.scss";
 
-// NORMALIZE: normalize.css from ttp://necolas.github.io/normalize.css/
-@import "_normalize.scss";
+// MIXINS: Fixes, Recurring blocks of styling etc.
+@import "shared/_mixins.scss";
 
-// THIRD-PARTY: styles for JS libs etc
+// FONTS: @font-face
+@import "shared/_fonts.scss";
 
-// ELEMENTS: styles for standard html elements
-@import "_elements";
+// ANIMATIONS: CSS Animations
+@import "shared/_animations.scss";
 
-// HELPERS: helper classes. clear-fix etc
-@import "_helpers";
+// LAYOUT: Base layout, Grid
+@import "shared/_layout.scss";
 
-// LAYOUT: grids, wraps etc
-@import "_layout";
+// TYPOGRAPHY: Headings, Hierarchy etc.
+@import "shared/_typography.scss";
 
-// TYPOGRAPHY:
-@import "_typography";
+// ELEMENTS: Links, Buttons, Forms, Lists etc.
+@import "shared/_elements.scss";
 
-// SHARED-STYLES: styles used across multiple pages
-@import "_shared";
-
-// GLOBAL-ELEMENTS: elements that are used on every page. Eg headers & footers
-@import "_header";
-@import "_footer";
-
-// PAGES: styles per page
-@import "_homepage";
-@import "_people";
-@import "_work";
-@import "_contact";
-@import "_blog";
-@import "_az-vids";
-@import "_jobs";
-
-// BROWSER-FIXES: styles per page
-@import "_browser-fixes";
-
-// MEDIA-QUERIES:
-@import "_media-queries";
-
-// STYLE GUIDE
-@import "_style-guide";
-
-//===============================================================================
-// DEV-STYLES
-//===============================================================================
-// playground for development
+// PAGES
+// ===================================================
+// EXAMPLE: Replace this example file
+@import "pages/_example.scss";
