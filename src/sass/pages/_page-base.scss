@@ -18,7 +18,7 @@
     display: block;
     width: 100%;
     height: 20px;
-    background-color: rgba($grey, 0.15);
+    background-color: rgba(black, 0.15);
     transform: rotate(2.1deg) scale(1.2);
   }
 
@@ -65,7 +65,7 @@
 .hero-summary {
   font-size: $beta;
   color: white;
-  padding: 15px $gutter * 2 10px $gutter + 5px;
+  padding: 15px $gutter * 2 10px $gutter;
   line-height: 1.5;
 
   @media screen and ( max-width: $medium ) {
