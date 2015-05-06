@@ -21,6 +21,16 @@
   box-shadow: 0 10px 100px $aqua;
 }
 
+.gbl-head-blue {
+  background-color: $blue;
+  box-shadow: 0 10px 100px $blue;
+}
+
+.gbl-head-overlay {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .gbl-head-logo {
   position: relative;
   color: transparent;

@@ -46,6 +46,7 @@
     color: rgba(black, 0.25);
     z-index: 1;
     position: relative;
+    margin-top: 10px;
     border-bottom: 6px solid transparent;
 
     &:hover {
@@ -81,6 +82,14 @@
       left: 0;
       background-color: rgba(black, 0.1);
     }
+  }
+}
+
+.location-tab-content {
+  padding-bottom: 5px;
+
+  @media screen and ( max-width: $medium ) {
+    padding-bottom: 0;
   }
 }
 
@@ -155,7 +164,11 @@
 // Map
 .location-map-container {
   position: relative;
-  height: 400px;
+  height: 500px;
+
+  @media screen and ( max-width: $medium + 200px ) {
+    height: 400px;
+  }
 
   @media screen and ( max-width: $medium ) {
     height: 300px;
@@ -233,6 +246,7 @@
 }
 
 .ppl-col {
+  margin-bottom: 40px;
 
   @media screen and ( max-width: $medium ) {
     width: 100%;
@@ -320,6 +334,10 @@
     margin: 0 0 10px;
     line-height: 1;
     text-shadow: 2px 3px 0 rgba(black, 0.2);
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $beta - 2px;
+    }
   }
 
   h4 {
@@ -343,6 +361,11 @@
   margin: 70px 10%;
   width: 80%;
   padding: 50px 40px 40px;
+
+  @media screen and ( max-width: $medium + 300px ) {
+    margin: 70px 5%;
+    width: 90%;
+  }
 
   @media screen and ( max-width: $medium ) {
     background: white;

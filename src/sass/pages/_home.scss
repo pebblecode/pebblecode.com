@@ -1,0 +1,94 @@
+//===============================================================================
+// HOME
+//===============================================================================
+// Hero
+.hero-container-home {
+  padding-bottom: 110px;
+
+  @media screen and ( max-width: $medium ) {
+    padding-bottom: 80px;
+  }
+
+  .hero-summary {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:after {
+    background-color: lighten($ink, 45);
+  }
+}
+
+// Clients
+.client-container {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: lighten($ink, 45);
+
+  @media screen and ( max-width: $medium + 100px ) {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  @media screen and ( max-width: $medium ) {
+    max-width: 100%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.client-inner {
+  .client-item:nth-of-type(4) {
+    margin-left: 16%;
+
+    @media screen and ( max-width: $medium + 100px ) {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and ( max-width: $medium ) {
+    display: inline-block;
+    float: none;
+  }
+}
+.client-item {
+  position: relative;
+  height: 160px;
+  text-align: center;
+  vertical-align: baseline;
+
+  &.client-item-pearson img {
+    margin-top: 30px;
+
+    @media screen and ( max-width: $medium + 100px ) {
+      margin-top: 20px;
+    }
+
+    @media screen and ( max-width: $medium ) {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and ( max-width: $medium ) {
+    width: auto;
+    height: 100px;
+    display: inline-block;
+    float: none;
+  }
+
+  &.client-item-bede img {
+    @media screen and ( max-width: $medium + 100px ) {
+      height: 60px;
+    }
+    
+    @media screen and ( max-width: $medium ) {
+      height: 80px;
+    }
+  }
+}

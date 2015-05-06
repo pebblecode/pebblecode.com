@@ -1,12 +1,12 @@
 //===============================================================================
 // SPRITE
 //===============================================================================
+
+// GLOBAL
 .i-menu-grey, .i-vimeo-pink, .i-twitter-pink, .i-gbl-logo-white, .i-close-grey, .i-email-grey, .i-phone-grey, .i-location-grey { background: url($gbl-sprite); }
 
 .i-email-grey, .i-phone-grey { width: 31px; }
-
 .i-vimeo-pink, .i-twitter-pink { height: 21px; }
-
 .i-menu-grey, .i-close-grey { height: 18px; }
 
 .i-menu-grey { background-position: -236px 0px; width: 19px; }
@@ -17,3 +17,16 @@
 .i-email-grey { background-position: -345px 0px; height: 26px; }
 .i-phone-grey { background-position: -310px 0px; height: 30px; }
 .i-location-grey { background-position: -282px 0px; width: 24px; height: 33px; }
+
+
+
+// LOGOS
+.logo-lloyds, .logo-aj, .logo-bede, .logo-az, .logo-pearson { background: url($logo-sprite); }
+
+.logo-lloyds, .logo-aj { height: 101px; }
+
+.logo-lloyds { background-position: -1097px -14px; width: 222px; }
+.logo-aj { background-position: -799px -14px; width: 298px; }
+.logo-bede { background-position: -614px -21px; width: 180px; height: 87px; }
+.logo-az { background-position: -17px -23px; width: 327px; height: 83px; }
+.logo-pearson { background-position: -348px -43px; width: 263px; height: 43px; }

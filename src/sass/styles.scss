@@ -41,8 +41,17 @@
 // PAGE BASE: Base styles used for most pages.
 @import "pages/_page-base.scss";
 
+// HOME: Styles for the home page
+@import "pages/_home.scss";
+
 // SERVICES: Styles for the services page
 @import "pages/_services.scss";
 
 // ABOUT: Styles for the services page
 @import "pages/_about.scss";
+
+// ABOUT: Styles for the work page
+@import "pages/_work.scss";
+
+// BLOG: Styles for the blog page
+@import "pages/_blog.scss";

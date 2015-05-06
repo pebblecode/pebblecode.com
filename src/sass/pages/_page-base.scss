@@ -3,14 +3,9 @@
 //===============================================================================
 // Hero Section
 .hero-container {
-  padding: 150px 0 90px;
   background-color: $primary;
   position: relative;
   overflow: hidden;
-
-  @media screen and ( max-width: $medium ) {
-    padding: 40px 0 60px
-  }
 
   &:before {
     content: "";
@@ -39,6 +34,10 @@
   background-color: $aqua;
 }
 
+.hero-container-blue {
+  background-color: $blue;
+}
+
 .hero-container-tile {
   background-image: url(../img/tile-white.png);
   background-repeat: repeat-x;
@@ -47,8 +46,15 @@
 }
 
 .hero-inner {
+  padding-top: 150px;
+  padding-bottom: 90px;
+  display: block;
   z-index: 11;
   position: relative;
+
+  @media screen and ( max-width: $medium ) {
+    padding: 40px 0 60px
+  }
 }
 
 .hero-title {
@@ -64,7 +70,7 @@
 }
 
 .hero-summary {
-  font-size: $beta;
+  font-size: $beta - 6px;
   color: white;
   padding: 15px $gutter * 2 10px $gutter;
   line-height: 1.5;
@@ -109,4 +115,44 @@
   @media screen and ( max-width: $medium ) {
     font-size: $delta - 2px;
   }
+}
+
+// Meta
+.meta-title {
+  padding: 10px 15px;
+  position: relative;
+  line-height: 1.3;
+  font-family: $brandon;
+  font-weight: $font-black;
+  font-style: italic;
+  text-transform: uppercase;
+  display: table;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(black, 0.3);
+    z-index: -1;
+    transform: rotate(-0.3deg) skew(1deg);  
+  }
+}
+
+.meta-container {
+  font-size: $delta;
+}
+
+.meta-author {
+  font-weight: $font-bold;
+  display: block;
+  color: white;
+}
+
+.meta-date {
+  color: rgba(white, 0.8);
 }
