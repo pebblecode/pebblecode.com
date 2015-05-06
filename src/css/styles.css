@@ -190,11 +190,11 @@ td, th {
   padding: 0; }
 
 /* line 4, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
-.i-menu-grey, .gbl-head-btn:after, .i-vimeo-pink, .gbl-foot-social a.vimeo:after, .i-twitter-pink, .gbl-foot-social a.twitter:after, .i-gbl-logo-white, .gbl-head-logo:after, .i-close-grey, .gbl-head-btn.active:after, .i-email-grey, .i-phone-grey, .i-location-grey {
+.i-menu-grey, .gbl-head-btn:after, .i-vimeo-pink, .gbl-foot-social a.vimeo:after, .i-twitter-pink, .gbl-foot-social a.twitter:after, .i-gbl-logo-white, .gbl-head-logo:after, .i-close-grey, .gbl-head-btn.active:after, .i-email-grey, .location-item-email a:after, .i-phone-grey, .location-item-phone a:after, .i-location-grey, .location-item-address a:after {
   background: url('../img/gbl-sprite.svg'); }
 
 /* line 6, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
-.i-email-grey, .i-phone-grey {
+.i-email-grey, .location-item-email a:after, .i-phone-grey, .location-item-phone a:after {
   width: 31px; }
 
 /* line 8, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
@@ -217,7 +217,7 @@ td, th {
 
 /* line 14, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
 .i-twitter-pink, .gbl-foot-social a.twitter:after {
-  background-position: -204px 0px;
+  background-position: -202px 0px;
   width: 28px; }
 
 /* line 15, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
@@ -232,17 +232,17 @@ td, th {
   width: 17px; }
 
 /* line 17, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
-.i-email-grey {
+.i-email-grey, .location-item-email a:after {
   background-position: -345px 0px;
   height: 26px; }
 
 /* line 18, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
-.i-phone-grey {
+.i-phone-grey, .location-item-phone a:after {
   background-position: -310px 0px;
   height: 30px; }
 
 /* line 19, /Users/peter/Repos/pebblecode.com/src/sass/shared/_sprite.scss */
-.i-location-grey {
+.i-location-grey, .location-item-address a:after {
   background-position: -282px 0px;
   width: 24px;
   height: 33px; }
@@ -543,48 +543,86 @@ a {
   .btn:focus, button:focus {
     outline: none; }
 
-/* line 42, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 41, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+.btn-primary {
+  color: #ed4f7e;
+  padding-bottom: 10px;
+  border-bottom: 4px solid rgba(237, 79, 126, 0.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  /* line 47, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  .btn-primary:hover {
+    color: #ed4f7e;
+    border-bottom-color: rgba(237, 79, 126, 0.4); }
+
+/* line 53, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+.btn-block {
+  border-radius: 4px;
+  padding: 14px 30px;
+  font-family: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-bottom: none; }
+  /* line 63, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  .btn-block:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05); }
+  /* line 67, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  .btn-block.btn-primary {
+    background-color: #ed4f7e;
+    color: white;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+    /* line 72, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+    .btn-block.btn-primary:hover {
+      color: white;
+      background-color: #e8215d; }
+
+/* line 80, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 input, textarea {
   padding: 10px;
   display: block;
   -webkit-appearance: none;
   border-radius: 0; }
-  /* line 48, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  /* line 86, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
   input:focus, textarea:focus {
     outline: none; }
 
-/* line 54, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 92, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 img {
   max-width: 100%; }
 
-/* line 59, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 97, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 ol {
   padding-left: 1.4em; }
-  /* line 62, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  /* line 100, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
   ol ol, ol ol ol {
     margin-bottom: 0; }
 
-/* line 67, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 105, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 ul {
   padding: 0;
   list-style: none; }
-  /* line 71, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  /* line 109, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
   ul ul, ul ul ul {
     margin-bottom: 0; }
 
-/* line 76, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 114, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 dt {
   font-weight: 700; }
 
-/* line 80, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 118, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 dd {
   margin-left: 1.4em; }
 
-/* line 85, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 123, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 hr {
   border: 4px solid #f5f6f7; }
 
-/* line 91, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 129, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 .hidden {
   position: absolute;
   left: -10000px;
@@ -593,7 +631,7 @@ hr {
   height: 1px;
   overflow: hidden; }
 
-/* line 104, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 142, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 .tab-head {
   padding-left: 0;
   margin: 0;
@@ -605,7 +643,7 @@ hr {
   -webkit-overflow-scrolling: touch;
   position: relative; }
 
-/* line 116, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 154, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 .tab-head-item {
   font-size: 28px;
   display: inline-block;
@@ -629,17 +667,17 @@ hr {
   @media screen and (max-width: 650px) {
     .tab-head-item {
       font-size: 22px; } }
-  /* line 150, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  /* line 188, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
   .tab-head-item:first-of-type {
     margin-left: 0; }
-  /* line 154, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  /* line 192, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
   .tab-head-item:last-of-type {
     margin-right: 20px; }
-  /* line 158, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  /* line 196, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
   .tab-head-item.active {
     color: #6b7482; }
 
-/* line 163, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 201, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 .tab-content-container {
   clear: both;
   padding-top: 50px; }
@@ -652,14 +690,14 @@ hr {
     .tab-content-container {
       padding-top: 30px; } }
 
-/* line 172, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+/* line 210, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
 .tab-content {
   opacity: 0;
   height: 0;
   overflow: hidden;
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s; }
-  /* line 178, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
+  /* line 216, /Users/peter/Repos/pebblecode.com/src/sass/shared/_elements.scss */
   .tab-content.active {
     opacity: 1;
     height: 100%;
@@ -703,6 +741,7 @@ hr {
     overflow: hidden;
     display: block;
     position: absolute;
+    background-repeat: no-repeat;
     bottom: 0;
     left: 0; }
   @media screen and (max-width: 650px) {
@@ -717,7 +756,7 @@ hr {
 .gbl-head-nav {
   position: absolute;
   right: 40px;
-  top: 45px; }
+  top: 0; }
   @media screen and (max-width: 650px) {
     .gbl-head-nav {
       position: relative;
@@ -736,23 +775,28 @@ hr {
 /* line 70, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
 .gbl-head-nav-item {
   color: white;
-  margin-left: 20px;
+  display: block;
+  float: left;
+  padding: 40px 20px 23px;
   color: rgba(255, 255, 255, 0.6);
+  border-top: 5px solid transparent;
   -webkit-transition: 0.2s;
   transition: 0.2s; }
   @media screen and (max-width: 650px) {
     .gbl-head-nav-item {
       display: block;
+      float: none;
+      border: none;
       text-align: right;
       font-size: 18px;
       background-color: rgba(0, 0, 0, 0.07);
       color: rgba(255, 255, 255, 0.9);
       padding: 10px 20px;
       margin: 1px 0 0; }
-      /* line 85, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+      /* line 90, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
       .gbl-head-nav-item:first-child {
         margin-top: 9px; }
-        /* line 88, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+        /* line 93, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
         .gbl-head-nav-item:first-child:after {
           content: "";
           display: block;
@@ -763,18 +807,25 @@ hr {
           height: 0;
           border-left: 9px solid transparent;
           border-right: 9px solid transparent;
-          border-bottom: 9px solid rgba(0, 0, 0, 0.07); } }
-  /* line 103, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+          border-bottom: 9px solid rgba(0, 0, 0, 0.07);
+          -webkit-transition: 0.2s;
+          transition: 0.2s; }
+        /* line 107, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+        .gbl-head-nav-item:first-child:hover:after {
+          border-bottom-color: rgba(0, 0, 0, 0.12); } }
+  /* line 113, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
   .gbl-head-nav-item:hover {
-    color: rgba(255, 255, 255, 0.9); }
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.4); }
     @media screen and (max-width: 650px) {
       .gbl-head-nav-item:hover {
-        background-color: rgba(0, 0, 0, 0.1); } }
-  /* line 111, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+        background-color: rgba(0, 0, 0, 0.12); } }
+  /* line 122, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
   .gbl-head-nav-item.active {
-    color: white; }
+    color: white;
+    border-color: white; }
 
-/* line 116, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+/* line 128, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
 .gbl-head-btn {
   display: none;
   position: absolute;
@@ -790,20 +841,21 @@ hr {
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: -webkit-box-shadow 0.2s, opacity 0.2s;
   transition: box-shadow 0.2s, opacity 0.2s; }
-  /* line 130, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+  /* line 142, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
   .gbl-head-btn:after {
     content: "";
     overflow: hidden;
     display: block;
     position: absolute;
+    background-repeat: no-repeat;
     top: 14px;
     left: 13px; }
-  /* line 137, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+  /* line 149, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
   .gbl-head-btn:active {
     opacity: 0.9;
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
-  /* line 142, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
+  /* line 154, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
   .gbl-head-btn.active:after {
     left: 15px; }
   @media screen and (max-width: 650px) {
@@ -864,6 +916,7 @@ hr {
       overflow: hidden;
       display: block;
       position: absolute;
+      background-repeat: no-repeat;
       top: 0;
       right: 0; }
     /* line 65, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-foot.scss */
@@ -960,14 +1013,13 @@ hr {
 .content-title {
   padding: 0 0 20px;
   margin: 0 20px 40px;
-  border-bottom: 8px solid #f5f6f7; }
+  border-bottom: 5px solid #f5f6f7; }
   @media screen and (max-width: 650px) {
     .content-title {
       margin-bottom: 30px;
-      padding-bottom: 10px;
-      border-bottom-width: 6px; } }
+      padding-bottom: 10px; } }
 
-/* line 106, /Users/peter/Repos/pebblecode.com/src/sass/pages/_page-base.scss */
+/* line 105, /Users/peter/Repos/pebblecode.com/src/sass/pages/_page-base.scss */
 .content-intro {
   font-size: 20px;
   line-height: 1.5; }
@@ -1144,52 +1196,323 @@ hr {
   -ms-transform: rotate(1.3deg) scale(1.2);
   transform: rotate(1.3deg) scale(1.2); }
 
-/* line 29, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+/* line 31, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
 .location-tab-container {
   background-color: #da426e;
   position: relative; }
-  /* line 33, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  /* line 35, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .location-tab-container .tab-head-container {
+    padding-left: 40px;
+    padding-right: 40px; }
+    @media screen and (max-width: 650px) {
+      .location-tab-container .tab-head-container {
+        padding-left: 0;
+        padding-right: 0; } }
+  /* line 45, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
   .location-tab-container .tab-head-item {
     color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    position: relative;
     border-bottom: 6px solid transparent; }
-    /* line 37, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+    /* line 51, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
     .location-tab-container .tab-head-item:hover {
-      color: rgba(0, 0, 0, 0.4); }
-    /* line 41, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+      color: rgba(0, 0, 0, 0.4);
+      border-bottom-color: rgba(0, 0, 0, 0.1); }
+    /* line 56, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
     .location-tab-container .tab-head-item.active {
       color: white;
-      border-bottom-color: white; }
-  /* line 47, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+      border-bottom-color: white;
+      text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.2); }
+    @media screen and (max-width: 650px) {
+      .location-tab-container .tab-head-item {
+        margin-top: 0; } }
+  /* line 67, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
   .location-tab-container .tab-head {
-    margin-left: 20px;
     position: relative; }
-    /* line 51, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+    @media screen and (max-width: 650px) {
+      .location-tab-container .tab-head {
+        padding-left: 20px; } }
+    /* line 74, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
     .location-tab-container .tab-head:after {
       content: "";
       display: block;
-      z-index: 1;
       width: 100%;
       height: 6px;
       position: absolute;
       bottom: 0;
       left: 0;
-      background-color: rgba(255, 255, 255, 0.2); }
+      background-color: rgba(0, 0, 0, 0.1); }
 
-/* line 65, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+/* line 87, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
 .location-item {
   font-size: 22px;
   color: white;
   line-height: 1.4; }
-  /* line 70, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
-  .location-item:last-of-type {
-    margin-bottom: 40px; }
-  /* line 74, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  @media screen and (max-width: 650px) {
+    .location-item {
+      font-size: 18px; } }
+  /* line 96, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
   .location-item a {
-    padding: 40px;
+    margin: 40px 0;
+    padding: 0 40px;
     display: block;
     color: white;
     -webkit-transition: 0.2s;
-    transition: 0.2s; }
-    /* line 80, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+    transition: 0.2s;
+    position: relative;
+    word-break: break-word; }
+    @media screen and (max-width: 650px) {
+      .location-item a {
+        padding-right: 0; } }
+    @media screen and (max-width: 500px) {
+      .location-item a {
+        margin: 20px 0 0; } }
+    /* line 113, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+    .location-item a:last-of-type {
+      margin-bottom: 10px; }
+      @media screen and (max-width: 500px) {
+        .location-item a:last-of-type {
+          margin: 40px 0 20px; } }
+    /* line 121, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
     .location-item a:hover {
       color: rgba(255, 255, 255, 0.7); }
+    /* line 125, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+    .location-item a:after {
+      content: "";
+      overflow: hidden;
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0; }
+
+/* line 139, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+.location-item-phone {
+  line-height: 1; }
+
+/* line 147, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+.location-item-email {
+  line-height: 1; }
+
+/* line 156, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+.location-map-container {
+  position: relative;
+  height: 400px; }
+  @media screen and (max-width: 650px) {
+    .location-map-container {
+      height: 300px; } }
+  /* line 164, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .location-map-container:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-transform: rotate(-2.1deg) scale(1.2);
+    -ms-transform: rotate(-2.1deg) scale(1.2);
+    transform: rotate(-2.1deg) scale(1.2);
+    z-index: 1; }
+  /* line 176, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .location-map-container:after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #da426e;
+    -webkit-transform: rotate(-1.3deg) scale(1.2);
+    -ms-transform: rotate(-1.3deg) scale(1.2);
+    transform: rotate(-1.3deg) scale(1.2);
+    z-index: 2; }
+
+/* line 190, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+.ppl-container {
+  background-color: #0ea2dc;
+  background-image: url(../img/tile-white.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  -webkit-background-size: 500px;
+  background-size: 500px;
+  position: relative; }
+  /* line 198, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-container:before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-transform: rotate(1.8deg) scale(1.2);
+    -ms-transform: rotate(1.8deg) scale(1.2);
+    transform: rotate(1.8deg) scale(1.2);
+    z-index: 1; }
+  /* line 210, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-container:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #0ea2dc;
+    -webkit-transform: rotate(1.2deg) scale(1.2);
+    -ms-transform: rotate(1.2deg) scale(1.2);
+    transform: rotate(1.2deg) scale(1.2);
+    z-index: 2; }
+
+/* line 223, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+.ppl-inner {
+  position: relative;
+  z-index: 3;
+  padding-top: 30px; }
+  /* line 228, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-inner .content-title {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2); }
+
+@media screen and (max-width: 650px) {
+  .ppl-col {
+    width: 100%;
+    display: block;
+    margin-bottom: 0; } }
+@media screen and (min-width: 650px) {
+  /* line 244, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-col:first-of-type {
+    padding-right: 10px; } }
+@media screen and (min-width: 750px) {
+  /* line 251, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-col .ppl-item:nth-of-type(3n-2):after {
+    -webkit-transform: rotate(0.3deg) skew(-0.4deg);
+    -ms-transform: rotate(0.3deg) skew(-0.4deg);
+    transform: rotate(0.3deg) skew(-0.4deg); }
+  /* line 255, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-col .ppl-item:nth-of-type(3n-1):after {
+    -webkit-transform: rotate(-0.3deg) skew(0.5deg);
+    -ms-transform: rotate(-0.3deg) skew(0.5deg);
+    transform: rotate(-0.3deg) skew(0.5deg); }
+  /* line 259, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-col .ppl-item:nth-of-type(3n):after {
+    -webkit-transform: rotate(0.3deg) skew(0.8deg);
+    -ms-transform: rotate(0.3deg) skew(0.8deg);
+    transform: rotate(0.3deg) skew(0.8deg); } }
+@media screen and (max-width: 650px) {
+  .ppl-col:nth-of-type(2) {
+    margin-bottom: 20px; } }
+@media screen and (min-width: 750px) {
+  /* line 272, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-col:nth-of-type(2) .ppl-item:nth-of-type(3n-2):after {
+    -webkit-transform: rotate(-0.5deg) skew(-0.5deg);
+    -ms-transform: rotate(-0.5deg) skew(-0.5deg);
+    transform: rotate(-0.5deg) skew(-0.5deg); }
+  /* line 276, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-col:nth-of-type(2) .ppl-item:nth-of-type(3n-1):after {
+    -webkit-transform: rotate(0.7deg) skew(1.2deg);
+    -ms-transform: rotate(0.7deg) skew(1.2deg);
+    transform: rotate(0.7deg) skew(1.2deg); }
+  /* line 280, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-col:nth-of-type(2) .ppl-item:nth-of-type(3n):after {
+    -webkit-transform: rotate(0.3deg) skew(-0.7deg);
+    -ms-transform: rotate(0.3deg) skew(-0.7deg);
+    transform: rotate(0.3deg) skew(-0.7deg); } }
+@media screen and (min-width: 650px) {
+  .ppl-col:nth-of-type(2) {
+    padding-left: 10px; } }
+
+/* line 291, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+.ppl-item {
+  position: relative;
+  display: block;
+  padding: 40px;
+  margin-bottom: 20px;
+  color: white; }
+  @media screen and (max-width: 750px) {
+    .ppl-item {
+      margin-bottom: 15px;
+      padding: 30px 25px;
+      border: 5px solid rgba(255, 255, 255, 0.2); } }
+  @media screen and (min-width: 750px) {
+    /* line 305, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+    .ppl-item:after {
+      content: "";
+      top: 0;
+      left: 0;
+      border: 5px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: block; } }
+  /* line 318, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-item h3 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    line-height: 1;
+    text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2); }
+  /* line 325, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-item h4 {
+    margin: 0 0 15px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.3); }
+  /* line 333, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-item p:last-of-type {
+    margin-bottom: 0; }
+
+/* line 340, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+.ppl-join-container {
+  clear: both;
+  position: relative;
+  margin: 70px 10%;
+  width: 80%;
+  padding: 50px 40px 40px; }
+  /* line 9, /Users/peter/Repos/pebblecode.com/src/sass/shared/_mixins.scss */
+  .ppl-join-container:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 650px) {
+    .ppl-join-container {
+      background: white;
+      width: -webkit-calc(100% - 40px);
+      width: calc(100% - 40px);
+      margin: 40px 20px;
+      padding: 40px 30px 30px;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); } }
+  @media screen and (min-width: 650px) {
+    /* line 356, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+    .ppl-join-container:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: white;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: -1;
+      -webkit-transform: rotate(-0.3deg) skew(1deg);
+      -ms-transform: rotate(-0.3deg) skew(1deg);
+      transform: rotate(-0.3deg) skew(1deg); } }
+  /* line 371, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-join-container h3 {
+    font-size: 40px;
+    margin-bottom: 10px; }
+    @media screen and (max-width: 650px) {
+      .ppl-join-container h3 {
+        font-size: 36px; } }
+  /* line 380, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-join-container p {
+    font-size: 20px; }
+    @media screen and (max-width: 650px) {
+      .ppl-join-container p {
+        font-size: 18px; } }
+  /* line 388, /Users/peter/Repos/pebblecode.com/src/sass/pages/_about.scss */
+  .ppl-join-container .btn {
+    margin-top: 30px;
+    display: table; }

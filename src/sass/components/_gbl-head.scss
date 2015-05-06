@@ -50,7 +50,7 @@
 .gbl-head-nav {
   position: absolute;
   right: $gutter * 2;
-  top: 45px;
+  top: 0;
 
   @media screen and ( max-width: $medium ) {
     position: relative;
@@ -69,12 +69,17 @@
 
 .gbl-head-nav-item {
   color: white;
-  margin-left: 20px;
+  display: block;
+  float: left;
+  padding: 40px 20px 23px;
   color: rgba(white, 0.6);
+  border-top: 5px solid transparent;
   transition: 0.2s;
 
   @media screen and ( max-width: $medium ) {
     display: block;
+    float: none;
+    border: none;
     text-align: right;
     font-size: $delta;
     background-color: rgba(black, 0.07);
@@ -96,20 +101,27 @@
         border-left: 9px solid transparent;
         border-right: 9px solid transparent;
         border-bottom: 9px solid rgba(black, 0.07);
+        transition: 0.2s;
+      }
+
+      &:hover:after {
+        border-bottom-color: rgba(black, 0.12); 
       }
     }
   }
 
   &:hover {
     color: rgba(white, 0.9);
+    border-color: rgba(white, 0.4);
 
     @media screen and ( max-width: $medium ) {
-      background-color: rgba(black, 0.1);
+      background-color: rgba(black, 0.12);
     }
   }
 
   &.active {
     color: white;
+    border-color: white;
   }
 }
 

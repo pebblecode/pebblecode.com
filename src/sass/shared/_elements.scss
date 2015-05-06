@@ -38,6 +38,44 @@ a {
   }
 }
 
+.btn-primary {
+  color: $primary;
+  padding-bottom: 10px;
+  border-bottom: 4px solid rgba($primary, 0.2);
+  transition: 0.2s;
+
+  &:hover {
+    color: $primary;
+    border-bottom-color: rgba($primary, 0.4);
+  }
+}
+
+.btn-block {
+  border-radius: 4px;
+  padding: 14px 30px;
+  font-family: $brandon;
+  font-weight: $font-black;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: $delta - 2px;
+  border-bottom: none;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.btn-primary {
+    background-color: $primary;
+    color: white;
+    transition: 0.2s;
+
+    &:hover {
+      color: white;
+      background-color: darken($primary, 10);
+    }
+  }
+}
+
 // INPUT, TEXTAREA
 input, textarea {
   padding: 10px;
