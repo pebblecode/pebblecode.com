@@ -48,6 +48,7 @@
   }
 
   a {
+    position: relative;
     color: transparent;
     overflow: hidden;
     width: 25px;
@@ -55,16 +56,22 @@
     display: block;
     transition: 0.2s;
 
+    &:after {
+      @include icon-pseudo;
+      top: 0;
+      right: 0;
+    }
+
     &:hover {
       opacity: 0.8;
     }
 
-    &.twitter {
-      background: url(../img/twitter-pink.svg) right no-repeat;
+    &.twitter:after {
+      @extend .i-twitter-pink;
     }
 
-    &.vimeo {
-      background: url(../img/vimeo-pink.svg) right no-repeat;
+    &.vimeo:after {
+      @extend .i-vimeo-pink;
     }
   }
 }

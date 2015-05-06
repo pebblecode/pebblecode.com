@@ -10,6 +10,9 @@
 // NORMALIZE v3.0.0: Normalise across browsers
 @import "shared/_normalize.scss";
 
+// SPRITE: Global sprite used across all pages.
+@import "shared/_sprite.scss";
+
 // MIXINS: Fixes, Recurring blocks of styling etc.
 @import "shared/_mixins.scss";
 

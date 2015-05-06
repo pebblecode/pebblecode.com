@@ -41,3 +41,24 @@
     @content;
   }
 }
+
+// SPRITE ICON
+// @include icon;
+@mixin icon {
+  color: transparent;
+  overflow: hidden;
+  display: block;
+
+  &:hover {
+    color: transparent;
+  }
+}
+
+// SPRITE ICON (PSEUDO)
+// @include icon-pseudo
+@mixin icon-pseudo {
+  content: "";
+  overflow: hidden;
+  display: block;
+  position: absolute;
+}

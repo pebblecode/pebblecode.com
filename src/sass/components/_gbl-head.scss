@@ -22,13 +22,20 @@
 }
 
 .gbl-head-logo {
+  position: relative;
   color: transparent;
   overflow: hidden;
   display: block;
   width: 170px;
   height: 31px;
-  background: url(../img/gbl-logo-white.svg) no-repeat left;
   transition: 0.2s;
+
+  &:after {
+    @include icon-pseudo;
+    @extend .i-gbl-logo-white;
+    bottom: 0;
+    left: 0;
+  }
 
   @media screen and ( max-width: $medium ) {
     margin-left: $gutter;
@@ -63,16 +70,16 @@
 .gbl-head-nav-item {
   color: white;
   margin-left: 20px;
-  font-size: $delta;
   color: rgba(white, 0.6);
   transition: 0.2s;
 
   @media screen and ( max-width: $medium ) {
     display: block;
     text-align: right;
+    font-size: $delta;
     background-color: rgba(black, 0.07);
     color: rgba(white, 0.9);
-    padding: 14px $gutter;
+    padding: 10px $gutter;
     margin: 1px 0 0;
 
     &:first-child {
@@ -115,20 +122,26 @@
   width: 45px;
   color: transparent;
   overflow: hidden;
-  background: white url(../img/menu-grey.svg) no-repeat center;
-  background-size: 18px;
+  background-color: white;
   border-radius: 50%;
   box-shadow: 0 4px 0 rgba(black, 0.1);
   transition: box-shadow 0.2s, opacity 0.2s;
+
+  &:after {
+    @include icon-pseudo;
+    @extend .i-menu-grey;
+    top: 14px;
+    left: 13px;
+  }
 
   &:active {
     opacity: 0.9;
     box-shadow: 0 1px 0 rgba(black, 0.1);
   }
 
-  &.active {
-    background: white url(../img/close-grey.svg) no-repeat center;
-    background-size: 18px;
+  &.active:after {
+    @extend .i-close-grey;
+    left: 15px;
   }
 
   @media screen and ( max-width: $medium ) {
