@@ -3,10 +3,13 @@
 //===============================================================================
 // Hero
 .hero-container-home {
-  padding-bottom: 110px;
 
-  @media screen and ( max-width: $medium ) {
-    padding-bottom: 80px;
+  .hero-inner {
+    padding-bottom: 110px;
+
+    @media screen and ( max-width: $medium ) {
+      padding-bottom: 80px;
+    }
   }
 
   .hero-summary {
@@ -15,19 +18,20 @@
   }
 
   &:after {
-    background-color: lighten($ink, 45);
+    background-color: lighten($ink, 50);
+    background-color: white;
   }
 }
 
 // Clients
 .client-container {
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   background-color: lighten($ink, 45);
+  background-color: white;
 
   @media screen and ( max-width: $medium + 100px ) {
     padding-top: 20px;
-    padding-bottom: 10px;
   }
 
   @media screen and ( max-width: $medium ) {
@@ -43,52 +47,112 @@
   }
 }
 
-.client-inner {
-  .client-item:nth-of-type(4) {
-    margin-left: 16%;
+.client-inner {}
 
-    @media screen and ( max-width: $medium + 100px ) {
-      margin-left: 0;
+.client-item {
+  padding-bottom: 10px;
+  position: relative;
+  text-align: center;
+  vertical-align: vertical;
+}
+
+// Services
+.feat-content-container {
+  background-color: $aqua;
+  position: relative;
+  padding-bottom: 70px;
+
+  @media screen and ( max-width: $medium ) {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(black, 0.15);
+    transform: rotate(-1.8deg) scale(1.2);
+    z-index: 1;
+
+    @media screen and ( max-width: $medium ) {
+      top: 10px;
     }
   }
 
-  @media screen and ( max-width: $medium ) {
-    display: inline-block;
-    float: none;
+  &:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: lighten($ink, 45);
+    background-color: white;
+    transform: rotate(-1.2deg) scale(1.2);
+    z-index: 2;
+
+    @media screen and ( max-width: $medium ) {
+      height: 30px;
+    }
+  }
+
+  .ppl-join-container {
+    margin-top: 40px;
+    margin-bottom: 0;
   }
 }
-.client-item {
-  position: relative;
-  height: 160px;
-  text-align: center;
-  vertical-align: baseline;
 
-  &.client-item-pearson img {
-    margin-top: 30px;
-
-    @media screen and ( max-width: $medium + 100px ) {
-      margin-top: 20px;
-    }
-
-    @media screen and ( max-width: $medium ) {
-      margin-top: 0;
-    }
-  }
+.feat-content {
+  padding-top: 60px;
+  padding-bottom: 0;
+  color: white;
 
   @media screen and ( max-width: $medium ) {
-    width: auto;
-    height: 100px;
-    display: inline-block;
+    padding-top: 10px;
+  }
+
+  .meta-title-container {
+    margin: 50px 0;
+  }
+}
+
+.feat-content-text {
+  @media screen and ( max-width: $medium + 100px ) {
+    width: 100%;
     float: none;
   }
 
-  &.client-item-bede img {
-    @media screen and ( max-width: $medium + 100px ) {
-      height: 60px;
-    }
-    
-    @media screen and ( max-width: $medium ) {
-      height: 80px;
-    }
+  .btn-block {
+    margin: 30px 0 0;
+    padding: 12px 25px;
+    display: table;
+  }
+
+  h3 {
+    color: white;
+    text-shadow: 2px 2px 0 rgba($grey, 0.4);
+    line-height: 1.1;
+  }
+
+  p {
+    font-size: $delta;
+  }
+}
+
+.feat-content-img {
+  z-index: 2;
+  height: 610px;
+  background: url(../img/services/services-featured.png) no-repeat center left;
+  background-size: auto 630px;
+  right: 0;
+  bottom: -50px;
+  position: absolute;
+
+  @media screen and ( max-width: $medium + 100px ) {
+    display: none;
   }
 }

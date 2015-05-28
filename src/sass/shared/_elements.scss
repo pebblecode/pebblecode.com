@@ -32,6 +32,7 @@ a {
   border-radius: 0;
   background: none;
   -webkit-appearance: none;
+  transition: 0.2s;
 
   &:focus {
     outline: none;
@@ -47,6 +48,16 @@ a {
   &:hover {
     color: $primary;
     border-bottom-color: rgba($primary, 0.4);
+  }
+}
+
+.btn-light {
+  color: white;
+  background-color: rgba(white, 0.2);
+
+  &:hover {
+    color: white;
+    background-color: rgba(white, 0.3);
   }
 }
 
@@ -165,11 +176,8 @@ hr {
     margin-right: 15px;
   }
 
-  &:hover {
-    
-    &.active {
-
-    }
+  &:hover { 
+    &.active {}
   }
 
   @media screen and ( max-width: 1000px ) {

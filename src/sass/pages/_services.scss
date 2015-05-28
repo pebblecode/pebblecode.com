@@ -91,12 +91,6 @@
     padding-bottom: 30px;
     min-height: 0;
   }
-
-  h3 {
-    color: white;
-    text-shadow: 2px 2px 0 rgba($grey, 0.4);
-    line-height: 1.1;
-  }
 }
 
 .services-item-inner {
@@ -120,6 +114,12 @@
     float: none;
     display: block;
     width: 100%;
+  }
+
+  h3 {
+    color: white;
+    text-shadow: 2px 2px 0 rgba($grey, 0.4);
+    line-height: 1.1;
   }
 }
 

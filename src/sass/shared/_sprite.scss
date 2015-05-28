@@ -21,7 +21,7 @@
 
 
 // LOGOS
-.logo-lloyds, .logo-aj, .logo-bede, .logo-az, .logo-pearson { background: url($logo-sprite); }
+.logo-lloyds, .logo-aj, .logo-bede, .logo-az, .logo-pearson, .logo-cresearch { background: url($logo-sprite); }
 
 .logo-lloyds, .logo-aj { height: 101px; }
 
@@ -30,3 +30,4 @@
 .logo-bede { background-position: -614px -21px; width: 180px; height: 87px; }
 .logo-az { background-position: -17px -23px; width: 327px; height: 83px; }
 .logo-pearson { background-position: -348px -43px; width: 263px; height: 43px; }
+.logo-cresearch { background-position: -1328px -15px; width: 255px; height: 99px; }
