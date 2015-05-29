@@ -3,7 +3,6 @@
 //===============================================================================
 // Hero
 .hero-container-home {
-
   .hero-inner {
     padding-bottom: 110px;
 
@@ -147,9 +146,9 @@
   z-index: 2;
   height: 610px;
   background: url(../img/services/services-featured.png) no-repeat center left;
-  background-size: auto 630px;
+  background-size: auto 580px;
   right: 0;
-  bottom: -50px;
+  bottom: -60px;
   position: absolute;
 
   @media screen and ( max-width: $medium + 100px ) {

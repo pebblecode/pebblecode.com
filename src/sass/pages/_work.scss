@@ -4,12 +4,11 @@
 .project-client-title {
   margin: 40px 0 20px;
   font-size: $giga;
-  text-align: right;
 }
 
 .project-item {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 
   hr {
     border-color: rgba(black, 0.1);
@@ -48,6 +47,10 @@
     box-shadow: 0 0 10px rgba(black, 0.2);
     z-index: -1;
     transform: rotate(-0.3deg) skew(1deg);  
+  }
+
+  &:nth-of-type(even):after {
+    transform: rotate(-0.3deg) skew(0.5deg);  
   }
 }
 
@@ -90,11 +93,13 @@
     background-color: $purple;
   }
 
-  .project-item-aside {
-
-  }
+  .project-item-aside {}
 
   .project-item-aside-img {
     max-height: 300px;
   }
+}
+
+.project-azinno {
+  background-color: $aqua;
 }
