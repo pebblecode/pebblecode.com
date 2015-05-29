@@ -1263,6 +1263,9 @@ hr {
   /* line 282, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_page-base.scss */
   .photo-inner.photo-hardware {
     background-image: url(../img/office/hardware.jpg); }
+  /* line 286, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_page-base.scss */
+  .photo-inner.photo-wshop {
+    background-image: url(../img/office/wshop.jpg); }
 
 /* line 6, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_home.scss */
 .hero-container-home .hero-inner {
@@ -2053,6 +2056,13 @@ hr {
 /* line 155, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-bede + .photo-container .photo-inner:after {
   background-color: #37bec0; }
+
+/* line 161, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_work.scss */
+.project-azinno .project-item-inner {
+  background-color: #0ea2dc; }
+/* line 165, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_work.scss */
+.project-azinno + .photo-container .photo-inner:after {
+  background-color: #0ea2dc; }
 
 /* line 5, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_blog.scss */
 .hero-container-blog {

@@ -157,3 +157,12 @@
   }
 }
 
+.project-azinno {
+  .project-item-inner {
+    background-color: $blue;
+  }
+
+  & + .photo-container .photo-inner:after {
+    background-color: $blue;
+  }
+}
