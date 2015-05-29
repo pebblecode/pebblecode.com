@@ -36,6 +36,19 @@
 
 .hero-container-blue {
   background-color: $blue;
+
+  &:before {
+    bottom: 25px;
+    transform: rotate(-2.4deg) scale(1.4);
+  }
+
+  &:after {
+    transform: rotate(-1.5deg) scale(1.2);
+  }
+
+  .hero-inner {
+    padding-bottom: 60px;
+  }
 }
 
 .hero-container-tile {
@@ -183,4 +196,90 @@
 
 .meta-date {
   color: rgba(white, 0.8);
+}
+
+// Photo sections
+.photo-container {
+  height: 400px;
+  position: relative;
+
+  @media screen and ( max-width: $medium ) {
+    height: 200px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(black, 0.15);
+    transform: rotate(-1.2deg) scale(1.2);
+    z-index: 1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    transform: rotate(-0.8deg) scale(1.2);
+    z-index: 2;
+  }
+}
+
+.photo-inner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+
+  @media all and (device-width: 768px) and (device-height: 1024px) {
+    background-attachment: scroll;
+  }
+
+  @media screen and ( max-width: $medium ) {
+    height: 250px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(black, 0.15);
+    transform: rotate(-1.6deg) scale(1.2);
+    z-index: 1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    transform: rotate(-1deg) scale(1.2);
+    z-index: 2;
+  }
+
+  &.photo-hardware {
+    background-image: url(../img/office/hardware.jpg);
+  }
 }

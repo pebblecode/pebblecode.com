@@ -1,14 +1,33 @@
 //===============================================================================
 // WORK
 //===============================================================================
-.project-client-title {
-  margin: 40px 0 20px;
-  font-size: $giga;
+.project-container {
+  background-color: white;
+  z-index: 1;
 }
 
-.project-item {
+.project-title-container {
+  background-color: white;
+}
+
+.project-title {
+  padding-top: 70px;
+  margin: 0;
+  z-index: 2;
   position: relative;
-  margin-bottom: 10px;
+  font-size: $giga;
+
+  @media screen and ( max-width: $medium ) {
+    font-size: $alpha;
+    padding: 40px 20px 0;
+    margin: 20px 0 0;
+    line-height: 0.9;
+  }
+}
+
+.project-item-container {
+  position: relative;
+  color: white;
 
   hr {
     border-color: rgba(black, 0.1);
@@ -17,6 +36,7 @@
 
   .project-item-title {
     text-shadow: 2px 3px 0 rgba(black, 0.2);
+    line-height: 1;
   }
 
   .project-item-intro {
@@ -33,35 +53,53 @@
 
   p {
     font-size: $gamma;
+    line-height: 1.4;
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $delta;
+    }
+  }
+}
+
+.project-item-inner {
+  background-color: $purple;
+  padding: 80px $gutter 20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(black, 0.15);
+    transform: rotate(1.8deg) scale(1.2);
   }
 
   &:after {
     content: "";
-    display: block;
     position: absolute;
+    top: -25px;
+    display: block;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: $blue;
-    box-shadow: 0 0 10px rgba(black, 0.2);
-    z-index: -1;
-    transform: rotate(-0.3deg) skew(1deg);  
-  }
-
-  &:nth-of-type(even):after {
-    transform: rotate(-0.3deg) skew(0.5deg);  
+    height: 50px;
+    background-color: white;
+    transform: rotate(1deg) scale(1.2);
   }
 }
 
 .project-item-img-feat {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   max-width: 50%;
+
+  @media screen and ( max-width: $medium ) {
+    margin-bottom: 20px;
+  }
 }
 
 .project-item-aside {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   margin: 40px 0 0;
   padding: 40px 200px 30px 40px;
 
@@ -77,29 +115,45 @@
     z-index: -1;
     transform: rotate(0.3deg) skew(-0.6deg);  
   }
+
+  @media screen and ( max-width: $medium ) {
+    padding: 30px 30px 12px;
+    background-color: rgba(black, 0.1);
+
+    &:after {
+      display: none;
+    }
+  }
 }
 
 .project-item-aside-img {
   position: absolute;
+  max-height: 300px;
   right: -80px;
   top: -40px;
+
+  @media screen and ( max-width: $medium ) {
+    position: relative;
+    right: auto;
+    top: 0;
+    max-width: 70%;
+    margin-bottom: 20px;
+  }
 }
 
 .project-azsearch {
-  color: white;
-  padding: 60px 40px;
-
-  &:after {
+  & + .photo-container .photo-inner:after {
     background-color: $purple;
   }
+}
 
-  .project-item-aside {}
+.project-bede {
+  .project-item-inner {
+    background-color: $aqua;
+  }
 
-  .project-item-aside-img {
-    max-height: 300px;
+  & + .photo-container .photo-inner:after {
+    background-color: $aqua;
   }
 }
 
-.project-azinno {
-  background-color: $aqua;
-}
