@@ -145,6 +145,11 @@
 }
 
 .project-azsearch {
+  .project-item-inner {
+    background-image: url(../img/projects/hand.svg);
+    background-position: bottom right;
+  }
+
   & + .photo-container .photo-inner:after {
     background-color: $purple;
   }
