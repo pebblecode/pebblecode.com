@@ -1476,11 +1476,11 @@ hr {
 .services-item {
   display: block;
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
   color: white;
   font-size: 18px;
-  padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   @media screen and (max-width: 900px) {
     .services-item {
       font-size: 16px;
