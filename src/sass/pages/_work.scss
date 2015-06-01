@@ -147,7 +147,10 @@
 .project-azsearch {
   .project-item-inner {
     background-image: url(../img/projects/hand.svg);
-    background-position: bottom right;
+    z-index: 5;
+    position: relative;
+    background-position: top;
+    background-size: 100% 100%;
   }
 
   & + .photo-container .photo-inner:after {

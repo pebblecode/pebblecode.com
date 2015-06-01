@@ -2053,27 +2053,31 @@ hr {
 /* line 148, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-azsearch .project-item-inner {
   background-image: url(../img/projects/hand.svg);
-  background-position: bottom right; }
-/* line 153, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
+  z-index: 5;
+  position: relative;
+  background-position: top;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%; }
+/* line 156, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-azsearch + .photo-container .photo-inner:after {
   background-color: #9b5ca4; }
 
-/* line 159, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
+/* line 162, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-bede .project-item-inner {
   background-color: #37bec0;
   background-image: url(../img/projects/flexible.svg); }
-/* line 164, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
+/* line 167, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-bede + .photo-container .photo-inner:after {
   background-color: #37bec0; }
 
-/* line 171, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
+/* line 174, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-azinno .project-item-img-feat {
   max-height: 300px; }
-/* line 175, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
+/* line 178, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-azinno .project-item-inner {
   background-color: #0ea2dc;
   background-image: url(../img/projects/trophy.svg); }
-/* line 180, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
+/* line 183, /Users/peter/Repos/pebblecode.com/src/sass/pages/_work.scss */
 .project-azinno + .photo-container .photo-inner:after {
   background-color: #0ea2dc; }
 
