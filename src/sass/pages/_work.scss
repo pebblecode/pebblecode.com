@@ -63,6 +63,9 @@
 
 .project-item-inner {
   background-color: $purple;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top right;
   padding: 80px $gutter 20px;
 
   &:before {
@@ -150,6 +153,7 @@
 .project-bede {
   .project-item-inner {
     background-color: $aqua;
+    background-image: url(../img/projects/flexible.svg);
   }
 
   & + .photo-container .photo-inner:after {
@@ -158,8 +162,14 @@
 }
 
 .project-azinno {
+
+  .project-item-img-feat {
+    max-height: 300px;
+  }
+
   .project-item-inner {
     background-color: $blue;
+    background-image: url(../img/projects/trophy.svg);
   }
 
   & + .photo-container .photo-inner:after {
