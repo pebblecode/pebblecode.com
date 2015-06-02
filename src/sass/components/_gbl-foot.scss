@@ -13,7 +13,6 @@
 }
 
 .gbl-foot-links {
-
   li {
     display: inline-block;
     margin-right: 20px;
@@ -37,6 +36,7 @@
   position: absolute;
   right: $gutter * 2;
   top: 20px;
+  z-index: 3;
 
   @media screen and ( max-width: $medium + 100px ) {
     right: $gutter;
