@@ -1,0 +1,62 @@
+//===============================================================================
+// JOBS
+//===============================================================================
+.jobs-container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .rt-offer {
+    margin: 20px 0;
+    padding: 20px 0 30px;
+    position: relative;
+
+    @media screen and ( max-width: $medium ) {
+      padding: 10px 0 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 10px;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "";
+      height: 6px;
+      width: 150px;
+      background-color: lighten($ink, 50);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    h3 {
+      font-size: $alpha - 4px;
+      color: $primary;
+      margin-bottom: 10px;
+      transition: 0.2s;
+      line-height: 1;
+
+      @media screen and ( max-width: $medium ) {
+        font-size: $beta;
+        margin-bottom: 5px;
+      }
+
+      @media screen and ( max-width: $small ) {
+        font-size: $beta - 4px;
+      }
+
+      &:hover {
+        color: lighten($primary, 8);
+      }
+    }
+
+    p {
+      font-size: $delta;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+  }
+}

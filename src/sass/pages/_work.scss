@@ -4,6 +4,7 @@
 .project-container {
   background-color: white;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .project-title-container {
@@ -11,14 +12,12 @@
 }
 
 .project-title {
-  padding-top: 70px;
+  padding-top: 15px;
   margin: 0;
   z-index: 6;
   position: relative;
-  font-size: $giga;
 
   @media screen and ( max-width: $medium ) {
-    font-size: $alpha;
     padding: 40px 20px 0;
     margin: 20px 0 0;
     line-height: 0.9;
@@ -67,6 +66,10 @@
   background-size: 100%;
   background-position: top right;
   padding: 80px $gutter 20px;
+
+  .project-container:last-of-type & {
+    padding-bottom: 50px;
+  }
 
   &:before {
     content: "";
@@ -145,6 +148,9 @@
 }
 
 .project-azsearch {
+  .project-title {
+    padding-top: 5px;
+  }
   .project-item-inner {
     background-image: url(../img/projects/hand.svg);
     z-index: 5;
@@ -170,7 +176,6 @@
 }
 
 .project-azinno {
-
   .project-item-img-feat {
     max-height: 300px;
   }

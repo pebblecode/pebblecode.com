@@ -51,11 +51,28 @@
   }
 }
 
+.hero-container-purple {
+  background-color: $purple;
+
+  &:before {
+    bottom: 25px;
+    transform: rotate(-2deg) scale(1.4);
+  }
+
+  &:after {
+    transform: rotate(-1.2deg) scale(1.2);
+  }
+
+  .hero-inner {
+    padding-bottom: 60px;
+  }
+}
+
 .hero-container-tile {
   background-image: url(../img/tile-white.png);
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: 500px;
+  background-size: 400px;
 }
 
 .hero-inner {
@@ -202,6 +219,8 @@
 .photo-container {
   height: 400px;
   position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
 
   @media screen and ( max-width: $medium ) {
     height: 200px;
@@ -210,7 +229,7 @@
   &:before {
     content: "";
     position: absolute;
-    bottom: -15px;
+    bottom: 2px;
     display: block;
     width: 100%;
     height: 20px;
@@ -222,7 +241,7 @@
   &:after {
     content: "";
     position: absolute;
-    bottom: -60px;
+    bottom: -40px;
     display: block;
     width: 100%;
     height: 50px;
@@ -246,6 +265,8 @@
   left: 0;
   width: 100%;
   display: block;
+  overflow-y: hidden;
+  overflow-x: hidden;
 
   @media all and (device-width: 768px) and (device-height: 1024px) {
     background-attachment: scroll;

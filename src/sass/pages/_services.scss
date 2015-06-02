@@ -35,12 +35,12 @@
 
 // Services List
 .services-container {
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: $purple;
   position: relative;
   margin: 0;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   transition: background-color 1s;
 
   @media screen and ( max-width: $medium + 150px ) {
@@ -80,6 +80,10 @@
   font-size: $delta;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  &:last-of-type {
+    min-height: 100vh;
+  }
 
   @media screen and ( max-width: 900px ) {
     font-size: $delta - 2px;
