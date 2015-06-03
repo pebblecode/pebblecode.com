@@ -39,11 +39,11 @@
 
   &:before {
     bottom: 25px;
-    transform: rotate(-2.4deg) scale(1.4);
+    transform: rotate(-2.2deg) scale(1.4);
   }
 
   &:after {
-    transform: rotate(-1.5deg) scale(1.2);
+    transform: rotate(-1.2deg) scale(1.2);
   }
 
   .hero-inner {
@@ -102,13 +102,12 @@
   font-size: $beta - 6px;
   color: white;
   padding: 15px $gutter * 2 10px $gutter;
-  line-height: 1.5;
+  line-height: 1.4;
 
   @media screen and ( max-width: $medium ) {
     font-size: $delta + 2px;
     line-height: 1.4;
-    padding: $gutter;
-    margin: 10px 0 0;
+    padding: 10px $gutter;
   }
 
   @media screen and ( max-width: $small ) {
@@ -127,7 +126,7 @@
 }
 
 .content-title {
-  padding: 0 0 20px;
+  padding: 0 0 $gutter;
   margin: 0 $gutter 40px;
   border-bottom: 5px solid lighten($ink, 50);
 

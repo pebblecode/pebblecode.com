@@ -5,39 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <title>pebble {code} | work</title>
+  <title>pebble {code} | careers</title>
+  <link href='https://recruitee.com/assets/widget.css' media='screen' rel='stylesheet' />
   <link rel="stylesheet" href="css/styles.css">
-  <script type="text/javascript" src="//use.typekit.net/asa8yjy.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="//use.typekit.net/sxt3lcz.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
 
-  <header class="gbl-head gbl-head-aqua">
+  <header class="gbl-head gbl-head-purple">
     <a href="index.html" class="gbl-head-logo">go to pebble {code} home page</a>
     <button id="navBtn" class="gbl-head-btn">Menu</button>
     <nav id="navMenu" class="gbl-head-nav">
       <a href="services.html" class="gbl-head-nav-item">Services</a>
       <a href="work.html" class="gbl-head-nav-item">Work</a>
-      <a href="careers.html" class="gbl-head-nav-item">Careers</a>
+      <a href="careers.html" class="gbl-head-nav-item active">Careers</a>
       <a href="contact.html" class="gbl-head-nav-item">Contact</a>
-      <a href="http://blog.pebblecode.com" class="gbl-head-nav-item active">Blog</a>
+      <a href="http://blog.pebblecode.com" class="gbl-head-nav-item">Blog</a>
     </nav>
   </header>
   <!-- /.gbl-head -->
 
-  <section class="hero-container hero-container-aqua hero-container-blog">
-    <a class="hero-inner grid">
-      <div class="meta-title-container col-1-1">
-        <span class="meta-title">Featured Article</span>
-      </div>
-      <h1 class="hero-title col-1-1">Book Review: The Second Machine Age</h1>
-      <div class="meta-container col-1-1">
-        <span class="meta-author">George Ornbo</span>
-        <span class="meta-date">9th February 2015</span>
-      </div>
-    </a>
+  <section class="hero-container hero-container-purple">
+    <div class="hero-inner grid">
+      <h1 class="hero-title col-1-1">Careers</h1>
+      <p class="hero-summary col-1-1">Since inception, pebble {code} has strived to create an environment in which the best designers, developers and creative technologists can thrive. Running regular hack days, encouraging technology exploration, giving time for personal development and having a results only work culture has meant that we attract and retain the best talent.</p>
+    </div>
   </section>
   <!-- /.hero-container -->
+
+  <section class="content-container careers-container grid">
+    <article id="recruitee-offers" class="content-intro col-1-1">
+    </article>
+  </section>
+  <!-- /.careers-container -->
 
   <footer class="gbl-foot">
     <ul class="gbl-foot-links">
@@ -51,12 +52,20 @@
       <li><a href="https://twitter.com/pebblecode" class="twitter" target="_blank">Twitter</a></li>
       <li><a href="https://vimeo.com/pebblecode" class="vimeo" target="_blank">Vimeo</a></li>
     </ul>
+    <span class="gbl-foot-tagline">Delivering Awesome!</span>
   </footer>
   <!-- /.gbl-foot -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js""><\/script>')</script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script src='https://recruitee.com/assets/widget.js' type='text/javascript'></script>
+  <script type='text/javascript' charset='utf-8'>
+  RT.jQuery(document).ready(function() {
+    RT.recruitee.init({company: 418, language: "en"});
+    RT.recruitee.renderOffers("#recruitee-offers");
+  });
+  </script>
   <!-- /scripts-->
 
 </body>

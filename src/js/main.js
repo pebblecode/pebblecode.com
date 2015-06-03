@@ -60,12 +60,6 @@
   $('#londonBtn').click( function() {
     changeMarkerPos(51.485672, -0.118554);
   });
-  $('#edinburghBtn').click( function() {
-    changeMarkerPos(55.8959774, -3.296969);
-  });
-  $('#newcastleBtn').click(function(){
-    changeMarkerPos(55.0016746, -1.6156206);
-  });
   $('#sofiaBtn').click(function(){
     changeMarkerPos(42.6742392, 23.3543577);
   });

@@ -3,31 +3,22 @@
 //===============================================================================
 
 // GLOBAL
-.i-menu-grey, .i-vimeo-pink, .i-twitter-pink, .i-gbl-logo-white, .i-close-grey, .i-email-grey, .i-phone-grey, .i-location-grey { background: url($gbl-sprite); }
+.i-vimeo-pink, .i-github-pink, .i-menu-grey, .i-twitter-pink, .i-gbl-logo-white, .i-close-grey, .i-phone-grey, .i-email-grey, .i-location-grey { background: url($gbl-sprite); }
 
-.i-email-grey, .i-phone-grey { width: 31px; }
+.i-phone-grey, .i-email-grey { width: 31px; }
+
+.i-vimeo-pink, .i-location-grey { width: 25px; }
+
 .i-vimeo-pink, .i-twitter-pink { height: 21px; }
+
 .i-menu-grey, .i-close-grey { height: 18px; }
 
-.i-menu-grey { background-position: -236px 0px; width: 19px; }
-.i-vimeo-pink { background-position: -175px 0px; width: 25px; }
-.i-twitter-pink { background-position: -202px 0px; width: 28px; }
+.i-vimeo-pink { background-position: -175px 0px; }
+.i-github-pink { background-position: -235px 0px; width: 23px; height: 23px; }
+.i-menu-grey { background-position: -263px 0px; width: 20px; }
+.i-twitter-pink { background-position: -203px 0px; width: 27px; }
 .i-gbl-logo-white { background-position: 0px 0px; width: 171px; height: 31px; }
-.i-close-grey { background-position: -260px 0px; width: 17px; }
-.i-email-grey { background-position: -345px 0px; height: 26px; }
-.i-phone-grey { background-position: -310px 0px; height: 30px; }
-.i-location-grey { background-position: -282px 0px; width: 24px; height: 33px; }
-
-
-
-// LOGOS
-.logo-lloyds, .logo-aj, .logo-bede, .logo-az, .logo-pearson, .logo-cresearch { background: url($logo-sprite); }
-
-.logo-lloyds, .logo-aj { height: 101px; }
-
-.logo-lloyds { background-position: -1097px -14px; width: 222px; }
-.logo-aj { background-position: -799px -14px; width: 298px; }
-.logo-bede { background-position: -614px -21px; width: 180px; height: 87px; }
-.logo-az { background-position: -17px -23px; width: 327px; height: 83px; }
-.logo-pearson { background-position: -348px -43px; width: 263px; height: 43px; }
-.logo-cresearch { background-position: -1328px -15px; width: 255px; height: 99px; }
+.i-close-grey { background-position: -286px 0px; width: 18px; }
+.i-phone-grey { background-position: -335px 0px; height: 30px; }
+.i-email-grey { background-position: -370px 0px; height: 26px; }
+.i-location-grey { background-position: -307px 0px; height: 33px; }
