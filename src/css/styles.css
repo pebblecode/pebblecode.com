@@ -2170,7 +2170,42 @@ hr {
     border-bottom-color: rgba(255, 255, 255, 0.2);
     text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2); }
 
-/* line 53, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 52, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+.benefits-list-container {
+  clear: both;
+  padding: 30px 0;
+  position: relative; }
+  /* line 9, /Users/pebblecode/Repos/pebblecode.com/src/sass/shared/_mixins.scss */
+  .benefits-list-container:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 57, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  .benefits-list-container:before {
+    content: "";
+    height: 6px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: table;
+    margin: 0 auto 50px; }
+
+/* line 67, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+.benefits-list-title {
+  font-size: 32px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  text-align: center; }
+
+/* line 73, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+.benefits-list-item {
+  padding: 20px 100px 10px 50px;
+  height: 70px;
+  line-height: 1.2; }
+  /* line 78, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  .benefits-list-item:nth-of-type(odd) {
+    text-align: right;
+    padding: 10px 50px 10px 100px; }
+
+/* line 85, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .photos-container {
   overflow: hidden;
   position: relative;
@@ -2189,7 +2224,7 @@ hr {
   @media screen and (max-width: 500px) {
     .photos-container {
       height: 300px; } }
-  /* line 76, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 108, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .photos-container:before {
     content: "";
     position: absolute;
@@ -2202,7 +2237,7 @@ hr {
     -ms-transform: rotate(-1.2deg) scale(1.2);
     transform: rotate(-1.2deg) scale(1.2);
     z-index: 1; }
-  /* line 88, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 120, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .photos-container:after {
     content: "";
     position: absolute;
@@ -2216,7 +2251,7 @@ hr {
     transform: rotate(-0.8deg) scale(1.2);
     z-index: 2; }
 
-/* line 101, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 133, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .photos-grid {
   position: relative;
   width: 120%;
@@ -2238,7 +2273,7 @@ hr {
     .photos-grid {
       width: -webkit-calc(100% + 100px);
       width: calc(100% + 100px); } }
-  /* line 122, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 154, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .photos-grid:before {
     content: "";
     position: absolute;
@@ -2251,7 +2286,7 @@ hr {
     -ms-transform: rotate(1.6deg) scale(1.2);
     transform: rotate(1.6deg) scale(1.2);
     z-index: 1; }
-  /* line 134, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 166, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .photos-grid:after {
     content: "";
     position: absolute;
@@ -2265,7 +2300,7 @@ hr {
     transform: rotate(1deg) scale(1.2);
     z-index: 2; }
 
-/* line 147, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 179, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .photos-item {
   padding: 0;
   width: 220px;
@@ -2273,7 +2308,7 @@ hr {
   position: relative;
   overflow: hidden;
   float: left; }
-  /* line 155, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 187, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .photos-item > img {
     display: block;
     width: auto;
@@ -2290,7 +2325,7 @@ hr {
     .photos-item {
       height: 280px;
       width: 280px; }
-      /* line 171, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+      /* line 203, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
       .photos-item > img {
         min-width: 280px;
         height: 280px; } }
@@ -2298,7 +2333,7 @@ hr {
     .photos-item {
       height: 350px;
       width: 350px; }
-      /* line 181, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+      /* line 213, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
       .photos-item > img {
         min-width: 350px;
         height: 350px; } }
@@ -2306,7 +2341,7 @@ hr {
     .photos-item {
       height: 150px;
       width: 150px; }
-      /* line 191, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+      /* line 223, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
       .photos-item > img {
         min-width: 150px;
         height: 150px; } }
@@ -2314,12 +2349,12 @@ hr {
     .photos-item {
       height: 100px;
       width: 100px; }
-      /* line 201, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+      /* line 233, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
       .photos-item > img {
         min-width: 100px;
         height: 100px; } }
 
-/* line 209, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 241, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .careers-container {
   clear: both;
   margin-top: 30px;
@@ -2329,12 +2364,12 @@ hr {
     content: "";
     display: table;
     clear: both; }
-  /* line 214, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 246, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .careers-container .content-title {
     width: auto;
     padding-top: 30px;
     margin-bottom: 20px; }
-  /* line 220, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 252, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .careers-container .rt-offer {
     margin: 20px 0;
     padding: 10px 0 20px;
@@ -2342,13 +2377,13 @@ hr {
     @media screen and (max-width: 650px) {
       .careers-container .rt-offer {
         padding: 10px 0 20px; } }
-    /* line 229, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+    /* line 261, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
     .careers-container .rt-offer:last-child {
       margin-bottom: 10px; }
-      /* line 232, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+      /* line 264, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
       .careers-container .rt-offer:last-child:after {
         display: none; }
-    /* line 237, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+    /* line 269, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
     .careers-container .rt-offer:after {
       content: "";
       height: 6px;
@@ -2357,7 +2392,7 @@ hr {
       position: absolute;
       bottom: 0;
       left: 0; }
-    /* line 247, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+    /* line 279, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
     .careers-container .rt-offer h3 {
       font-size: 32px;
       color: #ed4f7e;
@@ -2372,19 +2407,19 @@ hr {
       @media screen and (max-width: 500px) {
         .careers-container .rt-offer h3 {
           font-size: 28px; } }
-      /* line 263, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+      /* line 295, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
       .careers-container .rt-offer h3:hover {
         color: #f17499; }
-    /* line 268, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+    /* line 300, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
     .careers-container .rt-offer p {
       font-size: 18px;
       line-height: 1;
       margin-bottom: 15px; }
 
-/* line 277, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 309, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-brand-color {
   color: #ed4f7e; }
-/* line 281, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 313, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-dialog {
   border-radius: 0;
   padding: 60px 30px 50px;
@@ -2393,7 +2428,7 @@ hr {
   @media screen and (max-width: 650px) {
     .rt-modal .rt-dialog {
       padding: 50px 20px; } }
-/* line 291, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 323, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-close-button {
   position: absolute;
   right: -15px;
@@ -2406,7 +2441,7 @@ hr {
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.2s;
   transition: 0.2s; }
-  /* line 302, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 334, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .rt-modal .rt-close-button:after {
     content: "";
     overflow: hidden;
@@ -2415,20 +2450,20 @@ hr {
     background-repeat: no-repeat;
     top: 17px;
     left: 17px; }
-  /* line 309, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 341, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .rt-modal .rt-close-button:hover {
     background: #f0f1f2;
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1); }
-/* line 315, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 347, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-title {
   font-size: 42px;
   line-height: 1; }
   @media screen and (max-width: 650px) {
     .rt-modal .rt-title {
       font-size: 34px; } }
-/* line 324, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 356, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-subtitle {
   font-size: 22px;
   position: relative;
@@ -2436,12 +2471,12 @@ hr {
   @media screen and (max-width: 650px) {
     .rt-modal .rt-subtitle {
       font-size: 18px; } }
-/* line 334, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 366, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-offer-heading {
   position: relative;
   margin-top: 20px;
   padding-top: 40px; }
-  /* line 339, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 371, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .rt-modal .rt-offer-heading:after {
     content: "";
     height: 6px;
@@ -2450,14 +2485,14 @@ hr {
     position: absolute;
     top: 0;
     left: 0; }
-/* line 351, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 383, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-body h3 {
   color: #6b7482; }
-/* line 355, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 387, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-body p {
   line-height: 1.4;
   margin-bottom: 18px; }
-/* line 361, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+/* line 393, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
 .rt-modal .rt-footer {
   clear: both;
   position: relative; }
@@ -2466,11 +2501,11 @@ hr {
     content: "";
     display: table;
     clear: both; }
-  /* line 365, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 397, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .rt-modal .rt-footer .rt-btn {
     margin: 20px auto 0;
     display: table; }
-  /* line 373, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
+  /* line 405, /Users/pebblecode/Repos/pebblecode.com/src/sass/pages/_careers.scss */
   .rt-modal .rt-footer .rt-btn-link {
     display: none; }
 
