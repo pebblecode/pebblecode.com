@@ -28,6 +28,12 @@
     background-color: white;
     transform: rotate(1.3deg) scale(1.2);
   }
+
+  .btn {
+    margin: 30px $gutter;
+    display: table;
+    box-shadow: 0 4px 0 rgba(black, 0.1);
+  }
 }
 
 .hero-container-aqua {
@@ -53,6 +59,7 @@
 
 .hero-container-purple {
   background-color: $purple;
+  margin-bottom: 50px;
 
   &:before {
     bottom: 25px;
@@ -305,5 +312,70 @@
 
   &.photo-wshop {
     background-image: url(../img/office/wshop.jpg);
+  }
+
+  &.photo-couch {
+    background-image: url(../img/office/couch.jpg);
+  }
+}
+
+// Aside content block
+.aside-container {
+  @include clearfix;
+  position: relative;
+  margin: 70px 10%;
+  width: 80%;
+  padding: 50px 40px 40px;
+  z-index: 2;
+
+  @media screen and ( max-width: $medium + 300px ) {
+    margin: 70px 5%;
+    width: 90%;
+  }
+
+  @media screen and ( max-width: $medium ) {
+    background: white;
+    width: calc(100% - 40px);
+    margin: 40px $gutter;
+    padding: 40px 30px 30px;
+    box-shadow: 0 0 10px rgba(black, 0.2);
+  }
+
+  @media screen and ( min-width: $medium ) {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(black, 0.2);
+      z-index: -1;
+      transform: rotate(-0.3deg) skew(1deg);  
+    }
+  }
+
+  h3 {
+    font-size: $alpha - 2px;
+    margin-bottom: 10px;
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $alpha - 6px;
+    }
+  }
+
+  p {
+    font-size: $gamma - 2px;
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $delta;
+    }
+  }
+
+  .btn {
+    margin-top: 30px;
+    display: table;
   }
 }

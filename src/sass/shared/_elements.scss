@@ -8,20 +8,13 @@
 
 // LINKS
 a {
-  color: $ink;
+  color: $primary;
   text-decoration: none;
+  transition: 0.2s;
 
-  &:hover, &.hover {
+  &:hover {
     cursor: pointer;
-    color: lighten($ink, 10);
-  }
-
-  &:active, &.active {
-    color: darken($ink, 10);
-  }
-
-  &.visited {
-    color: darken($ink, 15);
+    color: lighten($primary, 10);
   }
 }
 

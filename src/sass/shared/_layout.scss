@@ -48,6 +48,10 @@ body {
   padding: $gutter;
 }
 
+.clear {
+  @include clearfix;
+}
+
 [class*='col-'] {
   float: left;
   padding-right: $gutter;
