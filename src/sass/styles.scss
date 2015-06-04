@@ -58,3 +58,7 @@
 
 // BLOG: Styles for the blog page
 @import "pages/_blog.scss";
+
+// IE 8
+// ===================================================
+@import "shared/_ie.scss";

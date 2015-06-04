@@ -26,6 +26,7 @@ a {
   background: none;
   -webkit-appearance: none;
   transition: 0.2s;
+  line-height: 1;
 
   &:focus {
     outline: none;
@@ -63,6 +64,10 @@ a {
   text-transform: uppercase;
   font-size: $delta - 2px;
   border-bottom: none;
+
+  @media screen and ( max-width: $medium ) {
+    padding: 14px;
+  }
 
   &.btn-primary {
     background-color: $primary;

@@ -1,7 +1,7 @@
 var express = require("express");
 var logfmt = require("logfmt");
 var app = express();
-var distFolder = __dirname + '/dist';
+var distFolder = __dirname + '/src';
 
 var port = process.env.PORT || 8080;
 var env = process.env.ENV || "development";
