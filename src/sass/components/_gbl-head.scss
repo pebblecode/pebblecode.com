@@ -11,7 +11,7 @@
 
   @media screen and ( max-width: $medium ) {
     position: relative;
-    padding: 20px 0;
+    padding: 20px 0 15px;
   }
 }
 
@@ -139,7 +139,7 @@
 .gbl-head-btn {
   display: none;
   position: absolute;
-  top: $gutter - 8px;
+  top: 10px;
   right: $gutter - 5px;
   height: 45px;
   width: 45px;

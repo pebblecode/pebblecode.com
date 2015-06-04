@@ -801,7 +801,7 @@ hr {
   @media screen and (max-width: 650px) {
     .gbl-head {
       position: relative;
-      padding: 20px 0; } }
+      padding: 20px 0 15px; } }
 
 /* line 18, /Users/peter/Repos/pebblecode.com/src/sass/components/_gbl-head.scss */
 .gbl-head-aqua {
@@ -925,7 +925,7 @@ hr {
 .gbl-head-btn {
   display: none;
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 15px;
   height: 45px;
   width: 45px;
@@ -1526,10 +1526,10 @@ hr {
 /* line 116, /Users/peter/Repos/pebblecode.com/src/sass/pages/_home.scss */
 .feat-content-img {
   z-index: 2;
-  height: 610px;
+  height: 560px;
   background: url(../img/services/services-featured.png) no-repeat center left;
-  -webkit-background-size: auto 580px;
-  background-size: auto 580px;
+  -webkit-background-size: auto 560px;
+  background-size: auto 560px;
   right: 0;
   bottom: -60px;
   position: absolute; }
