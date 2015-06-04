@@ -262,6 +262,18 @@
   }
 }
 
+.home-photo-container {
+
+  &:before {
+    transform: rotate(1.2deg) scale(1.2);
+  }
+
+  &:after {
+    background-color: $aqua;
+    transform: rotate(0.8deg) scale(1.2);
+  }
+}
+
 .photo-inner {
   background-size: cover;
   background-repeat: no-repeat;
@@ -321,6 +333,10 @@
 
   &.photo-couch {
     background-image: url(../img/office/couch.jpg);
+  }
+
+  &.photo-lunch {
+    background-image: url(../img/office/lunch.jpg);
   }
 }
 
