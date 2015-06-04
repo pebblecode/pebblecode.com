@@ -47,23 +47,12 @@
 
 // Clients
 .client-container {
-  padding-top: 30px;
-  padding-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: lighten($ink, 45);
   background-color: white;
 
-  @media screen and ( max-width: $medium + 100px ) {
-    padding-top: 20px;
-  }
-
   @media screen and ( max-width: $medium ) {
-    max-width: 100%;
-    width: 100%;
-    white-space: nowrap;
-    overflow-y: hidden;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -72,7 +61,8 @@
 .client-inner {}
 
 .client-item {
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   position: relative;
   text-align: center;
   vertical-align: vertical;
@@ -82,30 +72,21 @@
 .feat-content-container {
   background-color: $aqua;
   position: relative;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 
   @media screen and ( max-width: $medium ) {
-    padding-top: 20px;
-    padding-bottom: 60px;
-  }
-
-  .ppl-join-container {
-    margin-top: 40px;
-    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 50px;
   }
 }
 
 .feat-content {
-  padding-top: 10px;
+  padding-top: 0;
   padding-bottom: 0;
   color: white;
 
-  @media screen and ( max-width: $medium ) {
-    padding-top: 10px;
-  }
-
   .meta-title-container {
-    margin: 40px 0;
+    padding: 40px 0;
   }
 }
 
