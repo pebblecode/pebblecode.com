@@ -1,24 +1,41 @@
 //===============================================================================
 // SPRITE
 //===============================================================================
-
 // GLOBAL
-.i-vimeo-pink, .i-github-pink, .i-menu-grey, .i-twitter-pink, .i-gbl-logo-white, .i-close-grey, .i-phone-grey, .i-email-grey, .i-location-grey { background: url($gbl-sprite); }
+.i-gym-white, .i-10-white, .i-pay-white, .i-charity-white, .i-snacks-white, .i-holidays-white, .i-flexible-white, .i-social-white, .i-vimeo-pink, .i-github-pink, .i-menu-grey, .i-twitter-pink, .i-gbl-logo-white, .i-close-grey, .i-phone-grey, .i-email-grey, .i-location-grey { background: url($gbl-sprite); }
+
+.i-flexible-white, .i-vimeo-pink, .i-location-grey, .i-github-pink { width: 25px; }
+
+.i-10-white { width: 24px; }
+
+.i-snacks-white, .i-menu-grey { width: 20px; }
+
+.i-gym-white, .i-twitter-pink { width: 28px; }
 
 .i-phone-grey, .i-email-grey { width: 31px; }
 
-.i-vimeo-pink, .i-location-grey { width: 25px; }
+.i-10-white, .i-charity-white, .i-email-grey { height: 26px; }
 
-.i-vimeo-pink, .i-twitter-pink { height: 21px; }
+.i-vimeo-pink, .i-twitter-pink { height: 22px; }
 
-.i-menu-grey, .i-close-grey { height: 18px; }
+.i-pay-white, .i-holidays-white { width: 27px; height: 26px; }
 
-.i-vimeo-pink { background-position: -175px 0px; }
-.i-github-pink { background-position: -235px 0px; width: 23px; height: 23px; }
-.i-menu-grey { background-position: -263px 0px; width: 20px; }
-.i-twitter-pink { background-position: -203px 0px; width: 27px; }
-.i-gbl-logo-white { background-position: 0px 0px; width: 171px; height: 31px; }
-.i-close-grey { background-position: -286px 0px; width: 18px; }
-.i-phone-grey { background-position: -335px 0px; height: 30px; }
-.i-email-grey { background-position: -370px 0px; height: 26px; }
-.i-location-grey { background-position: -307px 0px; height: 33px; }
+.i-social-white, .i-flexible-white { height: 27px; } 
+
+.i-gym-white { background-position: -467px 0px; height: 20px; }
+.i-10-white { background-position: -521px 0px; }
+.i-pay-white { background-position: -577px 0px; }
+.i-charity-white { background-position: -608px 0px; width: 22px; }
+.i-snacks-white { background-position: -498px 0px; height: 25px; }
+.i-holidays-white { background-position: -437px 0px; }
+.i-flexible-white { background-position: -406px 0px; }
+.i-social-white { background-position: -548px 0px; width: 26px; }
+.i-vimeo-pink { background-position: -177px 0px; }
+.i-github-pink { background-position: -235px 0px; height: 23px; }
+.i-menu-grey { background-position: -264px 0px; height: 19px; }
+.i-twitter-pink { background-position: -205px 0px; }
+.i-gbl-logo-white { background-position: 0px 0px; width: 175px; height: 31px; }
+.i-close-grey { background-position: -288px 0px; width: 18px; height: 18px; }
+.i-phone-grey { background-position: -338px 0px; height: 30px; }
+.i-email-grey { background-position: -372px 0px; }
+.i-location-grey { background-position: -309px 0px; height: 33px; }
