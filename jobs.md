@@ -2,5 +2,5 @@
 layout: redirect
 sitemap: false
 permalink: /jobs/
-redirect_to:  /careers/
+redirect_to: /careers/
 ---

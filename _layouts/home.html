@@ -21,7 +21,7 @@
     {% include clients.html %}
 
     <section class="photo-container home-photo-container">
-      <div class="photo-inner" style="background-image: url(../img/{{page.cover-img}})"></div>
+      <div class="photo-inner" style="background-image: url({{ site.baseurl }}/img/{{page.cover-img}})"></div>
     </section>
     <!-- /.photo-container -->
 
@@ -34,7 +34,7 @@
         </div>
           <h3>{{page.feat-title}}</h3>
           <p>{{page.feat-excerpt}}</p>
-          <a href="work" class="btn btn-light btn-block">Read more</a>
+          <a href="{{ site.baseurl }}/work" class="btn btn-light btn-block">Read more</a>
         </div>
         <div class="feat-content-img col-1-2"></div>
       </div>
@@ -45,7 +45,7 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js""><\/script>')</script>
-    <script type="text/javascript" src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
     <!-- /scripts-->
 
   </body>

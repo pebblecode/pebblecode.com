@@ -2,5 +2,5 @@
 layout: redirect
 sitemap: false
 permalink: /about/
-redirect_to:  /services/
+redirect_to: /services/
 ---
