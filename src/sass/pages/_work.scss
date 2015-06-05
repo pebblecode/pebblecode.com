@@ -18,8 +18,7 @@
   position: relative;
 
   @media screen and ( max-width: $medium ) {
-    padding: 40px 20px 0;
-    margin: 20px 0 0;
+    padding: 15px 20px 0;
     line-height: 0.9;
   }
 }
@@ -157,6 +156,10 @@
     position: relative;
     background-position: top;
     background-size: 100% 100%;
+
+    @media screen and ( max-width: $medium ) {
+      background-size: 100%;
+    }
   }
 
   & + .photo-container .photo-inner:after {

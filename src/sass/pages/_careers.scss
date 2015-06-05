@@ -317,6 +317,10 @@
   margin-top: $gutter + 10px;
   margin-bottom: $gutter;
 
+  @media screen and ( max-width: $medium ) {
+    margin-top: 0;
+  }
+
   .content-title {
     width: auto;
     padding-top: $gutter + 10px;
@@ -390,7 +394,7 @@
     box-shadow: 0 0 20px rgba(black, 0.2);
 
     @media screen and ( max-width: $medium ) {
-      padding: 50px $gutter; 
+      padding: 50px $gutter;
     }
   }
 
@@ -421,6 +425,7 @@
   .rt-title {
     font-size: $alpha;
     line-height: 1;
+    margin: 0 0 10px;
 
     @media screen and ( max-width: $medium ) {
       font-size: $alpha - 8px;
@@ -461,6 +466,14 @@
     p {
       line-height: 1.4;
       margin-bottom: 18px;
+    }
+
+    ul {
+      margin-left: $gutter;
+    }
+
+    ul li p {
+      line-height: 1;
     }
   }
 
