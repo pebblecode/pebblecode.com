@@ -78,15 +78,21 @@
   }
 
   // Google Maps: Pan between different Locations
-  $('#londonBtn').click( function() {
-    changeMarkerPos(51.485672, -0.118554);
-  });
-  $('#sofiaBtn').click(function(){
-    changeMarkerPos(42.6742392, 23.3543577);
-  });
-
   var marker;
   var map;
+  
+  $('#londonBtn').click( function() {
+    var latLng = new google.maps.LatLng(51.485672, -0.118554);
+    marker.setPosition(latLng);
+    map.panTo(latLng);
+  });
+  $('#sofiaBtn').click(function(){
+    var latLng = new google.maps.LatLng(42.6742392, 23.3543577);
+    marker.setPosition(latLng);
+    map.panTo(latLng);
+  });
+
+  // Initialise google map
   function initialize() {
     var mapProp = {
       center: new google.maps.LatLng(51.485672, -0.118554),
@@ -106,18 +112,12 @@
       position: new google.maps.LatLng(51.485672, -0.118554),
       animation: google.maps.Animation.DROP
     });
-    marker.setMap(map);
-    map.panTo(marker.position);
-    google.maps.event.addListener(marker, "click", function () {
+      marker.setMap(map);
+      map.panTo(marker.position);
+      google.maps.event.addListener(marker, "click", function () {
     });
   }
-
-  function changeMarkerPos(lat, lon){
-    myLatLng = new google.maps.LatLng(lat, lon);
-    marker.setPosition(myLatLng);
-    map.panTo(myLatLng);
-  }
-
+  // Initialise map if visible
   if ($('#map').length) {
     google.maps.event.addDomListener(window, 'load', initialize);
   }

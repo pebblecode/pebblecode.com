@@ -1017,8 +1017,7 @@ hr {
 .photo-container {
   height: 400px;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden; }
+  overflow: hidden; }
   @media screen and (max-width: 650px) {
     .photo-container {
       height: 200px; } }
@@ -1050,10 +1049,10 @@ hr {
   transform: rotate(0.8deg) scale(1.2); }
 
 .photo-inner {
-  background-size: cover;
+  background-size: scroll;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   margin: 0;
   height: 450px;
   position: absolute;
@@ -1063,8 +1062,7 @@ hr {
   left: 0;
   width: 100%;
   display: block;
-  overflow-y: hidden;
-  overflow-x: hidden; }
+  overflow: hidden; }
   .touch-device .photo-inner {
     background-attachment: scroll; }
   @media screen and (max-width: 650px) {
@@ -1442,12 +1440,6 @@ hr {
       bottom: 0;
       left: 0;
       background-color: rgba(0, 0, 0, 0.1); }
-
-.location-tab-content {
-  padding-bottom: 5px; }
-  @media screen and (max-width: 650px) {
-    .location-tab-content {
-      padding-bottom: 0; } }
 
 .location-item {
   font-size: 22px;

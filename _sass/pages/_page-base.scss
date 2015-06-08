@@ -230,8 +230,7 @@
 .photo-container {
   height: 400px;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media screen and ( max-width: $medium ) {
     height: 200px;
@@ -275,10 +274,11 @@
 }
 
 .photo-inner {
-  background-size: cover;
+  background-size: scroll;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
+  background-attachment: scroll;
   margin: 0;
   height: 450px;
   position: absolute;
@@ -288,8 +288,7 @@
   left: 0;
   width: 100%;
   display: block;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .touch-device & {
     background-attachment: scroll;
