@@ -71,11 +71,8 @@
   }
 
   &:before {
-    content: "";
-    position: absolute;
-    left: 0;
+    @include shadow-pseudo;
     top: 20px;
-    display: block;
     width: 100%;
     height: 20px;
     background-color: rgba(black, 0.15);
@@ -83,11 +80,8 @@
   }
 
   &:after {
-    content: "";
-    position: absolute;
-    left: 0;
+    @include shadow-pseudo;
     top: -25px;
-    display: block;
     width: 100%;
     height: 50px;
     background-color: white;
@@ -111,16 +105,13 @@
   padding: 40px 200px 30px 40px;
 
   &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
+    @include shadow-pseudo;
     height: 100%;
     top: 0;
-    left: 0;
     background-color: rgba(black, 0.1);
     z-index: -1;
     transform: rotate(0.3deg) skew(-0.6deg);  
+    -webkit-transform: rotate(0.3deg) skew(-0.6deg);  
   }
 
   @media screen and ( max-width: $medium ) {

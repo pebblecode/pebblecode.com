@@ -2,7 +2,6 @@
 layout: home
 title: 
 permalink: /
-weight: 1
 
 ## Hero Content
 hero-title: Accelerating Technology Innovation

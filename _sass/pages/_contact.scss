@@ -4,25 +4,21 @@
 // Hero
 .hero-container-contact {
   &:before {
-    content: "";
-    position: absolute;
+    @include shadow-pseudo;
     bottom: 20px;
-    display: block;
-    width: 100%;
     height: 20px;
     background-color: rgba(black, 0.15);
     transform: rotate(2.1deg) scale(1.2);
+    -webkit-transform: rotate(2.1deg) scale(1.2);
   }
 
   &:after {
-    content: "";
-    position: absolute;
+    @include shadow-pseudo;
     bottom: -25px;
-    display: block;
-    width: 100%;
     height: 50px;
     background-color: #da426e;
     transform: rotate(1.3deg) scale(1.2);
+    -webkit-transform: rotate(1.3deg) scale(1.2);
   }
 }
 
@@ -34,27 +30,23 @@
   overflow: hidden;
 
   &:before {
-    content: "";
-    position: absolute;
+    @include shadow-pseudo;
     bottom: 35px;
-    display: block;
-    width: 100%;
     height: 20px;
+    z-index: 1;
     background-color: rgba(black, 0.15);
     transform: rotate(2deg) scale(1.2);
-    z-index: 1;
+    -webkit-transform: rotate(2deg) scale(1.2);
   }
 
   &:after {
-    content: "";
-    position: absolute;
+    @include shadow-pseudo;
     bottom: -20px;
-    display: block;
-    width: 100%;
     height: 60px;
     background-color: $blue;
-    transform: rotate(1.2deg) scale(1.2);
     z-index: 2;
+    transform: rotate(1.2deg) scale(1.2);
+    -webkit-transform: rotate(1.2deg) scale(1.2);
   }
 
   .tab-head-container {
@@ -194,27 +186,23 @@
   }
 
   &:before {
-    content: "";
-    position: absolute;
+    @include shadow-pseudo;
     top: 20px;
-    display: block;
-    width: 100%;
     height: 20px;
     background-color: rgba(black, 0.15);
-    transform: rotate(-2.1deg) scale(1.2);
     z-index: 1;
+    transform: rotate(-2.1deg) scale(1.2);
+    -webkit-transform: rotate(-2.1deg) scale(1.2);
   }
 
   &:after {
-    content: "";
-    position: absolute;
+    @include shadow-pseudo;
     top: -25px;
-    display: block;
-    width: 100%;
     height: 50px;
+    z-index: 2;
     background-color: #da426e;
     transform: rotate(-1.3deg) scale(1.2);
-    z-index: 2;
+    -webkit-transform: rotate(-1.3deg) scale(1.2);
   }
 }
 
@@ -255,38 +243,41 @@
   }
 
   @media screen and ( min-width: $medium + 100px ) {
-
     .ppl-item:nth-of-type(3n-2):after {
       transform: rotate(0.3deg) skew(-0.4deg);
+      -webkit-transform: rotate(0.3deg) skew(-0.4deg);
     }
 
     .ppl-item:nth-of-type(3n-1):after {
       transform: rotate(-0.3deg) skew(0.5deg);
+      -webkit-transform: rotate(-0.3deg) skew(0.5deg);
     }
 
     .ppl-item:nth-of-type(3n):after {
       transform: rotate(0.3deg) skew(0.8deg);
+      -webkit-transform: rotate(0.3deg) skew(0.8deg);
     }
   }
 
   &:nth-of-type(2) {
-
     @media screen and ( max-width: $medium ) {
       margin-bottom: 20px;
     }
 
     @media screen and ( min-width: $medium + 100px ) {
-
       .ppl-item:nth-of-type(3n-2):after {
         transform: rotate(-0.5deg) skew(-0.5deg);
+        -webkit-transform: rotate(-0.5deg) skew(-0.5deg);
       }
 
       .ppl-item:nth-of-type(3n-1):after {
         transform: rotate(0.7deg) skew(1.2deg);
+        -webkit-transform: rotate(0.7deg) skew(1.2deg);
       }
 
       .ppl-item:nth-of-type(3n):after {
         transform: rotate(0.3deg) skew(-0.7deg);
+        -webkit-transform: rotate(0.3deg) skew(-0.7deg);
       }
     }
 
@@ -311,14 +302,10 @@
 
   @media screen and ( min-width: $medium + 100px ) {
     &:after {
-      content: "";
+      @include shadow-pseudo;
       top: 0;
-      left: 0;
       border: 5px solid rgba(white, 0.2);
-      width: 100%;
       height: 100%;
-      position: absolute;
-      display: block;
     }
   }
   
@@ -347,6 +334,3 @@
     }
   }
 }
-
-// Join the team
-.ppl-join-container {}

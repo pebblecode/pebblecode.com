@@ -12,3 +12,6 @@ vimeo:  pebblecode
 # Build settings
 markdown: kramdown
 redirects: yes
+sass:
+    # style: :compressed
+
