@@ -4,19 +4,19 @@ The Jekyll based website for pebblecode.com.
 
 ## Getting Started
 
-####1. Install [jekyll](http://jekyllrb.com/):
+#####1. Install [jekyll](http://jekyllrb.com/):
 
 `gem install jekyll`
 
 
-####2. Build and view the website on locally:
+#####2. Build and view the website on locally:
 
 `cd [project folder]`
 
 `jekyll serve`
 
 
-####3. View the website:
+#####3. View the website:
 
 `http://localhost:4000`
 
