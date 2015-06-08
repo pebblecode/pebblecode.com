@@ -157,6 +157,55 @@
   }
 }
 
+.content {
+  padding-bottom: 40px;
+
+  h2 {
+    padding: 0 0 30px;
+    margin: 0 0 30px;
+    line-height: 1;
+    border-bottom: 5px solid lighten($ink, 50);
+
+    @media screen and ( max-width: $medium ) {
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+    }
+  }
+
+  h3 {
+    font-size: $beta;
+    line-height: 1;
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $beta - 4px;
+    }
+  }
+
+  p {
+    font-size: $delta + 2px;
+    line-height: 1.5;
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $delta - 2px;
+    }
+  }
+
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+  
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 // Meta
 .meta-title {
   padding: 10px 15px;

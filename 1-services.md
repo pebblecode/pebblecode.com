@@ -8,10 +8,9 @@ colour: aqua
 ## Hero Content
 hero-title:
 hero-subtitle:
-
-## Content
-content-title: Our Approach
 ---
+
+## Our Approach
 
 Technology is changing our world so fast, it is hard for big businesses to stay ahead. Companies that fail to innovate, fail. We work with you to embed a culture of technical innovation, continuous improvement and rapid delivery.
 
