@@ -8,10 +8,13 @@ The Jekyll based website for pebblecode.com.
 
 `gem install jekyll`
 
+
 2. Build and view the website on locally:
 
 `cd [project folder]`
+
 `jekyll serve`
+
 
 3. View the website:
 
