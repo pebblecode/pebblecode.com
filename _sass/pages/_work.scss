@@ -73,6 +73,7 @@
   &:before {
     content: "";
     position: absolute;
+    left: 0;
     top: 20px;
     display: block;
     width: 100%;
@@ -84,6 +85,7 @@
   &:after {
     content: "";
     position: absolute;
+    left: 0;
     top: -25px;
     display: block;
     width: 100%;

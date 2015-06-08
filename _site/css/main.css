@@ -1660,6 +1660,7 @@ hr {
   .project-item-inner:before {
     content: "";
     position: absolute;
+    left: 0;
     top: 20px;
     display: block;
     width: 100%;
@@ -1669,6 +1670,7 @@ hr {
   .project-item-inner:after {
     content: "";
     position: absolute;
+    left: 0;
     top: -25px;
     display: block;
     width: 100%;
@@ -1938,7 +1940,8 @@ hr {
     height: 220px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%); }
   @media screen and (min-width: 1500px) {
     .photos-item {
       height: 280px;
