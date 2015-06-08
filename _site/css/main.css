@@ -856,6 +856,7 @@ hr {
     height: 20px;
     background-color: rgba(0, 0, 0, 0.15);
     transform: rotate(2.1deg) scale(1.2);
+    -ms-transform: rotate(2.1deg) scale(1.2);
     -webkit-transform: rotate(2.1deg) scale(1.2); }
   .hero-container:after {
     content: "";
@@ -868,6 +869,7 @@ hr {
     height: 50px;
     background-color: white;
     transform: rotate(1.3deg) scale(1.2);
+    -ms-transform: rotate(1.3deg) scale(1.2);
     -webkit-transform: rotate(1.3deg) scale(1.2); }
   .hero-container .btn, .hero-container .rt-modal .rt-footer .rt-btn, .rt-modal .rt-footer .hero-container .rt-btn {
     margin: 30px 20px;
@@ -880,9 +882,11 @@ hr {
     .hero-container.blue:before {
       bottom: 25px;
       transform: rotate(-2.2deg) scale(1.4);
+      -ms-transform: rotate(-2.2deg) scale(1.4);
       -webkit-transform: rotate(-2.2deg) scale(1.4); }
     .hero-container.blue:after {
       transform: rotate(-1.2deg) scale(1.2);
+      -ms-transform: rotate(-1.2deg) scale(1.2);
       -webkit-transform: rotate(-1.2deg) scale(1.2); }
     .hero-container.blue .hero-inner {
       padding-bottom: 60px; }
@@ -895,9 +899,11 @@ hr {
     .hero-container.purple:before {
       bottom: 25px;
       transform: rotate(-2deg) scale(1.4);
+      -ms-transform: rotate(-2deg) scale(1.4);
       -webkit-transform: rotate(-2deg) scale(1.4); }
     .hero-container.purple:after {
       transform: rotate(-1.2deg) scale(1.2);
+      -ms-transform: rotate(-1.2deg) scale(1.2);
       -webkit-transform: rotate(-1.2deg) scale(1.2); }
     .hero-container.purple .hero-inner {
       padding-bottom: 60px; }
@@ -1026,6 +1032,7 @@ hr {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     z-index: -1;
     transform: rotate(-0.4deg) skew(1.2deg);
+    -ms-transform: rotate(-0.4deg) skew(1.2deg);
     -webkit-transform: rotate(-0.4deg) skew(1.2deg); }
 
 .meta-subtitle {
@@ -1052,6 +1059,7 @@ hr {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
     z-index: -1;
     transform: rotate(-0.8deg) skew(0.8deg);
+    -ms-transform: rotate(-0.8deg) skew(0.8deg);
     -webkit-transform: rotate(-0.8deg) skew(0.8deg); }
 
 .meta-container {
@@ -1084,6 +1092,7 @@ hr {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.15);
     transform: rotate(-1.2deg) scale(1.2);
+    -ms-transform: rotate(-1.2deg) scale(1.2);
     -webkit-transform: rotate(-1.2deg) scale(1.2); }
   .photo-container:after {
     content: "";
@@ -1097,14 +1106,17 @@ hr {
     z-index: 2;
     background-color: white;
     transform: rotate(-0.8deg) scale(1.2);
+    -ms-transform: rotate(-0.8deg) scale(1.2);
     -webkit-transform: rotate(-0.8deg) scale(1.2); }
 
 .home-photo-container:before {
   transform: rotate(1.2deg) scale(1.2);
+  -ms-transform: rotate(1.2deg) scale(1.2);
   -webkit-transform: rotate(1.2deg) scale(1.2); }
 .home-photo-container:after {
   background-color: #37bec0;
   transform: rotate(0.8deg) scale(1.2);
+  -ms-transform: rotate(0.8deg) scale(1.2);
   -webkit-transform: rotate(0.8deg) scale(1.2); }
 
 .photo-inner {
@@ -1139,6 +1151,7 @@ hr {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.15);
     transform: rotate(-1.6deg) scale(1.2);
+    -ms-transform: rotate(-1.6deg) scale(1.2);
     -webkit-transform: rotate(-1.6deg) scale(1.2); }
   .photo-inner:after {
     content: "";
@@ -1152,6 +1165,7 @@ hr {
     z-index: 2;
     background-color: white;
     transform: rotate(-1deg) scale(1.2);
+    -ms-transform: rotate(-1deg) scale(1.2);
     -webkit-transform: rotate(-1deg) scale(1.2); }
   .photo-inner.photo-hardware {
     background-image: url(../img/office/hardware.jpg); }
@@ -1198,6 +1212,7 @@ hr {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       z-index: -1;
       transform: rotate(-0.3deg) skew(1deg);
+      -ms-transform: rotate(-0.3deg) skew(1deg);
       -webkit-transform: rotate(-0.3deg) skew(1deg); } }
   .aside-container h3 {
     font-size: 40px;
@@ -1323,6 +1338,7 @@ hr {
     height: 50px;
     background-color: white;
     transform: rotate(-1.3deg) scale(1.2);
+    -ms-transform: rotate(-1.3deg) scale(1.2);
     -webkit-transform: rotate(-1.3deg) scale(1.2); }
 
 .services-process-img {
@@ -1354,6 +1370,7 @@ hr {
     height: 25px;
     background-color: rgba(0, 0, 0, 0.15);
     transform: rotate(2deg) scale(1.2);
+    -ms-transform: rotate(2deg) scale(1.2);
     -webkit-transform: rotate(2deg) scale(1.2);
     z-index: 1; }
   .services-container:after {
@@ -1367,6 +1384,7 @@ hr {
     height: 40px;
     background-color: #f5f6f7;
     transform: rotate(1.3deg) scale(1.2);
+    -ms-transform: rotate(1.3deg) scale(1.2);
     -webkit-transform: rotate(1.3deg) scale(1.2);
     z-index: 1; }
 
@@ -1395,6 +1413,7 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   width: 100%; }
   @media screen and (max-width: 800px) {
@@ -1403,6 +1422,7 @@ hr {
       top: auto;
       left: auto;
       transform: none;
+      -ms-transform: none;
       -webkit-transform: none;
       padding-top: 200px; } }
 
@@ -1449,6 +1469,7 @@ hr {
   height: 20px;
   background-color: rgba(0, 0, 0, 0.15);
   transform: rotate(2.1deg) scale(1.2);
+  -ms-transform: rotate(2.1deg) scale(1.2);
   -webkit-transform: rotate(2.1deg) scale(1.2); }
 .hero-container-contact:after {
   content: "";
@@ -1461,6 +1482,7 @@ hr {
   height: 50px;
   background-color: #da426e;
   transform: rotate(1.3deg) scale(1.2);
+  -ms-transform: rotate(1.3deg) scale(1.2);
   -webkit-transform: rotate(1.3deg) scale(1.2); }
 
 .location-tab-container {
@@ -1479,6 +1501,7 @@ hr {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.15);
     transform: rotate(2deg) scale(1.2);
+    -ms-transform: rotate(2deg) scale(1.2);
     -webkit-transform: rotate(2deg) scale(1.2); }
   .location-tab-container:after {
     content: "";
@@ -1492,6 +1515,7 @@ hr {
     background-color: #0ea2dc;
     z-index: 2;
     transform: rotate(1.2deg) scale(1.2);
+    -ms-transform: rotate(1.2deg) scale(1.2);
     -webkit-transform: rotate(1.2deg) scale(1.2); }
   .location-tab-container .tab-head-container {
     padding-left: 40px;
@@ -1595,6 +1619,7 @@ hr {
     background-color: rgba(0, 0, 0, 0.15);
     z-index: 1;
     transform: rotate(-2.1deg) scale(1.2);
+    -ms-transform: rotate(-2.1deg) scale(1.2);
     -webkit-transform: rotate(-2.1deg) scale(1.2); }
   .location-map-container:after {
     content: "";
@@ -1608,6 +1633,7 @@ hr {
     z-index: 2;
     background-color: #da426e;
     transform: rotate(-1.3deg) scale(1.2);
+    -ms-transform: rotate(-1.3deg) scale(1.2);
     -webkit-transform: rotate(-1.3deg) scale(1.2); }
 
 .ppl-container {
@@ -1639,12 +1665,15 @@ hr {
   @media screen and (min-width: 750px) {
     .ppl-col .ppl-item:nth-of-type(3n-2):after {
       transform: rotate(0.3deg) skew(-0.4deg);
+      -ms-transform: rotate(0.3deg) skew(-0.4deg);
       -webkit-transform: rotate(0.3deg) skew(-0.4deg); }
     .ppl-col .ppl-item:nth-of-type(3n-1):after {
       transform: rotate(-0.3deg) skew(0.5deg);
+      -ms-transform: rotate(-0.3deg) skew(0.5deg);
       -webkit-transform: rotate(-0.3deg) skew(0.5deg); }
     .ppl-col .ppl-item:nth-of-type(3n):after {
       transform: rotate(0.3deg) skew(0.8deg);
+      -ms-transform: rotate(0.3deg) skew(0.8deg);
       -webkit-transform: rotate(0.3deg) skew(0.8deg); } }
   @media screen and (max-width: 650px) {
     .ppl-col:nth-of-type(2) {
@@ -1652,12 +1681,15 @@ hr {
   @media screen and (min-width: 750px) {
     .ppl-col:nth-of-type(2) .ppl-item:nth-of-type(3n-2):after {
       transform: rotate(-0.5deg) skew(-0.5deg);
+      -ms-transform: rotate(-0.5deg) skew(-0.5deg);
       -webkit-transform: rotate(-0.5deg) skew(-0.5deg); }
     .ppl-col:nth-of-type(2) .ppl-item:nth-of-type(3n-1):after {
       transform: rotate(0.7deg) skew(1.2deg);
+      -ms-transform: rotate(0.7deg) skew(1.2deg);
       -webkit-transform: rotate(0.7deg) skew(1.2deg); }
     .ppl-col:nth-of-type(2) .ppl-item:nth-of-type(3n):after {
       transform: rotate(0.3deg) skew(-0.7deg);
+      -ms-transform: rotate(0.3deg) skew(-0.7deg);
       -webkit-transform: rotate(0.3deg) skew(-0.7deg); } }
   @media screen and (min-width: 650px) {
     .ppl-col:nth-of-type(2) {
@@ -1763,7 +1795,9 @@ hr {
     width: 100%;
     height: 20px;
     background-color: rgba(0, 0, 0, 0.15);
-    transform: rotate(1.8deg) scale(1.2); }
+    transform: rotate(1.8deg) scale(1.2);
+    -ms-transform: rotate(1.8deg) scale(1.2);
+    -webkit-transform: rotate(1.8deg) scale(1.2); }
   .project-item-inner:after {
     content: "";
     overflow: hidden;
@@ -1775,7 +1809,9 @@ hr {
     width: 100%;
     height: 50px;
     background-color: white;
-    transform: rotate(1deg) scale(1.2); }
+    transform: rotate(1deg) scale(1.2);
+    -ms-transform: rotate(1deg) scale(1.2);
+    -webkit-transform: rotate(1deg) scale(1.2); }
 
 .project-item-img-feat {
   margin-bottom: 30px;
@@ -1801,6 +1837,7 @@ hr {
     background-color: rgba(0, 0, 0, 0.1);
     z-index: -1;
     transform: rotate(0.3deg) skew(-0.6deg);
+    -ms-transform: rotate(0.3deg) skew(-0.6deg);
     -webkit-transform: rotate(0.3deg) skew(-0.6deg); }
   @media screen and (max-width: 650px) {
     .project-item-aside {
@@ -1883,10 +1920,12 @@ hr {
       padding-bottom: 0; } }
   .benefits-container + .photo-container .photo-inner:before {
     transform: rotate(1deg) scale(1.2);
+    -ms-transform: rotate(1deg) scale(1.2);
     -webkit-transform: rotate(1deg) scale(1.2); }
   .benefits-container + .photo-container .photo-inner:after {
     background-color: #0ea2dc;
     transform: rotate(1.6deg) scale(1.2);
+    -ms-transform: rotate(1.6deg) scale(1.2);
     -webkit-transform: rotate(1.6deg) scale(1.2); }
 
 .benefits-inner {
@@ -1981,6 +2020,7 @@ hr {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.15);
     transform: rotate(-1.2deg) scale(1.2);
+    -ms-transform: rotate(-1.2deg) scale(1.2);
     -webkit-transform: rotate(-1.2deg) scale(1.2); }
   .photos-container:after {
     content: "";
@@ -1994,6 +2034,7 @@ hr {
     z-index: 2;
     background-color: #0ea2dc;
     transform: rotate(-0.8deg) scale(1.2);
+    -ms-transform: rotate(-0.8deg) scale(1.2);
     -webkit-transform: rotate(-0.8deg) scale(1.2); }
 
 .photos-grid {
@@ -2024,6 +2065,7 @@ hr {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.15);
     transform: rotate(1.6deg) scale(1.2);
+    -ms-transform: rotate(1.6deg) scale(1.2);
     -webkit-transform: rotate(1.6deg) scale(1.2); }
   .photos-grid:after {
     content: "";
@@ -2037,6 +2079,7 @@ hr {
     background-color: white;
     z-index: 2;
     transform: rotate(1deg) scale(1.2);
+    -ms-transform: rotate(1deg) scale(1.2);
     -webkit-transform: rotate(1deg) scale(1.2); }
 
 .photos-item {
@@ -2056,6 +2099,7 @@ hr {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%); }
   @media screen and (min-width: 1500px) {
     .photos-item {
@@ -2169,7 +2213,9 @@ hr {
     left: 17px; }
   .rt-modal .rt-close-button:hover {
     background: #f0f1f2;
-    transform: scale(1.1); }
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); }
 .rt-modal .rt-title {
   font-size: 42px;
   line-height: 1;

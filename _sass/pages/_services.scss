@@ -19,6 +19,7 @@
     height: 50px;
     background-color: white;
     transform: rotate(-1.3deg) scale(1.2);
+    -ms-transform: rotate(-1.3deg) scale(1.2);
     -webkit-transform: rotate(-1.3deg) scale(1.2);
   }
 }
@@ -51,6 +52,7 @@
     height: 25px;
     background-color: rgba(black, 0.15);
     transform: rotate(2deg) scale(1.2);
+    -ms-transform: rotate(2deg) scale(1.2);
     -webkit-transform: rotate(2deg) scale(1.2);
     z-index: 1;
   }
@@ -61,6 +63,7 @@
     height: 40px;
     background-color: lighten($ink, 50);
     transform: rotate(1.3deg) scale(1.2);
+    -ms-transform: rotate(1.3deg) scale(1.2);
     -webkit-transform: rotate(1.3deg) scale(1.2);
     z-index: 1;
   }
@@ -96,6 +99,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   width: 100%;
 
@@ -104,6 +108,7 @@
     top: auto;
     left: auto;
     transform: none;
+    -ms-transform: none;
     -webkit-transform: none;
     padding-top: 200px;
   }
