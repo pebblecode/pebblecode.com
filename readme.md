@@ -1,10 +1,11 @@
 # pebblecode.com
 
-A jekyll website for pebblecode.com
+The Jekyll based website for pebblecode.com.
 
 ## Getting Started
 
 1. Install [jekyll](http://jekyllrb.com/).
+`gem install jekyll`
 
 2. Build and view the website on locally:
 `jekyll serve`
