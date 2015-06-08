@@ -12,6 +12,6 @@ cover-img: office/couch.jpg
 
 ## Featured case study:
 feat-client: Astrazeneca
-feat-title: Universale Access Search Portal
+feat-title: Universal Access Search Portal
 feat-excerpt: AstraZeneca had over 200 million documents. Printed out on paper, that would weigh more than the Titanic. So we built a simple search portal - providing universal access to all the documents through one application.
 ---
